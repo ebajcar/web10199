@@ -1,0 +1,164 @@
+		@import  "https://fonts.googleapis.com/css?family=Ubuntu+Mono";
+
+		code {
+			font-family: 'Ubuntu Mono',;
+		}
+
+		.large {
+			font-size: 55px;
+		}
+
+		.callout-card {
+			background: #fff;
+			border: 1px solid #333;
+			box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+			margin: 1rem 0;
+			overflow: hidden;
+		}
+
+		.callout-card .card-label {
+			border-color: transparent #333 transparent transparent;
+			border-color: rgba(255,255,255,0) #333 rgba(255,255,255,0) rgba(255,255,255,0);
+		}
+
+		.callout-card.primary {
+			border-color: #446cb3;
+		}
+
+		.callout-card.primary .card-label {
+			border-color: transparent #446cb3 transparent transparent;
+			border-color: rgba(255,255,255,0) #446cb3 rgba(255,255,255,0) rgba(255,255,255,0);
+		}
+
+		.callout-card.secondary {
+			border-color: #adb2bd;
+		}
+
+		.callout-card.secondary .card-label {
+			border-color: transparent #adb2bd transparent transparent;
+			border-color: rgba(255,255,255,0) #adb2bd rgba(255,255,255,0) rgba(255,255,255,0);
+		}
+
+		.callout-card.info {
+			border-color: #89c4f4;
+		}
+
+		.callout-card.info .card-label {
+			border-color: transparent #89c4f4 transparent transparent;
+			border-color: rgba(255,255,255,0) #89c4f4 rgba(255,255,255,0) rgba(255,255,255,0);
+		}
+
+		.callout-card.alert {
+			border-color: #f22613;
+		}
+
+		.callout-card.alert .card-label {
+			border-color: transparent #f22613 transparent transparent;
+			border-color: rgba(255,255,255,0) #f22613 rgba(255,255,255,0) rgba(255,255,255,0);
+		}
+
+		.callout-card.success {
+			border-color: #87d37c;
+		}
+
+		.callout-card.success .card-label {
+			border-color: transparent #87d37c transparent transparent;
+			border-color: rgba(255,255,255,0) #87d37c rgba(255,255,255,0) rgba(255,255,255,0);
+		}
+
+		.callout-card.warning {
+			border-color: #f89406;
+		}
+
+		.callout-card.warning .card-label {
+			border-color: transparent #f89406 transparent transparent;
+			border-color: rgba(255,255,255,0) #f89406 rgba(255,255,255,0) rgba(255,255,255,0);
+		}
+
+		.callout-card .card-label {
+			border-style: solid;
+			border-width: 0 70px 70px 0;
+			float: right;
+			height: 0;
+			width: 0;
+			transform: rotate(360deg);
+		}
+
+		.callout-card .callout-card-content {
+			padding: .5rem 1.5rem .875rem;
+		}
+
+		.callout-card.radius {
+			border-radius: .6rem;
+		}
+
+		.callout-card .label-text {
+			color: #fff;
+			font-size: 1.65rem;
+			font-weight: 700;
+			position: relative;
+			right: -40px;
+			top: 8px;
+			white-space: nowrap;
+			/* transform: rotate(45deg); */
+		}
+/* ============================================================================================================================
+== OVAL THOUGHT BUBBLE (more CSS3)
+** ============================================================================================================================ */
+
+.oval-thought {
+  position:relative;
+  width:220px;
+  height: 180px;
+  padding:40px 30px;
+  margin:1em auto 80px;
+  text-align:center;
+  -webkit-border-top-left-radius:220px 180px;
+  -webkit-border-top-right-radius:220px 180px;
+  -webkit-border-bottom-right-radius:220px 180px;
+  -webkit-border-bottom-left-radius:220px 180px;
+  -moz-border-radius:220px / 180px;
+  border-radius:220px / 180px;
+}
+    .blue { 
+        color:#fff;
+        background: #075698 
+        background:-webkit-gradient(linear, 0 0, 0 100%, from(#2e88c4), to(#075698));
+        background:-moz-linear-gradient(#2e88c4, #075698);
+        background:-o-linear-gradient(#2e88c4, #075698);
+        background:linear-gradient(#2e88c4, #075698);
+    }
+.oval-thought p {
+	font-size:1.1em;
+	text-shadow: 1px 1px 2px green, 2px 2px 4px black;
+	}
+
+/* creates the larger circle */
+.oval-thought:before {
+  content:"";
+  position:absolute;
+  bottom:-20px;
+  left:50px;
+  width:30px;
+  height:30px;
+  background:#075698;
+  /* css3 */
+  -webkit-border-radius:30px;
+  -moz-border-radius:30px;
+  border-radius:30px;
+}
+
+/* creates the smaller circle */
+.oval-thought:after {
+  content:"";
+  position:absolute;
+  bottom:-30px;
+  left:30px;
+  width:15px;
+  height:15px;
+  background:#075698;
+  /* css3 */
+  -webkit-border-radius:15px;
+  -moz-border-radius:15px;
+  border-radius:15px;
+}	

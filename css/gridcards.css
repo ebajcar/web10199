@@ -1,0 +1,146 @@
+.grid-parent {
+  background-position: center;
+  background-repeat: repeat;
+  background-color: #093D6D;
+  background-image: url('../images/bg/sher_lightb.jpg');
+  font-family: "Poppins", sans-serif;  
+}
+.sher-dark-blue
+{color:#fff;background-color:#093D6D;}
+.w3-2019-mango-mojito
+{color:#000;background-color:#D69C2F}
+strong {
+  font-weight:bold;
+}
+.grid {
+  -webkit-column-gap: 0;
+          column-gap: 0;
+  display: block;
+  padding: 5px;
+}
+
+@media (min-width: 500px) {
+  .grid {
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+}
+@media (min-width: 900px) {
+  .grid {
+    -webkit-column-count: 3;
+            column-count: 3;
+  }
+}
+.item {
+  box-sizing: border-box;
+  padding: 5px;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid;
+}
+
+.box {
+  background: #fff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 25px;
+    border-radius: 5px;
+}
+
+.box-dark {
+  background: #000;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 5px;
+    border-radius: 5px;
+}
+
+.box-orange {
+  background: orange;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 25px;
+    border-radius: 5px;
+}
+
+.box-warning {
+  color:#000;background-color:#F0EAD6;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 25px;
+    border-radius: 5px;
+}
+
+.title {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0.3em 0 0.5em;
+}
+
+.byline {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.type {
+  color: darkred;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  order: -1;
+  text-transform: uppercase;
+}
+
+.dialog-par {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 5px auto;
+}
+.dialog-ul, dialog-ol { 
+  display: block;
+  font-family: "Source Sans Pro", sans-serif;
+  margin-top: 0.4em;
+  margin-bottom: 1em;
+  margin-left: 40px;
+  margin-right: 0;
+  padding-left: 40px;
+}
+.dialog-ul {  
+  list-style-type: disc;
+}
+.dialog-ol {  
+  list-style-type: decimal;
+}
+.button {
+  margin-top: 1rem;
+}
+.button button {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #ddd;
+  transition: background-color 200ms ease;
+}
+.button button:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.dialog {
+  width: 80vw;
+  border: 0;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 400px) {
+  .dialog {
+    width: 50vw;
+    border: 0;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+#close {
+  display: block;
+  margin-top: 2rem;
+}

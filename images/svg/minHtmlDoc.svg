@@ -1,0 +1,29 @@
+
+    <svg id="diagramSvg" xmlns="http://www.w3.org/2000/svg" style="width: 600px; height: 400px;">
+      <style id="stylesheet">text {
+  text-anchor: middle;
+  font-size: small;
+  font-weight: bold;
+}
+
+rect {
+  fill: #efefef;
+  stroke: gray;
+  opacity: 0.5;
+  stroke-width: 1.5;
+}
+
+line {
+  stroke: black;
+  opacity: 0.5;
+  stroke-width: 1.5;
+}
+  </style>
+      <defs>
+        <marker id="arrowHead" viewBox="-10 -5 10 10" markerUnits="strokeWidth" markerWidth="6" markerHeight="0" orient="auto">
+          <path d="M -10 -5 L 0 0 L -10 5 z"></path>
+        </marker>
+      </defs>
+      <g id="diagramGroup"><rect x="359px" y="0px" width="45px" height="33px"></rect><text x="381px" y="0px"><tspan x="381" dy="22.166666666666668">html</tspan></text><rect x="277px" y="73px" width="45px" height="33px"></rect><text x="300px" y="73px"><tspan x="300" dy="22.166666666666668">head</tspan></text><line x1="374px" y1="33px" x2="300px" y2="73px" marker-end="url(#arrowHead)"></line><rect x="441px" y="73px" width="45px" height="33px"></rect><text x="463px" y="73px"><tspan x="463" dy="22.166666666666668">body</tspan></text><line x1="389px" y1="33px" x2="463px" y2="73px" marker-end="url(#arrowHead)"></line><rect x="227px" y="146px" width="45px" height="33px"></rect><text x="250px" y="146px"><tspan x="250" dy="22.166666666666668">meta</tspan></text><line x1="292px" y1="106px" x2="250px" y2="146px" marker-end="url(#arrowHead)"></line><rect x="327px" y="146px" width="45px" height="33px"></rect><text x="350px" y="146px"><tspan x="350" dy="22.166666666666668">title</tspan></text><line x1="307px" y1="106px" x2="350px" y2="146px" marker-end="url(#arrowHead)"></line><rect x="227px" y="220px" width="45px" height="33px"></rect><text x="250px" y="220px"><tspan x="250" dy="22.166666666666668">charset</tspan></text><line x1="250px" y1="180px" x2="250px" y2="220px" marker-end="url(#arrowHead)"></line><rect x="327px" y="220px" width="45px" height="33px"></rect><text x="350px" y="220px"><tspan x="350" dy="22.166666666666668">"title"</tspan></text><line x1="350px" y1="180px" x2="350px" y2="220px" marker-end="url(#arrowHead)"></line></g>
+    </svg>
+  

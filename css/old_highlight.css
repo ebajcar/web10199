@@ -1,0 +1,54 @@
+
+/* Highlighted Paragraphs */
+.highlight-1, .highlight-2, .highlight-3 {
+	-moz-border-radius : 4px;
+	-webkit-border-radius : 4px;
+	padding : 5px 10px;
+}
+	.highlight-1 {
+		background : #ffb699;
+		border : 1px dotted #FF9966;	
+	}
+	.highlight-2 {
+		background : #FFFF99;
+		border : 1px dotted #FFCC33;	
+	}
+	.highlight-3 {
+		background : #CCFF99;
+		border : 1px dotted #CCCC33;
+	}		
+	img.disp {
+		width: 600px;
+	}
+	img.disp300 {
+		width: 300px;
+	}	
+		button {
+			vertical-align: top;
+						height: 32px;
+			margin-top: 2px;
+		}	
+		 .label{
+			-webkit-border-radius:3px;
+			-moz-border-radius:3px;
+			border-radius:3px;
+			background-color:#3a87ad;
+			}	
+		.pardent {
+			margin: 0 15px;
+		}
+			h2 {
+				counter-increment: num 2;
+			}
+			h3 {
+				counter-increment: sub 1;
+			}
+			h2:before {
+				content: "7."counter(num)". ";
+			}
+			h3:before {
+				content: "7."counter(num)"."counter(sub)". ";
+			}
+			h3.restart {
+				counter-reset: sub 0;
+			}

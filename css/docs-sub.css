@@ -1,0 +1,17 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+/*
+  Bootstrap's documentation styles
+  Special styles for presenting Bootstrap's documentation and examples
+*/
+
+
+
+/* Body and structure
+-------------------------------------------------- */
+
+body {
+  padding-top: 40px;
+ max-width: 400px;
+}
+

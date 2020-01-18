@@ -1,0 +1,39 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+/*
+  Bootstrap's documentation styles
+  Special styles for presenting Bootstrap's documentation and examples
+*/
+
+
+
+/* Body and structure
+-------------------------------------------------- */
+
+body {
+  position: relative;
+  padding-top: 40px;
+  background-image : url(../images/bg/sher_header.gif), url(../images/bg/sher_darkb.jpg); 
+  background-repeat: no-repeat, repeat;
+  background-size: 12%, 60%;
+  background-position: 0 50px, left top;
+  background-attachment: fixed;
+  
+
+}
+.container {
+	background-color: white;
+}
+    .navbar-mine {
+        background-image: -webkit-linear-gradient(top,#3097d1 0,#222 100%);
+        background-image: -o-linear-gradient(top,#3097d1 0,#222 100%);
+        background-image: -webkit-gradient(linear,left top,left bottom,from(#3097d1),to(#222));
+        background-image: linear-gradient(to bottom,#3097d1 0,#222 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+        background-repeat: repeat-x;
+        border-radius: 4px;
+        background-color: #3097d1;
+        border-color: #1c73a5;
+    }
+    .bbold { font-weight: bold }

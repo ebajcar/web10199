@@ -1,0 +1,25 @@
+
+body .nav-list>.active>a{
+  border-left: 5px solid #DDBFF5;
+}
+body .nav-list>.active>a:hover {
+  border-left: 5px solid #A146C2;
+}
+body .nav a:hover{
+  color:#DDBFF5;
+  background-color: #F7EDFA;
+}
+#side-nav {
+  position: relative;
+  overflow: hidden;
+}
+#side-nav:before,
+#side-nav:after {
+  content: ' ';
+  display: table;
+}
+#side-nav:after {
+  clear: both;
+}
+
+

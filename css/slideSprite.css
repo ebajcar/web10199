@@ -1,0 +1,64 @@
+		
+
+		
+#logo, .home, .arch, .cont, .date, .bl, .bar, .cff, h3, h3 span, .more-link, hr, #search, #cats_end, .categories, #rcnt a, .stit, .recp, .recc, .bar2, .fatit, .abt, .twtit, .twitter, .pag_num, .pag_num_act, .prev, .prev_active, .next, .cmt_nu, .pyct, .hbar {
+	background:url(../i/sprite.png) no-repeat;
+	margin:0px;
+}	
+/* -- Pagination Style  -- */
+#pagination {
+	width:294px;
+	height:30px;
+	margin:12px auto;
+	padding:0 0 0 83px;
+}
+#pagination a {
+	display:block;
+	text-decoration:none;
+	float:left;
+	color:#000;
+	margin:0 4px;
+}
+#pagination a:hover {
+	color:#FFF;
+}
+#pagination span {
+	float:left;
+	margin:0 4px;
+}
+.pag_num {
+	background-position:-145px -616px;
+	font-size:14px;
+	font-weight:bold;
+	width:18px;
+	height:24px;
+	padding:1px 0 0 6px;
+}
+.pag_num_act {
+	background-position:-205px -616px;
+	font-size:14px;
+	font-weight:bold;
+	width:18px;
+	height:24px;
+	padding:1px 0 0 6px;
+	color:#FFF;
+}
+.pag_num:hover {
+	background-position:-205px -616px;
+}
+.prev {
+	background-position:-245px -573px;
+	width:60px;
+	height:23px;
+	float:left;
+}
+.prev_active {
+        background-position:-145px -573px;
+	width:65px;
+	height:23px;
+}
+.next {
+	background-position:-145px -653px;
+	width:65px;
+	height:23px;
+}

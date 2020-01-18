@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home SYST10199</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<style>
+body {
+  padding-top: 2em;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+
+.grid {
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  display: block;
+  padding: 5px;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    -webkit-column-count: 3;
+            column-count: 3;
+  }
+}
+@media (min-width: 900px) {
+  .grid {
+    -webkit-column-count: 3;
+            column-count: 3;
+  }
+}
+.item {
+  box-sizing: border-box;
+  width: 100%;
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+}
+
+@media screen and (max-width: 1000px) {
+    div.foo {display:none;}
+}
+div.foo{
+  width: 99%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+.letter{
+  display: inline-block;
+  font-weight: 900;
+  font-size: 5em;
+  margin: 0.1em;
+  position: relative;
+  color: gold; /*#00B4F1;*/
+  transform-style: preserve-3d;
+  perspective: 400;
+  z-index: 1;
+}
+.letter:before, .letter:after{
+  position:absolute;
+  content: attr(data-letter);
+  transform-origin: top left;
+  top:0;
+  left:0;
+}
+.letter, .letter:before, .letter:after{
+  transition: all 0.3s ease-in-out;
+}
+.letter:before{
+  color: #999;
+  text-shadow: 
+    -1px 0px 1px rgba(255,255,255,.8),
+    1px 0px 1px rgba(0,0,0,.8);
+  z-index: 3;
+  transform:
+    rotateX(0deg)
+    rotateY(-15deg)
+    rotateZ(0deg);
+}
+.letter:after{
+  color: rgba(0,0,0,.11);
+  z-index:2;
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(0deg)
+    rotateZ(0deg)
+    skew(0deg,1deg);
+}
+.letter:hover:before{
+  color: #fafafa;
+  transform:
+    rotateX(0deg)
+    rotateY(-40deg)
+    rotateZ(0deg);
+}
+.letter:hover:after{
+  transform:
+    scale(1.08,1)
+    rotateX(0deg)
+    rotateY(40deg)
+    rotateZ(0deg)
+    skew(0deg,22deg);
+}
+</style>    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-info navbar-dark fixed-top">
+      <a class="navbar-brand" href="#" style="padding-top:1px;line-height:1em;font-weight:bold;">SYST10199 <br><small>Web Programming</small></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://slate.sheridancollege.ca/d2l/home">SLATE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="https://piazza.com/sheridancollege.ca/">Piazza Q&amp;A</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a  class="dropdown-item" href="https://www.w3.org/" target="_blank"><img alt="img" src="images/icon_external.gif" /> World Wide Web Consortium (W3C)</a>
+                <a  class="dropdown-item" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="Javascript Center; designed for all levels of javascript users, includes links to tools, documentation, and an online communities."><img alt="img" src="images/icon_external.gif" /> Mozilla Developer Network (MDN)</a>
+                <a class="dropdown-item"  href="http://www.ecma-international.org/ecma-262/8.0/index.html" target="_blank"><img alt="img" src="images/icon_external.gif" /> ECMA-262 2017 (Edition 8)</a>
+            </div>
+          </li>         
+<!--		  
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Course Material</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown02">
+              <a class="dropdown-item" target="_blank" href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10049&version=2016090600&sec=0&reload=true">Course Outline</a>
+              <a class="dropdown-item" href="classPlan.html">Class Plan</a>                   
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tutorial Sets</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown02">
+                <a class="dropdown-item" href="tut01.html">Tutorial Set 1</a>   
+                <a class="dropdown-item" href="tut02.html">Tutorial Set 2</a>
+                <a class="dropdown-item" href="tut03.html">Tutorial Set 3</a>
+                <a class="dropdown-item" href="tut04.html">Tutorial Set 4</a>
+                <a class="dropdown-item" href="tut05.html">Tutorial Set 5</a>
+                <a class="dropdown-item" href="tut06.html">Tutorial Set 6</a>
+                <a class="dropdown-item" href="tut07.html">Tutorial Set 7</a>
+                <a class="dropdown-item" href="tut08.html">Tutorial Set 8</a>
+                <a class="dropdown-item" href="tut09.html">Tutorial Set 9</a>
+                <a class="dropdown-item" href="tut10.html">Tutorial Set 10</a>
+            </div>
+          </li>   
+-->		  
+        </ul>
+        <form class="form-inline my-2 my-lg-0" method="get" action="http://www.google.com/search">
+          <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+     
+<div class="container">
+
+ <!-- 
+  *********************************************
+  **	MAIN
+  *********************************************
+  -->		 
+<main class="starter-template">   
+    <div class="foo">
+        <span class="letter" data-letter="W">W</span>
+        <span class="letter" data-letter="E">E</span>
+        <span class="letter" data-letter="L">L</span>
+        <span class="letter" data-letter="C">C</span>
+        <span class="letter" data-letter="O">O</span>
+        <span class="letter" data-letter="M">M</span>
+        <span class="letter" data-letter="E">E</span>
+        <span class="letter" data-letter="!">!</span>
+    </div>
+    <p style="letter-spacing:2px;">Learn the basics of web app design using JavaScript and PHP programming languages, how to program simple, dynamic, client-side web apps using the JavaScript programming language to manipulate the HTML DOM, and how to write web app code on the server-side using the PHP programming language with a MySQL database to present custom content to a user.</p> 
+    
+
+<div class="grid">
+	<div class="item card  border-primary" style="height:400px"> 
+		<a  class="card-img-top" href="content/dev_material/development.html" target="_parent"><img src="content/images/js2.png" alt="" style="width:99%"></a>
+		<div class="card-body">
+			<h4 class="card-title">  Client-side Programming</h4>
+			<div class="card-text">
+				<blockquote class="blockquote"   style="font-size:0.79em;text-align:left">
+					<p><i class="fa fa-quote-left fa-2x fa-pull-left fa-border"></i>JavaScript® is a lightweight, interpreted, programming language with first-class functions... non-browser environments... node.js and Apache CouchDB. JS is a prototype-based, multi-paradigm, dynamic scripting language, supporting object-oriented, imperative, and functional programming...</p>
+					<footer> <cite title="[ developer.mozilla.org ]">developer.mozilla.org</cite></footer>
+				</blockquote> 
+			</div>                   
+		</div>
+	</div> 
+    <div class="item card text-white bg-dark  border-info" style="height:400px">
+        <a class="card-img-top" href="content/html5.html" target="_parent"><img src="content/images/webappdesign.jpg"  style="width:100%" alt="Card image cap" ></a>
+        <div class="card-body  text-info">
+            <h4 class="card-title">Web App Design</h4><hr class="text-info border-info" style="width:50%">
+            <p class="card-text" style="font-size:1.3em;">Organize with HTML5! <br> Style with CSS3! <br> Add behaviour with JS! <br> Enhance with PHP!</p>
+        </div>
+    </div>
+    <div class="item card  border-primary" style="height:400px">
+        <a class="card-img-top" href="content/css3.html" target="_parent"><img src="content/images/php2.png"  style="width:100%" alt="Card image cap" ></a>
+        <div class="card-body">
+            <h4 class="card-title">Server-side Programming</h4>
+            <div class="card-text">						<blockquote class="blockquote-reverse"  style="font-size:0.8em;text-align:right">
+							<p><i class="fa fa-quote-left fa-2x fa-pull-left fa-border"></i>PHP, ...a widely-used Open Source general-purpose scripting language that is especially suited for web development and can be embedded into HTML. The main goal of the language is to allow web developers to write dynamically generated web pages quickly...</p>
+							<footer> <cite title="[ php.net ]">php.net</cite></footer>
+						</blockquote> </div>         
+        </div>        
+	</div> 
+
+ </div> 
+
+</main>
+
+<!-- 
+  ** *******************************************
+  ** Footer
+  ** *******************************************
+-->	
+<footer class="container">   
+    <div class="xsmall fa fa-copyright" style="padding:1% 13%;text-align:center;">
+        <em>This work is the intellectual property of Sheridan College. Any further copying 
+        and distribution outside of class must be within the copyright law. Posting to 
+        commercial sites for profit is prohibited.</em>
+    </div>   
+    <address class="row">
+        <div  class="col-md-8 text-left">
+            <img src="images/fast.jpg" style="height:24px;vertical-align:text-bottom" alt="Sheridan College logo"/>
+            <span style="margin-left:6px;padding-left:6px;font-size: 1em;font-family:Arial;border-left:1px solid gray;display:inline-block;height:24px;vertical-align:text-bottom">&nbsp;</span>SYST10199 Web Programming, 
+            <a href="http://www-acad.sheridanc.on.ca/~bajcar/">Ellen Bajcar, et al</a>   
+        </div>              
+        <div  class="col-md-4 text-right">
+            <a href="https://login.sheridanc.on.ca/idp/Authn/UserPassword" target="_blank">
+            <img src="images/slate-logo.png"  alt="Slate" title="Slate" /></a>&nbsp;
+            <a href="http://piazza.com/sheridancollege.ca/winter2016/syst10049/home" target="_blank">
+            <img src="images/piazza_logo.png"  alt="Piazza" title="Piazza" /></a>&nbsp;    
+            <a href="https://www.facebook.com/syst10049/" target="_blank">
+            <img src="images/facebook.gif"  alt="Facebook" title="Facebook" /></a>&nbsp;
+            <a href="https://twitter.com/EllenBajcar" data-via="EllenBajcar">
+            <img src="images/twitter.gif" alt="Contact Us" /></a>
+        </div>
+    </address> 					
+
+</footer>     
+
+    </div><!-- /.container --> 
+    
+
+    
+    
+ <!-- 
+  **
+  ** Modal Learning Outcomes
+  **
+  -->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">Learning Outcomes</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>      
+      </div>
+      <div class="modal-body">
+	  <!-- content starts -->
+		<table class="table table-sm table-condensed table-hover">
+			<tr><th>1</th><td>Create a properly structured web page using (HTML5).</td></tr>
+			<tr><th>2</th><td>Represent the Document Object Model (DOM) in a hierarchical diagram.</td></tr>
+			<tr><th>3</th><td>Recognize the importance of browser compatibility with HTML5 and CSS3 standards.</td></tr>
+			<tr><th>4</th><td>Style a web page using Cascading Style Sheets (CSS3).</td>    </tr>  
+			<tr><th>5</th><td>Create page layouts that adapt to suit the constraints of the display using media queries.</td></tr>
+			<tr><th>6</th><td>Publish a web page on the internet.</td></tr>
+			<tr><th>7</th><td>Explain how web servers display web pages.</td></tr>
+			<tr><th>8</th><td>Secure a web page.</td></tr>
+			<tr><th>9</th><td>Logically layout a web space.</td></tr>
+			<tr><th>10</th><td>Design forms that use major controls and form handling logic.</td> </tr> 
+			<tr><th>11</th><td style="text-decoration:line-through">Create client-side scripts with JavaScript for form data validation.</td> </tr>      
+		</table>
+		<!-- content ends -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>	   
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script>
+/*!
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014-2017 The Bootstrap Authors
+ * Copyright 2014-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// See the Getting Started docs for more information:
+// https://getbootstrap.com/getting-started/#support-ie10-width
+
+(function () {
+  'use strict'
+
+  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+    var msViewportStyle = document.createElement('style')
+    msViewportStyle.appendChild(
+      document.createTextNode(
+        '@-ms-viewport{width:auto!important}'
+      )
+    )
+    document.head.appendChild(msViewportStyle)
+  }
+
+}())    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+/*
+Reset browser defaults
+
+A common reset using the universal selector looks like:
+* {
+	margin: 0;
+	padding: 0;
+}
+- reset every element in the document
+- heavy on the browser's rendering engine
+
+source: CSS3 in Easy Steps, Mike McGrath
+*/
+
+/* Reset for older browsers*/
+header, footer, article, nav, section, aside, time, hgroup {
+	display : block;
+}
+
+/* Reset page colours */
+html {
+	color: black;
+	background: white;
+}
+
+/* Explicitly set element margin and padding areas to zero, default font */
+body, div,
+h1, h2, h3, h4, h5, h6,
+a, p, pre, form, blockquote, dl, dt, dd,
+ul, ol, li,  
+table, thead, tfoot, tbody, th, tr, td,
+fieldset, legend, input, textarea {
+	margin : 0;
+	padding : 0;
+}
+
+/* Set font appearance */
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style: normal;
+	font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+p, a, li, dd {
+	font : 12pt/16pt "Trebuchet MS", Helvetica, sans-serif; 
+}
+
+/* Remove list markers and left-align text content */
+ol, ul {
+	list-style: none;
+}
+caption, th, td {
+	text-align: left;
+}
+q.before, q.after {
+	content: " " ;
+}
+
+/* other elements */

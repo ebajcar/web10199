@@ -1,0 +1,43 @@
+a[href $='.pdf'] { 
+   padding-right: 18px;
+   background: transparent url(../images/icon_pdf.gif) no-repeat center right;
+}
+
+a[href $='.docx'] { 
+   padding-right: 18px;
+   background: transparent url(../images/icon_doc.gif) no-repeat center right;
+}
+
+a[href $='.html'] { 
+   padding-right: 18px;
+   background: transparent url(../images/icon_popup.gif) no-repeat center right;
+}
+a[href $='.xlsx'] { 
+   padding-right: 18px;
+   background: transparent url(../images/icon_xls.gif) no-repeat center right;
+}
+
+
+a[href ^="mailto:"] {
+   padding-right: 20px;
+   background: transparent url(../images/icon_mailto.gif) no-repeat center right;
+}
+
+
+a[href ^="#e"] {
+   padding-right: 20px;
+   background: transparent url(../images/bmark2.png) no-repeat center right;
+}
+
+a[class ~="popup"] {
+   padding-right: 18px;
+   background: transparent url(../images/icon_popup.gif) no-repeat center right;
+}
+
+/*
+<a href="files/holidays.pdf">View Holidays</a>
+
+<a href="mailto:billg@microsoft.com">Contact Me</a>
+
+<a class="popup specialstyle" href="help.html">View Help</a>
+*/

@@ -1,0 +1,122 @@
+@import url(http://fonts.googleapis.com/css?family=Allan:700);
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+/* html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif;} */
+html,body,h1,h2,h3,h4,h5 {font-family: 'Ubuntu Condensed', sans-serif;}
+.w3-bar-block .w3-bar-item{padding:16px}
+.lineh { line-height:1.05; border-bottom: 1px dotted orange;padding-bottom:3px;}
+summary {padding:5px;}
+.dialog {
+  width: 60vw;
+  border: 0;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 400px) {
+  .dialog {
+    width: 50vw;
+    border: 0;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+#close {
+  display: block;
+  margin-top: 2rem;
+}
+.just {
+    text-align: justify;
+    text-justify: inter-word;
+	line-height: 1.1em;
+}
+
+.sherbg {
+    background-position: center;
+    background-size: cover;
+  background-color: #093D6D;
+  background-image: url('../images/bg/sher_darkb3.jpg');
+
+
+}
+.sherBgColor { background-color: #093D6D; }  
+.sherblue { color: #093D6D; }
+
+header h2 {
+	font-size: 1.5em;
+}
+
+section {
+	counter-increment: num 0;
+}
+section h3 {
+	counter-increment: num 1; counter-reset: sub;
+}
+section h4 {
+	counter-increment: sub 1;
+    /* Set "my-sec-counter" to 0 */
+    counter-reset: my-sec-counter;
+}
+
+section h5:before {
+    /* Decrement "my-sec-counter" by 1 */
+    counter-increment: my-sec-counter 1;
+    content: counter(num)"."counter(sub)"."counter(my-sec-counter) ". ";
+}
+section h3:before {
+	content: "STEP "counter(num)". ";
+}
+section h4:before {
+	content: counter(num)"."counter(sub)". ";
+}
+section h4.restart {
+	counter-reset: sub 0;
+}
+#stretch p::first-line {
+	font-weight: bold;
+	}
+/*
+.practice  {
+  counter-reset: abc 0;
+  list-style-type: none;
+}
+*/	
+.practice > li {
+	margin-bottom: 10px;
+}
+/*
+.practice > li:before {
+	counter-increment: abc 1;
+	content: "3.1."counter(abc)". "; 
+}	
+*/
+samp:before {content: " • "}
+ul.checked {
+    list-style: none; /* Remove list bullets */
+    padding: 0;
+    margin: 0;
+}
+
+ul.checked li { 
+    padding-left: 20px; 
+	text-indent: -20px;
+}
+
+ul.checked li:before {
+    content: "✔"; /* Insert content that looks like bullets */
+    padding-right: 8px;
+    color: blue; /* Or a color you prefer */
+}
+
+ /* Tag Cloud */
+.tagcloud {
+	width: 100%;
+}
+.tagcloud li {
+	display : inline;
+	margin : 5px;
+	padding: 0;
+}
+.tagcloudsize-1 a {font-size : 1em; text-decoration: none; color: red;}
+.tagcloudsize-2 a {font-size : 1.2em; text-decoration: none; color: orange;}
+.tagcloudsize-3 a {font-size : 1.3em; text-decoration: none; color: navy;}	
