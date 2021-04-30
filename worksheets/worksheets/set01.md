@@ -53,17 +53,19 @@ plan).
 	- (v.3) &mdash; Refactor your code to display a table in the console (see `console.table()` property).
 2. **Temperature conversion** 
 	- (v.1) &mdash; Write a program that calculates 25 degrees Celsius in Fahrenheit and displays a phrase that includes both values in the console.
-6. **Area of a circle** 
+3. **Area of a circle** 
 	- (v.1) &mdash;  Write a simple program that computes the area of a circle when the `radius = 4`. Explore the Math object (pow, π). Output to console.
-7. **Quadratic roots** 
+4. **Quadratic roots** 
 	- (v.1) &mdash; Write a program that calculates roots of a quadratic equation. Implicit equation of a line, when `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and they are `x = -b +- sqrt(b^2-4ac) over 2a`. Display the result in the console, when `a=4`, `b=3`, and `c=2`.
-8. **Prime numbers** 
+5. **Prime numbers** 
 	- (v.1) &mdash; Write a program that displays the first 20 prime numbers (starting with 2). Display in console.
-9. **Game of Casino Craps**
+6. **Is it a number or a string?**
+	- [TBD]
+7. **Game of Casino Craps**
 	- (v.1) Write a program that lets a user to play a game of casino craps in the console.
-10. **Game of Rock Paper Scissors**
+8. **Game of Rock Paper Scissors**
 	- (v.1) Write out an algorithm for the game of Rock Paper Scissors.  Assume one human players plays against the computer.
-11. **Game of Tic Tac Toe**
+9. **Game of Tic Tac Toe**
 	- (v.1) Write out an algorithm for the game of tic tac toe.  Assume two human players sit together with a sheet of paper (or single monitor/keyboard) and take turns.
 
 ---
