@@ -40,6 +40,18 @@ Class examples
 
 
 
+## Formulate answers to the following questions
+1. What is an algorithm?
+
+
+---
+
+
+## Exercises
+Set up a project for each problem. Keep all versions of your solution for each project.  For each problem, write out the
+algorithm that you plan to use (and modify if your implementation deviates from your original
+plan).
+
 
 1. **Fibonacci numbers** (v.6) &mdash; Consider what might be the next improvement(s) to your versions.
 2. **Temperature conversion** (v.4) &mdash; Consider what might be the next improvement(s) to your versions.
