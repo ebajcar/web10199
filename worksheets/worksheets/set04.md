@@ -9,34 +9,37 @@
 ---
 
 
+## Formulate answers to the following questions
+1. What is an algorithm?
 
-## Read and analyze (analytical reading) the following tutorials:
-Observe and describe. Try all examples. Make notes. Document what you have learned.
 
-### Problem A: Fibonacci numbers
-Post in Piazza Q&A a fully functional, and object-oriented, unobtrusive Javascript solution.
+---
 
-### Problem B: Convert temperature
-Post in Piazza Q&A a fully functional, and object-oriented, unobtrusive Javascript solution.
 
-### Problem C: Calculate the area of a circle
-Post in Piazza Q&A a fully functional, and object-oriented, unobtrusive Javascript solution.
+## Exercises
+Set up a project for each problem. Keep all versions of your solution for each project.  For each problem, write out the
+algorithm that you plan to use (and modify if your implementation deviates from your original
+plan).
 
-### Problem D: Calculate roots of a quadratic equation
-Post in Piazza Q&A a fully functional, and object-oriented, unobtrusive Javascript solution.
 
-### Problem E: Calculate prime numbers
-Post in Piazza Q&A a fully functional, and object-oriented, unobtrusive Javascript solution.
-
-### Problem F: Is it a palindrome?
-Post in Piazza Q&A a fully functional, and object-oriented, unobtrusive Javascript solution.
-
-### Problem G: Game of Tic Tac Toe
-Complete for Assignment 2, an object-oriented, unobtrusive Javascript solution.
-
-### Problem H: Game of Rock Paper Scissors Lizard Spock
-Post in Piazza Q&A a fully functional, and object-oriented, unobtrusive Javascript solution.
-
+1. **Fibonacci numbers** 
+    - (v.6) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+2. **Temperature conversion** 
+    - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.     
+3. **Area of a circle** 
+    - (v.3) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.   
+4. **Quadratic roots** 
+    - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+5. **Prime numbers** 
+    - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+6. **Is it a palindrome** 
+    - (v.3) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+7. **Game of Casino Craps**
+  - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+8. **Game of Tic Tac Toe**
+    - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+9. **Game of Rock Paper Scissors**
+    - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
 
 
   
