@@ -4,7 +4,7 @@
 
 
 ## Key terms and concepts to understand
-> &bull; web browser  &bull; internet  &bull; server  &bull; client  &bull; TCP/IP  &bull; IPO (input>process>output)  &bull; request  &bull; response  &bull; programming language  &bull;  computer programming  &bull; directory  &bull; folder  &bull;  file  &bull; hierarchy  &bull; computer application  &bull;  text editor  &bull; client/server  &bull;  storage  &bull; tree structure &bull;
+> &bull; Javascript  &bull; imperative programming  &bull; variable  &bull; value  &bull; literal  &bull; IPO operator &bull; expression  &bull; keyword  &bull; identifier  &bull;  data type &bull; strict mode  &bull; console  &bull;  algorithm  &bull; object-oriented programming  &bull; computer application  &bull;  text editor  &bull; client/server  &bull;  type conversion  &bull; function &bull method &bull;
 > 
 ---
 
@@ -13,45 +13,27 @@
 ## Read and analyze (analytical reading) the following tutorials:
 Observe and describe. Try all examples. Make notes. Document what you have learned.
 
-1. Javascript Syntax: https://www.w3schools.com/js/js_syntax.asp
-    - Values, Literals, Variables, Operators, Expressions, Keywords, Comments, Identifiers, Case Sensitive, Camel Case, Character Set
+### w3schools Tutorials
 
-2. Javascript Variables: https://www.w3schools.com/js/js_variables.asp
-
-3. Javascript Type convernsion: https://www.w3schools.com/js/js_type_conversion.asp
-
-4. Javascript Strict Mode: https://www.w3schools.com/js/js_strict.asp
-
-    - You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables.
+1. <a href="https://www.w3schools.com/js/js_assignment.asp" target="_blank">JS Assignment</a>
+2. <a target="_blank" href="https://www.w3schools.com/js/js_if_else.asp">JS Conditions</a>
+3. <a target="_blank" href="https://www.w3schools.com/js/js_switch.asp">JS Switch</a>
+4. <a target="_blank" href="https://www.w3schools.com/js/js_loop_for.asp">JS Loop For</a>
+5. <a target="_blank" href="https://www.w3schools.com/js/js_loop_while.asp">JS Loop While</a>
+6. <a target="_blank" href="https://www.w3schools.com/js/js_break.asp">JS Break</a>
+7. [JavaScript building blocks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks) In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code block such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.
+8. [Making decisions in your code — conditionals](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals) In any programming language, code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime. In this article we'll explore how so-called conditional statements work in JavaScript.
 
 ---
 
 ## Formulate answers to the following questions
-1. What is the purpose of a web browser?
-2. Describe what happens when a user requests a web page.
-3. Describe how the files for a web project are organized.
-4. How do you name files and directories? What are naming conventions?
-5. What do we need to know about the Web environment?
-6. What are the major computer components and how they work?
+1. What is ...?
 ---
 
 
 ## Exercises
 
-1. 
-
-#### SYST10199 Web Programming
-
-Set up a project for each problem. Keep all versions of your solution for each project.
-Watch video on [Algorithms](https://youtu.be/6hfOvs8pY1k). For each problem, write out the
-algorithm that you plan to use (and modify if your implementation deviates from your original
-plan).
-
-### Problem A: Fibonacci numbers
-
-1. Write a program that displays the first 20 Fibonacci numbers in the console.
-2. Refactor your code to display a table in the console (see `console.table()` property).
-3. Extend the program to capture user’s input to determine how many numbers to display.
+1. **Fibonacci numbers** *(from previous worksheet)* Extend the program to capture user’s input to determine how many numbers to display.
 
 ### Problem B: Convert temperature
 
@@ -84,28 +66,6 @@ plan).
 
 ---
 
-### w3schools Tutorials
 
-&bull; <a href="https://www.w3schools.com/js/js_assignment.asp" target="_blank">JS Assignment</a>
-
-&bull; <a target="_blank" href="https://www.w3schools.com/js/js_if_else.asp">JS Conditions</a>
-
-&bull; <a target="_blank" href="https://www.w3schools.com/js/js_switch.asp">JS Switch</a>
-
-&bull; <a target="_blank" href="https://www.w3schools.com/js/js_loop_for.asp">JS Loop For</a>
-
-&bull; <a target="_blank" href="https://www.w3schools.com/js/js_loop_while.asp">JS Loop While</a>
-
-&bull; <a target="_blank" href="https://www.w3schools.com/js/js_break.asp">JS Break</a>
-
-### MDN Tutorials
-
-&bull; [JavaScript building blocks](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks)
-In this module, we continue our coverage of all JavaScript's key fundamental features, turning our attention to commonly-encountered types of code block such as conditional statements, loops, functions, and events. You've seen this stuff already in the course, but only in passing — here we'll discuss it all explicitly.
-
-&bull; [Making decisions in your code — conditionals](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
-In any programming language, code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime. In this article we'll explore how so-called conditional statements work in JavaScript.
-
----
 
 > Web Programming @ Sheridan College
