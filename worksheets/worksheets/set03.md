@@ -53,20 +53,26 @@ algorithm that you plan to use (and modify if your implementation deviates from 
 plan).
 
 
-1. **Fibonacci numbers** (v.6) &mdash; Consider what might be the next improvement(s) to your versions.
-2. **Temperature conversion** (v.4) &mdash; Consider what might be the next improvement(s) to your versions.
-3. **Area of a circle** (v.3) &mdash; Consider what might be the next improvement(s) to your versions.
-4. 
-6. **Quadratic roots** (v.3) &mdash; Modify the previous version to create and populate a table, where  `a` range is 1 to 5 (columns), `b` range is 1 to 5 (rows), and `c=4`(can be displayed above or below the table. Create the appropriate HTML and populate with Javascript.
-7. **Quadratic roots** (v.4) &mdash; Modify solution to use DOM methods to create and populate the table.
-8. **Quadratic roots** (v.4) &mdash; Extend the previous version to a 10x10 table to accommodate `a` and `b` values 1 to 10.
-9. **Quadratic roots** (v.4) &mdash; Modify previous version to capture initial values for `a` and `b`, and enter the `c` values from the user.
-10. **Prime numbers** (v.4) &mdash; Modify the previous version to create and populate the unordered list using DOM methods.
-11. **Is it a palindrome** (v.1) &mdash; Write a function that takes one argument, a string or a number, and checks if it is a palindrome, and returns a true or false. The function needs to ignore spaces and casing.
-12. **Is it a palindrome** (v.2) &mdash; Create an array and populate with: 02022020, 1001, aba, "was it a car or a cat I saw" "never odd or even" "Step on no pets" "Funny enough"   "new moon", "selfless". You can add your own members. Test your function for each member. Output to console, for examples: `01011010 true` and so on.
-13. **Is it a palindrome** (v.3) &mdash; (optional) How would you modify your function to recognize that the string contains a palindrome (ie., "selfless")?
-14. **Is it a palindrome** (v.4) &mdash; Write a new version that will allow a user to enter a phrase or a number and it will call your function and reports to the user whether it is a palindrome.
-15. Game of Tic Tac Toe
+1. **Fibonacci numbers** 
+        - (v.6) &mdash; Consider what might be the next improvement(s) to your versions.
+2. **Temperature conversion** 
+        - (v.4) &mdash; Consider what might be the next improvement(s) to your versions.
+3. **Area of a circle** 
+        - (v.3) &mdash; Consider what might be the next improvement(s) to your versions.
+4. **Quadratic roots** 
+        - (v.3) &mdash; Modify the previous version to create and populate a table, where  `a` range is 1 to 5 (columns), `b` range is 1 to 5 (rows), and `c=4`(can be displayed above or below the table. Create the appropriate HTML and populate with Javascript.
+9. **Quadratic roots** 
+    1. (v.4) &mdash; Modify solution to use DOM methods to create and populate the table.
+    2. (v.5) &mdash; Extend the previous version to a 10x10 table to accommodate `a` and `b` values 1 to 10.
+    3. (v.6) &mdash; Modify previous version to capture initial values for `a` and `b`, and enter the `c` values from the user.
+13. **Prime numbers** 
+        - (v.4) &mdash; Modify the previous version to create and populate the unordered list using DOM methods.
+15. **Is it a palindrome** 
+        - (v.1) &mdash; Write a function that takes one argument, a string or a number, and checks if it is a palindrome, and returns a true or false. The function needs to ignore spaces and casing.
+        - (v.2) &mdash; Create an array and populate with: 02022020, 1001, aba, "was it a car or a cat I saw" "never odd or even" "Step on no pets" "Funny enough"   "new moon", "selfless". You can add your own members. Test your function for each member. Output to console, for examples: `01011010 true` and so on.
+        - (v.3) &mdash; (optional) How would you modify your function to recognize that the string contains a palindrome (ie., "selfless")?
+        - (v.4) &mdash; Write a new version that will allow a user to enter a phrase or a number and it will call your function and reports to the user whether it is a palindrome.
+20. Game of Tic Tac Toe
 
     1. Write out the algorithm for a game of Tic Tac Toe. Assume both players sit at the same monitor and take turns using the mouse.
     2. Copy the class example version that creates and removes the board and add your algorithm. Identify what other functionality you need to include to complete the game. Identify what input and output you will need and how you would set up the appropriate variables. Do not make changes to the CSS and HTML at this time. All comments should appear in the Description of the prologue. Change instructor's name to yours and add "Citation: SYST10199 Web Programming, Summer 2020, Sheridan College" between Copyright and Description.
