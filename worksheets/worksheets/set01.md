@@ -61,6 +61,10 @@ plan).
 	- (v.1) &mdash; Write a program that displays the first 20 prime numbers (starting with 2). Display in console.
 9. **Game of Casino Craps**
 	- (v.1) Write a program that lets a user to play a game of casino craps in the console.
+10. **Game of Rock Paper Scissors**
+	- (v.1) Write out an algorithm for the game of Rock Paper Scissors.  Assume one human players plays against the computer.
+11. **Game of Tic Tac Toe**
+	- (v.1) Write out an algorithm for the game of tic tac toe.  Assume two human players sit together with a sheet of paper (or single monitor/keyboard) and take turns.
 
 ---
 
