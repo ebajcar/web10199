@@ -76,7 +76,8 @@ Calculate and display in console the first 5 Fibonacci numbers. Display in the c
  	6. If the current value is not the fifth Fibonacci number, repeat steps iv. and v.
 
 ### Solution
-```
+
+```js
 var n = 5, tmp;
 var pre = 0, cur = 1;
 console.log("0: " + pre);
