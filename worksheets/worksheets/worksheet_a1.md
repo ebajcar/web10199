@@ -1,5 +1,24 @@
 # Worksheet 1
-#### SYST10199 Web Programming
+
+
+## Explore the tutorials:
+
+1. Javascript Syntax: https://www.w3schools.com/js/js_syntax.asp
+    - Values, Literals, Variables, Operators, Expressions, Keywords, Comments, Identifiers, Case Sensitive, Camel Case, Character Set
+
+2. Javascript Variables: https://www.w3schools.com/js/js_variables.asp
+
+3. Javascript Type convernsion: https://www.w3schools.com/js/js_type_conversion.asp
+
+4. Javascript Strict Mode: https://www.w3schools.com/js/js_strict.asp
+
+    - You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables.
+    
+## Exercises
+
+1. 
+
+## Example Solution
 
 ### Problem
 Calculate and display in console the first 5 Fibonacci numbers. Display in the console.
@@ -17,7 +36,8 @@ for (var i = 0; i < n-2; i++) {
     console.log(i+2 + ": " + cur);
 }
 ```
-### Exercises
+
+### Complete the following
 1. Implement the above solution using a valid HTML document. Include proper comments to explain what the code does.
 
 
@@ -48,21 +68,9 @@ console.log("F" + (i+2) + ": " + cur);
 console.log("F" + i+2 + ": " + cur);
 ```
 
-## Explore the tutorials:
 
-1. Javascript Syntax: https://www.w3schools.com/js/js_syntax.asp
-    - Values, Literals, Variables, Operators, Expressions, Keywords, Comments, Identifiers, Case Sensitive, Camel Case, Character Set
-
-2. Javascript Variables: https://www.w3schools.com/js/js_variables.asp
-
-3. Javascript Type convernsion: https://www.w3schools.com/js/js_type_conversion.asp
-
-4. Javascript Strict Mode: https://www.w3schools.com/js/js_strict.asp
-
-    - You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables.
-    
     
 ---
 
-> Web Programming @ Sheridan College
+> SYST10199 Web Programming @ Sheridan College
 
