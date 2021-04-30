@@ -54,8 +54,7 @@ plan).
 
 
 1. **Fibonacci numbers** 
-
-- (v.6) &mdash; Consider what might be the next improvement(s) to your versions.
+    - (v.6) &mdash; Consider what might be the next improvement(s) to your versions.
 
 
 3. **Temperature conversion** 
