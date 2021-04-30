@@ -4,7 +4,7 @@
 
 
 ## Key terms and concepts to understand
-> &bull; web browser  &bull; internet  &bull; server  &bull; client  &bull; TCP/IP  &bull; IPO (input>process>output)  &bull; request  &bull; response  &bull; programming language  &bull;  computer programming  &bull; directory  &bull; folder  &bull;  file  &bull; hierarchy  &bull; computer application  &bull;  text editor  &bull; client/server  &bull;  storage  &bull; tree structure &bull;
+> &bull; Javascript  &bull; imperative programming  &bull; variable  &bull; value  &bull; literal  &bull; IPO operator &bull; expression  &bull; keyword  &bull; identifier  &bull;  data type &bull; strict mode  &bull; console  &bull;  algorithm  &bull; object-oriented programming  &bull; computer application  &bull;  text editor  &bull; client/server  &bull;  type conversion  &bull; tree structure &bull;
 > 
 ---
 
