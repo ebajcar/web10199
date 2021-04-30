@@ -36,17 +36,22 @@ Observe and describe. Try all examples. Make notes. Document what you have learn
 1. **Fibonacci numbers** *from previous worksheet* 
     - (v.4) &mdash; Modify your console version to display the sequence on the page. Use `document.write()` method.
     - (v.5) Extend the program to capture user’s input to determine how many numbers to display. Use `document.write()` method to display the sequence underneath the input control. 
-4. **Temperature conversion** 
+2. **Temperature conversion** 
     - (v.2) &mdash; Modify your program to display on the page.
     - (v.3) &mdash; Extend the program to capture user's input to determine what value to convert. Display on the page with two (2) decimal places.
-7. **Area of a circle** 
+3. **Area of a circle** 
     - (v.2) &mdash; Extend the program to get the value from the user. Display on the page.
-9. **Quadratic roots** 
+4. **Quadratic roots** 
     - (v.2) &mdash; Extend the problem to display the results on the page in an HTML table.
-11. **Prime numbers** 
+5. **Prime numbers** 
     - (v.2) &mdash; Extend the program to display on the page.
     - (v.3) &mdash; Modify the program to display the numbers in an unordered list.
-
+6. **Game of Casino Craps**
+	- (v.1) Write a program that lets a user to play a game of casino craps in the console.
+7. **Game of Rock Paper Scissors**
+	- (v.1) Write out an algorithm for the game of Rock Paper Scissors.  Assume one human players plays against the computer.
+8. **Game of Tic Tac Toe**
+	- (v.1) Write out an algorithm for the game of tic tac toe.  Assume two human players sit together with a sheet of paper (or single monitor/keyboard) and take turns.
   
 ---
 > *The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.*
