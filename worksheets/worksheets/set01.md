@@ -49,13 +49,18 @@ plan).
 
 ### Problem A: Fibonacci numbers
 
-1. **Fibonacci numbers** (v.1) &mdash; Calculate and display in console the first 5 Fibonacci numbers. Display in the console.
-2. **Fibonacci numbers** (v.2) &mdash; Write a program that displays the first 20 Fibonacci numbers in the console.
-3. **Fibonacci numbers** (v.3) &mdash; Refactor your code to display a table in the console (see `console.table()` property).
-4. **Temperature conversion** (v.1) &mdash; Write a program that calculates 25 degrees Celsius in Fahrenheit and displays a phrase that includes both values in the console.
-5. **Area of a circle** (v.1) &mdash;  Write a simple program that computes the area of a circle when the `radius = 4`. Explore the Math object (pow, π). Output to console.
-6. **Quadratic roots** (v.1) &mdash; Write a program that calculates roots of a quadratic equation. Implicit equation of a line, when `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and they are `x = -b +- sqrt(b^2-4ac) over 2a`. Display the result in the console, when `a=4`, `b=3`, and `c=2`.
-7. **Prime numbers** (v.1) &mdash; Write a program that displays the first 20 prime numbers (starting with 2). Display in console.
+1. **Fibonacci numbers** 
+	(v.1) &mdash; Calculate and display in console the first 5 Fibonacci numbers. Display in the console.
+	(v.2) &mdash; Write a program that displays the first 20 Fibonacci numbers in the console.
+	(v.3) &mdash; Refactor your code to display a table in the console (see `console.table()` property).
+2. **Temperature conversion** 
+	(v.1) &mdash; Write a program that calculates 25 degrees Celsius in Fahrenheit and displays a phrase that includes both values in the console.
+6. **Area of a circle** 
+	(v.1) &mdash;  Write a simple program that computes the area of a circle when the `radius = 4`. Explore the Math object (pow, π). Output to console.
+7. **Quadratic roots** 
+	(v.1) &mdash; Write a program that calculates roots of a quadratic equation. Implicit equation of a line, when `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and they are `x = -b +- sqrt(b^2-4ac) over 2a`. Display the result in the console, when `a=4`, `b=3`, and `c=2`.
+8. **Prime numbers** 
+	(v.1) &mdash; Write a program that displays the first 20 prime numbers (starting with 2). Display in console.
 
 ---
 
