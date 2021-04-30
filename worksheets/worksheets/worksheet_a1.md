@@ -1,7 +1,8 @@
 # Worksheet 1
 
 
-## Explore the tutorials:
+## Read and analyze (analytical reading) the following tutorials:
+Observe and describe. Try all examples. Make notes.
 
 1. Javascript Syntax: https://www.w3schools.com/js/js_syntax.asp
     - Values, Literals, Variables, Operators, Expressions, Keywords, Comments, Identifiers, Case Sensitive, Camel Case, Character Set
