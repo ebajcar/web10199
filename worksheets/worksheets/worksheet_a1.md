@@ -24,6 +24,12 @@ Observe and describe. Try all examples. Make notes.
 ### Problem
 Calculate and display in console the first 5 Fibonacci numbers. Display in the console.
 
+### Analysis and design
+- How do you calculate Fibonacci numbers? [example source](https://en.wikipedia.org/wiki/Fibonacci_number)
+- Need to use variables to store values - input: how many, first/previous, second/current) - output: next/new
+- Need to use console.log to display output (process)
+- Need to use a loop to calculate (process) each new value - 
+
 ### Solution
 ```
 var n = 5, tmp;
