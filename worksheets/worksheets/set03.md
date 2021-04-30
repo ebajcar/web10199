@@ -72,14 +72,15 @@ plan).
     - (v.2) &mdash; Create an array and populate with: 02022020, 1001, aba, "was it a car or a cat I saw" "never odd or even" "Step on no pets" "Funny enough"   "new moon", "selfless". You can add your own members. Test your function for each member. Output to console, for examples: `01011010 true` and so on.
     - (v.3) &mdash; (optional) How would you modify your function to recognize that the string contains a palindrome (ie., "selfless")?
     - (v.4) &mdash; Write a new version that will allow a user to enter a phrase or a number and it will call your function and reports to the user whether it is a palindrome.
-8. Game of Tic Tac Toe
+9. **Game of Casino Craps**
+	- (v.1) Write a program that lets a user to play a game of casino craps in the console.
+8. **Game of Tic Tac Toe**
     - 1. Write out the algorithm for a game of Tic Tac Toe. Assume both players sit at the same monitor and take turns using the mouse.
     - 2. Copy the class example version that creates and removes the board and add your algorithm. Identify what other functionality you need to include to complete the game. Identify what input and output you will need and how you would set up the appropriate variables. Do not make changes to the CSS and HTML at this time. All comments should appear in the Description of the prologue. Change instructor's name to yours and add "Citation: SYST10199 Web Programming, Summer 2020, Sheridan College" between Copyright and Description.
-
-9. Game of Rock Paper Scissors Lizard Spock
+9. **Game of Rock Paper Scissors**
     - 1. Write out the description for the game, including inputs, outputs, algorithm, constraints, and identify what variables and data structures are needed to program the game in Javascript. Create a valid HTML document, include the description in the prologue.  Use the CSS and HTML from the Tic Tac Toe game.
 
-  
+   
 ---
 > *The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.*
 > 
