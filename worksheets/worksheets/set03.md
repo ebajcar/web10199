@@ -54,9 +54,9 @@ plan).
 
 
 1. **Fibonacci numbers** 
-2.      (v.6) &mdash; Consider what might be the next improvement(s) to your versions.
+        - (v.6) &mdash; Consider what might be the next improvement(s) to your versions.
 3. **Temperature conversion** 
-4.      (v.4) &mdash; Consider what might be the next improvement(s) to your versions.
+        - (v.4) &mdash; Consider what might be the next improvement(s) to your versions.
         
 3. **Area of a circle** 
         1. (v.3) &mdash; Consider what might be the next improvement(s) to your versions.
