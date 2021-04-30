@@ -47,8 +47,6 @@ algorithm that you plan to use (and modify if your implementation deviates from 
 plan).
 
 
-### Problem A: Fibonacci numbers
-
 1. **Fibonacci numbers** 
 	- (v.1) &mdash; Calculate and display in console the first 5 Fibonacci numbers. Display in the console.
 	- (v.2) &mdash; Write a program that displays the first 20 Fibonacci numbers in the console.
