@@ -33,37 +33,14 @@ Observe and describe. Try all examples. Make notes. Document what you have learn
 
 ## Exercises
 
-1. **Fibonacci numbers** *(from previous worksheet)* Modify your console version to display the sequence on the page. Use `document.write()` method.
-2. **Fibonacci numbers** Extend the program to capture user’s input to determine how many numbers to display. Use `document.write()` method to display the sequence underneath the input control. 
-
-### Problem B: Convert temperature
-
-1. Write a program that calculates 25 degrees Celsius in Fahrenheit and displays a phrase\
-   that includes both values in the console.
-2. Modify your program to display on the page.
-3. Extend the program to capture user's input to determine what value to convert.\
-   Display on the page with two (2) decimal places.
-
-### Problem C: Calculate the area of a circle
-
-1. Write a simple program that computes the area of a circle \
-   when the `radius = 4`.\
-   Explore the Math object (pow, π). Output to console.
-2. Extend the program to get the value from the user. Display on the page.
-
-### Problem D: Calculate roots of a quadratic equation
-
-1. Write a program that calculates roots of a quadratic equation. Implicit equation of a line,
-   when `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and they\
-   are `x = -b +- sqrt(b^2-4ac) over 2a`. Display the result in the console,\
-   when `a=4`, `b=3`, and `c=2`.
-2. Extend the problem to display the results on the page.
-
-### Problem E: Calculate prime numbers
-
-1. Write a program that displays the first 20 prime numbers (starting with 2). Display in console.
-2. Extend the program to display on the page.
-3. Modify the program to display the numbers in an unordered list.
+1. **Fibonacci numbers** *from previous worksheet* (v.4) &mdash; Modify your console version to display the sequence on the page. Use `document.write()` method.
+2. **Fibonacci numbers** (v.5) Extend the program to capture user’s input to determine how many numbers to display. Use `document.write()` method to display the sequence underneath the input control. 
+3. **Temperature conversion** (v.2) &mdash; Modify your program to display on the page.
+3. **Temperature conversion** (v.3) &mdash; Extend the program to capture user's input to determine what value to convert. Display on the page with two (2) decimal places.
+4. **Area of a circle** (v.2) &mdash; Extend the program to get the value from the user. Display on the page.
+5. **Quadratic roots** (v.2) &mdash; Extend the problem to display the results on the page in an HTML table.
+6. **Prime numbers** (v.2) &mdash; Extend the program to display on the page.
+7. **Prime numbers** (v.3) &mdash; Modify the program to display the numbers in an unordered list.
 
 ---
 
