@@ -23,23 +23,32 @@ plan).
 
 
 1. **Fibonacci numbers** 
-    - (v.6) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+    - (v.6) &mdash; Write a fully functional, unobtrusive Javascript solution.
+    - (v.7) &mdash; Convert to object-oriented, unobtrusive Javascript solution.
 2. **Temperature conversion** 
-    - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.     
+    - (v.4) &mdash; Write a fully functional, unobtrusive Javascript solution.   
+    - (v.5) &mdash; Convert to object-oriented, unobtrusive Javascript solution.  
 3. **Area of a circle** 
-    - (v.3) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.   
+    - (v.3) &mdash; Write a fully functional, unobtrusive Javascript solution.   
+    - (v.4) &mdash; Convert to object-oriented, unobtrusive Javascript solution.
 4. **Quadratic roots** 
-    - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+    - (v.4) &mdash; Write a fully functional, unobtrusive Javascript solution.
+    - (v.5) &mdash; Convert to object-oriented, unobtrusive Javascript solution.
 5. **Prime numbers** 
-    - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+    - (v.4) &mdash; Write a fully functional, unobtrusive Javascript solution.
+    - (v.5) &mdash; Convert to object-oriented, unobtrusive Javascript solution.
 6. **Is it a palindrome** 
-    - (v.3) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+    - (v.3) &mdash; Write a fully functional, unobtrusive Javascript solution.
+    - (v.4) &mdash; Convert to object-oriented, unobtrusive Javascript solution.
 7. **Game of Casino Craps**
-    - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+    - (v.4) &mdash; Write a fully functional, unobtrusive Javascript solution.
+    - (v.5) &mdash; Convert to object-oriented, unobtrusive Javascript solution.
 8. **Game of Tic Tac Toe**
-    - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+    - (v.4) &mdash; Write a fully functional, unobtrusive Javascript solution.
+    - (v.5) &mdash; Convert to object-oriented, unobtrusive Javascript solution.
 9. **Game of Rock Paper Scissors**
-    - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+    - (v.4) &mdash; Write a fully functional, unobtrusive Javascript solution.
+    - (v.5) &mdash; Convert to object-oriented, unobtrusive Javascript solution.
 
 
   
