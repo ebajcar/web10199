@@ -35,7 +35,7 @@ plan).
 6. **Is it a palindrome** 
     - (v.3) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
 7. **Game of Casino Craps**
-  - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
+    - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
 8. **Game of Tic Tac Toe**
     - (v.4) &mdash; Write a fully functional, and object-oriented, unobtrusive Javascript solution.
 9. **Game of Rock Paper Scissors**
