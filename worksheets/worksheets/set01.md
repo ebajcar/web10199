@@ -59,6 +59,8 @@ plan).
 	- (v.1) &mdash; Write a program that calculates roots of a quadratic equation. Implicit equation of a line, when `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and they are `x = -b +- sqrt(b^2-4ac) over 2a`. Display the result in the console, when `a=4`, `b=3`, and `c=2`.
 8. **Prime numbers** 
 	- (v.1) &mdash; Write a program that displays the first 20 prime numbers (starting with 2). Display in console.
+9. **Game of Casino Craps**
+	- (v.1) Write a program that lets a user to play a game of casino craps in the console.
 
 ---
 
