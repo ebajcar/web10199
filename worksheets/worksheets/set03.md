@@ -74,7 +74,8 @@ plan).
 16. Game of Rock Paper Scissors Lizard Spock
     - Write out the description for the game, including inputs, outputs, algorithm, constraints, and identify what variables and data structures are needed to program the game in Javascript. Create a valid HTML document, include the description in the prologue.  Use the CSS and HTML from the Tic Tac Toe game.
 
+  
 ---
-
-
-> Web Programming @ Sheridan College
+> *The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.*
+> 
+> **SYST10199 Web Programming @ Sheridan College**
