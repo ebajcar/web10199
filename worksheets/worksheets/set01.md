@@ -84,7 +84,7 @@ for (var i = 0; i < n-2; i++) {
 	tmp = pre;  //tmp is first number
 	pre = cur;  //pre is second number
 	cur += tmp; //cur is first plus second (or newly calculated)
-    console.log(i+2 + ": " + cur);
+	console.log(i+2 + ": " + cur);
 }
 ```
 
