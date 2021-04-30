@@ -54,25 +54,22 @@ plan).
 
 
 1. **Fibonacci numbers** 
-
         1. (v.6) &mdash; Consider what might be the next improvement(s) to your versions.
         
 2. **Temperature conversion** 
-
         1. (v.4) &mdash; Consider what might be the next improvement(s) to your versions.
         
 3. **Area of a circle** 
-
         1. (v.3) &mdash; Consider what might be the next improvement(s) to your versions.
         
 4. **Quadratic roots** 
-
         1. (v.3) &mdash; Modify the previous version to create and populate a table, where  `a` range is 1 to 5 (columns), `b` range is 1 to 5 (rows), and `c=4`(can be displayed above or below the table. Create the appropriate HTML and populate with Javascript.
         
 5. **Quadratic roots** 
         1. (v.4) &mdash; Modify solution to use DOM methods to create and populate the table.
         2. (v.5) &mdash; Extend the previous version to a 10x10 table to accommodate `a` and `b` values 1 to 10.
         3. (v.6) &mdash; Modify previous version to capture initial values for `a` and `b`, and enter the `c` values from the user.
+       
 6. **Prime numbers** 
         1. (v.4) &mdash; Modify the previous version to create and populate the unordered list using DOM methods.
 7. **Is it a palindrome** 
