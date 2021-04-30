@@ -70,8 +70,8 @@ plan).
 7. **Is it a palindrome** 
     - (v.1) &mdash; Write a function that takes one argument, a string or a number, and checks if it is a palindrome, and returns a true or false. The function needs to ignore spaces and casing.
     - (v.2) &mdash; Create an array and populate with: 02022020, 1001, aba, "was it a car or a cat I saw" "never odd or even" "Step on no pets" "Funny enough"   "new moon", "selfless". You can add your own members. Test your function for each member. Output to console, for examples: `01011010 true` and so on.
-    - 1. (v.3) &mdash; (optional) How would you modify your function to recognize that the string contains a palindrome (ie., "selfless")?
-    - 2. (v.4) &mdash; Write a new version that will allow a user to enter a phrase or a number and it will call your function and reports to the user whether it is a palindrome.
+    - (v.3) &mdash; (optional) How would you modify your function to recognize that the string contains a palindrome (ie., "selfless")?
+    - (v.4) &mdash; Write a new version that will allow a user to enter a phrase or a number and it will call your function and reports to the user whether it is a palindrome.
 8. Game of Tic Tac Toe
     - 1. Write out the algorithm for a game of Tic Tac Toe. Assume both players sit at the same monitor and take turns using the mouse.
     - 2. Copy the class example version that creates and removes the board and add your algorithm. Identify what other functionality you need to include to complete the game. Identify what input and output you will need and how you would set up the appropriate variables. Do not make changes to the CSS and HTML at this time. All comments should appear in the Description of the prologue. Change instructor's name to yours and add "Citation: SYST10199 Web Programming, Summer 2020, Sheridan College" between Copyright and Description.
