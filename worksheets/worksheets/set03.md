@@ -1,4 +1,4 @@
-[previous](set03.md) 
+[previous](set02.md) 
 : **Worksheet Set 3**
 : [next](set04.md)
 
