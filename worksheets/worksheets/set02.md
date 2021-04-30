@@ -33,7 +33,8 @@ Observe and describe. Try all examples. Make notes. Document what you have learn
 
 ## Exercises
 
-1. **Fibonacci numbers** *(from previous worksheet)* Extend the program to capture user’s input to determine how many numbers to display.
+1. **Fibonacci numbers** *(from previous worksheet)* Modify your console version to display the sequence on the page. Use `document.write()` method.
+2. **Fibonacci numbers** Extend the program to capture user’s input to determine how many numbers to display. Use `document.write()` method to display the sequence underneath the input control. 
 
 ### Problem B: Convert temperature
 
