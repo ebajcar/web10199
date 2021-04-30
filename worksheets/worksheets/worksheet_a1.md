@@ -1,8 +1,17 @@
-# Worksheet 1
+[previous]() 
+: **Worksheet Set 1**
+: [next](set02.md)
+
+
+## Key terms and concepts to understand
+> &bull; web browser  &bull; internet  &bull; server  &bull; client  &bull; TCP/IP  &bull; IPO (input>process>output)  &bull; request  &bull; response  &bull; programming language  &bull;  computer programming  &bull; directory  &bull; folder  &bull;  file  &bull; hierarchy  &bull; computer application  &bull;  text editor  &bull; client/server  &bull;  storage  &bull; tree structure &bull;
+> 
+---
+
 
 
 ## Read and analyze (analytical reading) the following tutorials:
-Observe and describe. Try all examples. Make notes.
+Observe and describe. Try all examples. Make notes. Document what you have learned.
 
 1. Javascript Syntax: https://www.w3schools.com/js/js_syntax.asp
     - Values, Literals, Variables, Operators, Expressions, Keywords, Comments, Identifiers, Case Sensitive, Camel Case, Character Set
@@ -14,7 +23,19 @@ Observe and describe. Try all examples. Make notes.
 4. Javascript Strict Mode: https://www.w3schools.com/js/js_strict.asp
 
     - You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables.
-    
+
+---
+
+## Formulate answers to the following questions
+1. What is the purpose of a web browser?
+2. Describe what happens when a user requests a web page.
+3. Describe how the files for a web project are organized.
+4. How do you name files and directories? What are naming conventions?
+5. What do we need to know about the Web environment?
+6. What are the major computer components and how they work?
+---
+
+
 ## Exercises
 
 1. 
