@@ -64,8 +64,7 @@ plan).
     - 2. (v.4) &mdash; Modify solution to use DOM methods to create and populate the table.
     - 3. (v.5) &mdash; Extend the previous version to a 10x10 table to accommodate `a` and `b` values 1 to 10.
     - 4. (v.6) &mdash; Modify previous version to capture initial values for `a` and `b`, and enter the `c` values from the user.
-       
-6. **Prime numbers** 
+4. **Prime numbers** 
     - (v.4) &mdash; Modify the previous version to create and populate the unordered list using DOM methods.
 7. **Is it a palindrome** 
     - (v.1) &mdash; Write a function that takes one argument, a string or a number, and checks if it is a palindrome, and returns a true or false. The function needs to ignore spaces and casing.
