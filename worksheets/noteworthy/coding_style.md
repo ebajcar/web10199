@@ -20,6 +20,9 @@ This is a set of rules used in this class.
 10. A space after for/if/while.
 11. Indentation 2 spaces.
 
+
+![coding_style.png](coding_style.png)
+
 ---
 
 > SYST10199 Web Programming @ Sheridan College
