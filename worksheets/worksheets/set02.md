@@ -47,8 +47,8 @@ Observe and describe. Try all examples. Make notes. Document what you have learn
     - (v.2) &mdash; Extend the program to display on the page.
     - (v.3) &mdash; Modify the program to display the numbers in an unordered list.
 
+  
 ---
-
-
-
-> Web Programming @ Sheridan College
+> *The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.*
+> 
+> **SYST10199 Web Programming @ Sheridan College**
