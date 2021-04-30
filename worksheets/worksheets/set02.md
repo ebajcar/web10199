@@ -34,18 +34,18 @@ Observe and describe. Try all examples. Make notes. Document what you have learn
 ## Exercises
 
 1. **Fibonacci numbers** *from previous worksheet* 
-  - (v.4) &mdash; Modify your console version to display the sequence on the page. Use `document.write()` method.
-  - (v.5) Extend the program to capture user’s input to determine how many numbers to display. Use `document.write()` method to display the sequence underneath the input control. 
+    - (v.4) &mdash; Modify your console version to display the sequence on the page. Use `document.write()` method.
+    - (v.5) Extend the program to capture user’s input to determine how many numbers to display. Use `document.write()` method to display the sequence underneath the input control. 
 4. **Temperature conversion** 
-  - (v.2) &mdash; Modify your program to display on the page.
-  - (v.3) &mdash; Extend the program to capture user's input to determine what value to convert. Display on the page with two (2) decimal places.
+    - (v.2) &mdash; Modify your program to display on the page.
+    - (v.3) &mdash; Extend the program to capture user's input to determine what value to convert. Display on the page with two (2) decimal places.
 7. **Area of a circle** 
-  - (v.2) &mdash; Extend the program to get the value from the user. Display on the page.
+    - (v.2) &mdash; Extend the program to get the value from the user. Display on the page.
 9. **Quadratic roots** 
-  - (v.2) &mdash; Extend the problem to display the results on the page in an HTML table.
+    - (v.2) &mdash; Extend the problem to display the results on the page in an HTML table.
 11. **Prime numbers** 
-  - (v.2) &mdash; Extend the program to display on the page.
-  - (v.3) &mdash; Modify the program to display the numbers in an unordered list.
+    - (v.2) &mdash; Extend the program to display on the page.
+    - (v.3) &mdash; Modify the program to display the numbers in an unordered list.
 
 ---
 
