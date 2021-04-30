@@ -24,21 +24,41 @@ Observe and describe. Try all examples. Make notes. Document what you have learn
 
     - You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables.
 
----
+
+
+## Watch videos
+
+- Algorithm on [Algorithms](https://youtu.be/6hfOvs8pY1k). 
+
+
 
 ## Formulate answers to the following questions
-1. What is the purpose of a web browser?
-2. Describe what happens when a user requests a web page.
-3. Describe how the files for a web project are organized.
-4. How do you name files and directories? What are naming conventions?
-5. What do we need to know about the Web environment?
-6. What are the major computer components and how they work?
+1. What is an algorithm?
+
+
 ---
 
 
 ## Exercises
+Set up a project for each problem. Keep all versions of your solution for each project.  For each problem, write out the
+algorithm that you plan to use (and modify if your implementation deviates from your original
+plan).
 
-1. 
+
+### Problem A: Fibonacci numbers
+
+1. Calculate and display in console the first 5 Fibonacci numbers. Display in the console.
+2. Write a program that displays the first 20 Fibonacci numbers in the console.
+3. Refactor your code to display a table in the console (see `console.table()` property).
+4. Write a program that calculates 25 degrees Celsius in Fahrenheit and displays a phrase that includes both values in the console.
+5. Write a simple program that computes the area of a circle when the `radius = 4`. Explore the Math object (pow, π). Output to console.
+6. Write a program that calculates roots of a quadratic equation. Implicit equation of a line,
+   when `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and they\
+   are `x = -b +- sqrt(b^2-4ac) over 2a`. Display the result in the console,\
+   when `a=4`, `b=3`, and `c=2`.
+7. Write a program that displays the first 20 prime numbers (starting with 2). Display in console.
+
+---
 
 ## Example Solution
 
