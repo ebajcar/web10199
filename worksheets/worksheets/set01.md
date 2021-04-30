@@ -65,7 +65,13 @@ Calculate and display in console the first 5 Fibonacci numbers. Display in the c
 - How do you calculate Fibonacci numbers? [example source](https://en.wikipedia.org/wiki/Fibonacci_number)
 - Need to use variables to store values - input: how many, first/previous, second/current) - output: next/new
 - Need to use console.log to display output (process)
-- Need to use a loop to calculate (process) each new value - 
+- Need to use a loop to calculate (process) each new value 
+-	1. Declare and initialize
+-	2. Display 0 - first Fibonacci nummber
+-	3. Display 1 - second Fibonacci number
+-	4. Calculate next value
+-	5. Display current value
+-	6. If the current value is not the fifth Fibonacci number, repeat steps 4 and 5.
 
 ### Solution
 ```
