@@ -1,6 +1,17 @@
-# Worksheet 5
+[previous](set04.md) 
+: **Worksheet Set 5**
+: [next](set06.md)
 
-#### SYST10199 Web Programming
+
+## Key terms and concepts to understand
+> &bull; Javascript  &bull; imperative programming  &bull; variable  &bull; value  &bull; literal  &bull; IPO operator &bull; expression  &bull; keyword  &bull; identifier  &bull;  data type &bull; strict mode  &bull; console  &bull;  algorithm  &bull; object-oriented programming  &bull; computer application  &bull;  text editor  &bull; client/server  &bull;  type conversion  &bull; function &bull method &bull;
+> 
+---
+
+
+
+## Read and analyze (analytical reading) the following tutorials:
+Observe and describe. Try all examples. Make notes. Document what you have learned.
 
 
 
