@@ -21,7 +21,7 @@ This is a set of rules used in this class.
 11. Indentation 2 spaces.
 
 
-![](coding_style.png)
+![coding_style.png](coding_style.png)
 
 ---
 
