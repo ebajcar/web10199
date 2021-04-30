@@ -4,7 +4,7 @@
 
 
 ## Key terms and concepts to understand
-> &bull; Javascript  &bull; imperative programming  &bull; variable  &bull; value  &bull; literal  &bull; IPO operator &bull; expression  &bull; keyword  &bull; identifier  &bull;  data type &bull; strict mode  &bull; console  &bull;  algorithm  &bull; object-oriented programming  &bull; computer application  &bull;  text editor  &bull; client/server  &bull;  type conversion  &bull; function &bull method &bull;
+> &bull; Javascript  &bull; imperative programming  &bull; variable  &bull; value  &bull; literal  &bull; IPO operator &bull; expression  &bull; keyword  &bull; identifier  &bull;  data type &bull; strict mode  &bull; console  &bull;  algorithm  &bull; object-oriented programming  &bull; computer application  &bull;  text editor  &bull; client/server  &bull;  type conversion  &bull; function &bull method &bull refactoring code &bull;
 > 
 ---
 
@@ -47,12 +47,12 @@ plan).
 
 ### Problem A: Fibonacci numbers
 
-1. Calculate and display in console the first 5 Fibonacci numbers. Display in the console.
-2. Write a program that displays the first 20 Fibonacci numbers in the console.
-3. Refactor your code to display a table in the console (see `console.table()` property).
-4. Write a program that calculates 25 degrees Celsius in Fahrenheit and displays a phrase that includes both values in the console.
-5. Write a simple program that computes the area of a circle when the `radius = 4`. Explore the Math object (pow, π). Output to console.
-6. Write a program that calculates roots of a quadratic equation. Implicit equation of a line, when `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and they are `x = -b +- sqrt(b^2-4ac) over 2a`. Display the result in the console, when `a=4`, `b=3`, and `c=2`.
+1. **Fibonacci numbers** (v.1) &mdash; Calculate and display in console the first 5 Fibonacci numbers. Display in the console.
+2. **Fibonacci numbers** (v.2) &mdash; Write a program that displays the first 20 Fibonacci numbers in the console.
+3. **Fibonacci numbers** (v.3) &mdash; Refactor your code to display a table in the console (see `console.table()` property).
+4. **Temperature conversion** (v.1) &mdash; Write a program that calculates 25 degrees Celsius in Fahrenheit and displays a phrase that includes both values in the console.
+5.**Area of a circle** (v.1) &mdash;  Write a simple program that computes the area of a circle when the `radius = 4`. Explore the Math object (pow, π). Output to console.
+6. **Quadratic roots** (v.1) &mdash; Write a program that calculates roots of a quadratic equation. Implicit equation of a line, when `a != 0`, there are two solutions to `ax^2 + bx + c = 0` and they are `x = -b +- sqrt(b^2-4ac) over 2a`. Display the result in the console, when `a=4`, `b=3`, and `c=2`.
 
 ---
 
