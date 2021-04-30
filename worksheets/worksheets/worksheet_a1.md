@@ -44,7 +44,7 @@ for (var i = 0; i < n-2; i++) {
 }
 ```
 
-### Complete the following
+### Test, explore alternatives, look for improvements
 1. Implement the above solution using a valid HTML document. Include proper comments to explain what the code does.
 
 
