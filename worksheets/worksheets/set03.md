@@ -54,12 +54,15 @@ plan).
 
 
 1. **Fibonacci numbers** 
-        - (v.6) &mdash; Consider what might be the next improvement(s) to your versions.
+
+- (v.6) &mdash; Consider what might be the next improvement(s) to your versions.
+
+
 3. **Temperature conversion** 
         - (v.4) &mdash; Consider what might be the next improvement(s) to your versions.
         
 3. **Area of a circle** 
-        1. (v.3) &mdash; Consider what might be the next improvement(s) to your versions.
+        - (v.3) &mdash; Consider what might be the next improvement(s) to your versions.
         
 4. **Quadratic roots** 
         1. (v.3) &mdash; Modify the previous version to create and populate a table, where  `a` range is 1 to 5 (columns), `b` range is 1 to 5 (rows), and `c=4`(can be displayed above or below the table. Create the appropriate HTML and populate with Javascript.
