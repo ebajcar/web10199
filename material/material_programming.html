@@ -52,7 +52,10 @@ h4::before {
   counter-increment: subsubsection;
   content: counter(section) "." counter(subsection) "." counter(subsubsection) ". ";
 }
-
+.orange {
+  color: darkorange;
+  font-weight: bold;
+}
 </style>    
 </head>
 <body>
@@ -123,15 +126,31 @@ alternative plnkr.co online project editor
 	<div class="card  bg-dark text-white text-center">
 		<div class="card-body lead">Computer programming is a process that starts with an original formulation of a problem and culminates in executable computer programs. Computer languages, like human languages, require you to use them in order to understand them.</div>
 	</div>
-  
-  <p><strong>Programming paradigms</strong> A programming paradigm is a style of programming. To program professionally, you need to learn either the object-oriented or functional programming paradigms.</p>
+
+  <h5>Programming paradigms</h5>
+  <p>A programming paradigm is a style of programming. To program professionally, you need to learn either the object-oriented or functional programming paradigms.</p>
   <p><strong>State</strong> One of the fundamental differences among the various programming paradigms is the handling of state. State is the value of a program's variables while it is running. Global state is the value of a program's global variables while it is running.</p>
   <p><strong>Procedural programming paradigm</strong> Procedural programming paradigm is a programming style in which you write a sequence of steps moving toward a solution— with each step changing the program's state.You store data in global variables and manipulate it with functions</p>
   <p><strong>Functional programming paradigm</strong> Functional programming paradigm addresses the problems that arise in procedural programming by eliminating global state. A functional programmer relies on functions that do not use or change global state, the only state they use are the parameters you pass to the function. The result, a function returns, is usually passed on to another function. A functional programmer can thus avoid global state by passing it from function to function.</p>
   <p><strong>Object-oriented programming paradigm</strong> Object-oriented programming paradigm also addresses the problems that arise in procedural programming by eliminating global state, but instead of storing state in functions, it is stored in objects.</p>
-  <p><strong>Imperative programming</strong> A developer writes code that describes in exacting detail the steps that the computer must take to accomplish the goal (procedural programming, algorithmic programming)
-  <p>A computer program is shaped by its data representation and the statements that determine its flow of control.</p>
-  <p>Every program (process) has input and output.</p>
+  
+  <h5>Programming, Program, Algorithm, Programming language</h5>
+  <figure class="figure">	
+		<img class="figure-img img-fluid rounded" src="../images/program_algorithm.png">		
+		<figcaption class="figure-caption">Links between the terms of program, programming, algorithm and programming language &mdash;<a href="https://www.codeit-project.eu/wp-content/uploads/CodeIT_O1_EN.pdf"><em>Source</em></a></figcaption>
+	</figure>	
+  <p><strong>Imperative programming</strong> A developer writes code that describes in exacting detail the steps that the computer must take to accomplish the goal.
+  <p>A computer program is shaped by its 
+    <span class="orange">data representation</span> and the 
+    <span class="orange">statements</span> that determine its 
+    <span class="orange">flow of control</span>.</p>
+  <p>Every program (<span class="orange">process</span>) has <span class="orange">input</span> and <span class="orange">output</span>.</p>
+  <p><strong>What is an algorithm?</strong></p>
+  <ul>
+    <li><a href="https://youtu.be/ZnBF2GeAKbo" target="_blank">What exactly is an algorithm? Algorithms explained | BBC Ideas | 7:53</a></li>
+    <li><a href="https://youtu.be/6hfOvs8pY1k" target="_blank">What's an algorithm? - David J. Malan | 4:57</a></li>
+    <li><a href="https://youtu.be/ENWVRcMGDoU" target="_blank">How algorithms shape our world - Kevin Slavin | 15:23</a></li>
+  </ul>
 
 <!-- 1.3. What you should already know  -->
 <section id="page13">
@@ -244,12 +263,12 @@ alternative plnkr.co online project editor
 		  </tr>		
 		  <tr>		
 			<th>Input:</th>
-			<td><strong style="color:red">User interaction</strong></td>
+			<td><strong class="orange">User interaction</strong></td>
 			<td>HTTP parameters, files, and databases</td>		
 		  </tr>		
 		  <tr>		
 			<th>Output:</th>
-			<td>Pop-ups, <strong style="color:red">changes to DOM</strong></td>
+			<td>Pop-ups, <strong class="orange">changes to DOM</strong></td>
 			<td>Text (HTML, CSS, Javascript)</td>		
 		  </tr>	 
 		  <tr>		
@@ -259,7 +278,7 @@ alternative plnkr.co online project editor
 		  </tr>	
 		  <tr>		
 			<th>Coding Styles:</th>
-			<td>Imperative, <strong style="color:red">event-driven</strong>, functional, object-oriented</td>
+			<td>Imperative, <strong class="orange">event-driven</strong>, functional, object-oriented</td>
 			<td>Imperative, functional, object-oriented</td>		
 		  </tr>	
 		  <tr>		

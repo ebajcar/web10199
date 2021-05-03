@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home SYST10199</title>
+<title>Javascript SYST10199</title>
 <!-- Required meta tags -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,15 +19,14 @@
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/vs.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
 <link rel="stylesheet" href="main.css">
 <style>
 body {
-  /* Set "figure-counter" to 0 */
-  counter-reset: figure-counter;
+body {
+  counter-reset: figure-counter;  /* Set "figure-counter" to 0 */
 }
-
 figcaption::before {
-  /* Increment "figure-counter" by 1 */
   counter-increment: figure-counter;
   content: "FIGURE " counter(figure-counter) ". ";
   font-weight: bold;
@@ -40,11 +39,12 @@ article h2 {
 }
 article h2::before {
   counter-increment: section;
-  content: counter(section) ". "; 
+  /* content: counter(section) ". "; */
 }
 h3::before {
   counter-increment: subsection;
-  content: counter(section) "." counter(subsection) " "; 
+  content: counter(subsection) ". "; 
+  /* content: counter(section) "." counter(subsection) " "; */
 }
 h3 {
   counter-reset: subsubsection;
@@ -126,7 +126,7 @@ alternative pinkr.co online project editor
 	<div class="card  bg-dark text-white text-center">
 		<div class="card-body lead" title="developer.mozilla.org">JavaScript® is a lightweight, interpreted, programming language with first-class functions... non-browser environments... node.js and Apache CouchDB. JS is a prototype-based, multi-paradigm, dynamic scripting language, supporting object-oriented, imperative, and functional programming...</div>
 	</div>
-	<hr>
+
 
 
 <!-- 2.1. Introduction to Javascript -->
@@ -2051,36 +2051,36 @@ function myFunction() {
     <hr>		
 		<h6>Client-side programing with JS</h6>
 		
-		<details>
-      <summary><a href="#page20"> 2. Javascript Language</a></summary>
-			<a href="#" class="secondary">  2.1. Javascript basics</a>
-			<a href="#" class="secondary">  2.2. Including Javascript in HTML</a>
-			<a href="#" class="secondary">  2.3. Adding behaviour with Javascript</a>
-			<a href="#" class="secondary">  2.4. Accelerating Initialization</a>
-			<a href="#" class="secondary">  2.5. Input and Output </a>
-			<a href="#" class="secondary">  2.6. Basic Grammar </a>
-			<a href="#" class="secondary">  2.7. Debugging Javascript Code</a>
-      <a href="#" class="secondary">  2.8. Unobtrusive Javascript</a>
+		<details open>
+      <summary><a href="#page20"> Javascript Language</a></summary>
+			<span class="secondary">Introduction to Javascript</span>
+			<span class="secondary">Including Javascript in HTML</span>
+			<span class="secondary">Adding behaviour with Javascript</span>
+			<span class="secondary">Accelerating Initialization</span>
+			<span class="secondary">Input and Output </span>
+			<span class="secondary">Basic Grammar </span>
+			<span class="secondary">Debugging Javascript Code</span>
+      <span class="secondary">Unobtrusive Javascript</span>
 		</details>
 
 		<details>
-      <summary><a href="#page30"> 3. Javascript Variables</a></summary> 
-			<a href="#" class="secondary"> 3.1. Identifiers and Constants</a>
-			<a href="#" class="secondary"> 3.2. Expressions</a>
-			<a href="#" class="secondary"> 3.3. Special values</a>
-			<a href="#" class="secondary"> 3.4. Declaring variables </a> 
-			<a href="#" class="secondary"> 3.5. Variable scope</a> 
+      <summary><a href="#page30">Javascript Variables</a></summary> 
+			<span class="secondary">Identifiers and Constants</span>
+			<span class="secondary">Expressions</span>
+			<span class="secondary">Special values</span>
+			<span class="secondary">Declaring variables </span> 
+			<span class="secondary">Variable scope</span> 
 		</details>		
 		
 		<details>
-      <summary><a href="#page40"> 4. Javascript Programs</a></summary> 
+      <summary><a href="#page40">Javascript Programs</a></summary> 
 			<a href="#" class="secondary">  4.1. Simple Statements</a>			
 			<a href="#" class="secondary">  4.2. Code blocks and program flow</a>
 			<a href="#" class="secondary">  4.3. Control structures</a>
 		</details>
 		
 		<details>
-			<summary><a href="#page50"> 5. Javascript Operators</a></summary>  
+			<summary><a href="#page50">Javascript Operators</a></summary>  
 			<a href="#" class="secondary">  5.1. Assignment</a>
 			<a href="#" class="secondary">  5.2. Arithmetic, conditional</a>
 			<a href="#" class="secondary">  5.3. Concatenation and addition</a>
@@ -2088,7 +2088,7 @@ function myFunction() {
 		</details>	
 			
 		<details>
-			<summary><a href="#page60"> 6. Javascript Data Structures</a></summary> 
+			<summary><a href="#page60">Javascript Data Structures</a></summary> 
 			<a href="#" class="secondary"> 6.1. Object-oriented vs. object-based</a>
       <a href="#" class="secondary"> 6.1.1. Data and common structures </a>
 			<a href="#" class="secondary"> 6.2. Basic Data Types</a>
@@ -2097,42 +2097,42 @@ function myFunction() {
 		</details>
 
 		<details>
-			<summary><a href="#page70"> 7. Javascript Objects	</a> </summary> 	
-			<a href="#" class="secondary"> 7.1. Built-in types</a>
+			<summary><a href="#page70">Javascript Objects	</a> </summary> 	
+			<a href="#" class="secondary">Built-in types</a>
 			<!--- Date, Math, RegExp, Function, Object, Array-->        
-			<a href="#" class="secondary"> 7.2. Custom objects</a>
-			<a href="#" class="secondary"> 7.3. DOM Objects</a>
-			<a href="#" class="secondary"> 7.3.1. DOM methods and properties </a>
-			<a href="#" class="secondary"> 7.3.2. Working with live DOM </a>
-			<a href="#" class="secondary"> 7.4. Browser object model (BOM) </a>
+			<a href="#" class="secondary">Custom objects</a>
+			<a href="#" class="secondary">DOM Objects</a>
+			<a href="#" class="secondary">DOM methods and properties </a>
+			<a href="#" class="secondary">Working with live DOM </a>
+			<a href="#" class="secondary">Browser object model (BOM) </a>
 		</details>	
 
 
-		<details open>
-			<summary><a href="#page80"> 8. Javascript Functions </a></summary> 
-			<a href="#" class="secondary"> 8.1. Function basics</a>
-			<a href="#" class="secondary"> 8.2. Anonymous Functions</a>	
-			<a href="#" class="secondary"> 8.3. Callback functions</a>
-			<a href="#" class="secondary"> 8.4. Exception handling statements</a>
+		<details>
+			<summary><a href="#page80">Javascript Functions </a></summary> 
+			<a href="#" class="secondary">Function basics</a>
+			<a href="#" class="secondary">Anonymous Functions</a>	
+			<a href="#" class="secondary">Callback functions</a>
+			<a href="#" class="secondary">Exception handling statements</a>
 		</details>			
 
 		
 
-		<details open>
-			<summary><a href="#page90"> 9. Event handling</a> </summary> 
-			<a href="#" class="secondary"> 9.1. Event Handler</a>
-			<a href="#" class="secondary"> 9.2. Eliciting user feedback</a>
-			<a href="#" class="secondary"> 9.3. Using events</a>
-			<a href="#" class="secondary"> 9.4. Event capture and bubbling</a>
+		<details>
+			<summary><a href="#page90">Event handling</a> </summary> 
+			<a href="#" class="secondary">Event Handler</a>
+			<a href="#" class="secondary">Eliciting user feedback</a>
+			<a href="#" class="secondary">Using events</a>
+			<a href="#" class="secondary">Event capture and bubbling</a>
 		</details>	
 		
 		
 		<details>
-			<summary><a href="#page100"> 10. Javascript forms</a> </summary> 
-			<a href="#" class="secondary"> 10.1. How forms are processed</a>
-			<a href="#" class="secondary"> 10.2. HTML5 and CSS3 form components</a>
-			<a href="#" class="secondary"> 10.3. Data validation</a>
-			<a href="#" class="secondary"> 10.4. Regular expressions (regex)</a>			
+			<summary><a href="#page100">Javascript forms</a> </summary> 
+			<a href="#" class="secondary">How forms are processed</a>
+			<a href="#" class="secondary">HTML5 and CSS3 form components</a>
+			<a href="#" class="secondary">Data validation</a>
+			<a href="#" class="secondary">Regular expressions (regex)</a>			
 		</details>			
 
 	
