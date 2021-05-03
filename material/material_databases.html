@@ -6,15 +6,21 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-<link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/vs.min.css">
+
 
 <link type="text/css" rel="Stylesheet" href="js/syntax/styles/shCoreDefault.css"/>
 <link type="text/css" rel="Stylesheet" href="js/syntax/styles/shThemeDefault.css"/> 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
 <link rel="stylesheet" href="main.css">
+<!-- Fontawesome CSS -->
+<script src="https://kit.fontawesome.com/e511a6976b.js" crossorigin="anonymous"></script>
 <style>
 body {
   /* Set "figure-counter" to 0 */
@@ -60,27 +66,40 @@ h4::before {
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="../index.html"><i class="fa fa-home" aria-hidden="true"></i> Home <span class="sr-only">(current)</span></a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="https://slate.sheridancollege.ca/d2l/home" target="_blank"><i class="fa fa-calendar" aria-hidden="true"></i> SLATE</a>
           </li>
-		  <!--
+          
+
           <li class="nav-item">
-            <a class="nav-link disabled" href="https://piazza.com/sheridancollege.ca/" target="_blank">Piazza Q&amp;A</a>
+            <a class="nav-link" href="https://github.com/ebajcar/web10199/discussions"><i class="fas fa-comment-dots"></i> Discussions</a>
           </li>
-		  -->
+          
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cloud" aria-hidden="true"></i> Resources</a>
+            <a class="nav-link dropdown-toggle" 
+                href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-link"></i> Resources</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a  class="dropdown-item" href="https://www.w3.org/" target="_blank">World Wide Web Consortium (W3C)</a>
-                <a  class="dropdown-item" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="Javascript Center; designed for all levels of javascript users, includes links to tools, documentation, and an online communities.">Mozilla Developer Network (MDN)</a>
-                <a class="dropdown-item"  href="http://www.ecma-international.org/ecma-262/8.0/index.html" target="_blank">ECMA-262 2017 (Edition 8)</a>
+                <a  class="dropdown-item" 
+                    href="https://www.w3.org/" 
+                    target="_blank">
+                    <i class="fas fa-external-link-alt"></i> World Wide Web Consortium (W3C)</a>
+                <a  class="dropdown-item" 
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" 
+                    title="Javascript Center; designed for all levels of javascript users, includes links to tools, documentation, and an online communities."
+                    target="_blank" >
+                    <i class="fas fa-external-link-alt"></i> Mozilla Developer Network (MDN)</a>
+                <a class="dropdown-item"  
+                    href="http://www.ecma-international.org/ecma-262/8.0/index.html" 
+                    target="_blank">
+                    <i class="fas fa-external-link-alt"></i> ECMA-262 2017 (Edition 8)</a>
             </div>
-          </li>         
-          <li class="nav-item">
-            <a class="nav-link" href="material_js.html"> <strong><i class="fa fa-folder w3-margin-right"></i> JS Content</strong></a>
-          </li>			  
+          </li>  
+
+          
         </ul>
         <form class="form-inline my-2 my-lg-0" method="get" action="http://www.google.com/search">
           <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search">
