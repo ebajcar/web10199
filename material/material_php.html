@@ -17,38 +17,28 @@
 <link rel="stylesheet" href="main.css">
 <!-- Fontawesome CSS -->
 <script src="https://kit.fontawesome.com/e511a6976b.js" crossorigin="anonymous"></script>
+<link href="../css/bookmark.css" rel="stylesheet">
 <style>
 body {
-  /* Set "figure-counter" to 0 */
-  counter-reset: figure-counter;
+  counter-reset: figure-counter;  /* Set "figure-counter" to 0 */
 }
-
 figcaption::before {
   counter-increment: figure-counter;
   content: "FIGURE " counter(figure-counter) ". ";
   font-weight: bold;
 }
 main {
-  counter-reset: section;
+   counter-reset: section; 
 }
-article h2 {
-  counter-reset: subsection;
-}
-article h2::before {
-  counter-increment: section;
-  /* content: counter(section) ". "; */
-}
+
 h3::before {
-  counter-increment: subsection;
-  content: counter(subsection) ". "; 
-  /* content: counter(section) "." counter(subsection) " "; */
+  counter-increment: section;
+  content: counter(section) ". "; 
 }
-h3 {
-  counter-reset: subsubsection;
-}
-h4::before {
-  counter-increment: subsubsection;
-  content: counter(section) "." counter(subsection) "." counter(subsubsection) ". ";
+
+.orange {
+  color: darkorange;
+  font-weight: bold;
 }
 </style>    
   </head>
@@ -123,8 +113,7 @@ h4::before {
 	</div>
 	
 <section id="page11">
-
-	<h3>PHP Introduction</h3>
+	<h3>Introduction to PHP</h3>
 	<p>PHP Hypertext Preprocessor (PHP) is an open source server-side scripting language designed for web develoment.</p>
 	<ul>
 	  <li>a PHP script is executed on the server, and the plain HTML result is sent backtot he browser.</li>
@@ -137,94 +126,38 @@ h4::before {
 	</ul>
 	<hr>
 	<dl>
-		<dt><a target="_blank" href="https://www.php.net/">Familiarize yourself with the PHP language.</a></dt>
-		<dd class="w3-small">What is PHP? Why is it suitable for web development? What is the current version? <strong class="w3-text-orange">&hellip;php.net (primary source)</strong></dd>					
-		<dt><a target="_blank" href="https://www.php.net/manual/en/tutorial.php">A Simple Tutorial</a></dt>
-		<dd class="w3-small">Complete the tutorial: What do I need? Your first PHP-enabled page. Something Useful. Dealing with Forms. Using old code with new versions of PHP. What's next? <strong class="w3-text-orange">&hellip;php.net</strong></dd>					
+		<dt><a target="_blank" href="https://www.php.net/">Familiarize yourself with the PHP language.</a><small>&hellip;on php.net</small></dt>
+		<dd class="w3-small">What is PHP? Why is it suitable for web development? What is the current version?</dd>	
+    
+		<dt><a target="_blank" href="https://www.php.net/manual/en/tutorial.php">A Simple Tutorial</a><small>&hellip;on php.net</small></dt>
+		<dd>Complete the tutorial: What do I need? Your first PHP-enabled page. Something Useful. Dealing with Forms. Using old code with new versions of PHP. What's next?</dd>					
 
-		<dt><a target="_blank" href="https://www.w3schools.com/php7/php7_intro.asp">PHP 7 Introduction</a></dt>
-		<dd class="w3-small">What You Should Already Know. What is PHP? What is a PHP File? What Can PHP Do? Why PHP? What's new in PHP 7  <strong class="w3-text-orange">&hellip;on w3schools.com</strong></dd>
+		<dt><a target="_blank" href="https://www.w3schools.com/php7/php7_intro.asp">PHP 7 Introduction</a><small>&hellip;on w3schools.com</small></dt>
+		<dd>What You Should Already Know. What is PHP? What is a PHP File? What Can PHP Do? Why PHP? What's new in PHP 7</dd>
 
-		<dt><a target="_blank" href="https://www.w3schools.com/php7/php7_syntax.asp">PHP 7 Syntax</a></dt>
-		<dd class="w3-small">Basic PHP Syntax. Comments in PHP. PHP Case Sensitivity.  <strong class="w3-text-orange">&hellip;on w3schools.com</strong></dd>
+		<dt><a target="_blank" href="https://www.w3schools.com/php7/php7_syntax.asp">PHP 7 Syntax</a><small>&hellip;on w3schools.com</small></dt>
+		<dd>Basic PHP Syntax. Comments in PHP. PHP Case Sensitivity.</dd>
 
-		<dt><a target="_blank" href="https://www.w3schools.com/php7/php7_echo_print.asp">PHP 7 Variables</a></dt>
-		<dd class="w3-small">Creating (Declaring) PHP Variables. PHP Variables. Output Variables. PHP is a Loosely Typed Language. PHP Variables Scope. Global and Local Scope. PHP The global Keyword. PHP The static Keyword.   <strong class="w3-text-orange">&hellip;on w3schools.com</strong></dd>
+		<dt><a target="_blank" href="https://www.w3schools.com/php7/php7_echo_print.asp">PHP 7 Variables</a><small>&hellip;on w3schools.com</small></dt>
+		<dd>Creating (Declaring) PHP Variables. PHP Variables. Output Variables. PHP is a Loosely Typed Language. PHP Variables Scope. Global and Local Scope. PHP The global Keyword. PHP The static Keyword.</dd>
 
-		<dt><a target="_blank" href="https://www.w3schools.com/php7/php7_echo_print.asp">PHP 7 echo and print Statements</a></dt>
-		<dd class="w3-small">PHP echo and print Statements. The PHP echo Statement. The PHP print Statement.   <strong class="w3-text-orange">&hellip;on w3schools.com</strong></dd>
+		<dt><a target="_blank" href="https://www.w3schools.com/php7/php7_echo_print.asp">PHP 7 echo and print Statements </a><small>&hellip;on w3schools.com</small></dt>
+		<dd>PHP echo and print Statements. The PHP echo Statement. The PHP print Statement.   </dd>
 	</dl>	
-	<hr>
-    <h3>1.1. Javascript vs. PHP highlights.</h3>
-	<p>Compare some of the important features of Javascript and PHP. Read this in conjunction witht the client-server diagram and make sure you understand what each row of the table is telling you and why each language has the features and limitations that it has.</p>
-	<table class="table table-sm">
-	  <tr>
-		<th></th>
-		<th>JavaScript</th>
-		<th>PHP</th>
-	  </tr>
-	  <tr>
-		<th>Runs on:</th>
-		<td>Browser</td>
-		<td>Server</td>
-	  </tr>
-	  <tr>		
-		<th>Access to client machine:</th>
-		<td>Some</td>
-		<td>None</td>		
-	  </tr>	  
-	  <tr>		
-		<th>Access to server machine:</th>
-		<td>None</td>
-		<td>Full</td>		
-	  </tr>	
-	  <tr>		
-		<th>Access to database:</th>
-		<td>None</td>
-		<td>Full</td>		
-	  </tr>	
-	  <tr>		
-		<th>Access to DOM:</th>
-		<td>Full</td>
-		<td>None</td>		
-	  </tr>		
-	  <tr>		
-		<th>Input:</th>
-		<td>User interaction</td>
-		<td>HTTP parameters, files, and databases</td>		
-	  </tr>		
-	  <tr>		
-		<th>Output:</th>
-		<td>Pop-ups, change to DOM</td>
-		<td>Text (HTML, CSS, Javascript)</td>		
-	  </tr>	 
-	  <tr>		
-		<th>Comments:</th>
-		<td>Java-like, visible in page source</td>
-		<td>Java-like, not visible in page source</td>		
-	  </tr>	
-	  <tr>		
-		<th>Coding Styles:</th>
-		<td>Imperative, event-driven, functional, object-oriented</td>
-		<td>Imperative, functional, object-oriented</td>		
-	  </tr>	
-	  <tr>		
-		<th>Syntax:</th>
-		<td>Java-like</td>
-		<td>Java-like</td>		
-	  </tr>	
-	  <tr>		
-		<th>Variables:</th>
-		<td>Weakly typed</td>
-		<td>Weakly typed, names start with $</td>		
-	  </tr>	
-	  <tr>		
-		<th>Array support:</th>
-		<td>Numeric and associative</td>
-		<td>JNumeric and associative</td>		
-	  </tr>		  
-	</table>
-	<hr>
+  
+ <figure class="fig-bookmark">
+  <a href="https://www.php.net/manual/en/langref.php" target="_blank" class="bookmark source">
+  <div class="bookmark-info">
+    <div class="bookmark-text">
+      <div class="bookmark-title">PHP Manual (primary source)</div>
+      <div class="bookmark-description">PHP is a popular general-purpose scripting language that is especially suited to web development.  Check out the Language Reference - Basic syntax, Types, Variables, Constants, Expressions, Operators, Control Structures, Functions, Classes and Objects, Errors, Exceptions, and Predefined Variables. <strong>We are currently using PHP 7.</strong></div>
+    </div>
+    <div class="bookmark-href"><img src="https://libapps-ca.s3.amazonaws.com/apps/common/favicon/favicon.ico" class="icon bookmark-icon"/>https://www.php.net/manual/en/langref.php</div>
+  </div>
+  <img src="images/php8.png" class="bookmark-image"/></a>
+</figure> 
+
+
 </section>
 
 <!-- Dataflow -->
@@ -245,7 +178,7 @@ h4::before {
 
 <!-- 1.3. Basic Rules of PHP Programs -->
 <section id="page13">
-    <h3>1.3. Basic Rules of PHP Programs</h3>
+    <h3>Basic Rules of PHP Programs</h3>
 	<h5>Start and end processing instructions</h5>
 	<p>PHP interpreter parses a file, it looks for opening and closing tags, which are <code>&lt;?php</code> to open and <code>?></code> to close a PHP section. Everything outside of a pair of opening and closing tags is ignored by the PHP parser which allows PHP files to have mixed content (hybrid).</p> 
 	<figure onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/QXWa65Kw', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/pf_hello_world.png" alt="example 2" style="cursor:pointer;text-align:center;">
@@ -308,7 +241,7 @@ TAG1;
 
 <!-- 1.4. Whitespace and Case-sensitivity --> 
 <section id="page14">
-	<h3>1.4. Whitespace and Case-sensitivity</h3>
+	<h3>Whitespace and Case-sensitivity</h3>
 	  <p>PHP programs consist of a series of statements, each of which ends with a semicolon. You can put multiple statements on the same line as long as they are separated with a semicolon. You can put as many blank lines between statements as you want. The PHP interpreter ignores them. Whitespace includes space, tab, and newline characters.</p>
 	  <p>In practice, it is good style to put one statement on a line and put blank lines to improve the readability of your source code. Use the same conventions as Javascript code.</p>
 	  <p>The PHP interpreter does not care whether you use uppercase letters, lowercase letters, or both when you include keywords and function names in your program.</p>
@@ -316,32 +249,33 @@ TAG1;
 </section>
 
 <!-- 1.5. Commenting and Documentation -->
-<div id="page15">
-	<h3>1.5. Commenting and Documentation</h3>	
+<section id="page15">
+	<h3>Commenting and Documentation</h3>	
 	<blockquote class="w3-panel w3-leftbar sherblue">Writing code is similar to academic writing in that when you use or adapt code developed by someone else as part of your project, you must cite your source. However, instead of quoting or paraphrasing a source, you include an inline comment in the code. These comments not only ensure you are giving proper credit, but help with code understanding and debugging.
 	<br><small><cite title="[ Academic Integrity at MIT, A Handbook for Students ]">Academic Integrity at MIT, A Handbook for Students</cite> </small>
 	</blockquote> 
 	<hr>
-</div>
+</section>
 
 </article>
 
 
 <!-- <div id="page20">       2.1. Simple Statements -->
 <article id="page20">
-	<h2>2. PHP Programs</h2>
-	<hr>
-	<h3>2.1. Simple Statements</h3>	
+	<h2>PHP Programs</h2>
+
+<section id="page21">
+	<h3>Simple Statements</h3>	
 	<p><strong>Simple statements</strong>&mdash; each PHP statement is an instruction to PHP interpreter to do something. Statements are interpretted one at a time, in the sequence they are written. <code> statement1; statement2; statement3; </code> Sometimes statements are combined into a block and executed together (decisions and iteration).</p>
 	<p>PHP requires instructions to be terminated with a semicolon at the end of each statement. The closing tag of a block of PHP code automatically implies a semicolon;</p>
 	<hr>
-
+</section>
 
 <!-- 2.2. Selection (Decisions) -->
 <section id="page22">
-	<h3>2.2. Control Structures</h3>	
+	<h3>Control Structures</h3>	
 	
-	<h5>Selection (Decisions)</h5>	
+	<h4>Selection (Decisions)</h4>	
 	<p class="lead">The <code>if</code> statement allows for conditional execution of code fragments. PHP features an if structure that is similar to that of C (Java and Javascript).</p>
 	
 	<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
@@ -379,12 +313,11 @@ switch (n) {
 			switch control structure @ <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
 		</a>  	
 	
-</section>
+<hr>
 
 <!-- 2.3. Iterations (Loops) -->
-<section id="page23">
-<br>
-	<h5>Iteration (Loops)</h5>
+
+	<h4>Iteration (Loops)</h4>
 	
 	<p class="lead">The <code>for</code> loop</p>
 	<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
@@ -430,12 +363,20 @@ do {
 					href="http://php.net/manual/en/control-structures.do.while.php">
 					do-while control structures @ <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
 				</a>
+      <hr>    
+	<h4>break, continue, return, else if, elseif, &hellip;</h4>
+
+			<a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  target="_blank"  
+					href="http://php.net/manual/en/language.control-structures.php">
+					Control structures. Read more in <strong class="text-dark">PHP Manual @ </strong>@ <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
+				</a>		
+	<hr>        
 </section>
 
 <!-- 2.4. Requires and Includes -->
-<section id="page24">
+<section id="page23">
 	<br>
-	<h5>Requires and Includes</h5>
+	<h3>Requires and Includes</h3>
 			<p>PHP has four functions for using external files: <code>include()</code>, <code>include_once()</code>, <code>require()</code>, and <code>require_once()</code>. </p>
 			<p>Include files give you a way to create one version of the common elements of your web site, such as the header, footer, menu, etc., which you then reference on all web pages. The main difference between include() and require()</p>
 			<ul class="dialog-ul">
@@ -452,16 +393,6 @@ do {
 				</a>		
 </section>
 
-<!-- 2.5. More Control Structures -->
-<section id="page25">
-	<br>
-	<h5> Control Structures</h5>
-		<p>break, continue, return, else if, elseif, &hellip;</p>
-			<a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  target="_blank"  
-					href="http://php.net/manual/en/language.control-structures.php">
-					Control structures. Read more in <strong class="text-dark">PHP Manual @ </strong>@ <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
-				</a>		
-	<hr>
 </section>
 
 </article>
@@ -469,8 +400,11 @@ do {
 
 <!-- <div id="page30"> 3.1. PHP Operators -->
 <article id="page30">
-	<h2>3. PHP Operators</h2>
+	<h2>PHP Operators</h2>
 		<p>An operator is something that takes one or more values (or expressions, in programming jargon) and yields another value (so that the construction itself becomes an expression).</p>
+    
+<section id="page31">
+    <h3>PHP Operators</h3>
 		<p><a target="_blank"
 			href="http://ca3.php.net/manual/en/language.operators.php">What are operators? Read more in <strong class="text-dark">PHP Manual @ </strong>  					
 			  <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong>
@@ -485,12 +419,12 @@ do {
 			<li><strong>Comparison operators</strong>  &mdash; Equal, Identical, Not equal, Not identical, Greater than, Less than, &hellip;</li>
 			<li><strong>Ternary conditional operator</strong>  &mdash;  If the value of the first sub-expression is TRUE (non-zero), then the second sub-expression is evaluated, and that is the result of the conditional expression. Otherwise, the third sub-expression is evaluated, and that is the value.<br><code> $first ? $second : $third ;</code> </li>
 		</ul>	
-	<hr>
+</section>
 
 
 <!-- 3.2. Operator precedence -->
 <section id="page32">
-	<h5>Operator precedence</h5>
+	<h3>Operator precedence</h3>
 	<p>The precedence of an operator specifies how "tightly" it binds two expressions together. For example, in the expression <var>1 + 5 * 3</var>, the answer is 16 and not 18 because the multiplication ("*") operator has a higher precedence than the addition ("+") operator. Parentheses may be used to force precedence, if necessary. For instance: <var>(1 + 5) * 3</var> evaluates to 18.</p>
 	<p>When operators have equal precedence their associativity decides how the operators are grouped. For example "-" is left-associative, so <var>1 - 2 - 3</var> is grouped as <var>(1 - 2) - 3</var> and evaluates to -4. "=" on the other hand is right-associative, so <var>$a = $b = $c</var> is grouped as <var>$a = ($b = $c)</var>.</p>
 	<p>Operators of equal precedence that are non-associative cannot be used next to each other, for example 1 &lt; 2 > 1 is illegal in PHP. The expression <var>1 &lt;= 1 == 1</var> on the other hand is legal, because the <code>==</code> operator has lesser precedence than the <code>&lt;=</code> operator.</p>
@@ -503,23 +437,23 @@ do {
 
 <!-- <div id="page40">   2.6. Expressions -->
 <article id="page40">
-	<h2>4. PHP Variables</h2>
+	<h2>PHP Variables</h2>
 	
-	<hr>
-	<h3>4.1. Expressions</h3>
+<section id="page41">
+	<h3>Expressions</h3>
 	  <p>Expressions are the most important building blocks of PHP. In PHP, almost anything you write is an expression... "anything that has a value". The most basic forms of expressions are constants and variables. Slightly more complex examples for expressions are functions and the ternary conditional operator.</p>
 
 	<a target="_blank" 
 		href="http://ca3.php.net/manual/en/language.expressions.php">
 		What are expressions? Read more in <strong class="text-dark">PHP Manual @ </strong><img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
 	</a>	
-	<hr>
+	</section>
 
 
-<!-- 4.1.       4.2. Identifiers and Constants -->
+<!--    4.2. Identifiers and Constants -->
 <section id="page42">
 
-	<h3>4.2. Identifiers and Constants</h3>
+	<h3>Identifiers and Constants</h3>
 	<p>All variable names have a dollar sign in front; variable names must begin with a letter or an underscore (cannot begin with a number; can be any length; can include letters, numbers, and underscores only; case sensitive.</p>
 	<p><strong>Single quotes</strong> variable name is displayed by its name; <br><strong>Double quotes</strong> variable name is replaced by its value; <br><strong>Curly braces</strong> can be used around variable name to define the variable</p>  
 <pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
@@ -540,7 +474,7 @@ define ("AGE",29);</pre>
 
 <!-- 4.3. Predefined variables -->
 <section id="page43">
-	<h3>4.3. Predefined variables</h3>
+	<h3>Predefined variables</h3>
 	<ul class="grid-container">
 		<li><code>$GLOBALS</code></li>
 		<li><code>$_SERVER</code></li>
@@ -559,7 +493,7 @@ define ("AGE",29);</pre>
 
 <!-- 4.4.Declaring variables  -->
 <section id="page44">
-	<h3>4.4. Declaring variables</h3>
+	<h3>Declaring variables</h3>
 	<p>Variables are "containers" for storing information. To create (declare) a variable, you give it a name. In PHP, a variable starts with the $ sign, followed by the name of the variable</p>
 <pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
 $txt = "Hello world!";
@@ -601,7 +535,7 @@ echo $x + $y;</pre>
 
 <!-- 4.5. Variable scope -->
 <section id="page45">
-	<h3>4.5. Variable scope</h3>
+	<h3>Variable scope</h3>
 	<p>PHP is a Loosely Typed Language; we do not have to tell PHP which data type the variable is. PHP automatically converts the variable to the correct data type, depending on its value.</p>
 	<p>In PHP, variables can be declared anywhere in the script. The scope of a variable is the part of the script where the variable can be referenced/used. PHP has three different variable scopes: local, global, static.</p>
 	<p>A variable declared outside a function has a <strong>GLOBAL SCOPE</strong> and can only be accessed outside a function:</p>
@@ -669,7 +603,7 @@ myTest5(); echo "&lt;br>";</pre>
 
 <!-- 5.1. Arrays, Strings, And Numbers -->
 <article id="page50">
-	<h2>5. PHP Data Types</h2>
+	<h2>PHP Data Types</h2>
 	<p>Data Types, Identifiers, Constants, Variable Scope, Declaring Variables</p>
 	<ul>
 		<li><b>integer</b> (whole number)</li>
@@ -682,7 +616,9 @@ myTest5(); echo "&lt;br>";</pre>
 		<li><b>Resource</b> (a reference that identifies a connection) <a href="http://ca3.php.net/manual/en/language.types.resource.php">Read more.</a>
 		<p class="w3-text w3-tag">A resource is a special variable, holding a reference to an external resource,  special handles to opened files, database connections, image canvas areas&hellip; Resources are created and used by special functions. </p></li>
 	</ul>
-	<h3>5.1. Numbers</h3>
+  
+<section id="page51">  
+	<h3>Numbers</h3>
 	<p>Pseudo-types are keywords used in the PHP documentation to specify the types or values an argument can have. Please note that they are not primitives of the PHP language. The pseudo-type <em>number</em> indicates that a parameter can be either integer or float. The scalar types, boolean, integer, and float (floating-point number, aka double) are primitive types.</p>
 	<dl class="row">
 	  <dt class="col-sm-2">boolean</dt>
@@ -693,12 +629,12 @@ myTest5(); echo "&lt;br>";</pre>
 	  <dd class="col-sm-9">&mdash;Floating point numbers (also known as "floats", "doubles", or "real numbers") can be specified using any of the following: 1.234, 1.2e3,  7E-10, 1_234.567 . The size of a float is platform-dependent, although a maximum of approximately 1.8e308 with a precision of roughly 14 decimal digits is a common value (the 64 bit IEEE format).</dd>	  
 	</dl>
 						
-	<hr>
+	</section>
 
 
 <!-- 5.2. PHP Strings -->
 <section id="page52">
-	<h3>5.2. PHP Strings</h3>
+	<h3>PHP Strings</h3>
 	<blockquote class="blockquote">
 		<p class="mb-0">The string in PHP is implemented as an array of bytes and an integer indicating the length of the buffer. It has no information about how those bytes translate to characters, leaving that task to the programmer. There are no limitations on the values the string can be composed of; in particular, bytes with value 0 (“NUL bytes”) are allowed anywhere in the string (however, a few functions, said in this manual not to be “binary safe”, may hand off the strings to libraries that ignore data after a NUL byte.)</p>
 		<footer class="blockquote-footer"><cite title="www.w3schools.com/php/php_string.asp"><a href="http://www.w3schools.com/php/php_string.asp" target="_blank">PHP Manual</a></cite></footer>
@@ -710,8 +646,8 @@ myTest5(); echo "&lt;br>";</pre>
 </section>
 
 <!-- 6.1. PHP Arrays -->
-<section id="page61">
-	<h3>5.3. PHP Arrays</h3>
+<section id="page53">
+	<h3>PHP Arrays</h3>
 	<blockquote class="blockquote">
 		<p class="mb-0">An array in PHP is actually an ordered map. A map is a type that associates values to keys. This type is optimized for several different uses; it can be treated as an array, list (vector), hash table (an implementation of a map), dictionary, collection, stack, queue, and probably more. As array values can be other arrays, trees and multidimensional arrays are also possible.</p>
 		<footer class="blockquote-footer"><cite title="php.net/manual/en/language.types.array.php"><a href="http://php.net/manual/en/language.types.array.php"  target="_blank" role="button">PHP Manual</a></cite></footer>
@@ -730,8 +666,9 @@ myTest5(); echo "&lt;br>";</pre>
 </section>
 
 <!-- 6.2. Indexed (ordered) arrays -->
-<section id="page62">
-	<h5>Indexed (ordered) arrays &mdash;Arrays with a numeric index</h5>
+<section id="page54">
+	<h3>Indexed arrays</h3>
+  <h5>Indexed (ordered) arrays &mdash;Arrays with a numeric index</h5>
 	<pre class="brush: php; highlight: [0]; first-line: 1">
 $city = array("Oakville",
 			  "Brampton",
@@ -740,8 +677,9 @@ $city = array("Oakville",
 </section>
 	
 <!-- 6.3. Associative arrays -->
-<section id="page63">
-	<h5>Associative arrays&mdash;Arrays with named keys</h5>
+<section id="page55">
+	<h3>Associative arrays</h3>
+  <h5>Associative arrays&mdash;Arrays with named keys</h5>
 	<pre class="brush: php; highlight: [0]; first-line: 1">
 $province = 
 	array("ON"=>"Ontario",
@@ -751,7 +689,8 @@ $province =
 </section>		
 
 <!-- 6.4. Multidimensional arrays -->
-<section id="page64">
+<section id="page56">
+  <h3>Multidimensional arrays</h3>
 	<h5>Multidimensional arrays &mdash;Arrays containing one or more arrays</h5>
 	<pre class="brush: php; highlight: [0]; first-line: 1">	
 $arr = array (  
@@ -778,13 +717,16 @@ $arr = array (
 
 <!-- <div id="page60">   7.1. Built-in Functions -->
 <article id="page60">
-	<h2>6. PHP Functions</h2>
-	<h3>6.1. Built-in Functions</h3>
-	<blockquote class="blockquote">
-		<p class="mb-0">The real power of PHP comes from its functions. It has more than 1000 built-in functions. We can create our own functions.</p>
-		<footer class="blockquote-footer"><cite title="www.w3schools.com/php/php_functions.asp">www.w3schools.com/php/php_functions.asp</cite></footer>
-	</blockquote>
+	<h2>PHP Functions</h2>
+	
+	<div class="card  bg-dark text-white text-center">
+	  <p class="lead card-body" title="defined by w3schools"> 
+The real power of PHP comes from its functions. It has more than 1000 built-in functions. We can create our own functions.</p>
+		<footer class="blockquote-footer"><cite title="www.w3schools.com/php/php_functions.asp">www.w3schools.com</cite></footer>
+	</div>
 
+<section id="page61">
+<h3>Built-in Functions</h3>
 		<ul class="w3-ul">
 			<li>A function is a block of statements that can be used repeatedly in a program.</li>
 			<li>A function will not execute immediately when a page loads.</li>
@@ -830,12 +772,12 @@ $arr = array (
 			</li>
 		</ul>
 		
-	<hr>
+	</section>
 
 
 <!-- 7.2. print and echo -->
-<section id="page72">
-	<h3>7.2. print and echo</h3>
+<section id="page62">
+	<h3>print and echo</h3>
 	<p>Explore the differences between print and echo.</p>
 	<ul class="grid-container">
 		<li>  Why do we omit the brackets? What are the major differences?</br>
@@ -848,9 +790,9 @@ $arr = array (
 </section>
 
 <!-- 4.6.Variable Handling Functions  -->
-<section id="page46">
-
-	<h2>6.2. Variable Handling Functions</h2>
+<section id="page63">
+	<h3>Variable Handling Functions</h3>
+  
 	<ul style="line-height: 2em">
 		<li><kbd>empty</kbd> <small>—Determine whether a variable is empty</small></li>
 		<li><kbd>is_array</kbd> <small>— Finds whether a variable is an array</small></li>
@@ -862,11 +804,11 @@ $arr = array (
 	</ul>	
 	<footer><a class="btn btn-success btn-block" href="http://ca3.php.net/manual/en/ref.var.php" role="button" target="_blank">Read more on php.net manual</a></footer>		
 	<hr>
-</section>
+
 
 <!-- 7.3. isset and empty -->
-<section id="page73">
-	<h3>isset and empty</h3>
+
+	<h4>isset and empty</h4>
 	<dl class="row">
 	  <dt class="col-sm-4">Function <code>isset()</code></dt>
 	  <dd class="col-sm-8">&mdash;Determine if a variable is set and is not NULL
@@ -881,11 +823,11 @@ $arr = array (
 	  </dd>	  
 	</dl>			
 	<hr>
-</section>
+
 
 <!-- 7.4. print_r and var_dump -->
-<section id="page74">
-	<h3>print_r and var_dump</h3>
+
+	<h4>print_r and var_dump</h4>
 	<dl class="row">
 	  <dt class="col-sm-4">Function <code>print_r()</code></dt>
 	  <dd class="col-sm-8">&mdash;Prints human-readable information about a variable
@@ -905,7 +847,7 @@ $arr = array (
 </section>
 
 <!-- 7.5. Arrays and Strings -->
-<section id="page75">
+<section id="page66">
 	<h3>Arrays and Strings</h3>
 	<dl class="row">
 	  <dt class="col-sm-3">Function <code>implode()</code></dt>
@@ -995,7 +937,8 @@ $length = count($array);</pre>
 
 <!-- <div id="page70"> 8.1. object-oriented programming -->
 <article id="page70">
-	<h2>7. Object-oriented programming</h2>
+	<h2>Object-oriented programming</h2>
+  
 	<p>The four principles of object-oriented programming are</p>	
 	<dl class="row">
 	  <dt class="col-sm-3">Encapsulation</dt>
@@ -1014,8 +957,8 @@ $length = count($array);</pre>
 
 
 <!-- 8.2. Using classes for efficiency -->
-<section id="page82">
-	<h3>7.1. Using classes for efficiency</h3>		 
+<section id="page71">
+	<h3>Using classes for efficiency</h3>		 
 	<p>Classes can be used to provide shortcuts and helpers throughout programming. For example, when you define a class for a user, you can add functions (called methods) to that user class for common things that users might need to do, such as authenticate a log on, update a password, change or set an email, and so on. Having defined a class, such as User, lets you instantiate a user object, using a New keyword.</p> 
 	<pre class="brush: php; first-line: 0" title=" ">$member = new User;</pre>
 	<p>and you can call methods and properties through your own copy of the user object</p> 
@@ -1027,8 +970,8 @@ $length = count($array);</pre>
 </section>
 
 <!-- 8.3. PHP Objects -->
-<section id="page83">
-	<h3>7.2. PHP Classes</h3>
+<section id="page72">
+	<h3>PHP Classes</h3>
 	<p>An object is a data type which stores data and information on how to process that data.<br>
 		Declare a <code>class</code> of an object that contains properties and methods. <br><code>class ObjectName { // properties and methods }</code><br> Initialize the object with the new keyword <br><code>$thisInstance = new ObjectName;</code></p>
 	
@@ -1052,8 +995,8 @@ $length = count($array);</pre>
 </section>
      
 <!-- 7.3.    8.4. Exception Class -->
-<section id="page84">
-	<h3>7.3. Exception Class</h3>
+<section id="page73">
+	<h3>Exception Class</h3>
 	<p class="type">Explore w3schools.com</p>
 	<button type="button" class="btn btn-outline-success btn-block">
 		<a href="https://www.w3schools.com/php/php_exception.asp" target="_blank">Exception Class</a>	
@@ -1062,8 +1005,8 @@ $length = count($array);</pre>
 </section>
 
 <!-- 7.4.   8.5. PDO Class -->
-<section id="page85">
-	<h3>7.4. PDO Class</h3>
+<section id="page74">
+	<h3>PDO Class</h3>
 		<p class="type">Explore PHP manual</p>
 		<button type="button" class="btn btn-outline-success btn-block">
 			<a href="http://ca3.php.net/manual/en/class.pdo.php" target="_blank">PDO Class</a>
@@ -1098,8 +1041,10 @@ $length = count($array);</pre>
 		 
 <!-- <div id="page80">   8. PHP Sessions           9.1. Using sessions on the server-->
 <article id="page80">
-	<h2>8. PHP Sessions</h2>
-	<h5>Using sessions on the server</h5>
+	<h2>PHP Sessions</h2>
+  
+<section id="page81">  
+	<h3>Using sessions on the server</h3>
 	<p>Read and practise <a href="http://www.w3schools.com/php/php_sessions.asp" target="_blank">w3schools PHP 5 Sessions</a> to familiarize yourself with sessions.</p>	 
 	<p>You can store information about users, such as their email, name, phone numer, and other details, and automatically fill in that information wherever it is needed. You store this information in a session, hidden from the user, until you use it. You use session variables as you would any other variables.  Sessions are store in an array called <samp>$_SESSION</samp>. You store values just as you would with a named array in PHP. See <samp>session_start()</samp>, <samp>session_id</samp>, <samp>session_name</samp>, <samp>session_destroy</samp></p>	
 <pre class="brush: js; highlight: [2,3,4,5]; first-line: 1" title="Create session variables">
@@ -1125,12 +1070,13 @@ if (!isset($_SESSION['accessTime'])) {
 
 	<p>A good resource to watch: <a href="http://www.lynda.com/PHP-tutorials/PHP-Web-Designers/146234-2.html?org=sheridanc.ca" target="_blank">PHP for Web Designers with David Powers (lynda.com video)</a>.</p>	
 
-	<br>
+	</section>
 
 
 <!-- 9.1. Example 1 -->
 <section id="page82">
-	<h5>Example 1</h5>
+	<h3>Session examples</h3>
+  <h5>Example 1</h5>
 	<p>In this example, we will work with several files. Let's start with a simple session test program:</p>					
 <pre class="brush: js; highlight: [0]; first-line: 1" title="File: sessionTest.php">
 &lt;?php
@@ -1151,11 +1097,11 @@ echo "&lt;p>&lt;a href=\"sessionTest.php?cancel=yes\">Destroy session&lt;/a>&lt;
 ?></pre>
 
 		<p>Upload and test the program on the server. Note what happens if you press the "Reload this page" link. Reload the page several times. Then press the "Destroy session" and again reload the page several times. Take note of the observations you make.</p>	
-	<br>
-</section>
+	<hr>
+
 
 <!-- 9.3. Example 2 -->
-<section id="page83">
+
 	<h5>Example 2</h5>
 	<p>In the second program </p>	
 <pre class="brush: js; highlight: [0]; first-line: 1" title="File: message.php">
@@ -1188,11 +1134,11 @@ if (isset($_SESSION["width"])) {
 &lt;/html></pre>		
 	
 		<p>Upload and test the program on the server. </p>	
-	<br>
-</section>
+	<hr>
+
 
 <!-- 9.4. Example 3 -->
-<section id="page84">
+
 	<h5>Example 3</h5>
 	<p>The third program consists of two files, an html file that contains javascript and php file that accesses the super-global variables.</p>					
 <pre class="brush: js; highlight: [0]; first-line: 1" title="File: getStuff.html">
@@ -1252,61 +1198,71 @@ echo "Height : ".$_GET['height']."&lt;br />";
 			<hr> 
       <h6><a href="material_programming.html">Web programming </a></h6>	
       <hr>	
-		<h6><a href="material_js.html">Client-side programing with JS</a></h6>	
+		  <h6><a href="material_js.html">Client-side programing with JS</a></h6>	
     <hr>    
-
+    <h6>Server-side programing with PHP</h6>
+    
 		<details open>
-      <summary>Server-side programing with PHP</summary>		
-      <a href="#page10" class="secondary"> 1. PHP Introduction</a>
-			<a href="#" class="secondary">  2. Javascript vs. PHP highlights</a>
-			<a href="#" class="secondary">  3. Dataflow</a>
-			<a href="#" class="secondary">  4. Basic Rules of PHP Programs</a>	
-			<a href="#" class="secondary">  5. Whitespace and Case-sensitivity</a>
-			<a href="#" class="secondary">  6. Commenting and Documentation</a>
-	
-			<a href="#page20"><i class="fa fa-inbox w3-margin-right"></i> 2. PHP Programs</a>
-			<a href="#" class="secondary">  2.1. Simple Statements</a>
-			<!--a href="#" class="secondary">  2.2. Expressions</a-->
-			<a href="#" class="secondary">  2.2. Control Structures</a>
-			<!-- a href="#" class="secondary">  2.3. Selection (Decisions)</a>
-			<a href="#" class="secondary">  2.4. Iterations (Loops)</a>
-			<a href="#" class="secondary">  2.5. Requires and Includes</a>
-			<a href="#" class="secondary">  2.6. More Control Structures</a-->			
+      <summary><a href="#page10">PHP Language</a></summary>		
+      <a href="#page11" class="secondary">1. Introduction to PHP</a>
+			<a href="#page12" class="secondary">2. Dataflow</a>
+			<a href="#page13" class="secondary">3. Basic Rules of PHP Programs</a>	
+			<a href="#page14" class="secondary">4. Whitespace and Case-sensitivity</a>
+			<a href="#page15" class="secondary">5. Commenting and Documentation</a>
+		</details>
 
-			<a href="#page30"><i class="fa fa-inbox w3-margin-right"></i> 3. PHP Operators</a> 
-			<!--a href="#" class="secondary">  3.1. PHP Operators</a>
-			<a href="#" class="secondary">  3.2. Operator precedence</a-->
+		<details>
+      <summary><a href="#page20">PHP Programs</a></summary> 	
+			<a href="#page21" class="secondary">6. Simple Statements</a>
+			<a href="#page22" class="secondary">7. Control Structures</a>
+			<a href="#page23" class="secondary">8. Requires and Includes</a>
+    </details>
+    
+    <details>
+      <summary open><a href="#page30">PHP Operators</a></summary> 
+      <a href="#page31" class="secondary">9. PHP Operators</a>
+			<a href="#page32" class="secondary">10. Operator precedence</a>
+		</details>
 
-			<a href="#page40"><i class="fa fa-inbox w3-margin-right"></i> 4. PHP Variables</a> 
-			<!--a href="#" class="secondary"> 4.1. PHP data types</a-->
-			<a href="#" class="secondary"> 4.1. Identifiers and Constants</a>
-			<a href="#" class="secondary"> 4.2. Predefined variables</a>
-			<a href="#" class="secondary"> 4.3. Declaring variables </a> 
-			<a href="#" class="secondary"> 4.4. Variable scope</a> 
-					
+		<details>
+      <summary><a href="#page40">PHP Variables</a></summary>
+      <a href="#page41" class="secondary">11. Expressions</a>
+			<a href="#page42" class="secondary">12. Identifiers and Constants</a>
+			<a href="#page43" class="secondary">13. Predefined variables</a>
+			<a href="#page44" class="secondary">14. Declaring variables </a> 
+			<a href="#page45" class="secondary">15. Variable scope</a> 
+		</details>
 
-			<a href="#page50"><i class="fa fa-inbox w3-margin-right"></i> 5. PHP Data Types</a> 
-			<a href="#" class="secondary"> 5.1. PHP Numbers</a>		
-			<a href="#" class="secondary"> 5.2. PHP Strings</a>	
-			<a href="#" class="secondary"> 5.3. PHP Arrays</a>	
-			
-			<a href="#page60"><i class="fa fa-inbox w3-margin-right"></i> 6. PHP Functions</a> 
-			<a href="#" class="secondary"> 6.1. Built-in Functions </a>
-			<!--a href="#" class="secondary"> 7.2. print and echo</a-->
-			<a href="#" class="secondary"> 6.2. Variable Handling Functions</a>	
-			<!--a href="#" class="secondary"> 7.3. isset and empty</a>
-			<a href="#" class="secondary"> 7.4. print_r and var_dump</a-->
-			<a href="#" class="secondary"> 6.3. Arrays and Strings</a>
-					
-			<a href="#page70"><i class="fa fa-inbox w3-margin-right"></i> 7.  Object-Oriented PHP	</a> 
-			<!--a href="#" class="secondary"> 8.1. object-oriented programming</a-->
-			<a href="#" class="secondary"> 7.1. Using classes for efficiency</a>
-			<a href="#" class="secondary"> 7.2. PHP Classes</a>
-			<a href="#" class="secondary"> 7.3. Exception Class</a>
-			<a href="#" class="secondary"> 7.4. PHP Data Objects (PDO) Class</a>			
-					
-			<a href="#page80"><i class="fa fa-inbox w3-margin-right"></i> 8. PHP Sessions	</a> 
-			<!--a href="#" class="secondary"> 8.1. Using sessions on the server</a-->
+		<details>					
+      <summary><a href="#page50">PHP Data Types</a></summary>
+			<a href="#page51" class="secondary">16. PHP Numbers</a>		
+			<a href="#page52" class="secondary">17. PHP Strings</a>	
+			<a href="#page53" class="secondary">18. PHP Arrays</a>
+      <a href="#page54" class="secondary">19. PHP Indexed Arrays</a>
+      <a href="#page55" class="secondary">20. PHP Associative Arrays</a>
+      <a href="#page56" class="secondary">21. PHP Multi-dimensional Arrays</a>       
+    </details>
+
+		<details>		
+      <summary><a href="#page60">PHP Functions</a></summary>
+			<a href="#page61" class="secondary">22. Built-in Functions </a>
+			<a href="#page62" class="secondary">23. print and echo</a>
+      <a href="#page63" class="secondary">24. Variable Handling Functions</a>	    
+      <a href="#page66" class="secondary">25. Arrays and Strings</a>
+    </details>  
+     
+		<details open>				
+			<summary><a href="#page70">Object-Oriented PHP</a></summary>
+			<a href="#page71" class="secondary">26. Using classes for efficiency</a>
+			<a href="#page72" class="secondary">27. PHP Classes</a>
+			<a href="#page73" class="secondary">28. Exception Class</a>
+			<a href="#page74" class="secondary">29. PDO Class</a>			
+		</details>
+
+    <details open>
+      <summary><a href="#page80">PHP Sessions</a></summary>
+      <a href="#page81" class="secondary">30. Using sessions on the server</a>
+      <a href="#page82" class="secondary">31. Session examples</a>
 		</details>
 	
     <hr>    

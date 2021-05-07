@@ -20,7 +20,7 @@
 
 <script src="https://kit.fontawesome.com/e511a6976b.js" crossorigin="anonymous"></script> 
 <style>
-body {
+ 
 body {
   counter-reset: figure-counter;  /* Set "figure-counter" to 0 */
 }
@@ -30,28 +30,19 @@ figcaption::before {
   font-weight: bold;
 }
 main {
-  counter-reset: section;
-}
-article h2 {
-  counter-reset: subsection;
-}
-article h2::before {
-  counter-increment: section;
-  /* content: counter(section) ". "; */
-}
-h3::before {
-  counter-increment: subsection;
-  content: counter(subsection) ". "; 
-  /* content: counter(section) "." counter(subsection) " "; */
-}
-h3 {
-  counter-reset: subsubsection;
-}
-h4::before {
-  counter-increment: subsubsection;
-  content: counter(section) "." counter(subsection) "." counter(subsubsection) ". ";
+   counter-reset: section; 
 }
 
+h3::before {
+  counter-increment: section;
+  content: counter(section) ". "; 
+  /* content: counter(section) "." counter(subsection) " "; */
+}
+
+.orange {
+  color: darkorange;
+  font-weight: bold;
+}
 </style>    
 </head>
 <body>
@@ -163,7 +154,7 @@ alternative pinkr.co online project editor
 
 
 <!--  2.2. Including Javascript in HTML -->
-<section>
+<section id="page21">
 	<h3>Including Javascript in HTML</h3>
 	<p>Like in CSS, with Javascript you target HTML elements and do stuff to them. With CSS, you apply styles; with Javascript, you apply behaviour. Like with CSS, there are three ways to include Javascript code into HTML documents:</p>  
 	<ol>
@@ -211,7 +202,7 @@ alternative pinkr.co online project editor
 
 
 <!-- 2.3. Adding behaviour with Javascript -->
-<section>
+<section id="page22">
 	<h3>Adding behaviour with Javascript</h3>
 		<p><strong>Inline JavaScript code</strong> can be assigned to any HTML <mark>event</mark> attribute, such as <code>onload</code>, or enclosed within a <code>&lt;script></code> element in the document body section – <em class="w3-red">but is best avoided&nbsp;</em>. All JavaScript code is best located in an external file whose path is specified to an <code>src</code> attribute of the <code>&lt;script></code> tag</p>
     
@@ -250,7 +241,7 @@ document.addEventListener("DOMContentLoaded", init, false);
 
 
 <!-- 2.4. Accelerating Initialization -->
-<section>
+<section id="page23">
 	<h3>Accelerating Initialization</h3>
 	<h5>Use unobtrusive Javascript</h5>	
 	
@@ -293,7 +284,7 @@ elem.addEventListener("click", theFunction, false);</code></pre>
 
 
 <!-- 2.5. Input and Output -->
-<section>
+<section id="page24">
 	<h3>Input and Output</h3>
 
 	<h5>Working with <code>document.write</code></h5>
@@ -360,7 +351,7 @@ var something = prompt("Enter something");</code></pre>
 
 
 <!--  2.6. Basic Grammar -->
-<section>
+<section id="page25">
 	<h3>Basic Grammar</h3>
 	<ul class="w3-ul">
 		<li>JavaScript follows the <a href="https://tc39.github.io/ecma262" target="_blank"> ECMA-262 standard</a>.</li>
@@ -386,7 +377,7 @@ purpose and provides information about the author and date. */
 
 
 <!--  2.7. Debugging Javascript Code -->
-<section>
+<section id="page26">>
 	<h3>Debugging Javascript Code</h3>
 	<ul class="w3-ul">
 		<li>Use the console to trace values of variables</li>
@@ -402,7 +393,7 @@ purpose and provides information about the author and date. */
 
 
 <!--  2.8. Unobtrusive Javascript -->
-<section>
+<section id="page27">
 	<h3>Unobtrusive Javascript</h3>
   
   <p>Unobtrusive JavaScript is not a technique as such; unobtrusive JavaScript is not a matter of adding one makeUnobtrusive() function to your scripts in order to enter nirvana. Instead, it’s a way of thinking. To make sure that your scripts do not inconvenience anyone, you should make sure your scripts do not make any assumptions.</p>
@@ -441,7 +432,7 @@ purpose and provides information about the author and date. */
 	<hr>
 	
 <!-- 3.1. Identifiers and Constants -->
-<section>
+<section id="page31">
 	<h3>Identifiers and Constants</h3>
 		<ul class="checked" style="margin-top:8px">  		
 			<li>Javascript variable is a symbolic name for a value. <a href="https://en.wikipedia.org/wiki/Variable_(computer_science)" target="_blank" title="See more on Wikipedia">W</a> </li> 
@@ -455,7 +446,7 @@ purpose and provides information about the author and date. */
 </section>	
 
 <!-- 3.2. Expressions -->
-<section>
+<section id="page32">
 	<h3>Expressions</h3>
 	<p>Statement is a group of words, numbers, and operators that performs a specific task. It is made up of one or more expressions.</p>
   
@@ -516,7 +507,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/func
 </section>	
 
 <!-- 3.3. Special values -->
-<section>
+<section id="page33">
 	<h3>Special values</h3>
 		<table class="w3-table w3-bordered">
 			<tr><td class="w3-indigo" style="min-width:120px"><code class="w3-large w3-text-white">undefined</code></td>
@@ -540,7 +531,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/func
 </section>	
 
 <!-- 3.4. Declaring variables --> 
-<section>
+<section id="page34">
 	<h3>Declaring variables</h3>
 		<p>Variables are declared three different ways: [from MDN]</p>
 		<table class="table">
@@ -572,7 +563,7 @@ let lucky = 13;</code></pre>
 </section>	
 
 <!-- 3.5. Variable scope -->	
-<section>
+<section id="page35">
 	<h3>Variable scope</h3>
 		<p>Variables begin their life with a declaration. The remainder of their life within the application depends on where the variables are declared. They are accessible from anywhere in their containing scope (generally, the current function). JavaScript has two scopes: global and local.</p> 
 		<div class="w3-panel w3-pale-yellow w3-border w3-border-yellow">
@@ -607,7 +598,7 @@ let lucky = 13;</code></pre>
 	<hr>
   
 <!-- 4.1. Simple Statements --> 	
-<section>
+<section id="page41">
 	<h3>Simple Statements</h3>
 
 	<ul class="checked">
@@ -624,7 +615,7 @@ let lucky = 13;</code></pre>
 </section>
 
 <!-- 4.2. Code blocks and program flow -->
-<section>
+<section id="page42">
 	<h3>Code blocks and program flow</h3>
 		<p>You need to provide users with certain website functions only under certain conditions. 	Without program flow, JavaScript programs would process from top to bottom in the order in which the code is written. Program flow can be conditional, iterative, or behavioural. Conditional program flow is used on evaluating state to make a decision as to which code should run.  Iterative flow processes lists and collections of information systematically and consistently.  Behavioural flow is defined as an event or callback in which specific logic is applied based on user engagement with the application or completion of another task. Exception handling is a special type of program flow to run specific logic in the case of an error in the program.</p>
 		<ol>
@@ -658,7 +649,7 @@ let lucky = 13;</code></pre>
 </section>
 
 <!-- 4.3. Control structures --> 
-<section>
+<section id="page43">
 	<h3>Control structures</h3>
 	<h5>Loops (Iteration)</h5>
 
@@ -747,7 +738,7 @@ switch ( expression ) {
   <hr>	
 	
 <!-- 5.1. Assignment -->
-<section>
+<section id="page51">
 	<h3>Assignment</h3>
 		<p>The basic <code>=</code> assignment operator should not be confused with the <code>===</code> equality operator, which compares two operands.</p>
     
@@ -764,7 +755,7 @@ if ( x === "7" ) {
 </section>	
 
 <!-- 5.2. Expressions and operators -->
-<section>
+<section id="page52">
 	<h3>Expressions and operators</h3>
   
   
@@ -793,15 +784,9 @@ console.log(11 % 3 ** 2); // 11 % 9
 </section>
 
 
-
-
-
-
-
-
 <!-- 5.2. Arithmetic, conditional -->
-<section>
-	<h3>Arithmetic, conditional</h3>
+<section id="page53">
+	<h3>Arithmetic and Conditionals</h3>
 <pre class="language-js"><code>var sum = 25 + 37;   // addition
 var diff = 25 - 37;  // subtraction
 var multi = 25 * 37; // multiplication
@@ -813,7 +798,7 @@ var decr = x--;      // decrement</code></pre>
 		<p>When the <code>++</code> increment or <code>––</code> decrement operator prefixes the operand its value is changed immediately, but when they appear after the operand the expression is evaluated first</p>
 
 
-		<h3>Arithmetic Shorthand</h3> 
+		<h4>Arithmetic Shorthand</h4> 
 <pre class="language-js"><code>x += y;
 // same as
 x = x + y;</code></pre>				
@@ -823,7 +808,7 @@ x = x + y;</code></pre>
 var str = "The quick brown fox jumps ";
 str += "over the lazy dog.";</code></pre>		
 	<br>
-		<h5>Comparison operators</h5>	
+		<h4>Comparison operators</h4>	
 		<p>Two operands can be compared for <code>===</code> equality, <code>!==</code> inequality, <code>></code> greater-than value, or <code>&lt;</code> less-than value</p>
     
 <pre class="language-js"><code>var y = "3"; 
@@ -833,20 +818,18 @@ y === x     // returns false</code></pre>
 		<p>The <code>&lt;=</code> and <code>>=</code> combined comparison operators also return true when both operands are equal</p>
 		<p>Expressions being evaluated for a true or false value need not include <code>===</code> true as that assessment is made automatically</p>
 
-		<h5>Boolean Logic operators</h5>
+		<h4>Boolean Logic operators</h4>
 		<p>The logical <code>&&</code> AND operator evaluates two operands and returns true when both operands are true, but the logical <code>||</code> OR operator returns true when either operand is true. The logical <code>!</code> NOT operator can prefix a single operand to return its inverse value</p> 	
 
-		<h5>Conditional (ternary) operator</h5> 
+		<h4>Conditional (ternary) operator</h4> 
 		<p>Conditional operator <code>?:</code> evaluates a condition for a true or false value then executes one of two specified statements according to the result</p>
     
 <pre class="language-js"><code>// condition ? value1 : value2;
 var status = (age >= 18) ? 'adult' : 'minor';</code></pre>		
-	<br>	
-	<hr>
 </section>	
 
 <!-- 5.3. Concatenation and addition -->
-<section>
+<section id="page54">
 	<h3>Concatenation and addition</h3>
 		<p>In Javascript, you can add strings and numbers together. If you are doing math, the values must be numbers and not strings. The only actions you can do with strings is combine (concatenate) and compare. You can add, subtract, multiply, divide, and combine (concatenate) numbers. </p>
     
@@ -863,7 +846,7 @@ console.log( "100" + "50" );</code></pre>
 </section>	
 
 <!-- 5.4. Priority (precedence) -->
-<section>
+<section id="page55">
 	<h3>Priority (precedence)</h3>
 		<ul>
 			<li>Operator precedence can be set by enclosing an expression within parentheses to override the default operator priority</li>
@@ -895,13 +878,15 @@ var x = (100 + 50) * 3; // results in x having value 450</code></pre>
 	<hr>
 
 <!-- 6.1. Object-oriented vs. object-based -->
-<section>
+<section id="page61">
 	<h3>Object-oriented vs. object-based</h3>
 		<p>Like in physical world, an <mark class="w3-label">object</mark> is a thing that we can identify and give it a name, to Javascript. there are objects within web browsers, such as window, form, button, checkbox, and so on. Since you can have more than one window, (more than one form,...), we give the objects their own unique names.</p>
 		<p>Objects have <mark class="w3-label">properties</mark>. A document has a title. A form has a checkbox. Changing a property of an object modifies the object. The same property name can be a part of different objects. Javascript object also have <mark class="w3-label">methods</mark>. Buttons click, windows open, text is selected. To differentiate properties and methods, methods are follows with parentheses. click(), open(), selected(). You put together objects, properties,and methods to get a better description of an object, or to describe a process. Use the <mark class="w3-label">dot syntax</mark>.</p>
 	<hr>
+</section>
 
-	<h4>Data and common structures</h4>
+<section id="page62">
+	<h3>Data and common structures</h3>
 	<ul class="w3-ul">
 		<li><strong>record</strong> a collection of data items or fields that all bear some relationship to one another. For example, a student record may contain the student's number, name, address and enrolled subjects</li>
 		<li><strong>file</strong> a collection of records. For example, a student file may contain a collection of the above student records.</li>
@@ -913,7 +898,7 @@ var x = (100 + 50) * 3; // results in x having value 450</code></pre>
 
 
 <!-- 6.2. Basic Data Types -->	
-<section>
+<section id="page63">
   <h3>Basic Data Types</h3>
   <p>There are eight basic data types in JavaScript.</p> 
   <ol>
@@ -926,8 +911,9 @@ var x = (100 + 50) * 3; // results in x having value 450</code></pre>
     <li><strong>object</strong> for more complex data structures.</li>
     <li><strong>symbol</strong> for unique identifiers.</li>
   </ol>
-
-	<h4>Primitive Types</h4>
+  </section>
+<section id="page64">
+	<h3>Primitive Types</h3>
 	<p class="eeb-border-quote" title="https://developer.mozilla.org/en-US/docs/Glossary/Primitive">A primitive (primitive value, primitive data type) is data that is not an object and has no methods. There are 6 primitive data types: string, number, bigint, boolean, undefined, and symbol.</p> 
 		<ol>
 			<li><strong>String</strong> A JavaScript string stores a series of characters like "John Doe". A string can be any text inside double or single quotes.
@@ -956,7 +942,10 @@ var firstName;  // undefined</code></pre>
 		</ol>	
  
 	<hr>
-  	<h4>Strings</h4>
+  </section>
+  
+<section id="page65">  
+  	<h3>Strings</h3>
 	<p class="eeb-border-quote" title="https://developer.mozilla.org/en-US/docs/Glossary/string">In any computer programming language, a string is a sequence of characters used to represent text. In JavaScript, a String is one of the primitive values and the String object is a wrapper around a String primitive.</p>
   
   <h5>Quotes</h5>
@@ -1004,15 +993,7 @@ var firstName;  // undefined</code></pre>
     <div class="w3-xlarge w3-text-orange card-body" title=" "> 
     An object is a self-contained entity comprising properties that store data and methods that perform tasks. A JavaScript object is a collection of named values.</div>
   </div>	<br>
-  
-<!-- Objects 
-
-https://javascript.info/types#summary
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures
-
-
--->        
+        
 <div>        
 	<h5>In Javascript, most important data type is the <strong class="w3-text-red">object</strong>.</h5>
     <ul  class="w3-ul"> 
@@ -1067,7 +1048,7 @@ alert(person.fullName); // 42</code></pre>
 
 
 <!-- 7.1. Built-in types -->
-<section>
+<section id="page71">
 	<h3>Built-in types</h3>
 <div>
 			<h4>Date</h4> 
@@ -1274,7 +1255,7 @@ var data = [
 
 
 <!-- 7.2. Custom objects -->
-<section>
+<section id="page72">
 	<h3>Custom objects</h3>
     <p>Understanding how to create and use custom objects makes it easy to understand built-in objects and DOM objects later. The custom object is defined by a prototype function that is a template specifying an object name, in accordance with the usual naming conventions, and properties and methods. The syntax of an object definition looks like this:</p>
 <pre class="language-js"><code>function object-name ( parameter1 , parameter2 , parameter3 ) { 
@@ -1309,7 +1290,7 @@ book.contents = {};	// {} creates an empty object with no properties.</code></pr
 
 
 <!-- 7.3. DOM objects -->
-<section>
+<section id="page73">
 	<h3>DOM objects</h3>
   <div>
 	<div class="card  bg-dark text-white text-center">
@@ -1377,7 +1358,7 @@ book.contents = {};	// {} creates an empty object with no properties.</code></pr
 </div>
 
 <!-- 7.3.1. DOM methods and properties  -->
-<div>
+<section>
 	<h4>DOM methods and properties</h4>
   <h5>Element properties</h5>
  	<p>nodeType, nodeName, nodeValue, innerHTML, childNodes, id, style, firstChild, nextSibling, nextElementSibling</p>	
@@ -1506,7 +1487,7 @@ myElement.setAttribute("attributeName", "attributeValue")</code></pre>
   <footer class="blockquote-footer">Explore further  <cite title="[ www.w3schools.com/jsref/dom_obj_document ]"><a href="https://www.w3schools.com/jsref/dom_obj_document.asp" target="_blank"> www.w3schools.com/jsref/dom_obj_document</a></cite></footer>  
   
 	<hr>
-</div>
+</section>
 
 
 
@@ -1557,9 +1538,8 @@ objNode.othermethod...;
 </section>
 
 
-
 <!-- 7.4. Browser Environment  -->	
-<section>
+<section id="page74">
 	<h3>Browser Environment</h3>
   <p class="lead">At the top of the hierarchy is the window, the global object. All other objects form three groups.</p>
   <figure>
@@ -1614,7 +1594,7 @@ The global window object mixes browser window functionality (methods focus(),ope
 </section>
 
 
-</section>
+</article>
 
 
 <!-- 8. Javascript Functions  -->
@@ -1634,7 +1614,7 @@ The global window object mixes browser window functionality (methods focus(),ope
 	
 		<!-- cite="McGrath, Mike (2013-06-24). JavaScript In Easy Steps (Kindle Locations 780-815). In Easy Steps. Kindle Edition."-->	
 <!-- 7.1. Function basics -->
-<section>
+<section id="page81">
 	<h3>Function basics</h3>
 		<ul class="w3-ul">
       <li>Functions are parameterized blocks of Javascript code that we can invoke.</li>
@@ -1756,7 +1736,7 @@ function writeMsg() {
 </section>	
 
 <!-- 7.2. Anonymous Functions -->
-<section>
+<section id="page82">
 	<h3>Anonymous Functions</h3>
 		<p>Anonymous functions are functions that are declared as they are run, and they have no name assigned to them. Anonymous functions perform better than a named function because there is nothing to reference; they just execute when needed. They are used only once; they cannot be reference over and over again.</p>	
 	<br>
@@ -1764,7 +1744,7 @@ function writeMsg() {
 </section>
 
 <!-- 7.3. Callback functions -->
-<section>
+<section id="page83">
 	<h3>Callback functions</h3>
 		<p>
 			<q cite="https://en.wikipedia.org/wiki/Callback_(computer_programming)">
@@ -1796,7 +1776,7 @@ function writeMsg() {
 </section>
 
 <!-- 7.4. Exception handling statements -->	
-<section>
+<section id="page84">
 	<h3>Exception handling statements</h3>
    <div class="box bg-dark w3-xlarge w3-text-orange text-center">
         <p>It is critical that a program can deal with errors and unknown conditions in any software development, including Javascript.</p>	
@@ -1840,7 +1820,7 @@ function myFunction() {
 
 	
 <!-- 9.1. Event Handler -->
-<section>
+<section id="page91">
 	<h3>Event Handler</h3>
 	<ul>
 		<li>The term event handler may be used to refer to:
@@ -1860,7 +1840,7 @@ function myFunction() {
 </section>	
 
 <!-- 9.2. Eliciting user feedback -->
-<section>
+<section id="page92">
 	<h3>Eliciting user feedback</h3>
 	<ul class="w3-ul">
 		<li>An <mark>event-handler function</mark> for a window event is nominated by assigning the function name to a window object property
@@ -1886,7 +1866,7 @@ function myFunction() {
 </section>	
 
 <!-- 9.3. Using events -->
-<section>
+<section id="page93">
 	<h3>Using events</h3>
 		<p>Events allow you elicit feedback from the user.  If you want to execute any Javascript on a page, it must happen through an event. Examples of events: load a page, click a link, submit a form. Any event can have a function attached to it..</p>
 		<figure>
@@ -1913,7 +1893,7 @@ function myFunction() {
 </section>	
 
 <!-- 9.4. Event capture and bubbling -->
-<section>
+<section id="page94">
 	<h3>Event capture and bubbling</h3>
 		<p>Event bubbling is the concept that applies when the HTML document has nested elements. In this situation, one click event may trigger multiple events to fire. The last parameter of the addEventListener method accepts an optional Boolean parameter. This parameter allows you to specify the cascading or bubbling effect of the event, in which order the event processing occurs (false to bubble out, true to cascade down).</p>
 		<figure>
@@ -1936,7 +1916,7 @@ function myFunction() {
 	<hr>	
 	
 <!-- 10.1. How forms are processed -->
-<section>
+<section id="page101">
 	<h3>How forms are processed </h3>
 	<ol class="dialog-ol">
 		<li><strong>value</strong>. Each element of a form can be dynamically assigned a <b>value</b> from JavaScript.</li>
@@ -1958,7 +1938,7 @@ function myFunction() {
 </section>
 
 <!-- 10.2. HTML5 and CSS3 form components -->
-<section>
+<section id="page102">
 	<h3>HTML5 and CSS3 form components</h3>
 	<ul>
 			<li>The HTML <code>&lt;form></code> element defines a form that is used to collect user input.</li>
@@ -1974,7 +1954,7 @@ function myFunction() {
 </section>
 
 <!-- 10.3. Data validation -->
-<section>
+<section id="page103">
 	<h3>Data validation</h3>
 <h5>Different types of form validation </h5>
 <h6><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" target="">from MDN</a></h6>
@@ -1995,54 +1975,7 @@ function myFunction() {
    </ul>  
 <hr>
 </section>
-
-<!-- 10.4. Regular expressions (regex) -->
-<section>
-	<h3>Regular expressions (regex)</h3>
-	<p>The core HTML input controls support a <strong>pattern</strong> attribute that allows you to apply a regular expression to validate user input. In some cases, it may be more effective to validate user input with Javascript.</p>
-	<p>Regular expressions have a unique syntax. A regular expression is a mix of special characters and literal characters that make up the pattern to match.</p>	
-
-	<figure class="figure">
-		<dl class="row">
-		  <dt class="col-sm-2">Symbol</dt>
-		  <dd class="col-sm-9"><strong>Description</strong></dd>
-		  <dt class="col-sm-2">^</dt>
-		  <dd class="col-sm-9">&mdash; [anchor] The caret character denotes the beginning of a string.</dd>	  	  
-		  <dt class="col-sm-2">$</dt>
-		  <dd class="col-sm-9">&mdash; [anchor] The dollar sign denotes the end of a string.</dd>	  	 
-		  <dt class="col-sm-2">.</dt>
-		  <dd class="col-sm-9">&mdash; The period matches any single character.</dd>	
-		  <dt class="col-sm-2">[A-Z]</dt>
-		  <dd class="col-sm-9">&mdash; Square brackets denote a character set, a list or a range. [A-Z] means any upper case alpha character.</dd>
-		  <dt class="col-sm-2">[^abc]</dt>
-		  <dd class="col-sm-9">&mdash; The carret inside a character set negates the set; [^abc] means not a, not b, not c.</dd>
-		  <dt class="col-sm-2">\d</dt>
-		  <dd class="col-sm-9">&mdash; This combination matches any numeric character.</dd>
-		  <dt class="col-sm-2">\w</dt>
-		  <dd class="col-sm-9">&mdash; This combination matches any word character (alphanumeric including the underscore.</dd>
-		  <dt class="col-sm-2">\s</dt>
-		  <dd class="col-sm-9">&mdash; This combination matches a space character</dd>
-		  <dt class="col-sm-2">\</dt>
-		  <dd class="col-sm-9">&mdash; The backslash is an escape character. Used before a special character will match the special character literally. For example, to find the \ character in a string, the pattern would be \\</dd>
-		  <dt class="col-sm-2">+</dt>
-		  <dd class="col-sm-9">&mdash; [modifier] The plus sign denotes that the preceding character must match at least once, or more times.</dd>
-		  <dt class="col-sm-2">*</dt>
-		  <dd class="col-sm-9">&mdash; [modifier] The asterisk denotes that the preceding character may match zero or more times.</dd>	
-		  <dt class="col-sm-2">?</dt>
-		  <dd class="col-sm-9">&mdash; [modifier] The question mark denotes that the preceding character is optional</dd>
-		  <dt class="col-sm-2"></dt>	  
-		</dl>
-		<figcaption class="figure-caption text-center"> Table shows some of the common symbols and their meaning. <br>For more details and practice, see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">MDN Regular Expressions guide</a>.</figcaption>
-	</figure>
 	
-	<h5>Evaluate regular expressions</h5>
-	<p class="list-group-item svg-clip"> <a href="http://regexone.com/" target="_blank">A comprehensive interactive tutorial on regexone.com</a></p> 
-
-	<p class="list-group-item svg-clip"> <a href="https://regexr.com/" target="_blank">RegExr is an online tool to learn, build, and test Regular Expressions (RegEx / RegExp).</a></p>	
-	<hr>
-
-</section>
-		
 </article>
 
 </div> <!-- Page content ends -->
@@ -2054,94 +1987,90 @@ function myFunction() {
 	<h5 class="card-title">Table of Content</h5>
 	<hr>
 	<nav>
-		<p data-toggle="modal" data-target="#exampleModalCenter"><a href="#" class="secondary">Course Learning Outcomes</a></p>
 
     <h6><a href="material_programming.html">Web programming</a></h6>
     <hr>		
 		<h6>Client-side programing with JS</h6>
 		
 		<details open>
-      <summary><a href="#page20"> Javascript Language</a></summary>
-			<span class="secondary">Introduction to Javascript</span>
-			<span class="secondary">Including Javascript in HTML</span>
-			<span class="secondary">Adding behaviour with Javascript</span>
-			<span class="secondary">Accelerating Initialization</span>
-			<span class="secondary">Input and Output </span>
-			<span class="secondary">Basic Grammar </span>
-			<span class="secondary">Debugging Javascript Code</span>
-      <span class="secondary">Unobtrusive Javascript</span>
+      <summary><a href="#page20">Javascript Language</a></summary>
+			<a href="#page20" class="secondary">1. Introduction to Javascript</a>
+			<a href="#page21" class="secondary">2. Including Javascript in HTML</a>
+			<a href="#page22" class="secondary">3. Adding behaviour with Javascript</a>
+			<a href="#page23" class="secondary">4. Accelerating Initialization</a>
+			<a href="#page24" class="secondary">5. Input and Output </a>
+			<a href="#page25" class="secondary">6. Basic Grammar </a>
+			<a href="#page26" class="secondary">7. Debugging Javascript Code</a>
+      <a href="#page27" class="secondary">8. Unobtrusive Javascript</a>
 		</details>
 
 		<details>
       <summary><a href="#page30">Javascript Variables</a></summary> 
-			<span class="secondary">Identifiers and Constants</span>
-			<span class="secondary">Expressions</span>
-			<span class="secondary">Special values</span>
-			<span class="secondary">Declaring variables </span> 
-			<span class="secondary">Variable scope</span> 
+			<a href="#page31" class="secondary">9. Identifiers and Constants</a>
+			<a href="#page32" class="secondary">10. Expressions</a>
+			<a href="#page33" class="secondary">11. Special values</a>
+			<a href="#page34" class="secondary">12. Declaring variables </a> 
+			<a href="#page35" class="secondary">13. Variable scope</a> 
 		</details>		
 		
 		<details>
       <summary><a href="#page40">Javascript Programs</a></summary> 
-			<a href="#" class="secondary">  4.1. Simple Statements</a>			
-			<a href="#" class="secondary">  4.2. Code blocks and program flow</a>
-			<a href="#" class="secondary">  4.3. Control structures</a>
+			<a href="#page41" class="secondary">14. Simple Statements</a>			
+			<a href="#page42" class="secondary">15. Code blocks and program flow</a>
+			<a href="#page43" class="secondary">16. Control structures</a>
 		</details>
 		
 		<details>
 			<summary><a href="#page50">Javascript Operators</a></summary>  
-			<a href="#" class="secondary">  5.1. Assignment</a>
-			<a href="#" class="secondary">  5.2. Arithmetic, conditional</a>
-			<a href="#" class="secondary">  5.3. Concatenation and addition</a>
-			<a href="#" class="secondary">  5.4. Priority (precedence)</a>
+			<a href="#page51" class="secondary">17. Assignment</a>
+      <a href="#page52" class="secondary">18. Expressions and operators</a>
+			<a href="#page53" class="secondary">19. Arithmetic and conditionals</a>
+			<a href="#page54" class="secondary">20. Concatenation and addition</a>
+			<a href="#page55" class="secondary">21. Priority (precedence)</a>
 		</details>	
 			
 		<details>
 			<summary><a href="#page60">Javascript Data Structures</a></summary> 
-			<a href="#" class="secondary"> 6.1. Object-oriented vs. object-based</a>
-      <a href="#" class="secondary"> 6.1.1. Data and common structures </a>
-			<a href="#" class="secondary"> 6.2. Basic Data Types</a>
-      <a href="#" class="secondary"> 6.2.1. Primitive Types</a>	
-      <a href="#" class="secondary"> 6.2.2. Strings</a>	      
+			<a href="#page61" class="secondary">22. Object-oriented vs. object-based</a>
+      <a href="#page62" class="secondary">23. Data and common structures </a>
+			<a href="#page63" class="secondary">24. Basic Data Types</a>
+      <a href="#page64" class="secondary">25. Primitive Types</a>	
+      <a href="#page65" class="secondary">26. Strings</a>	      
 		</details>
 
 		<details>
 			<summary><a href="#page70">Javascript Objects	</a> </summary> 	
-			<a href="#" class="secondary">Built-in types</a>
-			<!--- Date, Math, RegExp, Function, Object, Array-->        
-			<a href="#" class="secondary">Custom objects</a>
-			<a href="#" class="secondary">DOM Objects</a>
-			<a href="#" class="secondary">DOM methods and properties </a>
-			<a href="#" class="secondary">Working with live DOM </a>
-			<a href="#" class="secondary">Browser object model (BOM) </a>
+			<a href="#page71" class="secondary">27. Built-in types</a>       
+			<a href="#page72" class="secondary">28. Custom objects</a>
+			<a href="#page73" class="secondary">29. DOM Objects</a>
+			<a href="#page74" class="secondary">30. Browser Environment</a>
 		</details>	
 
 
 		<details>
 			<summary><a href="#page80">Javascript Functions </a></summary> 
-			<a href="#" class="secondary">Function basics</a>
-			<a href="#" class="secondary">Anonymous Functions</a>	
-			<a href="#" class="secondary">Callback functions</a>
-			<a href="#" class="secondary">Exception handling statements</a>
+			<a href="#page81" class="secondary">31. Function basics</a>
+			<a href="#page82" class="secondary">32. Anonymous Functions</a>	
+			<a href="#page83" class="secondary">33. Callback functions</a>
+			<a href="#page84" class="secondary">34. Exception handling statements</a>
 		</details>			
 
 		
 
 		<details>
 			<summary><a href="#page90">Event handling</a> </summary> 
-			<a href="#" class="secondary">Event Handler</a>
-			<a href="#" class="secondary">Eliciting user feedback</a>
-			<a href="#" class="secondary">Using events</a>
-			<a href="#" class="secondary">Event capture and bubbling</a>
+			<a href="#page91" class="secondary">35. Event Handler</a>
+			<a href="#page92" class="secondary">36. Eliciting user feedback</a>
+			<a href="#page93" class="secondary">37. Using events</a>
+			<a href="#page94" class="secondary">38. Event capture and bubbling</a>
 		</details>	
 		
 		
 		<details>
 			<summary><a href="#page100">Javascript forms</a> </summary> 
-			<a href="#" class="secondary">How forms are processed</a>
-			<a href="#" class="secondary">HTML5 and CSS3 form components</a>
-			<a href="#" class="secondary">Data validation</a>
-			<a href="#" class="secondary">Regular expressions (regex)</a>			
+			<a href="#page101" class="secondary">39. How forms are processed</a>
+			<a href="#page102" class="secondary">40. HTML5 and CSS3 form components</a>
+			<a href="#page103" class="secondary">41. Data validation</a>		
 		</details>			
 
 	
@@ -2149,8 +2078,12 @@ function myFunction() {
     <h6><a href="material_php.html">Server-side programing with PHP</a></h6>	
     <hr>    
     <h6><a href="material_databases.html">SQL database language and MySQL</a></h6>	
-    <hr>    
-    <h6><a href="material_regex.html">Regular expressions (regex)</a></h6>	
+        <hr> 
+   
+    <h6><a href="material_regex.html">Regular expressions (regex)</a></h6>
+    <hr>
+      <p data-toggle="modal" data-target="#exampleModalCenter">Course Learning Outcomes</p>
+    <hr>     
 		<a href="#top"  type="button" class="btn btn-info" style="position:fixed;bottom:-5px;text-align:center;">Back to top</a>
 	
 	</nav>
