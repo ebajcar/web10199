@@ -31,27 +31,15 @@ figcaption::before {
   font-weight: bold;
 }
 main {
-  counter-reset: section;
+   counter-reset: section; 
 }
-article h2 {
-  counter-reset: subsection;
-}
-article h2::before {
-  counter-increment: section;
-  /* content: counter(section) ". "; */
-}
+
 h3::before {
-  counter-increment: subsection;
-  content: counter(subsection) ". "; 
+  counter-increment: section;
+  content: counter(section) ". "; 
   /* content: counter(section) "." counter(subsection) " "; */
 }
-h3 {
-  counter-reset: subsubsection;
-}
-h4::before {
-  counter-increment: subsubsection;
-  content: counter(section) "." counter(subsection) "." counter(subsubsection) ". ";
-}
+
 .orange {
   color: darkorange;
   font-weight: bold;
@@ -140,31 +128,66 @@ alternative plnkr.co online project editor
 		<div class="card-body lead">Computer programming is a process that starts with an original formulation of a problem and culminates in executable computer programs. Computer languages, like human languages, require you to use them in order to understand them.</div>
 	</div>
 
-  <h5>Programming paradigms</h5>
-  <p>A programming paradigm is a style of programming. To program professionally, you need to learn either the object-oriented or functional programming paradigms.</p>
-  <p><strong>State</strong> One of the fundamental differences among the various programming paradigms is the handling of state. State is the value of a program's variables while it is running. Global state is the value of a program's global variables while it is running.</p>
-  <p><strong>Procedural programming paradigm</strong> Procedural programming paradigm is a programming style in which you write a sequence of steps moving toward a solution— with each step changing the program's state.You store data in global variables and manipulate it with functions</p>
-  <p><strong>Functional programming paradigm</strong> Functional programming paradigm addresses the problems that arise in procedural programming by eliminating global state. A functional programmer relies on functions that do not use or change global state, the only state they use are the parameters you pass to the function. The result, a function returns, is usually passed on to another function. A functional programmer can thus avoid global state by passing it from function to function.</p>
-  <p><strong>Object-oriented programming paradigm</strong> Object-oriented programming paradigm also addresses the problems that arise in procedural programming by eliminating global state, but instead of storing state in functions, it is stored in objects.</p>
-  
-  <h5>Programming, Program, Algorithm, Programming language</h5>
+
+<section id="page01">  
+``<h3>What is web programming?</h3>
+  <h4>Programming, Program, Algorithm, Programming language</h4>
   <figure class="figure">	
 		<img class="figure-img img-fluid rounded" src="../images/program_algorithm.png">		
 		<figcaption class="figure-caption">Links between the terms of program, programming, algorithm and programming language &mdash;<a href="https://www.codeit-project.eu/wp-content/uploads/CodeIT_O1_EN.pdf"><em>Source</em></a></figcaption>
 	</figure>	
-  <p><strong>Imperative programming</strong> A developer writes code that describes in exacting detail the steps that the computer must take to accomplish the goal.
+
+
+  <h5>What is computer programming?</h5> 
+  <p>Computer programming, including web programming, is a process that starts with an original formulation of a problem and culminates in executable computer programs. The process consists of a set of activities:</p>
+  
+  <ol>
+    <li>Understand the problem. (analysis)</li>
+    <li>Plan the logic. (design)</li>
+    <li>Code the program. (construct)</li>
+    <li>Translate program into machine language.</li>
+    <li>Test the program. (test)</li>
+    <li>Put program into production.</li>
+  </ol>
+  <p><strong>What is problem solving?</strong></p>
+  
+  <p>Typical problems are complex. Many problems no longer appear as problems, because we have learned to solve them so well and so quickly that they take little time and little effort.</p>
+  <img src="images/image5.png" alt="comic strip on problem solving">
+  <p>Break down problems and attempt to solve the pieces; attempt to solve each part. Even a simple problem needs to be <strong>planned, analysed, designed, constructed, and tested before it is implemented. </strong> What do you need to know?</p>
+  <ol>
+     <li>Describe the problem in own words</li>  
+      <li>State the OBJECTIVE of the problem we are trying to solve</li>  
+       <li>Identify the variables for INPUTs and OUTPUTs (ELEMENTS)</li>  
+        <li>What constraints need to be identified? (RELATIONS)</li>  
+         <li>Model the system: goal + elements + relations.</li>  
+  </ol>
+  <p>Use simple English (structured) or pseudocode. Include appropriate comments. Err on having too many comments. With practice you will learn to make sound and practical choices what constitutes too much and what is inadequate amount of comments.</p>
+  <p>Write out the algorithm. Keep track of constraints and assumptions. Look for improvements and alternatives, and revise.</p>
+  <h5>What is an algorithm?</h5>
+  <ul>
+    <li><a href="https://youtu.be/ZnBF2GeAKbo" target="_blank">What exactly is an algorithm? Algorithms explained | BBC Ideas | 7:53</a></li>
+    <li><a href="https://youtu.be/6hfOvs8pY1k" target="_blank">What's an algorithm? - David J. Malan | 4:57</a></li>
+    <li><a href="https://youtu.be/ENWVRcMGDoU" target="_blank">How algorithms shape our world - Kevin Slavin | 15:23</a></li>
+  </ul>  
+</section>
+
+<section id="page02">
+  <h3>Programming paradigms</h3>
+    <p><strong>Imperative programming</strong> A developer writes code that describes in exacting detail the steps that the computer must take to accomplish the goal.
   <p>A computer program is shaped by its 
     <span class="orange">data representation</span> and the 
     <span class="orange">statements</span> that determine its 
     <span class="orange">flow of control</span>.</p>
   <p>Every program (<span class="orange">process</span>) has <span class="orange">input</span> and <span class="orange">output</span>.</p>
-  <p><strong>What is an algorithm?</strong></p>
-  <ul>
-    <li><a href="https://youtu.be/ZnBF2GeAKbo" target="_blank">What exactly is an algorithm? Algorithms explained | BBC Ideas | 7:53</a></li>
-    <li><a href="https://youtu.be/6hfOvs8pY1k" target="_blank">What's an algorithm? - David J. Malan | 4:57</a></li>
-    <li><a href="https://youtu.be/ENWVRcMGDoU" target="_blank">How algorithms shape our world - Kevin Slavin | 15:23</a></li>
-  </ul>
-
+  
+  <p>A <strong>programming paradigm</strong> is a style of programming. To program professionally, you need to learn either the object-oriented or functional programming paradigms.</p>
+  <p><strong>State</strong> One of the fundamental differences among the various programming paradigms is the handling of state. State is the value of a program's variables while it is running. Global state is the value of a program's global variables while it is running.</p>
+  <p><strong>Procedural programming paradigm</strong> Procedural programming paradigm is a programming style in which you write a sequence of steps moving toward a solution— with each step changing the program's state.You store data in global variables and manipulate it with functions</p>
+  <p><strong>Functional programming paradigm</strong> Functional programming paradigm addresses the problems that arise in procedural programming by eliminating global state. A functional programmer relies on functions that do not use or change global state, the only state they use are the parameters you pass to the function. The result, a function returns, is usually passed on to another function. A functional programmer can thus avoid global state by passing it from function to function.</p>
+  <p><strong>Object-oriented programming paradigm</strong> Object-oriented programming paradigm also addresses the problems that arise in procedural programming by eliminating global state, but instead of storing state in functions, it is stored in objects.</p>
+</section>  
+  
+  
 <!-- 1.3. What you should already know  -->
 <section id="page13">
   <h3>What you should already know from last semester</h3>
@@ -207,7 +230,9 @@ alternative plnkr.co online project editor
 <!-- 1.1. Full Stack Development -->
 <section id="page11">
 	<h3>Full Stack Development</h3>
-	<h5>Key technologies in programming the web client-server environment</h5>
+  <p>Web programming utilizes key technologies developed for the web client-server environment.</p>
+  
+	<h5>Key technologies include:</h5>
 	<ol>
 		<li>HTML and CSS (user interface)</li>	
 		<li>Front-end languages (<strong>Javascript</strong>, EcmaScript, jquery)</li>	
@@ -386,7 +411,7 @@ alternative plnkr.co online project editor
 
 <!-- 1.5. Apply best practices  -->
 <section id="page15">
-    <h3>Follow standards and conventions. Apply best practices. </h3>
+    <h3>Standards, conventions, best practices. </h3>
   <dl>
 	<dt>Progressive Enhancement (<a href="https://www.wikiwand.com/en/Progressive_enhancement" target="_blank">wikiwand.com</a>)</dt>
   <dd>
@@ -512,12 +537,14 @@ alternative plnkr.co online project editor
 		<details open>
       <summary class="active"><a href="#page10">Web Programming</a></summary>
 			
-      <a href="#page13" class="secondary">  1. What you should already know</a>
-      <a href="#page11" class="secondary">  2. Full-stack development</a>
-			<a href="#page12" class="secondary">  3. Javascript vs. PHP highlights</a>
+      <a href="#page01" class="secondary">  1. What is web programming?</a>
+      <a href="#page02" class="secondary">  2. Programming paradigms</a>
+      <a href="#page13" class="secondary">  3. What you should already know</a>
+      <a href="#page11" class="secondary">  4. Full-stack development</a>
+			<a href="#page12" class="secondary">  5. Javascript vs. PHP highlights</a>
 			
-			<a href="#page14" class="secondary">  4. Plan, Design, and integrate web apps</a>
-			<a href="#page15" class="secondary">  5. Follow standards and conventions. Apply best practices.</a>
+			<a href="#page14" class="secondary">  6. Plan, Design, and integrate web apps</a>
+			<a href="#page15" class="secondary">  7. Standards, conventions, best practices</a>
 		</details>
     <hr>		
 		<h6><a href="material_js.html">Client-side programming with JS</a></h6>	
