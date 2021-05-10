@@ -49,6 +49,10 @@ figure.fig-bookmark {
 	width: 100%;
 	align-items: stretch;
 }
+.bookmark a, .bookmark a:hover, .bookmark a:link, .bookmark a:active {
+  text-decoration: none;
+  cursor: pointer;
+}
 .bookmark-title {
 	font-size: 0.85em;
 	overflow: hidden;
