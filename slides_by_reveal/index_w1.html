@@ -68,10 +68,25 @@
       
 
 				<section>
-					<h2>Embedded Javascript</h2>
-          <h3>using the &lt;script> element</h3>
+					<h2>Inline Javascript</h2>
+          <h3>Obtrusive.</h3>
 					<p>
-						Add Javascript at the end of BODY element
+						 <span style="color:orange">TO BE AVOIDED!</span> 
+					</p>
+					<pre><code class="html" data-line-numbers="1-4">&lt;a onMouseOver="alert('you rolled over me');" 
+    href="file.html" target="_blank">
+  Move mouse over this text
+&lt;/a></code></pre>
+				</section> 
+
+
+				<section>
+					<h2>Embedded Javascript</h2>
+					<p>
+						 <span style="color:orange">Good during development or <br>small amount of unique to-the-page code.</span>
+					</p>          
+					<p>
+						Add Javascript at the end of BODY element <br>using the &lt;script> element
 					</p>
 					<pre><code class="html" data-line-numbers="1,6,7">&lt;script>
 /* declare and initialize variable txt to store a value */
@@ -81,6 +96,20 @@ console.log(txt);
 &lt;/script>
 &lt;/body></code></pre>
 				</section> 
+        
+				<section>
+					<h2>External Javascript</h2>
+					<p>
+						 <span style="color:orange">Unobtrusive. Code reusability. Code maintenance.</span> <br>Organize code in external files.
+					</p> 
+					<p>
+						Add Javascript at the end of BODY element using the &lt;script> element
+					</p>
+					<pre><code class="html" data-line-numbers="1,2,3">&lt;script src="js/filename.js">&lt;/script>
+&lt;script src="js/anotherone.js">&lt;/script>   
+&lt;script>/* may have some internal code */&lt;/script>       
+&lt;/body></code></pre>
+				</section>         
 
         
 				<section data-background-iframe="https://ebajcar.w3spaces.com/" data-background-interactive>
