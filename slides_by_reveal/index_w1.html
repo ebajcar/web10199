@@ -8,8 +8,14 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
+    
+    <!--
 		<link rel="stylesheet" href="css/theme/night.css">
-
+    -->
+    
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
 		<!-- 
     https://revealjs.com/code/
     
@@ -41,7 +47,7 @@
 
 				<section>
 					<h2>Web Programming</h2>
-          <h3><span style="color:orange">SYST10199</span></h3>			
+          <h3><span style="color:#0081a1">SYST10199</span></h3>			
           <p>Class 1 Notes</p>	
 				</section>
   
@@ -60,18 +66,61 @@
 				<section>
 					<h2>Web programming</h2>
 					<ol>
-						<li>What you should already know <br>&bull;&nbsp;&nbsp;<span style="color:orange">Java</span> and  <span style="color:orange">Web Development</span> courses</li>
+						<li>What you should already know <br>&bull;&nbsp;&nbsp;<span style="color:#0081a1">Java</span> and  <span style="color:#0081a1">Web Development</span> courses</li>
 						<li>Full-stack development<br><small style="color:gray">JS in the browser vs. PHP on the server</small> </li>
-						<li>What is web programming?<br><small style="color:gray">Plan, design, construct, test, publish, standards, conventions, best practices.</small> </li>
+						<li>What is web programming?<br><small style="color:gray">Plan, design, construct, document, test, publish. <br>Standards, conventions, best practices.</small> </li>
 					</ol>				
 				</section>        
       
+				<section>
+					<h3>Progressive Enhancement (PE) Approach</h3>
+					<ol>
+						<li>Organize with HTML5 (structure)</li>
+						<li>Style with CSS3 (presentation)</li>
+						<li>Add behaviour with JS (client-side functionality)</li>
+            <li>Enhance with PHP. (server-side functionality)</li>
+					</ol>				
+				</section> 
+        
+        
+				<section>
+					<h2>Client-side Programming</h2>
+          <p><span style="color:#0081a1">Javascript (JS)</span> in the browser</p>			
+				</section>
+  
+				<section>
+					<h2>JavaScript (JS)</h2>
+					<ul>
+						<li class="fragment fade-left">a lightweight, interpreted (just-in-time compiled), programming language 
+              <span style="display: inline-block;color: #0081a1;" class="fragment fade-left"> with first-class functions</span>   
+            </li>
+            <li class="fragment fade-left"> a prototype-based, multi-paradigm, single-threaded, dynamic language</span>
+            </li>
+            <li class="fragment fade-left"> supports
+              <span style="display: inline-block;color: #0081a1;" class="fragment fade-left">  object-oriented, imperative, </span>
+              <span style="display: inline-block;" class="fragment fade-left"> and declarative styles</span>
+            </li>
+					</ul>				
+				</section>      
 
+ 				<section>
+					<h2>JavaScript (JS)</h2>
+					<ol>
+						<li><span style="color:#0081a1">Standards</span> are  
+            <ul style="font-size:0.7em">
+              <li><a href="https://tc39.es/ecma262/" target="_blank">ECMAScript Language Specification (ECMA-262)</a> and</li> 
+              <li><a href="https://tc39.es/ecma402/" target="_blank">ECMAScript Internationalization API specification (ECMA-402)</a></li>
+            </ul></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><span style="color:darkorange">Documentation</span> throughout MDN</a> is based on the latest draft versions of ECMA-262 and ECMA-402.</li>
+					</ol>				
+				</section>   
+ 
+ 
 				<section>
 					<h2>Inline Javascript</h2>
           <h3>Obtrusive.</h3>
 					<p>
-						 <span style="color:orange">TO BE AVOIDED!</span> 
+						 <span style="color:darkorange">TO BE AVOIDED!</span> 
 					</p>
 					<pre><code class="html" data-line-numbers="1-4">&lt;a onMouseOver="alert('you rolled over me');" 
     href="file.html" target="_blank">
@@ -100,7 +149,7 @@ console.log(txt);
 				<section>
 					<h2>External Javascript</h2>
 					<p>
-						 <span style="color:orange">Unobtrusive. Code reusability. Code maintenance.</span> <br>Organize code in external files.
+						 <span style="color:darkorange">Unobtrusive.</span> <span style="color:#0081a1">Code reusability. Code maintenance.</span> <br>Organize code in external files.
 					</p> 
 					<p>
 						Add Javascript at the end of BODY element using the &lt;script> element
@@ -128,11 +177,22 @@ console.log(txt);
   <button type="button" class="btn btn-outline-success" onclick="window.open('https://pastebin.com/embed_iframe/wArUB0Yp', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)">Get code in pastebin</button>    
         </section>
 -->
-
+        
+   
+				<section>
+					<h2>Study Tips</h2>
+					<ol>
+						<li><a href="https://www.notion.so/ellen10049/Learning-course-content-72b51f6c844e42df9e92f73b71bc374b" target="_blank">Learning course content</a></li>
+            <li><a href="https://www.notion.so/ellen10049/Learning-for-mastery-not-grades-5d0bd4fc3a914e36b73e7685e3d1ec53" target="_blank">Learning for mastery, not grades</a></li>
+            <li><a href="https://www.notion.so/ellen10049/How-do-I-get-an-A-in-any-course-be6f9035862f48139b2fdc417922a77c" target="_blank">How do I get an A in (any) course?</a></li>
+            <li><a href="https://www.notion.so/Reading-a-Textbook-for-True-Understanding-Cornell-College-c112295a7b094347b42b56498cadb70d" target="_blank">Reading a Textbook for True Understanding</a></li>
+					</ol>				
+				</section>  
  
-        <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+        <section data-transition="slide" data-background="#003767" data-background-transition="zoom">
         <h2>Prepare for next class</h2>
-        <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">Study the assigned material and make notes.</span><br> <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">Complete Worksheet 1.</span><br>Post your questions on the <a href="https://github.com/ebajcar/web10199_worksheets/discussions" target="_blank">Discussion board</a><br>or bring to next class. <br>&mdash;
+        <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">Study the assigned material and make notes.</span><br> <span style="color:#00b2ce">Complete Worksheet 1.</span><br>&mdash;<br>Post your questions on the <a href="https://github.com/ebajcar/web10199_worksheets/discussions" target="_blank">Discussion board</a><br>or bring to next class. Answer other students' questions. Start a conversation.
+        <br>&mdash;
         </section> 
         
        
