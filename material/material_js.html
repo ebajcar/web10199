@@ -191,7 +191,7 @@ alternative pinkr.co online project editor
 <pre class="language-html"><code>
 &lt;script src="relative/path/local.js">&lt;/script>
 &lt;!-- 
-  NOTE: this option cannot be combined with option 1
+  NOTE: this option cannot be combined with previous option 
   when using src= attribute, there is NO CODE between 
   the opening and closing &lt;script> tags
 --></code></pre> 
@@ -279,6 +279,12 @@ elem.addEventListener("click", theFunction, false);</code></pre>
 </figure>	
 						   
 		<blockquote class="w3-green w3-center">By externally linking your CSS and Javascript files, you are allowing the browser to cache them in memory for each user. This improves the performance from the user's perspective by minimizing HTTP requests and downloading, hence speeding up the load time.</blockquote> 
+    
+    <p>To ensure that the Javascript processing is done as soon as the Document Object Model (DOM) is ready to be access, use the event listener:</p>
+<figure>		
+<pre class="language-js"><code>document.addEventListener( "DOMContentLoaded", initFunction, false )</code></pre>			
+	<figcaption class="figure-caption">Accelerating initialization</figcaption>
+</figure    
 	<hr>
 </section>
 
@@ -959,7 +965,7 @@ var firstName;  // undefined</code></pre>
   
   <pre class="language-js"><code>
   let favColor = "blue";
-  console.log(`My favourite color is ${favColor}.1);
+  console.log(`My favourite color is ${favColor}.1`);
   </code></pre>
   	
   <h5>Creating strings</h5>
