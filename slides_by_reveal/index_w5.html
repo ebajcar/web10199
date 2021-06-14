@@ -49,7 +49,8 @@
 				</section>        
 
         <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-          <h2>Learning objectives</h2>
+          <h2>What's on the Midterm?</h2>
+          <h5>Learning objectives</h5>
           <ul style="font-size:0.7em">
             <li>(1) Apply dynamically-typed variables with implicit type conversion&hellip; using JS.  </li>
             <li>(2) Apply JS functions and control structures&hellip; </li>
@@ -59,33 +60,163 @@
           </ul>
         </section> 
 
-       
+        <section data-transition="slide" data-background="black" data-background-transition="zoom">
+          <h2>What's on the Midterm?</h2>
+          <h5>Format and Content</h5>
+          <ul style="font-size:0.7em">
+            <li><a href="https://ebajcar.github.io/web10199_worksheets/summary.html" target="_blank">Review (Worksheets > Preparing for Midterm)</a></li>
+            <li>Covers material on Worksheets 1, 2, 3, and 4.</li>
+            <li>Covers concepts and skills related to the learning objectives (see previous slide).</li>
+            <li>Written online, during regular class in Week 6 (June 21-25).</li>
+            <li>Length max. 90 minutes, SLATE Quiz with Respondus lockdown.</li>
+            <li>You will be presented with one question at a time.  You will not be able to go back.</li>
+            <li>Question format: true/false, multiple choice, multi-select, fill-in-blanks, short coding questions.</li>
+            <li>Majority of questions come from the material asssigned.</li>
+          </ul>
+        </section>        
+   
+				<section data-background="game_rps.png">
+				</section>  
+        
 				<section data-background="rpsls_userHelp.png">
 				</section> 
         
         
-				<section>
+				<section  data-background="rpsls_userHelp.png">
 					
- 					<pre><code class="js" data-line-numbers="1-14">let x = 7;
-// end</code></pre>  
+ 					<pre><code class="js" data-line-numbers="1-20">let whatCanThisChoiceBeat = { 
+  rock: [["crushes", "scissors"], 
+         ["crushes", "lizard"]],
+  paper: [["covers", "rock"], 
+          ["disproves", "spock"]],
+  scissors: [["cuts","paper"], 
+             ["decapitates", "lizard"]],
+  lizard: [["poisons", "spock"], 
+           ["eats", "paper"]],
+  spock: [["vaporizes", "rock"], 
+          ["smashes", "scissors"]]
+}</code></pre>  
 					<div style="position: absolute; width: 25%; right: -100px; top: 0px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-            <p><strong>Arrays and Objects</strong></p>
+            <p><strong>whatCanThisChoiceBeat?</strong></p>
              <ul style="font-size:0.8em;">
-              <li>Arrays</li>
-              <li>Objects</li>
-              <li>DOM objects</li>
+              <li>rock crushes scissors</li>
+              <li>rock crushes lizard</li>
+              <li>...</li>
             </ul>     
             <br>            
-            <p><strong>Control structures</strong></p>
+            <p><strong>Custom object</strong></p>
             <ul style="font-size:0.8em;">
-              <li>for loops</li>
-              <li><code>for...in</code> loop</li>
+              <li>Each property represents an available choice.</li>
+              <li>2D Array used to hold the action (relation) and the other choice it beats.</li>   
             </ul>
+            <p><strong>Still can be used for determining a winner.</strong></p>
+            <p><strong style="color:orange">Extends usage to creating user help.</strong></p>
+					</div>      
+				</section>  
+        
+
+       
+				<section  data-background="rpsls_userHelp.png">
+					
+ 					<pre><code class="js" data-line-numbers="1-20">let property; 
+for ( property in whatCanThisChoiceBeat ) {
+  console.log( 
+      property + " " + 
+      whatCanThisChoiceBeat[property][0][0] " " + 
+      whatCanThisChoiceBeat[property][0][1] );
+  console.log( "OR " + 
+      property + " " + 
+      whatCanThisChoiceBeat[property][1][0] + " " + 
+      whatCanThisChoiceBeat[property][1][1] );
+}</code></pre>  
+					<div style="position: absolute; width: 25%; right: -100px; top: 0px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+            <p><strong>Use <code>for...in</code> loop to traverse objects.</strong></p>
+             <ul style="font-size:0.8em;">
+              <li><code>for (variableName in objectOfChoice) {}</code></li>
+              <li><code>variableName</code> takes on the next property value on each loop.</li>
+              <li>Loop terminates when it runs out of properties.</li>
+            </ul>     
+            <br>  
+            <p><strong style="color:orange">Check out the output in the console. Note the three dimensions.</strong></p>            
+
+					</div>      
+				</section>  
+        
+
+      
+				<section  data-background="rpsls_userHelp.png">
+					
+ 					<pre><code  style="font-size:0.8em;" class="js" data-line-numbers="1-20">let table =
+  document.getElementsByTagName("main")[0].appendChild( 
+                                     document.createElement("table"));
+let row = table.appendChild(document.createElement("tr"));
+row.appendChild(document.createElement("td")).innerText = "➦ beats ➦";
+
+// Object.keys() returns an array of keys (strings)
+let choices = Object.keys(whatCanThisChoiceBeat);
+let len = choices.length;
+for (let i = 0; i &lt; len; i++) {
+  let currentTD = row.appendChild(document.createElement("td"));
+  currentTD.innerText = choices[i];
+}</code></pre>  
+					<div style="position: absolute; width: 25%; right: -150px; top: 0px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+            <p><strong>Create table structure using DOM methods.</strong></p>
+             <ul style="font-size:0.8em;">
+              <li><code>document.createElement()</code> is evaluated first.</li>
+              <li>then get a handle to the object you want to attach the new element.</li>
+              <li><code>parent.appendChild(newEl)</code> attaches the new element.</li>
+            </ul>     
+            <br>            
+             <p><strong style="color:orange">Use Object.keys() to create an array of properties.</strong></p>
+            <ul style="font-size:0.8em;">
+              <li>this would replace the original choices variable (no need to duplicate).</li>
+            </ul>           
 					</div>      
 				</section>  
         
 
 
+      
+				<section  data-background="rpsls_userHelp.png">
+					
+ 					<pre><code  style="font-size:0.7em;"  class="js" data-line-numbers="1-20">let i = 0;
+for ( property in whatCanThisChoiceBeat ) {
+  let currentTR = table.appendChild(document.createElement("tr"));
+  let currentTD = currentTR.appendChild(document.createElement("td"));
+  currentTD.innerText = choices[i]; 
+  i++;
+  for (let j = 0; j &lt; len; j++) {
+    let currentTD = currentTR.appendChild(document.createElement("td"));
+    const whichColumn = (el) => el == whatCanThisChoiceBeat[property][0][1];
+    if ( choices.findIndex(whichColumn) == j)
+      currentTD.innerText = whatCanThisChoiceBeat[property][0][0];
+    const whichColumn2 = (el) => el == whatCanThisChoiceBeat[property][1][1];
+    if ( choices.findIndex(whichColumn2) == j)
+      currentTD.innerText = whatCanThisChoiceBeat[property][1][0];    
+  }
+}</code></pre>  
+					<div style="position: absolute; width: 25%; right: -100px; top: 0px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+            <p><strong>Populate table.</strong></p>
+             <ul style="font-size:0.6em;">
+             <li>Populate first column and first row with properties (same order).
+              <li>if <code>whatCanThisChoiceBeat[property][0][1]</code> is the same as <code>indexOf</code> choices, then display whatCanThisChoiceBeat[property][0][0]</li>
+            </ul>     
+            <br>            
+            <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank"><strong>Arrow functions</strong></a></p>
+            <ul style="font-size:0.7em;">
+              <li>An arrow function expression is a compact alternative to a traditional function expression, but is limited and can't be used in all situations.</li>
+            </ul>
+					</div>      
+				</section>  
+        
+
+				<section data-background="game_ttt.png">
+          <p style="background-color: white; color: orange">Continue working on the tictactoe game.<br>This is part of Assignment 4 which will be due at the beginning of the reading week.<p>
+				</section>  
+        
+ 				<section data-background="game_craps.png">
+          <p style="background-color: white; color: orange">Continue working on the Casino craps game.<br>This is part of Assignment 4 which will be due at the beginning of the reading week.<p>              
+				</section>         
  
 <!-- last slide -->
         <section data-transition="slide" data-background="#003767" data-background-transition="zoom">
