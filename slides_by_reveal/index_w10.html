@@ -37,12 +37,14 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-      
-				<section data-background="week10_notes1.png">
-				</section> 
+            
+            
+ <!-- slide 1 -->        
+        <section data-background="week10_notes1.png">
+        </section> 
         
 
-
+ <!-- slide 2 --> 
         <section data-transition="slide" data-background="#222" data-background-transition="zoom">
           <h2>Learning objectives</h2>
           <ul style="font-size:0.6em">
@@ -56,79 +58,41 @@
           </ul>
         </section> 
         
-       
- 				<section>
-					<h2>Dataflow diagram</h2>
-          <img src="dataflow2020.png" alt="client-server dataflow in web environment">
-				</section>     
-        
-
-
-        
- <!-- language components -->       
-
- 				<section>
-					<h2>PHP language</h2>
-					<ol>
-						<li><h5 style="color: green;margin-bottom:0;">PHP variables</h5>
-            <p style="font-size:0.5em;margin-top:0;">identifiers, single and double quotes, curly braces, constants</p>
-            </li>
- 						<li><h5 style="color: green;margin-bottom:0;">PHP data types</h5>
-            <p style="font-size:0.5em;margin-top:0;">integer, float, string, Boolean, NULL, Array, Object, Resource</p>
-            </li>           
-						<li><h5 style="color: green;margin-bottom:0;">Data structures</h5> 
-            <p style="font-size:0.5em;margin-top:0;">arrays, strings, Objects, Classes</p></li>
-						<li><h5 style="color: green;">PHP operators</h5></li>
-						<li><h5 style="color: green;margin-bottom:0;">Control structures</h5>
-            <p style="font-size:0.5em;margin-top:0;">simple statements, conditional statements, loops, require/include</p></li>
-					</ol>    
-					<div style="position: absolute; width: 25%; right: -100px; top: 140px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">           
-            <h4 style="color: orange;">Predefined variables</h4>
-            <ul style="font-size:0.8em;">
-              <li>$GLOBALS</li>
-              <li>$_SERVER</li>
-              <li>$_GET</li>
-              <li>$_POST</li>
-              <li>$_FILES</li>
-              <li>$_REQUEST</li>
-              <li>$_SESSION</li>
-            </ul>
-					</div>            
-				</section>        
-        
-
  
-         <section data-transition="slide" data-background="black" data-background-transition="zoom">
-          <h2>Learning PHP language</h2>
-          <h5>Examine our games written in Javascript</h5>
-          <table style="font-size:0.7em">
-            <tr>
-              <th><a href="https://www.w3schools.com/code/tryit.asp?filename=GS6D6Z91B60L" target="_blank">Casino Craps</a></th>
-              <td>Modified version</td>
-            </tr>
-            <tr>
-              <th><a href="https://www.w3schools.com/code/tryit.asp?filename=GS6FI3N1406A" target="_blank">Rock Paper Scissors</a></th>
-              <td>Modified &mdash; both players random selections, no user input </td>
-            </tr>            
-            <tr>
-              <th><a href="https://www.w3schools.com/code/tryit.asp?filename=GS6F8PUWURQ9" target="_blank">Rock Paper Scissors Lizard Spock</a></th>
-              <td>Modified &mdash; both players random selections, no user input </td>
-            </tr>
-            <tr>
-              <th><a href=" https://www.w3schools.com/code/tryit.asp?filename=GS6HWNY4C55K" target="_blank">Tic Tac Toe</a></th>
-              <td>Modified version</td>
-            </tr>              
-          </table>
-          <p style="font-size:0.6em;font-style:italic;color:blue;">Use  <a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_intro" target="_blank">w3school's PHP Tryit Editor</a> to start thinking how to rewrite the code in PHP. Complete Worksheet 6 to study the PHP language.</p>
-        </section>         
+ <!-- slide 3 -->  
+        <section>
+            <h2>Dataflow diagram</h2>
+            <img src="dataflow2020.png" alt="client-server dataflow in web environment">
+        </section>     
         
-       
-				<section data-background="cc_compare_js_php.png">
-				</section>         
+
+        
+ <!-- slide 4 -->       
+        <section>
+            <h2>Databases</h2>
+            <ul>
+                <li><h5 style="color: green;margin-bottom:0;">DBMS</h5>
+                    <p style="font-size:0.5em;margin-top:0;">database management system</p>
+                </li>
+            </ul>    
+        </section>        
+        
+
+ <!-- slide 5 --> 
+        <section>
+            <h2>MySQL DBMS</h2>
+            <ul>
+                <li><h5 style="color: green;margin-bottom:0;">What is MySQL?</h5>
+                <p style="font-size:0.5em;margin-top:0;">phpmyadmin tool</p>
+            </li>
+            </ul>    
+        </section>        
+         
+      
  
   
  
-<!-- last slide -->
+<!-- slide 6 -->
         <section data-transition="slide" data-background="#003767" data-background-transition="zoom">
           <h2>Prepare for next class</h2>
           <h3 style="color:orange">Week 11</h3>
@@ -137,10 +101,11 @@
         </section>       
         
         
-             
- 				<section>
-					<h2>...</h2>			
-				</section>         
+<!-- last slide -->             
+        <section>
+            <h2>...</h2>
+            <p style="font-size:0.3em;margin-top:0;color:teal">SYST10199 Web Development<br>@2021 Sheridan College</p>                    
+        </section>         
         
 			</div>
 		</div>
@@ -153,6 +118,7 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				hash: true,
+                slideNumber: 'c/t',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
