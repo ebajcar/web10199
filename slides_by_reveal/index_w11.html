@@ -63,11 +63,10 @@
         <section>
             <h2>Object-oriented PHP</h2>
             <ul>
-                <li><h5 style="color: green;margin-bottom:0;">Custom objects and classes</h5>
-                    <p style="font-size:0.5em;margin-top:0;">review</p>
-                </li>
-                <li><h5 style="color: green;margin-bottom:0;">Predefined objects and classes</h5>
-                    <p style="font-size:0.5em;margin-top:0;">PDO, Exception,...</p>
+                <li><h5 style="color: green;margin-bottom:0;">PHP Classes</h5>
+                    <p style="font-size:0.5em;margin-top:0;">Constructor visibility: public, protected, private; object inheritance <br><code>__construct()</code></p>
+                    <p style="font-size:0.5em;margin-top:0;">Non-static properties may be accessed by using <code style="color:black;background-color:yellow">&nbsp;-> </code>&nbsp;object operator: <br><code>$this->propertyName</code></p>
+                    <p style="font-size:0.5em;margin-top:0;">Static properties are accessed by using the <code style="color:black;background-color:yellow">&nbsp;:: </code>&nbsp;  double colon: <br><code>self::$property</code></p>
                 </li>                
             </ul>    
         </section>    
@@ -79,37 +78,87 @@
         <section>
             <h2>Data-aware Class</h2>
             <ul>
-                <li>a class connects to a database</li>
-                <li>the class becomes the <span style="color: green;">data source</span></li>
-                <li>the form (business object) that uses the data becomes the <span style="color: green;">data consumer</span></li>
-            </ul>    
+                <li style="font-size:0.8em;">a class connects to a database</li>
+                <li style="font-size:0.8em;">the class becomes the <span style="color: green;">data source</span></li>
+                <li style="font-size:0.8em;">the form (business object) that uses the data becomes the <span style="color: green;">data consumer</span></li>
+                
+            </ul>  
+            <p style="font-size:0.9em;"><a href="https://www.php.net/manual/en/book.pdo.php" target="_blank">PHP Manual - PHP Data Objects</a> </p>            
         </section>  
         
         
         
  <!-- slide 4 -->       
         <section>
-            <h2>PDO</h2>
+            <h3>PHP Data Objects (PDO)</h3>
             <ul>
-                <li><h5 style="color: green;margin-bottom:0;">Why use PDO?</h5>
-                    <p style="font-size:0.5em;margin-top:0;">MySQL vs. other DBMS</p>
+                <li style="font-size:0.7em;">Connections are established by creating instances of the PDO base class.</li>
+                <li style="font-size:0.7em;"> It doesn't matter which driver you want to use; you always use the PDO class name.</li>
+                <li style="font-size:0.7em;"> The constructor accepts parameters for specifying the database source (known as the DSN) and optionally for the username and password (if any).</li>
+                                <li><h5 style="color: green;margin-bottom:0;">Why use PDO?  &mdash; PDO vs. MySQLi</h5>
+                    <p style="font-size:0.5em;margin-top:0;">In this course, we use PDO only!</p>
                 </li>
+                <li style="font-size:0.7em;"><a href="https://www.php.net/manual/en/book.pdo.php" target="_blank">PHP Manual</a> | <a href="https://www.w3schools.com/php/php_mysql_connect.asp" target="_blank">w3schools tutorials</a> </li>
             </ul>    
         </section>        
+ 
+
+         
+ <!-- slide 4 -->       
+        <section>
+            <h2>The PDO Class</h2>
+            <ul>
+                <li style="font-size:0.7em;"><a href="https://www.php.net/manual/en/pdo.prepare.php" target="_blank">PDO::prepare</a> — Prepares a statement for execution and returns a statement object</li>
+                <li style="font-size:0.7em;"><a href="https://www.php.net/manual/en/class.pdostatement.php" target="_blank">PDOStatement</a> — Represents a prepared statement and, after the statement is executed, an associated result set.</li>
+                <li style="font-size:0.7em;"><a href="https://www.php.net/manual/en/pdostatement.execute.php" target="_blank">PDOStatement::execute</a> — Executes a prepared statement</li>
+                <li style="font-size:0.7em;"><a href="https://www.php.net/manual/en/pdostatement.fetch.php" target="_blank">PDOStatement::fetch</a> — Fetches the next row from a result set</li>
+                <li style="font-size:0.7em;"><a href="https://www.php.net/manual/en/pdostatement.fetchall.php" target="_blank">PDOStatement::fetchAll</a> — Returns an array containing all of the result set rows</li>
+                
+                <li style="font-size:0.7em;"><a href="https://www.php.net/manual/en/class.pdoexception.php" target="_blank">PDOException</a> — Represents an error raised by PDO. You should not throw a PDOException from your own code.</li>      
+            </ul>    
+        </section>  
+
+        
+        
+ <!-- slide 4 -->       
+        <section>
+            <h2>General process</h2>
+            <ol>
+                <li>Design and construct user interface - HTML form.</li>
+                <li>Design, build and maintain a database.</li>
+                <li>Connect to data file.</li>
+                <li>Send an SQL query.</li>
+                <li>Process retrieved data.</li>
+                <li>Close connection to data file.</li>
+            </ol>    
+        </section>  
         
 
  <!-- slide 5 --> 
         <section>
             <h2>Registration form</h2>
             <ul>
-                <li style="color: green;margin-bottom:0;">create Members.class</li>
+                <li style="color: green;margin-bottom:0;">create Member.class</li>
                 <li style="color: green;margin-bottom:0;">create table in the database</li>
                 <li style="color: green;margin-bottom:0;">create php code to allow the player to complete and submit the form</li>
+                <li style="font-size:0.6em;">Use <code>print_r()</code> or <code>var_dump()</code> to trace values of data structures as you code &mdash; <span style="color: gray;">same concept as using <code>console.log()</code> in Javascript</span> &mdash; and <code>error_log()</code> to customize and redirect error messages.</li>
+                <li>Work through Worksheet 10</li>
             </ul>    
         </section>        
          
       
- 
+
+ <!-- slide 5 --> 
+        <section>
+            <h2>Login form</h2>
+            <ul>
+                <li style="color: green;margin-bottom:0;">Use Member.class</li>
+                <li style="color: green;margin-bottom:0;">Use table in the database</li>
+                <li style="color: green;margin-bottom:0;">create php code to allow the player to complete and submit the form</li>
+                <li style="font-size:0.6em;">Use <code>print_r()</code> or <code>var_dump()</code> to trace values of data structures as you code &mdash; <span style="color: gray;">same concept as using <code>console.log()</code> in Javascript</span> &mdash; and <code>error_log()</code> to customize and redirect error messages.</li>
+                <li>Work through Worksheet 10</li>
+            </ul>    
+        </section>   
   
  
 <!-- slide 6 -->
