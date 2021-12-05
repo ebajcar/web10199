@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+<title> SYST10199 learn JS </title>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css"/> 
+<link rel="stylesheet" href="../css/prism.css"  />
+<style>
+dl, ol {
+  margin-bottom: 16px;
+}
+h4 {
+  margin-top: 16px;
+}
+.ordered-list {
+  list-style-type: decimal;
+}
+.text-danger {
+  color: red;
+}
+.bg-dark-gray  {
+  background-color: #333940;
+}
+.active {
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+  <nav id="navTop" class="w-full z-30 top-0 text-white bg-dark-gray">
+    <div class="w-full container max-w-screen-lg mx-auto flex flex-wrap sm:flex-nowrap items-center justify-between mt-0 py-2">
+      <div class="md:pl-4">
+        <a class="text-white hover:text-white no-underline hover:no-underline
+        font-bold text-2xl lg:text-4xl rounded-lg hover:bg-nwoods-secondary " href="../">
+          <h1 class="mb-0 p-1 ">SYST10199</h1>
+        </a>
+      </div>
+      <button id="topnavButton" class="rounded-lg sm:hidden focus:outline-none focus:ring" aria-label="Navigation">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path id="topnavOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path id="topnavClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>      
+      <div id="topnavList" class="hidden sm:block items-center w-auto mt-0 text-white p-0 z-20">
+        <ul class="list-reset list-none font-semibold flex justify-end flex-wrap sm:flex-nowrap items-center px-0 pb-0">
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnweb/index.html">Web programming</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnjs/index.html">Learn JS</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnphp/index.html">Learn PHP</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="#">SLATE</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="#">Piazza Q&amp;A</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-b border-gray-600 opacity-50 my-0 py-0" />
+  </nav>
+    
+  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+      
+    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+      <div class="flex-shrink-0 px-8 py-4">
+        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>   
+        </button>
+      </div>   
+      <nav id="navList" class="min-h-screen hidden md:block sidebar-nav flex-grow px-1 lg:px-4 pb-4 md:pb-0 md:overflow-y-auto break-words">
+
+          <a href="index.html">PHP language</a>
+          <a href="grammar.html">Grammar</a>
+          <a href="data_types.html">Data types</a>
+          <a href="variables.html">Variables</a>
+          <a href="operators.html">Operators</a>
+          <a href="control_flow.html">Programs and flow control</a>      
+          <a href="collections.html">Data structures</a>     
+          <a href="functions.html">Functions</a>
+          <a href="sessions.html">Sessions</a>
+          <a href="forms.html">Forms</a>
+          <a href="mysql.html">MySQL DBMS</a>
+          <a href="sql.html">SQL database language</a>
+          <a href="objects.html">Object-oriented PHP</a>
+
+      </nav>
+    </div>  
+        
+    <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+        <h1>Sessions</h1>
+
+		 
+<!-- <div id="page80">   8. PHP Sessions           9.1. Using sessions on the server-->
+<article id="page80">
+	<h2>PHP Sessions</h2>
+  
+<section id="page81">  
+	<h3>Using sessions on the server</h3>
+	<p>Read and practise <a href="http://www.w3schools.com/php/php_sessions.asp" target="_blank">w3schools PHP 5 Sessions</a> to familiarize yourself with sessions.</p>	 
+	<p>You can store information about users, such as their email, name, phone numer, and other details, and automatically fill in that information wherever it is needed. You store this information in a session, hidden from the user, until you use it. You use session variables as you would any other variables.  Sessions are store in an array called <samp>$_SESSION</samp>. You store values just as you would with a named array in PHP. See <samp>session_start()</samp>, <samp>session_id</samp>, <samp>session_name</samp>, <samp>session_destroy</samp></p>	
+<pre class="brush: js; highlight: [2,3,4,5]; first-line: 1" title="Create session variables">
+&lt;?php
+session_start();
+$_SESSION['appStarted'] = true;
+$_SESSION['accessTime'] = date("M/d/Y g:i:sa");
+echo "The page was accessed at: " . $_SESSION['accessTime'];
+?></pre>
+
+<pre class="brush: js; highlight: [2,3,4,5]; first-line: 1" title="Check if a session variable is set before using it">
+&lt;?php
+session_start();
+if (!isset($_SESSION['accessTime'])) {
+	die(header("Location: page1.php"));
+} 
+?></pre>
+	<p>Add <samp>session_start()</samp> function at the <b>beginning of every PHP file</b> where you want to access session variables. Sessions close at the end of the PHP program, which means you don't need to do anything to close sessions. For special circumstances, see <samp>session_write_close()</samp> function on php.net.</p>
+	
+     <h5>Use session to pass data</h5>
+
+	<p>The key to using sessions is the <samp>session_start()</samp> function.  You call the function on every page and subsequently have access to all the items in the <samp>$_SESSION</samp> array. The function starts a new session if need be AND continues an existing session where appropriate.</p>
+
+	<p>A good resource to watch: <a href="http://www.lynda.com/PHP-tutorials/PHP-Web-Designers/146234-2.html?org=sheridanc.ca" target="_blank">PHP for Web Designers with David Powers (lynda.com video)</a>.</p>	
+
+	</section>
+
+
+<!-- 9.1. Example 1 -->
+<section id="page82">
+	<h3>Session examples</h3>
+  <h5>Example 1</h5>
+	<p>In this example, we will work with several files. Let's start with a simple session test program:</p>					
+<pre class="brush: js; highlight: [0]; first-line: 1" title="File: sessionTest.php">
+&lt;?php
+session_start();
+if (!isset($_SESSION["test"])) {
+    echo "&lt;p>No session found - starting a session now.&lt;/p>";
+    $_SESSION["test"] = "welcome back";   
+} else {
+    echo "Session found " . $_SESSION["test"];
+    echo "&lt;p>Sessions are working correctly.&lt;/p>";   
+}
+if (isset($_GET["cancel"])) {
+    echo "clearing session no";
+         session_destroy();
+}
+echo "&lt;p>&lt;a href=\"sessionTest.php?random=\".rand(1,10000).&cancel=no\">Reload this page&lt;/a>&lt;/p>";
+echo "&lt;p>&lt;a href=\"sessionTest.php?cancel=yes\">Destroy session&lt;/a>&lt;/p>";
+?></pre>
+
+		<p>Upload and test the program on the server. Note what happens if you press the "Reload this page" link. Reload the page several times. Then press the "Destroy session" and again reload the page several times. Take note of the observations you make.</p>	
+	<hr>
+
+
+<!-- 9.3. Example 2 -->
+
+	<h5>Example 2</h5>
+	<p>In the second program </p>	
+<pre class="brush: js; highlight: [0]; first-line: 1" title="File: message.php">
+&lt;?php
+session_start();
+?>
+&lt;html>
+&lt;body>
+&lt;?php
+//retrieve session data
+echo "Pageviews=". $_SESSION['views'];
+?>
+&lt;!-- other html stuff can go here -->
+&lt;?php
+if(isset($_SESSION['views']))
+    $_SESSION['views']=$_SESSION['views']+1;
+else
+    $_SESSION['views']=1;
+echo '&lt;h3>Same page&lt;/h3>';
+echo "Views=". $_SESSION['views'];  
+if (isset($_GET["cancel"])) {
+    echo "clearing session no";
+         session_destroy();
+}
+if (isset($_SESSION["width"])) {
+    echo "&lt;p>The screen width is " . $_SESSION['width'] . "&lt;/p>";
+}
+?>
+&lt;/body>
+&lt;/html></pre>		
+	
+		<p>Upload and test the program on the server. </p>	
+	<hr>
+
+
+<!-- 9.4. Example 3 -->
+
+	<h5>Example 3</h5>
+	<p>The third program consists of two files, an html file that contains javascript and php file that accesses the super-global variables.</p>					
+<pre class="brush: js; highlight: [0]; first-line: 1" title="File: getStuff.html">
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+&lt;title>TODO supply a title&lt;/title>
+&lt;meta charset="UTF-8">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+&lt;/head>
+&lt;body>
+  &lt;p>Passing values from JS to PHP&lt;p> 
+&lt;script type="text/javascript">
+width = screen.width;
+height = screen.height;
+if (width > 0 &amp;&amp; height >0) {
+  window.location.href = 
+    "getStuff.php?width=" + width + "&amp;height=" + height;
+} else 
+  exit();
+&lt;/script>       
+&lt;/body>
+&lt;/html></pre>
+
+<pre class="brush: js; highlight: [0]; first-line: 1" title="File: getStuff.php">
+&lt;?php
+session_start();
+if (isset($_GET["width"])) {
+  $_SESSION['width'] = $_GET['width'];
+  $width = $_GET['width'];
+}
+if (isset($_GET["height"])) {
+  $_SESSION['height'] = $_GET['height'];
+  $height = $_GET['height'];
+}
+echo "&lt;h1>Screen Resolution:&lt;/h1>";
+echo "Width : ".$_GET['width']."&lt;br />";
+echo "Height : ".$_GET['height']."&lt;br />";
+?></pre>
+		<p>Upload both files and test by displaying the html file.</p>
+		<p>After running this file, go back and reload the pages from the previous programs.  Try them in different order and note the results</p> 
+	<hr>
+</section>
+</article>
+
+	
+
+    </section>
+      
+  </main>
+  
+
+  
+  <footer class="bg-dark-gray text-white"> 
+     <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
+      <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10109 Web Programming | Sheridan College</a>
+      </p>     
+    </section> 
+    <div class="container max-w-screen-lg mx-auto  px-8">   
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+          <ul class="text-sm font-medium pb-14 sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-y-10">
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</footer> 
+ 
+</body>
+
+<script>
+  // topnav
+  var topButton = document.getElementById("topnavButton");
+  var topnavList = document.getElementById("topnavList");
+  topButton.addEventListener("click", function() {
+    this.classList.toggle("active");
+    topnavList.classList.toggle("hidden");
+    document.getElementById("topnavOpen").classList.toggle("hidden");
+    document.getElementById("topnavClosed").classList.toggle("hidden");
+  });
+</script>
+<script src="../scripts/prism.js"></script>
+</body>
+</html>

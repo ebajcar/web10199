@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+<title> SYST10199 home page </title>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css"/> 
+<link rel="stylesheet" href="css/prism.css"  />
+<style>
+/* linted with https://stylelint.io/demo */
+dl,
+ol {
+  margin-bottom: 16px;
+}
+
+h4 {
+  margin-top: 16px;
+}
+
+.ordered-list {
+  list-style-type: decimal;
+}
+
+.text-danger {
+  color: red;
+}
+
+.bg-dark-gray {
+  background-color: #333940;
+}
+
+.sher-teal {
+  color: #00b2ce;
+}
+
+</style>
+</head>
+
+<body>
+  <nav id="navTop" class="w-full z-30 top-0 text-white bg-dark-gray">
+    <div class="w-full container max-w-screen-lg mx-auto flex flex-wrap sm:flex-nowrap items-center justify-between mt-0 py-2">
+      <div class="md:pl-4">
+        <a class="text-white hover:text-white no-underline hover:no-underline
+        font-bold text-2xl lg:text-4xl rounded-lg hover:bg-nwoods-secondary " href="#">
+          <h1 class="mb-0 p-1 ">SYST10199</h1>
+        </a>
+      </div>
+      <button id="topnavButton" class="rounded-lg sm:hidden focus:outline-none focus:ring" aria-label="Navigation">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path id="topnavOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path id="topnavClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>      
+      <div id="topnavList" class="hidden sm:block items-center w-auto mt-0 text-white p-0 z-20">
+        <ul class="list-reset list-none font-semibold flex justify-end flex-wrap sm:flex-nowrap items-center px-0 pb-0">
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="index.html">Home</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="learnweb/index.html">Web programming</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="learnjs/index.html">Learn JS</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="learnphp/index.html">Learn PHP</a></li>
+          
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="#">Piazza Q&amp;A</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-b border-gray-600 opacity-50 my-0 py-0" />
+  </nav>
+    
+  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+      
+    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+      <div class="flex-shrink-0 px-8 py-4">
+        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>   
+        </button>
+      </div>   
+      <nav id="navList" class="min-h-screen hidden md:block sidebar-nav flex-grow px-1 lg:px-4 pb-4 md:pb-0 md:overflow-y-auto break-words">
+          <a href="#" class="bg-gray-100 text-gray-900">Start here</a>
+
+
+
+<button class="bg-dark-gray sher-teal active:bg-purple-600 font-bold uppercase text-base px-8 py-3 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal(&quot;modal-plan&quot;)">Topical Outline</button>
+
+<button class="bg-dark-gray sher-teal active:bg-purple-600 font-bold uppercase text-base px-8 py-3 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal(&quot;modal-example-large&quot;)">Learning Outcomes</button>
+      </nav>
+ 
+ 
+    </div>  
+    
+       
+    <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+
+        <!-- Announcements -->
+        <section>
+            <header class="flex items-center justify-between mt-16 mb-8">
+                <h3 class="text-3xl tracking-tight text-gray-900">Latest Announcements</h3>
+                <a href="blog.html" class="font-medium text-gray-900">Previous</a>
+            </header>
+            <hr style="margin:20px 0;">
+            <ul class="bg-gray-50 sher-teal rounded-3xl p-2 sm:p-5 xl:p-6" style="list-style:none">
+                <li>
+                    <article  class="grid md:grid-cols-8 xl:grid-cols-9 items-start relative rounded-xl p-3 sm:p-5 xl:p-6 overflow-hidden hover:bg-white">
+                    <h3 class="font-semibold sher-teal md:col-start-3 md:col-span-6 xl:col-start-3 xl:col-span-7 mb-1 ml-9 md:ml-0">Welcome! </h3>
+                    <time dateTime="2022-01-10T19:00:00.000Z" class="md:col-start-1 md:col-span-2 row-start-1 md:row-end-3 flex items-center font-medium mb-1 md:mb-0"><svg viewBox="0 0 12 12" class="w-3 h-3 mr-6 overflow-visible text-cyan-400"><circle cx="6" cy="6" r="6" fill="currentColor"></circle><circle cx="6" cy="6" r="11" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M 6 18 V 500" fill="none" stroke-width="2" stroke="currentColor" class="text-gray-200"></path></svg>Jan 10, 2022</time>
+                    
+                    <div  class="md:col-start-3 md:col-span-6 xl:col-span-7 ml-9 md:ml-0 text-black">
+                            <div class="prose max-w-none">
+                                <p>Preparing for the first class...</p>
+                                <h4>Class activities</h4>
+                                <p> (This week's slides link will be available here) </p>
+                                <ol>
+                                  <li>Familiarizing yourself with course resources</li>
+                                  <li>Set up environment and tools </li>
+                                  <li>Start studying. Complete Worksheet 1 for next class. ...(Worksheet 1 link will be available here) </li>
+                                </ol>
+                            </div>
+                        </div>
+                     </article>
+                </li>
+           
+                <li hidden>
+                    <article class="grid md:grid-cols-8 xl:grid-cols-9 items-start relative rounded-xl p-3 sm:p-5 xl:p-6 overflow-hidden hover:bg-white">
+                        <h3 class="font-semibold text-gray-900 md:col-start-3 md:col-span-6 xl:col-start-3 xl:col-span-7 mb-1 ml-9 md:ml-0">Preparing for the semester</h3>
+                        <time dateTime="2021-11-05T19:00:00.000Z" class="md:col-start-1 md:col-span-2 row-start-1 md:row-end-3 flex items-center font-medium mb-1 md:mb-0"><svg viewBox="0 0 12 12" class="w-3 h-3 mr-6 overflow-visible text-gray-300"><circle cx="6" cy="6" r="6" fill="currentColor"></circle><path d="M 6 -6 V -30" fill="none" stroke-width="2" stroke="currentColor" class="text-gray-200"></path><path d="M 6 18 V 500" fill="none" stroke-width="2" stroke="currentColor" class="text-gray-200"></path></svg>Nov 18, 2021</time>
+                        <div  class="md:col-start-3 md:col-span-6 xl:col-span-7 ml-9 md:ml-0">
+                            <div class="prose max-w-none">
+                                <p>There is no textbook. Services... Study tools...</p>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
+        </section> 
+
+
+        
+        
+        <section>
+        <hr style="margin:20px 0;">
+ <div class="max-w-lg mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-6xl">
+  <div class="md:flex">
+    <div class="md:flex-shrink-0">
+      <img class="h-48 w-full object-cover md:w-48" src="images/jscode.png" alt="Web development">
+    </div>
+    <div class="p-8">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Course Overview</div>
+      <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">SYST10199 Web Programming</a>
+      <p class="mt-2 text-gray-500">This is a programming course in which students learn the basics of web app design using JavaScript and PHP programming languages. Students learn how to program simple, dynamic, client-side web apps using the JavaScript programming language to manipulate the HTML DOM. Students also learn how to write web app code on the server-side using the PHP programming language with a MySQL database to present custom content to a user.</p>
+    </div>
+  </div>
+</div>       
+        
+
+        
+        
+<div class="bg-gray-100 rounded-lg py-5 px-6 mb-4 text-base text-gray-700" role="alert">
+    <h4 class="text-2xl font-medium leading-tight mb-2">What you should already know from last semester</h4>
+    <h4>Object Oriented Programming 1 - Java</h4>
+    <ul class="list-decimal list-outside">
+        <li>Characterize syntax related to control statements and their use in computer programs.</li>
+        <li>Use and manipulate built-in (primitive) and user-defined data types.</li>
+        <li>Construct dynamic objects from classes.</li>
+        <li>Use and manipulate objects for program implementation.</li>
+        <li>Document and test programs.</li>
+        <li>Implement, execute, and debug object-oriented programs in an appropriate development environment using industry best-practices and methodologies.</li>
+        <li>Construct command-line programs that use major syntactic features of the programming language and a basic subset of the common standard library classes</li>
+    </ul>    
+    <hr class="border-gray-600 opacity-30">
+    <h4>Web Development</h4>
+    <ul class="list-decimal list-outside">
+        <li>Create a properly structured web page using (HTML5).</li>
+        <li>Represent the Document Object Model (DOM) in a hierarchical diagram.</li>
+        <li>Recognize the importance of browser compatibility with HTML5 and CSS3 standards.</li>
+        <li>Style a web page using Cascading Style Sheets (CSS3).</li>
+        <li>Create page layouts that adapt to suit the constraints of the display using media queries.</li>
+        <li>Publish a web page on the internet.</li>
+        <li>Explain how web servers display web pages.</li>
+        <li>Secure a web page.</li>
+        <li>Logically layout a web space.</li>
+        <li>Design forms that use major controls and form handling logic.</li>
+    </ul>   
+    <hr class="border-gray-600 opacity-30">
+    <p>These learning outcomes are copied from the respective Course Outlines. The course outlines provide you with guidance for what you need to learn during the course. If you have not mastered the material during the course, it is your responsibility to catch up without impacting others' learning experience.  There is a lot of content to cover in each course and that leaves no time to learn something you should already have mastered. Now is the time to learn and practice deliberately the material currently being covered. If you need help, there is tutoring available &mdash; check out <a href="https://central.sheridancollege.ca/tutoring" target="_blank">https://central.sheridancollege.ca/tutoring</a>.</p>    
+</div>        
+
+        <div class="flex flex-wrap">
+            <button  class="text-purple-500 bg-transparent hover:bg-purple-500 hover:text-white  active:bg-purple-600" onclick="openPopover(event,'popover-example-left')"> 
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" style="display:inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                </svg> REMINDERS
+            </button>
+            <div class="hidden bg-white border mr-3 block z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg" id="popover-example-left">
+              <div>
+                <div class="text-gray-700 opacity-75 font-semibold p-3 mb-0 border-b border-solid border-gray-100 uppercase rounded-t-lg">
+                  Reminder
+                </div>
+                <div class="text-gray-700 p-8">
+                    <p>Practice your communication. Use Piazza Q&A to ask questions and learn from each other.</p>
+                    <p>Check out Student Services</p>                 
+                </div>
+              </div>
+            </div>
+        </div>
+         
+ 
+ 
+<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-example-large">
+	<div class="relative w-auto my-6 mx-auto max-w-6xl">
+		<div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+			<div class="flex items-start justify-between p-5 border-b border-solid border-gray-200 rounded-t">
+				<h3 class="text-3xl font-semibold">Course Learning Outcomes</h3>
+				<button class="p-1 ml-auto bg-transparent border-0 text-gray-300 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal(&quot;modal-example-large&quot;)"><span class="bg-transparent h-6 w-6 text-2xl block outline-none focus:outline-none"><i class="fas fa-times"></i></span></button>
+			</div>
+			<div class="relative p-6 flex-auto">
+				<ol class="my-4 text-gray-500 text-lg leading-relaxed ordered-list">
+					<li value="1">Apply dynamically-typed variables with implicit type conversion to the creation of simple web apps using JavaScript and PHP. &#10004;</li>
+					<li value="2">Apply JavaScript and PHP functions and control structures (including selection and repetition) to the creation of simple web apps. &#10004;</li>
+					<li value="3">Design small client-side web apps that employ JavaScript functions to respond to HTML DOM events, receive input from HTML form elements and produce output by making changes to the HTML DOM. &#10004;</li>
+					<li value="4">Apply JavaScript's support for first class functions to the creation of simple client-side web apps. &#10004;</li>
+					<li value="5">Create PHP scripts that respond to HTTP requests containing GET and POST parameters to produce custom HTML content drawn from a one- table, multi-column MySQL database. &#10004;</li>
+					<li value="6">Create PHP scripts that respond to user requests by inserting, updating and/or deleting rows stored in a one-table, multi-column MySQL database. &#10004;</li>
+					<li value="7">Create PHP scripts that make effective use of session management techniques. &#10004;</li>
+					<li value="8">Apply best practices in internal documentation (including commenting, indenting and entity-naming), file naming and web site commenting, indenting and entity-naming), file naming and web site structure to the development of web apps. &#10004;</li>
+					<li value="9">Design client-server web apps that make use of JavaScript on the client side for dynamic content and PHP and MySQL on the server side for the generation of custom content. &#10004;</li>
+				</ol>
+			</div>
+			<div class="flex items-center justify-end p-6 border-t border-solid border-gray-200 rounded-b">
+				<button class="sher-teal text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal(&quot;modal-example-large&quot;)">understood</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-example-large-backdrop"></div>
+         
+         
+         
+ 
+ 
+<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-plan">
+	<div class="relative w-auto my-6 mx-auto max-w-6xl">
+		<div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+			<div class="flex items-start justify-between p-5 border-b border-solid border-gray-200 rounded-t">
+				<h3 class="text-3xl font-semibold">Topical Outline for Winter 2022 term</h3>
+				<button class="p-1 ml-auto bg-transparent border-0 text-gray-300 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal(&quot;modal-plan&quot;)"><span class="bg-transparent h-6 w-6 text-2xl block outline-none focus:outline-none"><i class="fas fa-times"></i></span></button>
+			</div>
+			<div class="relative p-6 flex-auto">
+
+       <table class="border-collapse border border-green-800 ">
+         <tr>
+            <td class="border border-green-600 p-3">Week 1<br><small>JAN 10-14</small></td>  
+            <td class="border border-green-600 p-3">Week 2<br><small>JAN 17-21</small></td>  
+            <td class="border border-green-600 p-3">Week 3<br><small>JAN 24-28</small></td>  
+            <td class="border border-green-600 p-3">Week 4<br><small>JA.31-FE.4</small></td> 
+            <td class="border border-green-600 p-3">Week 5<br><small>FEB 7-11</small></td>  
+            <td class="border border-green-600 p-3">Week 6<br><small>FEB 14-28</small></td>  
+            <td class="border border-green-600 p-3">Week 7<br><small>FEB 21-25</small></td>  
+            <td class="border border-green-600 p-3" rowspan="2">Break<br><small>FE.28-MR.4</small></td> 
+         </tr>
+         <tr>
+            <td class="border border-green-600 p-3">Week 8<br><small>MAR 7-11</small></td>  
+            <td class="border border-green-600 p-3">Week 9<br><small>MAR 14-18</small></td>  
+            <td class="border border-green-600 p-3">Week 10<br><small>MAR 21-25</small></td>  
+            <td class="border border-green-600 p-3">Week 11<br><small>MR.28-AP.3</small></td> 
+            <td class="border border-green-600 p-3">Week 12<br><small>APR 4-8</small></td>  
+            <td class="border border-green-600 p-3">Week 13<br><small>APR 11-15</small></td>  
+            <td class="border border-green-600 p-3">Week 14<br><small>APR 18-22</small></td>  
+         </tr>             
+       </table>    
+				<ol class="my-4 text-gray-500 text-lg leading-relaxed ordered-list">
+					<li value="1">Week 1: Web Programming</li>
+                    <li value="2">Weeks 2-7: Javascript&mdash;client-side programming</li>
+                    <li value="3">Weeks 8-12: PHP&mdash;server-side programming</li>
+                    <li value="3">Weeks 12-14: Client-server (full-stack) programming</li>
+				</ol>       
+			</div>
+			<div class="flex items-center justify-end p-6 border-t border-solid border-gray-200 rounded-b">
+				<button class="sher-teal text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal(&quot;modal-plan&quot;)">understood</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-plan-backdrop"></div>
+      
+  </main>
+  
+
+  
+  <footer class="bg-dark-gray text-white"> 
+     <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
+      <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10109 Web Programming | Sheridan College</a>
+      </p>     
+    </section> 
+    <div class="container max-w-screen-lg mx-auto  px-8">   
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+          <ul class="text-sm font-medium pb-14 sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-y-10">
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</footer> 
+ 
+</body>
+
+<script type="text/javascript">
+  function toggleModal(modalID) {
+    document.getElementById(modalID).classList.toggle("hidden");
+    document
+      .getElementById(modalID + "-backdrop")
+      .classList.toggle("hidden");
+    document.getElementById(modalID).classList.toggle("flex");
+    document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+  }
+</script>  
+<script>
+  // topnav
+  var topButton = document.getElementById("topnavButton");
+  var topnavList = document.getElementById("topnavList");
+  topButton.addEventListener("click", function() {
+    this.classList.toggle("active");
+    topnavList.classList.toggle("hidden");
+    document.getElementById("topnavOpen").classList.toggle("hidden");
+    document.getElementById("topnavClosed").classList.toggle("hidden");
+  });
+</script>
+<script src="scripts/prism.js"></script>
+<!-- Required popper.js -->
+<script
+  src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+  charset="utf-8"
+></script>
+<script>
+  function openPopover(event, popoverID) {
+    let element = event.target;
+    while (element.nodeName !== "BUTTON") {
+      element = element.parentNode;
+    }
+    var popper = Popper.createPopper(
+      element,
+      document.getElementById(popoverID),
+      {
+        placement: "bottom",
+      }
+    );
+    document.getElementById(popoverID).classList.toggle("hidden");
+  }
+</script>     
+</body>
+</html>
