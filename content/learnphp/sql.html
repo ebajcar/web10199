@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+<title> SYST10199 learn JS </title>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css"/> 
+<link rel="stylesheet" href="../css/prism_coy_dev.css"  />
+<style>
+dl, ol {
+  margin-bottom: 16px;
+}
+h4 {
+  margin-top: 16px;
+}
+.ordered-list {
+  list-style-type: decimal;
+}
+.text-danger {
+  color: red;
+}
+.bg-dark-gray  {
+  background-color: #333940;
+}
+.active {
+  font-weight: bold;
+}
+code {
+  color: black !important;
+}
+.sher-teal {
+  color: #00b2ce;
+}
+figcaption {
+  color: #00b2ce;
+  font-weight: 500;
+}
+</style>
+</head>
+
+<body>
+  <nav id="navTop" class="w-full z-30 top-0 text-white bg-dark-gray">
+    <div class="w-full container max-w-screen-lg mx-auto flex flex-wrap sm:flex-nowrap items-center justify-between mt-0 py-2">
+      <div class="md:pl-4">
+        <a class="text-white hover:text-white no-underline hover:no-underline
+        font-bold text-2xl lg:text-4xl rounded-lg hover:bg-nwoods-secondary " href="../">
+          <h1 class="mb-0 p-1 ">SYST10199</h1>
+        </a>
+      </div>
+      <button id="topnavButton" class="rounded-lg sm:hidden focus:outline-none focus:ring" aria-label="Navigation">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path id="topnavOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path id="topnavClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>      
+      <div id="topnavList" class="hidden sm:block items-center w-auto mt-0 text-white p-0 z-20">
+        <ul class="list-reset list-none font-semibold flex justify-end flex-wrap sm:flex-nowrap items-center px-0 pb-0">
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnweb/index.html">Web programming</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnjs/index.html">Learn JS</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnphp/index.html">Learn PHP</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="#">SLATE</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="#">Piazza Q&amp;A</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-b border-gray-600 opacity-50 my-0 py-0" />
+  </nav>
+    
+  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+      
+    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+      <div class="flex-shrink-0 px-8 py-4">
+        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>   
+        </button>
+      </div>   
+      <nav id="navList" class="min-h-screen hidden md:block sidebar-nav flex-grow px-1 lg:px-4 pb-4 md:pb-0 md:overflow-y-auto break-words">
+
+          <a href="index.html">PHP language</a>
+          <a href="grammar.html">Grammar</a>
+          <a href="data_types.html">Data types</a>
+          <a href="variables.html">Variables</a>
+          <a href="operators.html">Operators</a>
+          <a href="control_flow.html">Programs and flow control</a>      
+          <a href="collections.html">Data structures</a>     
+          <a href="functions.html">Functions</a>
+          <a href="sessions.html">Sessions</a>
+          <a href="forms.html">Forms</a>
+          <a href="mysql.html">MySQL DBMS</a>
+          <a href="sql.html">SQL database language</a>
+          <a href="objects.html">Object-oriented PHP</a>
+
+      </nav>
+    </div>  
+        
+    <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+        <h1>SQL database language</h1>
+
+
+	 
+<!-- 9.3.  10.5. SQL Database Language -->
+<section id="pageA5" class="w3-container person">
+	<h3>SQL Database Language</h3>
+	
+	<div class="alert alert-success" role="alert">
+	   <ul class="w3-ul">
+			<li>SQL is a programming language. It is a formal language in which you give instructions to a computer. The database software executes the SQL program, performs the tasks you've specified, and displays the results, or error message.
+			</li>
+			<li>SQL is easy to learn, non-procedural, standardized, and is used to manipulate data and database objects.
+			</li>
+			<li>Although you may see otherwise, it is <strong>NOT AN ACRONYM</strong>, and it is pronounced <strong>es-kyu-el</strong>. It can be used interactively, or it may be embedded in other code.
+			</li>
+		</ul>
+	</div>
+	<button type="button" class="btn btn-outline-success btn-block">
+		<a target="_blank" role="button" href="https://en.wikipedia.org/wiki/SQL">
+			<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/150px-Wikipedia-logo-v2.svg.png" 
+				 height="20" class="icon" title="https://en.wikipedia.org/wiki/SQL" alt="SQL"> 					
+			SQL&mdash;a database language </a>				
+	</button>
+	<br>
+	<h5>SQL has three major divisions:</h5>
+	<ul class="w3-ul">
+		<li><strong>DML or Data Manipulation Language</strong>, allows you to manipulate data with statements SELECT, INSERT, DELETE, and UPDATE.</li>
+		<li><strong>DDL or Data Definition Language</strong>, allows you to create, modify, and destroy database objects, such as table and index, using statements CREATE, DROP, and ALTER.</li>
+		<li><strong>DCL or Data Control Language</strong>, allows you to modify permissions with statements GRANT and REVOKE and control transactions with statments COMMIT and ROLLBACK.</li>
+	</ul>
+					
+						
+						
+				<table class="table table-sm">
+					<tr>
+						  <th>Category</th>
+						  <th colspan="2">SQL commands</th>
+					</tr>
+					<tr>
+						  <td rowspan="3">Data Description (DDL)</td>
+						  <td><strong>CREATE</strong></td>
+						  <td>Creation of tables</td>
+					</tr>
+					<tr>
+						  <td><strong>ALTER</strong></td>
+						  <td>Modification of tables</td>
+					</tr>
+					<tr>
+						  <td><strong>DROP</strong></td>
+						  <td>Removal of tables</td>
+					</tr>
+				
+					<tr>
+						  <td rowspan="3">Data Manipulation (DML)</td>
+						  <td><strong>INSERT</strong></td>
+						  <td>Insertion of rows in a table</td>
+					</tr>
+					<tr>
+						  <td><strong>UPDATE</strong></td>
+						  <td>Update of rows in a table</td>
+					</tr>
+					<tr>
+						  <td><strong>DELETE</strong></td>
+						  <td>Removal of rows in a table</td>
+					</tr>
+				
+					<tr>
+						  <td rowspan="4">Data Control (DCL)</td>
+						  <td><strong>GRANT</strong></td>
+						  <td>Grant of access rights</td>
+					</tr>
+					<tr>
+						  <td><strong>REVOKE</strong></td>
+						  <td>Removal of access rights</td>
+					</tr>
+					<tr>
+						  <td><strong>COMMIT</strong></td>
+						  <td>Treatment of updates</td>
+					</tr>
+					<tr>
+						  <td><strong>ROLLBACK</strong></td>
+						  <td>Removal of updates</td>
+					</tr>
+					
+					<tr>
+						  <td>Interrogation</td>
+						  <td><strong>SELECT</strong></td>
+						  <td>Queries</td>
+					</tr>
+				</table>
+
+						
+
+					<h5>An SQL statement is a valid combination of tokens introduced by a keyword.</h5>
+						<ul class="dialog-ul">
+							<li>Tokens are the basic indivisible particles of the SQL language.</li>
+							<li>Tokens include keywords, identifiers, operators, literals, and other symbols.</li>
+							<li>An SQL statement comprises one or more clauses.</li>
+						</ul>
+	<h3>Syntax of the SELECT statement </h3>
+	<code style="font-size:1.1em">
+	<strong>SELECT</strong> <u>[</u><b>DISTINCT</b>] {* | <i>
+	expr </i>[<b>AS</b> <i>alias</i>]<i>,</i> ... }<br>
+	<b>FROM</b> <i>table</i> [<i>alias</i>],<i> ...</i><br>
+	[<b>WHERE</b> { <i>conditions | under conditions</i>}<i> </i>]<br>
+	[<b>GROUP BY</b> <i>expr, ...</i>] [<b>HAVING</b><i> conditions</i>]<br>
+	[<b>ORDER BY</b> {<i>expr </i>| <i>num</i>}{<u><b>ASC</b></u> | <b>DESC</b>}, 
+	...]<b>;</b> 
+	</code>
+	<br><br>
+
+	<table class="table">
+		<tr>
+			  <td>CAPITAL LETTERS</td>
+			  <td>(SELECT) Enter values exactly as presented.</td>
+		</tr>
+		<tr>
+			  <td>Italic</td>
+			  <td>column, table. Parameter having to be replaced by the suitable value.</td>
+		</tr>
+		<tr>
+			  <td>alias</td>
+			  <td>Synonym of a name of table or column.</td>
+		</tr>
+		<tr>
+			  <td>conditions</td>
+			  <td>Expression having the true or false value.</td>
+		</tr>
+		<tr>
+			  <td>under conditions</td>
+			  <td>Expression containing a subquery.</td>
+		</tr>
+		<tr>
+			  <td>expr</td>
+			  <td>Column, or calculated attribute (+,-, *, /)</td>
+		</tr>
+		<tr>
+			  <td>Num</td>
+			  <td>Column number</td>
+		</tr>
+		<tr>
+			  <td>{}</td>
+			  <td>Ex {ON|OFF}. One of the values separated by &quot;|&quot; must obligatory be typed in.</td>
+		</tr>
+		<tr>
+			  <td>[&nbsp;]</td>
+			  <td>optional Value.</td>
+		</tr>
+		<tr>
+			  <td>(&nbsp;)</td>
+			  <td>the brackets and commas must be type in as presented.</td>
+		</tr>
+		<tr>
+			  <td>...</td>
+			  <td>The preceding values can be repeated several times</td>
+		</tr>
+		<tr>
+			  <td>_ Underlined</td>
+			  <td>indicate the default value.</td>
+		</tr>
+	</table>
+
+
+	<h5>SELECT Clauses</h5>
+   <table class="table table-sm">
+		<tr>
+			<th>SELECT</th>
+			<td>Specify the columns which will appear in answer</td>
+		</tr>
+		<tr>
+			<th>FROM</th>
+			<td>Specify the table(s) intervening in the query</td>
+		</tr>
+		<tr>
+			<th>WHERE</th>
+			<td>Specify filtering conditions to apply on rows. One can find:<br>
+				Comparators : =, &gt;, &lt;, &gt; = &lt;, =, &lt; &gt;<br>
+				Logical operators : AND, OR, NOT<br>
+				Predicates : IN, LIKE, NULL, ALL, SOME, ANY, EXISTS...
+			</td>
+		</tr>
+		<tr>
+			<th>GROUP BY</th>
+			<td>Specify the column(s) of a group</td>
+		</tr>
+		<tr>
+			<th>HAVING</th>
+			<td>Specify the conditions associated with a group</td>
+		</tr>
+		<tr>
+			<th>ORDER BY</th>
+			<td>Specify the order in which will appear the rows of the answer:<br>
+				- ASC:&nbsp; in ascending order (default)<br>
+				- DESC: in descending order
+			</td>
+		</tr>
+	</table>	
+		<h5>Example explained</h5>
+	<img style="width:80%" src="images/db_select.png" alt="Select statement">	
+	<hr>
+</section>
+
+ 
+
+
+
+    </section>
+      
+  </main>
+  
+
+  
+  <footer class="bg-dark-gray text-white"> 
+     <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
+      <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10109 Web Programming | Sheridan College</a>
+      </p>     
+    </section> 
+    <div class="container max-w-screen-lg mx-auto  px-8">   
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+          <ul class="text-sm font-medium pb-14 sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-y-10">
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</footer> 
+ 
+</body>
+
+<script>
+  // topnav
+  var topButton = document.getElementById("topnavButton");
+  var topnavList = document.getElementById("topnavList");
+  topButton.addEventListener("click", function() {
+    this.classList.toggle("active");
+    topnavList.classList.toggle("hidden");
+    document.getElementById("topnavOpen").classList.toggle("hidden");
+    document.getElementById("topnavClosed").classList.toggle("hidden");
+  });
+</script>
+<script src="../scripts/prism.js"></script>
+</body>
+</html>

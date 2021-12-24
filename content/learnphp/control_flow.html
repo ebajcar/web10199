@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+<title> SYST10199 learn JS </title>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css"/> 
+<link rel="stylesheet" href="../css/prism_coy_dev.css"  />
+<style>
+dl, ol {
+  margin-bottom: 16px;
+}
+h4 {
+  margin-top: 16px;
+}
+.ordered-list {
+  list-style-type: decimal;
+}
+.text-danger {
+  color: red;
+}
+.bg-dark-gray  {
+  background-color: #333940;
+}
+.active {
+  font-weight: bold;
+}
+code {
+  color: black !important;
+}
+.sher-teal {
+  color: #00b2ce;
+}
+figcaption {
+  color: #00b2ce;
+  font-weight: 500;
+}
+</style>
+</head>
+
+<body>
+  <nav id="navTop" class="w-full z-30 top-0 text-white bg-dark-gray">
+    <div class="w-full container max-w-screen-lg mx-auto flex flex-wrap sm:flex-nowrap items-center justify-between mt-0 py-2">
+      <div class="md:pl-4">
+        <a class="text-white hover:text-white no-underline hover:no-underline
+        font-bold text-2xl lg:text-4xl rounded-lg hover:bg-nwoods-secondary " href="../">
+          <h1 class="mb-0 p-1 ">SYST10199</h1>
+        </a>
+      </div>
+      <button id="topnavButton" class="rounded-lg sm:hidden focus:outline-none focus:ring" aria-label="Navigation">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path id="topnavOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path id="topnavClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>      
+      <div id="topnavList" class="hidden sm:block items-center w-auto mt-0 text-white p-0 z-20">
+        <ul class="list-reset list-none font-semibold flex justify-end flex-wrap sm:flex-nowrap items-center px-0 pb-0">
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnweb/index.html">Web programming</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnjs/index.html">Learn JS</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnphp/index.html">Learn PHP</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="#">SLATE</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="#">Piazza Q&amp;A</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-b border-gray-600 opacity-50 my-0 py-0" />
+  </nav>
+    
+  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+      
+    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+      <div class="flex-shrink-0 px-8 py-4">
+        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>   
+        </button>
+      </div>   
+      <nav id="navList" class="min-h-screen hidden md:block sidebar-nav flex-grow px-1 lg:px-4 pb-4 md:pb-0 md:overflow-y-auto break-words">
+
+          <a href="index.html">PHP language</a>
+          <a href="grammar.html">Grammar</a>
+          <a href="data_types.html">Data types</a>
+          <a href="variables.html">Variables</a>
+          <a href="operators.html">Operators</a>
+          <a href="control_flow.html">Programs and flow control</a>      
+          <a href="collections.html">Data structures</a>     
+          <a href="functions.html">Functions</a>
+          <a href="sessions.html">Sessions</a>
+          <a href="forms.html">Forms</a>
+          <a href="mysql.html">MySQL DBMS</a>
+          <a href="sql.html">SQL database language</a>
+          <a href="objects.html">Object-oriented PHP</a>
+
+      </nav>
+    </div>  
+        
+    <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+        <h1>Programs and flow control</h1>
+
+<!-- <div id="page20">       2.1. Simple Statements -->
+<article id="page20">
+	<h2>PHP Programs</h2>
+
+<section id="page21">
+	<h3>Simple Statements</h3>	
+	<p><strong>Simple statements</strong>&mdash; each PHP statement is an instruction to PHP interpreter to do something. Statements are interpretted one at a time, in the sequence they are written. <code> statement1; statement2; statement3; </code> Sometimes statements are combined into a block and executed together (decisions and iteration).</p>
+	<p>PHP requires instructions to be terminated with a semicolon at the end of each statement. The closing tag of a block of PHP code automatically implies a semicolon;</p>
+	<hr>
+</section>
+
+<!-- 2.2. Selection (Decisions) -->
+<section id="page22">
+	<h3>Control Structures</h3>	
+	
+	<h4>Selection (Decisions)</h4>	
+	<p class="lead">The <code>if</code> statement allows for conditional execution of code fragments. PHP features an if structure that is similar to that of C (Java and Javascript).</p>
+	
+	<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+if (condition) {
+	echo "code to be executed "
+		 ."if condition is true";
+} else {
+	echo "code to be executed "
+		 ."if condition is false";
+}</pre>
+
+	<a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  target="_blank" role="button" 
+		href="http://php.net/manual/en/control-structures.if.php">
+		if control structure @ <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
+	</a>
+	
+		<p class="lead">The <code>switch</code> statement is similar to a series of IF statements on the same expression.</p>
+
+		<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+switch (n) {
+	case label1:
+		// code to be executed 
+		// if n=label1; 
+		break;
+	case label2:
+	... 
+	default:
+		// code to be executed 
+		// if n is different 
+		// from all labels;
+}</pre>
+	<a class="btn btn-outline-secondary btn-block" style="cursor:pointer;" 
+	target="_blank" role="button" 
+			href="http://php.net/manual/en/control-structures.switch.php">
+			switch control structure @ <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
+		</a>  	
+	
+<hr>
+
+<!-- 2.3. Iterations (Loops) -->
+
+	<h4>Iteration (Loops)</h4>
+	
+	<p class="lead">The <code>for</code> loop</p>
+	<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+for (initialization; 
+	 condition; 
+	 finalExpression) { 
+	//code to be executed; 
+}</pre>		
+	<a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  
+		target="_blank" role="button" 
+		href="http://php.net/manual/en/control-structures.for.php">
+		for control structure @ <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
+		</a>
+				
+	<p class="lead">The <code>foreach</code> construct works only on arrays, and is used to loop through each key/value pair in an array.</p>
+	<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+foreach (arrayVariable 	
+		  as currentMemberValue) { 
+	//code to be executed; 
+}</pre>		
+	<a class="btn btn-outline-secondary btn-block" style="cursor:pointer;" target="_blank" role="button" 
+			href="http://php.net/manual/en/control-structures.foreach.php">
+			foreach control structure @ <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
+		</a>	
+	<p class="lead">The <code>while</code> statement</p>
+	<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+initialization; 
+while (condition) { 
+	// code to be executed; 
+	finalExpression; 
+}</pre>			
+	<a class="btn btn-outline-secondary btn-block" style="cursor:pointer;" 
+			target="_blank" role="button" 
+			href="http://php.net/manual/en/control-structures.while.php">
+			while control structure @ <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
+		</a>
+	<p class="lead">The  <code>do&hellip;while</code> construct executes the code once, and then repeats the loop as long as the specified condition is true. the truth expression is checked at the end of each iteration </p>
+	<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+do {
+	code to be executed;
+} while (condition is true);</pre>	
+			<a class="btn btn-outline-secondary btn-block" style="cursor:pointer;" target="_blank" role="button" 
+					href="http://php.net/manual/en/control-structures.do.while.php">
+					do-while control structures @ <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
+				</a>
+      <hr>    
+	<h4>break, continue, return, else if, elseif, &hellip;</h4>
+
+			<a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  target="_blank"  
+					href="http://php.net/manual/en/language.control-structures.php">
+					Control structures. Read more in <strong class="text-dark">PHP Manual @ </strong>@ <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
+				</a>		
+	<hr>        
+</section>
+
+<!-- 2.4. Requires and Includes -->
+<section id="page23">
+	<br>
+	<h3>Requires and Includes</h3>
+			<p>PHP has four functions for using external files: <code>include()</code>, <code>include_once()</code>, <code>require()</code>, and <code>require_once()</code>. </p>
+			<p>Include files give you a way to create one version of the common elements of your web site, such as the header, footer, menu, etc., which you then reference on all web pages. The main difference between include() and require()</p>
+			<ul class="dialog-ul">
+				<li>include() function will print a warning on error but will continue to process the script.</li>
+				<li>require() function will print an error and halt the processing of the script.</li>
+				<li>otherwise, both functions work exactly the same when script is working properly.</li>
+				<li>Both functions also have a _once version. This ensures that the external file is only included once regardless of how many times the script may inadvertently try to include it.</li>	
+				<li><code>require</code> is identical to <code>include</code> <i>except upon failure it will also produce a fatal E_COMPILE_ERROR level error</i></li>
+				<li><code>require_once</code> and <code>include_once</code> <i>will check if the file has already been included, and if so, not include (require) it again</i>.</li>	
+			</ul>	
+			<a class="btn btn-outline-secondary btn-block" style="cursor:pointer;" target="_blank" role="button" 
+					href="http://php.net/manual/en/function.include.php">
+					include control structures @ <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
+				</a>		
+</section>
+
+</section>
+
+
+
+    </section>
+      
+  </main>
+  
+
+  
+  <footer class="bg-dark-gray text-white"> 
+     <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
+      <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10109 Web Programming | Sheridan College</a>
+      </p>     
+    </section> 
+    <div class="container max-w-screen-lg mx-auto  px-8">   
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+          <ul class="text-sm font-medium pb-14 sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-y-10">
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</footer> 
+ 
+</body>
+
+<script>
+  // topnav
+  var topButton = document.getElementById("topnavButton");
+  var topnavList = document.getElementById("topnavList");
+  topButton.addEventListener("click", function() {
+    this.classList.toggle("active");
+    topnavList.classList.toggle("hidden");
+    document.getElementById("topnavOpen").classList.toggle("hidden");
+    document.getElementById("topnavClosed").classList.toggle("hidden");
+  });
+</script>
+<script src="../scripts/prism.js"></script>
+</body>
+</html>
