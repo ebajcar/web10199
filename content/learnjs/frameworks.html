@@ -116,97 +116,23 @@ section {
     </div>  
         
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
-        <h1>Forms</h1>
+        <h1>Hosted Libraries and Other optional components</h1>
         
 
 <!-- 10. Javascript forms --> 
 <article id="page100">
-	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800" title="—www.w3.org/TR/html401/interact/forms.html">An HTML form is a section of a document containing normal content, markup, special elements called controls (checkboxes, radio buttons, menus, etc.), and labels on those controls. Users generally "complete" a form by modifying its controls (entering text, selecting menu items, etc.), before submitting the form to an agent for processing (e.g., to a Web server, to a mail server, etc.)</h6>	
-
-	
-<!-- 10.1. How forms are processed -->
-<section id="page101">
-	<h3>How forms are processed </h3>
-	<ol  class="divide-y-2 divide-gray-100">
-		<li class="p-1"><strong>value</strong>. Each element of a form can be dynamically assigned a <b>value</b> from JavaScript.</li>
-		<li class="p-1"><strong>id</strong>. If a form element contains an <b>id attribute</b>, that element can be referenced using the <code>document.getElementById()</code> method.</li>
-		<li class="p-1"><strong>id</strong>. A form element that does not contain an <b>id attribute</b> can be referenced using the <code>document.forms[].elements[]</code> arrays.</li>
-		<li class="p-1"><strong>name</strong>. The value assigned to the <b>name attribute</b> of a radio button group or checkbox button group is also the name of an array in which each button can be referenced by their index value.</li>
-		<li class="p-1"><strong>checkbox</strong>. When a form <b>radio button</b> or <b>checkbox button</b> has been selected its checked property becomes a true value.</li>
-		<li class="p-1"><strong>checked</strong>. A loop can be used to examine the checked property of each button in a button group to determine which are selected.</li>
-		<li class="p-1"><strong>options[]</strong>. The options of a <b>selection list object</b> are represented in the DOM by its options[] array</li>
-		<li class="p-1"><strong>selectedIndex</strong>. A selection list object has a <b>selectedIndex property</b> containing the array element index value of the currently-selected option</li>
-		<li class="p-1"><strong>selectedIndex</strong>. The value of the current selected option can be retrieved by specifying the selectedIndex value in the options[] array</li>
-		<li class="p-1"><strong>onchange</strong>. An event-handler function can be nominated by the <b>onchange property</b> to respond to changes in text field content</li>
-		<li class="p-1"><strong>onreset</strong>. An event-handler function can be nominated by the <b>onreset property</b> to respond when the user pushes a form’s reset button</li>
-		<li class="p-1"><strong>onsubmit</strong>. An event-handler function can be nominated by the <b>onsubmit property</b> to respond when the user pushes a submit button</li>
-		<li class="p-2"><strong>onsubmit</strong>. When the <b>onsubmit event-handler</b> returns a false value the form will not be submitted</li>
-		<li class="p-2"><strong>submit()</strong>. A form can be submitted from script by calling the <b>submit() method</b> of the form object</li>
-	</ol>    	
-
-</section>
-
-<!-- 10.2. HTML5 and CSS3 form components -->
-<section id="page102">
-	<h3>HTML5 and CSS3 form components</h3>
-	<ul>
-			<li>The HTML <code>&lt;form></code> element defines a form that is used to collect user input.</li>
-			<li>An HTML form contains form elements &mdash; different types of input elements: <mark>text fields</mark>, <mark>checkboxes</mark>, <mark>radio buttons</mark>, <mark>submit buttons</mark>,...</li>
-			<li>Form elements: <code>form</code>, <code>input</code>, <code>textarea</code>, <code>label</code>, <code>fieldset</code>, <code>legend</code>, <code>select</code>, <code>optgroup</code>, <code>option</code>, <code>button</code>, <code>datalist</code>, <code>keygen</code>, <code>output</code></li>
-			<li>HTML input types: <code>text</code>, <code>password</code>, <code>submit</code>, <code>reset</code>, <code>radio</code>, <code>checkbox</code>, <code>button</code></li>
-			<li>HTML5 added several new input types: <code>color</code>, <code>date</code>, <code>datetime</code>, <code>email</code>, <code>datetime-local</code>, <code>month</code>, <code>number</code>, <code>range</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, <code>week</code></li>
-			<li>HTML5 attributes (Input Restrictions): <code>disabled</code>, <code>maxlength</code>, <code>readonly</code>, <code>size</code>, <code>value</code></li>
-			<li>HTML5 added the following attributes for &lt;input>: <code>autocomplete</code>, <code>autofocus</code>, <code>form</code>, <code>height</code>, and <code>width</code>, <code>list</code>, <code>min</code>, <code>max</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>required</code>, <code>step</code></li>
-      <li><a href="https://www.w3schools.com/css/css_form.asp" target="_blank">CSS Forms (w3schools)</a></li>
-      <li><a href="https://www.w3schools.com/css/css_attribute_selectors.asp" target="_blank">CSS Attribute Selectors (w3schools)</a></li>
-      <li><a href="https://bajcar.dev.fast.sheridanc.on.ca/10049/" target="_blank">Cascading Style Sheets (syst10049)</a></li>
-			<li>http://bajcar.dev.fast.sheridanc.on.ca/www10049/forms/</li>
-		</ul> 
-  <h4>Form validation</h4>
-  <p>HTML5 makes available user interface elements that allow users to provide input. This ability to capture information from users is great, but you must make sure that user privacy and safety are protected as much as possible and that the website or web app cannot be exploited to disrupt the site's services. The objective is</p>
-  <ul>
-    <li>to choose the correct user input controls (HTML5 input types), and</li>
-    <li>to set the appropriate attributes on those controls to ensure that the data is validated.</li>
-  </ul>
-  <p>Data validation is the process of ensuring that computer input is clean, correct, and useful. Most often, the purpose of data validation is to ensure correct input to a computer application.</p>  
-    <h5>Validate data with built-in functions</h5>
-  <ul>
-       <li><strong>HTML Input Attributes&mdash;</strong> disabled &middot; max &middot; min &middot; pattern &middot; required &middot; type </li>
-       <li><strong>CSS Pseudo Selectors&mdash;</strong> :disabled &middot; :disabled &middot; :optional &middot; :required &middot; :valid</li>
-       <li><strong>DOM Properties validity&mdash;</strong> customError &middot; patternMismatch &middot; rangeOverflow &middot; rangeUnderflow &middot; stepMismatch &middot; tooLong &middot; typeMismatch &middot; valueMissing &middot; valid &middot; validationMessage &middot; willValidate</li>
-       <li><strong>DOM Methods&mdash;</strong> checkValidity() setCustomValidity()</li>
-   </ul>  
-	<hr>
-</section>
-
-<!-- 10.3. Data validation -->
-<section id="page103">
-	<h3>Data validation</h3>
-<p>There are two different types of form validation which you'll encounter on the web:</p>
-<ul>
-<li><strong>Client-side validation</strong> is validation that occurs in the browser, before the data has been submitted to the server. This is more user-friendly than server-side validation as it gives an instant response. This can be further subdivided:</li><ol>
-<li>JavaScript validation is coded using JavaScript. It is completely customizable.</li>
-<li>Built-in form validation using HTML5 form validation features.  This generally does not require JavaScript. Built-in form validation has better performance, but it is not as customizable as JavaScript.</li></ol>
-<li><strong>Server-side validation</strong> is validation which occurs on the server, after the data has been submitted.  Server-side code is used to validate the data before it is saved into the database. If the data fails authentication, a response is sent back to the client to tell the user what corrections to make. Server-side validation is not as user-friendly as client-side validation, as it does not provide errors until the entire form has been submitted.  However, server-side validation is your application's last line of defense against incorrect or even malicious data. All popular server-side frameworks have features for validating and sanitizing data (making it safe).</li></ul>
-<p>In the real world, developers tend to use a combination of client-side and server-side validation.</p>   
- 	
-<div class="text-base font-medium"><a class="text-teal-600 hover:text-teal-700" aria-label="Read &quot;Introducing Tailwind UI Ecommerce&quot;" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation">Dig deeper on MDN →</a></div>
+	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800" title="—www.w3.org/TR/html401/interact/forms.html">Make sure you are comfortable with native CSS and rudimentary Javascript before delving into libraries.</h6>	
 
 
-
-<hr>
-</section>
-
-<!-- 10.3. Data validation -->
+<!-- 10.4. hosted libraries -->
 <section id="page104">
-	<h3>Hosted Libraries and Other optional components</h3>
 <h5>(not covered in this course)</h5>
-<h6></h6>
-<p>Make sure you are comfortable with native CSS and rudimentary Javascript before delving into libraries.</p>
+
+
 
 
 		<figure>
-			<img width="400" src="../images/framework.png" alt="frameworks">
+			<img width="400" src="images/framework.png" alt="frameworks">
 			<figcaption><a href="https://developers.google.com/speed/libraries/" target="_blank">Reference on Google</a></figcaption>	
 		</figure> 
 
