@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-<title> SYST10199 learn JS </title>
+<title> SYST10199 learn PHP </title>
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css"/> 
 <link rel="stylesheet" href="../css/prism_coy_dev.css"  />
@@ -11,7 +11,7 @@
 dl, ol {
   margin-bottom: 16px;
 }
-h4 {
+h4, h3 {
   margin-top: 16px;
 }
 .ordered-list {
@@ -22,9 +22,6 @@ h4 {
 }
 .bg-dark-gray  {
   background-color: #333940;
-}
-.active {
-  font-weight: bold;
 }
 code {
   color: black !important;
@@ -40,7 +37,7 @@ figcaption {
 </head>
 
 <body>
-  <nav id="navTop" class="w-full z-30 top-0 text-white bg-dark-gray">
+  <nav id="navTop" class="w-full z-30 top-0 text-white bg-dark-gray ">
     <div class="w-full container max-w-screen-lg mx-auto flex flex-wrap sm:flex-nowrap items-center justify-between mt-0 py-2">
       <div class="md:pl-4">
         <a class="text-white hover:text-white no-underline hover:no-underline
@@ -56,10 +53,10 @@ figcaption {
       </button>      
       <div id="topnavList" class="hidden sm:block items-center w-auto mt-0 text-white p-0 z-20">
         <ul class="list-reset list-none font-semibold flex justify-end flex-wrap sm:flex-nowrap items-center px-0 pb-0">
+        <li class="p-1 sm:p-0"><a class="topnav-link" href="../index.html">Home</a></li>
           <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnweb/index.html">Web programming</a></li>
           <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnjs/index.html">Learn JS</a></li>
           <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnphp/index.html">Learn PHP</a></li>
-          <li class="p-1 sm:p-0"><a class="topnav-link" href="#">SLATE</a></li>
           <li class="p-1 sm:p-0"><a class="topnav-link" href="#">Piazza Q&amp;A</a></li>
         </ul>
       </div>
@@ -80,81 +77,27 @@ figcaption {
       </div>   
       <nav id="navList" class="min-h-screen hidden md:block sidebar-nav flex-grow px-1 lg:px-4 pb-4 md:pb-0 md:overflow-y-auto break-words">
 
-          <a href="index.html">PHP language</a>
-          <a href="grammar.html">Grammar</a>
-          <a href="data_types.html">Data types</a>
-          <a href="variables.html">Variables</a>
-          <a href="operators.html">Operators</a>
-          <a href="control_flow.html">Programs and flow control</a>      
-          <a href="collections.html">Data structures</a>     
-          <a href="functions.html">Functions</a>
-          <a href="sessions.html">Sessions</a>
 
-          <a href="mysql.html">MySQL DBMS</a>
-          <a href="sql.html">SQL database language</a>
-          <a href="objects.html">Object-oriented PHP</a>
+          <a class="bg-gray-100 text-gray-900" href="index.html">PHP language</a>
 
+          
       </nav>
     </div>  
         
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
-        <h1>Data types</h1>
-
-        
- 
-<!-- 5.1. Arrays, Strings, And Numbers -->
-<article id="page50">
-	<h2>PHP Data Types</h2>
-	<p>Data Types, Identifiers, Constants, Variable Scope, Declaring Variables</p>
-	<ul>
-		<li><b>integer</b> (whole number)</li>
-		<li><b>float</b> (numeric value with decimial digits)</li>
-		<li><b>string</b> (a sequence of characters)</li>
-		<li><b>Boolean</b> (true or false)</li>
-		<li><b>NULL</b> (no value)</li>
-		<li><b>Array</b> (indexed multiple values)</li>
-		<li><b>Object</b> (structure created with a class)</li>
-		<li><b>Resource</b> (a reference that identifies a connection) <a href="http://ca3.php.net/manual/en/language.types.resource.php">Read more.</a>
-		<p class="w3-text w3-tag">A resource is a special variable, holding a reference to an external resource,  special handles to opened files, database connections, image canvas areas&hellip; Resources are created and used by special functions. </p></li>
-	</ul>
-  
-<section id="page51">  
-	<h3>Numbers</h3>
-	<p>Pseudo-types are keywords used in the PHP documentation to specify the types or values an argument can have. Please note that they are not primitives of the PHP language. The pseudo-type <em>number</em> indicates that a parameter can be either integer or float. The scalar types, boolean, integer, and float (floating-point number, aka double) are primitive types.</p>
-	<dl class="row">
-	  <dt class="col-sm-2">boolean</dt>
-	  <dd class="col-sm-9">&mdash;This is the simplest type. A boolean expresses a truth value. It can be either TRUE or FALSE.</dd>
-	  <dt class="col-sm-2">integer</dt>
-	  <dd class="col-sm-9">&mdash;An integer is a number of the set ℤ = {..., -2, -1, 0, 1, 2, ...}.</dd>
-	  <dt class="col-sm-2">float</dt>
-	  <dd class="col-sm-9">&mdash;Floating point numbers (also known as "floats", "doubles", or "real numbers") can be specified using any of the following: 1.234, 1.2e3,  7E-10, 1_234.567 . The size of a float is platform-dependent, although a maximum of approximately 1.8e308 with a precision of roughly 14 decimal digits is a common value (the 64 bit IEEE format).</dd>	  
-	</dl>
-						
-	</section>
+	<h1>PHP Language (server-side programming)</h1>
+	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">Content being revised - will become available soon.</h6>
 
 
-<!-- 5.2. PHP Strings -->
-<section id="page52">
-	<h3>PHP Strings</h3>
 
-		<p class="mb-0">The string in PHP is implemented as an array of bytes and an integer indicating the length of the buffer. It has no information about how those bytes translate to characters, leaving that task to the programmer. There are no limitations on the values the string can be composed of; in particular, bytes with value 0 (“NUL bytes”) are allowed anywhere in the string (however, a few functions, said in this manual not to be “binary safe”, may hand off the strings to libraries that ignore data after a NUL byte.)
-		 <a href="http://www.w3schools.com/php/php_string.asp" target="_blank">&mdash;PHP Manual</a>
-</p>
-	<p>A string is a sequence of characters.
-    <a href="http://www.w3schools.com/php/php_datatypes.asp" target="_blank">
-						Learn more about strings @ PHP manual</a></p>
-	<hr>
+
+
+
+
+
+
 </section>
-
-</article>
-
-       
-
-    </section>
-      
-  </main>
-  
-
+ </main>
   
   <footer class="bg-dark-gray text-white"> 
      <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  

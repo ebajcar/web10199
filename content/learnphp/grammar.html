@@ -89,7 +89,7 @@ figcaption {
           <a href="collections.html">Data structures</a>     
           <a href="functions.html">Functions</a>
           <a href="sessions.html">Sessions</a>
-          <a href="forms.html">Forms</a>
+
           <a href="mysql.html">MySQL DBMS</a>
           <a href="sql.html">SQL database language</a>
           <a href="objects.html">Object-oriented PHP</a>
@@ -99,6 +99,102 @@ figcaption {
         
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
         <h1>Grammar</h1>
+
+
+<!-- 1.3. Basic Rules of PHP Programs -->
+<section id="page13">
+    <h3>Basic Rules of PHP Programs</h3>
+	<h5>Start and end processing instructions</h5>
+	<p>PHP interpreter parses a file, it looks for opening and closing tags, which are <code>&lt;?php</code> to open and <code>?></code> to close a PHP section. Everything outside of a pair of opening and closing tags is ignored by the PHP parser which allows PHP files to have mixed content (hybrid).</p> 
+    
+    <!--
+	<figure onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/QXWa65Kw', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/pf_hello_world.png" alt="example 2" style="cursor:pointer;text-align:center;">
+
+		<figcaption>Example code (click to run phpfiddle)</figcaption>	
+	</figure>		
+-->
+<pre class="language-php"><code>
+&lt;?php
+// declare and initialize variable $txt to store a value 
+$txt = "Hello world!";
+
+// display the stored value in variable $txt
+echo $txt;
+?></code></pre>	
+ 	
+	
+	<p>PHP also allows for short open tag <code>&lt;?</code> which is discouraged since it is only available if enabled and conflicts with other XML tags. <code>&lt;?= $someVar ?></code> is available shortcut for <code>&lt;?php echo $someVar ?></code></p>	
+
+	<p title="Sklar, David. Learning PHP 5 (Kindle Locations 299-302). O'Reilly Media. Kindle Edition.">Unlike most other programming languages, PHP was created from the ground up for generating web pages. This means that common web programming tasks, such as accessing form submissions and talking to a database, are often easier in PHP. PHP comes with the capability to format HTML, manipulate dates and times, and manage web cookies — tasks that are often available only as add-on libraries in other programming languages.</p>
+	
+	<p>On most servers, the default extension for PHP files is <code>.php</code>.  If the server supports PHP, then you do not need to do anything. Files created with the <code>.php</code> extension located in the <strong>web directory</strong> (<code>/home/userid/public_html</code>) will be automatically parsed by the server (on the domain <code> dev.fast.sheridanc.on.ca</code>):</p>
+<pre class="language-php"><code>
+http://userid.dev.fast.sheridanc.on.ca/file.php
+</code></pre>
+		
+	<h5>Organizing scripts: pure PHP and hybrid PHP.</h5>
+	<p class="byline">Generate valid HTML5, CSS3, and Javascript. </p>
+	
+    <!--
+	<figure onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/kMmMecug', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/example_php_02.png" alt="example 2" style="cursor:pointer;text-align:center;">	
+    		<figcaption>Example using a form and here document.  (click to run phpfiddle)</figcaption>	
+	</figure>
+    
+   -->
+<pre class="language-php"><code>
+
+
+&lt;?php 
+// Print what was submitted in the form parameter called 'user' 
+// First checks if the parameter exists (could be empty)
+if (isset($_POST["user"]))
+	print $_POST['user']; 
+
+// Unset the parameter; unset() destroys the specified variables
+unset($_POST['user']);
+print "!";
+
+print &lt;&lt;&lt;TAG1
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  &lt;title>Example two&lt;/title>
+  &lt;meta charset="utf-8">
+&lt;/head>
+&lt;body>
+  &lt;form method="post" action="$_SERVER[PHP_SELF]">
+	 Your Name: &lt;input type="text" name="user">&lt;br>
+	 &lt;input type="submit" value ="Say Hello">&lt;br>
+  &lt;/form>
+&lt;/body>
+&lt;/html>
+TAG1;
+?>
+</code></pre>	
+	
+	
+	
+
+	<hr>
+</section>
+
+<!-- 1.4. Whitespace and Case-sensitivity --> 
+<section id="page14">
+	<h3>Whitespace and Case-sensitivity</h3>
+	  <p>PHP programs consist of a series of statements, each of which ends with a semicolon. You can put multiple statements on the same line as long as they are separated with a semicolon. You can put as many blank lines between statements as you want. The PHP interpreter ignores them. Whitespace includes space, tab, and newline characters.</p>
+	  <p>In practice, it is good style to put one statement on a line and put blank lines to improve the readability of your source code. Use the same conventions as Javascript code.</p>
+	  <p>The PHP interpreter does not care whether you use uppercase letters, lowercase letters, or both when you include keywords and function names in your program.</p>
+	<hr>
+</section>
+
+<!-- 1.5. Commenting and Documentation -->
+<section id="page15">
+	<h3>Commenting and Documentation</h3>	
+	<blockquote class="w3-panel w3-leftbar sherblue">Writing code is similar to academic writing in that when you use or adapt code developed by someone else as part of your project, you must cite your source. However, instead of quoting or paraphrasing a source, you include an inline comment in the code. These comments not only ensure you are giving proper credit, but help with code understanding and debugging.
+	<br><small><cite title="[ Academic Integrity at MIT, A Handbook for Students ]">Academic Integrity at MIT, A Handbook for Students</cite> </small>
+	</blockquote> 
+	<hr>
+</section>
 
 
         

@@ -89,7 +89,7 @@ figcaption {
           <a href="collections.html">Data structures</a>     
           <a href="functions.html">Functions</a>
           <a href="sessions.html">Sessions</a>
-          <a href="forms.html">Forms</a>
+
           <a href="mysql.html">MySQL DBMS</a>
           <a href="sql.html">SQL database language</a>
           <a href="objects.html">Object-oriented PHP</a>
@@ -98,12 +98,11 @@ figcaption {
     </div>  
         
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
-        <h1>Variables</h1>
+        <h1>PHP Variables</h1>
 
 
 <!-- <div id="page40">   2.6. Expressions -->
-<article id="page40">
-	<h2>PHP Variables</h2>
+
 	
 <section id="page41">
 	<h3>Expressions</h3>
@@ -111,7 +110,7 @@ figcaption {
 
 	<a target="_blank" 
 		href="http://ca3.php.net/manual/en/language.expressions.php">
-		What are expressions? Read more in <strong class="text-dark">PHP Manual @ </strong><img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong> manual		 
+		What are expressions? Read more in <strong class="text-dark">PHP Manual @ </strong>	 
 	</a>	
 	</section>
 
@@ -122,15 +121,21 @@ figcaption {
 	<h3>Identifiers and Constants</h3>
 	<p>All variable names have a dollar sign in front; variable names must begin with a letter or an underscore (cannot begin with a number; can be any length; can include letters, numbers, and underscores only; case sensitive.</p>
 	<p><strong>Single quotes</strong> variable name is displayed by its name; <br><strong>Double quotes</strong> variable name is replaced by its value; <br><strong>Curly braces</strong> can be used around variable name to define the variable</p>  
-<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+
+<pre class="language-php"><code>
+
 $pet="bird";
-echo "{$pet}cage";</pre>	
+echo "{$pet}cage";
+</code></pre>	
 
 	<p><strong>Constants</strong> cannot be changed by the script;</p> 
-<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+
+<pre class="language-php"><code>
+
 define ("CONSTANTNAME",
 	"constant value"); 
-define ("AGE",29);</pre>
+define ("AGE",29);
+</code></pre>
 		<!-- constants ( 
 		JS https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const 
 		ES6 https://www.w3schools.com/js/tryit.asp?filename=tryjs_es6_const ) ( 
@@ -161,10 +166,14 @@ define ("AGE",29);</pre>
 <section id="page44">
 	<h3>Declaring variables</h3>
 	<p>Variables are "containers" for storing information. To create (declare) a variable, you give it a name. In PHP, a variable starts with the $ sign, followed by the name of the variable</p>
-<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+
+<pre class="language-php"><code>
+
 $txt = "Hello world!";
 $x = 5;
-$y = 10.5;</pre>
+$y = 10.5;
+</code></pre>
+
 	<p>After the execution of the statements above, the variable <code>$txt</code> will hold the value <var>Hello world!</var>, the variable <code>$x</code> will hold the value <var>5</var>, and the variable <code>$y</code> will hold the value <var>10.5</var></p>
 
 <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Choose meaningful names that will make your code human-readable.</p>
@@ -179,7 +188,9 @@ $y = 10.5;</pre>
 </ul>
 <h6>Output Variables</h6>
 <p>The PHP echo statement is often used to output data to the screen.</p>
-<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+
+<pre class="language-php"><code>
+
 // The following example will show how to output text and a variable:
 $txt = "Sheridan College";
 echo "I love $txt!";
@@ -192,7 +203,8 @@ echo "I love " . $txt . "!";
 echo "The following example will output the sum of two variables:";
 $x = 5;
 $y = 4;
-echo $x + $y;</pre>
+echo $x + $y;
+</code></pre>
 		
 	<button  class="btn btn-outline-secondary btn-block" style="cursor:pointer;" 
 		onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/mTVf1L5Y', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/inclass/example_php_03.png" alt="example 2" style="width:99%;cursor:pointer;">Click to run an example in phpfiddle. Working with variables, see more on w3schools.com.</button>	
@@ -205,28 +217,35 @@ echo $x + $y;</pre>
 	<p>PHP is a Loosely Typed Language; we do not have to tell PHP which data type the variable is. PHP automatically converts the variable to the correct data type, depending on its value.</p>
 	<p>In PHP, variables can be declared anywhere in the script. The scope of a variable is the part of the script where the variable can be referenced/used. PHP has three different variable scopes: local, global, static.</p>
 	<p>A variable declared outside a function has a <strong>GLOBAL SCOPE</strong> and can only be accessed outside a function:</p>
-<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+
+<pre class="language-php"><code>
+
 $x = 5; // global scope
 function myTest() {
     // using x inside this function will generate an error
     echo "Variable x inside function myTest is: $x";
 } 
 myTest();
-echo "Variable x outside function myTest is: $x";</pre>
+echo "Variable x outside function myTest is: $x";
+</code></pre>
 
 	<p>A variable declared within a function has a LOCAL SCOPE and can only be accessed within that function:</p>
-<pre class="brush: php; highlight: [0]; first-line: 10" title=" ">
+
+<pre class="language-php"><code>
+
 function myTest2() {
     $x = 6; // local scope
     echo "Variable x inside function myTest2 is: $x";
 } 
 myTest2();
 // using x outside the function will generate an error
-echo "Variable x outside function myTest2 is: $x";</pre>
+echo "Variable x outside function myTest2 is: $x";
+</code></pre>
 
 
 	<p>The global keyword is used to access a global variable from within a function. To do this, use the global keyword before the variables (inside the function): </p>
-<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+
+<pre class="language-php"><code>
 $x = 5;
 $y = 10;
 function myTest3() {
@@ -234,21 +253,27 @@ function myTest3() {
     $y = $x + $y;
 }
 myTest3();
-echo $y; // outputs 15</pre>
+echo $y; // outputs 15
+</code></pre>
 
 <p>PHP also stores all global variables in an array called $GLOBALS[index]. The index holds the name of the variable. This array is also accessible from within functions and can be used to update global variables directly. The example above can be rewritten like this:</p>
-<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+
+<pre class="language-php"><code>
 $x = 5;
 $y = 10;
 function myTest4() {
     $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
 } 
 myTest4();
-echo $y; // outputs 15</pre>
+echo $y; // outputs 15
+</code></pre>
 
 	<h6>Using the static keyword</h6>
 <p>Normally, when a function is completed/executed, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a further job. To do this, use the static keyword when you first declare the variable:</p>
-<pre class="brush: php; highlight: [0]; first-line: 1" title=" ">
+
+
+	
+<pre class="language-php"><code>
 function myTest5() {
     static $x = 0;
     echo $x;
@@ -257,14 +282,16 @@ function myTest5() {
 myTest5(); echo "&lt;br>";
 myTest5(); echo "&lt;br>";
 myTest5(); echo "&lt;br>";
-myTest5(); echo "&lt;br>";</pre>
+myTest5(); echo "&lt;br>";
+</code></pre>
 <p>Then, each time the function is called, that variable will still have the information it contained from the last time the function was called. Note: The variable is still local to the function.</p>	
 	
+    <!--
 		<button onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/Y3gLsrT7', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/inclass/example_php_04.png" alt="example 2"  class="btn btn-outline-secondary btn-block" style="cursor:pointer;">Click to run the examples in phpfiddle.</button>	
-	
+	-->
 	<hr>
 </section>
-</article>
+
 
 
 
