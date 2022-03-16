@@ -109,21 +109,21 @@ figcaption {
 	<h3>Using sessions on the server</h3>
 	<p>Read and practise <a href="http://www.w3schools.com/php/php_sessions.asp" target="_blank">w3schools PHP 5 Sessions</a> to familiarize yourself with sessions.</p>	 
 	<p>You can store information about users, such as their email, name, phone numer, and other details, and automatically fill in that information wherever it is needed. You store this information in a session, hidden from the user, until you use it. You use session variables as you would any other variables.  Sessions are store in an array called <samp>$_SESSION</samp>. You store values just as you would with a named array in PHP. See <samp>session_start()</samp>, <samp>session_id</samp>, <samp>session_name</samp>, <samp>session_destroy</samp></p>	
-<pre class="brush: js; highlight: [2,3,4,5]; first-line: 1" title="Create session variables">
+<pre class="language-php"><code title="Create session variables">
 &lt;?php
 session_start();
 $_SESSION['appStarted'] = true;
 $_SESSION['accessTime'] = date("M/d/Y g:i:sa");
 echo "The page was accessed at: " . $_SESSION['accessTime'];
-?></pre>
+?></code></pre>
 
-<pre class="brush: js; highlight: [2,3,4,5]; first-line: 1" title="Check if a session variable is set before using it">
+<pre class="language-php"><code title="Check if a session variable is set before using it">
 &lt;?php
 session_start();
 if (!isset($_SESSION['accessTime'])) {
 	die(header("Location: page1.php"));
 } 
-?></pre>
+?></code></pre>
 	<p>Add <samp>session_start()</samp> function at the <b>beginning of every PHP file</b> where you want to access session variables. Sessions close at the end of the PHP program, which means you don't need to do anything to close sessions. For special circumstances, see <samp>session_write_close()</samp> function on php.net.</p>
 	
      <h5>Use session to pass data</h5>
@@ -140,7 +140,7 @@ if (!isset($_SESSION['accessTime'])) {
 	<h3>Session examples</h3>
   <h5>Example 1</h5>
 	<p>In this example, we will work with several files. Let's start with a simple session test program:</p>					
-<pre class="brush: js; highlight: [0]; first-line: 1" title="File: sessionTest.php">
+<pre class="language-php"><code title="File: sessionTest.php">
 &lt;?php
 session_start();
 if (!isset($_SESSION["test"])) {
@@ -156,7 +156,7 @@ if (isset($_GET["cancel"])) {
 }
 echo "&lt;p>&lt;a href=\"sessionTest.php?random=\".rand(1,10000).&cancel=no\">Reload this page&lt;/a>&lt;/p>";
 echo "&lt;p>&lt;a href=\"sessionTest.php?cancel=yes\">Destroy session&lt;/a>&lt;/p>";
-?></pre>
+?></code></pre>
 
 		<p>Upload and test the program on the server. Note what happens if you press the "Reload this page" link. Reload the page several times. Then press the "Destroy session" and again reload the page several times. Take note of the observations you make.</p>	
 	<hr>
@@ -166,7 +166,7 @@ echo "&lt;p>&lt;a href=\"sessionTest.php?cancel=yes\">Destroy session&lt;/a>&lt;
 
 	<h5>Example 2</h5>
 	<p>In the second program </p>	
-<pre class="brush: js; highlight: [0]; first-line: 1" title="File: message.php">
+<pre class="language-php"><code title="File: message.php">
 &lt;?php
 session_start();
 ?>
@@ -193,7 +193,7 @@ if (isset($_SESSION["width"])) {
 }
 ?>
 &lt;/body>
-&lt;/html></pre>		
+&lt;/html></code></pre>		
 	
 		<p>Upload and test the program on the server. </p>	
 	<hr>
@@ -203,7 +203,7 @@ if (isset($_SESSION["width"])) {
 
 	<h5>Example 3</h5>
 	<p>The third program consists of two files, an html file that contains javascript and php file that accesses the super-global variables.</p>					
-<pre class="brush: js; highlight: [0]; first-line: 1" title="File: getStuff.html">
+<pre class="language-php"><code title="File: getStuff.html">
 &lt;!DOCTYPE html>
 &lt;html>
 &lt;head>
@@ -223,9 +223,9 @@ if (width > 0 &amp;&amp; height >0) {
   exit();
 &lt;/script>       
 &lt;/body>
-&lt;/html></pre>
+&lt;/html></code></pre>
 
-<pre class="brush: js; highlight: [0]; first-line: 1" title="File: getStuff.php">
+<pre class="language-php"><code title="File: getStuff.php">
 &lt;?php
 session_start();
 if (isset($_GET["width"])) {
@@ -239,7 +239,7 @@ if (isset($_GET["height"])) {
 echo "&lt;h1>Screen Resolution:&lt;/h1>";
 echo "Width : ".$_GET['width']."&lt;br />";
 echo "Height : ".$_GET['height']."&lt;br />";
-?></pre>
+?></code></pre>
 		<p>Upload both files and test by displaying the html file.</p>
 		<p>After running this file, go back and reload the pages from the previous programs.  Try them in different order and note the results</p> 
 	<hr>
