@@ -14,5 +14,5 @@ Evaluate your solutions
 9. what have you learned? what improvements can you identify? what's the next step?
 10. site published? adheres to naming conventions? site follows standard (required) organization?
 
-**Review** ["A Guideline for Implementing Good Solutions](https://ebajcar.github.io/web10199_worksheets/syst10199/noteworthy/gradeCalc.html)"
+**Review** ["A Guideline for Implementing Good Solutions](https://ebajcar.github.io/web10199_worksheets/noteworthy/gradeCalc.html)"
 
