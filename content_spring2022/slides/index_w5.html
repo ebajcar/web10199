@@ -75,6 +75,38 @@
         </section> 
 
   
+
+<!-- REVIEW Javascript - nested vertical slides -->
+
+        <section>
+            <h2>Review</h2>
+            <p>Javascript language</p>
+        </section> 
+        
+
+
+        <section>
+            <h2>Unobtrusive Javascript</h2>
+            <ol>
+            <li>delay processing &mdash; place at the end body</li>
+            <li>accelerate processing &mdash; <kbd style="color:orange">DOMContentLoaded</kbd> event</li>
+            <li>avoid control boxes (alert, prompt,...)</li>
+            <li>avoid <span style="color:red">event attributes</span> &mdash; hard to maintain</li>
+            <li>ultimately, move code to an external file</li>
+            </ol>
+        </section>         
+
+        <section data-transition="slide" data-background="darkorange" data-background-transition="zoom">
+            <h2>Test yourself</h2>
+            <ol style="font-size:0.9em">
+            <li>After you complete any program, put it aside.</li>
+            <li>Recreate the solution from scratch, without looking at the solution.</li>
+            <li>When you get stuck, reflect on why. Determine what stopped you from completing it. Study related material (and yes, you can look at the solution to help you figure it out at this point). </li>
+            <li>Repeat steps 1, 2, and 3, until you can produce the solution without any help.</li>
+            </ol>
+        </section>          
+        
+        
    
 <section data-background="game_rps.png">
 </section>  
@@ -82,164 +114,6 @@
 <section data-background="rpsls_userHelp.png">
 </section> 
 
-
-<section  data-background="rpsls_userHelp.png">
-    
-    <pre><code class="js" data-line-numbers="1-20">let whatCanThisChoiceBeat = { 
-  rock: [["crushes", "scissors"], 
-         ["crushes", "lizard"]],
-  paper: [["covers", "rock"], 
-          ["disproves", "spock"]],
-  scissors: [["cuts","paper"], 
-             ["decapitates", "lizard"]],
-  lizard: [["poisons", "spock"], 
-           ["eats", "paper"]],
-  spock: [["vaporizes", "rock"], 
-          ["smashes", "scissors"]]
-}</code></pre>  
-					<div style="position: absolute; width: 25%; right: -100px; top: 0px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-            <p><strong>whatCanThisChoiceBeat?</strong></p>
-             <ul style="font-size:0.8em;">
-              <li>rock crushes scissors</li>
-              <li>rock crushes lizard</li>
-              <li>...</li>
-            </ul>     
-            <br>            
-            <p><strong>Custom object</strong></p>
-            <ul style="font-size:0.8em;">
-              <li>Each property represents an available choice.</li>
-              <li>2D Array used to hold the action (relation) and the other choice it beats.</li>   
-            </ul>
-            <p><strong>Still can be used for determining a winner.</strong></p>
-            <p><strong style="color:orange">Extends usage to creating user help.</strong></p>
-					</div>      
-				</section>  
-        
-
-       
-				<section  data-background="rpsls_userHelp.png">
-					
- 					<pre><code class="js" data-line-numbers="1-20">let property; 
-for ( property in whatCanThisChoiceBeat ) {
-  console.log( 
-      property + " " + 
-      whatCanThisChoiceBeat[property][0][0] " " + 
-      whatCanThisChoiceBeat[property][0][1] );
-  console.log( "OR " + 
-      property + " " + 
-      whatCanThisChoiceBeat[property][1][0] + " " + 
-      whatCanThisChoiceBeat[property][1][1] );
-}</code></pre>  
-					<div style="position: absolute; width: 25%; right: -100px; top: 0px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-            <p><strong>Use <code>for...in</code> loop to traverse objects.</strong></p>
-             <ul style="font-size:0.8em;">
-              <li><code>for (variableName in objectOfChoice) {}</code></li>
-              <li><code>variableName</code> takes on the next property value on each loop.</li>
-              <li>Loop terminates when it runs out of properties.</li>
-            </ul>     
-            <br>  
-            <p><strong style="color:orange">Check out the output in the console. Note the three dimensions.</strong></p>            
-
-					</div>      
-				</section>  
-        
-
-       
-				<section  data-background="rpsls_userHelp.png">
-					
- 					<pre><code class="js" data-line-numbers="1-20">let property; 
-for ( property in whatCanThisChoiceBeat ) {
-  console.log( 
-      property + " " + 
-      whatCanThisChoiceBeat[property][0][0] " " + 
-      whatCanThisChoiceBeat[property][0][1] );
-  console.log( "OR " + 
-      property + " " + 
-      whatCanThisChoiceBeat[property][1][0] + " " + 
-      whatCanThisChoiceBeat[property][1][1] );
-}</code></pre>  
-					<div style="position: absolute; width: 45%; right: -200px; top: 0px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-            <p><img src="whatCanThisChoiceBeat.png" alt="console output"></p>            
-
-					</div>      
-				</section>  
-        
-      
-				<section  data-background="rpsls_userHelp.png">
-					
- 					<pre><code  style="font-size:0.8em;" class="js" data-line-numbers="1-20">let table =
-  document.getElementsByTagName("main")[0].appendChild( 
-                                     document.createElement("table"));
-let row = table.appendChild(document.createElement("tr"));
-row.appendChild(document.createElement("td")).innerText = "➦ beats ➦";
-
-// Object.keys() returns an array of keys (strings)
-let choices = Object.keys(whatCanThisChoiceBeat);
-let len = choices.length;
-for (let i = 0; i &lt; len; i++) {
-  let currentTD = row.appendChild(document.createElement("td"));
-  currentTD.innerText = choices[i];
-}</code></pre>  
-					<div style="position: absolute; width: 25%; right: -150px; top: 0px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-            <p><strong>Create table structure using DOM methods.</strong></p>
-             <ul style="font-size:0.8em;">
-              <li><code>document.createElement()</code> is evaluated first.</li>
-              <li>then get a handle to the object you want to attach the new element.</li>
-              <li><code>parent.appendChild(newEl)</code> attaches the new element.</li>
-            </ul>     
-            <br>            
-             <p><strong style="color:orange">Use Object.keys() to create an array of properties.</strong></p>
-            <ul style="font-size:0.8em;">
-              <li>this would replace the original choices variable (no need to duplicate).</li>
-            </ul>           
-					</div>      
-				</section>  
-        
-
-
-      
-				<section  data-background="rpsls_userHelp.png">
-					
- 					<pre><code  style="font-size:0.7em;"  class="js" data-line-numbers="1-20">let i = 0;
-for ( property in whatCanThisChoiceBeat ) {
-  let currentTR = table.appendChild(document.createElement("tr"));
-  let currentTD = currentTR.appendChild(document.createElement("td"));
-  currentTD.innerText = choices[i]; 
-  i++;
-  for (let j = 0; j &lt; len; j++) {
-    let currentTD = currentTR.appendChild(document.createElement("td"));
-    const whichColumn = (el) => el == whatCanThisChoiceBeat[property][0][1];
-    if ( choices.findIndex(whichColumn) == j)
-      currentTD.innerText = whatCanThisChoiceBeat[property][0][0];
-    const whichColumn2 = (el) => el == whatCanThisChoiceBeat[property][1][1];
-    if ( choices.findIndex(whichColumn2) == j)
-      currentTD.innerText = whatCanThisChoiceBeat[property][1][0];    
-  }
-}</code></pre>  
-					<div style="position: absolute; width: 25%; right: -100px; top: 0px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
-            <p><strong>Populate table.</strong></p>
-             <ul style="font-size:0.6em;">
-             <li>Populate first column and first row with properties (same order).
-              <li>if <code>whatCanThisChoiceBeat[property][0][1]</code> is the same as <code>indexOf</code> choices, then display whatCanThisChoiceBeat[property][0][0]</li>
-            </ul>     
-            <br>            
-            <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank"><strong>Arrow functions</strong></a></p>
-            <ul style="font-size:0.7em;">
-              <li>An arrow function expression is a compact alternative to a traditional function expression, but is limited and can't be used in all situations.</li>
-            </ul>
-					</div>      
-				</section>  
- 
-      
-				<section>
-					 <p><strong>Arrow function</strong></p>
- 					<pre><code  style="font-size:0.7em;"  class="js" data-line-numbers="1-20">const whichColumn = (currVal) => currVal == whatCanThisChoiceBeat[property][0][1];</code></pre>  
-					 <p><strong>Traditional function</strong></p>
- 					<pre><code  style="font-size:0.7em;"  class="js" data-line-numbers="1-20">function whichColumn(currVal) {
-  return (currVal == whatCanThisChoiceBeat[property][0][1]);
-}</code></pre>     
-				</section>  
-        
 
 				<section data-background="game_ttt.png">
           <p style="background-color: white; color: black">Continue working on the tictactoe game.<br>Share code snippets and discuss on Piazza Q&amp;A. <br>
@@ -251,6 +125,74 @@ for ( property in whatCanThisChoiceBeat ) {
           <small>Reminder:  cite all ideas and code used in your comments; make it a habit.</small><p>              
 				</section>         
  
+ 
+ 
+        <section data-background="images/game_ttt.png">
+            <pre><code class="js" data-line-numbers="1-14">document.addEventListener("DOMContentLoaded", init);
+/* 
+ gameReset(game)
+ cellWasClicked(cell, game)
+    placeMarkerInSelected(cell, game);
+    checkStatus(cell, game) 
+        doWeHaveAWinner(cell, game)
+        gameContinues(cell, game)
+        itIsAScratch(status, game)
+          displayWinner(status, game)
+        weHaveAWinner(status, game)
+          displayWinner(status, game)
+    OR 
+    gameContinues(cell, game)    
+*/</code></pre>  
+            <div style="position: absolute; width: 25%; right: -100px; top: 0px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                <p><strong>Unobtrusive JavaScript</strong></p>
+                <ul style="font-size:0.8em;">
+                    <li>Scripts placed after marked up content</li>
+                    <li>Accelarated to DOM being ready</li>
+                    <li>No event attributes</li>
+                    <li>No control boxes</li>
+                </ul>     
+                <br>            
+                <p><strong>Functional paradigm</strong></p>
+                <ul style="font-size:0.8em;">
+                    <li>Functions call other functions</li>
+                    <li>init() calls gameReset() and cellWasClicked()</li>
+                    <li>No global variables</li>
+                    <li>Values passed as arguments as needed</li>
+                </ul>
+            </div>      
+        </section>  
+        
+        <section data-background="images/game_ttt.png">
+            <h2>Event methods</h2>
+            <div style="height:500px;overflow:auto;">
+                <script src="https://gist.github.com/ebajcar/9e0d61e2d40a37d01c2097f37caa3a7e.js"></script>
+            </div>
+        </section>       
+
+
+        <section data-background="images/game_rps.png">
+            <div style="width:50%;background-color:white;color:black;">
+            Convert your solution to functional paradigm and unobtrusive Javascript.
+            </div>      
+        </section> 
+ 
+ 
+				<section>
+          <h2>Develop a technology agnostic algorithms</h2>
+          <h5>Problem: tic tac toe game</h5>
+          <a href="https://www.notion.so/Developing-tic-tac-toe-app-5fa13367710f43cc81e98cd66b8a7369" target=_blank" style="cursor:pointer;">Example</a>          
+				</section>  
+                
+                
+        <section data-background="images/images/game_ttt.png">
+            <h2>Event listeners</h2>
+            <div style="height:500px;overflow:auto;">
+                <script src="https://gist.github.com/ebajcar/f073ee3b7f14a2aa4de1f58b812d3b05.js"></script>
+            </div>         
+        </section>           
+
+
+
  
 
         <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
