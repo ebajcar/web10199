@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-<title> SYST10199 learn JS </title>
+<title> SYST10199 learn PHP </title>
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css"/> 
 <link rel="stylesheet" href="../css/prism_coy_dev.css"  />
@@ -35,6 +35,61 @@ code {
 figcaption {
   color: #00b2ce;
   font-weight: 500;
+}
+* {
+  box-sizing: border-box;
+}
+span.template-3col, span.template-4col {
+  background: #fff;
+  padding: 0.2rem;
+  border-radius: 7px;
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.42);
+  height: 20vh;
+  display: grid;
+  grid-gap: 0.5rem;
+}
+span b {
+  background-color: #333940;
+  border-radius: 4px;
+  padding: 0.2rem 1.5rem;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+span b small {
+    line-height:1;
+    text-align:center;
+    font-variant:small-caps;
+    border-top:1px white solid;
+    font-size:0.5em;
+    padding-bottom:6px;
+}
+span b a, span b a:hover {
+  padding: 0;
+  margin: 0;
+  color: yellow;
+  text-decoration: none;
+  display: block;
+}
+span.template-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+span.template-4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+td, th {
+  border: 1px solid lightgray;
+  padding: 2px 6px;
+}
+td:first-child {font-weight: bold;}
+
+.func-border li {
+  border: 1px solid lightgray;
+  margin: 4px;
+  padding: 2px 4px;
+  border-radius: 5px;
+  background-color: #eee;
 }
 </style>
 </head>
@@ -98,87 +153,106 @@ figcaption {
         
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
         <h1>Object-oriented PHP</h1>
-
+<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">An object is a data type which stores data and information on how to process that data.</h6>
 
 <!-- <div id="page70"> 8.1. object-oriented programming -->
-<article id="page70">
-	<h2>Object-oriented programming</h2>
-  
+<div id="1" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Object-oriented programming</h5>
 	<p>The four principles of object-oriented programming are</p>	
-	<dl class="row">
-	  <dt class="col-sm-3">Encapsulation</dt>
-	  <dd class="col-sm-9">A tight coupling or association of data structures with the methods or functions that act on the date. This is called a class, or object (an object is often the implementation of a class). <br><em>Interface</em>: a definition of functions or methods, and their signatures that are available for use to manipulate a given instance of an object.</dd>
-	  <dt class="col-sm-3">Abstraction</dt>
-	  <dd class="col-sm-9">The ability to hide data in order to reduce complexity of an object. <br><em>Data protection</em>: the ability to protectsome components of an object from external entities; realized by language keywords to enable a variable to be declared as private or protected to the owning class.</dd>
-	  <dt class="col-sm-3">Inheritance</dt>
-	  <dd class="col-sm-9">The ability for a class to extend or override functionality of another class. The so-called child class has a whole section that is the parent class and then it has it's own set of functions and data.</dd>
-	  <dt class="col-sm-3">Polymorphism</dt>
-	  <dd class="col-sm-9">The ability to define different functions or classes as having the same name but taking different data types.</dd>
-	</dl>  
+    <table>
+    <tr>  
+	  <td>Encapsulation</td>
+	  <td>A tight coupling or association of data structures with the methods or functions that act on the date. This is called a class, or object (an object is often the implementation of a class). <br><em>Interface</em>: a definition of functions or methods, and their signatures that are available for use to manipulate a given instance of an object.</td>
+    </tr> 
+    <tr>     
+	  <td>Abstraction</td>
+	  <td>The ability to hide data in order to reduce complexity of an object. <br><em>Data protection</em>: the ability to protectsome components of an object from external entities; realized by language keywords to enable a variable to be declared as private or protected to the owning class.</td>
+    </tr> 
+    <tr> 
+	  <td>Inheritance</td>
+	  <td>The ability for a class to extend or override functionality of another class. The so-called child class has a whole section that is the parent class and then it has it's own set of functions and data.</td>
+    </tr> 
+    <tr> 
+	  <td class="col-sm-3">Polymorphism</td>
+	  <td class="col-sm-9">The ability to define different functions or classes as having the same name but taking different data types.</td>
+	</tr>  
+    </table>
 	
 		<p class="byline">Compare to Javascript
 			<a  class="w3-button w3-block w3-dark-grey"  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript" target="_blank">Introduction to Object-Oriented JavaScript on Mozzila</a></p>
-	<hr>
+  </div>
+</div> 
 
 
 <!-- 8.2. Using classes for efficiency -->
-<section id="page71">
-	<h3>Using classes for efficiency</h3>		 
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Using classes for efficiency</h5>
 	<p>Classes can be used to provide shortcuts and helpers throughout programming. For example, when you define a class for a user, you can add functions (called methods) to that user class for common things that users might need to do, such as authenticate a log on, update a password, change or set an email, and so on. Having defined a class, such as User, lets you instantiate a user object, using a New keyword.</p> 
-	<pre class="brush: php; first-line: 0" title=" ">$member = new User;</pre>
+	<pre class="language-php"><code>$member = new User;</code></pre>
 	<p>and you can call methods and properties through your own copy of the user object</p> 
-	<pre class="brush: php; first-line: 0" title=" ">$member->changePassword();</pre>
+	<pre class="language-php"><code>$member->changePassword();</code></pre>
 	
 	<h5>Reusing code</h5>
-	<p>One of the most important aspects of programming is code reuse. Good programmers have sets of programs and functions that they frequently reuse to speed up their new projects. This concept applies to any language.</p>			
-	<hr>
-</section>
+	<p>One of the most important aspects of programming is code reuse. Good programmers have sets of programs and functions that they frequently reuse to speed up their new projects. This concept applies to any language.</p>
+  </div>
+</div> 
 
-<!-- 8.3. PHP Objects -->
-<section id="page72">
-	<h3>PHP Classes</h3>
-	<p>An object is a data type which stores data and information on how to process that data.<br>
-		Declare a <code>class</code> of an object that contains properties and methods. <br><code>class ObjectName { // properties and methods }</code><br> Initialize the object with the new keyword <br><code>$thisInstance = new ObjectName;</code></p>
-	
-	<h5>PHP Classes</h5>
-	<p><code>__construct()</code>; visibility: public, protected, private; 
-	Object Inheritance,</p>
-	<p>Within class methods, <br>non-static properties may be accessed by using <kbd>-></kbd> 
-	<strong>object operator</strong>: <br><code>$this->propertyName</code>. </p>
-	<p>Static properties are accessed by using the <kbd>::</kbd> <strong>double colon</strong>: <br><code>self::$property</code>;</p>
-	<p>The <strong>pseudo-variable</strong> <samp>$this</samp> is available inside any class method when that method is called from within an object context. <samp>$this</samp> is a reference to the calling object;</p>	
+
+<!-- 8.3. PHP Objects <img src="http://php.net/images/logo.php" width="20" class="icon" title="php" alt="link to PHP Manual"> -->
+<div id="3" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">PHP Classes</h5>
+	<p>Declare a <code>class</code> of an object that contains properties and methods. </p>
+    <pre class="language-php"><code>class ObjectName { 
+    // properties and methods 
+}</code></pre>
+    
+    <p> Initialize the object with the <code>new</code> keyword.</p>
+    <pre class="language-php"><code>$thisInstance = new ObjectName;</code></pre>
+
+	<p><code>__construct()</code>; visibility: public, protected, private; Object Inheritance,</p>
+    
+	<p>Within class methods, non-static properties may be accessed by using <kbd>-></kbd> <strong>object operator</strong>: </p>
+    <pre class="language-php"><code>$this->propertyName</code></pre>
+    
+	<p>Static properties are accessed by using the <kbd>::</kbd> <strong>double colon</strong></p>
+    <pre class="language-php"><code>self::$property</code></pre>
+    
+	<p>The <strong>pseudo-variable</strong> <samp>$this</samp> is available inside any class method when that method is called from within an object context. <samp>$this</samp> is a reference to the calling object;</p>
+    
 	<a class="btn btn-default btn-block" href="http://ca3.php.net/manual/en/language.oop5.php" target="_blank">
-		<img src="http://php.net/images/logo.php" width="20" class="icon" title="php" alt="link to PHP Manual"> Classes</a>	
+		 Read more about Classes in PHP Manual</a>	
 	
-	<h5>Class/Object Information</h5>
-	<p>Explore PHP manual</p>
-	<p><a href="http://ca3.php.net/manual/en/book.classobj.php" target="_blank">Class/Object Information</a></p>
-	<p>Implement the  <a href="http://ca3.php.net/manual/en/classobj.examples.php" target="_blank">examples</a>. 
-	Experiment with functions <code>class_exists</code>, <code>get_class_methods</code>, <code>get_class_vars</code>, <code>method_exists</code>, <code>property_exists</code>.
-	What other functions are available? </p>						
-	<hr>
-</section>
-     
+	<p><a href="http://ca3.php.net/manual/en/book.classobj.php" target="_blank">Read more aboutClass/Object Information in PHP Manual</a></p>
+    
+	<p>Implement the  <a href="http://ca3.php.net/manual/en/classobj.examples.php" target="_blank">examples</a> Experiment with functions <code>class_exists</code>, <code>get_class_methods</code>, <code>get_class_vars</code>, <code>method_exists</code>, <code>property_exists</code>.	What other functions are available? </p>	
+  </div>
+</div> 
+
+
 <!-- 7.3.    8.4. Exception Class -->
-<section id="page73">
-	<h3>Exception Class</h3>
-	<p class="type">Explore w3schools.com</p>
-	<button type="button" class="btn btn-outline-success btn-block">
-		<a href="https://www.w3schools.com/php/php_exception.asp" target="_blank">Exception Class</a>	
-	</button>
-	<hr>
-</section>
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Exception Class</h5>
+	<p>
+		<a href="https://www.w3schools.com/php/php_exception.asp" target="_blank">Explore Exception Class on w3schools</a>	
+	</p>
+  </div>
+</div> 
+
+
 
 <!-- 7.4.   8.5. PDO Class -->
-<section id="page74">
-	<h3>PDO Class</h3>
-		<p class="type">Explore PHP manual</p>
-		<button type="button" class="btn btn-outline-success btn-block">
-			<a href="http://ca3.php.net/manual/en/class.pdo.php" target="_blank">PDO Class</a>
-		</button>
-<br>		
-	<h5 class="title"><span>PHP Data Objects (PDO)</span></h5>
-
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">PHP Data Objects (PDO) Class</h5>
 	<ul class="dialog-ul">
 		<li><h6>Connections and Connection management</h6>
 			<p>Connections are established by creating instances of the PDO base class. It doesn't matter which driver you want to use; you always use the PDO class name. The constructor accepts parameters for specifying the database source (known as the DSN) and optionally for the username and password (if any).</p></li>
@@ -189,20 +263,29 @@ figcaption {
 		<li>PDOException — The PDOException class</li>
 		<li>MySQL (PDO) — MySQL Functions (PDO_MYSQL)</li>
 	</ul>
+	<p>
+		<a href="http://ca3.php.net/manual/en/class.pdo.php" target="_blank">Explore PDO Class on w3schools</a>	
+	</p>
+  </div>
+</div> 
 
-	<h5>Example using interators to create and PDO to populate a table</h5>
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Example using interators to create and PDO to populate a table</h5>
 	<p>Explore <code>PDO class, PDO::prepare, PDOStatement::execute, PDOStatement::setFetchMode, RecursiveIteratorIterator class, RecursiveArrayIterator class,...</code></p>
 	<p>Download raw code and save as guests.php. Create a table called <code>MyGuests</code>, with fields <code>id, firstname, lastname</code>. Update connection information appropriately. Test, explore, and expand.</p>
 	<iframe src="https://pastebin.com/embed_iframe/bPxqgSHi" style="width:100%;"></iframe>
 
 	<p>Expected result:</p>
-	<p style="max-height:150px;overflow:hidden;"><img src="images/example09_010.png" style="width:100%"></p>
+	<p style="max-height:250px;overflow:hidden;"><img src="../images/example09_010.png" style="width:100%"></p>
 	<p>Examine the original version <a href="https://tryphp.w3schools.com/showphpfile.php?filename=demo_db_select_pdo" target="_blank">w3schools example</a>. Implement on dev.fast and (or) your local server.  Document all steps and changes you had to make it work properly.</p> 
-		
-	<hr>
-</section>	 
-</article>	 	 
-	
+  </div>
+</div> 
+
+
     
     </section>
       

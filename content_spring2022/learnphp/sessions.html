@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-<title> SYST10199 learn JS </title>
+<title> SYST10199 learn PHP </title>
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css"/> 
 <link rel="stylesheet" href="../css/prism_coy_dev.css"  />
@@ -35,6 +35,60 @@ code {
 figcaption {
   color: #00b2ce;
   font-weight: 500;
+}
+* {
+  box-sizing: border-box;
+}
+span.template-3col, span.template-4col {
+  background: #fff;
+  padding: 0.2rem;
+  border-radius: 7px;
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.42);
+  height: 20vh;
+  display: grid;
+  grid-gap: 0.5rem;
+}
+span b {
+  background-color: #333940;
+  border-radius: 4px;
+  padding: 0.2rem 1.5rem;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+span b small {
+    line-height:1;
+    text-align:center;
+    font-variant:small-caps;
+    border-top:1px white solid;
+    font-size:0.5em;
+    padding-bottom:6px;
+}
+span b a, span b a:hover {
+  padding: 0;
+  margin: 0;
+  color: yellow;
+  text-decoration: none;
+  display: block;
+}
+span.template-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+span.template-4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+td {
+  border: 1px solid lightgray;
+}
+td:first-child {font-weight: bold;}
+
+.func-border li {
+  border: 1px solid lightgray;
+  margin: 4px;
+  padding: 2px 4px;
+  border-radius: 5px;
+  background-color: #eee;
 }
 </style>
 </head>
@@ -97,15 +151,14 @@ figcaption {
     </div>  
         
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
-        <h1>Sessions</h1>
+        <h1>PHP Sessions</h1>
+        
 
-		 
-<!-- <div id="page80">   8. PHP Sessions           9.1. Using sessions on the server-->
-<article id="page80">
-	<h2>PHP Sessions</h2>
   
-<section id="page81">  
-	<h3>Using sessions on the server</h3>
+<div id="1" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Using sessions on the server</h5>
 	<p>Read and practise <a href="http://www.w3schools.com/php/php_sessions.asp" target="_blank">w3schools PHP 5 Sessions</a> to familiarize yourself with sessions.</p>	 
 	<p>You can store information about users, such as their email, name, phone numer, and other details, and automatically fill in that information wherever it is needed. You store this information in a session, hidden from the user, until you use it. You use session variables as you would any other variables.  Sessions are store in an array called <samp>$_SESSION</samp>. You store values just as you would with a named array in PHP. See <samp>session_start()</samp>, <samp>session_id</samp>, <samp>session_name</samp>, <samp>session_destroy</samp></p>	
 <pre class="language-php"><code title="Create session variables">
@@ -124,20 +177,29 @@ if (!isset($_SESSION['accessTime'])) {
 } 
 ?></code></pre>
 	<p>Add <samp>session_start()</samp> function at the <b>beginning of every PHP file</b> where you want to access session variables. Sessions close at the end of the PHP program, which means you don't need to do anything to close sessions. For special circumstances, see <samp>session_write_close()</samp> function on php.net.</p>
-	
-     <h5>Use session to pass data</h5>
+  </div>
+</div> 
 
+
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Use session to pass data</h5>
 	<p>The key to using sessions is the <samp>session_start()</samp> function.  You call the function on every page and subsequently have access to all the items in the <samp>$_SESSION</samp> array. The function starts a new session if need be AND continues an existing session where appropriate.</p>
 
 	<p>A good resource to watch: <a href="http://www.lynda.com/PHP-tutorials/PHP-Web-Designers/146234-2.html?org=sheridanc.ca" target="_blank">PHP for Web Designers with David Powers (lynda.com video)</a>.</p>	
+  </div>
+</div> 
 
-	</section>
 
 
-<!-- 9.1. Example 1 -->
-<section id="page82">
-	<h3>Session examples</h3>
-  <h5>Example 1</h5>
+
+<div id="3" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Session Example 1</h5>
 	<p>In this example, we will work with several files. Let's start with a simple session test program:</p>					
 <pre class="language-php"><code title="File: sessionTest.php">
 &lt;?php
@@ -158,12 +220,17 @@ echo "&lt;p>&lt;a href=\"sessionTest.php?cancel=yes\">Destroy session&lt;/a>&lt;
 ?></code></pre>
 
 		<p>Upload and test the program on the server. Note what happens if you press the "Reload this page" link. Reload the page several times. Then press the "Destroy session" and again reload the page several times. Take note of the observations you make.</p>	
-	<hr>
+  </div>
+</div> 
+
+
 
 
 <!-- 9.3. Example 2 -->
-
-	<h5>Example 2</h5>
+<div id="4" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Session Example 2</h5>
 	<p>In the second program </p>	
 <pre class="language-php"><code title="File: message.php">
 &lt;?php
@@ -195,12 +262,17 @@ if (isset($_SESSION["width"])) {
 &lt;/html></code></pre>		
 	
 		<p>Upload and test the program on the server. </p>	
-	<hr>
+  </div>
+</div> 
+
+
 
 
 <!-- 9.4. Example 3 -->
-
-	<h5>Example 3</h5>
+<div id="5" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Session Example 3</h5>
 	<p>The third program consists of two files, an html file that contains javascript and php file that accesses the super-global variables.</p>					
 <pre class="language-php"><code title="File: getStuff.html">
 &lt;!DOCTYPE html>
@@ -241,9 +313,10 @@ echo "Height : ".$_GET['height']."&lt;br />";
 ?></code></pre>
 		<p>Upload both files and test by displaying the html file.</p>
 		<p>After running this file, go back and reload the pages from the previous programs.  Try them in different order and note the results</p> 
-	<hr>
-</section>
-</article>
+  </div>
+</div> 
+
+
 
 	
 

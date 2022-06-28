@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-<title> SYST10199 learn JS </title>
+<title> SYST10199 learn PHP </title>
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css"/> 
 <link rel="stylesheet" href="../css/prism_coy_dev.css"  />
@@ -36,6 +36,49 @@ figcaption {
   color: #00b2ce;
   font-weight: 500;
 }
+* {
+  box-sizing: border-box;
+}
+span.template-3col {
+  background: #fff;
+  padding: 0.2rem;
+  border-radius: 7px;
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.42);
+  height: 29vh;
+  display: grid;
+  grid-gap: 0.5rem;
+}
+span b {
+  background-color: #333940;
+  border-radius: 4px;
+  padding: 0.2rem 1.5rem;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+span b small {
+    line-height:1;
+    text-align:center;
+    font-variant:small-caps;
+    border-top:1px white solid;
+    font-size:0.5em;
+    padding-bottom:6px;
+}
+span b a, span b a:hover {
+  padding: 0;
+  margin: 0;
+  color: yellow;
+  text-decoration: none;
+  display: block;
+}
+span.template-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+td {
+  border: 1px solid lightgray;
+}
+td:first-child {font-weight: bold;}
 </style>
 </head>
 
@@ -98,53 +141,71 @@ figcaption {
         
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
         <h1>Operators</h1>
+    <h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800"  title="defined by [MDN]">Operators are special symbols that represent computations like addition and multiplication. The values the operator uses are called operands.</h6>
+
+<ul class="nav nav-pills flex flex-col md:flex-row list-none pl-0 mb-4 mx-48" id="pills-tabFill" role="tablist">
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#1" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">What is an operator</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#2" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">PHP Operator types</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#3" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Operator precedence</a>
+  </li>
+</ul>
+
+<!-- <div id="page30"> 3.1. PHP Operators -->
+<div id="1" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">What is an operator?</h5>	
+<p>An operator is something that takes one or more values (or expressions, in programming jargon) and yields another value (so that the construction itself becomes an expression).</p>
+<p><a target="_blank"
+			href="http://ca3.php.net/manual/en/language.operators.php">What are operators? Read more in PHP Manual
+		</a></p>
+  </div>
+</div> 
 
 
 <!-- <div id="page30"> 3.1. PHP Operators -->
-<article id="page30">
-	<h2>PHP Operators</h2>
-		<p>An operator is something that takes one or more values (or expressions, in programming jargon) and yields another value (so that the construction itself becomes an expression).</p>
-    
-<section id="page31">
-    <h3>PHP Operators</h3>
-		<p><a target="_blank"
-			href="http://ca3.php.net/manual/en/language.operators.php">What are operators? Read more in <strong class="text-dark">PHP Manual @ </strong>  					
-			  <img src="http://php.net/images/logo.php" width="28" class="icon" title="php" alt="link to PHP Manual"><strong class="text-dark">.net</strong>
-		</a></p>	
-		<ul class="ul">
-			<li><strong>Assignment operators</strong>  &mdash; </li>
-			<li><strong>Arithmetic operators</strong>  &mdash; Addition, Subtraction, Multiplication, Division, Modulus, Exponentiation; </li>
-			<li><strong>Array operators</strong>  &mdash; Union, Equality, Identity, Inequality, Non-identity; </li>
-			<li><strong>String operators</strong>  &mdash; Concatenation; </li>
-			<li><strong>Logical operators</strong>  &mdash; And, Or, Xor, And, Or, Not; </li>
-			<li><strong>Increment/Decrement operators</strong>  &mdash; Pre-increment, Post-increment, Pre-decrement, Post-decrement;</li>
-			<li><strong>Comparison operators</strong>  &mdash; Equal, Identical, Not equal, Not identical, Greater than, Less than, &hellip;</li>
-			<li><strong>Ternary conditional operator</strong>  &mdash;  If the value of the first sub-expression is TRUE (non-zero), then the second sub-expression is evaluated, and that is the result of the conditional expression. Otherwise, the third sub-expression is evaluated, and that is the value.<br><code> $first ? $second : $third ;</code> </li>
-		</ul>	
-</section>
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Operator types</h5>	
+            <span class="template-3col">
+                <b>Assignment<br><small>Set a variable value</small></b>
+                <b>Arithmetic<br><small>Addition, Subtraction, Multiplication, Division, Modulus, Exponentiation;</small></b>
+                <b>Array<br><small>Union, Equality, Identity, Inequality, Non-identity; </small></b>
+                <b>String<br><small>Concatenation;</small></b>
+                <b>Increment/Decrement<br><small>Pre-increment, Post-increment, Pre-decrement, Post-decrement;</small></b>
+                <b>Logical<br><small>And, Or, Xor, And, Or, Not;</small></b>
+                <b>Comparison<br><small>Equal, Identical, Not equal, Not identical, Greater than, Less than, &hellip;</small></b>
+                <b>Ternary conditional<br><code style="font-size: 0.5em"> $first ? $second : $third ;</code></b>
+                <b>&nbsp;</b>
+             </span>
+             <p> </p>
+             <p class="text-gray-700 text-base mt-2  w-full"><strong>Ternary conditional operator:</strong> If the value of the first sub-expression is TRUE (non-zero), then the second sub-expression is evaluated, and that is the result of the conditional expression. Otherwise, the third sub-expression is evaluated, and that is the value. <a href="">Read more&hellip;</a></p>
+  </div>
+</div>
 
 
 <!-- 3.2. Operator precedence -->
-<section id="page32">
-	<h3>Operator precedence</h3>
+<div id="3" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Operator precedence</h5>	
 	<p>The precedence of an operator specifies how "tightly" it binds two expressions together. For example, in the expression <var>1 + 5 * 3</var>, the answer is 16 and not 18 because the multiplication ("*") operator has a higher precedence than the addition ("+") operator. Parentheses may be used to force precedence, if necessary. For instance: <var>(1 + 5) * 3</var> evaluates to 18.</p>
 	<p>When operators have equal precedence their associativity decides how the operators are grouped. For example "-" is left-associative, so <var>1 - 2 - 3</var> is grouped as <var>(1 - 2) - 3</var> and evaluates to -4. "=" on the other hand is right-associative, so <var>$a = $b = $c</var> is grouped as <var>$a = ($b = $c)</var>.</p>
 	<p>Operators of equal precedence that are non-associative cannot be used next to each other, for example 1 &lt; 2 > 1 is illegal in PHP. The expression <var>1 &lt;= 1 == 1</var> on the other hand is legal, because the <code>==</code> operator has lesser precedence than the <code>&lt;=</code> operator.</p>
 	<p>Use of parentheses, even when not strictly necessary, can often increase readability of the code by making grouping explicit rather than relying on the implicit operator precedence and associativity.</p>
 	<p>Source: <a target="_blank" href="http://php.net/manual/en/language.operators.precedence.php">PHP Manual</a></p>
-	<hr>
-</section>
-</article>
+  </div>
+</div> 
 
 
-<!--  Operators --> 
-<article id="page50">
-	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800"  title="defined by [MDN]">Operators are special symbols that represent computations like addition and multiplication. The values the operator uses are called operands.</h6>
-	</div>
-  <hr>	
-	
 
-</article>
+
 
 
     </section>

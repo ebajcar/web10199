@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-<title> SYST10199 learn JS </title>
+<title> SYST10199 learn PHP </title>
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css"/> 
 <link rel="stylesheet" href="../css/prism_coy_dev.css"  />
@@ -35,6 +35,60 @@ code {
 figcaption {
   color: #00b2ce;
   font-weight: 500;
+}
+* {
+  box-sizing: border-box;
+}
+span.template-3col, span.template-4col {
+  background: #fff;
+  padding: 0.2rem;
+  border-radius: 7px;
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.42);
+  height: 20vh;
+  display: grid;
+  grid-gap: 0.5rem;
+}
+span b {
+  background-color: #333940;
+  border-radius: 4px;
+  padding: 0.2rem 1.5rem;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+span b small {
+    line-height:1;
+    text-align:center;
+    font-variant:small-caps;
+    border-top:1px white solid;
+    font-size:0.5em;
+    padding-bottom:6px;
+}
+span b a, span b a:hover {
+  padding: 0;
+  margin: 0;
+  color: yellow;
+  text-decoration: none;
+  display: block;
+}
+span.template-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+span.template-4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+td {
+  border: 1px solid lightgray;
+}
+td:first-child {font-weight: bold;}
+
+.func-border li {
+  border: 1px solid lightgray;
+  margin: 4px;
+  padding: 2px 4px;
+  border-radius: 5px;
+  background-color: #eee;
 }
 </style>
 </head>
@@ -97,12 +151,15 @@ figcaption {
     </div>  
         
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
-        <h1>MySQL DBMS</h1>
+        <h1>MySQL Database Management System (DBMS)</h1>
 
 
 <!-- 9. Databases       9.1.   10.1. Database Primer -->
-<section id="page90">
-	<h3>Database Primer</h3>
+
+<div id="1" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Databases</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Database Primer</h5>
 				<p>The <mark>data hierarchy</mark> shows the different components that make up a database. You will encounter these components repeatedly throughout most of your courses that deal with programming, database development and implementation, and even systems analysis.</p>
 				
 				<p>A <mark>field</mark> is a piece of information that describes an <mark>entity</mark>. </p>
@@ -122,12 +179,17 @@ figcaption {
 				<p>Each table must have a special field called the <mark>primary key</mark>. A proper table in a relational database must not contain any duplicate records. To avoid duplicate records, and to ensure that two records which appear similar are in fact different, we use primary key fields. A primary key is a special field that uniquely identifies each record. For example, no student in the college has the same student number as any other student, so that is used as the primary key in the student table.</p> 
 
 				<p>Sometimes you'll have a field that is actually a <strong>primary key from another table</strong>. This is called a <mark>foreign key</mark> and is used as a reference to the other table. For example, a student will get a grade in each completed course. Instead of duplicating a student's record fields in the grade table, the student's number field only appears in the grade table's record.</p> 	
+                <div class="box" style="text-align:center;margin:auto">
+                    <img class="card text-center" style="width:70%;margin:auto" src="images/database.png" alt="PHP intro slide">	  
+                </div>
+  </div>
+</div> 
 
-    <div class="box" style="text-align:center;margin:auto">
-		<img class="card text-center" style="width:70%;margin:auto" src="images/database.png" alt="PHP intro slide">	  
-    </div><hr>
-<h5>Practice Questions</h5>
-	
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Databases</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Practice Questions</h5>
 		<p>( Choose one of the following for each blank above: Character, Field, Record, File )</p>
 			<ol type="a">
 			<li><input class="mybox" title="Characters"> by themselves usually don’t have much meaning.</li>
@@ -139,45 +201,62 @@ figcaption {
 			<li>A <input class="mybox" title="file"> has a group of records that go together to describe many items in an entity. Examples:  Student file = FAST students   Customer file = Joe’s customers</li>
 			<li>Each <input class="mybox" title="record"> in the <input class="mybox" title="table"> has all the same fields.</li>
 			</ol>
-
-	<hr>
-</section>
+  </div>
+</div> 
 
 
 
 <!-- MySQL Database Management System-->
-<section>
-	<h3>MySQL Database Management System</h3>
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Databases</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">MySQL Database Management System (DBMS)</h5>
 	<a  class="btn btn-default" target="_blank" role="button" href="http://dev.mysql.com/doc/refman/5.7/en/tutorial.html" >
 	<strong>MySQL</strong>&mdash;open-source relational database management system (RDBMS)</a> 
-	<hr>
-    <h4>DBMS functionality</h4>
+  </div>
+</div> 
+
+<!--
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Web server</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">DBMS functionality</h5>
     <p>To be added soon</p>
-</section>
+  </div>
+</div> 
+
+-->
+
+
 
 
  
 <!-- 9.2.   10.2. Using phpMyAdmin Tool-->
-<section id="pageA2">
-
-	<h3><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/PhpMyAdmin_logo.png" width="90" class="icon"  
-			  alt="phpMyAdmin">  What is phpMyAdmin?</h3>
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Databases</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2"><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/PhpMyAdmin_logo.png" width="90" class="icon"  
+			  alt="phpMyAdmin"></h5>
+	<h3>  What is phpMyAdmin?</h3>
 	<p>Explore <a title="phpMyAdmin is a free software tool written in PHP, intended to handle the administration of MySQL over the Web." 
                   href="https://www.phpmyadmin.net/" ><strong>phpMyAdmin</strong> &mdash;a free software tool. </a></p>
     <p class="lead">Available on <samp>dev.fast.sheridanc.on.ca</samp> server through the <samp>cPanel</samp>.</p>   
         
-
-    
-    
 	<!--a  class="btn btn-warning" target="_blank" role="button" href="https://en.wikipedia.org/wiki/SQL:2011">
 	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/150px-Wikipedia-logo-v2.svg.png" height="20" class="icon"  
 	 title="https://en.wikipedia.org/wiki/SQL" alt="SQL"> 					
-	SQL&mdash;a database language </a-->	
-    <hr>
-	<h3>Using phpMyAdmin Tool</h3>
-	<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vThpc3cKGVA9796ytosGGKJviB4CttZrIsJyDLRWgAhCCzdl7Bb8fOOeNSo0Snd1maMyZctCUo-0uEW/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="396" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>	
-</section>
+	SQL&mdash;a database language </a-->
+  </div>
+</div> 
 
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Databases</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Using phpMyAdmin Tool</h5>
+	<iframe style="text-align:center;margin:auto;" src="https://docs.google.com/presentation/d/e/2PACX-1vThpc3cKGVA9796ytosGGKJviB4CttZrIsJyDLRWgAhCCzdl7Bb8fOOeNSo0Snd1maMyZctCUo-0uEW/embed?start=false&loop=false&delayms=3000" frameborder="0" width="480" height="396" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>	
+  </div>
+</div> 
 
 
     </section>

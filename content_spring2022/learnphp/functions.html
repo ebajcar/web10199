@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-<title> SYST10199 learn JS </title>
+<title> SYST10199 learn PHP </title>
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css"/> 
 <link rel="stylesheet" href="../css/prism_coy_dev.css"  />
@@ -35,6 +35,60 @@ code {
 figcaption {
   color: #00b2ce;
   font-weight: 500;
+}
+* {
+  box-sizing: border-box;
+}
+span.template-3col, span.template-4col {
+  background: #fff;
+  padding: 0.2rem;
+  border-radius: 7px;
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.42);
+  height: 20vh;
+  display: grid;
+  grid-gap: 0.5rem;
+}
+span b {
+  background-color: #333940;
+  border-radius: 4px;
+  padding: 0.2rem 1.5rem;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+span b small {
+    line-height:1;
+    text-align:center;
+    font-variant:small-caps;
+    border-top:1px white solid;
+    font-size:0.5em;
+    padding-bottom:6px;
+}
+span b a, span b a:hover {
+  padding: 0;
+  margin: 0;
+  color: yellow;
+  text-decoration: none;
+  display: block;
+}
+span.template-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+span.template-4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+td {
+  border: 1px solid lightgray;
+}
+td:first-child {font-weight: bold;}
+
+.func-border li {
+  border: 1px solid lightgray;
+  margin: 4px;
+  padding: 2px 4px;
+  border-radius: 5px;
+  background-color: #eee;
 }
 </style>
 </head>
@@ -97,152 +151,162 @@ figcaption {
     </div>  
         
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
-        <h1>Functions</h1>
+    <h1>Functions</h1>
+    <h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">The real power of PHP comes from its functions. It has more than 1000 built-in functions. We can create our own functions. <footer class="blockquote-footer"><cite title="www.w3schools.com/php/php_functions.asp">www.w3schools.com</cite></footer></h6>
 
+    <ul class="nav nav-pills flex flex-col md:flex-row list-none pl-0 mb-4 mx-48" id="pills-tabFill" role="tablist">
+      <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+        <a href="#1" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Built-in functions</a>
+      </li>
+      <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+        <a href="#2" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Array functions</a>
+      </li>
+      <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+        <a href="#3" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">String functions</a>
+      </li>
+      <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+        <a href="#3" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Variable handling functions</a>
+      </li>
+    </ul>
+    
+    <ul class="nav nav-pills flex flex-col md:flex-row list-none pl-0 mb-4 mx-48" id="pills-tabFill" role="tablist">
+      <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+        <a href="#3" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Mathematical functions</a>
+      </li>
+      <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+        <a href="#3" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Filesystem functions</a>
+      </li>
+      <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+        <a href="#3" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Error handling functions</a>
+      </li>
+      <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+        <a href="#3" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Date and time functions</a>
+      </li>
+    </ul>
 
 <!-- <div id="page60">   7.1. Built-in Functions -->
-<article id="page60">
-	<h2>PHP Functions</h2>
-	
-	<div class="card  bg-dark text-white text-center">
-	  <p class="lead card-body" title="defined by w3schools"> 
-The real power of PHP comes from its functions. It has more than 1000 built-in functions. We can create our own functions.</p>
-		<footer class="blockquote-footer"><cite title="www.w3schools.com/php/php_functions.asp">www.w3schools.com</cite></footer>
-	</div>
-
-<section id="page61">
-<h3>Built-in Functions</h3>
+<div id="1" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Built-in Functions</h5>
 		<ul class="w3-ul">
 			<li>A function is a block of statements that can be used repeatedly in a program.</li>
 			<li>A function will not execute immediately when a page loads.</li>
 			<li>A function will be executed by a call to the function.</li>
 		</ul>	
 
-			<p>This is not an exhaustive list, it is to highlight the more commonly used and good to know how to use</p>
-		<ul class="w3-ul">
-			<li>
-				<a href="http://ca3.php.net/manual/en/ref.array.php" target="_blank">Array Functions</a>
-				<br><code>array_rand, array_diff, array_key_exists, array_map, array_merge, array_pop, array_push,  array_shift, array_slice, array, count, each, arsort, asort, ksort, next, prev, range, sizeof, ... </code>&hellip; <a href="http://ca3.php.net/manual/en/book.array.php" target="_blank">Array Functions</a></li>
-			<li>
-				<a href="http://php.net/manual/en/ref.strings.php" target="_blank">String Functions</a>
-				<br><code>chr, strstr, trim, print, echo</code>, <code>strlen</code>,  
+			<p>This is not an exhaustive list, it is to highlight the more commonly used and good to know how to use. For more indepth study, see <a href="http://ca3.php.net/manual/en/funcref.php" target="_blank">Function Reference in PHP manual</a></p>
+  </div>
+</div> 
+
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Array Functions</h5>
+
+   
+    <ul class="list-none mx-8 func-border" 
+        style="display: flex; flex-flow: row wrap;" id="pills-tabFill" role="tablist">
+      <li class="nav-item flex-auto text-center" role="presentation">array</li>
+      <li class="nav-item flex-auto text-center" role="presentation">count</li>
+      <li class="nav-item flex-auto text-center" role="presentation">sizeof</li>
+      <li class="nav-item flex-auto text-center" role="presentation">array_rand</li>
+      <li class="nav-item flex-auto text-center" role="presentation">array_diff</li>
+      <li class="nav-item flex-auto text-center" role="presentation">array_key_exists</li>
+      <li class="nav-item flex-auto text-center" role="presentation">array_map</li>
+      <li class="nav-item flex-auto text-center" role="presentation">array_merge</li>
+      <li class="nav-item flex-auto text-center" role="presentation">array_pop</li>
+      <li class="nav-item flex-auto text-center" role="presentation">array_push</li>
+      <li class="nav-item flex-auto text-center" role="presentation">array_shift</li>
+      <li class="nav-item flex-auto text-center" role="presentation">array_slice</li>
+
+      <li class="nav-item flex-auto text-center" role="presentation">each</li>
+      <li class="nav-item flex-auto text-center" role="presentation">arsort</li>
+      <li class="nav-item flex-auto text-center" role="presentation">asort</li>
+      <li class="nav-item flex-auto text-center" role="presentation">ksort</li>
+      <li class="nav-item flex-auto text-center" role="presentation">next</li>
+      <li class="nav-item flex-auto text-center" role="presentation">prev</li>
+      <li class="nav-item flex-auto text-center" role="presentation">range</li>
+      
+    </ul>
+    <p class="lead"><a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  target="_blank"  
+            href="http://ca3.php.net/manual/en/ref.array.php">Read more in PHP Manual	</a></p>
+    
+				<!--br><code>array_rand, array_diff, array_key_exists, array_map, array_merge, array_pop, array_push,  array_shift, array_slice, array, count, each, arsort, asort, ksort, next, prev, range, sizeof, ... </code>&hellip; <a href="http://ca3.php.net/manual/en/book.array.php" target="_blank">Array Functions</a-->
+  </div>
+</div> 
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">String Functions</h5>
+    
+    <ul class="list-none mx-8 func-border" 
+        style="display: flex; flex-flow: row wrap;" id="pills-tabFill" role="tablist">
+      <li class="nav-item flex-auto text-center role="presentation">chr</li>
+      <li class="nav-item flex-auto text-center" role="presentation">strstr</li>
+      <li class="nav-item flex-auto text-center" role="presentation">trim</li>
+      <li class="nav-item flex-auto text-center" role="presentation">print</li>
+      <li class="nav-item flex-auto text-center" role="presentation">echo</li>
+      <li class="nav-item flex-auto text-center" role="presentation">strlen</li>
+      <li class="nav-item flex-auto text-center" role="presentation">str_word_count</li>
+      <li class="nav-item flex-auto text-center" role="presentation">strrev</li>
+      <li class="nav-item flex-auto text-center" role="presentation">strpos</li>
+      <li class="nav-item flex-auto text-center" role="presentation">str_replace</li>
+      <li class="nav-item flex-auto text-center" role="presentation">implode</li>
+      <li class="nav-item flex-auto text-center" role="presentation">explode</li>
+      <li class="nav-item flex-auto text-center" role="presentation">chunk_split</li>
+      <li class="nav-item flex-auto text-center" role="presentation">chop</li>
+      <li class="nav-item flex-auto text-center" role="presentation">crypt</li>
+      <li class="nav-item flex-auto text-center" role="presentation">fprintf</li>
+      <li class="nav-item flex-auto text-center" role="presentation">htmlspecialchars</li>
+      <li class="nav-item flex-auto text-center" role="presentation">join</li>
+      <li class="nav-item flex-auto text-center" role="presentation">ltrim</li>
+      <li class="nav-item flex-auto text-center" role="presentation">rtrim</li>
+      <li class="nav-item flex-auto text-center" role="presentation">str_split</li>
+      <li class="nav-item flex-auto text-center" role="presentation">printf</li>
+      <li class="nav-item flex-auto text-center" role="presentation">substr</li>
+      <li class="nav-item flex-auto text-center" role="presentation">sprintf</li>
+    </ul>
+    <p class="lead"><a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  target="_blank"  
+            href="http://php.net/manual/en/ref.strings.php">Read more in PHP Manual	</a></p>    
+
+				<!--br><code>chr, strstr, trim, print, echo</code>, <code>strlen</code>,  
 				<code>str_word_count</code>,  <code>strrev</code>, <code>strpos</code>, 
 				<code>str_replace</code>,  <code>implode</code>,  <code>explode</code>,  
-				<code>chunk_split</code>, &hellip; chop, crypt, echo, explore, fprintf, htmlspecialchars, implode, join, ltrim, number_format, print, printf, rtrim, sprintf, sscanf, str_split, str_word_count, strlen, strtoupper, strtolower, substr, trim,... <a href="http://ca3.php.net/manual/en/book.strings.php" target="_blank">String Functions</a>
-			</li>
-			<li>
-				<a href="http://php.net/manual/en/ref.var.php" target="_blank">Variable handling Functions</a>
-				<br><code title="Finds whether a variable is an array">is_array</code>, 
-					<code title="Find whether the type of a variable is integer">is_int</code>,
-					<code title="Find whether the type of a variable is string">is_string</code>, 
-					<code>isset</code>, <code>print_r</code>, <code>var_dump</code>, <code>empty</code>, &hellip;
-			</li>
-			<li>
-				<a href="http://ca3.php.net/manual/en/book.math.php" target="_blank">Mathematical Functions</a>
-				<br><code title="Generate a random integer">rand</code>, 
-				<code title="Round fractions up">ceil</code>, 
-				<code title="Round fractions down">floor</code>, 
-				<code>abs, exp, is_nan, max, min, pi, round, sqrt,</code> ...
-			</li>
-			<li>
-				<a href="http://php.net/manual/en/ref.var.php" target="_blank">Filesystem Functions</a>
-				<br><code>fopen, file</code>&hellip;</li>
-			<li>
-				<a href="http://www.w3schools.com/php/php_error.asp" target="_blank">Error Handling Functions</a>
-				<br><code>error_log, die(), try&hellip;throw&hellip;catch</code>&hellip;</li>
-			<li>
-				<a href="http://php.net/manual/en/ref.var.php" target="_blank">Date and Time functions</a>
-				<p>Explore other functions related to email, error handling, date and time, ... 
-					<a href="http://ca3.php.net/manual/en/funcref.php" target="_blank">Function Reference</a></p>
-			</li>
-		</ul>
-		
-	</section>
+				<code>chunk_split</code>, &hellip; chop, crypt, echo, explore, fprintf, htmlspecialchars, implode, join, ltrim, number_format, print, printf, rtrim, sprintf, sscanf, str_split, str_word_count, strlen, strtoupper, strtolower, substr, trim,... <a href="http://ca3.php.net/manual/en/book.strings.php" target="_blank">String Functions</a-->
+                
+  </div>
+</div> 
 
-
-<!-- 7.2. print and echo -->
-<section id="page62">
-	<h3>print and echo</h3>
-	<p>Explore the differences between print and echo.</p>
-	<ul class="grid-container">
-		<li>  Why do we omit the brackets? What are the major differences?</br>
-		<code title=""><a href="http://ca3.php.net/manual/en/function.print.php" target="_blank"><code>print</code></a></code></br>
-		<code title=""><a href="http://php.net/manual/en/function.echo.php" target="_blank"><code>echo</code></a></code></li>
-	</ul>	
-	<button onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/wArUB0Yp', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/inclass/example_php_04.png" alt="example 2"  class="btn btn-outline-secondary btn-block" style="cursor:pointer;">Click to run the examples in phpfiddle.</button>		
-
-	<hr>
-</section>
-
-<!-- 4.6.Variable Handling Functions  -->
-<section id="page63">
-	<h3>Variable Handling Functions</h3>
-  
-	<ul style="line-height: 2em">
-		<li><kbd>empty</kbd> <small>—Determine whether a variable is empty</small></li>
-		<li><kbd>is_array</kbd> <small>— Finds whether a variable is an array</small></li>
-		<li><kbd>is_int</kbd> <small>— Find whether the type of a variable is integer</small></li>
-		<li><kbd>isset</kbd> <small>— Determine if a variable is set and is not NULL</small></li>
-		<li><kbd>print_r</kbd> <small>— Prints human-readable information about a variable</small></li>
-		<li><kbd>unset</kbd> <small>— Unset a given variable</small></li>
-		<li><kbd>var_dump</kbd> <small>— Dumps information about a variable</small></li>
-	</ul>	
-	<footer><a class="btn btn-success btn-block" href="http://ca3.php.net/manual/en/ref.var.php" role="button" target="_blank">Read more on php.net manual</a></footer>		
-	<hr>
-
-
-<!-- 7.3. isset and empty -->
-
-	<h4>isset and empty</h4>
-	<dl class="row">
-	  <dt class="col-sm-4">Function <code>isset()</code></dt>
-	  <dd class="col-sm-8">&mdash;Determine if a variable is set and is not NULL
-		<br><a href="https://www.w3schools.com/php/default.asp" target="_blank">Find examples on w3schools.</a>
-		<br><a href="http://php.net/manual/en/function.isset.php" target="_blank">Checkout the manual page</a>  
-	  </dd>
-	  <dt class="col-sm-4">Function <code>empty()</code></dt>
-	  <dd class="col-sm-8">&mdash;Determine whether a variable is empty
-		<br>&mdash;The function empty is essentially the concise equivalent to <br><code>!isset($var) || $var == false</code>
-		<br>&mdash;<a href="https://www.w3schools.com/php/default.asp" target="_blank">Find examples on w3schools.</a>
-		<br>&mdash;<a href="http://php.net/manual/en/function.isset.php" target="_blank">Checkout the manual page</a>
-	  </dd>	  
-	</dl>			
-	<hr>
-
-
-<!-- 7.4. print_r and var_dump -->
-
-	<h4>print_r and var_dump</h4>
-	<dl class="row">
-	  <dt class="col-sm-4">Function <code>print_r()</code></dt>
-	  <dd class="col-sm-8">&mdash;Prints human-readable information about a variable
-		<br><a  href="https://www.w3schools.com/php/default.asp" 
-				target="_blank">&mdash;Find examples on w3schools.</a>
-		<br><a  href="http://ca3.php.net/manual/en/function.print-r.php" 
-				target="_blank">&mdash;Checkout the manual page</a>	  
-	  </dd>
-	  <dt class="col-sm-4">Function <code>var_dump()</code></dt>
-	  <dd class="col-sm-8">&mdash;Dumps information about a variable</dd>	  
-	</dl>	
-
-	<button onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/6Y3AvzEi', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/pf_print_r.png" alt="example 1"  class="btn btn-outline-secondary btn-block" style="cursor:pointer;">print_r() example (click to run in phpfiddle)</button>
-
-	<button onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/8NkkYmyE', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/pf_var_dump.png" alt="example 2"  class="btn btn-outline-secondary btn-block" style="cursor:pointer;">var_dump() example (click to run in phpfiddle)</button>		
-	<hr>
-</section>
 
 <!-- 7.5. Arrays and Strings -->
-<section id="page66">
-	<h3>Arrays and Strings</h3>
-	<dl class="row">
-	  <dt class="col-sm-3">Function <code>implode()</code></dt>
-	  <dd class="col-sm-9">&mdash;Convert an array to a string</dd>
-	  <dt class="col-sm-3">Function <code>explode()</code></dt>
-	  <dd class="col-sm-9">&mdash;Convert a string to an array</dd>	  
-	</dl>
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Arrays and Strings</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Functions print and echo</h5>
+	<p>Explore the differences between print and echo.Why do we omit the brackets? What are the major differences? The major differences to print are that echo accepts multiple arguments and doesn't have a return value.</p>
+    <p class="lead">Read more in PHP Manual about <a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  target="_blank" href="http://ca3.php.net/manual/en/function.print.php">print</a> and <a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  target="_blank" href="http://php.net/manual/en/function.echo.php">echo</a</p> 
+    
+
+	<!--button onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/wArUB0Yp', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/inclass/example_php_04.png" alt="example 2"  class="btn btn-outline-secondary btn-block" style="cursor:pointer;">Click to run the examples in phpfiddle.</button-->
+  </div>
+</div> 
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Arrays and Strings</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Functions implode() and explode()</h5>
+
+	  <p>Function <code>implode()</code> &mdash;Convert an array to a string. Function <code>explode()</code> &mdash;Convert a string to an array.</dt>
+
 			
 	<h6>An opportunity to compare to JAVA code</h6>
-	<pre class="brush: php; highlight: [0]; first-line: 1" title="Example using implode() and explode() functions.">// JAVA
+<pre class="language-php"><code>// JAVA
 // create a string from an array of characters
 // char[] charArray= {'H','e','l','l','o',' ','W','o','r','l','d'};
 // String mesg3 = new String(charArray);
@@ -257,8 +321,15 @@ echo "&lt;br>";
 $str = "Hello world!";
 $str2 = chunk_split($str,1,".");
 print_r (explode(".",$str2));		
-</pre>
-	<hr>
+</code></pre>
+  </div>
+</div> 
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Arrays and Strings</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Function array_rand()</h5>
 	
 	<dl class="row">
 	  <dt class="col-sm-4">Function <code>array_rand()</code></dt>
@@ -267,7 +338,7 @@ print_r (explode(".",$str2));
 	  </dd> 
 	</dl>
 	<h6>Code snippet from the rock-paper-scissors game:</h6>
-	<pre class="brush: php; highlight: [0]; first-line: 1" title="Example using array_rand() function.">
+<pre class="language-php"><code>
 // variable $moves is an indexed array, holding all possible 
 // choices for the human user and the machine user (zero-based index)
 $moves = array("rock", "paper", "scissors");
@@ -279,9 +350,16 @@ $moves = array("rock", "paper", "scissors");
 $machine = $moves[array_rand($moves)];
 		
 // How would you modify the code to accommodate 
-// the rock-paper-scissors-lizard-spock game?		
-</pre>
-	<hr>
+// the rock-paper-scissors-lizard-spock game?
+</code></pre>
+  </div>
+</div> 
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Arrays and Strings</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Function count()</h5>
 	
 	<dl class="row">
 	  <dt class="col-sm-3">Function <code>count()</code></dt>
@@ -292,13 +370,20 @@ $machine = $moves[array_rand($moves)];
 			target="_blank">&mdash;Checkout the manual page</a>
 	  </dd> 
 	</dl>	
-	<pre class="brush: php; highlight: [0]; first-line: 1">
+<pre class="language-php"><code>
 // count can be used to calculate 
 // the length of an array
-$length = count($array);</pre>
+$length = count($array);</code></pre>
 	<p>Read the comments for <a href="http://ca3.php.net/manual/en/function.sizeof.php" target="_blank">sizeof</a></p>
 	
-	<hr>
+  </div>
+</div> 
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Arrays and Strings</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Function sort()</h5>
 	<dl class="row">
 	  <dt class="col-sm-3">Function <code>sort()</code></dt>
 	  <dd class="col-sm-9">&mdash;Sort an array. Elements will be arranged from lowest to highest when this function has completed.
@@ -309,20 +394,151 @@ $length = count($array);</pre>
 	  </dd> 
 	</dl>		
 	
-	<hr>
+  </div>
+</div> 
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Arrays and Strings</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Function strcmp()</h5>
 	<dl class="row">
 	  <dt class="col-sm-3">Function <code>strcmp()</code></dt>
 	  <dd class="col-sm-9">&mdash;Binary safe string comparison</dd>  
 	</dl>			
 	<p>The <q>dictionary</q> that the PHP interpreter uses for comparing strings are the ASCII codes for characters. This puts numerals before letters, and orders the numerals from 0 to 9. It also puts uppercase letters before lowercase letters.</p>	
-	<hr>
-</section>
-</article>
+  </div>
+</div> 
 
 
 
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Variable handling Functions</h5>
+    
+               <span class="template-4col">
+                <b>empty()<br><small>Determine whether a variable is empty</small></b>
+                <b>isset()<br><small>Determine if a variable is set and is not NULL</small></b>
+                <b>unset()<br><small>Unset a given variable</small></b>
+                <b>is_array()<br><small>Finds whether a variable is an array</small></b>
+                <b>is_int()<br><small>Find whether the type of a variable is integer</small></b>
+                <b>is_string()<br><small>Finds whether a variable is a string</small></b>
+                <b>print_r()<br><small>Prints human-readable information about a variable</small></b>
+                <b>var_dump()<br><small>Dumps information about a variable</small></b>
+             </span>
+             
+    <p class="lead"><a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"
+				<a href="https://www.w3schools.com/php/php_ref_variable_handling.asp" target="_blank">Explore tutorials on w3schools</a><br>         
+    <a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"
+				<a href="http://php.net/manual/en/ref.var.php" target="_blank">Read more in PHP Manual</a></p>
+  </div>
+</div> 
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Variable handling</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Functions isset and empty</h5>
+	<dl class="row">
+	  <dt class="col-sm-4">Function <code>isset()</code></dt>
+	  <dd class="col-sm-8">&mdash;Determine if a variable is set and is not NULL
+		<br><a href="https://www.w3schools.com/php/default.asp" target="_blank">Find examples on w3schools.</a>
+		<br><a href="http://php.net/manual/en/function.isset.php" target="_blank">Checkout the manual page</a>  
+	  </dd>
+	  <dt class="col-sm-4">Function <code>empty()</code></dt>
+	  <dd class="col-sm-8">&mdash;Determine whether a variable is empty
+		<br>&mdash;The function empty is essentially the concise equivalent to <br><code>!isset($var) || $var == false</code>
+		<br>&mdash;<a href="https://www.w3schools.com/php/default.asp" target="_blank">Find examples on w3schools.</a>
+		<br>&mdash;<a href="http://php.net/manual/en/function.isset.php" target="_blank">Checkout the manual page</a>
+	  </dd>	  
+	</dl>
+  </div>
+</div> 
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Variable handling</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Functions print_r and var_dump</h5>
+	<dl class="row">
+	  <dt class="col-sm-4">Function <code>print_r()</code></dt>
+	  <dd class="col-sm-8">&mdash;Prints human-readable information about a variable
+		<br><a  href="https://www.w3schools.com/php/default.asp" 
+				target="_blank">&mdash;Find examples on w3schools.</a>
+		<br><a  href="http://ca3.php.net/manual/en/function.print-r.php" 
+				target="_blank">&mdash;Checkout the manual page</a>	  
+	  </dd>
+	  <dt class="col-sm-4">Function <code>var_dump()</code></dt>
+	  <dd class="col-sm-8">&mdash;Dumps information about a variable</dd>	  
+	</dl>	
+
+	<!--button onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/6Y3AvzEi', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/pf_print_r.png" alt="example 1"  class="btn btn-outline-secondary btn-block" style="cursor:pointer;">print_r() example (click to run in phpfiddle)</button-->
+
+	<!--button onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/8NkkYmyE', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/pf_var_dump.png" alt="example 2"  class="btn btn-outline-secondary btn-block" style="cursor:pointer;">var_dump() example (click to run in phpfiddle)</button-->	
+  </div>
+</div> 
+
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Mathematical Functions</h5>
+				<a href="http://ca3.php.net/manual/en/book.math.php" target="_blank">Mathematical Functions</a>
+				<br><code title="Generate a random integer">rand</code>, 
+				<code title="Round fractions up">ceil</code>, 
+				<code title="Round fractions down">floor</code>, 
+				<code>abs, exp, is_nan, max, min, pi, round, sqrt,</code> ...
+  </div>
+</div> 
+
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Filesystem Functions</h5>
+<a href="http://php.net/manual/en/ref.var.php" target="_blank">Filesystem Functions</a>
+				<br><code>fopen, file</code>&hellip;
+  </div>
+</div> 
+
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Error Handling Functions</h5>
+<a href="http://www.w3schools.com/php/php_error.asp" target="_blank">Error Handling Functions</a>
+				<br><code>error_log, die(), try&hellip;throw&hellip;catch</code>&hellip;
+  </div>
+</div> 
+
+
+
+
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Date and Time Functions</h5>
+<a href="http://php.net/manual/en/ref.var.php" target="_blank">Date and Time functions</a>
+				<p>Explore other functions related to email, error handling, date and time, ...</p>
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+<!-- end -->
     </section>
-      
   </main>
   
 

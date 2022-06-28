@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-<title> SYST10199 learn JS </title>
+<title> SYST10199 learn PHP </title>
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css"/> 
 <link rel="stylesheet" href="../css/prism_coy_dev.css"  />
@@ -127,7 +127,8 @@ td:first-child {font-weight: bold;}
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
         <h1>Data types</h1>
 
- 	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">Data Types, Identifiers, Constants, Variable Scope, Declaring Variables</h6>
+ 	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">PHP supports ten primitive types.
+Four scalar types: bool, int, float, string; Four compound types: array, object, callable, iterable; And finally two special types: resource, NULL.</h6>
 
 <ul class="nav nav-pills flex flex-col md:flex-row list-none pl-0 mb-4 mx-48" id="pills-tabFill" role="tablist">
   <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
@@ -144,17 +145,17 @@ td:first-child {font-weight: bold;}
 <!-- Data types  -->
 <div id="2" class="flex justify-center mt-6">
   <div class="block p-6 rounded-lg shadow-lg bg-white">
-      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Learn the foundations</div>
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
       <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">PHP Data Types</h5>	
             <span class="template-3col">
-                <b>integer<br><small style="text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">whole number</small></b>
+                <b>int<br><small style="text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">whole number</small></b>
                 <b>float<br><small style="line-height:1;text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">numeric value with decimal digits</small></b>
                 <b>string<br><small style="line-height:1;text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">a sequence of characters</small></b>
-                <b>Boolean<br><small style="line-height:1;text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">true or false</small></b>
+                <b>bool<br><small style="line-height:1;text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">true or false</small></b>
                 <b>NULL<br><small style="line-height:1;text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">no value</small></b>
-                <b>Array<br><small style="line-height:1;text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">indexed multiple values</small></b>
-                <b>Object<br><small style="line-height:1;text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">structure created with a class</small></b>
-                <b>Resource<br><small style="line-height:1;text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">a reference that identifies a connection</small></b></span>
+                <b>array<br><small style="line-height:1;text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">indexed multiple values</small></b>
+                <b>object<br><small style="line-height:1;text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">structure created with a class</small></b>
+                <b>resource<br><small style="line-height:1;text-align:center;font-variant:small-caps;border-top:1px white solid;font-size:0.5em;">a reference that identifies a connection</small></b></span>
   <p class="text-gray-700 text-base mt-2  w-full"><strong>A resource</strong> is a special variable, holding a reference to an external resource,  special handles to opened files, database connections, image canvas areas&hellip; Resources are created and used by special functions. <a href="http://ca3.php.net/manual/en/language.types.resource.php">Read more.</a></p>
   </div>
 </div> 

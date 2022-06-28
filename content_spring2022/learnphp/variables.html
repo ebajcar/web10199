@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-<title> SYST10199 learn JS </title>
+<title> SYST10199 learn PHP </title>
 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="../css/styles.css"/> 
 <link rel="stylesheet" href="../css/prism_coy_dev.css"  />
@@ -36,6 +36,49 @@ figcaption {
   color: #00b2ce;
   font-weight: 500;
 }
+* {
+  box-sizing: border-box;
+}
+span.template-3col {
+  background: #fff;
+  padding: 0.2rem;
+  border-radius: 7px;
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.42);
+  height: 15vh;
+  display: grid;
+  grid-gap: 0.5rem;
+}
+span b {
+  background-color: #333940;
+  border-radius: 4px;
+  padding: 0.2rem 1.5rem;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+span b small {
+    line-height:1;
+    text-align:center;
+    font-variant:small-caps;
+    border-top:1px white solid;
+    font-size:0.5em;
+    padding-bottom:6px;
+}
+span b a, span b a:hover {
+  padding: 0;
+  margin: 0;
+  color: yellow;
+  text-decoration: none;
+  display: block;
+}
+span.template-3col {
+  grid-template-columns: repeat(4, 1fr);
+}
+td {
+  border: 1px solid lightgray;
+}
+td:first-child {font-weight: bold;}
 </style>
 </head>
 
@@ -99,30 +142,56 @@ figcaption {
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
         <h1>PHP Variables</h1>
 
+ 	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">Variables in PHP are represented by a dollar sign followed by the name of the variable. The variable name is case-sensitive.&hellip;</h6>
+
+<ul class="nav nav-pills flex flex-col md:flex-row list-none pl-0 mb-4 mx-48" id="pills-tabFill" role="tablist">
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#1" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Expressions</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#2" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Identifiers and Constants</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#3" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Predefined variables</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#4" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Declaring variables</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#5" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Variable scope</a>
+  </li>
+</ul>
+
+
+
 
 <!-- <div id="page40">   2.6. Expressions -->
-
-	
-<section id="page41">
-	<h3>Expressions</h3>
+<div id="1" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Expressions</h5>	
 	  <p>Expressions are the most important building blocks of PHP. In PHP, almost anything you write is an expression... "anything that has a value". The most basic forms of expressions are constants and variables. Slightly more complex examples for expressions are functions and the ternary conditional operator.</p>
 
 	<a target="_blank" 
 		href="http://ca3.php.net/manual/en/language.expressions.php">
-		What are expressions? Read more in <strong class="text-dark">PHP Manual @ </strong>	 
+		What are expressions? Read more in <strong>PHP Manual</strong>	 
 	</a>	
-	</section>
+  </div>
+</div> 
+
+	
+
 
 
 <!--    4.2. Identifiers and Constants -->
-<section id="page42">
-
-	<h3>Identifiers and Constants</h3>
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Identifiers and Constants</h5>	
 	<p>All variable names have a dollar sign in front; variable names must begin with a letter or an underscore (cannot begin with a number; can be any length; can include letters, numbers, and underscores only; case sensitive.</p>
 	<p><strong>Single quotes</strong> variable name is displayed by its name; <br><strong>Double quotes</strong> variable name is replaced by its value; <br><strong>Curly braces</strong> can be used around variable name to define the variable</p>  
 
 <pre class="language-php"><code>
-
 $pet="bird";
 echo "{$pet}cage";
 </code></pre>	
@@ -130,7 +199,6 @@ echo "{$pet}cage";
 	<p><strong>Constants</strong> cannot be changed by the script;</p> 
 
 <pre class="language-php"><code>
-
 define ("CONSTANTNAME",
 	"constant value"); 
 define ("AGE",29);
@@ -139,44 +207,54 @@ define ("AGE",29);
 		JS https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const 
 		ES6 https://www.w3schools.com/js/tryit.asp?filename=tryjs_es6_const ) ( 
 		PHP https://www.w3schools.com/php/php_constants.asp ) -->
-	<hr>
-</section>
+  </div>
+</div> 
+
+
+
 
 <!-- 4.3. Predefined variables -->
-<section id="page43">
-	<h3>Predefined variables</h3>
-	<ul class="grid-container">
-		<li><code>$GLOBALS</code></li>
-		<li><code>$_SERVER</code></li>
-		<li><code>$_GET</code></li>
-		<li><code>$_POST</code></li>
-		<li><code>$_FILES</code></li>
-		<li><code>$_REQUEST</code></li>
-		<li><code>$_SESSION</code></li>
-	</ul>
-	<br>
-	
-	<a  class="btn btn-outline-secondary btn-block" style="cursor:pointer;" 
-		href="http://php.net/manual/en/reserved.variables.php" role="button" target="_blank">Read more @ php.net</a>	
-	<hr>
-</section>
+<div id="3" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Predefined variables</h5>	
+            <span class="template-3col">
+                <b>$GLOBALS<small>References all variables available in global scope</small></b>
+               
+                <b>$_SERVER<br><small>Server and execution environment information</small></b>
+                <b>$_GET<br><small>HTTP GET variables</small></b>
+                <b>$_POST<br><small>HTTP POST variables</small></b>
+                <b>$_FILES<br><small>HTTP File Upload variables</small></b>
+                <b>$_REQUEST<br><small>HTTP Request variables</small></b>
+                <b>$_SESSION<br><small>Session variables</small></b>
+                <!--
+                 <b><a href="https://www.php.net/manual/en/reserved.variables.session.php" target="_blank">$_SESSION</a><small>Session variables</b>
+                 -->
+                 <b>&nbsp;<br><small>&nbsp;</small></b>
+             </span>
+        <p></p>
+  </div>
+</div> 
+
+
+
+
+
 
 <!-- 4.4.Declaring variables  -->
-<section id="page44">
-	<h3>Declaring variables</h3>
+<div id="4" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Declaring variables</h5>	
 	<p>Variables are "containers" for storing information. To create (declare) a variable, you give it a name. In PHP, a variable starts with the $ sign, followed by the name of the variable</p>
-
 <pre class="language-php"><code>
-
 $txt = "Hello world!";
 $x = 5;
 $y = 10.5;
 </code></pre>
-
 	<p>After the execution of the statements above, the variable <code>$txt</code> will hold the value <var>Hello world!</var>, the variable <code>$x</code> will hold the value <var>5</var>, and the variable <code>$y</code> will hold the value <var>10.5</var></p>
 
 <p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Choose meaningful names that will make your code human-readable.</p>
-
 <h6>Rules for naming PHP variables</h6>
 <ul>
 <li>A variable starts with the $ sign, followed by the name of the variable</li>
@@ -205,20 +283,25 @@ $y = 4;
 echo $x + $y;
 </code></pre>
 		
-	<button  class="btn btn-outline-secondary btn-block" style="cursor:pointer;" 
-		onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/mTVf1L5Y', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/inclass/example_php_03.png" alt="example 2" style="width:99%;cursor:pointer;">Click to run an example in phpfiddle. Working with variables, see more on w3schools.com.</button>	
-	<hr>
-</section>
+	<!--button  class="btn btn-outline-secondary btn-block" style="cursor:pointer;" 
+		onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/mTVf1L5Y', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/inclass/example_php_03.png" alt="example 2" style="width:99%;cursor:pointer;">Click to run an example in phpfiddle. Working with variables, see more on w3schools.com.</button-->	
+  </div>
+</div> 
+
+
 
 <!-- 4.5. Variable scope -->
-<section id="page45">
-	<h3>Variable scope</h3>
+<div id="5" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Variable scope</h5>	
 	<p>PHP is a Loosely Typed Language; we do not have to tell PHP which data type the variable is. PHP automatically converts the variable to the correct data type, depending on its value.</p>
 	<p>In PHP, variables can be declared anywhere in the script. The scope of a variable is the part of the script where the variable can be referenced/used. PHP has three different variable scopes: local, global, static.</p>
+    
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Global scope</h5>
 	<p>A variable declared outside a function has a <strong>GLOBAL SCOPE</strong> and can only be accessed outside a function:</p>
 
 <pre class="language-php"><code>
-
 $x = 5; // global scope
 function myTest() {
     // using x inside this function will generate an error
@@ -227,11 +310,9 @@ function myTest() {
 myTest();
 echo "Variable x outside function myTest is: $x";
 </code></pre>
-
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Local scope</h5>
 	<p>A variable declared within a function has a LOCAL SCOPE and can only be accessed within that function:</p>
-
 <pre class="language-php"><code>
-
 function myTest2() {
     $x = 6; // local scope
     echo "Variable x inside function myTest2 is: $x";
@@ -241,9 +322,8 @@ myTest2();
 echo "Variable x outside function myTest2 is: $x";
 </code></pre>
 
-
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Using the global keyword</h5>
 	<p>The global keyword is used to access a global variable from within a function. To do this, use the global keyword before the variables (inside the function): </p>
-
 <pre class="language-php"><code>
 $x = 5;
 $y = 10;
@@ -254,9 +334,8 @@ function myTest3() {
 myTest3();
 echo $y; // outputs 15
 </code></pre>
-
+<h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Using the $GLOBALS predefined variables</h5>
 <p>PHP also stores all global variables in an array called $GLOBALS[index]. The index holds the name of the variable. This array is also accessible from within functions and can be used to update global variables directly. The example above can be rewritten like this:</p>
-
 <pre class="language-php"><code>
 $x = 5;
 $y = 10;
@@ -267,11 +346,9 @@ myTest4();
 echo $y; // outputs 15
 </code></pre>
 
-	<h6>Using the static keyword</h6>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Using the static keyword</h5>
 <p>Normally, when a function is completed/executed, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a further job. To do this, use the static keyword when you first declare the variable:</p>
 
-
-	
 <pre class="language-php"><code>
 function myTest5() {
     static $x = 0;
@@ -288,6 +365,22 @@ myTest5(); echo "&lt;br>";
     <!--
 		<button onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/Y3gLsrT7', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/inclass/example_php_04.png" alt="example 2"  class="btn btn-outline-secondary btn-block" style="cursor:pointer;">Click to run the examples in phpfiddle.</button>	
 	-->
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+<section id="page45">
+	<h3></h3>
+
 	<hr>
 </section>
 
