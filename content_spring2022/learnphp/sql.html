@@ -157,13 +157,16 @@ td:first-child {font-weight: bold;}
 
 	 
 <!-- 9.3.  10.5. SQL Database Language -->
-
-	
-<div id="1" class="flex justify-center mt-6">
-  <div class="block p-6 rounded-lg shadow-lg bg-white">
-    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">SQL Language</div>
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Overview</h5>
-	   <ul class="w3-ul">
+ <div class="max-w-lg mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-6xl mt-8">
+  <div class="md:flex">
+    <div class="md:flex-shrink-0">
+      <a href="../slides/images/history-of-sql-standards.png" target="_blank"><img class="h-full w-full object-cover md:w-48" src="../slides/images/history-of-sql-standards.png" alt="Web taxonomy and status">
+      </a>
+    </div>
+    <div class="p-8">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">SQL Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Overview</h5>
+	   <ul class="list-outside">
 			<li>SQL is a programming language. It is a formal language in which you give instructions to a computer. The database software executes the SQL program, performs the tasks you've specified, and displays the results, or error message.
 			</li>
 			<li>SQL is easy to learn, non-procedural, standardized, and is used to manipulate data and database objects.
@@ -171,11 +174,12 @@ td:first-child {font-weight: bold;}
 			<li>Although you may see otherwise, it is <strong>NOT AN ACRONYM</strong>, and it is pronounced <strong>es-kyu-el</strong>. It can be used interactively, or it may be embedded in other code.
 			</li>
 		</ul>
-	<p>
-		<a target="_blank" role="button" href="https://en.wikipedia.org/wiki/SQL">SQL&mdash;a database language </a>
-	</p>
+        <p><a target="_blank" role="button" href="https://en.wikipedia.org/wiki/SQL">SQL&mdash;a database language </a></p>
+    </div>
   </div>
 </div> 
+	
+
     
     
     
@@ -206,9 +210,10 @@ td:first-child {font-weight: bold;}
                   <td><strong>DROP</strong></td>
                   <td>Removal of tables</td>
             </tr>
+
         
             <tr>
-                  <td rowspan="3">Data Manipulation (DML)</td>
+                  <td rowspan="4">Data Manipulation (DML)</td>
                   <td><strong>INSERT</strong></td>
                   <td>Insertion of rows in a table</td>
             </tr>
@@ -220,7 +225,11 @@ td:first-child {font-weight: bold;}
                   <td><strong>DELETE</strong></td>
                   <td>Removal of rows in a table</td>
             </tr>
-        
+            <tr>
+                  <td><strong>SELECT</strong></td>
+                  <td>Queries</td>
+            </tr>
+            
             <tr>
                   <td rowspan="4">Data Control (DCL)</td>
                   <td><strong>GRANT</strong></td>
@@ -239,11 +248,7 @@ td:first-child {font-weight: bold;}
                   <td>Removal of updates</td>
             </tr>
             
-            <tr>
-                  <td>Interrogation</td>
-                  <td><strong>SELECT</strong></td>
-                  <td>Queries</td>
-            </tr>
+
         </table>
   </div>
 </div> 
