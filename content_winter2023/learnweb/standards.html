@@ -100,14 +100,36 @@ figcaption {
     </div>  
         
 <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
-    <h1>Web Programming</h1>
+    <h1>Standards, conventions, best practices</h1>
     
-    
- 	<section>
-		<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">Computer programming is a process that starts with an original formulation of a problem and culminates in executable computer programs. Computer languages, like human languages, require you to use them in order to understand them.</h6>
-	</section>
-<!-- what is web programming -->
-<section id="page01">  
+
+
+
+<!-- Standards, conventions, best practices< -->
+<section id="page15">
+
+
+<div class="my-5">
+  <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="flex items-center justify-center px-4 bg-blue-800">
+        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="triangle-exclamation" class="w-6 h-6 text-white fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"></path></svg>     
+    </div>
+    <div class="px-4 py-2 -mx-3">
+     
+      <div class="mx-3">
+      <div style="background-color: yellow;font-variant:small-caps;text-align:center;width:20%">Resently added</div>
+        <h3>What are standards?</h3>
+        <p>Standards are published documents that establish specifications and procedures designed to ensure the reliability of the materials, products, methods, and services people use every day. Standards address a range of issues, including but not limited to various protocols that help ensure product functionality and compatibility, facilitate inter-operability and support consumer safety and public health.</p>
+        
+        <h3>Why are they important?</h3>
+        <p>Standards form the fundamental building blocks for product development by establishing consistent protocols that can be universally understood and adopted. This helps fuel compatibility and interoperability and simplifies product development, and speeds time-to-market. Standards also make it easier to understand and compare competing products. As standards are globally adopted and applied in many markets, they also fuel international trade.</P>
+        <p>It is only through the use of standards that the requirements of inter-connectivity and inter-operability can be assured. It is only through the application of standards that the credibility of new products and new markets can be verified. In summary standards fuel the development and implementation of technologies that influence and transform the way we live, work and communicate.</P>
+        <cite>Source: Inside the IEEE-SA, Standards at Work on 10/03/2011</cite>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="my-5">
   <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
@@ -116,18 +138,124 @@ figcaption {
     </div>
     <div class="px-4 py-2 -mx-3">
       <div class="mx-3">
-        <h3>What is web programming?</h3>
-        <h4>Programming, Program, Algorithm, Programming language</h4>
-        <figure class="figure">	
-            <img class="figure-img img-fluid rounded" src="../images/program_algorithm.png">		
-            <figcaption class="figure-caption">Links between the terms of program, programming, algorithm and programming language &mdash;<a href="https://www.codeit-project.eu/wp-content/uploads/CodeIT_O1_EN.pdf"><em>Source</em></a></figcaption>
-        </figure>	
+        <h3>Standards, conventions, best practices</h3>
+        <h4>Progressive Enhancement (<a href="https://www.wikiwand.com/en/Progressive_enhancement" target="_blank">wikiwand.com</a>)</h4>
+        <p>Progressive enhancement (PE) is a strategy for web design that emphasizes accessibility, semantic HTML markup, and external stylesheet and scripting technologies. PE consists of a set of core principles:</p>
+        <ul>
+            <li>basic content should be accessible to all web browsers</li>
+            <li>basic functionality should be accessible to all web browsers</li>
+            <li>sparse, semantic markup contains all content</li>
+            <li>enhanced layout is provided by externally linked CSS</li>
+            <li class="text-danger">enhanced behavior is provided by unobtrusive, externally linked JavaScript</li>
+            <li>end-user web browser preferences are respected</li>
+        </ul>
+        <p>The PE process consists of three steps:</p>
+	<ul>
+		<li><strong>Step One:</strong>  Build solid foundation with HTML5. Identify content and use the most suitable (meaningful) markup to organize it. All content must be accessible without styles.</li>
+		<li><strong>Step Two:</strong>  Using well-formed and valid HTML5, style the elements for best presentation. All content must be accessible without scripts.</li>
+		<li><strong>Step Three:</strong>  Using well-formed and valid HTML5 styled with well-formed and valid CSS3, add behaviour with Javascript.</li>
+	</ul>
+		
+		
+	<figure class="figure">	
+		<img src="images/pe.svg" class="figure-img img-fluid rounded" alt="pregressive enhancement approach">		
+		<figcaption class="figure-caption text-center">&nbsp;</figcaption>
+	</figure>
       </div>
     </div>
   </div>
 </div>
-</section>
 
+
+
+  
+<div class="max-w-lg mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-6xl">
+    <h3>Writing code for readability</h3>
+	<blockquote class="blockquote eeb-border-quote">
+	  <p class="mb-0">Writing code is similar to academic writing in that when you use or adapt code developed by someone else as part of your project, you must cite your source. However, instead of quoting or paraphrasing a source, you include an inline comment in the code. These comments not only ensure you are giving proper credit, but help with code understanding and debugging</p>
+	  <footer class="blockquote-footer">Academic Integrity at MIT, A Handbook for Students <cite title="Source Title"> </cite></footer>
+	</blockquote>
+	<dl>	
+		<dt>Article <a href="http://crockford.com/javascript/code.html" target="_blank">Code Conventions for the JavaScript Programming Language</a></dt>
+		<dd>Read and explore
+			<p>
+			<samp>Javascript files </samp> • 
+			<samp>white space </samp> • 
+			<samp>comments</samp>• 
+			<samp>variable declarations</samp> • 
+			<samp>functional declarations</samp> •
+			<samp>names</samp> • 
+			<samp>statements (simple, compound)</samp> • 
+			<samp>labels</samp> (return, if, for, while, do, switch, try, continue, with) • 
+			<samp>{}</samp> • 
+			<samp>[]</samp></p> 
+			<p>To demonstrate your understanding, explain in your own words:</p>
+			<ul>
+				<li>What does the author mean by <q class="text-danger">publication quality</q>? Why is this important?</li>
+				<li>Where should the Javascript code be placed? What is the correct file extension for Javascript files?</li>
+				<li>What is whitespace? Where and how do you use it? in the code?</li>
+				<li>How should comments be used in Javascript code?</li>
+				<li>What does the author suggests where to place Javascript code? Why?</li>
+			</ul>
+		</dd>
+	</dl>
+</div>  
+<div>&nbsp;</div>
+  
+	
+
+	
+<div class="max-w-lg mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-6xl">
+	<h3>Writing code for functionality and performance</h3>	
+		<h5>Specifications <a href="https://tc39.github.io/ecma262" target="_blank"> ECMA-262 standard</a>.</h5>
+		<p>Read and make notes of the sections 1) Scope, 2) Conformance, and 4) Overview of the language specification <br> To demonstrate your understanding, explain in your own words:</p>
+        <ul class="list-outside">
+            <li>How does Javascript comply with ECMA-262 standard? </li>
+            <li>In the Overview, the specification states: <q>A scripting language is a programming language that is used to manipulate, customize, and automate the facilities of an existing system. In such systems, useful functionality is already available through a user interface, and the scripting language is a mechanism for exposing that functionality to program control. In this way, the existing system is said to provide a host environment of objects and facilities, which completes the capabilities of the scripting language.</q>. What is the host environment in Javascript?</li>   
+        </ul>
+ 
+		<p>Article <a href="http://www.w3schools.com/js/js_mistakes.asp" target="_blank">JavaScript Common Mistakes</a>  Explore to understand deeply.</p>
+			<ol style="column-gap: 46px;column-count:3;">
+				<li>Accidentally Using the Assignment Operator</li>
+				<li>Expecting Loose Comparison</li>
+				<li>Confusing Addition & Concatenation</li>
+				<li>Breaking a JavaScript String</li>
+				<li>Misplacing Semicolon</li>
+				<li>Breaking a Return Statement</li>
+				<li>Accessing Arrays with Named Indexes</li>
+				<li>Ending an Array Definition with a Comma</li>
+				<li>Ending an Object Definition with a Comma</li>
+				<li>Undefined is Not Null</li>
+				<li>Expecting Block Level Scope</li>	
+			</ol>	
+
+
+		<p>Article <a href="http://www.w3schools.com/js/js_performance.asp" target="_blank">JavaScript Performance</a>  Explore to understand deeply.</p>
+			<ol start="12" style="column-gap: 46px;column-count:3;">
+				<li>Reduce Activity in Loops</li>
+				<li>Reduce DOM Access</li>
+				<li>Reduce DOM Size</li>
+				<li>Avoid Unnecessary Variables</li>
+				<li>Delay JavaScript Loading</li>
+				<li>Avoid Using with</li>
+			</ol>	
+
+
+	<blockquote class="blockquote eeb-border-quote">
+		<p class="mb-0">Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live. Code for readability. &mdash;Attributed to John Woods 
+	</blockquote>
+</div>
+
+</section>
+ 
+    
+    
+    
+    
+    
+    
+    
+    </section>
       
   </main>
   
