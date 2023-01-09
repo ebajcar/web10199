@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+<title> SYST10199 learn JS </title>
+<!--
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+-->
+<link rel="stylesheet" href="../css/styles.css"/> 
+<link rel="stylesheet" href="../css/prism.css"  />
+</head>
+
+<body>
+  <nav id="navTop" class="w-full z-30 top-0 text-white bg-nwoods-primary">
+    <div class="w-full container max-w-screen-lg mx-auto flex flex-wrap sm:flex-nowrap items-center justify-between mt-0 py-2">
+      <div class="md:pl-4">
+        <a class="text-white hover:text-white no-underline hover:no-underline
+        font-bold text-2xl lg:text-4xl rounded-lg hover:bg-nwoods-secondary " href="../index.html">
+          <h1 class="mb-0 p-1 ">SYST10199</h1>
+        </a>
+      </div>
+      <button id="topnavButton" class="rounded-lg sm:hidden focus:outline-none focus:ring" aria-label="Navigation">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path id="topnavOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path id="topnavClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>      
+      <div id="topnavList" class="hidden sm:block items-center w-auto mt-0 text-white p-0 z-20">
+        <ul class="list-reset list-none font-semibold flex justify-end flex-wrap sm:flex-nowrap items-center px-0 pb-0">
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnweb/index.html">Web programming</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnjs/index.html">Learn JS</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnphp/index.html">Learn PHP</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="#">SLATE</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-b border-gray-600 opacity-50 my-0 py-0" />
+  </nav>
+    
+  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">   
+    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+      <div class="flex-shrink-0 px-8 py-4">
+        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>   
+        </button>
+      </div>   
+      <nav id="navList" class="min-h-screen hidden md:block sidebar-nav flex-grow px-1 lg:px-4 pb-4 md:pb-0 md:overflow-y-auto break-words">
+
+
+          <a href="index.html">Web Programming</a>
+          <a href="develop.html">Computer programming</a>
+          <a href="develop.html">Imperative programming</a>          
+          <a href="develop.html">Problem solving</a>
+          <a href="develop.html">What is an algorithm?</a>
+          <a href="develop.html">Programming paradigms</a>
+
+            
+
+      </nav>
+    </div>  
+        
+    <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+        <h3>Web Programming</h3>
+        <h4>Computer Programming</h4>
+<p>
+Programing in the narrow sense: By this, I refer to what many others call coding. Problems in this sense are problems of missing or broken software, and the solution is to write code that fixes them.
+</p>
+<p>
+Programming in the wider sense: A fuller appreciation of programming acknowledges that coding is only part of the job. The larger job is to provide a solution that is complete, high-quality, and acceptable to the user.[2] This is much more than coding. It involves other activities, like requirements analysis, system design, or acceptability testing. It also includes lots of communication and collaboration, not just among the programming team but with the users too. Naturally, this requires skills beyond writing good code.
+[Bad Programming Practices 101]
+</p>        
+        <p>Web programming, like computer programming is a process that starts with an original formulation of a problem and culminates in executable computer programs. Computer languages, like human languages, require you to use them in order to understand them. The process consists of a set of activities, just like solving a problem</p>
+        <ol>
+            <li>Understand the problem (ANALYSIS, PLAN)</li>
+            <li>Plan the logic. (DESIGN, PLAN)</li>
+            <li>Code the program. (referred to as CONSTRUCT, CODE, CREATE,&hellip;)</li>
+            <li>Translate program into machine language. (COMPILE, INTERPRET)</li>
+            <li>Test the program. (TEST, DEBUG)</li>
+            <li>Put program into production. (DEPLOY, PUBLISH, IMPLEMENT,&hellip;)</li>
+        </ol>     
+        <p>Typical problems are complex. Many problems no longer appear as problems, because we have learned to solve them so well and so quickly that they take little time and little effort. All problems require due diligence to produce solutions of high quality.</p>
+        
+         <h4>Imperative programming</h4> 
+        <p>A developer writes code that describes in exacting detail the steps that the computer must take to accomplish the goal. A computer program is shaped by its <strong>data representation</strong> and the <strong>statements</strong> that determine its <strong>flow of control</strong>.  Every program, process,  has <strong>input</strong> and <strong>output</strong>.</p>       
+
+        <h4>Problem solving</h4>
+        <p>Break down problems and attempt to solve the pieces; attempt to solve each part. Even a simple problem needs to be <strong>planned, analysed, designed, constructed, and tested before it is implemented. </strong> What do you need to know?</p>
+        <ol>
+            <li>Describe the problem in own words</li>  
+            <li>State the OBJECTIVE of the problem we are trying to solve</li>  
+            <li>Identify the variables for INPUTs and OUTPUTs (ELEMENTS)</li>  
+            <li>What constraints need to be identified? (RELATIONS)</li>  
+            <li>Model the system: goal + elements + relations.</li>  
+        </ol>
+        <p>Use simple English (structured) or pseudocode. Include appropriate comments. Err on having too many comments. With practice you will learn to make sound and practical choices what constitutes too much and what is inadequate amount of comments.</p>
+<p>
+In general the vocabulary used in the pseudocode should be the vocabulary of the problem domain, not of the implementation domain.  The pseudocode is a narrative for someone who knows the requirements (problem domain) and is trying to learn how the solution is organized.  E.g.,
+</p>
+
+<pre class="lang-js"><code>String.indexOf()</code></pre>
+<p>
+Pseudocode is a kind of structured english for describing algorithms. It allows the designer to focus on the logic of the algorithm without being distracted by details of language syntax.  At the same time, the pseudocode needs to be complete.  It describe the entire logic of the algorithm so that implementation becomes a rote mechanical task of translating line by line into source code.
+</p>        
+        <p>Write out the algorithm. Keep track of constraints and assumptions. Look for improvements and alternatives, and revise.</p>
+        
+        <h4>What is an algorithm?</h4>
+        <ul>
+            <li><a href="https://youtu.be/ZnBF2GeAKbo" target="_blank">What exactly is an algorithm? Algorithms explained | BBC Ideas | 7:53</a></li>
+            <li><a href="https://youtu.be/6hfOvs8pY1k" target="_blank">What's an algorithm? - David J. Malan | 4:57</a></li>
+            <li><a href="https://youtu.be/ENWVRcMGDoU" target="_blank">How algorithms shape our world - Kevin Slavin | 15:23</a></li>
+        </ul> 
+        <p>Algorithms are written in a technology-agnostic manner, so that they can be implemented in any programming language. The relationship among programming, program, algorithm, and programming languages is depicted in Figure 1.</p>
+        
+        <h4>Programming paradigms</h4>
+        <p>A programming paradigm is a style of programming. To program professionally, you need to learn either the object-oriented or functional programming paradigms.</p>
+        <p><strong>State</strong>, one of the fundamental differences among the various programming paradigms, is the handling of state. State is the value of a program's variables while it is running. Global state is the value of a program's global variables while it is running.</p>
+        <p><strong>Procedural programming paradigm</strong>   is a programming style in which you write a sequence of steps moving toward a solution— with each step changing the program's state.You store data in global variables and manipulate it with functions</p>
+        <p><strong>Functional programming paradigm</strong>  addresses the problems that arise in procedural programming by eliminating global state. A functional programmer relies on functions that do not use or change global state, the only state they use are the parameters you pass to the function. The result, a function returns, is usually passed on to another function. A functional programmer can thus avoid global state by passing it from function to function.</p>
+        <p><strong>Object-oriented programming paradigm</strong> also addresses the problems that arise in procedural programming by eliminating global state, but instead of storing state in functions, it is stored in objects.</p>        
+
+        <figure class="figure">	
+        <img class="figure-img img-fluid rounded" src="../images/program_algorithm.png">		
+        <figcaption class="figure-caption">FIGURE 1. Links between the terms of program, programming, algorithm and programming language &mdash;<a href="https://www.codeit-project.eu/wp-content/uploads/CodeIT_O1_EN.pdf"><em>Source</em></a></figcaption>
+        </figure>
+
+
+
+
+
+    </section>    
+  </main>
+  
+  <footer class="bg-nwoods-primary text-white"> 
+     <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
+      <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10109 Web Programming | Sheridan College</a>
+      </p>     
+    </section> 
+    <div class="container max-w-screen-lg mx-auto  px-8">   
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+          <ul class="text-sm font-medium pb-14 sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-y-10">
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</footer> 
+ 
+</body>
+
+<script>
+  // topnav
+  var topButton = document.getElementById("topnavButton");
+  var topnavList = document.getElementById("topnavList");
+  topButton.addEventListener("click", function() {
+    this.classList.toggle("active");
+    topnavList.classList.toggle("hidden");
+    document.getElementById("topnavOpen").classList.toggle("hidden");
+    document.getElementById("topnavClosed").classList.toggle("hidden");
+  });
+</script>
+<script src="../scripts/prism.js"></script>
+</body>
+</html>
