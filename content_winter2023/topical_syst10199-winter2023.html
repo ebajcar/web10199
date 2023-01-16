@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Class Plan Winter 2022</title>
+     <!-- Bootstrap CSS -->
+      <!--
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  -->
+<link rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family:Verdana,sans-serif;
+        font-size: 1em;
+      }
+      @media only screen {
+        body {
+          margin: 2em auto;
+          max-width: 900px;
+          color: rgb(55, 53, 47);
+        }
+      }
+      hr {
+        background: transparent;
+        display: block;
+        width: 100%;
+        height: 1px;
+        visibility: visible;
+        border: none;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+      }
+      @page {
+        margin: 1in;
+      }
+      .collection-content {
+        font-size: 0.875rem;
+      }
+      .column-list {
+        display: flex;
+        justify-content: space-between;
+      }
+      .column {
+        padding: 0 1em;
+      }
+      .column:first-child {
+        padding-left: 0;
+      }
+      .column:last-child {
+        padding-right: 0;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid rgba(55, 53, 47, 0.09);
+        border-collapse: collapse;
+      }
+      table {
+        border-left: none;
+        border-right: none;
+      }
+      th,
+      td {
+        font-weight: normal;
+        padding: 0.25em 0.5em;
+        line-height: 1.5;
+        min-height: 1.5em;
+        text-align: left;
+      }
+      th {
+        color: rgba(55, 53, 47, 0.6);
+      }
+      ol,
+      ul {
+        margin: 0;
+        margin-block-start: 0.6em;
+        margin-block-end: 0.6em;
+      }
+      li > ol:first-child,
+      li > ul:first-child {
+        margin-block-start: 0.6em;
+      }
+      ul > li {
+        list-style: disc;
+      }
+      ul.to-do-list {
+        text-indent: -1.7em;
+      }
+      ul.to-do-list > li {
+        list-style: none;
+      }
+      .to-do-children-checked {
+        text-decoration: line-through;
+        opacity: 0.375;
+      }
+      ul.toggle > li {
+        list-style: none;
+      }
+      ul {
+        padding-inline-start: 1.7em;
+      }
+      ul > li {
+        padding-left: 0.1em;
+      }
+      ol {
+        padding-inline-start: 1.6em;
+      }
+      ol > li {
+        padding-left: 0.2em;
+      }
+      .mono ol {
+        padding-inline-start: 2em;
+      }
+      .mono ol > li {
+        text-indent: -0.4em;
+      }
+ 
+      time {
+        opacity: 0.5;
+      }
+    </style>
+ 
+  </head>
+  <body onclick="scrollToBottom(false);">
+  <script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script> 
+  
+<table class="collection-content">
+<caption><h3>Topical Outline</h3>
+</caption>
+  <thead>
+    <tr>
+      <th style="width: 90px;">Module</th>
+      <th>Concepts &amp; topics</th>
+      <th style="width: 140px;">Focus on Learning Outcomes</th>
+      <th style="width: 140px;"><em
+          data-toggle="tooltip"
+          title="For final due dates, check SLATE Assignments and Quizzes."
+          style="color:red"
+          >Work completed </em></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr id="01">
+      <td class="cell-title">Week 1</td>
+      <td class="cell-Ad_q">
+        &bull; <a href="learnweb/index.html" target="_blank">Web Programming</a>: client-side programming (within browser).<br>
+        &bull; <a href="learnjs/index.html" target="_blank">JS language</a>: programs, variables, operators<br>
+        &bull; <a href="slides/index_w1.html" target="_blank">slides</a>
+      </td>
+      <td>1,8,9</td>
+      <td class="due"></td>
+    </tr>
+
+    <tr id="02">
+      <td class="cell-title">Week 2</td>
+      <td class="cell-Ad_q">
+        &bull; <a href="learnweb/index.html" target="_blank">Web Programming</a>: client-side programming (within browser).<br>
+        &bull; <a href="learnjs/index.html" target="_blank">JS language</a>: Data structures, objects
+        <!-- &bull; <a href="slides/index_w2.html" target="_blank">slides</a> -->
+      </td>
+      <td>1,2,8,9</td>
+      <td class="due">Worksheet 1</td>
+    </tr>
+
+    <tr id="03">
+      <td class="cell-title">Week 3</td>
+      <td class="cell-Ad_q"> 
+        &bull; <a href="learnweb/index.html" target="_blank">Web Programming</a>: client-side programming (within browser).<br> 
+        &bull; <a href="learnjs/index.html" target="_blank">JS language</a>: Functions, events 
+        <!-- &bull; <a href="slides/index_w3.html" target="_blank">slides</a> -->
+      </td>
+      <td>1,2,8,9,4</td>
+      <td class="due">Worksheet 2<br />Assignment 1</td>
+    </tr>
+
+    <tr id="04">
+      <td class="cell-title">Week 4</td>
+      <td class="cell-Ad_q">
+      &bull; <a href="learnjs/index.html" target="_blank">JS language</a>: DOM manipulation, events
+      <!-- &bull; <a href="slides/index_w2.html" target="_blank">slides</a> -->
+      </td>
+      <td>1,2,8,9,3,4</td>
+      <td class="due">Worksheet 3<br />Assignment 2</td>
+    </tr>
+
+    <tr id="05">
+      <td class="cell-title">Week 5</td>
+      <td class="cell-Ad_q">
+      &bull; <a href="learnjs/index.html" target="_blank">JS language</a>:  Forms, regex
+      <!-- &bull; <a href="slides/index_w5.html" target="_blank">slides</a> -->
+      </td>
+      <td>1,2,8,9,3,4</td>
+      <td class="due">Worksheet 4<br />Assignment 3</td>
+    </tr>
+
+    <tr id="06">
+      <td class="cell-title">Week 6</td>
+      <td class="cell-Ad_q">
+      &bull; <a href="learnweb/index.html" target="_blank">Web Programming</a>: client-side programming (within browser).<br> 
+      &bull; <a href="learnjs/index.html" target="_blank">JS language</a>: functions
+      <!-- &bull; <a href="slides/index_w5.html" target="_blank">slides</a> -->
+      </td>
+      <td>1,2,8,9,3,4</td>
+      <td class="due">Worksheet 5<br />Assignment 4</td>
+    </tr>
+
+    <tr id="07">
+      <td class="cell-title">Week 7</td>
+      <td class="cell-Ad_q">MIDTERM</td>
+      <td>1,2,8,9,3,4</td>
+      <td class="due" style="display:inline-block;text-align:center;text-transform:uppercase;background-color:black;color:yellow;text-align:center;">
+        <em
+          data-toggle="tooltip"
+          title="Details will be provided a week before the exam."
+          style="font-size:1em;color:white;text-align:center;"
+          >&mdash;MIDTERM&mdash;</em>
+    
+      </td>
+    </tr>
+
+
+    <tr id="br"  style="border: 2px solid black;border-radius: 5px;background-color:#eee;">
+      <td colspan="4" class="cell-title" style="text-align:center">Break week</td>
+    </tr>
+
+    <tr id="08">
+      <td class="cell-title">Week 8</td>
+      <td class="cell-Ad_q">
+      &bull; <a href="learnphp/index.html" target="_blank">Web Programming</a>: server-side (dataflow, forms).<br> 
+      &bull; <a href="learnphp/index.html" target="_blank">PHP language</a>: programs,
+        variables, operators
+      <!-- &bull; <a href="slides/index_w5.html" target="_blank">slides</a> -->     
+      </td>
+      <td>1,2,8,9,</td>
+      <td class="due"></td>
+    </tr>
+    <tr id="09">
+      <td class="cell-title">Week 9</td>
+      <td class="cell-Ad_q">&bull; <a href="learnphp/index.html" target="_blank">PHP language</a>: Data Types (numbers, strings, arrays)</td>
+      <td>1,2,8,9,5</td>
+      <td class="due">Worksheet 6</td>
+    </tr>
+    <tr id="10">
+      <td class="cell-title">Week 10</td>
+      <td class="cell-Ad_q">&bull; <a href="learnphp/index.html" target="_blank">PHP language</a>: Functions, sessions</td>
+      <td>1,2,8,9,5,6,7</td>
+      <td class="due">Worksheet 7<br />Assignment 5</td>
+    </tr>
+    <tr id="11">
+      <td class="cell-title">Week 11</td>
+      <td class="cell-Ad_q">&bull; <a href="learnphp/index.html" target="_blank">PHP language</a>: SQL language, MySQL database</td>
+      <td>1,2,8,9,5,6,7</td>
+      <td class="due">Worksheet 8<br />Assignment 6</td>
+    </tr>
+    <tr id="12">
+      <td class="cell-title">Week 12</td>
+      <td class="cell-Ad_q">&bull; <a href="learnphp/index.html" target="_blank">PHP language</a>: classes (Exception, PDO)</td>
+      <td>1,2,8,9,5,6,7</td>
+      <td class="due">Worksheet 9<br />Assignment 7</td>
+    </tr>
+    <tr id="13">
+      <td class="cell-title">Week 13</td>
+      <td class="cell-Ad_q">Catch up, put it all together</td>
+      <td>1,2,8,9,5,6,7</td>
+      <td class="due">Worksheet 10<br />Assignment 8</td>
+    </tr>
+    <tr id="14">
+      <td class="cell-title">Week 14</td>
+      <td class="cell-Ad_q">FINAL EXAM</td>
+      <td>ALL</td>
+      <td class="due" style="display:inline-block;text-align:center;text-transform:uppercase;background-color:black;color:yellow;">
+        <em
+          data-toggle="tooltip"
+          title="Details will be provided a week before the exam."
+          style="font-size:1em;color:white"
+          >&mdash;FINAL EXAM&mdash;</em></td>
+    </tr>
+    <tr id="br"  style="border: 2px solid black;border-radius: 5px;background-color:#eee;">
+      <td colspan="4" class="cell-title" style="text-align:center">End of term</td>
+    </tr>    
+    
+  </tbody>
+</table>
+
+</body></html>

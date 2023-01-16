@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+<title> SYST10199 learn Web programming</title>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<!--
+<link rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+-->
+<link rel="stylesheet" href="../css/styles.css"/> 
+<link rel="stylesheet" href="../css/prism_coy_dev.css"  />
+<style>
+dl, ol {
+  margin-bottom: 16px;
+}
+h4, h3 {
+  margin-top: 16px;
+}
+.ordered-list {
+  list-style-type: decimal;
+}
+.text-danger {
+  color: red;
+}
+.bg-dark-gray  {
+  background-color: #333940;
+}
+code {
+  color: black !important;
+}
+.sher-teal {
+  color: #00b2ce;
+}
+figcaption {
+  color: #00b2ce;
+  font-weight: 500;
+}
+</style>
+</head>
+
+<body>
+  <nav id="navTop" class="w-full z-30 top-0 text-white bg-dark-gray">
+    <div class="w-full container max-w-screen-lg mx-auto flex flex-wrap sm:flex-nowrap items-center justify-between mt-0 py-2">
+      <div class="md:pl-4">
+        <a class="text-white hover:text-white no-underline hover:no-underline
+        font-bold text-2xl lg:text-4xl rounded-lg hover:bg-nwoods-secondary " href="../index.html">
+          <h1 class="mb-0 p-1 ">SYST10199</h1>
+        </a>
+      </div>
+      <button id="topnavButton" class="rounded-lg sm:hidden focus:outline-none focus:ring" aria-label="Navigation">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path id="topnavOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path id="topnavClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>      
+      <div id="topnavList" class="hidden sm:block items-center w-auto mt-0 text-white p-0 z-20">
+        <ul class="list-reset list-none font-semibold flex justify-end flex-wrap sm:flex-nowrap items-center px-0 pb-0">
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../index.html">Home</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnweb/index.html">Web programming</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnjs/index.html">Learn JS</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnphp/index.html">Learn PHP</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="#">Piazza Q&amp;A</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-b border-gray-600 opacity-50 my-0 py-0" />
+  </nav>
+    
+  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+      
+    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+      <div class="flex-shrink-0 px-8 py-4">
+        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>   
+        </button>
+      </div>   
+      <nav id="navList" class="min-h-screen hidden md:block sidebar-nav flex-grow px-1 lg:px-4 pb-4 md:pb-0 md:overflow-y-auto break-words">
+
+
+          <a href="index.html" class="bg-gray-100 text-gray-900"> 
+<!--          
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clip-rule="evenodd" />
+            </svg>  
+-->
+            Web programming</a>
+          <a href="../learnjs/">Programming paradigms</a>
+          <a href="../learnjs/">Web development</a>
+          <a href="../learnjs/">Planing and design</a>
+          <a href="../learnjs/">Standards and conventions</a>
+          <a href="../learnjs/">Writing quality code</a>
+          <a href="../learnjs/">Testing, debugging, deploying</a>
+          <a href="../learnjs/">How the web works</a>
+          <a href="../learnjs/">Key technologies</a>
+
+      </nav>
+    </div>  
+        
+    <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+        <h1>Web Programming</h1>
+ 	<section>
+		<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">Computer programming is a process that starts with an original formulation of a problem and culminates in executable computer programs. Computer languages, like human languages, require you to use them in order to understand them.</h6>
+	</section>
+ 
+<section id="page01">  
+<h3>What is web programming?</h3>
+  <h4>Programming, Program, Algorithm, Programming language</h4>
+  <figure class="figure">	
+		<img class="figure-img img-fluid rounded" src="../images/program_algorithm.png">		
+		<figcaption class="figure-caption">Links between the terms of program, programming, algorithm and programming language &mdash;<a href="https://www.codeit-project.eu/wp-content/uploads/CodeIT_O1_EN.pdf"><em>Source</em></a></figcaption>
+	</figure>	
+
+
+  <h5>What is computer programming?</h5> 
+  <p>Computer programming, including web programming, is a process that starts with an original formulation of a problem and culminates in executable computer programs. The process consists of a set of activities:</p>
+  
+  <ol>
+    <li>Understand the problem. (analysis)</li>
+    <li>Plan the logic. (design)</li>
+    <li>Code the program. (construct)</li>
+    <li>Translate program into machine language.</li>
+    <li>Test the program. (test)</li>
+    <li>Put program into production.</li>
+  </ol>
+  <p><strong>What is problem solving?</strong></p>
+  
+  <p>Typical problems are complex. Many problems no longer appear as problems, because we have learned to solve them so well and so quickly that they take little time and little effort.</p>
+  <img src="images/image5.png" alt="comic strip on problem solving" style="width:100%">
+  <p>Break down problems and attempt to solve the pieces; attempt to solve each part. Even a simple problem needs to be <strong>planned, analysed, designed, constructed, and tested before it is implemented. </strong> What do you need to know?</p>
+  <ol>
+     <li>Describe the problem in own words</li>  
+      <li>State the OBJECTIVE of the problem we are trying to solve</li>  
+       <li>Identify the variables for INPUTs and OUTPUTs (ELEMENTS)</li>  
+        <li>What constraints need to be identified? (RELATIONS)</li>  
+         <li>Model the system: goal + elements + relations.</li>  
+  </ol>
+  <p>Use simple English (structured) or pseudocode. Include appropriate comments. Err on having too many comments. With practice you will learn to make sound and practical choices what constitutes too much and what is inadequate amount of comments.</p>
+  <p>Write out the algorithm. Keep track of constraints and assumptions. Look for improvements and alternatives, and revise.</p>
+  <h5>What is an algorithm?</h5>
+  <ul>
+    <li><a href="https://youtu.be/ZnBF2GeAKbo" target="_blank">What exactly is an algorithm? Algorithms explained | BBC Ideas | 7:53</a></li>
+    <li><a href="https://youtu.be/6hfOvs8pY1k" target="_blank">What's an algorithm? - David J. Malan | 4:57</a></li>
+    <li><a href="https://youtu.be/ENWVRcMGDoU" target="_blank">How algorithms shape our world - Kevin Slavin | 15:23</a></li>
+  </ul>  
+</section>
+
+<section id="page02">
+  <h3>Programming paradigms</h3>
+    <p><strong>Imperative programming</strong> A developer writes code that describes in exacting detail the steps that the computer must take to accomplish the goal.</p>
+  <p>A computer program is shaped by its 
+    <span class="orange">data representation</span> and the 
+    <span class="orange">statements</span> that determine its 
+    <span class="orange">flow of control</span>.</p>
+  <p>Every program (<span class="orange">process</span>) has <span class="orange">input</span> and <span class="orange">output</span>.</p>
+  
+  <p>A <strong>programming paradigm</strong> is a style of programming. To program professionally, you need to learn either the object-oriented or functional programming paradigms.</p>
+  <p><strong>State</strong> One of the fundamental differences among the various programming paradigms is the handling of state. State is the value of a program's variables while it is running. Global state is the value of a program's global variables while it is running.</p>
+  <p><strong>Procedural programming paradigm</strong> Procedural programming paradigm is a programming style in which you write a sequence of steps moving toward a solution— with each step changing the program's state.You store data in global variables and manipulate it with functions</p>
+  <p><strong>Functional programming paradigm</strong> Functional programming paradigm addresses the problems that arise in procedural programming by eliminating global state. A functional programmer relies on functions that do not use or change global state, the only state they use are the parameters you pass to the function. The result, a function returns, is usually passed on to another function. A functional programmer can thus avoid global state by passing it from function to function.</p>
+  <p><strong>Object-oriented programming paradigm</strong> Object-oriented programming paradigm also addresses the problems that arise in procedural programming by eliminating global state, but instead of storing state in functions, it is stored in objects.</p>
+</section>  
+  
+ 	
+<!--  1.2. Javascript vs. PHP highlights -->
+<section id="page12">
+    <h3>Javascript vs. PHP highlights.</h3>
+	<p>Compare some of the important features of Javascript and PHP. Read this in conjunction with the client-server diagram and make sure you understand what each row of the table is telling you and why each language has the features and limitations that it has.</p>
+	<figure class="figure">	
+		<table class="table table-sm">
+		  <tr>
+			<th></th>
+			<th>JavaScript</th>
+			<th>PHP</th>
+		  </tr>
+		  <tr>
+			<th>Runs on:</th>
+			<td>Browser</td>
+			<td>Server</td>
+		  </tr>
+		  <tr>		
+			<th>Access to client machine:</th>
+			<td>Some</td>
+			<td>None</td>		
+		  </tr>	  
+		  <tr>		
+			<th>Access to server machine:</th>
+			<td>None</td>
+			<td>Full</td>		
+		  </tr>	
+		  <tr>		
+			<th>Access to database:</th>
+			<td>None</td>
+			<td>Full</td>		
+		  </tr>	
+		  <tr>		
+			<th>Access to DOM:</th>
+			<td>Full</td>
+			<td>None</td>		
+		  </tr>		
+		  <tr>		
+			<th>Input:</th>
+			<td><strong class="orange">User interaction</strong></td>
+			<td>HTTP parameters, files, and databases</td>		
+		  </tr>		
+		  <tr>		
+			<th>Output:</th>
+			<td>Pop-ups, <strong class="orange">changes to DOM</strong></td>
+			<td>Text (HTML, CSS, Javascript)</td>		
+		  </tr>	 
+		  <tr>		
+			<th>Comments:</th>
+			<td>Java-like, visible in page source</td>
+			<td>Java-like, not visible in page source</td>		
+		  </tr>	
+		  <tr>		
+			<th>Coding Styles:</th>
+			<td>Imperative, <strong class="orange">event-driven</strong>, functional, object-oriented</td>
+			<td>Imperative, functional, object-oriented</td>		
+		  </tr>	
+		  <tr>		
+			<th>Syntax:</th>
+			<td>Java-like</td>
+			<td>Java-like</td>		
+		  </tr>	
+		  <tr>		
+			<th>Variables:</th>
+			<td>Weakly typed</td>
+			<td>Weakly typed, names start with $</td>		
+		  </tr>	
+		  <tr>		
+			<th>Array support:</th>
+			<td>Numeric and associative</td>
+			<td>Numeric and associative</td>		
+		  </tr>		  
+		</table>		
+		<figcaption class="figure-caption">Comparison of Javascript and PHP.</figcaption>
+	</figure>	
+</section>
+
+
+<!-- 1.4. Designing client-server web apps  -->
+<section id="page14">
+  <h3>Plan, Design, and integrate web apps</h3>
+  <blockquote class="blockquote eeb-border-quote">
+    <p class="mb-0">The best programs are written so that computing machines can perform them quickly and so that human beings can understand them clearly. A programmer is ideally an essayist who works with traditional aesthetic and literary forms as well as mathematical concepts, to communicate the way that an algorithm works and to convince a reader that the results will be correct.</p>
+    <footer class="blockquote-footer">Donald E. Knuth <cite title="Source Title"> </cite></footer>
+  </blockquote>
+
+
+
+  <dl>
+	<dt>Follow a consistent process</dt>
+	<dd>
+    <p>Start organizing content with HTML5, then styling with CSS3, then adding behaviour with Javascript, as appropriate.</p>
+    <ul class="dialog-ul">
+      <li><strong>Step 1:</strong> Create the directory tree for the project in the webspace to physically organize all the files. (the files in steps 1 and 2 may be in other projects or temporary directories).</li>
+      <li><strong>Step 2:</strong> Create the template.html page using HTML5 and CSS3. Test and validate code.</li>
+      <li><strong>Step 3:</strong> Follow the Progressive Enhancement approach to design all pages. (see screenshots of the home page and the three games included in this solution).</li>
+      
+      <li><strong>Step 4:</strong> Use the template.html to create footer.php, header.php, and navigation.php.index.php</li>
+      <li><strong>Step 5:</strong> Complete the index.php code that incorporates all the common components of the home page and test it.</li>
+      <li><strong>Step 6:</strong> Focus on the dynamic elements of the page.</li>
+      <li><strong>Step 7:</strong> Focus on the content and sub-menus.</li>
+    </ul>	
+  </dd>
+		
+	<dt>Understanding the problem</dt>
+	<dd>
+    <p>Even a simple problem needs to be planned, analysed, designed, constructed, and tested before it is implemented. Complex problems can be broken down into a set of simple problems.</p>
+	<p>Analyze the problem and consider alternate solutions, then select the most appropriate solution for a given situation.</p>
+	<ul class="w3-ul">
+		<li><strong>Objective:</strong> what is the objective of the problem we are trying to solve?</li>
+		<li><strong>Elements:</strong> what are the elements of the problem? (output and input)</li>
+		<li><strong>Relations:</strong> what are the relations among the elements of the problem? (functionality, processes)</li>
+		<li><strong>Algorithm:</strong> what is the step by step process that makes up the problem?</li>
+		<li><strong>Model the system:</strong> prototype and test, identify areas of improvement, changes, alternatives, dependencies, constraints...</li>		
+	</ul>	
+</dd>
+	<dt>Design and implement the selected solution.</dt>
+	<dd>
+	
+    <p>Start with organizing content with HTML5, style with CSS3, add behaviour with Javascript, as appropriate. Some notes:</p>
+    <ul>
+      <li>Use PE approach to develop web apps.</li>
+      <li>Keep up-to-date with <a href="https://www.w3.org/">W3 Consortium</a>. For example, we no longer include mime type in style and script elements.</li>
+      <li>Use the same convention as Java and Javascript for code style and documentation.</li>
+      <li>Validate HTML5 at <a href="https://validator.w3.org/">validator.w3.org</a> before adding any styles.</li>
+      <li>Validate CSS3 at <a href="https://jigsaw.w3.org/css-validator/">jigsaw.w3.org</a> before adding any Javascript code.</li>
+
+		<li><strong>Organize Your Files</strong>
+
+			<ul>
+				<li>Create a <mark>project directory</mark> (<span title="A 'folder' is a graphical representation of a directory">folder</span>) for every web site and every web application you are working on, usually under <q>public_html</q> directory.</li>
+				<li>Each project has its own set of sub-directories. The standard set includes the following sub-directories: <code>css/</code>, <code>images/</code>, <code>media/</code>, <code>content/</code>, <code>scripts/</code></li>
+				<li>For larger projects, you may wish to use a sub-directory for each language used; for example, instead of creating <code>scripts/</code> you may create <code>js/</code>, <code>php/</code> and so on.</li>	
+				<li>The project directory contains the home page <code>index.html</code>, the starting page of the web site or web app. All other HTML pages will be stored in the <code>content/</code> directory.</li>	
+			</ul>
+		</li>
+		<li>Focus on the input and output of your web application.</li>
+		<li>Use "real" content where available.</li>
+		<li>Use "Lorem ipsum" dummy text and images, as place-holder, where the content is not available ahead of time or during development time.</li>
+		<li>Do not leave anything blank; do not use repetitious short phrases, or unrelated material as fillers.</li>
+		<li>Identify and document through comments, what styling and behaviour you intend to implement.</li>
+		<li><strong>Do not forget to validate all code</strong>.</li>
+	</ol>
+  </dd>
+  </dl>
+</section>
+
+<!-- 1.5. Apply best practices  -->
+<section id="page15">
+    <h3>Standards, conventions, best practices. </h3>
+  <dl>
+	<dt>Progressive Enhancement (<a href="https://www.wikiwand.com/en/Progressive_enhancement" target="_blank">wikiwand.com</a>)</dt>
+  <dd>
+	<p>Progressive enhancement (PE) is a strategy for web design that emphasizes accessibility, semantic HTML markup, and external stylesheet and scripting technologies. PE consists of a set of core principles:</p>
+	<ul>
+		<li>basic content should be accessible to all web browsers</li>
+		<li>basic functionality should be accessible to all web browsers</li>
+		<li>sparse, semantic markup contains all content</li>
+		<li>enhanced layout is provided by externally linked CSS</li>
+		<li class="text-danger">enhanced behavior is provided by unobtrusive, externally linked JavaScript</li>
+		<li>end-user web browser preferences are respected</li>
+	</ul>
+	<p>The PE process consists of three steps:</p>
+	<ul>
+		<li><strong>Step One:</strong>  Build solid foundation with HTML5. Identify content and use the most suitable (meaningful) markup to organize it. All content must be accessible without styles.</li>
+		<li><strong>Step Two:</strong>  Using well-formed and valid HTML5, style the elements for best presentation. All content must be accessible without scripts.</li>
+		<li><strong>Step Three:</strong>  Using well-formed and valid HTML5 styled with well-formed and valid CSS3, add behaviour with Javascript.</li>
+	</ul>
+		
+		
+	<figure class="figure">	
+		<img src="http://bajcar.dev.fast.sheridanc.on.ca/assets10199/images/pe.svg" class="figure-img img-fluid rounded" alt="pregressive enhancement approach">		
+		<figcaption class="figure-caption text-center">&nbsp;</figcaption>
+	</figure>		
+	</dd>
+  
+	
+	<dt>Writing code for readability</dt>
+  <dd>
+	<blockquote class="blockquote eeb-border-quote">
+	  <p class="mb-0">Writing code is similar to academic writing in that when you use or adapt code developed by someone else as part of your project, you must cite your source. However, instead of quoting or paraphrasing a source, you include an inline comment in the code. These comments not only ensure you are giving proper credit, but help with code understanding and debugging</p>
+	  <footer class="blockquote-footer">Academic Integrity at MIT, A Handbook for Students <cite title="Source Title"> </cite></footer>
+	</blockquote>	
+	</dd>	
+		<dt>Article <a href="http://crockford.com/javascript/code.html" target="_blank">Code Conventions for the JavaScript Programming Language</a></dt>
+		<dd>Read and explore
+			<p>
+			<samp>Javascript files </samp> • 
+			<samp>white space </samp> • 
+			<samp>comments</samp>• 
+			<samp>variable declarations</samp> • 
+			<samp>functional declarations</samp> •
+			<samp>names</samp> • 
+			<samp>statements (simple, compound)</samp> • 
+			<samp>labels</samp> (return, if, for, while, do, switch, try, continue, with) • 
+			<samp>{}</samp> • 
+			<samp>[]</samp></p> 
+			<p>To demonstrate your understanding, explain in your own words:</p>
+			<ul>
+				<li>What does the author mean by <q class="text-danger">publication quality</q>? Why is this important?</li>
+				<li>Where should the Javascript code be placed? What is the correct file extension for Javascript files?</li>
+				<li>What is whitespace? Where and how do you use it? in the code?</li>
+				<li>How should comments be used in Javascript code?</li>
+				<li>What does the author suggests where to place Javascript code? Why?</li>
+			</ul>
+		</dd>
+	</dl>	
+				
+	<hr>
+	<h5>Writing code for functionality and performance</h5>	
+	<dl class="dl-horizontal">				
+		<dt>Specifications <a href="https://tc39.github.io/ecma262" target="_blank"> ECMA-262 standard</a>.</dt>
+		<dd>Read and make notes of the sections 1) Scope, 2) Conformance, and 4) Overview of the language specification <br> To demonstrate your understanding, explain in your own words:
+			<ul>
+				<li>How does Javascript comply with ECMA-262 standard? </li>
+				<li>In the Overview, the specification states: <q>A scripting language is a programming language that is used to manipulate, customize, and automate the facilities of an existing system. In such systems, useful functionality is already available through a user interface, and the scripting language is a mechanism for exposing that functionality to program control. In this way, the existing system is said to provide a host environment of objects and facilities, which completes the capabilities of the scripting language.</q>. What is the host environment in Javascript?</li>   
+			</ul>
+		</dd>  
+		<dt title="">
+			Article <a href="http://www.w3schools.com/js/js_mistakes.asp" target="_blank">JavaScript Common Mistakes
+			<img alt="link to w3.org" class="icon" src="https://www.w3.org/2008/site/images/favicon.ico" height="16" title="w3c"></a> 
+		</dt>
+		<dd>
+			<p>Explore to understand deeply.</p>
+			<ol style="column-gap: 46px;column-count:2;">
+				<li>Accidentally Using the Assignment Operator</li>
+				<li>Expecting Loose Comparison</li>
+				<li>Confusing Addition & Concatenation</li>
+				<li>Breaking a JavaScript String</li>
+				<li>Misplacing Semicolon</li>
+				<li>Breaking a Return Statement</li>
+				<li>Accessing Arrays with Named Indexes</li>
+				<li>Ending an Array Definition with a Comma</li>
+				<li>Ending an Object Definition with a Comma</li>
+				<li>Undefined is Not Null</li>
+				<li>Expecting Block Level Scope</li>	
+			</ol>	
+		</dd>
+
+		<dt title="">Article <a href="http://www.w3schools.com/js/js_performance.asp" target="_blank">JavaScript Performance</a> <img alt="link to w3.org" class="icon" src="https://www.w3.org/2008/site/images/favicon.ico" height="16" title="w3c">
+		</dt>					
+		<dd>Explore to understand deeply.
+			<ol start="12" style="column-gap: 46px;column-count:2;">
+				<li>Reduce Activity in Loops</li>
+				<li>Reduce DOM Access</li>
+				<li>Reduce DOM Size</li>
+				<li>Avoid Unnecessary Variables</li>
+				<li>Delay JavaScript Loading</li>
+				<li>Avoid Using with</li>
+			</ol>	
+		</dd>
+	</dl>
+
+	<blockquote class="blockquote eeb-border-quote">
+		<p class="mb-0">Always code as if the guy who ends up maintaining your code will be<br>a violent psychopath who knows where you live. Code for readability.</p>
+		<footer class="blockquote-footer">Attributed to John Woods <cite title="Source Title"> </cite></footer>
+	</blockquote>
+
+</section>
+ 
+    
+    
+    
+    
+    
+    
+    
+    </section>
+      
+  </main>
+  
+
+  
+  <footer class="bg-dark-gray text-white"> 
+     <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
+      <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10109 Web Programming | Sheridan College</a>
+      </p>     
+    </section> 
+    <div class="container max-w-screen-lg mx-auto  px-8">   
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+          <ul class="text-sm font-medium pb-14 sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-y-10">
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</footer> 
+ 
+</body>
+
+<script>
+  // topnav
+  var topButton = document.getElementById("topnavButton");
+  var topnavList = document.getElementById("topnavList");
+  topButton.addEventListener("click", function() {
+    this.classList.toggle("active");
+    topnavList.classList.toggle("hidden");
+    document.getElementById("topnavOpen").classList.toggle("hidden");
+    document.getElementById("topnavClosed").classList.toggle("hidden");
+  });
+</script>
+<script src="../scripts/prism.js"></script>
+</body>
+</html>

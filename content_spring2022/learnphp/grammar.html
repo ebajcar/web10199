@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+<title> SYST10199 learn PHP </title>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css"/> 
+<link rel="stylesheet" href="../css/prism_coy_dev.css"  />
+<style>
+dl, ol {
+  margin-bottom: 16px;
+}
+h4 {
+  margin-top: 16px;
+}
+.ordered-list {
+  list-style-type: decimal;
+}
+.text-danger {
+  color: red;
+}
+.bg-dark-gray  {
+  background-color: #333940;
+}
+.active {
+  font-weight: bold;
+}
+code {
+  color: black !important;
+}
+.sher-teal {
+  color: #00b2ce;
+}
+figcaption {
+  color: #00b2ce;
+  font-weight: 500;
+}
+</style>
+</head>
+
+<body>
+  <nav id="navTop" class="w-full z-30 top-0 text-white bg-dark-gray">
+    <div class="w-full container max-w-screen-lg mx-auto flex flex-wrap sm:flex-nowrap items-center justify-between mt-0 py-2">
+      <div class="md:pl-4">
+        <a class="text-white hover:text-white no-underline hover:no-underline
+        font-bold text-2xl lg:text-4xl rounded-lg hover:bg-nwoods-secondary " href="../">
+          <h1 class="mb-0 p-1 ">SYST10199</h1>
+        </a>
+      </div>
+      <button id="topnavButton" class="rounded-lg sm:hidden focus:outline-none focus:ring" aria-label="Navigation">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path id="topnavOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path id="topnavClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>      
+      <div id="topnavList" class="hidden sm:block items-center w-auto mt-0 text-white p-0 z-20">
+        <ul class="list-reset list-none font-semibold flex justify-end flex-wrap sm:flex-nowrap items-center px-0 pb-0">
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../index.html">Home</a></li><li class="p-1 sm:p-0"><a class="topnav-link" href="../learnweb/index.html">Web programming</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnjs/index.html">Learn JS</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnphp/index.html">Learn PHP</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-b border-gray-600 opacity-50 my-0 py-0" />
+  </nav>
+    
+  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+      
+    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+      <div class="flex-shrink-0 px-8 py-4">
+        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>   
+        </button>
+      </div>   
+      <nav id="navList" class="min-h-screen hidden md:block sidebar-nav flex-grow px-1 lg:px-4 pb-4 md:pb-0 md:overflow-y-auto break-words">
+
+          <a href="index.html">PHP language</a>
+          <a href="grammar.html">Grammar</a>
+          <a href="data_types.html">Data types</a>
+          <a href="variables.html">Variables</a>
+          <a href="operators.html">Operators</a>
+          <a href="control_flow.html">Programs and flow control</a>      
+          <a href="collections.html">Data structures</a>     
+          <a href="functions.html">Functions</a>
+          <a href="sessions.html">Sessions</a>
+
+          <a href="mysql.html">MySQL DBMS</a>
+          <a href="sql.html">SQL database language</a>
+          <a href="objects.html">Object-oriented PHP</a>
+
+      </nav>
+    </div>  
+        
+    <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+        <h1>Grammar </h1>
+
+ 	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">When PHP parses a file, it looks for opening and closing tags,which tell PHP to start and stop interpreting the code between them. Parsing in this manner allows PHP to be embedded in all sorts of different documents, as everything outside of a pair of opening and closing tags is ignored by the PHP parser.</h6>
+
+<ul class="nav nav-pills flex flex-col md:flex-row list-none pl-0 mb-4 mx-48" id="pills-tabFill" role="tablist">
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#1" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Start and end processing instructions</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#2" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">File extensions</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#3" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Organizing scripts: pure and hybrid</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#4" class="nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Whitespace and Case-sensitivity</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#5" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Commenting and Documentation</a>
+  </li>
+</ul>
+
+
+<!-- Data types  -->
+<div id="1" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+        <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+        <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Start and end processing instructions</h5>	
+           
+        <p>PHP interpreter parses a file, it looks for opening and closing tags, which are <code>&lt;?php</code> to open and <code>?></code> to close a PHP section. Everything outside of a pair of opening and closing tags is ignored by the PHP parser which allows PHP files to have mixed content (hybrid).</p> 
+        <pre class="language-php"><code>
+&lt;?php
+// declare and initialize variable $txt to store a value 
+$txt = "Hello world!";
+
+// display the stored value in variable $txt
+echo $txt;
+?></code></pre>	
+        <p>PHP also allows for short open tag <code>&lt;?</code> which is discouraged since it is only available if enabled and conflicts with other XML tags. <code>&lt;?= $someVar ?></code> is available shortcut for <code>&lt;?php echo $someVar ?></code></p>	
+
+        <p title="Sklar, David. Learning PHP 5 (Kindle Locations 299-302). O'Reilly Media. Kindle Edition.">Unlike most other programming languages, PHP was created from the ground up for generating web pages. This means that common web programming tasks, such as accessing form submissions and talking to a database, are often easier in PHP. PHP comes with the capability to format HTML, manipulate dates and times, and manage web cookies — tasks that are often available only as add-on libraries in other programming languages.</p>
+  </div>
+</div> 
+
+
+
+
+<!-- Data types  -->
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+        <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+        <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">File extensions</h5>	
+	<p>On most servers, the default extension for PHP files is <code>.php</code>.  If the server supports PHP, then you do not need to do anything. Files created with the <code>.php</code> extension located in the <strong>web directory</strong> (<code>/home/userid/public_html</code>) will be automatically parsed by the server (on the domain <code> dev.fast.sheridanc.on.ca</code>):</p>
+<pre class="language-php"><code>
+http://userid.dev.fast.sheridanc.on.ca/file.php
+</code></pre>
+		
+  </div>
+</div> 
+
+
+
+<!-- Data types  -->
+<div id="3" class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+        <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+        <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Organizing scripts: pure and hybrid</h5>	
+        <p class="byline">Generate valid HTML5, CSS3, and Javascript whether you use pure or hybrid PHP. Always validate the generated code. Example of pure PHP using print redirection to Here document: </p>
+<pre class="language-php"><code>
+&lt;?php 
+// Print what was submitted in the form parameter called 'user' 
+// First checks if the parameter exists (could be empty)
+if (isset($_POST["user"]))
+	print $_POST['user']; 
+
+// Unset the parameter; unset() destroys the specified variables
+unset($_POST['user']);
+print "!";
+
+print &lt;&lt;&lt;TAG1
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  &lt;title>Example two&lt;/title>
+  &lt;meta charset="utf-8">
+&lt;/head>
+&lt;body>
+  &lt;form method="post" action="$_SERVER[PHP_SELF]">
+	 Your Name: &lt;input type="text" name="user">&lt;br>
+	 &lt;input type="submit" value ="Say Hello">&lt;br>
+  &lt;/form>
+&lt;/body>
+&lt;/html>
+TAG1;
+?>
+</code></pre>	
+  </div>
+</div> 
+
+
+
+
+<!-- Data types  -->
+<div id="3" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+        <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+        <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Whitespace and Case-sensitivity</h5>	
+        	  <p>PHP programs consist of a series of statements, each of which ends with a semicolon. You can put multiple statements on the same line as long as they are separated with a semicolon. You can put as many blank lines between statements as you want. The PHP interpreter ignores them. Whitespace includes space, tab, and newline characters.</p>
+	  <p>In practice, it is a good style to put one statement on a line and put blank lines to improve the readability of your source code. Use the same conventions as Javascript code.</p>
+	  <p>The PHP interpreter does not care whether you use uppercase letters, lowercase letters, or both when you include keywords and function names in your program.</p>
+  </div>
+</div> 
+
+
+
+<!-- Data types  -->
+<div id="3" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+        <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+        <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Commenting and Documentation</h5>	
+        <blockquote class="w3-panel w3-leftbar sherblue">Writing code is similar to academic writing in that when you use or adapt code developed by someone else as part of your project, you must cite your source. However, instead of quoting or paraphrasing a source, you include an inline comment in the code. These comments not only ensure you are giving proper credit, but help with code understanding and debugging.
+	<br><small><cite title="[ Academic Integrity at MIT, A Handbook for Students ]">Academic Integrity at MIT, A Handbook for Students</cite> </small>
+	</blockquote> 
+  </div>
+</div> 
+
+
+
+        
+        
+
+    </section>
+      
+  </main>
+  
+
+  
+  <footer class="bg-dark-gray text-white"> 
+     <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
+      <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10109 Web Programming | Sheridan College</a>
+      </p>     
+    </section> 
+    <div class="container max-w-screen-lg mx-auto  px-8">   
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+          <ul class="text-sm font-medium pb-14 sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-y-10">
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</footer> 
+ 
+</body>
+
+<script>
+  // topnav
+  var topButton = document.getElementById("topnavButton");
+  var topnavList = document.getElementById("topnavList");
+  topButton.addEventListener("click", function() {
+    this.classList.toggle("active");
+    topnavList.classList.toggle("hidden");
+    document.getElementById("topnavOpen").classList.toggle("hidden");
+    document.getElementById("topnavClosed").classList.toggle("hidden");
+  });
+</script>
+<script src="../scripts/prism.js"></script>
+</body>
+</html>
