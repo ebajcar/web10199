@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Class 1 Notes</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+    
+    <!--
+		<link rel="stylesheet" href="css/theme/night.css">
+    -->
+    
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+		<!-- 
+    https://revealjs.com/code/
+    
+    
+    Theme used for syntax highlighting of code
+		<link rel="stylesheet" href="lib/css/monokai.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-light.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/rainbow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/paraiso-dark.min.css">
+    https://cdnjs.com/libraries/highlight.js
+     -->
+     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/googlecode.min.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+      
+
+				<section>
+					<h2>Web Programming</h2>
+          <h3><span style="color:#0081a1">SYST10199</span></h3>			
+          <p>Class 1 Notes</p>	
+				</section>
+  
+				<section>
+					<h2>SLATE Content</h2>
+					<ol>
+						<li>Home page <br><small style="color:gray">Course material, Quick Links, Activity Feed, Announcements</small></li>
+            <li>Assessments > Grades</li>
+						<li>Assessments > Assignments <br><small style="color:gray">Assignments 2, 4, 6, 8</small></li>
+						<li>Assessments > Quizzes <br><small style="color:gray">Assignments 1, 3, 5, 7</small> </li>
+						<li>Content > Overview  <br><small style="color:gray">Important information, due dates, course content links</small></li>
+					</ol>				
+				</section>      
+      
+				<section>
+					<h2>Development environment</h2>
+					<ol>
+            <li>Same as last semester - no changes</li>
+						<li>Use Notepad++ text editor<br><small style="color:gray">(or atom, brackets, sublime)</small></li>
+						<li>Avoid using IDEs at this time<br><small style="color:gray">(if you do, make sure you clean up all hidden files and correct all unnecessary markup usually added by such tools; do not follow defaults, unless the tool follows standards and conventions)</small> </li>
+						<li>renew your access to dev.fast.sheridanc.on.ca  <br><small>&mdash; visit http://tech.fast.sheridanc.on.ca/ > Services > LAMP / Git<br>&mdash; to reset password, if you forgot it, and to access cPanel and other information</small></li>
+					</ol>				
+				</section>  
+        
+				<section>
+					<h2>Web programming</h2>
+					<ol>
+						<li>What you should already know <br>&bull;&nbsp;&nbsp;<span style="color:#0081a1">Java</span> and  <span style="color:#0081a1">Web Development</span> courses</li>
+						<li>Full-stack development<br><small style="color:gray">JS in the browser vs. PHP on the server</small> </li>
+						<li>What is web programming?<br><small style="color:gray">Plan, design, construct, document, test, publish. <br>Standards, conventions, best practices.</small> </li>
+					</ol>				
+				</section>        
+      
+				<section>
+					<h3>Progressive Enhancement (PE) Approach</h3>
+					<ol>
+						<li>Organize with HTML5 (structure)</li>
+						<li>Style with CSS3 (presentation)</li>
+						<li>Add behaviour with JS (client-side functionality)</li>
+            <li>Enhance with PHP. (server-side functionality)</li>
+					</ol>				
+				</section> 
+        
+        
+				<section>
+					<h2>Client-side Programming</h2>
+          <p><span style="color:#0081a1">Javascript (JS)</span> in the browser</p>			
+				</section>
+  
+				<section>
+					<h2>JavaScript (JS)</h2>
+					<ul>
+						<li class="fragment fade-left">a lightweight, interpreted (just-in-time compiled), programming language 
+              <span style="display: inline-block;color: #0081a1;" class="fragment fade-left"> with first-class functions</span>   
+            </li>
+            <li class="fragment fade-left"> a prototype-based, multi-paradigm, single-threaded, dynamic language</span>
+            </li>
+            <li class="fragment fade-left"> supports
+              <span style="display: inline-block;color: #0081a1;" class="fragment fade-left">  object-oriented, imperative, </span>
+              <span style="display: inline-block;" class="fragment fade-left"> and declarative styles</span>
+            </li>
+					</ul>				
+				</section>      
+
+ 				<section>
+					<h2>JavaScript (JS)</h2>
+					<ol>
+						<li><span style="color:#0081a1">Standards</span> are  
+            <ul style="font-size:0.7em">
+              <li><a href="https://tc39.es/ecma262/" target="_blank">ECMAScript Language Specification (ECMA-262)</a> and</li> 
+              <li><a href="https://tc39.es/ecma402/" target="_blank">ECMAScript Internationalization API specification (ECMA-402)</a></li>
+            </ul></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><span style="color:darkorange">Documentation</span> throughout MDN</a> is based on the latest draft versions of ECMA-262 and ECMA-402.</li>
+					</ol>				
+				</section>   
+ 
+ 
+				<section>
+					<h2>Inline Javascript</h2>
+          <h3>Obtrusive.</h3>
+					<p>
+						 <span style="color:darkorange">TO BE AVOIDED!</span> 
+					</p>
+					<pre><code class="html" data-line-numbers="1-4">&lt;a onMouseOver="alert('you rolled over me');" 
+    href="file.html" target="_blank">
+  Move mouse over this text
+&lt;/a></code></pre>
+				</section> 
+
+
+				<section>
+					<h2>Embedded Javascript</h2>
+					<p>
+						 <span style="color:orange">Good during development or <br>small amount of unique to-the-page code.</span>
+					</p>          
+					<p>
+						Add Javascript at the end of BODY element <br>using the &lt;script> element
+					</p>
+					<pre><code class="html" data-line-numbers="1,6,7">&lt;script>
+/* declare and initialize variable txt to store a value */
+txt = "Hello world!";
+// display the stored value in variable txt at the console
+console.log(txt);
+&lt;/script>
+&lt;/body></code></pre>
+				</section> 
+        
+				<section>
+					<h2>External Javascript</h2>
+					<p>
+						 <span style="color:darkorange">Unobtrusive.</span> <span style="color:#0081a1">Code reusability. Code maintenance.</span> <br>Organize code in external files.
+					</p> 
+					<p>
+						Add Javascript at the end of BODY element using the &lt;script> element
+					</p>
+					<pre><code class="html" data-line-numbers="1,2,3">&lt;script src="js/filename.js">&lt;/script>
+&lt;script src="js/anotherone.js">&lt;/script>   
+&lt;script>/* may have some internal code */&lt;/script>       
+&lt;/body></code></pre>
+				</section>         
+
+        
+				<section data-background-iframe="https://ebajcar.w3spaces.com/" data-background-interactive>
+					<div style="position: absolute; width: 10%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<small>You can use the w3schools editor to try and test your code.</small>
+					</div>
+				</section>        
+        
+        <!--
+        <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+          <p>
+            <a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_intro" target="_blank">PHP Tryit editor @ w3schools.com</a>
+          </p>     
+<p><a  onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/wArUB0Yp', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/inclass/example_php_04.png" alt="example 2"  class="btn btn-outline-secondary btn-block" style="cursor:pointer;">phpfiddle lite</a>    </p>  
+
+  <button type="button" class="btn btn-outline-success" onclick="window.open('https://pastebin.com/embed_iframe/wArUB0Yp', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)">Get code in pastebin</button>    
+        </section>
+-->
+        
+   
+				<section>
+					<h2>Study Tips</h2>
+					<ol>
+						<li><a href="https://www.notion.so/ellen10049/Learning-course-content-72b51f6c844e42df9e92f73b71bc374b" target="_blank">Learning course content</a></li>
+            <li><a href="https://www.notion.so/ellen10049/Learning-for-mastery-not-grades-5d0bd4fc3a914e36b73e7685e3d1ec53" target="_blank">Learning for mastery, not grades</a></li>
+            <li><a href="https://www.notion.so/ellen10049/How-do-I-get-an-A-in-any-course-be6f9035862f48139b2fdc417922a77c" target="_blank">How do I get an A in (any) course?</a></li>
+            <li><a href="https://www.notion.so/Reading-a-Textbook-for-True-Understanding-Cornell-College-c112295a7b094347b42b56498cadb70d" target="_blank">Reading a Textbook for True Understanding</a></li>
+					</ol>				
+				</section>  
+ 
+        <section data-transition="slide" data-background="#003767" data-background-transition="zoom">
+        <h2>Prepare for next class</h2>
+        <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">Study the assigned material and make notes.</span><br> <span style="color:#00b2ce">Complete Worksheet 1.</span><br>&mdash;<br>Post your questions on the <a href="https://github.com/ebajcar/web10199_worksheets/discussions" target="_blank">Discussion board</a><br>or bring to next class. Answer other students' questions. Start a conversation.
+        <br>&mdash;
+        </section> 
+        
+       
+        
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

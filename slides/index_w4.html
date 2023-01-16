@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Class 4 Notes</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+    
+    <!--
+		<link rel="stylesheet" href="css/theme/night.css">
+    -->
+    
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+		<!-- 
+    https://revealjs.com/code/
+    
+    
+    Theme used for syntax highlighting of code
+		<link rel="stylesheet" href="lib/css/monokai.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-light.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/rainbow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/paraiso-dark.min.css">
+    https://cdnjs.com/libraries/highlight.js
+     -->
+     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/googlecode.min.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+       
+				<section data-background="week4_notes.png">
+				</section>        
+
+
+<!-- REVIEW web programming - nested vertical slides -->
+<section>
+					<section>
+						<h2>Review</h2>
+						<p>Web programming</p>
+            <p>Review <a href="https://ebajcar.github.io/web10199_worksheets/syst10199/noteworthy/gradeCalc.html" target="_blank">A Guideline for Implementing Good Solutions</a></p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="89" height="119" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section> 
+ 				<section>
+					<h2>Key elements of programming style</h2>
+					<ol>
+						<li>Expression</li>
+						<li>Control structure</li>
+						<li>Programming structure</li>
+						<li>Input and Output</li>
+						<li title="(measure performance)">Efficiency and instrumentation</li>
+						<li>Documentation</li>
+					</ol>				
+				</section>         
+ 				<section>
+					<h2>Expressing each statement well:</h2>
+					<ol>
+						<li>write clearly.</li>
+						<li>be sparing with temporary variables.</li>
+						<li>be unambiguous - parentheses, well-named identifiers.</li>
+						<li>make sure conditional tests read clearly.</li>
+            <li>avoid unnecessary branches.</li>
+            <li>replace repetitive expressions by calls to a common function.</li>
+					</ol>				
+				</section>         
+        <section>
+           <h2>use the good features of a language;</h2>
+           <h2>avoid the bad ones.</h2>
+        </section>      
+        
+        <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+          <p>A computer program is shaped by its data representation and the statements that determine its flow of control.</p>
+						<a href="#/2">
+							<img width="89" height="119" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+</section>
+
+
+
+<!-- REVIEW Javascript - nested vertical slides -->
+<section>
+					<section>
+						<h2>Review</h2>
+            <p>Javascript language</p>
+						<br>
+						<a href="#" class="navigate-down">
+							<img width="89" height="119" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section> 
+				<section>
+					<h3>Explore the Math Object</h3>
+          <p class="codepen" data-height="383" data-theme-id="light" data-default-tab="js,result" data-user="ebajcar" data-slug-hash="GqReGO" style="height: 383px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="exploringMath">
+            <span>See the Pen <a href="https://codepen.io/ebajcar/pen/GqReGO">
+            exploringMath</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>    
+				</section>           
+				<section>
+					<h3>Explore the Date Object</h3>
+          <p class="codepen" data-height="428" data-theme-id="light" data-default-tab="js,result" data-user="ebajcar" data-slug-hash="beGzyr" style="height: 428px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="exploreDate">
+            <span>See the Pen <a href="https://codepen.io/ebajcar/pen/beGzyr">
+            exploreDate</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+				</section>           
+ 				<section>
+					<h3>Explore the Arrays and Objects</h3>
+          <p class="codepen" data-height="419" data-theme-id="light" data-default-tab="js,result" data-user="ebajcar" data-slug-hash="aZNZaj" style="height: 419px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="arrForEach">
+            <span>See the Pen <a href="https://codepen.io/ebajcar/pen/aZNZaj">
+            arrForEach</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+				</section>           
+          
+          <!--
+https://codepen.io/ebajcar/pen/zBYQEL
+          https://codepen.io/ebajcar/pen/GNbaPG Update CSS variables with JS -->
+          
+ 				<section>
+						<h2>Unobtrusive Javascript</h2>
+            <ol>
+              <li>delay processing &mdash; place at the end body</li>
+              <li>accelerate processing &mdash; <kbd style="color:orange">DOMContentLoaded</kbd> event</li>
+              <li>avoid control boxes (alert, prompt,...)</li>
+              <li>avoid <span style="color:red">event attributes</span> &mdash; hard to maintain</li>
+              <li>ultimately, move code to an external file</li>
+            </ol>
+
+					</section>         
+          
+          
+         <section data-transition="slide" data-background="darkorange" data-background-transition="zoom">
+          <h2>Test yourself</h2>
+          <ol style="font-size:0.9em">
+            <li>After you have completed creating the Game of Tic Tac Toe program, put it aside.</li>
+            <li>Recreate the solution from scratch, without looking at the solution.</li>
+            <li>When you get stuck, reflect on why. Determine what stopped you from completing it. Study related material (and yes, you can look at the solution to help you figure it out at this point). </li>
+            <li>Repeat steps 1, 2, and 3, until you can produce the solution without any help.</li>
+          </ol>
+        </section>          
+				<section>
+						<a href="#/2">
+							<img width="89" height="119" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+</section>
+
+
+
+
+        
+<!-- games -->  
+				<section>
+					<h3>Window properties and the BOM</h3>
+          <p class="codepen" data-height="464" data-theme-id="light" data-default-tab="js,result" data-user="ebajcar" data-slug-hash="rLBNoW" style="height: 464px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="windowProperties">
+            <span>See the Pen <a href="https://codepen.io/ebajcar/pen/rLBNoW">
+            windowProperties</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>      
+				</section> 
+
+				<section>
+					<h3>Explore Events</h3>
+          <p class="codepen" data-height="436" data-theme-id="light" data-default-tab="html,result" data-user="ebajcar" data-slug-hash="ZOEwgq" style="height: 436px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="exploreEvents">
+            <span>See the Pen <a href="https://codepen.io/ebajcar/pen/ZOEwgq">
+            exploreEvents</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>    
+				</section> 
+        
+				<section>
+					<h3>Working with Events</h3>
+          <p class="codepen" data-height="483" data-theme-id="light" data-default-tab="js,result" data-user="ebajcar" data-slug-hash="RRwdQg" style="height: 483px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="openNewWindow">
+            <span>See the Pen <a href="https://codepen.io/ebajcar/pen/RRwdQg">
+            openNewWindow</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>      
+				</section> 
+
+  
+				<section>
+					<h3>Event handling</h3>
+          <p class="codepen" data-height="444" data-theme-id="light" data-default-tab="js,result" data-user="ebajcar" data-slug-hash="PzoLGK" style="height: 444px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="bubble vs. capture ">
+            <span>See the Pen <a href="https://codepen.io/ebajcar/pen/PzoLGK">
+            bubble vs. capture </a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+				</section>  				
+        
+        
+        <section>
+					<h3>Callbacks and timers</h3>
+          <p class="codepen" data-height="443" data-theme-id="light" data-default-tab="js,result" data-user="ebajcar" data-slug-hash="NrNrRq" style="height: 443px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="timers and loaders">
+            <span>See the Pen <a href="https://codepen.io/ebajcar/pen/NrNrRq">
+            timers and loaders</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>       
+				</section>       
+
+
+				<section data-background="game_ttt.png">
+					
+ 					<pre><code class="js" data-line-numbers="1-14">document.addEventListener("DOMContentLoaded", init);
+/* 
+ gameReset(game)
+ cellWasClicked(cell, game)
+    placeMarkerInSelected(cell, game);
+    checkStatus(cell, game) 
+        doWeHaveAWinner(cell, game)
+        gameContinues(cell, game)
+        itIsAScratch(status, game)
+          displayWinner(status, game)
+        weHaveAWinner(status, game)
+          displayWinner(status, game)
+    OR 
+    gameContinues(cell, game)    
+*/</code></pre>  
+					<div style="position: absolute; width: 25%; right: -100px; top: 0px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+            <p><strong>Unobtrusive JavaScript</strong></p>
+             <ul style="font-size:0.8em;">
+              <li>Scripts placed after marked up content</li>
+              <li>Accelarated to DOM being ready</li>
+              <li>No event attributes</li>
+              <li>No control boxes</li>
+            </ul>     
+            <br>            
+            <p><strong>Functional paradigm</strong></p>
+            <ul style="font-size:0.8em;">
+              <li>Functions call other functions</li>
+              <li>init() calls gameReset() and cellWasClicked()</li>
+              <li>No global variables</li>
+              <li>Values passed as arguments as needed</li>
+            </ul>
+					</div>      
+				</section>  
+        
+				<section data-background="game_ttt.png">
+					<h2>Event methods</h2>
+          <div style="height:500px;overflow:auto;">
+              <script src="https://gist.github.com/ebajcar/9e0d61e2d40a37d01c2097f37caa3a7e.js"></script>
+          </div>
+				</section>       
+
+				<section data-background="game_ttt.png">
+					<h2>Event listeners</h2>
+           <div style="height:500px;overflow:auto;">
+              <script src="https://gist.github.com/ebajcar/f073ee3b7f14a2aa4de1f58b812d3b05.js"></script>
+          </div>         
+				</section>           
+
+				<section data-background="game_ttt.png">
+					<h2 style="margin-bottom:0;padding-bottom:0">Checking for winner</h2>
+          <h5 style="margin-top:0;padding-top:0">eight winning combos</h5>
+           <div style="height:500px;overflow:auto;">
+              <script src="https://gist.github.com/ebajcar/7d0ee2cc59ffdf3262dc2a693b3b9652.js"></script>
+          </div>         
+				</section> 
+
+				<section data-background="game_ttt.png">
+					<h2 style="margin-bottom:0;padding-bottom:0">>Checking for winner</h2>
+          <h5 style="margin-top:0;padding-top:0">based on last cell played</h5>
+           <div style="height:500px;overflow:auto;">
+              <script src="https://gist.github.com/ebajcar/fdb7f01327c00cd78c2f43e96bb358c4.js"></script>
+          </div>  
+				<div style="position: absolute; width: 25%; right: -100px; top: 110px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+
+             <ul style="font-size:0.7em;">
+              <li>chech only combinations containing the last cell played</li>
+              <li>index in <span style="color:cyan">winLines</span> corresponds to cell index</li>
+            </ul> 
+            <p style="margin: auto; text-align:center">            
+            <img src="winlines.png" width="120">
+            </p>
+					</div>                
+				</section> 
+ 
+				<section data-background="game_rps.png">
+ 					<div style="width:50%;background-color:white;color:black;">
+            Convert your solution to functional paradigm and unobtrusive Javascript.
+          </div>      
+				</section> 
+    
+				<section data-background="game_craps.png">
+					<h1></h1>
+ 					<div style="width:50%;background-color:white;color:black;">
+          <span style="font-size:0.7em;color:navy">Short demo on next slide</span><br>
+            <a href="https://gist.github.com/ebajcar/528556cd7ea32185cbd9f2d23d8caa24" target="_blank">Initial code available here</a>           
+          </div>      
+				</section>  
+
+    
+				<section>
+          
+          <!-- The script tag should live in the head of your page if at all possible -->
+<script type="text/javascript" async src="https://play.vidyard.com/embed/v4.js"></script>
+
+<!-- Put this wherever you would like your player to appear -->
+<img
+  style="width: 100%; margin: auto; display: block;"
+  class="vidyard-player-embed"
+  src="https://play.vidyard.com/nxuzsr2MtnPMjxdMSqcFyq.jpg"
+  data-uuid="nxuzsr2MtnPMjxdMSqcFyq"
+  data-v="4"
+  data-type="inline"
+/>
+				</section>  
+
+<!-- Worksheet 4 objects, functions, arrays -->       
+				<section data-background-iframe="https://ebajcar.github.io/web10199_worksheets/syst10199/worksheets/set04.html" data-background-interactive>
+					<div style="position: absolute; width: 25%; right: -50px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Worksheet 4</h2>
+            <p>Complete additional readings and tutorials for next week. Post snippets and discuss with classmates.</p>
+					</div>
+				</section>    
+
+				<section data-background-iframe="https://ebajcar.github.io/class_examples/" data-background-interactive>
+					<div style="position: absolute; width: 25%; right: -200px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>More class examples</h2>
+            <p>Scroll down</p>
+					</div>
+				</section>
+    <!--    
+				<section>
+					<h3>Example solution</h3>
+          <p class="codepen" data-height="508" data-theme-id="light" data-default-tab="js,result" data-user="ebajcar" data-slug-hash="2d4e0bdc59ed62a2a0d3383f4f94ba77" style="height: 508px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sieve Eratosthenes Primes (grid)">
+            <span>See the Pen <a href="https://codepen.io/ebajcar/pen/2d4e0bdc59ed62a2a0d3383f4f94ba77">
+            Sieve Eratosthenes Primes (grid)</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+				</section>  
+				<section>
+					<h3>Example solution (alt)</h3>
+          <p class="codepen" data-height="471" data-theme-id="light" data-default-tab="js,result" data-user="ebajcar" data-slug-hash="b545f1c3716240a8883bc7a0ef92ff29" style="height: 471px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Sieve Eratosthenes Primes">
+            <span>See the Pen <a href="https://codepen.io/ebajcar/pen/b545f1c3716240a8883bc7a0ef92ff29">
+            Sieve Eratosthenes Primes</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span>
+          </p>
+				</section>        
+ -->
+        <!-- last slide -->
+        <section data-transition="slide" data-background="#003767" data-background-transition="zoom">
+          <h2>Prepare for next class</h2>
+          <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">Study the assigned material and make notes.</span><br> <span style="color:#00b2ce">Complete Worksheet 4.</span><br>&mdash;<br>Post your questions on the <a href="https://github.com/ebajcar/web10199_worksheets/discussions" target="_blank">Discussion board</a><br>or bring to next class. Answer other students' questions. Start a conversation.
+          <br>&mdash;
+        </section> 
+        
+       
+        
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

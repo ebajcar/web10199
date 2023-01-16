@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Class 3 Notes</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+    
+    <!--
+		<link rel="stylesheet" href="css/theme/night.css">
+    -->
+    
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+		<!-- 
+    https://revealjs.com/code/
+    
+    
+    Theme used for syntax highlighting of code
+		<link rel="stylesheet" href="lib/css/monokai.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-light.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/rainbow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/paraiso-dark.min.css">
+    https://cdnjs.com/libraries/highlight.js
+     -->
+     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/googlecode.min.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+       
+
+				<section data-background="week3_notes.png">
+					<h1></h1>
+				</section>        
+
+        <section data-transition="slide" data-background="#003767" data-background-transition="zoom">
+          <h2>Learning objectives</h2>
+          <ul style="font-size:0.7em">
+            <li>(1) Apply dynamically-typed variables with implicit type conversion&hellip; using JS.  </li>
+            <li>(2) Apply JS functions and control structures&hellip; </li>
+            <li>(3) Design small client-side web apps that employ JS functions to respond to HTML DOM events&hellip; making changes to the HTML DOM. </li>
+            <li>(4) Apply JavaScript's support for first class functions&hellip; </li>
+            <li>(8) Apply best practices in internal documentation, file naming and web site structure&hellip; </li>
+          </ul>
+        </section> 
+
+
+				<!-- REVIEW  -->
+					<section>
+						<h2>Review</h2>
+            <ul style="font-size:0.7em">
+              <li>Web programming: What is web programming? What is full-stack development? Describe browser processing.</li>
+              <li>Javascript language: unobtrusive JavaScript; paradigms, programs, variables, operators</li>
+            </ul>
+					</section>
+
+				<section>
+						<h2>Data types</h2>
+            <ul>
+              <li><strong style="color:gray">Data types:</strong><br> <a href="https://www.w3schools.com/js/js_strings.asp" target="_blank">string</a>, 
+                              <a href="https://www.w3schools.com/js/js_numbers.asp" target="_blank">number</a>, 
+                              <a href="https://www.w3schools.com/js/js_booleans.asp" target="_blank">boolean</a>, object, function</li>
+              <li><strong style="color:gray">Object types:</strong><br> Object, Date, Array, String, Number, Boolean</li>
+              <li><strong style="color:gray">Special values:</strong>  null, undefined</li>
+              <li><strong style="color:gray">Type conversion:</strong><br> typeof, String(), .toString(), Number(), <a href="https://www.w3schools.com/js/js_type_conversion.asp" target="_blank">more</a></li>
+            </ul>
+					</section>        
+
+
+       
+
+<!-- Worksheet 3 objects, functions, arrays -->       
+				<section data-background-iframe="https://ebajcar.github.io/web10199_worksheets/syst10199/worksheets/set03.html" data-background-interactive>
+					<div style="position: absolute; width: 25%; right: -50px; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Worksheet 3</h2>
+            <p>Complete additional readings and tutorials for next week. Post snippets and discuss with classmates.</p>
+					</div>
+				</section>    
+
+
+        
+<!-- games -->    
+				<section data-background="game_ttt.png">
+					<h1></h1>
+				</section>       
+
+       <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+        A computer program is shaped by <br>its <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">data representation</span><br> and the <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">statements</span><br> that determine its flow of control.
+        </section> 
+
+				<section>
+					<h2>Data structures</h2>
+					<pre><code class="js" data-line-numbers="1,3,5,6,7,8,9">var player = "X"; // current player
+//array (collection) of 9 objects
+var board = document.getElementsByTagName("td"); 
+//all winning combinations, 3 rows, 3 columns, 2 diagonals
+var winSets = [[0,1,2],[3,4,5],[6,7,8],
+               [0,3,6],[1,4,7],[2,5,8],
+               [0,4,8],[2,4,6]]; 
+var empty = 9; // number of available (empty) cells
+var gameover = false;  // true when game is over
+</code></pre>
+				</section>       
+
+				<section>
+					<h2>Statements</h2>
+
+					<pre><code class="js" data-line-numbers="1-9">for (var i = 0; i &lt; winSets.length; i++) {
+  if ( board[winSets[i][0]].innerText 
+          == board[winSets[i][1]].innerText &&
+       board[winSets[i][1]].innerText 
+          == board[winSets[i][2]].innerText &&
+       board[winSets[i][0]].innerText != "" ) {
+    // we've got a winner!
+  }
+}</code></pre>
+				</section>           
+    
+				<section data-background="game_rps.png">
+					<h1></h1>
+				</section>  
+
+
+				<section>
+					<h2>Data structures</h2>
+					<pre><code class="js" data-line-numbers="1-8">var machine;
+var message = "";
+var choices = ["paper", "scissors", "rock"];
+var looseTo = { rock : "paper", 
+                paper : "scissors", 
+                scissors : "rock" };
+var aimove = document.getElementById("aimove");
+aimove.innerText = "\nWelcome!\n";
+</code></pre>
+				</section>       
+
+				<section>
+					<h2>Statements</h2>
+
+					<pre><code class="js" data-line-numbers="1-14">function cellClick(cell){
+    machine = Math.floor(Math.random() * 3);
+    var csel = choices[machine];
+    var hsel = cell.getAttribute("data-human-choice");
+    console.log( "machine selected: " + csel 
+                 + " | you selected: " + hsel );
+    if ( csel == hsel ) 
+        message = " IT'S A TIE! "; 
+    else
+        looseTo[csel] == hsel 
+            ? message = " YOU WIN! " 
+            : message = " MACHINE WINS! ";  
+    console.log(message);
+}</code></pre>
+				</section>    
+        
+ 
+        <!-- last slide -->
+        <section data-transition="slide" data-background="#003767" data-background-transition="zoom">
+          <h2>Prepare for next class</h2>
+          <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">Study the assigned material and make notes.</span><br> <span style="color:#00b2ce">Complete Worksheet 3.</span><br>&mdash;<br>Post your questions on the <a href="https://github.com/ebajcar/web10199_worksheets/discussions" target="_blank">Discussion board</a><br>or bring to next class. Answer other students' questions. Start a conversation.
+          <br>&mdash;
+        </section> 
+        
+       
+        
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
