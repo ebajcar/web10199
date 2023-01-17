@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Add 1 - v.01</title>
+	<meta charset="utf-8">
+<style>
+ /* TODO: add appropriate documentation */
+
+header, footer {
+  position: -webkit-sticky;
+  position: sticky;
+  border: 2px solid orange;
+}
+header { top: 0; }
+footer { bottom: 0; }
+main { min-height: 200px; }
+span { font-weight: bold; }
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>Page Title</h1>
+		<h2>Add 1 - v.21 Fix variable type to add, not concatenate</h2>
+	</header>
+	<nav>
+		<a href="index-home.html">Home</a>
+		<a href="#">link1</a>
+		<a href="#">linkN</a>
+	</nav>
+	<main>
+		<section>
+			<h3>Enter a number:</h3>
+			<input id="uval" type="number">
+      <output id="output"></output>
+    </section>
+  </main>
+  <footer>
+    <address>Web Programming © Sheridan College</address>
+  </footer>
+
+<script>
+let x = 7;
+console.log("x has value " + 7);
+console.log("x has value ", 7);
+// create a function that takes one argument
+// the argument represents the value to which we want to add 1
+// we can call this functions as many times as needed
+function plusOne(x) {
+  console.log("inside function");
+  return x + 1;
+} 
+// start processing the input only when user change the value
+const uval = document.getElementById("uval");
+const result = document.getElementById("output");
+uval.onchange = function() {
+  // get value from the user
+  let x = uval.valueAsNumber;
+  // eliminate the need to use document.write()
+  result.innerText = x + " + 1 = " + plusOne(x);
+  result.innerText += "\n\nNext step: accelerate to DOM ready."
+  console.log(result.innerText);
+}
+</script>   
+</body>
+</html>

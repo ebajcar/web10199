@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess A Number</title>
+	<meta charset="utf-8">
+<!-- 
+Author: Ellen Bajcar
+Date: Winter 2018
+Update: Fall 2021
+Version: 21.12
+Purpose: learning Javascript programming
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+	Web app that generates a random number between 1 and 10 (inclusive)
+	and prompts the user to guess what the number is. The user's guess is
+	compared to the random number and advises the user whether the guess is too
+	low, too high, and there is a match.  The game ends when the user guesses the
+	number.
+Demonstrates:
+    Listening for multiple events
+    Ability to remove event listeners (try the keyup and click before AND after correct guess)
+    
+-->	
+<style>
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Akronim|Asap+Condensed|Barrio|Frijole|Luckiest+Guy|Princess+Sofia');
+:root {
+    --bgwhite: #fff;	
+    --fontcolor: #003767;
+    --sherblue: #003767;
+    --sherteal: #00b2ce;
+    --sherorange: #00CCCC;
+    --lightblue: #00b2ce;
+    --darkblue: #0081a1;
+    --darkgray: #333940;
+    --lightgray: #d5d5d5;    
+    --fontfam: 'Luckiest Guy', cursive;
+    --fontbody: 'Asap Condensed', sans-serif;
+    --fonttitle: 'Akronim', cursive;
+    --fontalt: 'Kaushan Script', cursive;  
+    --body-bg-color: #a2a2a2;
+}
+body {
+    background: var(--sherteal);
+    font-family: var(--fontalt);
+    margin: 0 auto;
+    text-align: center;
+}
+main {
+	width: 100%;
+	margin: auto;
+	padding-top: 15px;
+	background-color: var(--bgwhite);
+	min-height: 600px;
+    font-family: var(--fontbody);
+}
+header h1 {
+    color: var(--darkgray);   
+    text-shadow: 1px 1px var(--sherblue);
+    font-size: 60px;
+    font-weight: 400;
+    margin: 16px 0 0;
+    text-align: center;
+}
+header h2 {
+    color:  var(--darkgray);
+    font-family: var(--fontbody);
+}
+footer {
+	margin: auto;
+	padding-top: 2px;
+	margin-top: 10px;
+	text-align: center;
+	color: var(--darkgray);
+	clear: both;
+}
+input {
+    margin-left: 10px;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Class Examples</h1>
+        <h2>Guess A Number</h2>
+    </header>
+    <main>
+		<!-- Prompt the user to guess a number between 1 and 10 -->
+		<label>Guess a magic number between 1 and 10 </label>
+
+		<!-- capture and process user input on the click event -->
+		<input type="number" id="guess" min="1" max="10" pattern="[0-9]+">
+		<p id="ans">Welcome! What is your quess?</p>	
+		<button id="reset">New Game</button>
+    </main>
+	<footer>
+        <address>SYST10199 Web Programming @ Sheridan College</address>
+    </footer>
+<script>
+/*
+	When the user chooses a number in the input element id=guess
+	and clicks the element, the number is captured and processed.
+	The response is displayed in the paragraph element id=ans.
+	Need a handles for the ELEMENT OBJECTS (part of DOM).
+*/
+// name handles for ans (output) and guess (input)
+const ans = document.getElementById("ans");
+const guess = document.getElementById("guess");
+const reset = document.getElementById("reset");
+
+// Generate a random number to be guessed
+let randomValue = Math.floor((Math.random() * 10) + 1);
+console.log(randomValue); // Temporary: so we can see what the number is
+let userValue = 0;
+
+// Determine whether the guess is the same as the number
+// if yes, let the user know
+// if no, determine if 
+//        guess is higher than number, let user know
+//        guess is lower than number, let user know	
+let count = 0;
+guess.addEventListener("click", shouldBe);
+function shouldBe() {
+	if (guess.value > 10 || guess.value < 1) {
+	  event.preventDefault();
+	  ans.innerText = "Value should be between 1 - 10.";
+	}
+	return;
+}
+guess.addEventListener("keyup", outOfRange);
+function outOfRange(event) {
+    event.preventDefault();
+	if (guess.value > 10 || guess.value < 1) 
+		if (event.keyCode === 13) {
+			ans.innerText = "(1) Value out of range.";
+		}
+	return;
+}
+
+// using arrow function to replace 
+// function() {}
+// with
+// () => {}
+guess.addEventListener("change", () => {
+    userValue = parseInt(guess.value);	
+    if ( userValue == randomValue ) {
+        ans.innerText = "Yes, your number " + userValue +"  matches " + randomValue + ". It took " + ++count + " tries.";
+        guess.removeEventListener("click", shouldBe);
+        guess.removeEventListener("keyup", outOfRange);
+    } else if ( userValue < randomValue ) {
+        ans.innerText = "Your guess " + userValue +" is too low"; count++;
+    } else {
+        ans.innerText = "Your guess " + userValue +" is too high"; count++;
+    }
+});
+
+// reload page to start new game on click event for button id="reset"
+reset.onclick = function() {
+	location.reload(); 
+}
+</script>
+</body>
+</html>
