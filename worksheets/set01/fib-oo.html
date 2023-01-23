@@ -12,7 +12,7 @@ body {
 <body>
 
 <script>
-var fibonacci = {
+let fibonacci = {
     next: (function () {
         var pre = 0, cur = 1;
         return function () {
@@ -24,7 +24,7 @@ var fibonacci = {
     })()
 };
 
-var n;
+let n;
 for (;;) {
     n = fibonacci.next();
     if (n > 1000)
