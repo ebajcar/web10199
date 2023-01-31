@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Compute prime numbers</title>
+	<meta charset="UTF-8">	
+	<meta name="viewport" content="width=device-width">    
+<!--
+Author: Ellen Bajcar
+Date created: Spring 2019
+Date updated: Spring 2019
+Version: 1.0
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Practice Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+https://www.upwork.com/hiring/development/11-tips-to-optimize-javascript-and-improve-website-loading-speeds/
+	
+-->	
+<style>
+/* general selectors */
+body {
+	text-align: center;
+	font-family: monospace;
+	max-width: 1100px;
+	margin: 30px auto;
+}
+header {
+	margin-bottom: 30px;
+	border-bottom: thick double gray;
+	background-color: white;
+}
+footer {
+	margin-top: 30px;
+	border-top: thick double gray;
+	background-color: white;
+}
+
+/* selectors specific to this page */
+ul, ol {
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+	background-color: white;
+	color: black;
+}
+ul:first-child, ol:first-child  {
+	margin-top: 0;
+	padding-top: 0;
+	list-style: none;
+}
+li {
+    text-align: left;
+}
+p {
+	margin: 5px auto;
+	width: 260px;
+}
+p:first-child {
+	background-color: black;
+	color: white;
+    -webkit-column-span: all; /* Chrome, Safari, Opera */
+    column-span: all;	
+}
+span {
+	display: inline-block;
+	width: 50px;
+}
+
+</style>
+</head>
+<body>
+	<header><h1>Compute prime numbers by the Sieve of Eratosthenes</h1></header>
+	<main>
+		<h2>Open console to view the results.</h2>
+		<var id="limit"></var>
+		<ol id="output"></ol>
+	</main>
+	<footer><address>Web Programming @ Sheridan College</address></footer>
+    
+<noscript>Your browser does not support JavaScript!</noscript>
+<script>
+
+function SieveOfEratosthenesUncached(n) {  
+    // define array of possible primes
+    var primes = [];
+    for (var i = 0; i < n; ++i)
+        primes.push(true);
+
+    // find possible primes
+    for (var i = 2; i < Math.sqrt(n); i++)
+        if (primes[i])
+            for (j = Math.pow(i, 2), k = 0; j < n; k++, j = (Math.pow(i, 2) + (i * k)))
+                primes[j] = false; 
+
+    // prepare possible primes as return
+    var results = [];
+    for (var i = 2; i < primes.length; ++i)
+        if (primes[i])
+            results.push(i);
+
+    return results;
+}
+
+const LIMIT = 10000000;
+console.log(SieveOfEratosthenesUncached(LIMIT));
+/*
+var primes = SieveOfEratosthenesUncached(LIMIT);
+document.getElementById("limit").innerText = "LIMIT";
+var parent = document.getElementById("output");
+for (curr of primes) {
+	parent.appendChild(document.createElement("li")).innerText = curr;
+}
+*/
+</script>
+</body>
+</html>
