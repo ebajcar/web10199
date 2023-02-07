@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<!--
+	http://www.cryptograms.org/play.php
+	https://www.razzlepuzzles.com/cryptogram
+	http://www.cryptogramcorner.org/
+	
+	http://mypuzzle.org/find-the-pair
+	http://mypuzzle.org/sliding	
+-->
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Encryption</title>
+    <style>
+    table, td { border: 1px dotted green; }
+    td { padding: 0 5px; }
+    </style>
+</head>
+<body>
+    <table id="encrypt"></table>
+	
+	<script type="text/javascript">
+var tbl = document.getElementById("encrypt");
+var letters = [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var encrypted = new Array;
+
+for (var i= 0; i < letters.length; i++) {
+	var p = ((3 * i) + 5 ) % 26;
+	encrypted[i] = letters[p];
+}    
+var crow = tbl.appendChild(document.createElement("tr"));
+for (var i= 0; i < letters.length; i++) {                 
+	var ctd = crow.appendChild(document.createElement("td"));
+	ctd.innerHTML =  letters[i];
+}
+crow = tbl.appendChild(document.createElement("tr"));
+for (var i= 0; i < letters.length; i++) {  
+	ctd = crow.appendChild(document.createElement("td"));
+	ctd.innerHTML = encrypted[i];
+}
+	</script>
+</body>
+</html>

@@ -78,11 +78,6 @@
 
 <!-- REVIEW Javascript - nested vertical slides -->
 
-        <section>
-            <h2>Review</h2>
-            <p>Javascript language</p>
-        </section> 
-        
 
 
         <section>
@@ -96,7 +91,7 @@
             </ol>
         </section>         
 
-        <section data-transition="slide" data-background="darkorange" data-background-transition="zoom">
+ <!--       <section data-transition="slide" data-background="darkorange" data-background-transition="zoom">
             <h2>Test yourself</h2>
             <ol style="font-size:0.9em">
             <li>After you complete any program, put it aside.</li>
@@ -105,26 +100,18 @@
             <li>Repeat steps 1, 2, and 3, until you can produce the solution without any help.</li>
             </ol>
         </section>          
-        
-        
    
-<section data-background="game_rps.png">
-</section>  
-
-<section data-background="rpsls_userHelp.png">
-</section> 
-
-
-				<section data-background="game_ttt.png">
-          <p style="background-color: white; color: black">Continue working on the tictactoe game.<br>Share code snippets and discuss on Piazza Q&amp;A. <br>
+  
+		<section data-background="game_ttt.png">
+          <p style="background-color: white; color: black">Continue working on the tictactoe game.<br>Share code snippets and discuss.<br>
           <small>Reminder:  cite all ideas and code used in your comments; make it a habit.</small></p>
 				</section>  
         
- 				<section data-background="game_craps.png">
+ 		<section data-background="game_craps.png">
           <p style="background-color: white; color: orange">Continue working on the Casino craps game.<br>Share code snippets and discuss on Piazza Q&amp;A. <br>
           <small>Reminder:  cite all ideas and code used in your comments; make it a habit.</small><p>              
 				</section>         
- 
+  -->    
  
  
         <section data-background="images/game_ttt.png">
@@ -135,12 +122,11 @@
     placeMarkerInSelected(cell, game);
     checkStatus(cell, game) 
         doWeHaveAWinner(cell, game)
-        gameContinues(cell, game)
-        itIsAScratch(status, game)
-          displayWinner(status, game)
-        weHaveAWinner(status, game)
-          displayWinner(status, game)
-    OR 
+          weHaveAWinner(status, game)
+            displayWinner(status, game)
+          itIsAScratch(status, game)
+            displayWinner(status, game)
+        // end of game if winner or scratch
     gameContinues(cell, game)    
 */</code></pre>  
             <div style="position: absolute; width: 25%; right: -100px; top: 0px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
@@ -170,19 +156,14 @@
         </section>       
 
 
-        <section data-background="images/game_rps.png">
-            <div style="width:50%;background-color:white;color:black;">
-            Convert your solution to functional paradigm and unobtrusive Javascript.
-            </div>      
-        </section> 
  
- 
+ <!--
 				<section>
           <h2>Develop a technology agnostic algorithms</h2>
           <h5>Problem: tic tac toe game</h5>
           <a href="https://www.notion.so/Developing-tic-tac-toe-app-5fa13367710f43cc81e98cd66b8a7369" target=_blank" style="cursor:pointer;">Example</a>          
 				</section>  
-                
+     -->           
                 
         <section data-background="images/images/game_ttt.png">
             <h2>Event listeners</h2>
@@ -211,7 +192,7 @@
               <td>GET vs. POST, key=value pairs</td>
             </tr>
           </table>
-          <p style="font-size:0.6em;font-style:italic;color:blue;">Review "<a href="https://ebajcar.github.io/web10199/material/material_programming.html#page13" target="_blank">What you should already know</a>" and catch up before next class.</p>
+          <p style="font-size:0.6em;font-style:italic;color:blue;">Review <q>What you should already know</q> and catch up before next class.</p>
         </section> 
         
  
@@ -219,7 +200,7 @@
         <section data-transition="slide" data-background="#003767" data-background-transition="zoom">
           <h2>Prepare for next class</h2>
           <!--h3 style="color:orange">after reading week</h3-->
-          <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">Study the assigned material and make notes.</span><br> <span style="color:#00b2ce">Complete Worksheet 5.</span><br>&mdash;<br>Post your questions on the <a href="https://github.com/ebajcar/web10199_worksheets/discussions" target="_blank">Discussion board</a><br>or bring to next class. Answer other students' questions. Start a conversation.
+          <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">Study the assigned material and make notes.</span><br> <span style="color:#00b2ce">Complete Worksheet 5.</span><br>&mdash;<br>Post your questions on the <span style="color:#00b2ce">Discussion board</span><br>or bring to next class. Answer other students' questions. Start a conversation.
           <br>&mdash;
         </section> 
         

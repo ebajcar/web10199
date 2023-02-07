@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Compute prime numbers</title>
+	<meta charset="UTF-8">	
+	<meta name="viewport" content="width=device-width">    
+<!--
+Author: Ellen Bajcar
+Date created: Spring 2019
+Date updated: Spring 2019
+Version: 1.0
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Practice Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+https://www.upwork.com/hiring/development/11-tips-to-optimize-javascript-and-improve-website-loading-speeds/
+
+1. ORDER IN WHICH ELEMENTS ARE LOADED
+2. Minify JavaScript code for smaller file sizes.
+3. OPTIMIZE IT!
+4. Asynchronous loading of JavaScript: Defer and Async tags
+	<script src="1.js" defer></script>
+5. EXCLUDE UNUSED COMPONENTS OF .JS LIBRARIES.
+6. USE THE HTTP/2 PROTOCOL.
+
+7. USE A JAVASCRIPT CONTENT DELIVERY NETWORK (CDN)
+8. Gzip module for Apache, Nginx, and Node.js
+9. Move some the CSS and JavaScript code of your first screen to the top of your code for faster loading.
+10. Where you can, use CSS3 effects in place of JavaScript.
+11. Cache it.
+ 
+-->	
+<style>
+/* general selectors */
+body {
+	text-align: center;
+	font-family: monospace;
+	max-width: 1100px;
+	margin: 30px auto;
+}
+header {
+	margin-bottom: 30px;
+	border-bottom: thick double gray;
+	background-color: white;
+}
+footer {
+	margin-top: 30px;
+	border-top: thick double gray;
+	background-color: white;
+}
+
+/* selectors specific to this page */
+ul, ol {
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+	background-color: white;
+	color: black;
+}
+ul:first-child, ol:first-child  {
+	margin-top: 0;
+	padding-top: 0;
+	list-style: none;
+}
+li {
+    text-align: left;
+}
+p {
+	margin: 5px auto;
+	width: 260px;
+}
+p:first-child {
+	background-color: black;
+	color: white;
+    -webkit-column-span: all; /* Chrome, Safari, Opera */
+    column-span: all;	
+}
+span {
+	display: inline-block;
+	width: 50px;
+}
+
+</style>
+</head>
+<body>
+	<header><h1>Compute prime numbers by the Sieve of Eratosthenes</h1></header>
+	<main>
+		<h2>Open console to view the results.</h2>
+		<var id="limit"></var>
+		<ol id="output"></ol>
+	</main>
+	<footer><address>Web Programming @ Sheridan College</address></footer>
+    
+<noscript>Your browser does not support JavaScript!</noscript>
+<script>
+
+function SieveOfEratosthenesCached(n, cache) {  
+     var primes = cache;
+     for (var i = cache.length; i < n; ++i)
+         primes.push(true);
+ 
+     // find possible primes
+     // Improve speed by prevent active looping
+     for (var i = 2, l = Math.sqrt(n); i < l; ++i)
+         if (primes[i])
+             for (j = Math.pow(i, 2), k = 0; j < n; k++, j = (Math.pow(i, 2) + (i * k))) {
+                 primes[j] = false;
+             }
+ 
+     // prepare possible primes as return
+     var results = [];
+     for (var i = 2, l = primes.length; i < n && i < l ; ++i)
+         if (primes[i])
+             results.push(i);
+ 
+     return results;
+ }
+
+const LIMIT = 10000000;
+var cache = [];
+console.log(SieveOfEratosthenesCached(LIMIT, cache));
+/*
+var primes = SieveOfEratosthenesCached(LIMIT, cache);
+document.getElementById("limit").innerText = "LIMIT";
+var parent = document.getElementById("output");
+for (curr of primes) {
+	parent.appendChild(document.createElement("li")).innerText = curr;
+}
+*/
+</script>
+</body>
+</html>

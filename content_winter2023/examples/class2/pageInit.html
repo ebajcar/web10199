@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Example 1</title>
+	<meta charset="utf-8">
+	<!-- Example 1, SYST10199 Web Programming, Summer 2015, Ellen Bajcar -->
+</head>
+<body>
+	<div id="panel"></div>
+	
+<script>
+//display a message dialog box
+function loaded() {
+    window.alert("Window loaded");
+}
+//write content in the panel AND display a message dialog box
+function init() {
+    document.getElementById("panel").innerHTML="Page Initialized";
+    window.alert("DOM loaded");
+}
+//call an appropriate function when an event occurs
+window.onload=loaded;
+document.addEventListener("DOMContentLoaded", init, false);
+</script>	
+</body>
+</html>

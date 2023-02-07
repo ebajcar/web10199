@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>q mid</title>
+</head>
+
+<body>
+<!-- Prompt the user to guess a number between 1 and 10 -->
+<label>Guess a magic number between 1 and 10</label>
+
+<!-- capture and process user input on the click event -->
+<input type="number" id="guess" value="0" min="1" max="10">
+
+<!-- display messages here -->
+<p id="msg"></p>
+
+<button id="reset">New Game</button>
+<script>
+
+var rNum = Math.floor(Math.random() * 10) + 1;
+var msg = document.getElementById("msg");
+// would be good technique when you have multiple elements which
+// may take input; in this case, it is always the same element
+// therefore does not make sense to pass it in over and over
+document.getElementById("guess").addEventListener("input", (e)=>{
+  let uNum = e.target.value;
+  if(uNum > rNum) {
+    msg.innerHTML = "too hight";
+  } else if (uNum < rNum) {
+    msg.innerHTML = "too low";
+  } else {
+    msg.innerHTML = "is a match";
+  }
+});
+
+// reload page to start new game on click event for button id="reset"
+document.getElementById("reset").onclick = function() {
+  location.reload(); 
+}
+</script>
+</body>
+
+
+</html>
