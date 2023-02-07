@@ -12,11 +12,11 @@ let  x;
 x = 10;
 // Here x is 10
 {  
-  var x = 2;
-  // Here x is 2
+  var x = 4;
+  // Here x is 4
 }
-// Here x is 2
-document.getElementById("demo1").innerHTML = "<ul><li>" + x + "</li></ul>";
+// Here x is 4
+document.getElementById("demo1").innerHTML = "<ul><li>" + x + "this line</li></ul>";
 </script>
 
 
@@ -46,15 +46,15 @@ valuex.innerHTML = y;
 <p id="demo44"></p>
 <script>
 let a=3.6;
-let b = "34";
-let d = 7.8;
+let b = 34;
+let d = "7.8";
 let c = d + a + b;
 document.getElementById("demo3").innerHTML = c;
 
 document.getElementById("demo44").innerHTML = a + d + b;
 
 
-if ( b === "34" ) {
+if ( b == "34" ) {
   document.getElementById("demo4").innerHTML = "true";
 } else {
   document.getElementById("demo4").innerHTML = "false";
