@@ -39,10 +39,10 @@
 			<div class="slides">
       
       
-<!--  SLIDE 1 
+<!--  SLIDE 1 --> 
 				<section data-background="week9_notes.png">
 				</section> 
-  -->       
+        
 
 
 <!--  SLIDE 2 --> 
@@ -100,6 +100,7 @@
               <h5 style="color: green;margin-bottom:0;">Variable handling Functions <a  style="font-size:0.7em;"href="https://www.php.net/manual/en/ref.var.php" target="_blank">&#128211;</a></h5> 
               <p style="font-size:0.4em;margin-top:0;font-family:monospace;">is_array, is_int, is_string, is_array, unset, isset, print_r, var_dump, empty, …</p>              
             </li>
+            <li>Some examples <a href="https://phpstarthere.ellenbajcar.repl.co/" target="_blank">here</li>
            
 					</ul>               
 				</section>    
@@ -154,13 +155,155 @@ class SimpleClass {
 			</section> 
 
 
-
+ <!-- SLIDE 8 --> 	
+            <section data-background="cc_php.png">
+				</section> 
+        
+        
+ <!-- SLIDE 9 -->         
+            <section data-background="cc_compare_js_php.png">
+                <div style="position: absolute; width: 35%; right: -100px; top: 110px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: black; color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+					<h2 style="margin-bottom:0;padding-bottom:0">Casino Craps</h2>
+                    <h5 style="margin-top:0;padding-top:0">from last week (STEP 1)</h5>
+                    <ul style="font-size:0.7em;list-style-type:none;">
+                      <li style="margin-bottom:10px">STEP 2: replace echo statements with output variable and target specific element to display output</li>
+                      <li style="margin-bottom:10px">STEP 3: rearrange HTML code and include a form to get user to roll the dice</li>
+                      <li style="margin-bottom:10px">STEP 4: process the HTTP request for roll and reset</li>
+                      <li style="margin-bottom:10px">STEP 5: add session to preserve data from page to page</li>
+                      <li style="margin-bottom:10px">STEP 6: add statistics (wins and losses)</li>
+                    </ul> 
+                </div>                
+            </section> 
  
+ 
+ <!-- SLIDE 10 --> 
+            <section>
+                <h2 style="margin-bottom:0;padding-bottom:0">Casino Craps</h2>
+                <h5 style="margin-top:0;padding-top:0">STEP 2</h5>
+                <div style="height:500px;overflow:auto;">
+                  <script src="https://gist.github.com/ebajcar/4f01af2bb1c7ed682b901760ce944350.js"></script>
+                </div>  
+				<div style="position: absolute; width: 25%; right: -100px; top: 110px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                    <ul style="font-size:0.7em;">
+                      <li>replace echo with output variable</li>
+                      <li>target specific element to display</li>
+                    </ul> 
+
+                    <p style="margin: auto; text-align:center;font-size:0.7em;padding-top:30px;"><a href="https://bajcar.dev.fast.sheridanc.on.ca/10199/set09/cc_simple_php2.php" target="_blank">Try it here</a></p>
+
+                    <p style="margin: auto; text-align:center;font-size:0.7em;padding-top:30px;"><a href="https://bajcar.dev.fast.sheridanc.on.ca/10199/set09/cc_simple_php2.php" target="_blank">Try it here</a></p>
+
+                    <p style="margin: auto;font-size:0.7;padding-top:30px;text-align:center">Changes are annotated with comments.</p>
+				</div>                
+			</section> 
+
+
+
+ <!-- SLIDE 11 --> 
+			<section>	
+            <p style="font-size:0.4em;text-align:left;">replace</p>
+ 				<pre><code class="php">rollBoth();</code></pre> 
+                <p style="font-size:0.4em;text-align:left;">with</p>
+<pre><code class="php">if(isset($_GET['roll'])) {
+    rollBoth();
+}</code></pre>  
+            <p style="font-size:0.4em;text-align:left;">add at the very top of the page</p>
+<pre><code class="php" data-line-numbers="">&lt;?php
+session_start();</code></pre>  
+
+           <p style="font-size:0.4em;text-align:left;">replace</p>
+ 				<pre><code class="php">$point = 0;</code></pre> 
+                <p style="font-size:0.4em;text-align:left;">with</p>
+<pre><code class="php">isset($_SESSION['point']) 
+    ? $point = $_SESSION['point'] : $point = 0;</code></pre>
+				<div style="position: absolute; width: 45%; right: -200px; top: 50px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                <ol>
+                    <li>change the first rollBoth() call; remove the calls inside the function determineOutcome()</li> 
+                    <li>test and observe that it works ok until the player rolls a point, then the point changes on each reroll!</li> 
+                    <li>add sessions to share the point value from page to page: a) add session_start() as the first statement on the page, and replace setting the point to 0, with conditional statement that will use the value stored in the session variable if it exists, otherwise it will be set to 0.</li> 
+                    <li>add functionality to reset the game associated with the "clear" input; use session_destroy() function and reset variables</li>
+                    <li>add functionality to reset store the point value in the session variable before the HTTP response is sent back to the browser</li>
+                </ol>
+                </div>      
+			</section> 
+            
+ 
+ 
+ <!-- SLIDE 12 -->  
+            <section data-background="cc_code_switch5.png">
+                <h2 style="margin-bottom:0;padding-bottom:0">Casino Craps</h2>
+                <ul style="font-size:0.6em;list-style-type:none;text-align:center;">
+                  <li><a href="https://bajcar.dev.fast.sheridanc.on.ca/php10199/set09/cc_simple_switch5.php" target="_blank">Click here</a></li>
+                  <li>$_SESSION superglobal, session_start(); <br> session_destroy(), switch statements, and require statement <br> <span style="color:gray">to include styled, well-formed and valid HTML document</span> </li>
+                </ul> 
+			</section> 
+        
+
+
+ <!-- SLIDE 13 --> 
+ 				<section data-background="rps_php.png">
+				</section>  
+
+
+  <!-- SLIDE 14 -->                
+ 				<section data-background="rps_compare_js_php2.png">
+				<div style="position: absolute; width: 25%; right: -260px; top: -100px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: black; color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+					<h2 style="margin-bottom:0;padding-bottom:0">Rock Paper Scissors</h2>
+          <h5 style="margin-top:0;padding-top:0">STEP 1: convert logic functionality</h5>
+            <ul style="font-size:0.7em;list-style-type:none;">
+              <li style="margin-bottom:10px">STEP 2: rearrange HTML code and include a form to get user to make the human selection and reset the game</li>
+              <li style="margin-bottom:10px">STEP 3: process the HTTP request for play and reset</li>
+              <li style="margin-bottom:10px">STEP 4: add session to preserve data from page to page</li>
+              <li style="margin-bottom:10px">STEP 5: add statistics for human player (wins and losses)</li>
+            </ul> 
+            
+					</div>                
+				</section> 
+
+
+
+ <!-- SLIDE 15 -->  
+ 				<section data-background="ttt_php.png">
+				</section>  
+ 
+ 
+  
+ <!-- SLIDE 16 --> 
+            <section>
+                <h2 style="margin-bottom:0;padding-bottom:0">Tic tac toe</h2>
+                <h5 style="margin-top:0;padding-top:0">STEP 1</h5>
+                <div style="height:500px;overflow:auto;">
+                  <script src="https://gist.github.com/ebajcar/0c7233dd91a47cdc74141e535944bae0.js"></script>
+                </div>  
+				<div style="position: absolute; width: 25%; right: -100px; top: 110px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+                    <ul style="font-size:0.7em;">
+                      <li>This version does not have any input. (Only initial request - can be run in PHP Tryit editor.</li>
+                      <li>The entire game is "simulated" by randomly selecting one of the available cells.</li>
+                       <li>The state of the GAME data structure displayed on each turn: note how the data changes.</li>                     
+                    </ul> 
+                    
+                    <p style="margin: auto;font-size:0.7;padding-top:30px;text-align:center">Next steps are to replace the random selection with user input (use GET method to observe the data being passed. Then add session to preserve the state of the GAME data structure.</p>
+                    <p style="margin: auto; text-align:center;font-size:0.7em;padding-top:30px;"><a href="https://bajcar.dev.fast.sheridanc.on.ca/php10199/set09/ttt_2021a.php" target="_blank">Try it here</a></p>
+                    
+				</div>                
+			</section> 
+ 
+ 
+ 
+<!-- SLIDE 17 -->
+        <section data-transition="slide" data-background="#003767" data-background-transition="zoom">
+          <h2>Prepare for next class</h2>
+          <h3 style="color:orange">Week 10</h3>
+          <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">Study the assigned material and make notes.</span><br> <span style="color:#00b2ce">Complete Worksheet 8.</span><br>&mdash;<br>Post your questions on the <a href="https://github.com/ebajcar/web10199_worksheets/discussions" target="_blank">Discussion board</a><br>or bring to next class. Answer other students' questions. Start a conversation.
+          <br>&mdash;
+        </section>       
+        
+        
              
 <!-- last slide -->             
         <section>
             <h2>...</h2>
-            <p style="font-size:0.3em;margin-top:0;color:teal">SYST10199 Web Programming<br>@2021-2022 Sheridan College</p>                    
+            <p style="font-size:0.3em;margin-top:0;color:teal">SYST10199 Web Development<br>@2021 Sheridan College</p>                    
         </section>           
         
 			</div>
