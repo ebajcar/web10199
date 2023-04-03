@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+Interface for a bingo card
+Ellen Bajcar @2014 Sheridan
+See also: Javascript, Eighth Ed., Negrino & Smith
+-->
+<html>
+<head>
+   <title>Bingo Card</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="width=device-width" />
+   <link rel="stylesheet" href="css/bingo.css"/>
+<style>
+p, #past, #called {
+	margin: 5px auto;
+	width: 400px;
+	display: block;
+	border: 1px dotted green;
+}	
+#usedlist {
+	word-break: break-all;
+	background: black;
+	color: white;
+}
+#called {
+	color: red;
+	font-size: 2em;
+	font-weight: bold;
+}
+</style>        
+</head>
+<body>
+   <h1>Bingo Card</h1>
+	<input type="button" value="Generate New Card" id="reset" onclick="reloadPage();">
+   <table  id="myBoard">
+		<tr>
+			<th>B</th>
+			<th>I</th>
+			<th>N</th>
+			<th>G</th>
+			<th>O</th>
+		</tr>
+   </table>
+   <p>NEW NUMBER</p>
+   <p id="called">&nbsp;</p>
+   <p id="usedlist">Numbers called</p>
+   <p>Unused Numbers</p>
+   <p id="past">&nbsp;</p>
+   <button id="next">Next Number</button>
+	<script type="text/javascript" src="js/bingo3.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Do not distribute. Ellen Bajcar, 2012-2015 
+	 https://dl.dropboxusercontent.com/u/43304210/a2.zip
+	 -->
+<html>
+<head>
+	<title>Learning Styles</title>
+	<meta charset="utf-8">
+	<style>
+		table { border: 1px red solid; }
+		td { border: 1px black dotted; padding: 10px; }
+		#message { position: fixed; display:none; top:0; right:200px;}
+	</style>
+</head>
+<body>
+    <h1>Learning Styles Survey</h1>
+	<table></table>
+	<div id="message"></div>
+	<ul id="vis"></ul>	
+	<ul id="aud"></ul>	
+	<ul id="tac"></ul>	
+	
+	
+	
+<script src="data.js"></script> <!-- provided; contains data structures with content -->
+<script type="text/javascript">
+	console.log("When you " + whenYou[0].name);
+	console.log("visual " + whenYou[0].visual);
+	console.log("auditory " + whenYou[0].auditory);
+	console.log("tactile " + whenYou[0].tactile);
+	console.log("length of whenYou object " + whenYou.length);
+/*
+	var mtables = document.getElementsByTagName("table");
+	var mcells;
+	var mrows = mtables[0].getElementsByTagName("tr");
+	for (var i = 0; i < mrows.length; i++) {
+		mcells = mrows[i].getElementsByTagName("td");
+		mcells[0].innerHTML = "When you " + whenYou[i].name;
+		mcells[1].innerHTML = "visual: " + whenYou[i].visual;
+		mcells[2].innerHTML = "auditory: " + whenYou[i].auditory;
+		mcells[3].innerHTML = "tactile: " + whenYou[i].tactile;
+	}
+*/
+	var mtable = document.getElementsByTagName("table")[0];
+	var currow,curcell, mcells;
+	for (var j = 0; j < whenYou.length; j++ ) {
+		currow = document.createElement("tr");
+		mtable.appendChild(currow);
+		for (var i= 0; i < 4; i++ ){
+			curcell = document.createElement("td");
+			currow.appendChild(curcell);
+			//curcell.innerHTML = "When you " + whenYou[j].name			
+		}
+		mcells = currow.getElementsByTagName("td");
+		mcells[0].innerHTML = "When you " + whenYou[j].name;
+		mcells[1].innerHTML = "visual: " + whenYou[j].visual;
+		mcells[2].innerHTML = "auditory: " + whenYou[j].auditory;
+		mcells[3].innerHTML = "tactile: " + whenYou[j].tactile;	
+	}
+	
+	
+	
+/*		var mrows = mtable.getElementsByTagName("tr");
+	for (var i = 0; i < mrows.length; i++) {
+		mcells = mrows[i].getElementsByTagName("td");
+		mcells[0].innerHTML = "When you " + whenYou[i].name;
+		mcells[1].innerHTML = "visual: " + whenYou[i].visual;
+		mcells[2].innerHTML = "auditory: " + whenYou[i].auditory;
+		mcells[3].innerHTML = "tactile: " + whenYou[i].tactile;
+	}	
+	
+	var rows = document.getElementsByTagName("tr");
+	console.log("rows " + rows.length);	
+	var cols = rows[0].getElementsByTagName("td");
+	console.log("columns " + cols.length);
+	cols[0].innerHTML = "When you " + whenYou[0].name;
+	cols[1].innerHTML = whenYou[0].visual;
+	cols[2].innerHTML = whenYou[0].auditory;
+	cols[3].innerHTML = whenYou[0].tactile;
+*/	
+</script>
+</body>
+</html>
