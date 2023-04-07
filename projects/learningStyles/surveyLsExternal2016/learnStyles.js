@@ -1,7 +1,7 @@
 	/*
 		create DOM nodes and populate with data from whenYou 
 	*/
-	// create title and table for the survey in the section id="questions"
+	// create title and table for the survey in clthe section id="questions"
 	var newHeading = document.createElement("h1");
 	var newTable = document.createElement("table");
 	newTable.style.border = "3px navy solid";
