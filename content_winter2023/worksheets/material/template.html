@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>missing.css</title>
+
+<link rel="stylesheet" href="../css/missing-css.css">
+<!--
+<link rel="stylesheet" href="../css/styles.css"/> 
+-->
+<link rel="stylesheet" href="../css/prism_coy_dev.css"  />
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+	</style>
+</head>
+<body>
+<header>
+  <h1>
+    <span class="allcaps">syst<wbr>13416<v-h>:</v-h><small>Linux Operating System</small></span> 
+    <sub-title>1. The Essence of Unix</sub-title>
+  </h1>
+  <nav>
+    <p class="tool-bar"><a href="">Computers</a>
+    <a href="">Programming Languages</a>
+    <a href="">Operating System</a>
+    <a href="">Why Linux?</a>
+    <a href="">Linux Components</a>
+    <a href="">Standards</a></p>
+  </nav>
+</header>
+
+<main>
+
+<h3>Objectives</h3>
+<ul>
+  <li>Discuss the background and philosophy of using computers</li>
+  <li>Overview the basics of digital computer hardware (memory unit, control unit, ALU, Input/output unit, secondary storage) </li>
+  <li>Discuss computer use</li>
+</ul>
+<hr>
+<h2>Computers</h2>
+<p>The word computer used to mean a person who computes. Now, a computer is any device used to process information according to a well-defined procedure. 
+Originally, information processing was almost exclusively related to arithmetical problems, but modern computers are used for many tasks unrelated to mathematics. Often the definition is restricted to devices whose primary purpose is information processing rather than being a part of a larger system such as a phone, microwave, or aircraft, and can be adapted for a variety of purposes by the user without physical modification. Mainframes, minicomputers, and personal computers meet this definition.</p>
+<p>Today, many household devices, notably video game consoles, and extending to mobile telephones, video cassette recorders, <abbr title="Personal Digital Assistant">PDA</abbr>s and myriad other household, industrial, automotive, and other electronic devices, all contain computer-like circuitry. These computers inside other special-purpose devices are commonly referred to as "microcontrollers" or "embedded computers". </p>
+
+<h3>Digital Computers</h3>
+<p>While the technologies used in digital computers have changed dramatically since the first computers of the 1940s, most still use the von Neumann architecture proposed in the early 1940s by John von Neumann.  Von Neumann's architecture describes a computer with four main sections: the arithmetic and logic unit, the control circuitry, the memory, and the input and output devices (I/O). These parts are interconnected by a bundle of wires, a bus.</p>
+<p>The ALU is the device that performs elementary operations such as arithmetic operations (addition, subtraction, and so on), logical operations (AND, OR, NOT), and comparison operations (for example, comparing the contents of two "slots" for equality).</p>
+<p>The control unit keeps track of which slot contains the current instruction that the computer is performing, telling the ALU what operation to perform and retrieving the information (from the memory) that it needs to perform it, and transfers the result back to the appropriate memory location. Once that occurs, the control unit goes to the next instruction. The I/O allows the computer to obtain information from the outside world, and send the results of its work back there. There is incredibly broad range of I/O devices (keyboards, monitors, disk drives, webcams, etc.).</p>
+<p>Contemporary computers put the ALU and control unit into a single integrated circuit known as the Central Processing Unit (CPU). Typically, the computer's memory is located on a few small integrated circuits near the CPU. Some larger computers differ from the above model in one major respect - they have multiple CPUs and control units working simultaneously.</p>
+<figure>
+    <img src="img/figure2-1.png" 
+         alt="Figure 2: The figure illustrates the computer components that support these capabilities.">
+    <figcaption>Figure 2: The figure illustrates the computer components that support these capabilities.</figcaption>
+</figure>
+<p>The functioning of a computer is therefore in principle quite straightforward. The computer fetches instructions and data from its memory. The instructions are executed, the results are stored, and the next instruction is fetched. This procedure repeats until the computer is turned off.</p>
+
+<h3>Hardware</h3>
+<p>All computers, from large supercomputers costing millions of dollars to smaller desktop personal computers, must perform a minimum set of functions and provide capability to</p>
+<ul>
+  <li>Accept input</li>
+  <li>Display output</li>
+  <li>Store information in a logically consistent format (traditionally, binary)</li>
+  <li>Perform arithmetic and logical operations on either the input or stored data</li>
+  <li>Monitor, control, and direct overall operation and sequencing of the system</li>
+</ul>
+<p>The physical components are collectively referred to as hardware.</p>
+
+<h3>Memory Unit</h3>
+<p>This unit stores information in a logically consistent format. Typically, both instructions and data are stored in memory, usually in separate and distinct areas. Each computer contains memory of two fundamental types: RAM and ROM</p>
+<ul class="f-switch dense align-items:stretch" role="list">
+<li class="box"><strong>Random Access Memory (RAM)</strong> is usually volatile, which means that whatever is stored there is lost when the computer's power is turned off. Your programs and data are stored in RAM while you are using the computer. The size of a computer's RAM is usually specified in terms of how many bytes are available to the user. Personal computer memories currently consists of from 32 to 512 million bytes.</li>
+<li class="box"><strong>Read-only Memory (ROM) </strong>contains fundamental instructions that cannot be lost or changed by the casual computer user. These instructions include those necessary for loading anything else into the machine when it is first turned on and any other instructions the manufacturer requires to be permanently accessible when the computer is turned on. ROM is non-volatile; its contents are not lost when the power goes off.</li>
+</ul>
+
+<h3>Control Unit</h3>
+<p>The control unit, <strong>Central Processing Unit (CPU)</strong>, directs and monitors the overall operation of the computer. It keeps track of where in memory the next instruction resides, issues the signals needed to both read data from and write data to other units in the system, and executes all instructions.</p>
+
+<h3>Arithmetic Logic Unit</h3>
+<p>The <strong>Arithmetic Logic Unit (ALU)</strong> performs all the arithmetic and logic functions, such as addition, subtraction, comparison, and so forth, provided</p>
+
+<h3>Input/Output Unit</h3>
+<p>The <strong>Input/Output Unit (I/O) </strong> provides access to and from the computer. It is the interface to which peripheral devices such as keyboard, cathode array screens, and printers are attached. Input devices (keyboard, mouse, scanner) trigger instructions to be processed. The most common output device is the <strong>video display terminal (VDT)</strong>, also called monitor.</p>
+
+<h3>Secondary Storage</h3>
+<p>Because <abbr title="Random Access Memory ">RAM</abbr> memory in large quantities is still relatively expensive and volatile, it is not practical as a permanent storage area for programs and data. Secondary or auxiliary storage devices are used for this purpose. Although data have been stored on punched cards, paper tape, and other media in the past, virtually all secondary storage is now done on magnetic tape, magnetic disks, and optical storage media</p>
+
+<h2>Computer Use</h2>
+<p>Computers are tools that assist and ease cumbersome and seemingly impossible tasks. Not all tools are physical devices, some are instructions and methods, that instruct us how to accomplish a goal, such as solve mathematical problem. Many of these tasks require only a human brain, some paper, and a pencil. Without computers, many tasks would require countless hours of hand calculations. </p>
+<p>In any case, NO ONE should depend completely on computers. NEVER blindly trust a computer’s output. Always check your input. To check your computer software’s results, use traditional pencil-and-paper analysis. Always remember that computers are incredibly useful tools that require diligence and understanding.</p>
+
+<!--
+<p>missing.css is the CSS library we wished already existed.
+Add it to your website: <code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://unpkg.com/missing.css@1.0.9/dist/missing.min.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></p>
+-->
+<ul class="f-switch dense align-items:stretch" role="list">
+<li class="box">It starts with decent default styling for vanilla HTML, akin to <strong>classless
+CSS</strong> libraries, that can be customized with <strong>CSS variables.</strong></li>
+<li class="box">It offers a small set of <strong>components</strong> based on well-known, semantic markup
+patterns, with ARIA where appropriate.</li>
+<li class="box">Finally, it offers a small &amp; curated set of <strong>utility classes</strong> and <strong>custom
+elements</strong> for the things HTML hasn't caught up with yet.</li>
+</ul>
+<p>The goal of missing.css is to reduce needed intervention in HTML. It lets
+authors</p>
+<ul class="flow-gap dense">
+<li>start with a good out-of-the-box experience,</li>
+<li>customize it easily, even create multiple themes,</li>
+<li>build common components using plain, semantic HTML,</li>
+<li>create unique sites by applying utility classes as needed.</li>
+</ul>
+<p>Though it's quite early, there are a few sites using missing.css:</p>
+<ul>
+<li><a href="https://hyperscript.org">https://hyperscript.org</a></li>
+<li><a href="https://denizaksimsek.com">https://denizaksimsek.com</a></li>
+<li><a href="https://github.com/chapmandu/cfwheels-htmx-crud">https://github.com/chapmandu/cfwheels-htmx-crud</a></li>
+<li><a href="https://www.davidaflood.com">https://www.davidaflood.com</a></li>
+</ul>
+<p>Missing.css is a notch on the complexity slider
+that's just right for small projects and personal sites
+where classless CSS is not enough, Tailwind is too much
+and Bootstrap just doesn't have the right vibe.</p>
+<p>We also have a <a href="/docs/js">JavaScript library</a> and a <a href="https://prismjs.com">Prism</a> syntax theme.</p>
+</main>
+
+<footer>
+    <p><a href="/">Missing.css</a>, by
+    <a href="https://denizaksimsek.com">Deniz Akşimşek</a>,
+    funded by
+    <a href="https://bigsky.software">Big Sky Software</a> and
+    <a href="https://commspace.co.za">Commspace</a>.
+
+    </p><p>Also check out
+    <a href="https://htmx.org">htmx</a>
+    and
+    <a href="https://hyperscript.org">_hyperscript</a>.
+
+    </p><p>
+    Made with 💙 in Ankara, Samsun, Rize and Cape Town.
+    </p>
+</footer>
+	
+</body>
+</html>
