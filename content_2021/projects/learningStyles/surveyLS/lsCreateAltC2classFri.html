@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- Do not distribute. Ellen Bajcar, 2012-2015 
+	 https://dl.dropboxusercontent.com/u/43304210/a2.zip
+	 -->
+<html>
+<head>
+	<title>Learning Styles Survey</title>
+	<meta charset="utf-8">
+	<style>
+	body { width: 90%; margin: 10px auto; }
+	td { padding: 1px 5px; }
+	footer { text-align: right;} 
+	.tdreset { color: black;}
+	.tdsel {background-color: rgb(72, 209, 204); color: black;}
+	.tdgray { background-color: white; color: lightgray;}
+	#message { position: absolute; background-color: white; display: none; top:10px; border: 6px solid gray; }	
+	</style>
+</head>
+<body>
+	<button id="submit">submit</button>
+	<button id="reset">reset</button>
+	<button id="info">info</button>
+	<section id="questions"></section>
+	<div id="message"></div>
+	<footer><h2>...live and learn!</h2></footer>
+<script src="data.js"></script> <!-- provided; contains data structures with content -->
+<script type="text/javascript">
+	/*  ----------------------------------------------------
+		create DOM nodes and populate with data from whenYou 
+	    ----------------------------------------------------		
+	*/
+	// create title and table for the survey in the section id="questions"
+	var newHeading = document.createElement("h1");
+	var newTable = document.createElement("table");
+	newTable.style.border = "3px navy solid";
+
+	//create child nodes manually
+	//and add them as child nodes to the new elements
+	var h1Text = document.createTextNode("Take the survey ...");
+	newHeading.appendChild(h1Text);
+
+	//and we still need to attach them to the document!
+	document.getElementById("questions").appendChild(newHeading);
+	document.getElementById("questions").appendChild(newTable);
+
+	//create and populate the table
+	var mtable = document.getElementsByTagName("table")[0];
+	var currow,curcell;
+	for (var j = 0; j < whenYou.length; j++ ) {
+		currow = document.createElement("tr");
+		mtable.appendChild(currow);
+		currow.setAttribute("id", "row"+j);
+		for ( var curr in whenYou[j] ) {
+			curcell = document.createElement("td");
+			currow.appendChild(curcell);
+			( whenYou[j][curr] == whenYou[j]["name"]) ? curcell.innerHTML = "When you "+whenYou[j][curr] : curcell.innerHTML = whenYou[j][curr];
+			curcell.setAttribute("id", curr+j );
+			curcell.setAttribute("name", curr );
+			curcell.style.border = "1px navy dotted";
+		}
+	}
+
+	/*	----------------------------------
+		process survey and present results
+	    ---------------------------------- 
+	*/ 
+	// colname = ["name", "visual", "auditory", "tactile" ];
+	var indx = 0;
+	var colname = new Array;
+	for (var curr in whenYou[1]) {
+		colname[indx] = curr;
+		indx++;
+	}
+	function addup() {
+		console.log("entered addup function");
+		var theCount = [ 0, 0, 0, 0 ];
+		//identify the three columns
+		var col1 = document.getElementsByName(colname[1]);
+		var col2 = document.getElementsByName(colname[2]);
+		var col3 = document.getElementsByName(colname[3]);
+		//add up the selected cells
+		for (var i = 0; i < col1.length; i++) {
+			if (col1[i].selected) theCount[1]++;
+			if (col2[i].selected) theCount[2]++;
+			if (col3[i].selected) theCount[3]++;
+		}
+		console.log(theCount);
+		//find the highest value and the second highest value
+		var first = Math.max.apply(null, theCount);
+		var prim = colname[theCount.indexOf(first)];
+		console.log("first " + first + " prim " + prim);
+		theCount[theCount.indexOf(first)] = 0;
+		console.log(theCount);
+		var second = Math.max.apply(null, theCount);
+		var auxy = colname[theCount.indexOf(second)];	
+		console.log("second " + second + " auxy " + auxy);			
+		//display the results
+	}
+		
+	/*	----------------------------------------------------------------------------------------------------
+		set up event listeners to respond to user events - each row, each cell, 3 buttons, and popup section
+		----------------------------------------------------------------------------------------------------
+	.tdreset { color: black;}
+	.tdsel {background-color: rgb(72, 209, 204); color: black;}
+	.tdgray { background-color: white; color: lightgray;}
+	*/
+	for (var j = 0; j < whenYou.length; j++) {
+		document.getElementById("row"+j).addEventListener("click", function () {
+			//console.log("row clicked");
+			this.getElementsByTagName("td")[1].setAttribute("class","tdgray");	
+			this.getElementsByTagName("td")[2].setAttribute("class","tdgray");
+			this.getElementsByTagName("td")[3].setAttribute("class","tdgray");
+			this.getElementsByTagName("td")[1].selected = false;
+			this.getElementsByTagName("td")[2].selected = false;
+			this.getElementsByTagName("td")[3].selected = false;			
+		}, true);		
+	
+		document.getElementById(colname[1]+j).addEventListener("click", function() {
+			//console.log("cell clicked");
+			this.setAttribute("class","tdsel");
+			this.selected = true;
+		}, true);
+		document.getElementById(colname[2]+j).addEventListener("click", function() {
+			//console.log("cell clicked");
+			this.setAttribute("class","tdsel");
+			this.selected = true;
+		}, true);
+		document.getElementById(colname[3]+j).addEventListener("click", function() {
+			//console.log("cell clicked");
+			this.setAttribute("class","tdsel");
+			this.selected = true;
+		}, true);		
+	}
+/*	<button id="submit">submit</button>
+	<button id="reset">reset</button>
+	<button id="info">info</button> 	*/	
+	document.getElementById("submit").addEventListener("click", addup);
+	document.getElementById("reset").addEventListener("click", 
+		function () { location.reload();  }, false );
+	document.getElementById("info").addEventListener("click", 
+		function () { 
+			popup.innerHTML = message;
+			popup.style.display = "block";
+			//console.log("trying to display message");
+		}, false );
+	var popup = document.getElementById("message");
+	document.getElementById("message").addEventListener("click", 
+		function () {
+			popup.innerHTML = "";
+			popup.style.display = "none";
+		}, false );
+	var message = "<h3>Instructions:</h3> <p>Read the word(s) in the first column and select the description that best expresses how you usually handle each situation</p> <p>Many responses probably fall in one column, with several in another column, and very few in the remaining one. The column that represents your actions best is your primary processing style.  The second highest is your auxiliary style. Though this test is not very technical or complicated, most adults know how they respond to situations.</p><p> By spending time thinking about reactions, you can identify how you prefer to process information. This assessment looks at your modality preferences.	When you press the Submit button, your primary and auxiliary processing style will be displayed, together with some suggestions how to take advantage of your strengths.</p> <button>Close</button>";	
+</script>
+</body>
+</html>

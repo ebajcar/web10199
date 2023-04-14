@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Do not distribute. Ellen Bajcar, 2012-2015 
+	 https://dl.dropboxusercontent.com/u/43304210/a2.zip
+	 -->
+<html>
+<head>
+	<title>Create and Populate L.S. Table</title>
+	<meta charset="utf-8">
+	<style>
+		table { border: 1px red solid; }
+		td { border: 1px black dotted; padding: 10px; }
+	</style>
+</head>
+<body>
+		<section id="questions"></section>
+<script src="data.js"></script> <!-- provided; contains data structures with content -->
+<script type="text/javascript">
+	// create title and table for the survey in the section id="questions"
+	var newHeading = document.createElement("h1");
+	var newTable = document.createElement("table");
+
+	//create child nodes manually
+	var h1Text = document.createTextNode("Take the survey ...");
+	//and add them as child nodes to the new elements
+	newHeading.appendChild(h1Text);
+
+	//and we still need to attach them to the document!
+	document.getElementById("questions").appendChild(newHeading);
+	document.getElementById("questions").appendChild(newTable);
+
+	//create and populate the table
+	var mtable = document.getElementsByTagName("table")[0];
+	var currow,curcell;
+	for (var j = 0; j < whenYou.length; j++ ) {
+		currow = document.createElement("tr");
+		mtable.appendChild(currow);
+		currow.setAttribute("id", "row"+j);
+		for ( var curr in whenYou[j] ) {
+			curcell = document.createElement("td");
+			currow.appendChild(curcell);
+			( whenYou[j][curr] == whenYou[j]["name"]) 
+				? curcell.innerHTML = "When you "+whenYou[j][curr] 
+				: curcell.innerHTML = whenYou[j][curr];
+			curcell.setAttribute("id", curr+j );
+			//curcell.setAttribute("name", "row"+j );
+		}
+	}
+	// OPTIONAL: you can create an array containing the keys in the table
+	var indx = 0; 
+	var colname = new Array;
+	for ( var curr in whenYou[1] ) {
+		colname[indx] = curr;
+		indx++;
+		}
+	console.log(colname);
+	
+	function visualClick (cell) {
+	  (cell.style.background == "rgb(255, 192, 203)") ? cell.style.background = "white" : cell.style.background = "pink";
+	  (cell.style.background == "rgb(255, 192, 203)") ? cell.style.color = "black" : cell.style.color = "lightgray";
+	  console.log("Cell has been clicked");
+	}
+
+	function audioClick (cell) {
+	  (cell.style.background == "rgb(255, 192, 203)") ? cell.style.background = "white" : cell.style.background = "pink";
+	  (cell.style.background == "rgb(255, 192, 203)") ? cell.style.color = "black" : cell.style.color = "lightgray";
+	  console.log("Cell has been clicked");
+	}
+
+	function tactileClick (cell) {
+	  (cell.style.background == "rgb(255, 192, 203)") ? cell.style.background = "white" : cell.style.background = "pink";
+	  (cell.style.background == "rgb(255, 192, 203)") ? cell.style.color = "black" : cell.style.color = "lightgray";
+	  console.log("Cell has been clicked");
+	}
+
+	function rowClick (cell) {
+		for (var k = 1; k < 4; k++) {
+		cell.getElementsByTagName("td")[k].style.background = "white";
+		cell.getElementsByTagName("td")[k].style.color = "lightgray";	
+		}
+		console.log("ROW has been clicked");
+	}	
+	for (var j = 0; j < whenYou.length; j++ ) {
+		document.getElementById("row"+j).addEventListener("click", function(){ rowClick(this); }, true);
+		//document.getElementsByName("row1")[1].addEventListener("click", function(){ console.log("Row has been clicked"); }, true);
+		document.getElementById(colname[1]+j).addEventListener("click", function(){ visualClick(this); }, true);
+		document.getElementById(colname[2]+j).addEventListener("click", function(){ audioClick(this); }, true);
+		document.getElementById(colname[3]+j).addEventListener("click", function(){ tactileClick(this); }, true);
+	}
+
+</script>
+</body>
+</html>

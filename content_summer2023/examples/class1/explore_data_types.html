@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Explore data types</title>
+<meta name="viewport" content="width=device-width"> 
+<meta charset="utf-8">
+<style>
+/* comments */
+</style>
+</head>
+<body>
+  <!-- all marked up content will go here -->
+  
+<script>
+/* 
+    explore primitives and built-in objects
+*/
+var x = "string";
+var y = new String("string");
+console.log("x value: ", x, " typeof: ", typeof(x));
+console.log("y value: ", y, " typeof: ", typeof(y));
+console.log("equal? ", (x == y));
+console.log("identical? ", (x === y));
+
+
+var primBoo = true;
+var objBoo = new Boolean(true);
+console.log("primBoo value: ", primBoo, " typeof: ", typeof(primBoo));
+console.log("objBoo value: ", objBoo, " typeof: ", typeof(objBoo));
+console.log("equal? ", (primBoo == objBoo));
+console.log("identical? ", (primBoo === objBoo));
+
+var guess = prompt("Guess the magic number:");
+console.log(guess, " evaluates to ", (guess == 4));
+</script>
+</body>
+</html>

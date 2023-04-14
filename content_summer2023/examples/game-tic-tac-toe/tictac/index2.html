@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+Interface for a mobile tic tac toe app
+Sam Scott, May 2012
+-->
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <meta charset=UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="css/tictactoe.css"/>
+    </head>
+    <body>
+        <h1>Tic Tac Toe!</h1>
+        <table>
+            <tr>
+                <td id="cell00" onclick="place(0,0);"></td>
+                <td id="cell01" onclick="place(0,1);"></td>
+                <td id="cell02" onclick="place(0,2);"></td>
+            </tr>
+            <tr>
+                <td id="cell10" onclick="place(1,0);"></td>
+                <td id="cell11" onclick="place(1,1);"></td>
+                <td id="cell12" onclick="place(1,2);"></td>
+            </tr>
+            <tr><td id="cell20" onclick="place(2,0);"></td>
+                <td id="cell21" onclick="place(2,1);"></td>
+                <td id="cell22" onclick="place(2,2);"></td>
+            </tr>
+        </table>
+        <p>
+            <span id="message">Player <span id="player">X</span> Go!</span> 
+            <input type="button" value="reset game" onclick="reset();">
+        </p> 
+	<script src="js/tictactoe.js"></script>	
+	<script>
+		tdcell.addEventListener("click", place(x,y), false);
+	</script>
+    </body>
+</html>

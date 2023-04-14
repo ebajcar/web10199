@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>side menu</title>
+	<link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing-prism.min.css"-->
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="css/prism-coy-23.js"></script>
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+	</style>
+</head>
+<body>
+	<div class="sidebar-layout fullscreen">
+    <header>
+        <div class="<h1>">SYST10199</div>
+        <nav>
+            <ul role="list">
+                <li><a href="#" aria-current="page">Home</a></li>
+                <li><hr></li>
+                
+                <li><a href="#">Web Programming</a></li>
+                <li  class="margin"><a href="#">Client-server environment</a></li>
+                <li  class="margin"><a href="#">Progressive enhancement (PE)</a></li>
+                <li><hr></li>
+                
+                <li><a href="#">Javascript language (client-side programming)</a></li>
+                <li  class="margin"><a href="#">Subtopic</a></li>
+                <li  class="margin"><a href="#">Subtopic</a></li>
+                <li><hr></li>
+                
+                <li><a href="#">PHP language (server-side programming)</a></li>
+                <li  class="margin"><a href="#">Subtopic</a></li>
+                <li  class="margin"><a href="#">Subtopic</a></li>
+                <li  class="margin"><a href="#">Subtopic</a></li>
+                <li  class="margin"><a href="#">Subtopic</a></li>
+                <li><hr></li>
+                
+            </ul>
+             <details open>
+                <summary><b>Worksheets</b></summary>
+                <ul role="list">
+                    <li><a href="#">Worksheet 1</a></li>
+                    <li><a href="#">Worksheet 2</a></li>
+                    <li><a href="#">Worksheet 3</a></li>
+                    <li><a href="#">Worksheet 4</a></li>
+                    <li><a href="#">Worksheet 5</a></li>
+                    <li><a href="#">Worksheet 6</a></li>
+                    <li><a href="#">Worksheet 7</a></li>
+                    <li><a href="#">Worksheet 8</a></li>
+                    <li><a href="#">Worksheet 9</a></li>
+                    <li><a href="#">Worksheet 10</a></li>
+                </ul>
+            </details>              
+        </nav>
+    </header>
+    
+
+    <div class="">
+        <main>
+        <header>
+          <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <ol>
+              <li><a href="#"  class="allcaps">SYST10199</a></li>
+              <li><a href="#">Worksheet 10</a></li>
+              <li><a href="#" aria-current="page">Exercise 3: Registration and Login forms</a></li>
+            </ol>
+          </nav>
+</header>
+<details open>
+<summary>On this page&hellip;</summary>
+ <ol>
+    <li><a href="#e01">STEP 1: Create an html document containing a form (from earlier assignment)</a></li>
+    <li><a href="#e02">STEP 2: Use phpMyAdmin web tool, to set up table</a></li>
+    <li><a href="#e02">STEP 3-6: To process the form with PHP, you need to connect and work with databases</a></li>
+  </ol>
+</details>
+
+<h3>STEP 1: Create an html document containing a form (from Assignment 6)</h3>
+<p>NOTE: Code includes only the fields needed for BOTH the login and registration form; it is up to you to include and complete the remaining fields from the registration form.</p>
+ 
+<h3>STEP 2: Use phpMyAdmin web tool, to set up table</h3>
+<p>Either manually (as demonstrated in class) or using SQL tab in phpMyadmin, create a table to correspond to (you make up your own values):</p>
+<figure>
+<pre class="language-sql" tabindex="0"><code class="language-sql">CREATE TABLE `members` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `startdate` date NOT NULL,
+  `player` varchar(40) NOT NULL,
+  `password` varchar(20) NOT NULL
+  PRIMARY KEY (`id`)
+);
+INSERT INTO `members` 
+(`id`, `startdate`, `player`, `password`) 
+VALUES
+(1, '2016-07-14', 'ellen', 'elephant'),
+(2, '2016-07-06', 'charlie', 'cherries');
+</code></pre>
+  <figcaption>Figure 1: minimal fields for table used for login form and registration form in this example.</figcaption>
+</figure>
+
+<h3>STEP 3-6: To process the form with PHP, you need to connect and work with databases</h3>
+
+
+<ul>
+    <li>Add a subdirectory “includes” to you project.</li>
+    <li>Create a new file and name it <code>Member.class</code>, store in subdirectory “includes” in your project.</li>
+    <li><strong>Member.class code </strong> Start with the code found in FIGURE 2.</li>
+    <li>Add the authenticate method to your Memeber.class. See FIGURE 4.</li>
+    <li><strong>Login form processing</strong> Note: remember to include session_start() at the top of the page AND use the .php extension for every file that contains PHP code (even if you do not see it here). On your login page, add the code from FIGURE 3.</li>
+    <li><strong>Registration form processing</strong> On your submission of the registration form page, add code from FIGURE 4.</li>
+    <li>Add the registerMember method to your Member.class. See FIGURE 4</li>
+    <li>Note the use of error_log(). You can customize your error message. See PHP manual for more details.</li>
+</ul>
+
+
+            <div id="content" class="f-row flex-wrap:wrap">
+                <section class="box flex-grow:2">
+                    <h3>Tests</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus, alias repellat. Totam debitis ut cupiditate odio mollitia eaque veritatis tempora? Pariatur, ipsam quasi. Quo aliquid deleniti quia rem, magnam voluptatum repudiandae officia ea. A eaque repellendus repudiandae nesciunt quis amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ullam error, dicta eos laboriosam eaque fugit id at corrupti nam.</p>
+                </section>
+            </div>
+        </main>
+
+<footer>
+              <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10109 Web Programming | Sheridan College</a>
+      </p>  
+          <ul  class="f-switch dense align-items:stretch" role="list">
+
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+</footer>
+    </div>
+</div>
+
+	
+
+</body></html>

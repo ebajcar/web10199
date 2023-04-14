@@ -1,0 +1,675 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Worksheet 2</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e8b98f01-db4b-40de-a3f2-02f726436c1a" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📪</span></div><h1 class="page-title">Worksheet 2</h1></header><div class="page-body"><h3 id="b38c9312-474a-4ea0-906f-c6088a305a98" class=""><strong>Read and analyze (analytical reading)</strong></h3><p id="2582d23e-a186-48cc-8388-e4a9379ae399" class="">Observe and describe. Make notes. Explore the links provided in the material. Document what you have learned. When you come to an example, make your own version and explore it deeply. <em>“Curiosity Is the engine of achievement.”</em> —Sir Ken Robinson</p><p id="6149c844-aee1-4b52-b121-93ef13cd5e3a" class="">
+</p><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="d05e566b-aa52-489a-88d5-46bb622ce91b"><div style="font-size:1.5em"><span class="icon">⚠️</span></div><div style="width:100%"><strong>Tutorials (w3schools)</strong><hr id="4eb8f824-fe43-4af0-9253-d7091f052818"/><p id="570cbaa0-dca5-4b11-afe8-5ad1ffbef0e6" class=""><strong>Developing with JavaScript</strong></p><ol type="1" id="fb07b6b5-fd91-40bf-ae4e-a77736ff6fb7" class="numbered-list" start="1"><li><a href="https://ebajcar.github.io/web10199/material/material_js.html">Javascript language, Programs, Data Structures</a></li></ol><ol type="1" id="7792a03d-323f-4d9f-94ae-10013f0f7b8a" class="numbered-list" start="2"><li><a href="https://www.w3schools.com/js/js_assignment.asp">JS Assignment</a></li></ol><ol type="1" id="386f17e3-216f-4401-8beb-62ffb44b5ba9" class="numbered-list" start="3"><li><a href="https://www.w3schools.com/js/js_if_else.asp">JS Conditions</a></li></ol><ol type="1" id="61879ed8-38f8-406e-a632-55059860c16e" class="numbered-list" start="4"><li><a href="https://www.w3schools.com/js/js_switch.asp">JS Switch</a></li></ol><ol type="1" id="d96cafdb-1899-4c79-8eb7-70263f37c719" class="numbered-list" start="5"><li><a href="https://www.w3schools.com/js/js_loop_for.asp">JS Loop For</a></li></ol><ol type="1" id="0f03139f-bd1c-4206-8951-424373b4d5e2" class="numbered-list" start="6"><li><a href="https://www.w3schools.com/js/js_loop_while.asp">JS Loop While</a></li></ol><ol type="1" id="18649583-5585-460b-a5d2-5093f75f95c9" class="numbered-list" start="7"><li><a href="https://www.w3schools.com/js/js_break.asp">JS Break</a></li></ol></div></figure><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="7c0c6b87-d1f4-4c12-b364-b3ea479ca4e0"><div style="font-size:1.5em"><span class="icon">⚠️</span></div><div style="width:100%"><strong>Tutorials (MDN)</strong><hr id="d6e5f12c-259e-44aa-aaeb-7468c74c99e8"/><ol type="1" id="b3138897-f8d7-47f7-9e78-8f3a7a9c1121" class="numbered-list" start="1"><li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks">JavaScript building blocks</a> In this module, we continue our coverage of all JavaScript’s key fundamental features, turning our attention to commonly-encountered types of code block such as conditional statements, loops, functions, and events. You’ve seen this stuff already in the course, but only in passing — here we’ll discuss it all explicitly.</li></ol><ol type="1" id="46047aa1-162c-4234-a34c-b3dc81631d6f" class="numbered-list" start="2"><li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Making decisions in your code — conditionals</a> In any programming language, code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player’s number of lives is 0, then it’s game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime. In this article we’ll explore how so-called conditional statements work in JavaScript.</li></ol></div></figure><p id="bd877de3-ade5-4b04-b012-13e96edd61a5" class="">
+</p><h3 id="13f290ed-2064-4f16-b0ce-6835273d423a" class=""><strong>Class examples</strong></h3><p id="5a8f5559-bfe2-4d99-a1f1-e87b3769c6d0" class="">Explore, implement, and comment well.</p><ul id="723b8ac4-5e94-48a4-9ce2-f05328d1ee54" class="bulleted-list"><li style="list-style-type:disc"><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/var_vs_let.html">var vs. let</a></li></ul><ul id="ef1b166e-7177-44a9-baf0-6f1202bc31d5" class="bulleted-list"><li style="list-style-type:disc"><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/if_structure.html">if control structure and conditionals</a></li></ul><ul id="8cac0b57-8fb7-4b39-936f-ca2e59697679" class="bulleted-list"><li style="list-style-type:disc"><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/diagram_for_loop.html"><code>for</code></a><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/diagram_for_loop.html"> loop diagram</a></li></ul><ul id="2cd09e75-34ae-407b-94ab-f913c9c0935d" class="bulleted-list"><li style="list-style-type:disc"><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/for_loop_options.html"><code>for</code></a><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/for_loop_options.html"> loop used to loop through options in a </a><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/for_loop_options.html"><code>select</code></a><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/for_loop_options.html"> element</a></li></ul><ul id="17260590-c99a-458c-9ee8-c16c2347d257" class="bulleted-list"><li style="list-style-type:disc"><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/fib_v1_console.html">Fibonacci -console</a></li></ul><ul id="ce01b23e-3fa1-4380-81b5-7408f563cb72" class="bulleted-list"><li style="list-style-type:disc"><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/fib_v1_arr_console.html">Fibonacci -console, array</a></li></ul><ul id="e8e48eaf-1b65-4962-aecd-5b29208588ee" class="bulleted-list"><li style="list-style-type:disc"><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/fib_es6_oo.html">Fibonacci -ES6</a></li></ul><ul id="ad947011-3a67-44b1-95a7-a4337e28bb6c" class="bulleted-list"><li style="list-style-type:disc"><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/fib_es6_iterator.html">Fibonacci -ES6,iterator</a></li></ul><ul id="3c614586-a626-4b3a-86ec-0de6f1723f06" class="bulleted-list"><li style="list-style-type:disc"><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/set2/eratosthenes_sieve.html">Eratosthenes Sieve (prime numbers)</a></li></ul><p id="8205d7f2-e38e-40b9-9f3e-499de151a85c" class="">
+</p><h3 id="20bbbfa4-6a44-46a6-a5dd-6419af90ee70" class="">Link to  Problem: What is the sum of two numbers</h3><p id="f16cab73-4489-41cf-9dfe-d54d0a190d78" class=""><a href="https://replit.com/join/jftdgudxjs-ellenbajcar">https://replit.com/join/jftdgudxjs-ellenbajcar</a></p><h1 id="353e377a-ce2a-4423-b52b-0f83b1c6c0dc" class="">Exercises</h1><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="ec253f67-aa08-496d-8c74-8cd91d33feef"><div style="font-size:1.5em"><span class="icon">⚠️</span></div><div style="width:100%">For this worksheet, copy your template site and name it <code>worksheet2</code><ol type="1" id="e461cdc6-937b-434d-9cbe-ec30c0100ce2" class="numbered-list" start="1"><li>Complete the problems below and incorporate into your site.</li></ol><ol type="1" id="abc78cd5-ae46-46a0-a32a-d33e3df507a1" class="numbered-list" start="2"><li>on the home page, update the cards to describe the solution and update the link to solution.</li></ol></div></figure><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="27b17596-cf26-4d07-86d5-2d2a961d5792"><div style="font-size:1.5em"><span class="icon">1️⃣</span></div><div style="width:100%"><strong>Problem</strong>: Write a program to calculate roots of a quadratic equation</div></figure><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="2fff324a-4dce-4f6d-a126-31ff13578325"><div style="font-size:1.5em"><span class="icon">2️⃣</span></div><div style="width:100%"><strong>Problem</strong>:  Write a program to calculate area of a circle</div></figure><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="ef890922-04e4-4462-b9f5-c09c3224293c"><div style="font-size:1.5em"><span class="icon">3️⃣</span></div><div style="width:100%"><strong>Problem</strong>:  Write a program to calculate Fibonacci numbers</div></figure><p id="e44fa0e8-5f76-41c4-a13e-d48dec6d0830" class="">
+</p><p id="3416d0ff-6cb7-48c6-a635-5638a86792a7" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="ea384788-3ba8-4d90-8590-1b43fb149927"><div style="font-size:1.5em"><span class="icon">📢</span></div><div style="width:100%"><strong>Self-evaluation rubric</strong><p id="036c6f76-d96c-4e24-92bc-343c1166ce01" class="">Evaluate your solutions</p><ol type="1" id="fd88d003-57c5-4a0f-9cb9-c4fe5bbe782e" class="numbered-list" start="1"><li>is it unobtrusive JavaScript? does it adhere to PE?</li></ol><ol type="1" id="01a33d96-bee5-44a4-ba52-d5b9f929ec57" class="numbered-list" start="2"><li>what paradigm are you using? some procedural? fully functional? object-oriented?</li></ol><ol type="1" id="3af5f42c-2269-4683-ba37-8bd1331faa57" class="numbered-list" start="3"><li>does it run without any errors and warnings?</li></ol><ol type="1" id="7771ed82-af6f-4f89-9de2-b1d55553bfb7" class="numbered-list" start="4"><li>is it well documented? prologue? inline comments explain code blocks?</li></ol><ol type="1" id="f2d660f2-cfc3-4950-9432-eacdee5c03b5" class="numbered-list" start="5"><li>does it adhere to code style described in class material?</li></ol><ol type="1" id="35934ea0-a5e3-4f85-8119-0e01b38623d5" class="numbered-list" start="6"><li>is all markup adhering to HTML5 standards? well-formed? valid? required template used?</li></ol><ol type="1" id="9d16d440-3118-4a56-bada-4cc1010b21c8" class="numbered-list" start="7"><li>are all CSS rules compliant with CSS3/4 standards? valid? easy to read? required framework used?</li></ol><ol type="1" id="f46b9609-b43c-4c97-aa56-a83ea2b1e62c" class="numbered-list" start="8"><li>is all functionality complete and accurate? </li></ol><ol type="1" id="cc0f4800-7d97-41af-8c89-79ffa6f4791b" class="numbered-list" start="9"><li>what have you learned? what improvements can you identify? what&#x27;s the next step?</li></ol><ol type="1" id="fa480da1-4d4f-4376-912a-24b7b547bb91" class="numbered-list" start="10"><li>site published? adheres to naming conventions? site follows standard (required) organization?</li></ol><p id="9557a307-b042-472a-afa2-b9fb2ed26185" class=""><strong>Review </strong><a href="https://ebajcar.github.io/web10199_worksheets/syst10199/noteworthy/gradeCalc.html">&quot;</a><a href="https://ebajcar.github.io/web10199_worksheets/noteworthy/gradeCalc.html">A Guideline for Implementing Good Solutions&quot;</a></p><p id="4d0bd98a-d5f7-40aa-842a-3637779cff49" class="">
+</p></div></figure><hr id="19f9f79f-b0ae-4df3-8cb1-11ec717acaf0"/><p id="28ea1dcc-7ba6-4e32-9481-89c32ce31ec4" class=""><em>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</em></p><hr id="e51f957b-9d94-4cab-88a9-25ab0d5a53d8"/><p id="0b35f463-8d24-4393-9e10-be9772a2e571" class="">2021-2022 @ FAST, Sheridan College</p></div></article></body></html>

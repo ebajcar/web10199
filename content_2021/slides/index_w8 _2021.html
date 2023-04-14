@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Week 8 notes</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+
+		<!-- 
+    https://revealjs.com/code/
+    
+    
+    Theme used for syntax highlighting of code
+		<link rel="stylesheet" href="lib/css/monokai.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-light.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/rainbow.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/paraiso-dark.min.css">
+    https://cdnjs.com/libraries/highlight.js
+     -->
+     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/googlecode.min.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+      
+				<section data-background="wee8_notes.png">
+				</section> 
+        
+				<section>
+					<h2>Server-side Programming</h2>
+          <p><span style="color:orange">PHP Hypertext Preprocessor (PHP)</span> is an open source server-side scripting language designed for web develoment.</p>			
+				</section>
+  
+				<section>
+					<h2>PHP Language</h2>
+					<ol>
+						<li>a PHP script executed on the server</li>
+            <li>plain HTML result is sent back to browser.</li>
+						<li>a PHP script starts with <span style="color:orange">&lt;?php</span> and ends with <span style="color:orange">?></span></li>
+						<li>File extension for PHP files is <span style="color:orange">.php</span></li>
+						<li>Primary source: <a href="https://www.php.net/manual/en/index.php" target="_blank">PHP Manual</a> at <span style="color:orange">php.net</span></li>
+					</ol>				
+				</section>      
+      
+  
+				<section>
+					<h2>Dataflow</h2>
+					<ol>
+						<li>How do you get data from HTML page to PHP?</li>
+						<li>How do you get data from PHP to HTML page?</li>
+						<li>Can you get data from HTML and Javascript to a database directly?</li>
+						<li>What is the difference between <span style="color:orange">$_POST</span> and <span style="color:orange">$_GET</span>?</li>
+					</ol>				
+				</section>
+        
+        
+ 				<section>
+					<h2>Dataflow diagram</h2>
+          <img src="dataflow2020.png" alt="client-server dataflow in web environment">
+				</section>     
+        
+        
+
+				<section>
+					<h2>PHP programs </h2>
+          <h3>Basic rules </h3>
+					<p>
+						When PHP interpreter parses a file, <br>it looks for opening and closing tags
+					</p>
+					<pre><code class="php" data-line-numbers="1,7">&lt;?php
+// declare and initialize variable txt to store a value 
+$txt = "Hello world!";
+ 
+// display the stored value in variable txt
+echo $txt;
+?></code></pre>
+				</section> 
+        
+
+				<section>
+					<h2>Hybrid PHP</h2>
+					<p>
+						 Everything outside of a pair of opening and closing tags is ignored by the PHP parser which allows PHP files to have mixed content (hybrid). 
+					</p>
+					<pre><code class="php" data-line-numbers="3,4,5,7">&lt;html>
+&lt;body> 
+&lt;?php
+$txt = "Hello world!";
+?>
+&lt;h1>
+&lt;?php echo $txt; ?>
+&lt;/h1>
+&lt;/body>
+&lt;/html></code></pre>
+				</section> 
+        
+
+				<section>
+					<h2>Other open tags</h2>
+          <table>
+          <tr>
+          <td style="width:70px;"><span>&lt;?   </span></td>
+					<td style="font-size:0.6em;padding-left:54px;">
+						PHP also allows for short open tag <span style="">&lt;?</span> which is <span style="color:red;">discouraged</span> since it is only available if enabled and conflicts with other XML tags.
+					</td>
+          </tr><tr>
+          <td><span>&lt;?=</span></td>
+          <td>
+					<pre><code class="php" data-line-numbers="1-3">&lt;?= $someVar ?>
+// is available shortcut for
+&lt;?php echo $someVar ?></code></pre>
+          </td>
+          </tr>
+          </table>
+				</section>         
+
+				<section>
+					<h2>PHP programs </h2>
+          <h3>File extension</h3>
+          <ul style="font-size:0.7em;">
+					<li>On most servers, the default extension for PHP files is .php. </li>
+          <li>If the server supports PHP, then you do not need to do anything. </li>
+          <li>Files created with the .php extension located in the web directory (webspace) will be automatically parsed by the server: <span  style="font-family: monospace;color:darkorange;">http://userid.dev.fast.sheridanc.on.ca/path/file.php</span><br>
+          where the web directory is <span  style="font-family: monospace;color:orange;">/home/userid/public_html/path</span></li>
+          </ul>
+				</section> 
+        
+  			<section>
+					<h2>PE Principles</h2>		
+					<blockquote style="font-size:0.7em;">
+					What distinguishes PHP from something like client-side JavaScript is that the code is executed on the server, generating HTML which is then sent to the client. The client would receive the results of running that script, but would not know what the underlying code was.
+					</blockquote>    
+          <p style="color:red;">Always validate the generated HTML!</p>          
+				</section>        
+        
+ <!-- language components -->       
+
+        <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+        A computer program is shaped by <br>its <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">data representation</span><br> and the <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">statements</span><br> that determine its flow of control.
+        </section> 
+        
+
+       
+				<section data-background="php_variable.png">
+				</section> 
+        
+ 				<section>
+					<h2>PHP language</h2>
+					<ol>
+						<li><h5 style="color: green;margin-bottom:0;">PHP variables</h5>
+            <p style="font-size:0.5em;margin-top:0;">identifiers, single and double quotes, curly braces, constants</p>
+            </li>
+ 						<li><h5 style="color: green;margin-bottom:0;">PHP data types</h5>
+            <p style="font-size:0.5em;margin-top:0;">integer, float, string, Boolean, NULL, Array, Object, Resource</p>
+            </li>           
+						<li><h5 style="color: green;margin-bottom:0;">Data structures</h5> 
+            <p style="font-size:0.5em;margin-top:0;">arrays, strings, Objects, Classes</p></li>
+						<li><h5 style="color: green;">PHP operators</h5></li>
+						<li><h5 style="color: green;margin-bottom:0;">Control structures</h5>
+            <p style="font-size:0.5em;margin-top:0;">simple statements, conditional statements, loops, require/include</p></li>
+					</ol>    
+					<div style="position: absolute; width: 25%; right: -100px; top: 140px;box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(50, 50, 50, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">           
+            <h4 style="color: orange;">Predefined variables</h4>
+            <ul style="font-size:0.8em;">
+              <li>$GLOBALS</li>
+              <li>$_SERVER</li>
+              <li>$_GET</li>
+              <li>$_POST</li>
+              <li>$_FILES</li>
+              <li>$_REQUEST</li>
+              <li>$_SESSION</li>
+            </ul>
+					</div>            
+				</section>        
+        
+          
+ 
+         <section data-transition="slide" data-background="black" data-background-transition="zoom">
+          <h2>Learning PHP language</h2>
+          <h5>Examine our games written in Javascript</h5>
+          <table style="font-size:0.7em">
+            <tr>
+              <th><a href="https://www.w3schools.com/code/tryit.asp?filename=GS6D6Z91B60L" target="_blank">Casino Craps</a></th>
+              <td>Modified version</td>
+            </tr>
+            <tr>
+              <th><a href="https://www.w3schools.com/code/tryit.asp?filename=GS6FI3N1406A" target="_blank">Rock Paper Scissors</a></th>
+              <td>Modified &mdash; both players random selections, no user input </td>
+            </tr>            
+            <tr>
+              <th><a href="https://www.w3schools.com/code/tryit.asp?filename=GS6F8PUWURQ9" target="_blank">Rock Paper Scissors Lizard Spock</a></th>
+              <td>Modified &mdash; both players random selections, no user input </td>
+            </tr>
+            <tr>
+              <th><a href=" https://www.w3schools.com/code/tryit.asp?filename=GS6HWNY4C55K" target="_blank">Tic Tac Toe</a></th>
+              <td>Modified version</td>
+            </tr>              
+          </table>
+          <p style="font-size:0.6em;font-style:italic;color:blue;">Use  <a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_intro" target="_blank">w3school's PHP Tryit Editor</a> to start thinking how to rewrite the code in PHP. Complete Worksheet 6 to study the PHP language.</p>
+        </section>         
+        
+       
+				<section data-background="cc_compare_js_php.png">
+				</section>         
+        
+  
+ 
+<!-- last slide -->
+        <section data-transition="slide" data-background="#003767" data-background-transition="zoom">
+          <h2>Prepare for next class</h2>
+          <h3 style="color:orange">Week 9</h3>
+          <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">Study the assigned material and make notes.</span><br> <span style="color:#00b2ce">Complete Worksheet 7.</span><br>&mdash;<br>Post your questions on the <a href="https://github.com/ebajcar/web10199_worksheets/discussions" target="_blank">Discussion board</a><br>or bring to next class. Answer other students' questions. Start a conversation.
+          <br>&mdash;
+        </section>       
+        
+        
+             
+ 				<section>
+					<h2>...</h2>			
+				</section>         
+        
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Temperature Conversion (console and write)</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: Summer 2018
+Version: 0.5
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Practice Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+	Write a simple program that converts Fahrenheit to Celsius.
+-->	
+</head>
+<body>
+	<header>
+		<h1>Write a simple program that converts Fahrenheit to Celsius.</h1>
+	</header>
+	<main>
+
+	</main>
+	<footer>
+		<address>Web Programming @ Sheridan College</address>
+	</footer>
+<script>
+// How to convert Celsius to Fahrenheit
+// T(°F) = T(°C) × 9/5 + 32
+//How to convert Fahrenheit to Celsius
+// T(°C) = (T(°F) - 32) × 5/9
+var fahrenheit = 90;
+var celsius =  (fahrenheit - 32) * 5 / 9 ;
+// The toFixed() method converts a number into a string, 
+// keeping a specified number of decimals
+console.log(fahrenheit + "°F temparature is " + celsius.toFixed(3) + "°C");
+document.write("<p>" + fahrenheit + "°F temparature is ", celsius.toFixed(3), "°C</p>" );
+
+// TODO: look up meaning of toPrecision and toFixed
+// The toPrecision() method formats a number to a specified length.
+var fahrenheit = 240.5;
+var celsius =  (fahrenheit - 32) * 5 / 9 ;
+console.log(fahrenheit + "°F temparature is " + celsius.toPrecision(3) + "°C" );
+document.write(fahrenheit + "°F temparature is " + celsius.toPrecision(4) + "°C" );	
+</script>	
+</body>
+</html>

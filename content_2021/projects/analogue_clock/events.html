@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Events</title>
+<meta charset="utf-8">
+</head>
+<body>
+<div id="a" onclick="alert('old')">Open the Developer Tools Console to see the output.</div>
+
+<script>
+//https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Event_handlers
+//images/inclass/events_mdn.png
+
+window.onload = function () {
+  var div = document.getElementById("a");
+  console.log("Attribute reflected as a property: ", div.onclick.toString());
+  // Prints: function onclick(event) { alert('old') }
+  
+  div.onclick = function() { alert('new') };
+  console.log("Changed property to: ", div.onclick.toString());
+  // Prints: function () { alert('new') }
+  
+  console.log("Attribute value is unchanged: ", div.getAttribute("onclick"));
+  // Prints: alert('old')
+}
+</script>
+
+</body>
+</html>

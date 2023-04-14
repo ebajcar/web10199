@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- add mocha css, to show results -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+  <!-- add mocha framework code -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+  <script>
+    mocha.setup('bdd'); // minimal setup
+  </script>
+  <!-- add chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+  <script>
+    // chai has a lot of stuff, let's make assert global
+    let assert = chai.assert;
+  </script>
+  
+  <!--
+    Automated testing with Mocha https://javascript.info/testing-mocha
+    When we write a function, we can usually imagine what it should do: which parameters give which results.
+    During development, we can check the function by running it and comparing the outcome with the expected one. For instance, we can do it in the console.
+    If something is wrong – then we fix the code, run again, check the result – and so on till it works.
+    But such manual “re-runs” are imperfect.
+    
+    Behavior Driven Development (BDD)
+    BDD is three things in one: tests AND documentation AND examples.
+    
+    The flow of development usually looks like this:
+        An initial spec is written, with tests for the most basic functionality.
+        An initial implementation is created.
+        To check whether it works, we run the testing framework Mocha (more details soon) that runs the spec. While the functionality is not complete, errors are displayed. We make corrections until everything works.
+        Now we have a working initial implementation with tests.
+        We add more use cases to the spec, probably not yet supported by the implementations. Tests start to fail.
+        Go to 3, update the implementation till tests give no errors.
+        Repeat steps 3-6 till the functionality is ready.
+    ****  
+        Mocha – the core framework: it provides common testing functions including describe and it and the main function that runs tests.
+        Chai – the library with many assertions. It allows to use a lot of different assertions, for now we need only assert.equal.
+        Sinon – a library to spy over functions, emulate built-in functions and more, we’ll need it much later.
+        These libraries are suitable for both in-browser and server-side testing. Here we’ll consider the browser variant.
+        
+        Online js editor (focus on angular it seems) https://plnkr.co/account/plunks
+  -->
+</head>
+
+<body>
+
+  <script>
+    function pow(x, n) {
+      /* function code is to be written, empty now */
+      if (n < 0) return NaN;
+      if (Math.round(n) != n) return NaN;
+
+      let result = 1;
+
+      for (let i = 0; i < n; i++) {
+        result *= x;
+  }
+
+  return result;
+    }
+  </script>
+
+  <!-- the script with tests (describe, it...) -->
+  <script src="test.js"></script>
+  <script>
+describe("pow", function() {
+
+  describe("raises x to power 3", function() {
+
+    function makeTest(x) {
+      let expected = x * x * x;
+      it(`${x} in the power 3 is ${expected}`, function() {
+        assert.equal(pow(x, 3), expected);
+      });
+    }
+
+    for (let x = 1; x <= 5; x++) {
+      makeTest(x);
+    }
+
+  });
+
+  it("if n is negative, the result is NaN", function() {
+    assert.isNaN(pow(2, -1));
+  });
+
+  it("if n is not integer, the result is NaN", function() {
+    assert.isNaN(pow(2, 1.5));
+  });
+
+});
+
+
+</script>
+
+  <!-- the element with id="mocha" will contain test results -->
+  <div id="mocha"></div>
+
+  <!-- run tests! -->
+  <script>
+    mocha.run();
+  </script>
+</body>
+
+</html>

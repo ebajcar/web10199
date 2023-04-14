@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Javascript SYST10199</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/vs.min.css">
+  
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' type='text/css'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
+<link rel="stylesheet" href="main.css">
+
+<script src="https://kit.fontawesome.com/e511a6976b.js" crossorigin="anonymous"></script> 
+<style>
+ 
+body {
+  counter-reset: figure-counter;  /* Set "figure-counter" to 0 */
+}
+figcaption::before {
+  counter-increment: figure-counter;
+  content: "FIGURE " counter(figure-counter) ". ";
+  font-weight: bold;
+}
+main {
+   counter-reset: section; 
+}
+
+h3::before {
+  counter-increment: section;
+  content: counter(section) ". "; 
+  /* content: counter(section) "." counter(subsection) " "; */
+}
+
+.orange {
+  color: darkorange;
+  font-weight: bold;
+}
+</style>    
+</head>
+<body>
+ <!-- 
+  *********************************************
+  **	NAVIGATION
+  *********************************************
+  -->  
+    <nav class="navbar navbar-expand-md bg-info navbar-dark fixed-top">
+      <a class="navbar-brand" href="#" style="padding-top:1px;line-height:1em;font-weight:bold;">SYST10199 <br><small>Web Programming</small></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../index.html"><i class="fa fa-home" aria-hidden="true"></i> Home <span class="sr-only">(current)</span></a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://slate.sheridancollege.ca/d2l/home" target="_blank"><i class="fa fa-calendar" aria-hidden="true"></i> SLATE</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="https://github.com/ebajcar/web10199_worksheets/discussions"><i class="fas fa-comment-dots"></i> Discussions</a>
+          </li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" 
+                href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-link"></i> Resources</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a  class="dropdown-item" 
+                    href="https://www.w3.org/" 
+                    target="_blank">
+                    <i class="fas fa-external-link-alt"></i> World Wide Web Consortium (W3C)</a>
+                <a  class="dropdown-item" 
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" 
+                    title="Javascript Center; designed for all levels of javascript users, includes links to tools, documentation, and an online communities."
+                    target="_blank" >
+                    <i class="fas fa-external-link-alt"></i> Mozilla Developer Network (MDN)</a>
+                <a class="dropdown-item"  
+                    href="http://www.ecma-international.org/ecma-262/8.0/index.html" 
+                    target="_blank">
+                    <i class="fas fa-external-link-alt"></i> ECMA-262 2017 (Edition 8)</a>
+            </div>
+          </li>         
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" 
+                href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-link"></i> Checklists</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a  class="dropdown-item" 
+                    href="https://bajcar.dev.fast.sheridanc.on.ca/www10049/checklists/cssSheet2019.html" 
+                    title="May be out-of-date...cross-reference with w3c, w3schools and MDN"
+                    target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Cascading Style Sheets (CSS)</a>
+                <a  class="dropdown-item" 
+                    href="https://bajcar.dev.fast.sheridanc.on.ca/www10049/checklists/htmlSheet.html" 
+                    title="May be out-of-date...cross-reference with w3c, w3schools and MDN"
+                    target="_blank" >
+                    <i class="fas fa-external-link-alt"></i> Hypertext Markup Language(HTML)</a>
+                <a class="dropdown-item"  
+                    href="https://bajcar.dev.fast.sheridanc.on.ca/www10049/checklists/jsSheet.html" 
+                    target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Javascript Language (ECMA-262)</a>
+            </div>
+          </li> 
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0" method="get" action="http://www.google.com/search">
+          <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+     
+<div class="container">
+
+ <!-- 
+  *********************************************
+  **	MAIN
+  *********************************************
+  -->		 
+<main class="container" style="margin-top:50px">   
+<div class="row">
+<div class="col-8 container"> 
+
+<!--
+NEW NOTES
+add VS Code https://code.visualstudio.com/docs/?dv=win as editor
+alternative pinkr.co online project editor
+
+-->
+
+
+
+<!-- 2. Javascript Introduction -->
+<article id="page20" class="custom-x">
+	<h2>Javascript Language</h2>
+	<div class="card  bg-dark text-white text-center">
+		<div class="card-body lead" title="developer.mozilla.org">JavaScript® is a lightweight, interpreted, programming language with first-class functions... non-browser environments... node.js and Apache CouchDB. JS is a prototype-based, multi-paradigm, dynamic scripting language, supporting object-oriented, imperative, and functional programming...</div>
+        
+	</div>
+
+
+
+<!-- 2.1. Introduction to Javascript -->
+<section>
+	<h3>Introduction to Javascript</h3>
+	<ul class="w3-ul">
+		<li><strong>Imperative programming</strong> a developer writes code that describes in exacting detail the steps that the computer must take to accomplish the goal (procedural programming, algorithmic programming)
+        
+        <a href="https://replit.com/join/skqdsethth-ellenbajcar" target="_blank">temp</a>
+        </li>			
+		<li cite="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><strong>JavaScript (JS)</strong>  is a lightweight, interpreted, programming language with first-class functions. Most well-known as the scripting language for Web pages, many non-browser environments also use it, such as node.js and Apache CouchDB. JS is a prototype-based, multi-paradigm, dynamic scripting language, supporting object-oriented, imperative, and functional programming styles.</li>
+				
+		<li>Javascript is a <mark>scripting language</mark> created by Netscape that runs in browsers,on the client machine. Javascript resembles Sun’s Java programming language, but <strong>it is not related to Java</strong>!</li>			
+		<li>JavaScript is a client-side, object-based, case-sensitive language whose interpreter is embedded in web browser software</li>
+		<li>JavaScript language gives us access to 
+		<a data-toggle="popover"  role="button" tabindex="0" title="Document Object Model (DOM)" data-content="The document object and related objects allow access to contents of the page and modification of elements. Most Javascript interaction with HTML is handled though the DOM.">Document Object Model (DOM)</a>, and
+		<a data-toggle="popover"  role="button" tabindex="0" title="Browser Object Model (BOM)" data-content="BOM is a set of objects that allows controlling the browser, e.g change current URL, handle background requests to server with XMLHttpRequest, etc. Functions such as alert, confirm, and prompt, belong BOM. Many BOM features are standardized in HTML5.">Browser Object Model (BOM)</a>, and provides its own objects and functions.</li>
+	</ul> 
+	<h5>Primary Sources</h5>
+	<dl>
+		<dt><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Language_Resources">JavaScript language resources (MDN web docs)</a></dt>
+		<dd class="w3-small">What is JS? Why is it suitable for web development? What is the current version?</dd>		
+		<dt><a target="_blank" href="https://www.ecma-international.org/ecma-262/10.0/index.html">ECMAScript® 2019 Language Specification</a></dt>	
+		<dd>This Ecma Standard defines the ECMAScript 2019 Language. It is the tenth edition of the ECMAScript Language Specification. Since publication of the first edition in 1997, ECMAScript has grown to be one of the world's most widely used general-purpose programming languages. It is best known as the language embedded in web browsers but has also been widely adopted for server and embedded applications.</dd>
+	</dl>	
+	<hr>
+</section>
+
+
+<!--  2.2. Including Javascript in HTML -->
+<section id="page21">
+	<h3>Including Javascript in HTML</h3>
+	<p>Like in CSS, with Javascript you target HTML elements and do stuff to them. With CSS, you apply styles; with Javascript, you apply behaviour. Like with CSS, there are three ways to include Javascript code into HTML documents:</p>  
+	<ol>
+		<li>Inline Javascript using events<code>... &lt;button<b> onclick=</b>"alert('inline js example'); "> ...</code></li>
+		<li>Embedded Javascript using the &lt;script> element <code>... &lt;script>alert('embedded js example');&lt;/script> ...</code></li>
+		<li>External Javascript (unobtrusive) using separate files<code>... &lt;script <b>src="external.js"</b>>&lt;/script> ...</code></li>
+	</ol>
+	<dl>
+		<dt>1) Inline Javascript using events</dt>
+		<dd>You can use Javascript in the opening HTML tags; 
+		for example, the event handler onMouseOver will trigger the alert event when the mouse moves over the link:		
+    
+<pre class="language-html"><code>
+&lt;a onMouseOver="alert('you rolled over me');" 
+    href="file.html" target="_blank">
+  Move mouse over this text
+&lt;/a></code></pre>
+		</dd>  
+			
+		<dt>2) Embedded Javascript using the &lt;script> element</dt>
+		<dd>	
+			JavaScript code can be included in a web page by adding HTML <q>&lt;script> &lt;/script></q> tags, to enclose the script, and the opening tag must have a type attribute specifying the unique <a data-toggle="popover"  role="button" tabindex="0" title="MIME type" data-content="MIME (Multipart Internet Mail Extension) types describe content types – text/html for HTML, text/ css for style sheets, and text/javascript for JavaScript code.">MIME type</a> of <q>text/javascript</q> to identify the element’s contents as JavaScript.
+      
+<pre class="language-html"><code>
+&lt;script> 
+  // code goes here
+&lt;/script></code></pre>
+			</dd>  
+					
+			<dt>3) External Javascript (unobtrusive) using separate files</dt>        
+            <dd>The separation of structure (HTML), presentation (CSS), and behaviour (JavaScript), 
+			is recommended by the W3 Consortium (W3C), and industry best practices, to make site maintenance simpler and each HTML document cleaner and easier to validate.
+			Embedding an external JavaScript file in an HTML document requires a <q>src</q> attribute be added to the &lt;script> tag to specify the path to the script file; typically JavaScript files are given a <q>.js</q> file extension. 
+<pre class="language-html"><code>
+&lt;script src="relative/path/local.js">&lt;/script>
+&lt;!-- 
+  NOTE: this option cannot be combined with previous option 
+  when using src= attribute, there is NO CODE between 
+  the opening and closing &lt;script> tags
+--></code></pre> 
+			</dd>
+	</dl> 		
+	<hr>
+</section>
+
+
+<!-- 2.3. Adding behaviour with Javascript -->
+<section id="page22">
+	<h3>Adding behaviour with Javascript</h3>
+		<p><strong>Inline JavaScript code</strong> can be assigned to any HTML <mark>event</mark> attribute, such as <code>onload</code>, or enclosed within a <code>&lt;script></code> element in the document body section – <em class="w3-red">but is best avoided&nbsp;</em>. All JavaScript code is best located in an external file whose path is specified to an <code>src</code> attribute of the <code>&lt;script></code> tag</p>
+    
+		<p><strong>Unobtrusive JavaScript</strong> places all script code in an external file and specifies a function to the <code>DOMContentLoaded</code> event to set behaviours when the HTML document has loaded.</p>
+    
+		<p>The <code>window.onload</code> event can be used to set behaviours for older browsers when the entire page content has loaded. As there may be an undesirable initialization delay in waiting for the <code>window.load</code> event to be triggered modern web browsers have been made to recognize a <code>DOMContentLoaded</code> event that is triggered when just the HTML document and script have loaded – without waiting for external resources such as images.  </p>
+
+<figure>
+<pre class="language-js"><code>&lt;script>
+//display a message dialog box
+function loaded() {
+    window.alert("Window loeaded");
+}
+//write content in the panel AND display a message dialog box
+function init() {
+    document.getElementById("panel").innerHTML="Page Initialized";
+    window.alert("DOM loaded");
+}
+//call an appropriate function when an event occurs
+window.onload=loaded;
+document.addEventListener("DOMContentLoaded", init, false);
+&lt;/script></code></pre>		
+	<figcaption class="figure-caption">&nbsp;Add the above code to a minimal HTML5 document and test it.<br>What observations can you make?</figcaption>
+</figure>	
+
+  <p class="lead">Reminder: everything must be fully functional without Javascript.</p>
+
+  <p>In most cases, Javascript is used to smooth out interactions, move elements around a page, and modify HTML. If you can make everything work without Javascript, you will not only have built-in fallbacks, if Javascript fails, but you will have to write far less Javascript to accomplish the same smooth experience for your users.</p>
+
+  <div class="card  bg-dark text-white text-center">
+    <div class="card-body lead" title="developer.mozilla.org">Less code means better performance, and <br>better performance means a better user experience.</div>
+  </div>		 
+  
+	<hr>
+</section>
+
+
+<!-- 2.4. Accelerating Initialization -->
+<section id="page23">
+	<h3>Accelerating Initialization</h3>
+	<h5>Use unobtrusive Javascript</h5>	
+	
+<figure>		
+<pre class="language-js"><code>/* 
+the function
+define the thing you want to happen
+*/
+function theFunction() {
+	//statements go here
+}
+
+/*
+the variable
+get the element to work with
+*/
+var elem = document.getElementById("idname");
+
+/*
+the event listener
+set up something to listen for, then execute the function
+*/
+elem.addEventListener("click", theFunction, false);</code></pre>			
+	<figcaption class="figure-caption">Example of the contents of script.js</figcaption>
+</figure>	
+
+			<h5>Delay code processing</h5>	
+      <p>Linking your Javascript file at the bottom of the document will let you control the rendering of the page better and can avoid some nasty performance problems with the way browsers render and execute Javascript.</p>
+      
+<figure>		
+<pre class="language-js"><code>&lt;script src="js/script.js">&lt;/script>
+&lt;/body>
+&lt;/html></code></pre>			
+	<figcaption class="figure-caption">Include scripts at the bottom of the body element. (Also see attribute <code>defer</code> for external Javascript files.)</figcaption>
+</figure>	
+						   
+		<blockquote class="w3-green w3-center">By externally linking your CSS and Javascript files, you are allowing the browser to cache them in memory for each user. This improves the performance from the user's perspective by minimizing HTTP requests and downloading, hence speeding up the load time.</blockquote> 
+    
+    <p>To ensure that the Javascript processing is done as soon as the Document Object Model (DOM) is ready to be access, use the event listener:</p>
+<figure>		
+<pre class="language-js"><code>document.addEventListener( "DOMContentLoaded", initFunction, false )</code></pre>			
+	<figcaption class="figure-caption">Accelerating initialization</figcaption>
+</figure    
+	<hr>
+</section>
+
+
+<!-- 2.5. Input and Output -->
+<section id="page24">
+	<h3>Input and Output</h3>
+
+	<h5>Working with <code>document.write</code></h5>
+	<p>You can write directly to the document with the method <code>document.write</code>, although this is not a very good technique.</p>
+	
+<figure>		
+<pre class="language-js"><code>var myWindow = window.open("", "MsgWindow", "width=200, height=100");
+myWindow.document.write(
+       "&lt;p>This is 'MsgWindow'. 200px wide and 100px tall!&lt;/p>" 
+		+ something);</code></pre>			
+	<figcaption class="figure-caption">Using <code>document.write</code> method.</figcaption>
+</figure>
+
+<!--  MORE EXPLANATION HERE -->
+
+
+	<hr>
+	<h5>Working at the console</h5>	 
+  
+<figure>		
+<pre class="language-js"><code>// Use console.log() to help you debug your code
+var f = "4";
+console.log("a =" + a, b, c, d);
+console.log("The value of f is " + f);
+console.log(f.type);</code></pre>			
+	<figcaption class="figure-caption">Using <code>document.write</code> method.</figcaption>
+</figure>	
+					
+<figure class="figure" style="width:100%">	
+		<p data-height="265" data-theme-id="light" data-slug-hash="JXapzX" data-default-tab="js" data-user="ebajcar" data-embed-version="2" data-pen-title="JXapzX" class="codepen">See the Pen <a href="https://codepen.io/ebajcar/pen/JXapzX/">JXapzX</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>				
+		<figcaption class="figure-caption">Edit on codepen <a href="http://codepen.io/ebajcar/pen/JXapzX" target="_blank">Interrogate values with console</a></figcaption>
+</figure>	
+	
+  <footer class="blockquote-footer">Read further  
+		<svg class="bi bi-link-45deg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  <path d="M4.715 6.542L3.343 7.914a3 3 0 104.243 4.243l1.828-1.829A3 3 0 008.586 5.5L8 6.086a1.001 1.001 0 00-.154.199 2 2 0 01.861 3.337L6.88 11.45a2 2 0 11-2.83-2.83l.793-.792a4.018 4.018 0 01-.128-1.287z"/>
+		  <path d="M5.712 6.96l.167-.167a1.99 1.99 0 01.896-.518 1.99 1.99 0 01.518-.896l.167-.167A3.004 3.004 0 006 5.499c-.22.46-.316.963-.288 1.46z"/>
+		  <path d="M6.586 4.672A3 3 0 007.414 9.5l.775-.776a2 2 0 01-.896-3.346L9.12 3.55a2 2 0 012.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 00-4.243-4.243L6.586 4.672z"/>
+		  <path d="M10 9.5a2.99 2.99 0 00.288-1.46l-.167.167a1.99 1.99 0 01-.896.518 1.99 1.99 0 01-.518.896l-.167.167A3.004 3.004 0 0010 9.501z"/>
+		</svg> <cite title="explore the console object">	<a href="https://www.w3schools.com/jsref/obj_console.asp" target="_blank">Explore the Console Object; other methods available include clear(), error(), time(),&hellip;</a></cite>
+	</footer>	
+	
+	<hr>
+	
+	<h5>Working with dialogues</h5>
+  	<p>The browser object, <var>window</var>, has many useful methods and properties :<code>alert(), prompt(), confirm(), open(), close()</code>. ( See <a href="http://www.w3schools.com/jsref/obj_window.asp" target="_blank">The Window Object</a> )</p>
+    
+<figure>		
+<pre class="language-js"><code>// Use dialogues to interact with user                   
+prompt('What is your name? '); 
+confirm("You're programming in JavaScript!");
+confirm("Hello");
+alert("Hello");
+var something = prompt("Enter something");</code></pre>			
+	<figcaption class="figure-caption">Using dialogues to interact with user.</figcaption>
+</figure>	
+
+	<h5>Working with form elements</h5>
+	<p>You can also interact with user through <mark>form element</mark>. See Section <a href="#page100">10. Javascript forms</a>.</p>
+
+	<hr>
+</section>
+
+
+<!--  2.6. Basic Grammar -->
+<section id="page25">
+	<h3>Basic Grammar</h3>
+	<ul class="w3-ul">
+		<li>JavaScript follows the <a href="https://tc39.github.io/ecma262" target="_blank"> ECMA-262 standard</a>.</li>
+		<li>JavaScript is <strong>case-sensitive</strong> and uses the Unicode character set.</li>
+		<li>In JavaScript, <strong>instructions</strong> are called statements. Spaces, tabs and newline characters are called<strong> whitespace</strong>.</li> 
+		<li>Each JavaScript <strong>statement</strong> must be terminated by <strong>a semi-colon</strong>.</li>
+		<li><strong>Javascript code may also include helpful code comments.</strong> </li> 
+		<li>The parser ignores everything <strong>between /* and */ characters</strong>, and ignores everything <strong>between // characters and the end of a line</strong>.
+
+		</li>  
+	</ul>
+  <figure>
+<pre class="language-js"><code>&lt;script> 
+/* This is a multi-line comment that describes the script’s 
+purpose and provides information about the author and date. */ 
+	
+// This is a single-line comment that describes a block or line of code. 
+&lt;/script></code></pre>
+		<figcaption class="figure-caption">Comments</figcaption>
+	</figure>
+	<hr>
+</section>
+
+
+<!--  2.7. Debugging Javascript Code -->
+<section id="page26">>
+	<h3>Debugging Javascript Code</h3>
+	<ul class="w3-ul">
+		<li>Use the console to trace values of variables</li>
+		<li>Use the console.log() method to trace values of variables and to send messages to the console at critical places in the code</li>
+		<li>It takes practice to understand the code. Use comments to explain, in your own words, what the code does and why</li>
+		<li class="w3-hover-khaki">Use tools such as <a href="http://jshint.com/" target="_blank">jshint.com</a> to clean up Javascript code.</li>
+		<li>Review <a href="http://javascript.crockford.com/code.html" target="_blank">http://javascript.crockford.com/code.html</a></li>
+		<li>Here is a list of related suggestions covered in  <a href="https://www.evernote.com/shard/s687/sh/08e73a4c-06e0-4938-a3f4-e3e04108222d/138d63da448e70aed82a3ed545b3a95b" target="_blank">class</a></li>
+		<li>Compare <code>console.log</code> and <code>document.write</code>.</li>
+	</ul>   
+	<hr>
+</section>
+
+
+<!--  2.8. Unobtrusive Javascript -->
+<section id="page27">
+	<h3>Unobtrusive Javascript</h3>
+  
+  <p>Unobtrusive JavaScript is not a technique as such; unobtrusive JavaScript is not a matter of adding one makeUnobtrusive() function to your scripts in order to enter nirvana. Instead, it’s a way of thinking. To make sure that your scripts do not inconvenience anyone, you should make sure your scripts do not make any assumptions.</p>
+  
+  <dl>
+    <dt>Assumption: everybody’s browser supports JavaScript.</dt>
+    <dd><strong class="text-danger">Not true:</strong> In order to be unobtrusive to users, taking away the script should not preclude them from using your site, even though their interaction will be far less rich than that of users whose browser does support JavaScript.</dd>
+    <dt>Assumption: all browsers work the same.</dt> <dd><strong class="text-danger">Not true:</strong> In order to be unobtrusive to browsers, your script should steer clear of plain errors and compatibility problems, and take special devices such as speech browsers or mobile phones into account.</dd>
+    <dt>Assumption: everybody else will understand my code.</dt> <dd><strong class="text-danger">Not true:</strong> In order to be unobtrusive to fellow programmers, your script should consist of clear, clean code and feature a lot of comments to say what your code is (supposed to be) doing.</dd>
+  </ul>
+  
+  <footer class="blockquote-footer">Read further  <cite title="[ Unobtrusive JavaScript defined ]"><a href="https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript#Unobtrusive_JavaScript_defined" target="_blank">  <q>The principles of unobtrusive JavaScript</q> on W3C</a></cite></footer>
+  <hr>
+  <figure class="alert alert-warning lead" role="alert">
+	<ol>
+		<li><strong>delay processing by including it at the end of body</strong>, after all marked up content.</li>
+		<li><strong>accelerate processing to the event</strong> <code>DOMContentLoaded</code>, before the window is loaded and rendering.</li>
+		<li><strong>avoid control boxes</strong> (alert, prompt,...), they pause all processing until the user dismisses them.</li>
+    <li><strong>avoid event attributes</strong>, you are mixing languages; hard to maintain.</li>
+    <li>ultimately, <strong>move all Javascript to an external file(s)</strong>.</li> 
+	</ol>   
+  </figure>
+	<hr>
+</section>
+
+</article>
+
+
+<!-- 3. Javascript Variables --> 
+<article id="page30">
+	<h2>Javascript Variables</h2>
+	<div class="card  bg-dark text-white text-center">
+	  <p class="lead card-body" title="defined by [MDN]"> 
+		A variable is a named memory location for storing a value.<br>That way an unpredictable value can be accessed through <br>a predetermined name.</p>
+	</div>	
+	<hr>
+	
+<!-- 3.1. Identifiers and Constants -->
+<section id="page31">
+	<h3>Identifiers and Constants</h3>
+		<ul class="checked" style="margin-top:8px">  		
+			<li>Javascript variable is a symbolic name for a value. <a href="https://en.wikipedia.org/wiki/Variable_(computer_science)" target="_blank" title="See more on Wikipedia">W</a> </li> 
+			<li>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</li>
+			<li>A JavaScript identifier must start with a letter, underscore <kbd>_</kbd>, or dollar sign <kbd>$</kbd>; subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</li>
+			<li>Variable names and <mark>function</mark> names must avoid the JavaScript keywords, reserved words, and object names.</li>
+			<li>JavaScript variables are declared using the <code>var</code> keyword and can store any data type – boolean, number, string, function, or object</li>
+			<li>Unlike global variables declared in the main script body, local variables declared inside a function are only accessible from within that function</li>                        
+		</ul>
+	<hr>
+</section>	
+
+<!-- 3.2. Expressions -->
+<section id="page32">
+	<h3>Expressions</h3>
+	<p>Statement is a group of words, numbers, and operators that performs a specific task. It is made up of one or more expressions.</p>
+  
+		<ul>
+			<li>An expression is a combination of variables, operators, and values that represents a single result value.</li> 
+			<li>An expression is any valid unit of code that resolves to a value.</li>
+		</ul>  
+	<p><strong>Expression</strong>
+	 is any reference to a variable or value, or a set of variables and values combined with operators</p>	
+
+<figure>
+<pre class="language-js"><code>// get the current value stored in variable b, multiply that value by 2, 
+// then store the result back into another variable called a
+a = b * 2;</code></pre> 
+<figcaption class="figure-caption">Expressions. In the example statement,
+	<ul>
+		<li>characters a and b are called variables</li>
+		<li>2 is just a value itself, called a literal value</li>
+		<li>= and * characters are operators</li>
+		<li>a semicolon (;) ends the statement</li>
+	</ul> 
+	
+	<ul>	<li style="list-style:none;margin-left:-20px;">This statement has four expressions:</li>
+		<li><code>2</code> is a <strong>literal value expression</strong></li>
+		<li><code>b</code> is a <strong>variable expression</strong></li>
+		<li><code>b * 2</code> is an <strong>arithmetic expression</strong></li>
+		<li><code>a = b * 2</code> is an <strong>assignment expression</strong></li>
+	</ul></figcaption>
+
+</figure> 
+
+ 
+<figure>
+<pre class="language-js"><code>b * 2;</code></pre>
+		<figcaption class="figure-caption">Example of a general expression statement</figcaption>
+	</figure>
+	
+
+<figure>
+<pre class="language-js"><code>alert(a);</code></pre>
+		<figcaption class="figure-caption">Example of a function call expression statement</figcaption>
+	</figure>	
+  
+  <!--
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function
+-->
+
+		<p>The JavaScript syntax defines two types of values:</p>
+		<ul>
+			<li><strong>fixed values</strong> are called <code>literals</code></li>
+			<li><strong>variable values</strong> are called <code>variables</code></li>
+		</ul>
+
+     
+
+      
+	<hr>
+</section>	
+
+<!-- 3.3. Special values -->
+<section id="page33">
+	<h3>Special values</h3>
+		<table class="w3-table w3-bordered">
+			<tr><td class="w3-indigo" style="min-width:120px"><code class="w3-large w3-text-white">undefined</code></td>
+				<td>&mdash;variable with no value yet, parameter with no matching argument passed.</td></tr>
+			<tr><td class="w3-indigo w3-text-yellow"><code class="w3-large w3-text-white">null</code></td> 
+				<td>&mdash;not quite undefined, often the value of a "no result" DOM call, and a way to programmatically assign "no value" to something.</td></tr>
+			<tr><td class="w3-indigo"><code class="w3-large w3-text-white">false true</code></td>
+				<td>&mdash;boolean literals.</td></tr>
+			<tr><td class="w3-indigo"><code class="w3-large w3-text-white">Infinity</code></td>
+				<td>&mdash;Numeric infinity (can be signed, e.g., -Infinity)</td></tr>
+			<tr><td class="w3-indigo"><code class="w3-large w3-text-white">NaN</code></td>
+				<td>&mdash;Result of a Not-A-Number expression, such as a failed number parse. Not equal to any numeric, including itself.  Use isNan(n) for proper detection.</td></tr>						
+		</table>
+		<div class="w3-panel w3-pale-green w3-border w3-border-green">
+			<i class="fas fa-code"></i> Explore <code>data types</code> examples on w3schools:    
+			<a href="http://www.w3schools.com/jsref/default.asp" target="_blank"><img 
+				src="http://www.w3schools.com/favicon.ico" class="icon" height="14"
+				title="w3schools.com" alt="link to w3schools.com"></a>.
+		</div>	
+	<hr>
+</section>	
+
+<!-- 3.4. Declaring variables --> 
+<section id="page34">
+	<h3>Declaring variables</h3>
+		<p>Variables are declared three different ways: [from MDN]</p>
+		<table class="table">
+			<tr><td class="w3-indigo">With the keyword <code class="w3-large w3-text-white">var</code></td>
+				<td>This syntax can be used to declare both local and global variables.</td></tr>
+			<tr><td class="w3-indigo w3-text-yellow">By simply assigning it a value.</td> 
+				<td>This always declares a global variable. It generates a strict JavaScript warning. <strong>DO NOT USE!</strong></td></tr>
+			<tr><td class="w3-indigo">With the keyword <code class="w3-large w3-text-white">let</code>.</td>
+				<td>This syntax can be used to declare a block scope local variable. See Variable scope below.
+					<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">Read more on MDN</a>
+				</td></tr>
+		</table>
+		<p>Variables can be assigned values on-the-fly and at declaration. 
+			Values can be assigned to variables with an = (equal) sign &mdash; the assignment operator.</p>  
+
+  
+<figure style="border-left:3px solid teal;padding:3px;">  
+<pre class="language-js"><code>var foo;
+var x, y = 42, z, t = y * 2;
+foo = "Javascript";
+x = false;
+z = null;
+x = undefined;
+foo = 'Javascript';
+let lucky = 13;</code></pre>
+<figcaption>Assigning values to variables.</figcaption>
+</figure>  
+	<hr>
+</section>	
+
+<!-- 3.5. Variable scope -->	
+<section id="page35">
+	<h3>Variable scope</h3>
+		<p>Variables begin their life with a declaration. The remainder of their life within the application depends on where the variables are declared. They are accessible from anywhere in their containing scope (generally, the current function). JavaScript has two scopes: global and local.</p> 
+		<div class="w3-panel w3-pale-yellow w3-border w3-border-yellow">
+			<h6 class="w3-wide">Local variables</h6> must be declared using <code>var</code>.<p> You should strive not to use (leak) global variables.</p>
+			<p class="w3-large">A variable that is declared inside a function definition is local. It is created and destroyed every time the function is executed, and it cannot be accessed by any code outside the function </p> 
+		</div>				
+		<div class="w3-panel w3-pale-yellow w3-border w3-border-yellow">				
+			<h6>Global variables</h6> are declared three different ways:
+			<ol>
+				<li>Defining them with <q>var</q> outside a function.</li>
+				<li>Adding something directly to the window object.</li>
+				<li>Defining them anywhere without using <q>var</q>.</li>
+			</ol>
+			<p class="w3-large">A variable that is declared outside a function definition is a global variable, and its value is accessible and modifiable throughout your program. </p> 
+		</div>
+				<figure>
+				<figcaption>Variables begin their life with a declaration. The remainder of their life within the application depends on where the variables are declared. Open console to see values when you click on the divs. Note: functions called from the Div3 event handler functions DO NOT inherit and have no access to local variables.</figcaption>
+					<p data-height="265" data-theme-id="0" data-slug-hash="LyzNGG" data-default-tab="js" data-user="ebajcar" data-embed-version="2" data-pen-title="LyzNGG" class="codepen">See the Pen <a href="https://codepen.io/ebajcar/pen/LyzNGG/">LyzNGG</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+					<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>			
+				</figure>  
+	<hr>
+</section>	
+</article>
+
+
+<!-- 4. Javascript Programs --> 			
+<article id="page40">
+	<h2>Javascript Programs</h2>
+	<div class="card  bg-dark text-white text-center  w3-section">
+		 <div class="lead card-body">A JavaScript program is a list of programming statements. JavaScript statements are composed of values, operators, expressions, keywords, and comments.</div>
+	</div>
+	<hr>
+  
+<!-- 4.1. Simple Statements --> 	
+<section id="page41">
+	<h3>Simple Statements</h3>
+
+	<ul class="checked">
+		<li>A JavaScript program is a list of programming statements.</li>
+		<li>In HTML, JavaScript programs are executed by the web browser.</li>
+		<li>JavaScript statements are composed of: Values, Operators, Expressions, Keywords, and Comments.</li>
+		<li>The statements are executed, one by one, in the same order as they are written.</li>
+		<li>Semicolons separate JavaScript statements. Add a semicolon at the end of each executable statement</li>
+		<li>JavaScript ignores multiple spaces. You can add white space to your script to make it more readable.</li>
+		<li>A good practice is to put spaces around operators ( = + - * / )</li>
+		<li>For best readability, programmers often like to avoid code lines longer than 80 characters. If a JavaScript statement does not fit on one line, the best place to break it, is after an operator.</li>
+	</ul>
+	<hr>
+</section>
+
+<!-- 4.2. Code blocks and program flow -->
+<section id="page42">
+	<h3>Code blocks and program flow</h3>
+		<p>You need to provide users with certain website functions only under certain conditions. 	Without program flow, JavaScript programs would process from top to bottom in the order in which the code is written. Program flow can be conditional, iterative, or behavioural. Conditional program flow is used on evaluating state to make a decision as to which code should run.  Iterative flow processes lists and collections of information systematically and consistently.  Behavioural flow is defined as an event or callback in which specific logic is applied based on user engagement with the application or completion of another task. Exception handling is a special type of program flow to run specific logic in the case of an error in the program.</p>
+		<ol>
+			<li>implement program flow</li>
+			<li>raise and handle an event</li>
+			<li>implement exception handling</li>
+			<li>implement a callback</li>
+		</ol>	
+		<h5>JavaScript Code Blocks</h5>	
+		<p>JavaScript statements can be grouped together in code blocks, inside curly brackets {...}. The purpose of code blocks is to define statements to be executed together. One place you will find statements grouped together in blocks, is in JavaScript functions.</p>
+		<p>JavaScript statements often start with a keyword to identify the JavaScript action to be performed. JavaScript keywords are reserved words. Reserved words cannot be used as names for variables. <code>break, continue, debugger, do...while, fore, if...else, return, switch, try...catch, var</code>.</p>		
+		<h5>Flow Control Statements</h5> 
+       <ol>
+            <li>An <code>if</code> statement performs a conditional test and will only execute the statements it contains when the evaluation is true</li>
+            <li>An <code>else</code> statement can be added after an if statement to provide an alternative for when the evaluation is false</li>
+            <li>Multiple alternative branches can be provided after an if statement with subsequent else if statements</li>
+            <li>A <code>switch</code> statement is often preferable to an if statement when there are many conditions to test</li>
+            <li>Each <code>case</code> statement must be terminated by a break keyword</li>
+            <li>A default statement may be included at the end of a switch statement block to specify default statements to execute when no specified case values match the result of the evaluation </li>
+            <li>The <code>for</code> loop begins with an initializer, a test condition, and a modifier within parentheses after the for keyword</li>
+            <li>A loop modifier must change a value in the test condition so that the evaluation will become false and the loop will exit</li>
+            <li>When the required number of iterations is an unknown quantity a <code>while</code> loop is often preferable to a for loop</li>
+            <li>A <code>do while</code> loop can be used when the statements it contains absolutely must be executed at least once. <a data-toggle="popover"  role="button" tabindex="0" title="do while Structure" data-content="is also known as until &mdash; repeat something until some condition occurs.">do while</a> </li>
+            <li>The statement block of a while loop and a do while loop must contain a modifier to change a value in the test condition</li>
+            <li>A <code>break</code> statement immediately exits a loop</li>
+            <li>Optionally, a loop structure may be labelled to allow a break statement in a nested loop to exit both loops</li>
+            <li>A <code>continue</code> statement stops execution of a single iteration of a loop and flow resumes at the start of the next iteration</li>
+        </ol><!--q cite="McGrath, Mike (2013-06-24). JavaScript In Easy Steps (Kindle Locations 1941-1982). In Easy Steps. Kindle Edition.">Javascript In Easy Steps</q-->		
+	<br>
+	<hr>
+</section>
+
+<!-- 4.3. Control structures --> 
+<section id="page43">
+	<h3>Control structures</h3>
+	<h5>Loops (Iteration)</h5>
+
+		<ol>
+			<li><strong>for</strong> - loops through a block of code a number of times
+<pre class="language-js"><code>for ( initializer, condition, modifier ) { 
+  statements-to-be-executed 
+}</code></pre>				
+			</li>
+      
+			<li><strong>for&hellip;in</strong> - loops through the properties of an object</li>
+      
+			<li><strong>while</strong> - loops through a block of code while a specified condition is true
+<pre class="language-js"><code>initializer; 
+while( condition ) { 
+  statements-to-be-executed ; 
+  modifier ; 
+}</code></pre>			
+			</li>
+      
+			<li><strong>do&hellip;while</strong> - also loops through a block of code while a specified condition is true</li>
+      
+			<li>A <strong>break statement</strong> immediately exits a loop </li>
+      
+			<li>A <strong>continue statement</strong> stops execution of a single iteration</li>			
+		</ol>
+	<br>
+      <h5>Conditionals (Decisions)</h5>
+		<p>Conditional statements are used to perform different actions based on different conditions.</p>
+    
+		<ol>
+			<li>Use if to specify a block of code to be executed, if a specified condition is true</li>
+			<li>Use else to specify a block of code to be executed, if the same condition is false</li>
+			<li>Use else if to specify a new condition to test, if the first condition is false</li>
+			<li>Use switch to specify many alternative blocks of code to be executed</li>
+		</ol>	
+		
+		<p>The break statement is used to "jump out" of a switch() statement or a loop.  </p>
+		<p>The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.</p>	
+
+		<h5>Branching with if</h5>
+		<p>The syntax of an if statement demands that the condition to be tested is placed within parentheses after the if keyword and looks like this: </p> 
+			
+<pre class="language-js"><code>if ( condition ) 
+  execute-statement-when-condition-true;</code></pre>
+
+        <p>An if statement may also specify multiple statements to be executed when the result is true by enclosing those statements within braces, like this:</p> 
+			
+<pre class="language-js"><code>if ( condition ) { 
+  execute-statement-when-condition-true;
+  execute-statement-when-condition-true; 
+  execute-statement-when-condition-true; 
+}</code></pre>
+  
+            <h5>Switching alternatives with switch</h5>
+            <p>A switch statement evaluates a specified expression, then seeks a match for the resulting value. Where a match is found, the switch statement will execute one or more statements associated with that value, otherwise it will execute one or more statements specified as “default statements”. The switch statement begins by enclosing the expression to be evaluated within parentheses after the switch keyword. This is followed by a pair of { } braces that contain the possible matches. Each match value follows a case keyword and employs a colon : character to associate one or more statements to be executed. Importantly, each case must end with a break statement to exit the switch statement after its associated statements have executed.</p> 
+            
+<pre class="language-js"><code>
+switch ( expression ) { 
+    case value-1 : statements-to-be-executed-when-matched ; break ; 
+    case value-2 : statements-to-be-executed-when-matched ; break ;
+    case value-3 : statements-to-be-executed-when-matched ; break ; 
+    default : statements-to-be-executed-when-no-match-found ; 
+}</code></pre> 
+		<p>The switch statement is used to perform different actions based on different conditions.</p>	
+		<figure>
+      <p class="codepen" data-height="392" data-theme-id="light" data-default-tab="js,result" data-user="ebajcar" data-slug-hash="ZKRNGG" style="height: 392px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="ZKRNGG">
+        <span>See the Pen <a href="https://codepen.io/ebajcar/pen/ZKRNGG">
+        ZKRNGG</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>   
+			<figcaption>Using switch statement and manipulating table cells. Keep clicking the reset game button to cycle through the states.</figcaption>
+		</figure>	
+	<hr>
+</section>
+
+</article>
+
+
+<!-- 5. Javascript Operators --> 
+<article id="page50">
+	<h2>Javascript Operators</h2>
+	<div class="card  bg-dark text-white text-center">
+		 <div class="lead card-body" title="defined by [MDN]">Operators are special symbols that represent computations <br>like addition and multiplication.<br>The values the operator uses are called operands.</div>
+	</div>
+  <hr>	
+	
+<!-- 5.1. Assignment -->
+<section id="page51">
+	<h3>Assignment</h3>
+		<p>The basic <code>=</code> assignment operator should not be confused with the <code>===</code> equality operator, which compares two operands.</p>
+    
+<pre class="language-js"><code>var x = 7;  // assigns the value 7 to variable called x
+
+if ( x == "7" ) { 
+  // the value of x will be compared with the value 7 (regardless of data type
+}
+
+if ( x === "7" ) { 
+  // the value of x will be compared with the value 7 AND data types are compared
+}</code></pre>	    
+	<hr>
+</section>	
+
+<!-- 5.2. Expressions and operators -->
+<section id="page52">
+	<h3>Expressions and operators</h3>
+  
+  
+<figure>  
+<pre class="language-js"><code>// Number addition and subtraction
+console.log(2 + 3 - 1);
+// expected output: 4
+
+// Number multiplication and division
+console.log(4 * 3 / 2); // 12 / 2
+// expected output: 6
+
+// Number remainder and exponential
+console.log(11 % 3 ** 2); // 11 % 9
+// expected output: 2
+</code></pre>
+<figcaption>Examples of operators</figcaption>
+</figure>
+      
+  <footer class="blockquote-footer">Read further  
+		 <cite title="expressions and operators">	<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators" target="_blank">about expressions and operators at MDN</a></cite>
+	</footer>	     
+      
+
+	<hr>
+</section>
+
+
+<!-- 5.2. Arithmetic, conditional -->
+<section id="page53">
+	<h3>Arithmetic and Conditionals</h3>
+<pre class="language-js"><code>var sum = 25 + 37;   // addition
+var diff = 25 - 37;  // subtraction
+var multi = 25 * 37; // multiplication
+var div = 25 / 37;   // division
+var mod = 25 % 5;    // modulus
+var incr = x++;      // increment
+var decr = x--;      // decrement</code></pre>		
+				
+		<p>When the <code>++</code> increment or <code>––</code> decrement operator prefixes the operand its value is changed immediately, but when they appear after the operand the expression is evaluated first</p>
+
+
+		<h4>Arithmetic Shorthand</h4> 
+<pre class="language-js"><code>x += y;
+// same as
+x = x + y;</code></pre>				
+		<p>Combined assignment operators <code>+=</code>, <code>–=</code>, <code>*=</code>, <code>/=</code>, and <code>%=</code>, each perform an arithmetic operation then assign its result.</p>
+    
+<pre class="language-js"><code>// The += operator is useful to append to an existing string.
+var str = "The quick brown fox jumps ";
+str += "over the lazy dog.";</code></pre>		
+	<br>
+		<h4>Comparison operators</h4>	
+		<p>Two operands can be compared for <code>===</code> equality, <code>!==</code> inequality, <code>></code> greater-than value, or <code>&lt;</code> less-than value</p>
+    
+<pre class="language-js"><code>var y = "3"; 
+var x = 3; 
+y == x      // returns true
+y === x     // returns false</code></pre>
+		<p>The <code>&lt;=</code> and <code>>=</code> combined comparison operators also return true when both operands are equal</p>
+		<p>Expressions being evaluated for a true or false value need not include <code>===</code> true as that assessment is made automatically</p>
+
+		<h4>Boolean Logic operators</h4>
+		<p>The logical <code>&&</code> AND operator evaluates two operands and returns true when both operands are true, but the logical <code>||</code> OR operator returns true when either operand is true. The logical <code>!</code> NOT operator can prefix a single operand to return its inverse value</p> 	
+
+		<h4>Conditional (ternary) operator</h4> 
+		<p>Conditional operator <code>?:</code> evaluates a condition for a true or false value then executes one of two specified statements according to the result</p>
+    
+<pre class="language-js"><code>// condition ? value1 : value2;
+var status = (age >= 18) ? 'adult' : 'minor';</code></pre>		
+</section>	
+
+<!-- 5.3. Concatenation and addition -->
+<section id="page54">
+	<h3>Concatenation and addition</h3>
+		<p>In Javascript, you can add strings and numbers together. If you are doing math, the values must be numbers and not strings. The only actions you can do with strings is combine (concatenate) and compare. You can add, subtract, multiply, divide, and combine (concatenate) numbers. </p>
+    
+<pre class="language-js"><code>// save my name to a variable using the = operator
+var myName = "Ellen";
+// add a variable to a string
+console.log( "My name is " + myName );
+// add numbers together
+console.log( 100 + 50 );
+// concatenate strings together
+console.log( "100" + "50" );</code></pre>		
+	<br>
+	<hr>
+</section>	
+
+<!-- 5.4. Priority (precedence) -->
+<section id="page55">
+	<h3>Priority (precedence)</h3>
+		<ul>
+			<li>Operator precedence can be set by enclosing an expression within parentheses to override the default operator priority</li>
+			<li>Where a statement contains nested expressions within parentheses the innermost expression gets evaluated first</li>
+			<li>Operator priorities are mostly like Java and C languages. For example, multiply, divide, modulus have priority over add and subtract; boolean <code>and</code> has priority over boolean <code>or</code>.</li> 
+			<li class="text-success">Brackets force priority.</li>
+		</ul>
+    
+<pre class="language-js"><code>var x = 100 + 50 * 3; // results in x having value 250
+var x = (100 + 50) * 3; // results in x having value 450</code></pre>	
+
+<footer class="blockquote-footer">Read further  <cite title="[about operators on MDN]"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Operators" target="_blank"> about operators on MDN</a></footer>
+
+
+		
+</section>	
+	
+</article>
+
+</article>
+
+
+<!-- 6. Javascript Data Structures -->
+<article id="page60">
+	<h2>Javascript Data Structures</h2>
+	<div class="card  bg-dark text-white text-center">
+		<div class="lead card-body"> A data structure is an aggregate of other data items.<br>The data items that it contains are its components, which may be<br> elementary data items or another data structure.</div>
+	</div>		
+	<hr>
+
+<!-- 6.1. Object-oriented vs. object-based -->
+<section id="page61">
+	<h3>Object-oriented vs. object-based</h3>
+		<p>Like in physical world, an <mark class="w3-label">object</mark> is a thing that we can identify and give it a name, to Javascript. there are objects within web browsers, such as window, form, button, checkbox, and so on. Since you can have more than one window, (more than one form,...), we give the objects their own unique names.</p>
+		<p>Objects have <mark class="w3-label">properties</mark>. A document has a title. A form has a checkbox. Changing a property of an object modifies the object. The same property name can be a part of different objects. Javascript object also have <mark class="w3-label">methods</mark>. Buttons click, windows open, text is selected. To differentiate properties and methods, methods are follows with parentheses. click(), open(), selected(). You put together objects, properties,and methods to get a better description of an object, or to describe a process. Use the <mark class="w3-label">dot syntax</mark>.</p>
+	<hr>
+</section>
+
+<section id="page62">
+	<h3>Data and common structures</h3>
+	<ul class="w3-ul">
+		<li><strong>record</strong> a collection of data items or fields that all bear some relationship to one another. For example, a student record may contain the student's number, name, address and enrolled subjects</li>
+		<li><strong>file</strong> a collection of records. For example, a student file may contain a collection of the above student records.</li>
+		<li><strong>array</strong> a data structure, which is made up of a number of variables or data items that all have the same data typeand are accessed by the same name.</li>
+		<li><strong>string</strong> a collection of characters. For example, the string "Hello World" may represent a greeting.</li>
+	</ul>	
+	<hr>
+</section>
+
+
+<!-- 6.2. Basic Data Types -->	
+<section id="page63">
+  <h3>Basic Data Types</h3>
+  <p>There are eight basic data types in JavaScript.</p> 
+  <ol>
+    <li><strong>number</strong> for numbers of any kind: integer or floating-point, integers are limited by ±2<sup>53</sup>.</li>
+    <li><strong>bigint</strong> is for integer numbers of arbitrary length.</li>
+    <li><strong>string</strong> for strings. A string may have zero or more characters, there’s no separate single-character type.</li>
+    <li><strong>boolean</strong> for true/false.</li>
+    <li><strong>null</strong> for unknown values – a standalone type that has a single value null.</li>
+    <li><strong>undefined</strong> for unassigned values – a standalone type that has a single value undefined.</li>
+    <li><strong>object</strong> for more complex data structures.</li>
+    <li><strong>symbol</strong> for unique identifiers.</li>
+  </ol>
+  </section>
+<section id="page64">
+	<h3>Primitive Types</h3>
+	<p class="eeb-border-quote" title="https://developer.mozilla.org/en-US/docs/Glossary/Primitive">A primitive (primitive value, primitive data type) is data that is not an object and has no methods. There are 6 primitive data types: string, number, bigint, boolean, undefined, and symbol.</p> 
+		<ol>
+			<li><strong>String</strong> A JavaScript string stores a series of characters like "John Doe". A string can be any text inside double or single quotes.
+<pre class="language-js"><code>
+var x = "Hello World";	// string</code></pre>					
+			</li>
+			<li><strong>Number</strong> JavaScript has only one type of number. Numbers can be written with or without decimals.
+<pre class="language-js"><code>
+var x = 3.14159;  // number</code></pre>					
+			</li>
+
+			<li><strong>Boolean</strong> A JavaScript Boolean represents one of two values: true or false.
+<pre class="language-js"><code>
+var flag = true;  //boolean</code></pre>					
+			</li>
+      
+			<li><strong>null</strong>  a special value which represents “nothing”, “empty” or “value unknown”..
+<pre class="language-js"><code>
+var flag = null;  // null</code></pre>				
+			</li>       
+			<li><strong>undefined</strong>  special value,a type of its own, just like null. The meaning of undefined is “value is not assigned”. If a variable is declared, but not assigned, then its value is undefined.
+<pre class="language-js"><code>
+var firstName;  // undefined</code></pre>					
+	
+			</li>      
+		</ol>	
+ 
+	<hr>
+  </section>
+  
+<section id="page65">  
+  	<h3>Strings</h3>
+	<p class="eeb-border-quote" title="https://developer.mozilla.org/en-US/docs/Glossary/string">In any computer programming language, a string is a sequence of characters used to represent text. In JavaScript, a String is one of the primitive values and the String object is a wrapper around a String primitive.</p>
+  
+  <h5>Quotes</h5>
+	<p> JavaScript makes no distinction between single-quoted strings and double-quoted strings.  There are three (3) types of quotes. </p>
+  <ol>
+    <li>Double quotes: <samp>"Hello"</samp>.</li>
+    <li>Single quotes: <samp>'Hello'</samp>.</li>
+    <li>Back quotes: <samp>`Hello`</samp>.</li> 
+  </ol>
+  <p>Back quotes extend functionality to quotes and allow us to embed variables and expressions into a string by wrapping them in <code>${…}</code></p>
+  
+  <pre class="language-js"><code>
+  let favColor = "blue";
+  console.log(`My favourite color is ${favColor}.1`);
+  </code></pre>
+  	
+  <h5>Creating strings</h5>
+  <pre class="language-js"><code>
+  const string1 = "This is my primitive string";
+  const string2 = new String("My String object");
+  </code></pre>
+
+	<h5 title="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Character access</h5>
+
+  <pre class="language-js"><code>
+  // returns "e"
+  return  'hello world'.charAt(1);
+  </code></pre> 
+  
+	<h5 title="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Distinction between string primitives and String objects</h5>
+  
+	<p>Note that JavaScript distinguishes between String objects and primitive string values. (The same is true of Boolean and Numbers.) String primitives and string objects can be used interchangeably in most situations</p>
+	
+	<p>JavaScript automatically converts primitives to String objects, so that it's possible to use String object methods for primitive strings. In contexts where a method is to be invoked on a primitive string or a property lookup occurs, JavaScript will automatically wrap the string primitive and call the method or perform the property lookup.</p>
+	<hr>    
+</section>
+
+</article>
+
+
+<!-- 7. Javascript objects -->
+<article id="page70">
+	<h2>Javascript Objects</h2>
+  <div class="card  bg-dark text-white text-center">
+    <div class="w3-xlarge w3-text-orange card-body" title=" "> 
+    An object is a self-contained entity comprising properties that store data and methods that perform tasks. A JavaScript object is a collection of named values.</div>
+  </div>	<br>
+        
+<div>        
+	<h5>In Javascript, most important data type is the <strong class="w3-text-red">object</strong>.</h5>
+    <ul  class="w3-ul"> 
+        <li>An object is a collection of <kbd>name:value</kbd> pairs, often referred to as a <kbd>key/value pair</kbd>.</li>
+        <li>An object is enclosed in curly braces.
+<pre class="language-js"><code>
+var person = {
+	first: "Joe",
+	last: "Smith",
+	age: 21,
+	gender: "male"
+};</code></pre>					
+		</li>
+        <li>Everything in Javascript is an object, even <strong>functions</strong>.</li>
+        <li>You can create custom objects <strong>dynamically</strong> or by using <strong>prototypes</strong>. Prototypes provide for object definition reuse, whereas dynamic objects require attributes and methods defined for each use.</li>
+        <li><strong>Inheritance</strong> is achieved through the extension of prototypes.</li>
+        <li>Some <strong>native objects</strong> are available statically which means you don't need to create an instance of them. An example of a static object is Math.</li>
+        <li>In JavaScript, all values, except <span class="w3-label" title="primitive values">primitive values</span>, are objects.</li> 
+		<li>Primitive values are: strings (<code>"John Doe"</code>), numbers (<code>3.14</code>), <code>true</code>, <code>false</code>, <code>null</code>, and <code>undefined</code>.</li> <li>JavaScript has object versions of the primitive data types <code>String</code>, <code>Number</code>, and <code>Boolean</code>.</li> <li class="w3-red"><strong>Avoid</strong> String, Number, and Boolean objects. They complicate your code and slow down execution speed.</li> 
+    </ul>
+    
+ <footer class="blockquote-footer">Read further  <cite title="[ http://www.w3schools.com/js/js_object_definition.asp ]"><a href="http://www.w3schools.com/js/js_object_definition.asp" target="_blank"> JS object definition (w3schools)</a></cite></footer>    
+    <hr>
+    
+    <h5>Encapsulation in Javascript</h5>
+    <p><q>Encapsulation includes the idea that the data of an object should not be directly exposed.  Instead, callers that want to achieve a given result are coaxed into proper usage by invoking methods (rather than accessing the data directly) ...our responsibility and to create maintainable and flexible code.</q></p>
+
+<figure>    
+<pre class="language-js"><code>var person = {
+  fullName : "Jason Shapiro",
+};
+ 
+alert(person.fullName); // Jason Shapiro
+person.fullName = "Jim White";
+alert(person.fullName); // Jim White
+person.fullName = 42;
+alert(person.fullName); // 42</code></pre>
+<figcaption>Without encapsulation</figcaption>
+</figure>
+		<footer class="blockquote-footer">Read further  <cite title="[ https://www.intertech.com/Blog/encapsulation-in-javascript/ ]"><a href="https://www.intertech.com/Blog/encapsulation-in-javascript/" target="_blank"> Encapsulation in JavaScript by Jason Shapiro</a></cite></footer>    
+    <hr>
+    
+    <h5>Object Categories</h5>
+    <p>JavaScript has three categories of object:</p>	
+	<ol> 
+    <li>Built-in objects</li>
+    <li>Custom objects</li>
+		<li>DOM objects</li>
+    </ol>		    	
+	<hr>
+</div>
+
+
+<!-- 7.1. Built-in types -->
+<section id="page71">
+	<h3>Built-in types</h3>
+<div>
+			<h4>Date</h4> 
+      <p>The Date object lets you work with dates (years, months, days, hours, minutes, seconds, and milliseconds)</p>
+      
+<figure>      
+<pre class="language-js"><code>new Date()
+new Date(value)
+new Date(dateString)
+new Date(year, monthIndex, day)
+new Date(year, monthIndex, day, hours)
+new Date(year, monthIndex, day, hours, minutes)
+new Date(year, monthIndex, day, hours, minutes, seconds)
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+</code></pre>	
+  <figcaption><strong>Date object syntax</strong>. Read more 
+    <a href="https://www.w3schools.com/jsref/jsref_obj_date.asp">ECMA-262 Spec</a>
+  </figcaption>
+</figure>
+
+<figure>
+<pre class="language-js"><code>// creates a new date object with the current date and time
+var d = new Date();
+// 7 numbers specify year, month, day, hour, minute, second, 
+// and millisecond (in that order)
+var d = new Date(2018, 11, 24, 10, 33, 30, 0);
+// 3 numbers specify year, month, and day
+var d = new Date(2018, 11, 24);</code></pre>					
+  <figcaption><strong>Date object examples</strong>. More examples  
+    <a href="">w3schools</a>
+  </figcaption>
+</figure>
+		
+
+    
+			<h4>Math</h4> 
+      <p>The Math object allows you to perform mathematical tasks. Math is not a constructor. All properties/methods of Math can be called by using Math as an object, without creating it.</p>  
+
+<figure>      
+<pre class="language-js"><code>// Returns PI 𝝅 𝜋 π
+var x = Math.PI;
+// Returns the square root of 16            
+var y = Math.sqrt(16);      		
+//Return a random number between 1 and 10:
+Math.floor((Math.random() * 10) + 1);
+// Round a number downward to its nearest integer:
+Math.floor(1.6)
+// Round a number upward to its nearest integer
+Math.ceil(1.4)
+// Return the number with the lowest value
+Math.min(5, 10)
+// Return the number with the highest value
+Math.max(5, 10)
+// Round a number to the nearest integer
+Math.round(49.4999)
+Math.round(49.5)
+// Return the value of the number 4 to the power of 3 (4*4*4)
+Math.pow(4, 3)
+</code></pre>
+  <figcaption><strong>Math object</strong>.  More on   
+    <a href="https://www.w3schools.com/jsref/jsref_obj_math.asp">w3schools</a>
+  </figcaption>
+</figure>      
+			
+      
+			<h4>RegExp</h4> 
+      <p>A regular expression is an object that describes a pattern of characters. Regular expressions are used to perform pattern-matching and "search-and-replace" functions on text. </p>
+
+<figure>       
+<pre class="language-js"><code>// Use a regular expression to do a case-insensitive search 
+// for "w3schools" in a string
+var str = "The quick brown fox jumps over the lazy dog.";
+var n = str.search(/lazy/i);  // returns 35
+// Use a case insensitive regular expression to replace 
+// Microsoft with W3Schools in a string:
+var res = str.replace(/brown/i, "orange");</code></pre>						
+  <figcaption><strong>RegExp object</strong>. <small class="text-default"> (explored in depth with Javascript forms)</small> 
+  </figcaption>
+</figure>			
+      
+      
+      
+			<h4>Function</h4> 
+      <p>A JavaScript function is a block of code designed to perform a particular task. A JavaScript function is executed when "something" invokes it (calls it).</p>
+
+<figure>       
+<pre class="language-js"><code>// Function is called, return value will end up in x				
+var x = myFunction(4, 3);   
+ 
+// Function returns the product of a and b
+function myFunction(a, b) {
+    return a * b;            
+}</code></pre>	
+  <figcaption><strong>Function object</strong>. <small class="text-default"> (explored in depth in next unit.)</small> 
+  </figcaption>
+</figure>			
+			
+      
+			<h4>Object</h4> 
+      <p>A JavaScript object is a container for named values. The values are written as name:value pairs (name and value separated by a colon).</p> 
+
+<figure>       
+<pre class="language-js"><code>// object person
+var person = {
+  firstName:"John", 
+  lastName:"Doe"
+};	</code></pre>	
+  <figcaption><strong>Javascript Object</strong>. <small class="text-primary"> (see custom objects)</small> 
+  </figcaption>
+</figure>
+				
+ </div>
+
+	<hr>
+<div>
+	<h4>Array</h4>
+	  <ul class="w3-ul">
+ 			<li><strong>Array</strong> JavaScript arrays are used to store multiple values in a single variable.
+<pre class="brush: js; highlight: [0]; first-line: 3" title="">
+var cars = ["Saab", "Volvo", "BMW"];  // array</pre>					
+			</li>   
+    
+    
+		<li>An array is a JavaScript built-in object that can store multiple items of data in individual elements</li>
+		<li>The new keyword and the Array() constructor can be used to create an array instance for assignment to a named variable</li>
+		<li>Array elements are automatically numbered from zero and each array element can be referenced by stating its index number within square brackets after the array variable name</li>
+		<li>Loops are a great way to populate the elements of an array or to read each element’s value on successive iterations</li>
+		<li>Arrays have a length property that can be used to terminate a loop or to resize the array</li>
+		<li>By default, the sort() method of an array object converts all element values to strings, then sorts them in dictionary order, unless a comparison function is specified as its argument</li>
+		<li>Exception errors can be thrown from a try block to a catch block for error-handling and their name and message properties can describe the nature of the error</li>
+		<li>Arrays are numerically indexed lists of values, delimited with <code>[</code> and <code>]</code>
+<pre class="brush: js; highlight: [0]; first-line: 1" title="Code Snippet 3.02">
+var primes = [ 2,3,5,7,11 ];	// an array of prime numbers.
+primes[0]			// access the first element of the array
+primes.length			// length property; how many elements in the array
+primes[primes.length-1]	// references the last element in the array
+primes[5] = 24;		// add a new element by assignment
+primes[3] = 27	;		// alter an existing element by assignment			
+var empty = [];			// declare an empty array with no elements
+
+var newarr = primes.concat([7,8,9]);	// add new members to an array</pre>
+
+<!--
+var primes = [ 2,3,5,7,11 ];  // an array of prime numbers.
+console.log(primes);
+primes[0]          // access the first element of the array
+console.log(primes[0]);
+primes.length           // length property; how many elements in the array
+console.log(primes.length);
+primes[primes.length-1]  // references the last element in the array
+console.log(primes);
+primes[5] = 24;      // add a new element by assignment
+console.log(primes);
+primes[3] = 27 ;       // alter an existing element by assignment  
+console.log(primes);
+var empty = [];         // declare an empty array with no elements
+ console.log(empty);
+newarr = primes.concat([7,8,9]);   // add new members to an array
+console.log(newarr);
+--></li>  
+		<li>Arrays and objects can hold other arrays and objects
+<pre class="brush: js; highlight: [0]; first-line: 1" title="Code Snippet 3.03">
+// an array with two elements. Each element is an object
+var points = [
+	{ x : 0, y : 0 },
+	{ x : 3, y : 7 }
+];
+
+// An object with two properties. Value of each property is an array. 
+// The elements of the arrays are arrays.
+var data = [
+	trial1 : [ [ 1, 3 ], [ 3, 4 ] ],
+	trial2 : [ [ 4, 5 ], [ 7, 8 ] ]
+];</pre></li>                            
+    </ul> 	
+ 
+	<hr>
+	<h5>Array properties and methods</h5>
+	  <p>Explore methods at <a href="https://www.w3schools.com/js/js_array_methods.asp">https://www.w3schools.com/js/js_array_methods.asp</a>)</p>
+	  <ul class="col3">
+		<li><code>toString()</code> method</li>
+		<li><code>join()</code> method</li>
+		<li><code>push()</code> method</li>
+		<li><code>pop()</code> method</li>
+		<li><code>shift()</code> method</li>
+		<li><code>unshift()</code> method</li>
+		<li><code>splice()</code> method</li>
+		<li><code>concat())</code> method</li>
+		<li><code>slice()</code> method</li>
+		<li><code>length</code> property</li>
+		<li><code>delete</code> operator</li>
+	</ul>
+	<p>Explore more methods&hellip;</p>
+	<ul class="col3">
+		<li><code>sort()</code> method (<a href="https://www.w3schools.com/js/js_array_sort.asp">w3school</a>)</li>
+		<li><code>reverse()</code> method (<a href="https://www.w3schools.com/js/js_array_sort.asp">w3school</a>)</li>
+		<li title=""><code>forEach()</code> method (<a href="https://www.w3schools.com/jsref/jsref_forEach.asp">w3school</a>)</li>
+	</ul>
+
+	<iframe style="width:100%;min-height:460px;border:none;padding-bottom:0;margin-bottom:0" src="https://interactive-examples.mdn.mozilla.net/pages/js/array-foreach.html"></iframe>	
+	<hr>
+  </div>
+</section>
+
+
+<!-- 7.2. Custom objects -->
+<section id="page72">
+	<h3>Custom objects</h3>
+    <p>Understanding how to create and use custom objects makes it easy to understand built-in objects and DOM objects later. The custom object is defined by a prototype function that is a template specifying an object name, in accordance with the usual naming conventions, and properties and methods. The syntax of an object definition looks like this:</p>
+<pre class="language-js"><code>function object-name ( parameter1 , parameter2 , parameter3 ) { 
+    this.property1 = parameter1 ; 
+    this.property2 = parameter2 ; 
+    this.property3 = parameter3 ; 
+    this.method1 = function-name1 ; 
+    this.method2 = function-name2 ; 
+}</code></pre> 
+    <p>The this keyword, which is used to define the properties and methods in the object definition, means “belonging to this object”. </p>
+    <p>The object definition assigns the names of external functions to be its methods but its properties are initialized by values passed as arguments when an “instance” of the object is created (instantiated), using the new keyword. Each property or method can then be referenced by “dot syntax” – prefixing  </p>                 
+	<ol>
+	  <li>A custom object is defined by a prototype function that specifies the object name, properties, and methods</li>
+	  <li>Properties can be initialized by parameters passed when an instance of the custom is created using the new keyword</li>
+	  <li>Custom objects can be extended using their intrinsic prototype property to add properties or methods</li>
+	  <li>Instances of a custom object inherit all properties and methods of the prototype, including extended ones</li>
+	  <li>Examples:
+<pre class="language-js"><code>var book = {
+	author: "Joe Smith",
+	title: "All About Javascript",
+	hardcover: false,
+	pubYear: 2014
+};
+book.title		// access a property value
+book[ "title" ]		// alternate way of accessing a property value
+book.topic = "web programming";	// create new property by assignment
+book.contents = {};	// {} creates an empty object with no properties.</code></pre>	
+		</li>
+    </ol>	
+	<hr>
+</section>	
+
+
+<!-- 7.3. DOM objects -->
+<section id="page73">
+	<h3>DOM objects</h3>
+  <div>
+	<div class="card  bg-dark text-white text-center">
+		<div class="lead card-body">Document Object Model (DOM) is one of the most common and important aspects of Javascript. You use it every time you modify a page, insert data, and modify an interface.</div>
+	</div>	<!-- cite="https://csskarma.com/resume/" -->	
+	<hr>	
+				
+	<p>DOM is a mapping layout model for all HTML and a way for Javascript to get in there and do stuff. <span>Tim Wright</span> calls it <em>developer's best friend</em> (after you master it). DOM is not HTML and not Javascript! DOM is</p> 
+	<ul class="dialog-ol">	
+		<li>the combinations of the elements you use <mark>(objects)</mark>, </li>
+		<li>the order you choose to display them <mark>(model)</mark>, and</li>
+		<li> the endless offerings of access points to add, delete, and modify any part of the overall structure <mark>(document)</mark> while navigating around with the various methods Javascript provides. </li>
+	</ul> 				
+ 
+	<blockquote class="blockquote eeb-border-quote">
+		<p class="mb-0">The DOM (Document Object Model) is an API that represents and interacts with any HTML or XML document. The DOM is a document model loaded in the browser and representing the document as a node tree, where each node represents part of the document (e.g. an element, text string, or comment). 	<br>The DOM is one of the most-used APIs on the Web because it allows code running in a browser to access and interact with every node in the document. Nodes can be created, moved and changed. Event listeners can be added to nodes and triggered on occurrence of a given event. DOM was not originally specified—it came about when browsers began implementing JavaScript. This legacy DOM is sometimes called DOM 0. Today, the WHATWG maintains the DOM Living Standard.</p>
+		<footer class="blockquote-footer">Read further  <cite title="[ developer.mozilla.org/en-US/docs/Glossary/DOM ]"><a href="https://developer.mozilla.org/en-US/docs/Glossary/DOM" target="_blank"> developer.mozilla.org/en-US/docs/Glossary/DOM</a></cite></footer>
+	</blockquote>
+
+
+	<h5>Visual representation of DOM</h5>
+  <figure class="row">
+<pre class="language-html col-5"><code>&lt;html>
+  &lt;head>
+	&lt;meta charset="utf-8">
+	&lt;title>DOM&lt;/title>	
+  &lt;/head>
+  &lt;body>
+
+  &lt;/body>
+&lt;/html></code></pre>	
+	
+<img class="col-7" src="https://docs.google.com/drawings/d/e/2PACX-1vQPDoQTKS83x8csQVwz9P-qhDtqWRxMiE7LyAXo7_JBPGkQ1158lQkId7tX76Vld-_7bAlnEUpk7vkc/pub?w=480&amp;h=360"  style="width:49%;cursor:zoom-in" onclick="document.getElementById('dom0').style.display='block'" alt="...">	
+		<figcaption>Visual representation of minimal HTML5 document.</figcaption>
+  </figure>
+  
+  <footer class="blockquote-footer">Try the  <cite title="[ software.hixie.ch/utilities/js/live-dom-viewer/? ]"><a href="https://software.hixie.ch/utilities/js/live-dom-viewer/?" target="_blank"> Live DOM viewer</a></cite></footer>    
+
+  <hr>    
+	</div>
+
+<!-- DOM terminology -->
+<div>
+	<h5>DOM terminology </h5>
+				<ul class="w3-ul">
+					<li>A <mark>tree</mark> is a finite hierarchical tree structure. In <mark>tree order</mark> is preorder, depth-first traversal of a tree.</li>
+					<li>An object that participates in a tree has a <mark> parent</mark>, which is either another object or null, and an ordered list of zero or more <mark>child</mark> objects. An object A whose parent is object B is a child of B.</li>
+					<li>The <mark>root</mark> of an object is itself, if its parent is null, or else it is the root of its parent.</li>
+					<li>An object A is called a <mark>descendant</mark> of an object B, if either A is a child of B or A is a child of an object C that is a descendant of B.</li>
+					<li>An <mark>inclusive descendant</mark> is an object or one of its descendants.</li>
+					<li>An object A is called an <mark>ancestor</mark> of an object B if and only if B is a descendant of A.</li>
+					<li>An inclusive ancestor is an object or one of its ancestors.</li>
+					<li>An object A is called a <mark>sibling</mark> of an object B, if and only if B and A share the same non-null parent.</li>
+					<li>An object A is preceding an object B if A and B are in the same tree and A comes before B in tree order.</li>
+					<li>An object A is following an object B if A and B are in the same tree and A comes after B in tree order.</li>
+					<li>The <mark>first child</mark> of an object is its first child or null if it has no children.</li>
+					<li>The <mark>last child</mark> of an object is its last child or null if it has no children.</li>
+					<li>The <mark>previous sibling</mark> of an object is its first preceding sibling or null if it has no preceding sibling.</li>
+					<li>The <mark>next sibling</mark> of an object is its first following sibling or null if it has no following sibling.</li>
+					<li>The <mark>index</mark> of an object is its number of preceding siblings.</li>
+				</ul>
+  <footer class="blockquote-footer">Explore further  <cite title="[ www.w3.org/TR/dom/ ]"><a href="https://www.w3.org/TR/dom/" target="_blank"> www.w3.org/TR/dom/</a></cite></footer>         
+        
+	<hr>
+</div>
+
+<!-- 7.3.1. DOM methods and properties  -->
+<section>
+	<h4>DOM methods and properties</h4>
+  <h5>Element properties</h5>
+ 	<p>nodeType, nodeName, nodeValue, innerHTML, childNodes, id, style, firstChild, nextSibling, nextElementSibling</p>	
+  
+  <h5>Finding HTML Elements</h5>
+
+<table class="table table-sm table-striped small">
+<tr>
+<th>Method</th>
+<th>Searches by...</th>
+<th>Any element?</th>
+<th>Live?</th>
+</tr>
+<tr>
+<th><code>querySelector</code></th>
+<td>CSS-selector</td>
+<td>✔</td>
+<td>-</td>
+</tr>
+<tr>
+<th><code>querySelectorAll</code></th>
+<td>CSS-selector</td>
+<td>✔</td>
+<td>-</td>
+</tr>
+<tr>
+<th><code>getElementById</code></th>
+<td><code>id</code></td>
+<td>a method of the global document object</td>
+<td>-</td>
+</tr>
+<tr>
+<th><code>getElementsByName</code></th>
+<td><code>name</code></td>
+<td>a method of the global document object</td>
+<td>✔</td>
+</tr>
+<tr>
+<th><code>getElementsByTagName</code></th>
+<td>tag or <code>'*'</code></td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<th><code>getElementsByClassName</code></th>
+<td>class</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+</table>
+
+<pre class="language-js"><code>//returns one node
+document.getElementById("elementID")
+
+//returns array of nodes		
+document.getElementsByTagName("elementType")
+//reference to a specific node i	
+document.getElementsByTagName("elementType")[i]	
+
+//returns array of nodes that have name="value" attribute
+document.getElementsByName("value")	
+
+//returns an array of nodes (HTML5 only)	
+document.getElementsByClassName("className");</code></pre>	
+
+
+
+<!--
+byName
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_doc_getelementsbyname_loop
+
+
+byClassName
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_document_getelementsbyclassname_loop
+
+-->
+<hr>
+	<h6>Attribute <code>name="value"</code></h6>
+	<ul>
+		<li>The name attribute specifies a name for the element.</li>
+		<li>This name attribute can be used to reference the element in a JavaScript.</li>
+		<li>For form elements it is also used as a reference when the data is submitted,</li>
+		<li hidden>See example forLoop1.html below</li>
+	</ul>
+  <footer class="blockquote-footer">Explore further  <cite title="[ www.w3schools.com/tags/att_name.asp ]"><a href="https://www.w3schools.com/tags/att_name.asp" target="_blank"> www.w3schools.com/tags/att_name.asp</a></cite></footer> 
+<hr>
+
+
+  <h5>Modifying DOM structure</h5>
+<pre class="language-js"><code>// create a new element
+document.createElement("elementType")
+
+// create a new text node
+document.createTextNode("text here")
+
+// append a new element or text node
+parentElement.appendChild(node)
+
+// insert a new node
+parentElement.insertBefore(newElement, targetElement)
+parentElement.insertAfter(newElement, targetElement) // this is a jQuery method
+
+// remove an existing node
+parentElement.removeChild(elementToBeRemoved)</code></pre>	
+
+
+<h5>Accessing CSS</h5>
+<pre class="language-js"><code>document.getElementById("elementID").style.property = value;
+anyElement.style.property = value;</code></pre>		   	
+
+<!--
+https://www.w3schools.com/jsref/dom_obj_style.asp
+-->
+
+<h5>Modifying attributes</h5>
+<pre class="language-js"><code>myElement.getAttribute("attributeName")
+myElement.setAttribute("attributeName", "attributeValue")</code></pre>		  
+  
+  
+	<h5>Finding Elements using HTML DOM Collections</h5>
+	<ul>
+		<li><code>document.images</code> Returns a collection of all &lt;img> elements in the document</li>
+		<li><code>document.links</code> Returns a collection of all &lt;a> and &lt;area> elements in the document that have a href attribute</li>
+		<li><code>document.anchors</code> Returns a collection of all &lt;a> elements in the document that have a name attribute</li>
+	</ul>	
+  <footer class="blockquote-footer">Explore further  <cite title="[ www.w3schools.com/jsref/dom_obj_document ]"><a href="https://www.w3schools.com/jsref/dom_obj_document.asp" target="_blank"> www.w3schools.com/jsref/dom_obj_document</a></cite></footer>  
+  
+	<hr>
+</section>
+
+
+
+<!-- 7.3.2. Working with live DOM  -->
+<div>
+	<h4>Working with live DOM</h4>
+	<h6>getElementsByTagName() vs. querySelectorAll()</h6>
+	<p><span title="https://www.nczonline.net/blog/2010/09/28/why-is-getelementsbytagname-faster-that-queryselectorall/">The big difference is in the return value: the getElementsByTagName() method returns a live NodeList while querySelectorAll() returns a static <a href="https://developer.mozilla.org/en-US/docs/Web/API/NodeList" target="_blank"><kbd>NodeList</kbd></a>. This is extremely important to understand.</span> </p>
+
+  
+  <h6>Advantages of using createElement over innerHTML</h6>
+	<ul>
+		<li>Preserves existing references to DOM elements when appending elements</li>
+		<li>Preserves event handlers attached to any DOM elements</li>
+		<li>When you append to (or otherwise modify) innerHTML, all the DOM nodes inside that element have to be re-parsed and recreated.</li>
+	</ul>
+	<!--[link broken]9 ways to optimize your front end performance (article)
+  
+  https://jsperf.com/drupal-id-selector
+  https://jsperf.com/map-vs-loop-20200515
+  https://jsperf.com/queryselector-vs-prop-access
+  
+  -->		
+	<br>
+
+  
+	<h5>Minimize DOM access</h5>
+	<h6>Avoid:</h6>
+<pre class="language-js"><code>document.getElementById("id").someproperty... ;
+document.getElementById("id").somemethod... ;
+document.getElementById("id").othermethod... ;
+document.getElementById("id").someproperty... ;
+</code></pre>
+	<h6>Change to:</h6>
+  
+<pre class="language-js"><code>var objNode = document.getElementById("id");
+objNode.someproperty...;
+objNode.somemethod...;
+objNode.othermethod...;
+</code></pre> 
+
+	
+	<h6>Performance test innerHTML vs. createElement</h6>
+	<p>Create and run tests at <a href="https://jsperf.com/innerhtml-vs-createelement-test/63">jsperf.com</a></p>
+</div>
+
+	<hr>
+</section>
+
+
+<!-- 7.4. Browser Environment  -->	
+<section id="page74">
+	<h3>Browser Environment</h3>
+  <p class="lead">At the top of the hierarchy is the window, the global object. All other objects form three groups.</p>
+  <figure>
+<!-- https://javascript.info/article/browser-environment/windowObjects.svg -->    
+<svg xmlns="http://www.w3.org/2000/svg" width="367" height="308" viewBox="0 0 367 308"><defs><style>@import url(https://fonts.googleapis.com/css?family=Open+Sans:bold,italic,bolditalic%7CPT+Mono);@font-face{font-family:&apos;PT Mono&apos;;font-weight:700;font-style:normal;src:local(&apos;PT MonoBold&apos;),url(/font/PTMonoBold.woff2) format(&apos;woff2&apos;),url(/font/PTMonoBold.woff) format(&apos;woff&apos;),url(/font/PTMonoBold.ttf) format(&apos;truetype&apos;)}</style></defs><g id="combined" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1"><g id="windowObjects.svg"><path id="Rectangle-1" fill="#FFF9EB" stroke="#E8C48E" stroke-width="2" d="M136 10h78v28h-78z"/><text id="window" fill="#707175" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="152" y="28">window</tspan></text><path id="Rectangle-2" fill="#F5F4D8" stroke="#CFCE95" stroke-width="2" d="M18 80h78v26H18z"/><path id="Rectangle-2" fill="#FCDFE1" stroke="#C74A6C" stroke-width="2" d="M255 118h83v26h-83z"/><path id="Rectangle-2" fill="#EDFCFD" stroke="#99C0C3" stroke-width="2" d="M110 270h132v26H110z"/><text id="document" fill="#727155" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="26" y="97">document</tspan></text><path id="Rectangle-2" fill="#FCDFE1" stroke="#C74A6C" stroke-width="2" d="M255 80h83v26h-83z"/><text id="Object" fill="#924565" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="271" y="97">Object</tspan></text><path id="Rectangle-2" fill="#EDFCFD" stroke="#99C0C3" stroke-width="2" d="M134 80h85v26h-85z"/><text id="navigator" fill="#366378" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="138" y="97">navigator</tspan></text><path id="Rectangle-2" fill="#EDFCFD" stroke="#99C0C3" stroke-width="2" d="M134 118h85v26h-85z"/><text id="screen" fill="#366378" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="151" y="135">screen</tspan></text><path id="Rectangle-2" fill="#EDFCFD" stroke="#99C0C3" stroke-width="2" d="M134 156h85v26h-85z"/><text id="location" fill="#366378" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="142" y="173">location</tspan></text><path id="Rectangle-2" fill="#EDFCFD" stroke="#99C0C3" stroke-width="2" d="M134 194h85v26h-85z"/><text id="frames" fill="#366378" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="151" y="211">frames</tspan></text><path id="Rectangle-2" fill="#EDFCFD" stroke="#99C0C3" stroke-width="2" d="M134 232h85v26h-85z"/><text id="history" fill="#366378" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="147" y="249">history</tspan></text><text id="Array" fill="#924565" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="275" y="135">Array</tspan></text><path id="Rectangle-3" fill="#FCDFE1" stroke="#C74A6C" stroke-width="2" d="M255 156h83v26h-83z"/><text id="Function" fill="#924565" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="264" y="173">Function</tspan></text><text id="XMLHttpRequest" fill="#366378" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="117" y="287">XMLHttpRequest</tspan></text><text id="BOM" fill="#99C0C3" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="135" y="73">BOM</tspan></text><text id="JavaScript" fill="#C74A6C" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="271" y="73">JavaScript</tspan></text><text id="DOM" fill="#CFCE95" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"><tspan x="17" y="73">DOM</tspan></text><path id="Line" fill="#EE6B47" fill-rule="nonzero" d="M177.5 40.5v18h6l-7 14-7-14h6v-18h2z"/><path id="Line-2" fill="#EE6B47" fill-rule="nonzero" d="M132.75 40.108l1.142 1.642-.82.57-34.508 24.005 3.426 4.926L86.5 73.5l7.495-13.741 3.426 4.924 34.508-24.004.82-.571z"/><text id="…" fill="#727155" font-family="PTMono-Regular, PT Mono" font-size="24" font-weight="normal"><tspan x="50" y="122">…</tspan></text><text id="…-2" fill="#924565" font-family="PTMono-Regular, PT Mono" font-size="24" font-weight="normal"><tspan x="287" y="201">…</tspan></text><path id="Line" fill="#EE6B47" fill-rule="nonzero" d="M217.226 39.097l.827.562 38.443 26.152 3.376-4.96 7.638 13.663-15.513-2.087 3.374-4.962-38.443-26.152-.827-.563 1.125-1.653z"/></g></g></svg>
+    <figcaption>Browser Environment
+  
+  <dl class="small">
+    <dt>Document Object Model (DOM)</dt>
+    <dd>document and related objects allow access to content of the page, modify elements, etc. Most interactions with HTML are handled here.
+There is a set of standards for DOM, developed and maintained by W3C. You can find it on W3C DOM page. There are three levels of DOM, each level expands on the previous. Modern browsers generally support pre-W3C features from the browser dark-ages, called DOM 0. <a href="https://dom.spec.whatwg.org/">dom.spec.whatwg.org</a></dd>
+    
+    <dt>Browser Object Model (BOM)</dt>
+    <dd>BOM is a set of objects that allows control of the browser, e.g change current URL, do background requests to server with XMLHttpRequest, etc. Functions like alert, confirm, prompt, also belong to BOM, they are provided by the browser.
+Many BOM features are standardized in HTML5, but not all. <a href="https://html.spec.whatwg.org/">BOM is the part of the general HTML specification.</a></dd>
+    
+    <dt>JavaScript objects and functions</dt>
+    <dd>JavaScript itself is a language which gives us access to DOM, BOM, and provides objects and functions of its own.
+JavaScript follows the ECMA-262 standard.
+The global window object mixes browser window functionality (methods focus(),open(), etc) with being a JavaScript global object. That’s why it is both green and red. <a href="https://www.w3.org/TR/cssom-1/">CSSOM</a></dd>    
+  </dl></figcaption>
+  </figure>
+	<hr>
+
+<!-- 7.4.1. Browser object model (BOM)  -->	
+	<h4>Browser object model (BOM)</h4>
+   <div class="box bg-dark w3-xlarge w3-text-orange text-center">
+        <p>The Browser Object Model (BOM) allows JavaScript to "talk to" the browser.</p>	
+    </div>
+	<p>There are no official standards for the Browser Object Model (BOM). Since modern browsers have implemented (almost) the same methods and properties for JavaScript interactivity, it is often referred to, as methods and properties of the BOM. It is a hierarchical representation of all components of a web page</p>
+	<ol class="w3-ul">
+		<li>
+			<p>The <kbd>window</kbd> object is the top level in the DOM hierarchy and has properties describing the browser window. Examine the window properties:</p>
+			<figure>
+				<p data-height="265" data-theme-id="0" data-slug-hash="rLBNoW" data-default-tab="js,result" data-user="ebajcar" data-embed-version="2" data-pen-title="windowProperties" class="codepen">See the Pen <a href="https://codepen.io/ebajcar/pen/rLBNoW/">windowProperties</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+				<figcaption><strong>Example:</strong> explore window properties</figcaption>
+			</figure>
+		</li>
+		<li>The <mark>screen</mark> object is a child of the window object and has properties describing the screen dimensions and color depth</li>
+		<li>The <mark>dialog</mark> messages can be displayed using the window object’s alert(), confirm(), and prompt() methods</li>
+		<li>A <mark>popup window</mark> can be created using the window object’s open() method but may be obstructed by a popup blocker </li>	
+		<li>The window object’s <mark>setTimeout()</mark> method creates a timer, which can be canceled later using the <mark>clearTimeout()</mark> method. Also see <a href="#exercises2">Exercise 2</a> below.</li>	
+		<li>The <mark>navigator object</mark> is a child of the window object and has properties describing the browser and host platform versions</li>	
+		<li>As the window object exists in the global namespace all its child objects need not include that part of the address, so that <mark>window.navigator</mark> can simply be referenced as <mark>navigator</mark> </li>	
+		<li class="w3-text-red">The practice of browser detection by querying the navigator properties is bad practice – feature detection should be used instead to ensure that DOM support exists <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection" target="_blank">See Feature Detection at MDN</a>.</li>	
+		<li>The <mark>navigator.plugins</mark> and <mark>navigator.mimeTypes</mark> properties are both arrays on Mozilla browsers, in which each element contains details of a supported feature</li>	
+		<li>The <mark>location object</mark> is a child of the window object and has properties describing the address of the loaded document</li>
+		<li>The <mark>history object</mark> is a child of the window object that contains an array of visited locations in the current session and has methods to navigate along its elements</li>								
+	</ol>	
+	<br>
+	<hr>
+</section>
+
+
+</article>
+
+
+<!-- 8. Javascript Functions  -->
+<article id="page80">
+	<h2>Javascript Functions</h2>
+	<div class="card  bg-dark text-white text-center">
+		<div class="lead card-body"> A JavaScript function is a block of code designed to perform a particular task. A JavaScript function is executed when "something" invokes it (calls it).</div>
+	</div>  
+  <p style="margin-top:10px" class="lead text-danger"><strong>Functions are first-class objects!</strong> &hellip;which means that they can be</p>
+
+  <ul>
+    <li>stored in a variable, object, or array.</li>
+    <li>passed as an argument to a function.</li>
+    <li>returned from a function.</li>
+  </ul>
+	<hr>	
+	
+		<!-- cite="McGrath, Mike (2013-06-24). JavaScript In Easy Steps (Kindle Locations 780-815). In Easy Steps. Kindle Edition."-->	
+<!-- 7.1. Function basics -->
+<section id="page81">
+	<h3>Function basics</h3>
+		<ul class="w3-ul">
+      <li>Functions are parameterized blocks of Javascript code that we can invoke.</li>
+			<li>JavaScript functions are declared using the <code>function</code> keyword and the function name must have trailing parentheses, followed by a pair of { } braces enclosing statements to execute.</li>
+			<li>A function declaration may specify arguments within its trailing parentheses that must be passed from its caller.</li>
+			<li>A value can be returned to the caller using the return keyword.</li>
+			<li>Unlike global variables declared in the main script body, local variables declared inside a function are only accessible from within that function</li>
+      <li>The <code>return</code> and <em>parameter types</em> are not specified.</li>
+		</ul>
+		
+
+    <figure>    
+<pre class="language-js"><code>function foo(a,b,c) {
+  return a+b+c;
+}</code></pre>
+    <figcaption>Function definition. Function <code>foo</code> takes three parameters and returns the sum of the parameter values. The body of a function is enclosed in curly braces.</figcaption>
+    </figure>
+<h4>Function definition</h4>
+		<p>To write a basic function, use the keyword <mark>function</mark>, choose the name for your function, followed by open and close brackets, and putting the function code inside braces (similar to Java code). </p>
+    
+    <figure> 
+<pre class="language-js"><code>// define a function called plusOne with parameter x
+function plusOne( x ) { 
+  // return a value one larger than the value passed in
+  return x + 1;		
+}
+console.log(plusOne(4)); // function invocation; returns 5</code></pre>
+    <figcaption>Function definition and invocation. Function <code>plusOne</code> takes one parameter and returns the parameter value increased by one. The body of a function is enclosed in curly braces. Calling (invocating) the function with the value of 4.</figcaption>
+    </figure>
+
+    <p>Functions are values that can be assigned to variables.</p>
+    <figure>     
+<pre class="language-js"><code>var square = function plusOne ( x ) {   	
+	return x * x;			
+};		
+// semicolon marks the end of the assignment</code></pre>
+    <figcaption>Assignment of function to a variable.</figcaption>
+    </figure>
+
+    
+    
+<p>Add function definition in your script</p>
+<figure>	
+<pre class="language-js"><code>function wasClicked() {
+  alert("Click recorded     " + window.event.srcElement.tagName);
+}</code></pre>
+<figcaption>Function definition in the script.</figcaption>
+</figure>	
+
+
+<h4>Function vs. methods</h4>
+    <p>When functions are assigned to the properties of an object, we call them methods.</p>
+    <figure>     
+<pre class="language-js"><code>var arr = [];
+arr.push (1,2,3);	// push() method adds elements to the array
+arr.reverse();	// reverse() method reverses the order of elements</code></pre>
+    <figcaption>Assignment of function to a property of an object.</figcaption>
+    </figure>
+
+
+    <p>We can define our own methods. The this keyword refers to the object on which the method is defined.</p>
+    <figure>    
+<!--
+Computational geometry algorithm tutorial
+https://algorithmtutor.com/Computational-Geometry/Finding-the-closest-pair-of-points/
+-->    
+<pre class="language-js"><code>var points = [
+    {x:0, y:0},
+    {x:1, y:1}
+];
+points.dist = function () {  	
+	var p1 = this[0];
+	var p2 = this[1];
+	var a = p2.x - p1.x;
+	var b = p2.y - p1.y;
+	return Math.sqrt( a * a + b * b );
+};
+console.log(points.dist());</code></pre>
+    <figcaption>Definition and invocation of custom function..</figcaption>
+    </figure>
+    
+
+
+
+<h4>Function invocation (calling a function)</h4>
+<p>To call a function, you type out the name, and then parentheses.</p>
+<figure>	
+<pre class="language-js"><code>&lt;body onclick="wasClicked()"></code></pre>
+<figcaption>Add onclick event in your HTML file.</figcaption>
+</figure>
+
+
+<h4>Function arguments (parameters)</h4>
+<p>Arguments are a way to pass information or data into a function. Functions can take any number of arguments, any combination of type. When you define a function, you assign names to the arguments, these names then are used within the function as variables.</p>
+<figure>	
+<pre class="language-js"><code>function sayHello(message) {
+	alert(message);
+}
+sayHello("Hello World");
+sayHello("Message of the day...");</code></pre>
+<figcaption>Add function definition in your script.</figcaption>
+</figure>
+  
+    
+<figure>	
+<pre class="language-html"><code>&lt;!-- HTML code -->
+&lt;h1 id="helloMsg">&lt;/h1></code></pre>
+
+<pre class="language-js"><code>// JS code
+document.getElementById("helloMsg").onclick = writeMsg;
+function writeMsg() {
+  document.getElementById("helloMsg").innerHTML = "Hello World";
+}</code></pre>
+<figcaption> Add onclick event in your HTML file; also using DOM to target  elements.</figcaption>
+</figure>
+	
+		
+	<hr>
+</section>	
+
+<!-- 7.2. Anonymous Functions -->
+<section id="page82">
+	<h3>Anonymous Functions</h3>
+		<p>Anonymous functions are functions that are declared as they are run, and they have no name assigned to them. Anonymous functions perform better than a named function because there is nothing to reference; they just execute when needed. They are used only once; they cannot be reference over and over again.</p>	
+	<br>
+	<hr>
+</section>
+
+<!-- 7.3. Callback functions -->
+<section id="page83">
+	<h3>Callback functions</h3>
+		<p>
+			<q cite="https://en.wikipedia.org/wiki/Callback_(computer_programming)">
+			In computer programming, a callback is any executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at a given time. This execution may be immediate as in a synchronous callback, or it might happen at a later time as in an asynchronous callback. In all cases, the intention is to specify a function or subroutine as an entity that is, depending on the language, more or less similar to a variable (see first-class functions).</q>   
+			<small><a href="https://en.wikipedia.org/wiki/Callback_(computer_programming)" target="_blank">read more</a>&hellip;</small>
+		</p>
+		<p>
+			<q cite="https://en.wikipedia.org/wiki/First-class_function">In computer science, a programming language is said to have first-class functions if it treats functions as first-class citizens. This means the language supports passing functions as arguments to other functions, returning them as the values from other functions, and assigning them to variables or storing them in data structures. Some programming language theorists require support for anonymous functions (function literals) as well. In languages with first-class functions, the names of functions do not have any special status; they are treated like ordinary variables with a function type.</q>
+			<small><a href="https://en.wikipedia.org/wiki/First-class_function" target="_blank">read more</a>&hellip;</small>
+		</p>
+		<p>
+			<q cite="https://en.wikipedia.org/wiki/Event_(computing)#Event_handler">An event handler is a callback routine that operates asynchronously and handles inputs received into a program (events).</q>
+		</p>
+		<p>
+			<q>To manipulate HTML elements with Javascript, you have to find the elements first. You can find HTML elements by id, by tag name, by class name, by CSS selectors, <mark>HTML object collections</mark> (document.anchors, document.body, document.documentElement, document.embeds, document.forms, document.head, document.images, document.links, document.scripts, document.title). </q>
+			<small><a href="http://www.w3schools.com/js/js_htmldom_elements.a" target="_blank">read more</a>&hellip;</small>
+		</p>
+		<figure>
+			<p data-height="265" data-theme-id="0" data-slug-hash="NrNrRq" data-default-tab="result" data-user="ebajcar" data-embed-version="2" data-pen-title="timers and loaders" class="codepen">See the Pen <a href="https://codepen.io/ebajcar/pen/NrNrRq/">timers and loaders</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			<figcaption>Timers and loaders</figcaption>
+		</figure>
+		
+		<figure>
+		<iframe src="https://pastebin.com/embed_iframe/Bzmy3LQn" style="border:none;width:100%"></iframe>
+			<figcaption>Code for timers.html.  Example how to provide a timer with your web app and how to flip between two images (back and face of a memory game).</figcaption>
+		</figure>  
+	<hr>
+</section>
+
+<!-- 7.4. Exception handling statements -->	
+<section id="page84">
+	<h3>Exception handling statements</h3>
+   <div class="box bg-dark w3-xlarge w3-text-orange text-center">
+        <p>It is critical that a program can deal with errors and unknown conditions in any software development, including Javascript.</p>	
+    </div>
+	<p>It is also important to check for null values to prevent errors and raise custom errors as needed to send error information back to a running program.</p>
+	<p>Structured error handling in Javascript is achieved with the <code>try...catch...finally</code> construct. You can throw exceptions using the throw statement and handle them using the try...catch statements.</p>
+	
+	<figure>		
+	<pre class="brush: html; highlight: [0]; first-line: 1">
+function myFunction() {
+    var message, x;
+    message = document.getElementById("p01");
+    message.innerHTML = "";
+    x = document.getElementById("demo").value;
+    try { 
+        if(x == "")  throw "empty";
+        if(isNaN(x)) throw "not a number";
+        x = Number(x);
+        if(x &lt; 5)    throw "too low";
+        if(x > 10)   throw "too high";
+    }
+    catch(err) {
+        message.innerHTML = "Input is " + err;
+    }
+}</pre>
+	<figcaption>Try the example live at <a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_throw_error" target="_blank">http://www.w3schools.com/js/tryit.asp?filename=tryjs_throw_error</a>. Also see <a href="#exercises2">Exercise 1</a> below.</figcaption>
+	</figure>	
+	<hr>
+</section>
+
+</article>
+
+
+<!-- 9. Event handling -->
+<article id="page90">
+	<h2>Event handling</h2>
+	<div class="card  bg-dark text-white text-center">
+		<div class="lead card-body">The Event interface represents any event which takes place in the DOM;<br>some are user-generated, while others are generated by APIs. Event itself contains the properties and methods which are common to all events.</div>
+	</div>		
+	<hr>	
+
+	
+<!-- 9.1. Event Handler -->
+<section id="page91">
+	<h3>Event Handler</h3>
+	<ul>
+		<li>The term event handler may be used to refer to:
+			<ul class="w3-ul">
+				<li>any function or object registered to be notified of events, or, more specifically, to the mechanism of registering event listeners via on... attributes in HTML or properties in web APIs, such as &lt;button onclick="alert(this)"> or window.onload = function(){}.</li>
+			</ul>	
+		</li>
+		<li>When discussing the various methods of listening to events,
+			<ul class="w3-ul">
+				<li>event listener refers to a function or object registered via EventTarget.addEventListener(), whereas event handler refers to a function registered via on... attributes or properties.</li>
+			</ul>
+		</li>
+	</ul>
+	<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Event_handlers" target="_blank">More terminology on MDN </a>		
+	<br>
+	<hr>
+</section>	
+
+<!-- 9.2. Eliciting user feedback -->
+<section id="page92">
+	<h3>Eliciting user feedback</h3>
+	<ul class="w3-ul">
+		<li>An <mark>event-handler function</mark> for a window event is nominated by assigning the function name to a window object property
+		</li><li>When the browser fires an event it seeks an event-handler for that event and, if one exists, will execute its statements
+		</li><li>The <mark>load event</mark> is fired when the window has loaded a document and its event-handler is sought via the window object’s onload property
+		</li><li>The <mark>unload event</mark> is fired when the user navigates to a new location, or closes the browser, and its event-handler is sought via the window object’s onunload property
+		</li><li>A <mark>runtime error event</mark> passes three arguments to the event-handler nominated by the window object’s onerror property describing the nature and script location of the error
+		</li><li>Mouse button <mark>click events</mark> seek event-handlers via the clicked object’s onclick and ondblclick properties, and also its onmousedown and onmouseup properties
+		</li><li>Internet Explorer provides a window.event object that has event.keyCode, event.x and event.y properties storing key values and coordinates
+		</li><li>Mozilla browsers pass KeyboardEvent and MouseEvent objects as arguments to the event-handler that have which, pageX and pageY properties storing key values and coordinates
+		</li><li>Key stroke events can seek event-handlers via the document object’s onkeydown, onkeypress, and onkeyup properties
+		</li><li>Mouse movement events can seek event-handlers via the onmousemove, onmouseover, and onmouseout properties of the object over which the pointer is moving
+		</li><li>
+			<h6>Add a simple listener</h6>
+			<figure>
+				<p data-height="265" data-theme-id="0" data-slug-hash="gKYxBM" data-default-tab="js,result" data-user="ebajcar" data-embed-version="2" data-pen-title="Add a simple listener" class="codepen">See the Pen <a href="https://codepen.io/ebajcar/pen/gKYxBM/">Add a simple listener</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+	<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				<figcaption>In this code, modifyText() is a listener for click events registered using addEventListener(). A click anywhere in the table bubbles up to the handler and runs modifyText().  <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">See more on MDN</a></figcaption>
+			</figure>
+		</li>
+	</ul>	
+	<hr>
+</section>	
+
+<!-- 9.3. Using events -->
+<section id="page93">
+	<h3>Using events</h3>
+		<p>Events allow you elicit feedback from the user.  If you want to execute any Javascript on a page, it must happen through an event. Examples of events: load a page, click a link, submit a form. Any event can have a function attached to it..</p>
+		<figure>
+			<p data-height="265" data-theme-id="0" data-slug-hash="RRwdQg" data-default-tab="result" data-user="ebajcar" data-embed-version="2" data-pen-title="openNewWindow" class="codepen">See the Pen <a href="https://codepen.io/ebajcar/pen/RRwdQg/">openNewWindow</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			<figcaption><strong>Example:</strong> Open new window.</figcaption>
+		</figure>
+		<ul class="w3-ul">
+			<li>Events provide a way to interact with users when they perform actions on the page.</li>
+			<li>Events cascade or bubble through the entire DOM hierarchy.</li>
+			<li>Focus events occur when an object gets or loses focus. <em>Focus events:</em> <q> focus, blur, focusin, focusout.</q></li>
+			<li>Keyboard events occur when keyboard keys are pressed on a focused object. <em>Keyboard events:</em> <q> keydown, keyup, keypress.</q></li>
+			<li>Mouse events occur when the mouse clicks an object or the pointer is moved over or off an object. <em>Mouse events:</em> <q> click, dblclick, mousedown, mouseup, mouseover, mousemove, mouseleave.</q></li>
+			<li>Drag-and-drop functionality provides a way to move elements from one container to another.<em>Drag-and-drop events:</em> <q>drag, dragend, dragenter, dragleave, dragover, dragstart, drop.</q></li>
+			<li>Other events: submit, load</li>
+			<li>More... touchstart, touchmove, touchcancel, orientationchange, gesturestart, gestureend, gesturechange</li>
+		</ul>
+		<figure>
+			<p data-height="444" data-theme-id="0" data-slug-hash="ZOEwgq" data-default-tab="js,result" data-user="ebajcar" data-embed-version="2" data-pen-title="exploreEvents" class="codepen">See the Pen <a href="https://codepen.io/ebajcar/pen/ZOEwgq/">exploreEvents</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			<figcaption><strong>Example:</strong> explore using events.</figcaption>
+		</figure>  
+	<hr>
+</section>	
+
+<!-- 9.4. Event capture and bubbling -->
+<section id="page94">
+	<h3>Event capture and bubbling</h3>
+		<p>Event bubbling is the concept that applies when the HTML document has nested elements. In this situation, one click event may trigger multiple events to fire. The last parameter of the addEventListener method accepts an optional Boolean parameter. This parameter allows you to specify the cascading or bubbling effect of the event, in which order the event processing occurs (false to bubble out, true to cascade down).</p>
+		<figure>
+			<p data-height="399" data-theme-id="0" data-slug-hash="PzoLGK" data-default-tab="result" data-user="ebajcar" data-embed-version="2" data-pen-title="bubble vs. capture " class="codepen">See the Pen <a href="https://codepen.io/ebajcar/pen/PzoLGK/">bubble vs. capture </a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			<figcaption><strong>Example</strong>: The HTML renders three nested div elements, stacked on top of each other. The styling provides a visual distinction among the boxes. When a div box is clicked, the click event fires. The event listener in the assigned handler outputs the name of the clicked div to an ordered list so that the order in which the events are clicked is identified. Examine the following pen:</figcaption>	
+		</figure>    
+	<hr>
+</section>	
+	
+</article>
+
+
+<!-- 10. Javascript forms --> 
+<article id="page100">
+	<h2>Javascript forms</h2>
+	<div class="card  bg-dark text-white text-center">
+		<div class="lead card-body" title="—www.w3.org/TR/html401/interact/forms.html">An HTML form is a section of a document containing normal content, markup, special elements called controls (checkboxes, radio buttons, menus, etc.), and labels on those controls. Users generally "complete" a form by modifying its controls (entering text, selecting menu items, etc.), before submitting the form to an agent for processing (e.g., to a Web server, to a mail server, etc.)
+</div>
+	</div>	
+	<hr>	
+	
+<!-- 10.1. How forms are processed -->
+<section id="page101">
+	<h3>How forms are processed </h3>
+	<ol class="dialog-ol">
+		<li><strong>value</strong>. Each element of a form can be dynamically assigned a <b>value</b> from JavaScript.</li>
+		<li><strong>id</strong>. If a form element contains an <b>id attribute</b>, that element can be referenced using the <code>document.getElementById()</code> method.</li>
+		<li><strong>id</strong>. A form element that does not contain an <b>id attribute</b> can be referenced using the <code>document.forms[].elements[]</code> arrays.</li>
+		<li><strong>name</strong>. The value assigned to the <b>name attribute</b> of a radio button group or checkbox button group is also the name of an array in which each button can be referenced by their index value.</li>
+		<li><strong>checkbox</strong>. When a form <b>radio button</b> or <b>checkbox button</b> has been selected its checked property becomes a true value.</li>
+		<li><strong>checked</strong>. A loop can be used to examine the checked property of each button in a button group to determine which are selected.</li>
+		<li><strong>options[]</strong>. The options of a <b>selection list object</b> are represented in the DOM by its options[] array</li>
+		<li><strong>selectedIndex</strong>. A selection list object has a <b>selectedIndex property</b> containing the array element index value of the currently-selected option</li>
+		<li><strong>selectedIndex</strong>. The value of the current selected option can be retrieved by specifying the selectedIndex value in the options[] array</li>
+		<li><strong>onchange</strong>. An event-handler function can be nominated by the <b>onchange property</b> to respond to changes in text field content</li>
+		<li><strong>onreset</strong>. An event-handler function can be nominated by the <b>onreset property</b> to respond when the user pushes a form’s reset button</li>
+		<li><strong>onsubmit</strong>. An event-handler function can be nominated by the <b>onsubmit property</b> to respond when the user pushes a submit button</li>
+		<li><strong>onsubmit</strong>. When the <b>onsubmit event-handler</b> returns a false value the form will not be submitted</li>
+		<li><strong>submit()</strong>. A form can be submitted from script by calling the <b>submit() method</b> of the form object</li>
+	</ol>    	
+	<hr>
+</section>
+
+<!-- 10.2. HTML5 and CSS3 form components -->
+<section id="page102">
+	<h3>HTML5 and CSS3 form components</h3>
+	<ul>
+			<li>The HTML <code>&lt;form></code> element defines a form that is used to collect user input.</li>
+			<li>An HTML form contains form elements &mdash; different types of input elements: <mark>text fields</mark>, <mark>checkboxes</mark>, <mark>radio buttons</mark>, <mark>submit buttons</mark>,...</li>
+			<li>Form elements: <code>form</code>, <code>input</code>, <code>textarea</code>, <code>label</code>, <code>fieldset</code>, <code>legend</code>, <code>select</code>, <code>optgroup</code>, <code>option</code>, <code>button</code>, <code>datalist</code>, <code>keygen</code>, <code>output</code></li>
+			<li>HTML input types: <code>text</code>, <code>password</code>, <code>submit</code>, <code>reset</code>, <code>radio</code>, <code>checkbox</code>, <code>button</code></li>
+			<li>HTML5 added several new input types: <code>color</code>, <code>date</code>, <code>datetime</code>, <code>email</code>, <code>datetime-local</code>, <code>month</code>, <code>number</code>, <code>range</code>, <code>search</code>, <code>tel</code>, <code>time</code>, <code>url</code>, <code>week</code></li>
+			<li>HTML5 attributes (Input Restrictions): <code>disabled</code>, <code>maxlength</code>, <code>readonly</code>, <code>size</code>, <code>value</code></li>
+			<li>HTML5 added the following attributes for &lt;input>: <code>autocomplete</code>, <code>autofocus</code>, <code>form</code>, <code>height</code>, and <code>width</code>, <code>list</code>, <code>min</code>, <code>max</code>, <code>multiple</code>, <code>pattern</code>, <code>placeholder</code>, <code>required</code>, <code>step</code></li>
+      <li><a href="https://www.w3schools.com/css/css_form.asp" target="_blank">CSS Forms (w3schools)</a></li>
+      <li><a href="https://www.w3schools.com/css/css_attribute_selectors.asp" target="_blank">CSS Attribute Selectors (w3schools)</a></li>
+      <li><a href="https://bajcar.dev.fast.sheridanc.on.ca/10049/" target="_blank">Cascading Style Sheets (syst10049)</a></li>
+			<li>http://bajcar.dev.fast.sheridanc.on.ca/www10049/forms/</li>
+		</ul> 
+  <h4>Form validation</h4>
+  <p>HTML5 makes available user interface elements that allow users to provide input. This ability to capture information from users is great, but you must make sure that user privacy and safety are protected as much as possible and that the website or web app cannot be exploited to disrupt the site's services. The objective is</p>
+  <ul>
+    <li>to choose the correct user input controls (HTML5 input types), and</li>
+    <li>to set the appropriate attributes on those controls to ensure that the data is validated.</li>
+  </ul>
+  <p>Data validation is the process of ensuring that computer input is clean, correct, and useful. Most often, the purpose of data validation is to ensure correct input to a computer application.</p>  
+	<hr>
+</section>
+
+<!-- 10.3. Data validation -->
+<section id="page103">
+	<h3>Data validation</h3>
+<h5>Different types of form validation </h5>
+<h6><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" target="">from MDN</a></h6>
+<p>There are two different types of form validation which you'll encounter on the web:</p>
+<ul>
+<li><strong>Client-side validation</strong> is validation that occurs in the browser, before the data has been submitted to the server. This is more user-friendly than server-side validation as it gives an instant response. This can be further subdivided:</li><ol>
+<li>JavaScript validation is coded using JavaScript. It is completely customizable.</li>
+<li>Built-in form validation using HTML5 form validation features.  This generally does not require JavaScript. Built-in form validation has better performance, but it is not as customizable as JavaScript.</li></ol>
+<li><strong>Server-side validation</strong> is validation which occurs on the server, after the data has been submitted.  Server-side code is used to validate the data before it is saved into the database. If the data fails authentication, a response is sent back to the client to tell the user what corrections to make. Server-side validation is not as user-friendly as client-side validation, as it does not provide errors until the entire form has been submitted.  However, server-side validation is your application's last line of defense against incorrect or even malicious data. All popular server-side frameworks have features for validating and sanitizing data (making it safe).</li></ul>
+<p>In the real world, developers tend to use a combination of client-side and server-side validation.</p>    	
+	<br>
+  <h5>Validate data with built-in functions</h5>
+  <ul>
+       <li><strong>HTML Input Attributes&mdash;</strong> disabled &middot; max &middot; min &middot; pattern &middot; required &middot; type </li>
+       <li><strong>CSS Pseudo Selectors&mdash;</strong> :disabled &middot; :disabled &middot; :optional &middot; :required &middot; :valid</li>
+       <li><strong>DOM Properties validity&mdash;</strong> customError &middot; patternMismatch &middot; rangeOverflow &middot; rangeUnderflow &middot; stepMismatch &middot; tooLong &middot; typeMismatch &middot; valueMissing &middot; valid &middot; validationMessage &middot; willValidate</li>
+       <li><strong>DOM Methods&mdash;</strong> checkValidity() setCustomValidity()</li>
+   </ul>  
+<hr>
+</section>
+
+<!-- 10.3. Data validation -->
+<section id="page104">
+	<h3>Hosted Libraries and Other optional components</h3>
+<h5>(not covered in this course)</h5>
+<h6></h6>
+<p>Make sure you are comfortable with native CSS and rudimentary Javascript before delving into libraries.</p>
+
+
+		<figure>
+			<img width="400" src="images/framework.png" alt="frameworks">
+			<figcaption><a href="https://developers.google.com/speed/libraries/">Reference on Google</a></figcaption>	
+		</figure> 
+
+
+<h5>Polyfill</h5>
+<p>In web development, a polyfill is code that implements a feature on web browsers that do not support the feature. ... Formally, "a polyfill is a shim for a browser API". <a href="https://en.wikipedia.org/wiki/Polyfill_(programming)" target="_blank">Polyfill (programming) - Wikipedia</a></p>
+
+  <h5>CSS Icons</h5>
+	  <p>
+	  	 <a href="http://www.w3schools.com/icons/default.asp" target="_blank" 
+			   class="w3-bar-item w3-button" style="padding:0;">Learn icons</a>
+		</p>  <p>
+			
+	 
+			<a href="http://www.w3schools.com/css/css_icons.asp" target="_blank" 
+			   class="w3-bar-item w3-button" style="padding:0;">CSS Icons</a>
+		</p>
+<h5>More CSS3</h5>  
+  
+ <p>
+			<a href="http://www.w3schools.com/css/css3_borders.asp" target="_blank" 
+			   class="w3-bar-item w3-button" style="padding:0;">CSS3 Rounded Corners</a>
+</p>  <p>	  
+			<a href="http://www.w3schools.com/css/css3_border_images.asp" target="_blank" 
+			   class="w3-bar-item w3-button" style="padding:0;">CSS3 Border</a>
+ </p>  <p> 
+			<a href="http://www.w3schools.com/css/css3_images.asp" target="_blank" 
+			   class="w3-bar-item w3-button" style="padding:0;">CSS3 Images</a>
+</p>  <p>	 
+			<a href="http://www.w3schools.com/css/css3_gradients.asp" target="_blank" 
+			   class="w3-bar-item w3-button" style="padding:0;">CSS3 Gradients</a>
+  </p>    
+<hr>
+</section>
+	
+</article>
+
+</div> <!-- Page content ends -->
+				
+	
+	
+<!-- 1.1.  Table of contents -->	
+<div class="col-4" style="height:400px;position:sticky;top: 70px">
+	<h5 class="card-title">Table of Content</h5>
+	<hr>
+	<nav>
+
+    <h6><a href="material_programming.html">Web programming</a></h6>
+    <hr>		
+		<h6>Client-side programing with JS</h6>
+		
+		<details open>
+      <summary><a href="#page20">Javascript Language</a></summary>
+			<a href="#page20" class="secondary">1. Introduction to Javascript</a>
+			<a href="#page21" class="secondary">2. Including Javascript in HTML</a>
+			<a href="#page22" class="secondary">3. Adding behaviour with Javascript</a>
+			<a href="#page23" class="secondary">4. Accelerating Initialization</a>
+			<a href="#page24" class="secondary">5. Input and Output </a>
+			<a href="#page25" class="secondary">6. Basic Grammar </a>
+			<a href="#page26" class="secondary">7. Debugging Javascript Code</a>
+      <a href="#page27" class="secondary">8. Unobtrusive Javascript</a>
+		</details>
+
+		<details>
+      <summary><a href="#page30">Javascript Variables</a></summary> 
+			<a href="#page31" class="secondary">9. Identifiers and Constants</a>
+			<a href="#page32" class="secondary">10. Expressions</a>
+			<a href="#page33" class="secondary">11. Special values</a>
+			<a href="#page34" class="secondary">12. Declaring variables </a> 
+			<a href="#page35" class="secondary">13. Variable scope</a> 
+		</details>		
+		
+		<details>
+      <summary><a href="#page40">Javascript Programs</a></summary> 
+			<a href="#page41" class="secondary">14. Simple Statements</a>			
+			<a href="#page42" class="secondary">15. Code blocks and program flow</a>
+			<a href="#page43" class="secondary">16. Control structures</a>
+		</details>
+		
+		<details>
+			<summary><a href="#page50">Javascript Operators</a></summary>  
+			<a href="#page51" class="secondary">17. Assignment</a>
+      <a href="#page52" class="secondary">18. Expressions and operators</a>
+			<a href="#page53" class="secondary">19. Arithmetic and conditionals</a>
+			<a href="#page54" class="secondary">20. Concatenation and addition</a>
+			<a href="#page55" class="secondary">21. Priority (precedence)</a>
+		</details>	
+			
+		<details>
+			<summary><a href="#page60">Javascript Data Structures</a></summary> 
+			<a href="#page61" class="secondary">22. Object-oriented vs. object-based</a>
+      <a href="#page62" class="secondary">23. Data and common structures </a>
+			<a href="#page63" class="secondary">24. Basic Data Types</a>
+      <a href="#page64" class="secondary">25. Primitive Types</a>	
+      <a href="#page65" class="secondary">26. Strings</a>	      
+		</details>
+
+		<details>
+			<summary><a href="#page70">Javascript Objects	</a> </summary> 	
+			<a href="#page71" class="secondary">27. Built-in types</a>       
+			<a href="#page72" class="secondary">28. Custom objects</a>
+			<a href="#page73" class="secondary">29. DOM Objects</a>
+			<a href="#page74" class="secondary">30. Browser Environment</a>
+		</details>	
+
+
+		<details>
+			<summary><a href="#page80">Javascript Functions </a></summary> 
+			<a href="#page81" class="secondary">31. Function basics</a>
+			<a href="#page82" class="secondary">32. Anonymous Functions</a>	
+			<a href="#page83" class="secondary">33. Callback functions</a>
+			<a href="#page84" class="secondary">34. Exception handling statements</a>
+		</details>			
+
+		
+
+		<details>
+			<summary><a href="#page90">Event handling</a> </summary> 
+			<a href="#page91" class="secondary">35. Event Handler</a>
+			<a href="#page92" class="secondary">36. Eliciting user feedback</a>
+			<a href="#page93" class="secondary">37. Using events</a>
+			<a href="#page94" class="secondary">38. Event capture and bubbling</a>
+		</details>	
+		
+		
+		<details>
+			<summary><a href="#page100">Javascript forms</a> </summary> 
+			<a href="#page101" class="secondary">39. How forms are processed</a>
+			<a href="#page102" class="secondary">40. HTML5 and CSS3 form components</a>
+			<a href="#page103" class="secondary">41. Data validation</a>		
+		</details>			
+
+	
+    <hr>    
+    <h6><a href="material_php.html">Server-side programing with PHP</a></h6>	
+    <hr>    
+    <h6><a href="material_databases.html">SQL database language and MySQL</a></h6>	
+        <hr> 
+   
+    <h6><a href="material_regex.html">Regular expressions (regex)</a></h6>
+    <hr>
+      <p data-toggle="modal" data-target="#exampleModalCenter">Course Learning Outcomes</p>
+    <hr>     
+		<a href="#top"  type="button" class="btn btn-info" style="position:fixed;bottom:-5px;text-align:center;">Back to top</a>
+	
+	</nav>
+</div>
+</div> 
+
+</main>
+
+<!-- 
+  ** *******************************************
+  ** Footer
+  ** *******************************************
+-->	
+<footer class="container">   
+    <div class="xsmall fa fa-copyright" style="padding:1% 13%;text-align:center;">
+        <em>This work is the intellectual property of Sheridan College. Any further copying 
+        and distribution outside of class must be within the copyright law. Posting to 
+        commercial sites for profit is prohibited.</em>
+    </div>   
+    <address style="text-align:center;">SYST10199 Web Programming |&nbsp;Sheridan College, <a href="http://www-acad.sheridanc.on.ca/~bajcar/">Ellen Bajcar, et al</a></address> 					
+
+</footer>     
+
+    </div><!-- /.container --> 
+    
+
+    
+    
+ <!-- 
+  **
+  ** Modal Learning Outcomes
+  **
+  -->
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Learning Outcomes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+			<ol>
+				<li value="1">Apply dynamically-typed variables with implicit type conversion to 
+the creation of simple web apps using JavaScript and PHP. &#10004;</li>
+<li value="2">Apply JavaScript and PHP functions and control structures 
+(including selection and repetition) to the creation of simple web 
+apps. &#10004;</li>
+<li value="3">Design small client-side web apps that employ JavaScript functions 
+to respond to HTML DOM events, receive input from HTML form elements 
+and produce output by making changes to the HTML DOM. &#10004;</li>
+<li value="4">Apply JavaScript's support for first class functions to the 
+creation of simple client-side web apps. &#10004;</li>
+<li value="5">Create PHP scripts that respond to HTTP requests containing GET 
+and POST parameters to produce custom HTML content drawn from a one-
+table, multi-column MySQL database. &#10004;</li>
+<li value="6">Create PHP scripts that respond to user requests by inserting, 
+updating and/or deleting rows stored in a one-table, multi-column 
+MySQL database. &#10004;</li>
+<li value="7">Create PHP scripts that make effective use of session management 
+techniques. &#10004;</li>
+<li value="8">Apply best practices in internal documentation (including 
+commenting, indenting and entity-naming), file naming and web site 
+commenting, indenting and entity-naming), file naming and web site 
+structure to the development of web apps. &#10004;</li>
+<li value="9">Design client-server web apps that make use of JavaScript on the 
+client side for dynamic content and PHP and MySQL on the server side 
+for the generation of custom content. &#10004;</li>
+			</ol>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+  
+
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	
+<!-- scripts -->     
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>	
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/languages/htmlbars.min.js"></script>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/languages/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/languages/markdown.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+}); 	
+	
+	
+    
+/*!
+ * IE10 viewport hack for Surface/desktop Windows 8 bug
+ * Copyright 2014-2017 The Bootstrap Authors
+ * Copyright 2014-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// See the Getting Started docs for more information:
+// https://getbootstrap.com/getting-started/#support-ie10-width
+
+(function () {
+  'use strict'
+
+  if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+    var msViewportStyle = document.createElement('style')
+    msViewportStyle.appendChild(
+      document.createTextNode(
+        '@-ms-viewport{width:auto!important}'
+      )
+    )
+    document.head.appendChild(msViewportStyle)
+  }
+
+}())    
+    </script>
+  </body>
+</html>

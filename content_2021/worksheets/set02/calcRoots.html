@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tutorial 1 Q3</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: 
+Version: 0.1
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Practice Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+	Write a program that calculates roots of a quadratic equation
+	Implicit equation of a line, when $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$ Present the results in a 10x10 table for values of a and c between 0 and 9.
+-->	
+</head>
+<body>
+	<header>
+		<h1>Write a program that calculates roots of a quadratic equation</h1>
+	</header>
+	<main>
+	</main>
+	<footer>
+		<address>Web Programming @ Sheridan College</address>
+	</footer>
+<script>
+var a = 6;
+var b = 5;
+var c = 2;
+
+var posRoot = (-b + Math.sqrt( (b*b)-(4*a*c)).toFixed(2)) / 2*a;
+var negRoot = (-b - Math.sqrt( (b*b)-(4*a*c)).toFixed(2)) / 2*a;
+
+var parent = document.getElementsByTagName("main")[0];
+var par = parent.appendChild(document.createElement("p"));
+par.innerText = "for a=" + a + " b=" + b + " and c=" + c; 
+par.innerText += " the roots are " + posRoot.toFixed(1); 
+par.innerText += " and " + negRoot.toFixed(1); 
+
+a = -6;
+b = 5;
+c = 7;
+
+posRoot = (-b + Math.sqrt( (b*b)-(4*a*c)).toFixed(2)) / 2*a;
+negRoot = (-b - Math.sqrt( (b*b)-(4*a*c)).toFixed(2)) / 2*a;
+
+var par = parent.appendChild(document.createElement("p"));
+par.innerText = "for a=" + a + " b=" + b + " and c=" + c; 
+par.innerText += " the roots are " + posRoot.toFixed(1); 
+par.innerText += " and " + negRoot.toFixed(1);
+</script>	
+</body>
+</html>

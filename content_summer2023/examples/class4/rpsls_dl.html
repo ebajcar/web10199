@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example08_061</title>
+  <meta charset="utf-8">
+<style>
+body {
+    width: 980px;
+    margin: 0 auto;
+    text-align: center;
+}
+main {
+  width: 60vw;
+  margin: auto;
+  text-align: center;
+  box-sizing: border-box;
+  padding-left:10px;
+}
+dl.gallery {
+  box-sizing: border-box;
+  border: 1px solid #000;
+  background-color: #ddd;
+  width: 19%;
+  text-align: center;
+  padding: 10px;
+  float: left;
+  margin-right: 1%;
+}
+
+.gallery dt { 
+  font-weight: bold; 
+  text-transform: uppercase;
+}
+
+.gallery dt img {
+  background-color: white;
+  border: 1px dashed #000;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery dd {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  font-size: 0.75vw;
+} 
+</style>
+</head>
+<body>
+	<h1>Rock&mdash;Paper&mdash;Scissors&mdash;Lizard&mdash;Spock</h1>
+    <h3>Styled Definition Lists with images</h3>
+
+<main>
+  <dl class="gallery" data-human-choice="paper">
+	<dt><img src="images/paper.png" alt="paper"></dt>
+	<dt>paper</dt>
+	<dd>covers rock<br>disproves Spock</dd>
+  </dl>
+  <dl class="gallery" data-human-choice="rock">
+	<dt><img src="images/rock.png" alt="rock"></dt>
+	<dt>rock</dt>
+	<dd>crushes scissors<br>crushes lizard</dd>
+  </dl>
+  <dl class="gallery" data-human-choice="scissors">
+	<dt><img src="images/scissors.png" alt="scissors"></dt>
+	<dt>scissors</dt>
+	<dd>cuts paper<br>decapitates lizard</dd>
+  </dl>
+  <dl class="gallery" data-human-choice="lizard">
+	<dt><img src="images/lizard.png" alt="lizard"></dt>
+	<dt>lizard</dt>
+	<dd>poisons Spock<br>eats paper</dd>
+  </dl>
+  <dl class="gallery" data-human-choice="spock">
+	<dt><img src="images/spock.png" alt="spock"></dt>
+	<dt>spock</dt>
+	<dd>smashes scissors<br>vaporizes rock</dd>
+  </dl>
+</main>
+  	<p style="display:block;width:100%;clear:both">
+		<button id="greset">Reset game</button>	
+        <div id="aimove">Welcome!</div> 
+	</p>
+	   
+<script>
+var machine;
+var message = "";
+var choices = ["paper", "scissors", "rock", "lizard", "spock" ];
+var winner = { 
+    rock : [ "paper", "spock"],
+    paper : [ "scissors", "lizard"],
+    scissors : [ "spock", "rock" ],
+    lizard : [ "rock","scissors" ],
+    spock : [ "lizard", "paper" ]
+};
+var aimove = document.getElementById("aimove");
+  
+function cellClick(cell){
+    machine = Math.floor((Math.random() * 5) + 1);
+    var csel = choices[machine-1];
+    //var hsel = document.getElementById("move").value;
+    var hsel = cell.getAttribute("data-human-choice");
+    //console.log( "machine selected " + csel + " you selected " + hsel );
+    if ( csel == hsel ) 
+        message = " IT'S A TIE! "; 
+    else
+        (winner[csel][0] == hsel || winner[csel][1] == hsel) 
+            ? message = " YOU WIN! " 
+            : message = " MACHINE WINS! ";  
+    //TODO: use DOM methods to insert proper nodes            
+    aimove.innerHTML = "<br> Computer chose:  ";
+    aimove.innerHTML += "<img src='images/"+csel+".png' alt='' height='30'> " + csel;
+    aimove.innerHTML += " &mdash; You chose ";
+    aimove.innerHTML += "<img src='images/"+hsel+".png' alt='' height='30'> " + hsel;
+    aimove.innerHTML += "<br><br>  " + message;      
+}  
+	function init() {
+		// event: when the user selects an option
+		var board = document.getElementsByTagName("DL");
+        var howMany = board.length;
+        for (let i=0; i < howMany; i++) 
+          board[i].addEventListener("click", function(){
+            cellClick(this);
+            });
+		// event: when the user click reset button
+		document.getElementById("greset").addEventListener("click", function(){
+			location.reload();
+			}, false);
+	} // end of init function	
+	document.addEventListener("DOMContentLoaded", init, false);
+</script>	  
+</body>
+</html>
