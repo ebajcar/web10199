@@ -45,9 +45,15 @@
     <div class="slides">
        
 <!-- title slide -->
-        <section data-background="images/Week2_notes.png">
-            <h1></h1>
-        </section>        
+    <section>
+        <h2 style="line-height:1em;padding:0;margin:0;"><span>SYST10199</span>&nbsp;</h2>		
+        <h2 style="color:#0081a1;line-height:1em;margin:0;padding:0;border-bottom: 1px gray solid">
+            <span style="font-size:2.5em;line-height:0.7em;margin:0;padding:0;">Web</span><br>
+            <small style="font-size:0.7em;line-height:0.6em;"> Programming</small>
+        </h2>
+        <p>Class 2 Notes</p>	
+    </section>       
+
 
 <!-- slide 1 -->
     <section data-transition="slide" data-background="#003767" data-background-transition="zoom">
@@ -60,6 +66,7 @@
         <li>(8) Apply best practices in internal documentation, file naming and web site structure&hellip; </li>
         </ul>
     </section> 
+    
     
 <!-- slide 2 -->
         <section>
@@ -75,7 +82,7 @@
               <li>What is web programming?<br><small style="color:gray">Plan, analyze, design, construct, document, test, publish. <br>Standards, conventions, best practices.</small> </li>
               <li>What is full-stack development?<br><small style="color:gray">Client-side, server-side, communication, ... <br>Algorithms, performance, storage.</small></li>              
             </ul>	
-            <p><small><a href="https://ebajcar.github.io/web10199/content_winter2023/learnweb/index.html" target="_blank">link</a></small></p>
+            <p><small><a href="https://ebajcar.github.io/web10199/content_summer2023/learnweb/index.html" target="_blank">https://ebajcar.github.io/web10199/content_summer2023/learnweb/index.html</a></small></p>
         </section> 
           
 <!-- slide 4 -->
@@ -87,7 +94,7 @@
                 <li>variables<br><small style="color:gray">&mdash; weekly-typed, scope: global, local, block</small> </li>
                 <li>operators<br><small style="color:gray">&mdash; assignment, conditional, arithmetic, strings, </small></li>
             </ol>		
-            <p><small><a href="https://ebajcar.github.io/web10199/content_winter2023/learnjs/index.html" target="_blank">link</a></small></p>
+            <p><small><a href="https://ebajcar.github.io/web10199/content_summer2023/learnjs/index.html" target="_blank">https://ebajcar.github.io/web10199/content_summer2023/learnjs/index.html</a></small></p>
         </section>   
 
 <!-- slide 4 
@@ -113,6 +120,94 @@
                 <li>ultimately, move code to an external file</li>
             </ol>
         </section>
+        
+        
+ <!--       
+ 				<section>
+					<h2>Client-side Programming</h2>
+                    <p><span style="color:#0081a1">Javascript (JS)</span> in the browser</p>			
+				</section>
+  
+				<section>
+					<h2>JavaScript (JS)</h2>
+					<ul>
+						<li class="fragment fade-left">a lightweight, interpreted (just-in-time compiled), programming language 
+              <span style="display: inline-block;color: #0081a1;" class="fragment fade-left"> with first-class functions</span>   
+            </li>
+            <li class="fragment fade-left"> a prototype-based, multi-paradigm, single-threaded, dynamic language</span>
+            </li>
+            <li class="fragment fade-left"> supports
+              <span style="display: inline-block;color: #0081a1;" class="fragment fade-left">  object-oriented, imperative, </span>
+              <span style="display: inline-block;" class="fragment fade-left"> and declarative styles</span>
+            </li>
+					</ul>				
+				</section>      
+-->
+ 				<section>
+					<h2>JavaScript (JS)</h2>
+					<ol>
+						<li><span style="color:#0081a1">Standards</span> are  
+            <ul style="font-size:0.7em">
+              <li><a href="https://tc39.es/ecma262/" target="_blank">ECMAScript Language Specification (ECMA-262)</a> and</li> 
+              <li><a href="https://tc39.es/ecma402/" target="_blank">ECMAScript Internationalization API specification (ECMA-402)</a></li>
+            </ul></li>
+						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><span style="color:darkorange">Documentation</span> throughout MDN</a> is based on the latest draft versions of ECMA-262 and ECMA-402.</li>
+					</ol>				
+				</section>   
+ 
+ 
+				<section>
+					<h2>Inline Javascript</h2>
+          <h3>Obtrusive.</h3>
+					<p>
+						 <span style="color:darkorange">TO BE AVOIDED!</span> 
+					</p>
+					<pre><code class="html" data-line-numbers="1-4">&lt;a onMouseOver="alert('you rolled over me');" 
+    href="file.html" target="_blank">
+  Move mouse over this text
+&lt;/a></code></pre>
+				</section> 
+
+
+				<section>
+					<h2>Embedded Javascript</h2>
+					<p>
+						 <span style="color:orange">Good during development or <br>small amount of unique to-the-page code.</span>
+					</p>          
+					<p>
+						Add Javascript at the end of BODY element <br>using the &lt;script> element
+					</p>
+					<pre><code class="html" data-line-numbers="1,6,7">&lt;script>
+/* declare and initialize variable txt to store a value */
+txt = "Hello world!";
+// display the stored value in variable txt at the console
+console.log(txt);
+&lt;/script>
+&lt;/body></code></pre>
+				</section> 
+        
+				<section>
+					<h2>External Javascript</h2>
+					<p>
+						 <span style="color:darkorange">Unobtrusive.</span> <span style="color:#0081a1">Code reusability. Code maintenance.</span> <br>Organize code in external files.
+					</p> 
+					<p>
+						Add Javascript at the end of BODY element using the &lt;script> element
+					</p>
+					<pre><code class="html" data-line-numbers="1,2,3">&lt;script src="js/filename.js">&lt;/script>
+&lt;script src="js/anotherone.js">&lt;/script>   
+&lt;script>/* may have some internal code */&lt;/script>       
+&lt;/body></code></pre>
+				</section>                
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
 <!-- slide 6 -->
         <section data-background="images/bg_exercises.png">

@@ -46,29 +46,34 @@
       
 
 				<section>
-					<h2>Web Programming</h2>
-          <h3><span style="color:#0081a1">SYST10199</span></h3>			
-          <p>Class 1 Notes</p>	
+					<h2 style="line-height:1em;padding:0;margin:0;"><span>SYST10199</span>&nbsp;</h2>		
+                    <h2 style="color:#0081a1;line-height:1em;margin:0;padding:0;border-bottom: 1px gray solid">
+                        <span style="font-size:2.5em;line-height:0.7em;margin:0;padding:0;">Web</span><br>
+                        <small style="font-size:0.7em;line-height:0.6em;"> Programming</small>
+                    </h2>
+                    <p>Class 1 Notes</p>	
 				</section>
+  
   
 				<section>
 					<h2>SLATE Content</h2>
 					<ol>
 						<li>Home page <br><small style="color:gray">Course material, Evaluation Timeline, About your professor, Class Q&A, Class Plan Information, Topical Outline, Announcements</small></li>
-            <li>Assessments > Grades</li>
+                        <li>Assessments > Grades</li>
 						<li>Assessments > Assignments <br><small style="color:gray">Some assignments will be published sites</small></li>
 						<li>Assessments > Quizzes <br><small style="color:gray">Some assignments will be in a quiz form</small> </li>
 						<li>Course Outline  <br><small style="color:gray">Official Sheridan outline</small></li>
 					</ol>				
 				</section>      
       
+      
 				<section>
 					<h2>Development environment</h2>
 					<ol>
-            <li>Same as last semester - no changes</li>
-						<li>Use Notepad++ text editor<br><small style="color:gray">(or VS Code, Atom, Brackets, Sublime)</small></li>
-						<li>Avoid using IDEs at this time<br><small style="color:gray">(if you do, make sure you clean up all hidden and unused files, and correct all unnecessary markup usually added by such tools; do not follow defaults, unless the tool follows the latest standards and conventions used in this course)</small> </li>
-						<li>renew your access to dev.fast.sheridanc.on.ca  <br><small>&mdash; visit http://tech.fast.sheridanc.on.ca/ > Services > LAMP / Git<br>&mdash; to reset password (if you forgot it), to access cPanel and other server information</small></li>
+						<li>Use Notepad++ or VS Code text editor </li>
+						<li>Avoid using IDEs at this time<br><small style="color:#bbb">&mdash;if you do, you are responsible to clean up directories and follow all standards and conventions taught in the course.</small> </li>
+						<li>renew your access to dev.fast.sheridanc.on.ca  <br><small style="color:#bbb">&mdash; visit http://tech.fast.sheridanc.on.ca/ > Services > LAMP / Git<br>&mdash; to reset password (if you forgot it), to access cPanel and other server information</small></li>
+                        <li>Use FileZilla (SFTP protocol) <br><small style="color:#bbb">&mdash;to publish projects on dev.fast.sheridanc.on.ca</small></li>
 					</ol>				
 				</section>  
         
@@ -87,87 +92,12 @@
 						<li>Organize with HTML5 (structure)</li>
 						<li>Style with CSS3 (presentation)</li>
 						<li>Add behaviour with JS (client-side functionality)</li>
-            <li>Enhance with PHP. (server-side functionality)</li>
+                        <li>Enhance with PHP. (server-side functionality)</li>
 					</ol>				
 				</section> 
         
         
-				<section>
-					<h2>Client-side Programming</h2>
-          <p><span style="color:#0081a1">Javascript (JS)</span> in the browser</p>			
-				</section>
-  
-				<section>
-					<h2>JavaScript (JS)</h2>
-					<ul>
-						<li class="fragment fade-left">a lightweight, interpreted (just-in-time compiled), programming language 
-              <span style="display: inline-block;color: #0081a1;" class="fragment fade-left"> with first-class functions</span>   
-            </li>
-            <li class="fragment fade-left"> a prototype-based, multi-paradigm, single-threaded, dynamic language</span>
-            </li>
-            <li class="fragment fade-left"> supports
-              <span style="display: inline-block;color: #0081a1;" class="fragment fade-left">  object-oriented, imperative, </span>
-              <span style="display: inline-block;" class="fragment fade-left"> and declarative styles</span>
-            </li>
-					</ul>				
-				</section>      
 
- 				<section>
-					<h2>JavaScript (JS)</h2>
-					<ol>
-						<li><span style="color:#0081a1">Standards</span> are  
-            <ul style="font-size:0.7em">
-              <li><a href="https://tc39.es/ecma262/" target="_blank">ECMAScript Language Specification (ECMA-262)</a> and</li> 
-              <li><a href="https://tc39.es/ecma402/" target="_blank">ECMAScript Internationalization API specification (ECMA-402)</a></li>
-            </ul></li>
-						<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><span style="color:darkorange">Documentation</span> throughout MDN</a> is based on the latest draft versions of ECMA-262 and ECMA-402.</li>
-					</ol>				
-				</section>   
- 
- 
-				<section>
-					<h2>Inline Javascript</h2>
-          <h3>Obtrusive.</h3>
-					<p>
-						 <span style="color:darkorange">TO BE AVOIDED!</span> 
-					</p>
-					<pre><code class="html" data-line-numbers="1-4">&lt;a onMouseOver="alert('you rolled over me');" 
-    href="file.html" target="_blank">
-  Move mouse over this text
-&lt;/a></code></pre>
-				</section> 
-
-
-				<section>
-					<h2>Embedded Javascript</h2>
-					<p>
-						 <span style="color:orange">Good during development or <br>small amount of unique to-the-page code.</span>
-					</p>          
-					<p>
-						Add Javascript at the end of BODY element <br>using the &lt;script> element
-					</p>
-					<pre><code class="html" data-line-numbers="1,6,7">&lt;script>
-/* declare and initialize variable txt to store a value */
-txt = "Hello world!";
-// display the stored value in variable txt at the console
-console.log(txt);
-&lt;/script>
-&lt;/body></code></pre>
-				</section> 
-        
-				<section>
-					<h2>External Javascript</h2>
-					<p>
-						 <span style="color:darkorange">Unobtrusive.</span> <span style="color:#0081a1">Code reusability. Code maintenance.</span> <br>Organize code in external files.
-					</p> 
-					<p>
-						Add Javascript at the end of BODY element using the &lt;script> element
-					</p>
-					<pre><code class="html" data-line-numbers="1,2,3">&lt;script src="js/filename.js">&lt;/script>
-&lt;script src="js/anotherone.js">&lt;/script>   
-&lt;script>/* may have some internal code */&lt;/script>       
-&lt;/body></code></pre>
-				</section>         
 
         <!--
 				<section data-background-iframe="https://ebajcar.w3spaces.com/" data-background-interactive>
@@ -199,9 +129,12 @@ console.log(txt);
 				</section>  
  -->
         <section data-transition="slide" data-background="#003767" data-background-transition="zoom">
-        <h2>Prepare for next class</h2>
-        <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">Study the assigned material and make notes.</span><br> <span style="color:#00b2ce">Complete Worksheet 1 </span><br>&mdash;<br>Post your questions and potential/alternate solutions on the SLATE Discussion board<br>or bring to next class. Answer other students' questions. Start a conversation.
-        <br>&mdash;
+            <h2>Prepare for next class</h2>
+            <span style="font-weight:bold;color:lightgray;text-shadow:1px 1px 2px white;">Study the assigned material and make notes.</span><br> 
+            <span style="color:#00b2ce">Complete Worksheet 1 </span><br>
+            &mdash;<br>
+            Post your questions, answer others' questions, and start a conversation on Course Q&amp;A<br>
+            &mdash;
         </section> 
         
        

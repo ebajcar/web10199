@@ -46,10 +46,10 @@ Description:
         <form  target="_blank">
             <p>Progress (defaults): <progress></progress> <span> 73</span>%</p>  
             <hr>
-            <p>Progress: <progress min="20" max="100" value="11"></progress> <span id="progv"> 11</span>%</p> 
+            <p>Progress: <progress min="20" max="100" value="11"></progress> <span> 11</span>%</p> 
             <hr>
             <!-- requires JS -->
-            <p>Progress: <progress id="prog" max="100"> <span id="progv"> </span>%</progress></p>   
+            <p>Progress: <progress id="prog" max="100"></progress> <span id="progv"> %</span></p>   
         </form>
         <figcaption>
         <a href="https://www.w3schools.com/tags/tag_progress.asp" target="_blank">FIGURE 2: more examples on w3schools </a>
@@ -80,12 +80,14 @@ Description:
   </address>
 </footer>
 <script>
-  var progressBar = document.getElementById('prog');
+  const progressBar = document.getElementById('prog');
+  const textBar = document.getElementById('progv');
   function updateProgress(newValue) {
+    console.log(newValue);
     progressBar.value = newValue;
-    document.getElementById('progv').textContent = newValue;
+    textBar.textContent = newValue+"%";
   }
-  progressBar.onhover = updateProgress(Math.floor(Math.random() * 100);
+  progressBar.onclick = () => updateProgress(Math.floor(Math.random() * 100));
 </script> 
       
 </body>
