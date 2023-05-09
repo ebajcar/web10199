@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h2>String</h2>
-<p>See primitives_string.html</p>
 
 <h2>Boolean</h2>
 <pre><code>
@@ -20,23 +18,6 @@ const bigInt = 1234567890123456789012345678901234567890n;
 console.log(bigInt, typeof(bigInt));
 </code></pre>
 
-<h2>Number</h2>
-<pre><code>
-var n = 123;
-{
-let n = 12.345;
-console.log(n, typeof(n), "inside first block");
-}
-console.log(n, typeof(n), "outside");
-// cannot re-declare with let
-var n = "abcd";
-console.log("var n = 'abcd'; // declaration");
-{
-let n = 7.3;
-console.log(n, typeof(n), "inside second block");
-}
-console.log(n, typeof(n), "outside"); 
-</code></pre>
 
 <h2>null</h2>
 <pre><code>
@@ -66,27 +47,10 @@ console.log(nameFieldChecked, gameState, isGreater, isGreater2, typeof(isGreater
 const bigInt = 1234567890123456789012345678901234567890n;
 console.log(bigInt, typeof(bigInt));
 
-// numbers
-var n = 123;
-{
-let n = 12.345;
-console.log(n, typeof(n), "inside first block");
-}
-console.log(n, typeof(n), "outside");
-// cannot re-declare with let
-n = "abcd";
-console.log("var n = 'abcd'; // declaration", n, typeof(n));
-{
-let n = 7.3;
-console.log(n, typeof(n), "inside second block");
-}
-console.log(n, typeof(n), "outside");
-
 // null is not a “reference to a non-existing object” or a “null pointer” like in some other languages.
 // a special value which represents “nothing”, “empty” or “value unknown”.
 let age = null;
 console.log("age ", age, typeof(age));
-
 
 // The special value undefined makes a type of its own, just like null.
 // The meaning of undefined is “value is not assigned”.
