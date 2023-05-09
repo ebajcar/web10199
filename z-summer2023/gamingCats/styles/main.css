@@ -1,0 +1,114 @@
+/*
+Author: 		  Ellen Bajcar
+File name: 		main.css
+Date Created:	Summer 2019
+Date Updated: Fall 2019
+Version: 		  2019.5.1 
+Purpose: 		  learning Javascript programming; assignment requirements
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    See README.txt file, located in this project's root directory
+
+@import url('https://fonts.googleapis.com/css?family=Asap+Condensed|Luckiest+Guy');
+CSS Rules:
+    :root{}
+    html, body, main, nav, header, footer, aside, h1, .flex-container{}
+    body{}
+    main, nav, aside{}
+    footer{}
+    header{}
+    header h1{}
+    aside{}
+    aside h4{}
+    .flex-container{}
+Query Media:
+    @media all and (min-width: 900px){}
+    @media all and (max-width: 899px){}
+*/
+@import url('https://fonts.googleapis.com/css?family=Akronim|Asap+Condensed|Barrio|Frijole|Luckiest+Guy|Princess+Sofia');
+:root {
+	--bgwhite: #fff;	
+	--fontcolor: #093D6D;
+    --sherblue: #093D6D;
+    --sherteal: #1AC6D9;
+    --sherorange: #ff5C10;
+	--fontfam: 'Luckiest Guy', cursive;
+	--fontbody: 'Asap Condensed', sans-serif;
+	--fonttitle: 'Akronim', cursive;
+	--gap-sm: 5px;
+	--gap-md: 10px;
+	--gap-lg: 25px;
+}
+
+html, body, main, nav, header, footer, aside, h1, .flex-container {
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+    background-image: url('http://bajcar.dev.fast.sheridanc.on.ca/project_assets/project_cats/sher_lightb.jpg');
+    background-repeat: repeat; 
+	font-family: var(--fontbody);	
+}
+main, nav, aside {
+    background-color: var(--bgwhite); 
+    padding: var(--gap-sm); 
+	position: relative;
+}
+footer {
+	border-top: 7px solid ;
+	color: var(--sherblue);
+	padding-top: var(--gap-sm);
+	text-align: center;
+}
+header {
+    border-bottom: 25px solid var(--sherblue);
+	padding: 10px;
+    text-align: center;
+}
+/* major heading for the project on each page */
+header h1 {
+    color: var(--sherblue);
+    font-family: var(--fonttitle);
+    font-size: 7vw;
+    text-shadow: 1px 1px 2px var(--sherorange), 3px 3px 4px var(--bgwhite);
+}
+
+aside {
+    padding-right: 15px;
+	text-align: justify;
+	overflow-y: scroll;
+	max-height: 400px;
+}
+/* used for headings in the <aside> element */
+aside h4  {
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 1em 0 0 0;
+}
+
+
+/* responsive flexbox for main, aside and nav */
+.flex-container {
+  min-height: 400px;
+  background-color: var(--bgwhite); 
+  padding-bottom: var(--gap-md);
+  display: flex;
+}
+@media all and (min-width: 900px) {
+    .flex-container > main { order: 2; min-width: 12em; flex:1; }
+    .flex-container > nav     { order: 1; width: 18%; }
+    .flex-container > aside   { order: 3; width: 24%; }
+}
+@media all and (max-width: 899px) {
+    .flex-container { flex-direction: column; }
+    .flex-container > main { order: 2; min-width: 12em; flex:1; }
+    .flex-container > nav     { order: 1;  }
+    .flex-container > aside   { order: 3;  }
+}
+
+

@@ -1,0 +1,66 @@
+/*
+:not(main) > nav {
+	visibility: hidden; 
+}
+*/
+img.cat {
+  position: absolute;
+}
+.one {
+  top: -5px;
+  left: -90px;
+    z-index: 9;
+}
+.two {
+  top: -70px;
+  left: -20px;
+    z-index: 9;
+}
+.three {
+  bottom: -45px;
+  left: 0;
+    z-index: 9;
+}
+.four {
+  bottom: -10px;
+  left: 28px;
+  z-index: 5;
+}
+.five {
+  bottom: -11px;
+  right: -60px;
+  z-index: 5;
+}
+.six {
+  bottom: -12px;
+  left: 128px;
+  z-index: 5;
+  height: 120px;
+}
+.seven {
+  top: 142px;
+  left: 130px;
+    z-index: 9;
+}
+.eight {
+  bottom: -12px;
+  left: 290px;
+    z-index: 4;
+}
+@media all and (max-width: 899px) {
+  .one {
+    /*display: none;*/
+	position: fixed;
+	top: -125px;
+	left: -30px;
+  }
+  .two {
+    /*display: none;*/
+	position: fixed;
+	top: -190px;
+	left: 030px;
+  }
+  .flex-container, main {
+    height: 800px;
+  }
+}

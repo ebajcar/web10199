@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Meter element</title>
+  <meta charset="utf-8">
+<!--
+Author: 		Ellen Bajcar, et al
+Version: 		2023.3.22
+Purpose: 		class examples for learning web development 
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    explore meter and progress elements
+-->
+</head>
+<body>
+  <header>
+    <h1>HTML Forms</h1>
+  </header>
+  
+  <section>
+    <h3>Meter Element</h3>  
+    <figure>
+        <p>The apple pie had a radius of 12cm and a height of 2cm.</p>
+        <p>Radius: 12cm <meter min="0" max="20" value="12" high="15"></meter> </p> 
+        <p>Height: 2cm <meter min="0" max="10" value="2"></meter> </p> 
+        
+        <p>The grapefruit pie had a radius of 16cm and a height of 1cm.</p>
+        <p>Radius: 16cm <meter min="0" max="20" value="16" high="15">16cm</meter> </p> 
+        <p>Height: 1cm <meter min="0" max="10" value="1" low="2">1cm</meter> </p> 
+        
+        <p>Pies are considered large when the radius is 15cm or more and thin when height is 2cm or less.</p>
+
+        <figcaption>
+            <a href="https://www.w3schools.com/tags/tag_meter.asp" target="_blank">FIGURE 1: more examples on w3schools</a><br>
+            <a href="https://www.w3.org/TR/html50/forms.html#the-meter-element" target="_blank">4.10.15 The meter element (W3C Recommendation Last Updated 28 January 2023)</a> 
+        </figcaption>
+    </figure>
+  </section>
+  
+  <section>
+    <h3>Progress Element</h3> 
+    <figure>
+        <form  target="_blank">
+            <p>Progress (defaults): <progress></progress> <span> 73</span>%</p>  
+            <hr>
+            <p>Progress: <progress min="20" max="100" value="11"></progress> <span id="progv"> 11</span>%</p> 
+            <hr>
+            <!-- requires JS -->
+            <p>Progress: <progress id="prog" max="100"> <span id="progv"> </span>%</progress></p>   
+        </form>
+        <figcaption>
+        <a href="https://www.w3schools.com/tags/tag_progress.asp" target="_blank">FIGURE 2: more examples on w3schools </a>
+        </figcaption>
+    </figure>    
+  </section>
+  
+  <section>
+    <h3>What is the difference between meter and progress?</h3>
+    <dl>
+        <dt>Meter</dt>
+        <dd>The METER element defines a scalar measurement within a known range, or a fractional value.</dd>
+        <dd>attribute VALUE specifies the current value of the gauge. Required.</dd>
+        <dd>attribute HIGH specifies range that is considered to be a high value.</dd>
+        <dd>attribute LOW specifies range that is considered to be a low value.</dd>
+        
+        <dt>Progress</dt>
+        <dd>The PROGRESS element represents the completion progress of a taxk</dd>
+        <dd>attribute MAX specifies how much work the task requires in total. Default value is 1.</dd>
+        <dd>attribute VALUE specifies how much of the task has been completed.</dd>
+    </dl>
+  </section>
+
+<footer>
+  <hr class="rounded">
+  <address><strong>2021-2023 &copy; Ellen Bajcar et al, FAST, Sheridan College</strong>
+  <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+  </address>
+</footer>
+<script>
+  var progressBar = document.getElementById('prog');
+  function updateProgress(newValue) {
+    progressBar.value = newValue;
+    document.getElementById('progv').textContent = newValue;
+  }
+  progressBar.onhover = updateProgress(Math.floor(Math.random() * 100);
+</script> 
+      
+</body>
+</html>
+
+
+
+
+
+

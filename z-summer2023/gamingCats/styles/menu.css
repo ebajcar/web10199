@@ -1,0 +1,73 @@
+/*
+Author: 		Ellen Bajcar
+File name: 		buttons.css
+Date Created:	Summer 2019
+Date Updated: 
+Version: 		2019.5.10 
+Purpose: 		learning Javascript programming; assignment requirements
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    See README.txt file, located in the project's root directory
+CSS Rules:  
+    nav
+    a
+    .active
+    nav span
+    nav span:hover
+    nav span.lined.thin
+    nav span.dotted.thin
+    nav span.dashed.thin
+*/
+
+nav {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-variant: small-caps;
+}
+.active {
+  color: var(--sherorange);
+}
+nav span {
+  align-self: center;
+  background: transparent;
+  display: inline-block;
+  padding: 0.5em;
+  margin: 0.5em;
+  min-width: 100px;
+  transition: all 0.5s ease;
+  color: #093d6d;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  outline: none;
+  box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  /*
+  Above is shorthand for:
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius:15px 255px;
+  */
+}
+nav span:hover {
+  box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
+  background-color: #fff5dc;
+}
+nav span.lined.thin {
+  border: solid 2px var(--sherorange);
+  transform: rotate(-6deg);
+}
+nav span.dotted.thin {
+  border: dotted 2px var(--sherorange);
+  transform: rotate(3deg);
+}
+nav span.dashed.thin {
+  border: dashed 2px var(--sherorange);
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>q mid</title>
+</head>
+
+<body>
+
+<script>
+// function ...
+
+let createFibArray = len => {
+  if (len >= 2) {
+    let fibNums = [0, 1];
+    for (let i = 0; i < len - 2; i++) {
+     fibNums.push(fibNums[i] + fibNums[i + 1])
+    }
+    return fibNums;
+  } else {
+    return len === 2 ? [0, 1] : [0];
+  }
+} 
+
+
+
+
+console.log(createFibArray(10));
+
+//example function call
+let first10nums = createFibArray(10);
+</script>
+</script>
+</body>
+
+
+</html>

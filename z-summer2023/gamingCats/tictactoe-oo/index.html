@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hello!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="css/oo.css" />
+    <style>
+      details {
+        text-align: initial;
+        width: 40%;
+        margin: 20px auto;
+        font-family: Times;
+      }
+      summary {
+        text-align: center;
+        font-size: 2em;
+      }
+      aside {
+        width: 100%;
+        background: white;
+      }
+    </style>
+
+  </head>
+  <body>
+    <header><h2>Play &mdash; Tic Tac Toe</h2></header>
+    <main>
+      <div class="grid-container">
+        <div id="board" class="grid-item">
+          <table>
+            <tr>
+              <td>T</td>
+              <td>I</td>
+              <td>C</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>A</td>
+              <td>C</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>O</td>
+              <td>E</td>
+            </tr>
+          </table>
+        </div>
+        <div class="grid-item">
+          <button id="greset">Reset game</button>
+          <p>Player <span id="player">X</span> go!</p>
+          <h2 id="message"></h2>
+        </div>
+      </div>
+
+    </main>
+    <aside>
+     <p>There is a problem with this solution. Can you find it?</p>
+     <details>
+        <summary>Problem Solving</summary>
+        <p>There are two reasons why we tend to see a problem as a problem: it has to be solved and we're not sure how to find the best solution, and there will probably be conflicts about what the best solution is. Most of us tend to be "conflict-averse". We don't feel comfortable dealing with conflict and we tend to have the feeling that something bad is going to happen. The goal of a good problem-solving process is to make us and our organization more "conflict-friendly" and "conflict-competent".</p>
+        <p>Because people are born problem solvers, the biggest challenge is to overcome the tendency to immediately come up with a solution. Let me say that again. The most common mistake in problem solving is trying to find a solution right away. That's a mistake because it tries to put the solution at the beginning of the process, when what we need is a solution at the end of the process.</p>
+        <p>Here are seven-steps for an effective problem-solving process.</p>
+        <h3>1. Identify the issues.</h3>
+        <ul>
+          <li>Be clear about what the problem is.</li>
+          <li>Remember that different people might have different views of what the issues are.</li>
+          <li><em>Separate the listing of issues from the identification of interests (that's the next step!).</em></li>
+        </ul>
+        
+        <h3>2. Understand everyone's interests.</h3>
+        <ul>
+          <li>This is a critical step that is usually missing.</li>
+          <li>Interests are the needs that you want satisfied by any given solution. We often ignore our true interests as we become attached to one particular solution.</li>
+          <li>The best solution is the one that satisfies everyone's interests.</li>
+          <li>This is the time for active listening. Put down your differences for awhile and listen to each other with the intention to understand.</li>
+          <li><em>Separate the naming of interests from the listing of solutions.</em></li>
+        </ul>        
+        
+        <h3>3. List the possible solutions (options)</h3>
+        <ul>
+          <li>This is the time to do some brainstorming. There may be lots of room for creativity.</li>
+          <li><em>Separate the listing of options from the evaluation of the options.</em></li>
+        </ul>        
+
+       <h3>4. Evaluate the options.</h3>
+        <ul>
+          <li>What are the pluses and minuses? Honestly!</li>
+          <li><em>Separate the evaluation of options from the selection of options.</em></li>
+        </ul>     
+
+       <h3>5. Select an option or options.</h3>
+        <ul>
+          <li>What's the best option, in the balance?</li>
+          <li>Is there a way to "bundle" a number of options together for a more satisfactory solution?</li>
+        </ul>       
+
+       <h3>6. Document the agreement(s).</h3>
+        <ul>
+          <li>Don't rely on memory.</li>
+          <li>Writing it down will help you think through all the details and implications.</li>
+        </ul> 
+        
+       <h3>7. Agree on contingencies, monitoring, and evaluation.</h3>
+        <ul>
+          <li>Conditions may change. Make contingency agreements about foreseeable future circumstances (If-then!).</li>
+          <li>How will you monitor compliance and follow-through?</li>
+          <li>Create opportunities to evaluate the agreements and their implementation. ("Let's try it this way for three months and then look at it.")</li>
+        </ul> 
+        
+        <hr>
+        <cite>Seven Steps for Effective Problem Solving in the Workplace, by Tim Hicks</cite>
+        
+      </details>
+    </aside>
+    <footer><address>Web Programming @ Sheridan College</address></footer>
+    
+<!-- import the webpage's javascript file -->
+<script src="scripts/error_logic.js" defer></script>
+</body>
+</html>

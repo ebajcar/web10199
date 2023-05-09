@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width" />
+<!--
+File name: rock1.html
+Author: Ellen Bajcar
+Date created: 2015
+Date modified: February 2018
+Version: 1.0
+Description:
+	game of rock-paper-scissors
+	human player vs. computer
+	no images
+-->		
+<style>
+body {
+	background: #e0e0e0;
+    font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+main, section {
+	width: 100%;
+	margin: auto;
+	padding-top: 20px;
+	background-color: white;	
+}
+main {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	min-height: 300px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+header h1 {
+	color: #6f6f6f;   
+    font-family: Lato, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+	margin: 20px 0 0;
+    text-align: center;
+    text-shadow: 0 0 0 rgba(0,0,0,.4);
+}
+footer {
+	margin: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+button {
+	padding: 1rem;
+	border: 1px solid #ccc;
+	background-color: #ddd;
+	-webkit-transition: background-color 200ms ease;
+	transition: background-color 200ms ease;
+}
+button:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+
+
+/* navigation */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav a {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover {
+    background: #c2c2c2;
+    color: #818181;
+}
+
+/* game-specific rules */
+.aimove { 
+	display: block; 
+	width: 600px; 
+	margin: 0 auto; 
+	height: 200px; 
+	border: 1px dotted lightgray;
+	font-size: 2em;
+	font-weight: bold;
+	font-family:monospace;
+}
+form {
+	padding-top: 15px;
+}
+select {
+	width: 100px;
+	vertical-align: top;
+}
+</style>
+</head>
+<body>
+	<header><h1>Rock&mdash;Paper&mdash;Scissors</h1></header>
+	<nav>
+		<a href="">Chessboard</a>
+		<a href="">Hangman</a>
+		<a class="active" href="">Rock Paper Scissors</a>
+	</nav>	
+	<section>
+		<button id="greset">Reset game</button>
+	</section>
+	<main>
+		<div id="aimove" class="aimove"></div>
+		<form>
+			<label>Your move:</label>
+			<select  size="3" id="move">
+				<option value="rock">rock</option>
+				<option value="paper">paper</option>
+				<option value="scissors">scissors</option>
+			</select>		
+		</form>			
+	</main>	
+	<footer>
+		<address>Web Programming &copy; Sheridan College</address>	
+	</footer>	
+<script>
+var machine;
+var message = "";
+var choices = ["paper","scissors","rock"];
+var winner = { rock : "paper", paper : "scissors", scissors : "rock" };
+var aimove = document.getElementById("aimove");
+var hmove = document.getElementById("move");
+var reset = document.getElementById("greset");
+aimove.innerText = "Welcome!";
+
+hmove.onclick = function(){
+	// machine choose randomly (1,2, or 3)
+	machine = Math.floor((Math.random() * 3) + 1); 
+	
+	//get the value at corresponding index
+	var csel = choices[machine-1]; 
+	
+	// get the user's choice and compare choices
+	var hsel = hmove.value; 
+	if ( csel == hsel ) 
+		message = " IT'S A TIE! "; 
+	else
+		winner[csel] == hsel 
+			? message = " YOU WIN! " 
+			: message = " MACHINE WINS! ";
+			
+	// display results
+	aimove.innerHTML = 
+			"Computer chose: " + csel +
+			"<br> You chose " + hsel+ 
+			"<br>  " + message;
+}
+
+reset.onclick = function() {location.reload()};
+</script>		
+</body>
+</html>
