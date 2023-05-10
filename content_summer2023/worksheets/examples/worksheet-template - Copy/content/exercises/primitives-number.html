@@ -39,48 +39,33 @@
     </header>
 
     <main>
-        <h2>Worksheet One Exercises</h2>
+        <h2>Primitives - <code>number</code></h2>
         
-        <ul>
-            <li>1.3.3. Grammar, Data types, Variables, Operators</li>
-            <li>1.4.3. Introduction to Javascript (statements, variables, operators)</li>
-            <li></li>
-        </ul> 
-        <dl>
-            <dt>Primitives</dt>
-            <dd>
-                <ul>
-                    <li><a href="primitives.html">Examples</a>: primitives - Boolean, BigInt, null, undefined </li>
-                    <li><a href="primitives-number.html">Examples</a>: primitives - number</li>
-                    <li><a href="primitives-string.html">Examples</a>: primitives - string</li>
-                </ul>            
-            </dd>
-            
-            <dt>Variables</dt>      
-            <dd>
-                <ul>
-                    <li>data-conversion</li>
-                    <li>data-types</li>
-                    <li></li>
-                </ul>             
-            </dd>  
 
-            <dt>Operators</dt>  
-            <dd>
-                <ul>
-                    <li><a href="operators.html">Examples</a>: ternary operator, equality, identity</li>
-                    <li></li>
-                    <li>let-var-const</li>
-                </ul> 
-            </dd>  
+    <figure>
+        <pre class="language-js" tabindex="0"><code class="language-html">&lt;script>
+var n = 123;
+{
+let n = 12.345;
+console.log(n, typeof(n), "inside first block");
+}
+console.log(n, typeof(n), "outside");
 
-            <dt>Programs</dt>
-                <ul>
-                    <li>pageinit</li>
-                    <li></li>
-                </ul>               
-            <dd></dd>              
-        </dl>
+// cannot re-declare with let
+var n = "abcd";
+console.log("var n = 'abcd'; // declaration");
+{
+let n = 7.3;
+console.log(n, typeof(n), "inside second block");
+}
+console.log(n, typeof(n), "outside"); 
+&lt;/script></code></pre>
+        <figcaption>Figure 1: Boolean e (open dev tools to exam the output in the console).<br>
+            Expected output: <code>true false true false 'boolean'</code></figcaption>
+    </figure> 
+
+
+
     </main>
 
     <footer>
@@ -88,5 +73,24 @@
         <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
     </footer>
 
+<script>
+// numbers
+var n = 123;
+{
+let n = 12.345;
+console.log(n, typeof(n), "inside first block");
+}
+console.log(n, typeof(n), "outside");
+
+// cannot re-declare with let
+n = "abcd";
+console.log("var n = 'abcd'; // declaration", n, typeof(n));
+{
+let n = 7.3;
+console.log(n, typeof(n), "inside second block");
+}
+console.log(n, typeof(n), "outside");
+
+</script>
 </body>
 </html>
