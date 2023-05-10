@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Number</h2>
+<pre><code>
+var n = 123;
+{
+let n = 12.345;
+console.log(n, typeof(n), "inside first block");
+}
+console.log(n, typeof(n), "outside");
+// cannot re-declare with let
+var n = "abcd";
+console.log("var n = 'abcd'; // declaration");
+{
+let n = 7.3;
+console.log(n, typeof(n), "inside second block");
+}
+console.log(n, typeof(n), "outside"); 
+</code></pre>
+
+
+<script>
+// numbers
+var n = 123;
+{
+let n = 12.345;
+console.log(n, typeof(n), "inside first block");
+}
+console.log(n, typeof(n), "outside");
+// cannot re-declare with let
+n = "abcd";
+console.log("var n = 'abcd'; // declaration", n, typeof(n));
+{
+let n = 7.3;
+console.log(n, typeof(n), "inside second block");
+}
+console.log(n, typeof(n), "outside");
+</script>
+</body>
+</html>
