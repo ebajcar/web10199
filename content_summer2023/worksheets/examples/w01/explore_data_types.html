@@ -15,6 +15,12 @@
 /* 
     explore primitives and built-in objects
 */
+
+
+var guess = prompt("Guess the magic number:");
+console.log(guess, " evaluates to ", (guess == 4));
+
+
 var x = "string";
 var y = new String("string");
 console.log("x value: ", x, " typeof: ", typeof(x));
@@ -29,9 +35,6 @@ console.log("primBoo value: ", primBoo, " typeof: ", typeof(primBoo));
 console.log("objBoo value: ", objBoo, " typeof: ", typeof(objBoo));
 console.log("equal? ", (primBoo == objBoo));
 console.log("identical? ", (primBoo === objBoo));
-
-var guess = prompt("Guess the magic number:");
-console.log(guess, " evaluates to ", (guess == 4));
 </script>
 </body>
 </html>
