@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet One Problems</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }        
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet One</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="index.html" class="current">Problems</a>
+            <a href="../problems/index.html">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Version 2  - <small>Increment a number by one</small></h2>
+     <nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Problems</a></li>
+            <li><a href="increment-problem.html">Problem statement</a></li>
+            <li><a href="#">increment-v03.html</a></li>
+        </ol>
+    </nav>       
+    <p>Open Console with Inspect to see output</p>
+    <p><mark>Notice</mark> that the input value is always the default of 33, because the value was assigned when page loaded. When we select a new value, nothing happens.</p>
+        
+        <input id="uval" type="number" value="33">
+        <output id="out"></output>
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+/*
+  PROBLEM: increment a number by one (modified version of add two numbers)
+  
+  SOLUTION: 
+  1. Get (pick) a number to be incremented
+     - add HTML <input type=number>
+     - capure the value entered by user
+  2. define a function that takes one argument and returns the incremented value
+     - DONE
+  3. Call the function passing the picked number
+  4. display the result on the page.
+      - add <output> element 
+*/
+// takes 2 arguments to add any two numbers
+// if only one argument passed, it will increment it by 1
+function sum( num1, num2=1 ) {
+    return num1 + num2;
+}
+// get value from the user WHEN 
+// the EVENT onchance occurs on the object identified as uval 
+// {event-driven programming}
+uval.onchange = function() {
+    let x = uval.value;
+    // display the value
+    console.log(x);
+}
+
+</script>
+</body>
+</html>
