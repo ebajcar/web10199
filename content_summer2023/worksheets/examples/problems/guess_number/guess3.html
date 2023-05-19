@@ -57,6 +57,7 @@ guess.onclick = function() {
 	// if no, determine if 
 	//        guess is higher than number, let user know
 	//        guess is lower than number, let user know	
+    reset.setAttribute("disabled", "disabled")
 	if ( x == y ) {
 		ans.innerText = "Yes, the number is " + y;
 		//TODO: put in a delay to see the result.
