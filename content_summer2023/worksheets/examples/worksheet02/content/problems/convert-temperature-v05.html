@@ -57,14 +57,6 @@
         <h3>Enter either value to calculate the other.</h3>
         <ul role="list" class="f-switch dense">
             <li class="box">
-            <!-- Accessibility
-                https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
-                 <input type="text" inputmode="numeric" pattern="[0-9]*" id="fdegree">
-                 //let celsius = parseInt(cdegree.value);
-                 //let fahrenheit = parseInt(fdegree.value);
-                 
-                See additional validation styling   
-            -->
                 <h2 class="<h4>">Fahrenheit <input type="number" id="fdegree"></h2>
                 <hr>
                 <p class="big-value"><span id="fahren">-</span>&deg;F</p>
@@ -94,17 +86,20 @@
   3. Call the function
   4. display the result in the console.
 */
-
-// set handles for input and output elements
+// declare and initialize value in Fahrenheit
+//let fahrenheit = 93;
+//let celsius = convertToCelsius(fahrenheit);
+// display message in the console
+//document.getElementById("cels").innerText = celsius.toFixed(1);
+//document.getElementById("fahren").innerText = fahrenheit.toFixed(1);
 const fdegree = document.querySelector("#fdegree");
 const cdegree = document.querySelector("#cdegree");
 const cels = document.querySelector("#cels");
 const fahren = document.querySelector("#fahren");
 
-// declare and initialize value in Fahrenheit
-// capture user guess as a number
-// compare user guess to number-to-guess
-// how to clear an input number when a button is clicked https://stackoverflow.com/questions/72993484/how-to-clear-an-input-of-type-number-when-a-button-is-clicked#:~:text=For%20example%3A%20const%20clearBtn%20%3D%20document.querySelector%20%28%22%23clearBtn%22%29%3B%20clearBtn.addEventListener,%22%22%3B%20%7D%29%3B%20%3Cinput%20type%3D%22number%22%20id%3D%22total%22%20%2F%3E%20%3Cbutton%20id%3D%22clearBtn%22%3EReset%3C%2Fbutton%3E
+
+    // capture user guess as a number
+    // compare user guess to number-to-guess
 fdegree.addEventListener("change", function() {
     cdegree.value = "";
     let fahrenheit = fdegree.valueAsNumber; 
@@ -113,16 +108,15 @@ fdegree.addEventListener("change", function() {
     fahren.innerText = fahrenheit.toFixed(1);
 });
 
-// capture user guess as a number
-// compare user guess to number-to-guess
+    // capture user guess as a number
+    // compare user guess to number-to-guess
 cdegree.addEventListener("change", function() {
     fdegree.value = "";
-    let celsius = cdegree.valueAsNumber;    
+    let celsius = cdegree.valueAsNumber; 
     let fahrenheit = convertToFahrenheit(celsius); 
     cels.innerText = celsius.toFixed(1);
     fahren.innerText = fahrenheit.toFixed(1);
 });
-
 // look up the formula
 // T(°C) = (T(°F) - 32) × 5/9
 // &#xB0; &deg; ° degree sign
@@ -132,6 +126,7 @@ function convertToCelsius(fahrenheit) {
 function convertToFahrenheit(celsius) {
 	return (celsius * 9 / 5) + 32;
 }
+
 </script>
 </body>
 </html>
