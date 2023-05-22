@@ -39,18 +39,15 @@ console.table(values);
 
 // properties and methods available for arrays
 // https://www.w3schools.com/jsref/jsref_obj_array.asp
-var values = [];
-var n = 10;
-var pre = 0, cur = 1;
-//console.log(pre); 
-values.push(pre);
-//console.log(cur); 
+let values = [], n = 16;
+let prev = 0, cur = 1;
+values.push(prev); 
 values.push(cur);
 // explore the while loop
-var i = 0;
+let i = 0;
 while (i < n-2) {
-	var tmp = pre;
-	pre = cur;
+	let tmp = prev;
+	prev = cur;
 	cur += tmp;
     //console.log(cur);
 	values.push(cur);	

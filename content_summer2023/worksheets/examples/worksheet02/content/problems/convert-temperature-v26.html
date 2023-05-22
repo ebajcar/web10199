@@ -32,6 +32,21 @@
           text-shadow: 2px 2px 2px gray;
           padding-bottom: 20px;
         }
+        /*
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+        
+        */
+        input:invalid + span::after {
+          content: "✖";
+          padding-left: 5px;
+          color: lightgray;
+        }
+
+        input:valid + span::after {
+          content: "✓";
+          padding-left: 5px;
+          color: gray;
+        }
 	</style>
 </head>
 <body>
@@ -66,12 +81,12 @@
                  
                 See additional validation styling   
             -->
-                <h2><label>Fahrenheit <input type="number" id="fdegree"></label></h2>
+                <h2><label>Fahrenheit <input type="number" id="fdegree" pattern="[0-9]+.?[0-9]+" value="0"><span></span></label></h2>
                 <hr>
                 <p class="big-value"><span id="fahren">-</span>&deg;F</p>
             </li>          
             <li class="box">
-                <h2><label>Celsius <input type="number" id="cdegree"></label></h2>
+                <h2><label>Celsius <input type="number" id="cdegree"><span></span></label></h2>
                 <hr>
                 <p class="big-value"><span id="cels">-</span>&deg;C</p>
             </li>
@@ -109,7 +124,9 @@ const fahren = document.querySelector("#fahren");
 fdegree.addEventListener("change", function() {
     cdegree.value = "";
     let fahrenheit = fdegree.valueAsNumber; 
+        console.log(typeof(fahrenheit));
     let celsius = convertToCelsius(fahrenheit);  
+
     cels.innerText = celsius.toFixed(1);
     fahren.innerText = fahrenheit.toFixed(1);
 });
@@ -120,6 +137,8 @@ cdegree.addEventListener("change", function() {
     fdegree.value = "";
     let celsius = cdegree.valueAsNumber;  
     let fahrenheit = convertToFahrenheit(celsius); 
+    let cleanFahrenheit = sanitize(fahrenheit);
+    console.log(typeof(cleanFahrenheit));
     cels.innerText = celsius.toFixed(1);
     fahren.innerText = fahrenheit.toFixed(1);
 });
@@ -133,7 +152,14 @@ function convertToCelsius(fahrenheit) {
 function convertToFahrenheit(celsius) {
 	return (celsius * 9 / 5) + 32;
 }
-
+// check whether values are numeric
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN
+function sanitize(x) {
+  if (isNaN(x)) {
+    return Number.NaN;
+  }
+  return x;
+}
 </script>
 </body>
 </html>
