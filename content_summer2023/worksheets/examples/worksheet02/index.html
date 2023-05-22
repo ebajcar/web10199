@@ -25,6 +25,22 @@
         .current {
             font-weight: bold;
         }
+summary {
+  /* list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);*/
+  list-style-image: url(images/click-svgrepo-com.svg);
+  font-weight: normal;
+}
+summary::-webkit-details-marker {
+  /* background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);*/
+  background: url(images/click-svgrepo-com.svg);
+  color: transparent;
+}
+
+summary::first-line {
+  font-size: 1.05em;
+  color: darkblue;
+  font-weight: bold;
+)        
 	</style>
 </head>
 <body>
@@ -44,17 +60,35 @@
         <blockquote>
             <p>A computer program is shaped by its data representation and the statements that determine its flow of control.</p>
         </blockquote>
-        <small>&mdash;Unknown <cite></cite></small>       
+        <small>&mdash;<cite>Unknown</cite></small>       
 
-                        <figure>
-                            <pre class="language-html" tabindex="0"><code class="language-html">&lt;script>
-console.log("Complete worksheet 2!");
-document.write("Complete worksheet 2!");
-&lt;/script>
-&lt;/body>
-</code></pre>
-                            <figcaption>Figure 1: Code sample</figcaption>
-                        </figure>          
+     <details open>
+        <summary>Programs and flow control</summary>
+		<ol>
+			 <li>commonly-encountered types of code block such as conditional statements, loops, functions, and events.</li>
+             <li></li>
+		</ol>	
+		<p class="footer"><a href="" target="_blank">Read further&hellip;</p>        
+    </details>     
+
+     <details open>
+        <summary>Javascript Objects</summary>
+		<ol>
+			 <li>What are simple statements? What are they composed of? Describe some best practices.</li>
+             <li>What are code blocks? What is their purpose? List and explain flow control statements.</li>
+             <li>What are conditional statements?</li>
+		</ol>	
+		<p class="footer"><a href="" target="_blank">Read further&hellip;</p>        
+    </details> 
+
+     <details open>
+        <summary>Built-in Objects</summary>
+		<ol>
+			 <li>Strings, Numbers, Arrays, Math, Date, Array</li>
+		</ol>	
+		<p class="footer"><a href="" target="_blank">Read further&hellip;</p>        
+    </details> 
+    
     </main>
 
     <footer>
