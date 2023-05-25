@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet Two Exercises</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }
+        .big-value {
+          font-size: 4em;
+          font-weight: normal;
+          text-align: left;
+          text-shadow: 2px 2px 2px gray;
+          padding-bottom: 20px;
+        }
+        /*
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+        
+        */
+        input:invalid + span::after {
+          content: "✖";
+          padding-left: 5px;
+          color: lightgray;
+        }
+
+        input:valid + span::after {
+          content: "✓";
+          padding-left: 5px;
+          color: gray;
+        }
+        select {
+          width: 100%;
+        }
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Two</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="../problems/index.html">Problems</a>
+            <a href="index.html" class="current">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Date object  - <small>date range</small></h2>
+     <nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Problems</a></li>
+            <li><a href="fibonacci-problem.html">Problem statement</a></li>
+            <li><a href="#">Date object</a></li>
+        </ol>
+    </nav>       
+        <h1>Date Object</h1>
+<ul role="list" class="f-switch dense">
+    <li class="box">
+ 
+    <h4>title</h4>
+        <p>Date(), getTime(), getFullYear(), setYear(), </p>
+        <p>.className.indexOf()</p>        
+    </li>
+
+    <li class="box"> 
+        <h4>Output</h4>
+<p>It's only <span class="daysTill" id="readweek"></span> days until reading week.</p>
+		<p>It's only <span class="daysTill" id="endterm"></span> days till the end of semester.</p>  
+    </li>    
+</ul>
+
+		
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+/*
+  PROBLEM: 
+  
+  SOLUTION: 
+  1. Get (pick) a number 
+  2. define a function that 
+  3. Call the function
+  4. display the result in the console.
+*/
+	//document.addEventListener("DOMContentLoaded", showDays);
+    let all_tags = document.getElementsByTagName("*");
+    console.log("all_tags " + all_tags);
+    
+	function showDays() {
+		var allTags = document.getElementsByTagName("*");
+		for (var i=0;i < allTags.length; i++) {
+			if (allTags[i].className.indexOf("daysTill") > -1) {
+                console.log("className.indexOf " + showTheDaysTill(allTags[i].id));
+				allTags[i].innerHTML = showTheDaysTill(allTags[i].id);
+                console.log("allTags " + allTags[i].className);
+			}
+		}
+        
+	
+		function showTheDaysTill(thisDate) {
+			var theDays;
+			switch(thisDate) {
+				case "readweek":
+					theDays = daysTill(6,22);
+					break;
+				case "endterm":
+					theDays = daysTill(08,23);
+					break;					
+				default:
+			}
+			return theDays + "";
+		}
+		
+		function daysTill(mm,dd) {
+			var now = new Date();
+			var inDate = new Date(now.getFullYear(), mm-1,dd);
+            //console.log("now " + now);
+            //console.log("inDate " + inDate);
+			if (inDate.getTime() < now.getTime()) {
+                console.log("inDate.getTime " + inDate.getTime());
+                console.log("now.getTime " + now.getTime());
+				inDate.setYear(now.getFullYear()+1);
+			}
+			return (Math.ceil(dayToDays(inDate) - dayToDays(now)));
+		}
+		
+		function dayToDays(inTime) {
+			return (inTime.getTime() / (1000 * 60 * 60 * 24));
+		}
+	}
+
+</script>
+</body>
+</html>

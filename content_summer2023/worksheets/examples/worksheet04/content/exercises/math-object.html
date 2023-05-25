@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet Two Exercises</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }
+        .big-value {
+          font-size: 4em;
+          font-weight: normal;
+          text-align: left;
+          text-shadow: 2px 2px 2px gray;
+          padding-bottom: 20px;
+        }
+        /*
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+        
+        */
+        input:invalid + span::after {
+          content: "✖";
+          padding-left: 5px;
+          color: lightgray;
+        }
+
+        input:valid + span::after {
+          content: "✓";
+          padding-left: 5px;
+          color: gray;
+        }
+        select {
+          width: 100%;
+        }
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Two</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="../problems/index.html">Problems</a>
+            <a href="index.html" class="current">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Version 1  - <small>The while loop</small></h2>
+     <nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Problems</a></li>
+            <li><a href="fibonacci-problem.html">Problem statement</a></li>
+            <li><a href="#">Math object</a></li>
+        </ol>
+    </nav>       
+        <h1>Math Object</h1>
+<ul role="list" class="f-switch dense">
+    <li class="box">
+    <!-- 
+        https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Math
+        https://www.w3schools.com/js/js_math.asp
+        https://www.w3schools.com/jsref/jsref_obj_math.asp
+    -->   
+    <h4>Ceiling of a float</h4>
+        <div id="ceil"></div>	  
+    </li>
+    <li class="box">
+        <h4>Floor of a float</h4>
+        <div id="floor"></div>
+    </li>
+    <li class="box"> 
+        <h4>Truncating</h4>
+        <p id="trunc"></p>	  
+    </li>    
+</ul>
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h4>Calculate properties of a circle</h4>
+        <div id="circle"></div>
+    </li>    
+
+</ul>   
+ 
+<ul role="list" class="f-switch dense">
+    <li class="box">
+     <h4>Rounding</h4>
+        <div id="round"></div>
+    </li>
+    <li class="box"> 
+    <h4>Powers and random number generators</h4>
+        <div id="panel"></div>	  
+    </li>
+
+</ul> 		
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+/*
+  PROBLEM: 
+  
+  SOLUTION: 
+  1. Get (pick) a number 
+  2. define a function that 
+  3. Call the function
+  4. display the result in the console.
+*/
+			let panel = document.getElementById( "panel" ); 
+			let radius = 4 ;
+			let area = Math.PI * ( radius * radius ) ; // pi * r ² 
+			let circ = 2 * ( Math.PI * radius ) ; // 2 * pi * r
+			circle.innerHTML = "Circle Radius: " + radius + " m. Value of &#960; is " + Math.PI; 
+			circle.innerHTML += "<br>[ let area = Math.PI * (radius * radius); ] &mdash; Area: " + area + "m<sup>2</sup>" ; 
+			circle.innerHTML += "<br>[ let circ = 2 * ( Math.PI * radius ); ] &mdash; Circumference: " + circ + "m" ;
+            
+			floor.innerHTML += "the Math.floor( 45.95) is: " + Math.floor( 45.95); 
+			floor.innerHTML += "<br> the Math.floor(-45.95) is: " + Math.floor(-45.95); 
+			floor.innerHTML += "<br> the Math.floor( 45.95) is: " + Math.floor( 45.15); 
+			floor.innerHTML += "<br> the Math.floor(-45.95) is: " + Math.floor(-45.15); 
+			
+			ceil.innerHTML += "the Math.ceil( 45.95) is: " + Math.ceil( 45.95); 
+			ceil.innerHTML += "<br> the Math.ceil(-45.95) is: " + Math.ceil(-45.95); 
+			ceil.innerHTML += "<br> the Math.ceil( 45.95) is: " + Math.ceil( 45.15); 
+			ceil.innerHTML += "<br> the Math.ceil(-45.95) is: " + Math.ceil(-45.15); 
+			
+			trunc.innerHTML += "Math.trunc( 45.95) is: " + Math.trunc( 45.95); 
+			trunc.innerHTML += "<br> Math.trunc(-45.95) is: " + Math.trunc(-45.95); 	
+			trunc.innerHTML += "<br> Math.trunc( 45.95) is: " + Math.trunc( 45.15); 
+			trunc.innerHTML += "<br> Math.trunc(-45.95) is: " + Math.trunc(-45.15); 
+
+			round.innerHTML += "Math.round( 45.95) is: " + Math.round( 45.95); 
+			round.innerHTML += "<br>  Math.round(-45.95) is: " + Math.round(-45.95); 	
+			round.innerHTML += "<br> Math.round( 45.15) is: " + Math.round( 45.15); 
+			round.innerHTML += "<br>  Math.round(-45.15) is: " + Math.round(-45.15); 	
+			round.innerHTML += "<br>  Math.round(45.15666762) is: " + Math.round(45.15666762); 
+			round.innerHTML += "<br>  Math.round(-45.1566676) is: " + Math.round(-45.1566676); 
+			round.innerHTML += "<br>  Math.round(-45.1566) is: " + Math.round(-45.1566); 	
+			round.innerHTML += "<br>  Math.round(45.156665) is: " + Math.round(45.156665); 	
+			round.innerHTML += "<br>  Math.round(45.156665*100)/100 is: " + Math.round(45.156665*100)/100; 
+			round.innerHTML += "<br>  Math.round(45.156665*10000)/10000 is: " + Math.round(45.156665*10000)/10000; 
+			
+			panel.innerHTML += "Math.pow(7, 2) is (base=7,exponent=2) : " + Math.pow(7, 2);
+            panel.innerHTML += "<br> Math.pow(3, 8) is (base=3,exponent=8) : " + Math.pow(3, 8);             
+            panel.innerHTML += "<br>";
+            panel.innerHTML += "<br>Math.random() : " + Math.random(); 
+            panel.innerHTML += "<br>Math.random()*10 : " + Math.random()*10; 
+            panel.innerHTML += "<br>Math.random()*100 : " + Math.random()*100; 
+            panel.innerHTML += "<br>Math.floor((Math.random() * 10) + 1) : " + Math.floor((Math.random() * 10) + 1);
+            panel.innerHTML += "<br>Math.floor((Math.random() * 10) + 1) : " + Math.floor((Math.random() * 10) + 1);
+            panel.innerHTML += "<br>Math.floor((Math.random() * 6) + 1) : " + Math.floor((Math.random() * 6) + 1) ;
+            panel.innerHTML += "<br>Math.floor((Math.random() * 6) + 1) : " + Math.floor((Math.random() * 6) + 1) ;            
+            panel.innerHTML += "<br>";
+			panel.innerHTML += "<br> getRandomArbitrary(min=4, max=250): " + getRandomArbitrary(4, 250);
+			panel.innerHTML += "<br> getRandomInt(min=4, max=250): " + getRandomInt(4, 250);
+			panel.innerHTML += "<br> getRandomInt(min=4, max=4): " + getRandomInt(0, 4);
+			panel.innerHTML += "<br> getRandomInt(min=4, max=4): " + getRandomInt(0, 4);
+			
+			panel.innerHTML += "<br><br> Explore more at <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math' target='_blank'>MDN</a>";
+
+		
+		// Returns a random number between min (inclusive) and max (exclusive)
+		function getRandomArbitrary(min, max) {
+		  return Math.random() * (max - min) + min;
+		}
+		// Returns a random integer between min (included) and max (excluded)
+		// Using Math.round() will give you a non-uniform distribution!
+		function getRandomInt(min, max) {
+		  return Math.floor(Math.random() * (max - min)) + min;
+		}
+
+
+</script>
+</body>
+</html>
