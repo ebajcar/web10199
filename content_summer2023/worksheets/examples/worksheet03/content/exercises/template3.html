@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Worksheet Two Exercises</title>
+	<title>Worksheet Three Exercises</title>
     
     <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
     <link rel="stylesheet" href="../../css/prism-coy-23.css">
@@ -55,7 +55,7 @@
 <body>
 
 	<header>
-        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Two</sub-title></h1>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Three</sub-title></h1>
         <nav>
             <p class="tool-bar"><a href="../../index.html">Home</a>
             <a href="../problems/index.html">Problems</a>
@@ -64,31 +64,47 @@
     </header>
 
     <main>
-        <h2>Date object  - <small>date range</small></h2>
+        <h2>? Object  - <small>explore properties and methods</small></h2>
      <nav class="breadcrumbs" aria-label="breadcrumbs">
         <ol>
             <li><a href="index.html">Problems</a></li>
             <li><a href="fibonacci-problem.html">Problem statement</a></li>
-            <li><a href="#">Date object</a></li>
+            <li><a href="#">? object</a></li>
         </ol>
     </nav>       
-        <h1>Date Object</h1>
+        <h1>Math Object</h1>
+        <p>Read more <a href="" target="_blank">MDN web docs</a>. Some selected ones:</p>
+    <p>
+    <a class="chip" href="" target="_blank">x</a>
+    <a class="chip warn" href="" target="_blank">y</a>
+    <a class="chip ok" href="" target="_blank">z</a>
+    </p>       
+        
+ 
+        
+<ul role="list" class="f-switch dense">
+    <li class="box">  
+    <h4>heading</h4>
+        <div id="one"></div>	  
+    </li>
+    <li class="box">
+        <h4>heading</h4>
+        <div id="two"></div>
+    </li>   
+</ul>
+	
+
 <ul role="list" class="f-switch dense">
     <li class="box">
- 
-    <h4>title</h4>
-        <p>Date(), getTime(), getFullYear(), setYear(), </p>
-        <p>.className.indexOf()</p>        
+     <h4>Example functions</h4>
+                <pre class="language-js" tabindex="0"><code class="language-js">// code snippet
+
+
+
+</code></pre>    
+        <div id="snippet"></div>
     </li>
-
-    <li class="box"> 
-        <h4>Output</h4>
-<p>It's only <span class="daysTill" id="readweek"></span> days until reading week.</p>
-		<p>It's only <span class="daysTill" id="endterm"></span> days till the end of semester.</p>  
-    </li>    
-</ul>
-
-		
+</ul> 
 		
     </main>
    <footer>
@@ -106,52 +122,7 @@
   3. Call the function
   4. display the result in the console.
 */
-	//document.addEventListener("DOMContentLoaded", showDays);
-    let all_tags = document.getElementsByTagName("*");
-    console.log("all_tags " + all_tags);
-    
-	function showDays() {
-		var allTags = document.getElementsByTagName("*");
-		for (var i=0;i < allTags.length; i++) {
-			if (allTags[i].className.indexOf("daysTill") > -1) {
-                console.log("className.indexOf " + showTheDaysTill(allTags[i].id));
-				allTags[i].innerHTML = showTheDaysTill(allTags[i].id);
-                console.log("allTags " + allTags[i].className);
-			}
-		}
-        
-	
-		function showTheDaysTill(thisDate) {
-			var theDays;
-			switch(thisDate) {
-				case "readweek":
-					theDays = daysTill(6,22);
-					break;
-				case "endterm":
-					theDays = daysTill(08,23);
-					break;					
-				default:
-			}
-			return theDays + "";
-		}
-		
-		function daysTill(mm,dd) {
-			var now = new Date();
-			var inDate = new Date(now.getFullYear(), mm-1,dd);
-            //console.log("now " + now);
-            //console.log("inDate " + inDate);
-			if (inDate.getTime() < now.getTime()) {
-                console.log("inDate.getTime " + inDate.getTime());
-                console.log("now.getTime " + now.getTime());
-				inDate.setYear(now.getFullYear()+1);
-			}
-			return (Math.ceil(dayToDays(inDate) - dayToDays(now)));
-		}
-		
-		function dayToDays(inTime) {
-			return (inTime.getTime() / (1000 * 60 * 60 * 24));
-		}
-	}
+
 
 </script>
 </body>

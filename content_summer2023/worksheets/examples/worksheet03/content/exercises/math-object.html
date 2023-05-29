@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Worksheet Two Exercises</title>
+	<title>Worksheet Three Exercises</title>
     
     <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
     <link rel="stylesheet" href="../../css/prism-coy-23.css">
@@ -55,7 +55,7 @@
 <body>
 
 	<header>
-        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Two</sub-title></h1>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Three</sub-title></h1>
         <nav>
             <p class="tool-bar"><a href="../../index.html">Home</a>
             <a href="../problems/index.html">Problems</a>
@@ -64,7 +64,7 @@
     </header>
 
     <main>
-        <h2>Version 1  - <small>The while loop</small></h2>
+        <h2>Math Object  - <small>explore properties and methods</small></h2>
      <nav class="breadcrumbs" aria-label="breadcrumbs">
         <ol>
             <li><a href="index.html">Problems</a></li>
@@ -73,6 +73,19 @@
         </ol>
     </nav>       
         <h1>Math Object</h1>
+        <p>The Math namespace object contains static properties and methods for mathematical constants and functions. Math works with the Number type. It doesn't work with BigInt. Read more <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">MDN web docs</a>. Some selected ones:</p>
+    <p>
+    <a class="chip" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil" target="_blank">Math.ceil()</a>
+    <a class="chip" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor" target="_blank">Math.floor()</a>
+    <a class="chip" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc" target="_blank">Math.truc()</a>
+    <a class="chip warn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" target="_blank">Math.PI</a>
+    <a class="chip" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round" target="_blank">Math.round()</a>
+    <a class="chip" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow" target="_blank">Math.pow()</a>
+    <a class="chip ok" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random" target="_blank">Math.random()</a>
+    </p>       
+        
+ 
+        
 <ul role="list" class="f-switch dense">
     <li class="box">
     <!-- 
@@ -110,8 +123,23 @@
     <h4>Powers and random number generators</h4>
         <div id="panel"></div>	  
     </li>
-
 </ul> 		
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+     <h4>Example functions</h4>
+                <pre class="language-js" tabindex="0"><code class="language-js">// Returns a random number between min (inclusive) and max (exclusive)
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+// Returns a random integer between min (included) and max (excluded)
+// Using Math.round() will give you a non-uniform distribution!
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}</code></pre>    
+        <div id="func"></div>
+    </li>
+</ul> 
 		
     </main>
    <footer>
@@ -172,14 +200,14 @@
             panel.innerHTML += "<br>Math.floor((Math.random() * 10) + 1) : " + Math.floor((Math.random() * 10) + 1);
             panel.innerHTML += "<br>Math.floor((Math.random() * 10) + 1) : " + Math.floor((Math.random() * 10) + 1);
             panel.innerHTML += "<br>Math.floor((Math.random() * 6) + 1) : " + Math.floor((Math.random() * 6) + 1) ;
-            panel.innerHTML += "<br>Math.floor((Math.random() * 6) + 1) : " + Math.floor((Math.random() * 6) + 1) ;            
-            panel.innerHTML += "<br>";
-			panel.innerHTML += "<br> getRandomArbitrary(min=4, max=250): " + getRandomArbitrary(4, 250);
-			panel.innerHTML += "<br> getRandomInt(min=4, max=250): " + getRandomInt(4, 250);
-			panel.innerHTML += "<br> getRandomInt(min=4, max=4): " + getRandomInt(0, 4);
-			panel.innerHTML += "<br> getRandomInt(min=4, max=4): " + getRandomInt(0, 4);
+            panel.innerHTML += "<br>Math.floor((Math.random() * 6) + 1) : " + Math.floor((Math.random() * 6) + 1) ;     
+            
+			func.innerHTML += "getRandomArbitrary(min=4, max=250): " + getRandomArbitrary(4, 250);
+			func.innerHTML += "<br> getRandomInt(min=4, max=250): " + getRandomInt(4, 250);
+			func.innerHTML += "<br> getRandomInt(min=4, max=4): " + getRandomInt(0, 4);
+			func.innerHTML += "<br> getRandomInt(min=4, max=4): " + getRandomInt(0, 4);
 			
-			panel.innerHTML += "<br><br> Explore more at <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math' target='_blank'>MDN</a>";
+			//panel.innerHTML += "<br><br> Explore more at <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math' target='_blank'>MDN</a>";
 
 		
 		// Returns a random number between min (inclusive) and max (exclusive)
