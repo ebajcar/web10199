@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet Three Problems</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }
+        .big-value {
+          font-size: 4em;
+          font-weight: normal;
+          text-align: left;
+          text-shadow: 2px 2px 2px gray;
+          padding-bottom: 20px;
+        }
+        /*
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+        
+        */
+        input:invalid + span::after {
+          content: "✖";
+          padding-left: 5px;
+          color: lightgray;
+        }
+
+        input:valid + span::after {
+          content: "✓";
+          padding-left: 5px;
+          color: gray;
+        }
+        select {
+          width: 100%;
+        }
+ 
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Three</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="index.html" class="current">Problems</a>
+            <a href="../exercises/index.html">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Game of Rock Paper Scissors  - <small>develop a solution</small></h2>
+     <nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Problems</a></li>
+            <li><a href="#">game-rps.html</a></li>
+        </ol>
+    </nav>       
+
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h3>x</h3>
+        <p>x</p>
+    </li>
+</ul>
+
+        
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h4>ROCK</h4>
+    </li>
+    <li class="box">
+        <h4>PAPER</h4>
+    </li>
+    <li class="box">
+        <h4>SCISSORS</h4>
+    </li>
+</ul>
+
+
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h4>heading</h4>
+<pre class="language-js" tabindex="0"><code class="language-js">let machine;
+let message = "";
+const choices = ["paper", "scissors", "rock"];
+const looseTo = { rock : "paper", 
+                paper : "scissors", 
+                scissors : "rock" };
+let aimove = document.getElementById("aimove");
+aimove.innerText = "\nWelcome!\n";
+</code></pre>           
+        <div class="box ok">
+            <strong class="block titlebar">Output</strong><p id="two"></p>
+        </div>
+    </li>
+</ul> 
+
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h4>heading</h4>
+<pre class="language-js" tabindex="0"><code class="language-js">
+function cellClick(cell){
+    machine = Math.floor(Math.random() * 3);
+    let csel = choices[machine];
+    let hsel = cell.getAttribute("data-human-choice");
+    console.log( "machine selected: " + csel 
+                 + " | you selected: " + hsel );
+    if ( csel === hsel ) 
+        message = " IT'S A TIE! "; 
+    else
+        looseTo[csel] == hsel 
+            ? message = " YOU WIN! " 
+            : message = " MACHINE WINS! ";  
+    console.log(message);
+}</code></pre>           
+        <div class="box ok">
+            <strong class="block titlebar">Output</strong><p id="two"></p>
+        </div>
+    </li>
+</ul> 
+
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h4>ROCK</h4>
+    </li>
+    <li class="box">
+        <h4>PAPER</h4>
+    </li>
+    <li class="box">
+        <h4>SCISSORS</h4>
+    </li>
+    <li class="box">
+        <h4>LIZZARD</h4>
+    </li>
+    <li class="box">
+        <h4>SPOCK</h4>
+    </li>
+</ul>
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h4>whatCanThisChoiceBeat?</h4>
+        <p id="two">rock crushes scissors, rock crushes lizard,...</p>
+            <h4>Custom object</h4>
+            <p>Each property represents an available choice. A 2D array is used to hold the action (relation) and the other choice it beats.</p>
+            <p>Still can be used for determining a winner. Extends usage to creating user help.</p>
+<pre class="language-js" tabindex="0"><code class="language-js">	
+let whatCanThisChoiceBeat = { 
+  rock: [["crushes", "scissors"], 
+         ["crushes", "lizard"]],
+  paper: [["covers", "rock"], 
+          ["disproves", "spock"]],
+  scissors: [["cuts","paper"], 
+             ["decapitates", "lizard"]],
+  lizard: [["poisons", "spock"], 
+           ["eats", "paper"]],
+  spock: [["vaporizes", "rock"], 
+          ["smashes", "scissors"]]
+}</code></pre>           
+    </li>
+</ul> 
+
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h4>Use for...in loop to traverse objects.</h4>
+        <ul>
+            <li>for (variableName in objectOfChoice) {}</li>
+            <li>variableName takes on the next property value on each loop.</li>
+            <li>Loop terminates when it runs out of properties.</li>
+        </ul>
+        <p>Note the three dimensions.</p>
+<pre class="language-js" tabindex="0"><code class="language-js">let property; 
+for ( property in whatCanThisChoiceBeat ) {
+  console.log( property + " " + 
+      whatCanThisChoiceBeat[property][0][0] " " + whatCanThisChoiceBeat[property][0][1] );
+  console.log( "OR " + property + " " + 
+      whatCanThisChoiceBeat[property][1][0] + " " + whatCanThisChoiceBeat[property][1][1] );
+}</code></pre>           
+    </li>
+</ul> 
+
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h4>Create table structure using DOM methods.</h4>
+        <ul>
+            <li>document.createElement() is evaluated first.</li>
+            <li>then get a handle to the object you want to attach the new element.</li>
+            <li>parent.appendChild(newEl) attaches the new element.</li>
+        </ul>
+        <p>Use Object.keys() to create an array of properties.</p>
+        <p>this would replace the original choices variable (no need to duplicate)</p>
+<pre class="language-js" tabindex="0"><code class="language-js">let table = document.getElementsByTagName("main")[0].appendChild(document.createElement("table"));
+let row = table.appendChild(document.createElement("tr"));
+row.appendChild(document.createElement("td")).innerText = "➦ beats ➦";
+ 
+// Object.keys() returns an array of keys (strings)
+let choices = Object.keys(whatCanThisChoiceBeat);
+let len = choices.length;
+for (let i = 0; i &lt; len; i++) {
+  let currentTD = row.appendChild(document.createElement("td"));
+  currentTD.innerText = choices[i];
+}</code></pre>           
+    </li>
+</ul> 
+
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h4>Populate table.</h4>
+        <ul>
+            <li>Populate first column and first row with properties (same order).</li>
+            <li>if whatCanThisChoiceBeat[property][0][1] is the same as indexOf choices, then display</li>
+            <li>whatCanThisChoiceBeat[property][0][0]</li>
+        </ul>
+        <p>Arrow functions.</p>
+        <p>An arrow function expression is a compact alternative to a traditional function expression, but is limited and can't be used in all situations.</p>
+<pre class="language-js" tabindex="0"><code class="language-js">let i = 0;
+for ( property in whatCanThisChoiceBeat ) {
+  let currentTR = table.appendChild(document.createElement("tr"));
+  let currentTD = currentTR.appendChild(document.createElement("td"));
+  currentTD.innerText = choices[i]; 
+  i++;
+  for (let j = 0; j &lt; len; j++) {
+    let currentTD = currentTR.appendChild(document.createElement("td"));
+    const whichColumn = (el) => el == whatCanThisChoiceBeat[property][0][1];
+    if ( choices.findIndex(whichColumn) == j)
+      currentTD.innerText = whatCanThisChoiceBeat[property][0][0];
+    const whichColumn2 = (el) => el == whatCanThisChoiceBeat[property][1][1];
+    if ( choices.findIndex(whichColumn2) == j)
+      currentTD.innerText = whatCanThisChoiceBeat[property][1][0];    
+  }
+}</code></pre>           
+    </li>
+</ul> 
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h4>heading</h4>
+<pre class="language-js" tabindex="0"><code class="language-js"> 
+</code></pre>           
+        <div class="box ok">
+            <strong class="block titlebar">Output</strong><p id="two"></p>
+        </div>
+    </li>
+</ul> 
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+const handl = document.getElementById("handl");
+
+</script>
+</body>
+</html>
