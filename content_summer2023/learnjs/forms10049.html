@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+<title> SYST10049 learn HTML </title>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css"/> 
+<link rel="stylesheet" href="../css/prism_coy_dev.css"  />
+<style>
+dl, ol {
+  margin-bottom: 16px;
+}
+dt {font-weight: bold;}
+h4, h3 {
+  margin-top: 16px;
+}
+.ordered-list {
+  list-style-type: decimal;
+}
+.text-danger {
+  color: red;
+}
+.bg-dark-gray  {
+  background-color: #333940;
+}
+code {
+  color: black !important;
+}
+.sher-teal {
+  color: #00b2ce;
+}
+.bg-sher-teal {
+  background-color: #00b2ce;
+}
+figcaption {
+  color: #00b2ce;
+  font-weight: 500;
+}
+</style>
+</head>
+
+<body>
+  <nav id="navTop" class="w-full z-30 top-0 text-white bg-dark-gray ">
+    <div class="w-full container max-w-screen-lg mx-auto flex flex-wrap sm:flex-nowrap items-center justify-between mt-0 py-2">
+      <div class="md:pl-4">
+        <a class="text-white hover:text-white no-underline hover:no-underline
+        font-bold text-2xl lg:text-4xl rounded-lg hover:bg-nwoods-secondary " href="../">
+          <h1 class="mb-0 p-1 ">SYST10049</h1>
+        </a>
+      </div>
+      <button id="topnavButton" class="rounded-lg sm:hidden focus:outline-none focus:ring" aria-label="Navigation">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path id="topnavOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path id="topnavClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>      
+      <div id="topnavList" class="hidden sm:block items-center w-auto mt-0 text-white p-0 z-20">
+        <ul class="list-reset list-none font-semibold flex justify-end flex-wrap sm:flex-nowrap items-center px-0 pb-0">
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../index.html">Home</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnweb/index.html">Web development</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnhtml/index.html">Learn HTML5</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learncss/index.html">Learn CSS3</a></li>
+          
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="https://piazza.com/sheridan/winter2022/syst10049bajcar" target="_blank">Class Q&amp;A</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-b border-gray-600 opacity-50 my-0 py-0" />
+  </nav>
+    
+  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+      
+    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+      <div class="flex-shrink-0 px-8 py-4">
+        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>   
+        </button>
+      </div>   
+      <nav id="navList" class="min-h-screen hidden md:block sidebar-nav flex-grow px-1 lg:px-4 pb-4 md:pb-0 md:overflow-y-auto break-words">
+
+          <a href="index.html">HTML Markup</a>
+          <a href="standards.html">Semantic Correctness and Accessibility</a>
+          <a href="grammar.html">Syntax, Elements, and Attributes</a>
+          <a href="document.html">HTML Document</a>
+          <a href="content.html">Content Models and Organization</a>
+          <a href="form-process.html">HTML Forms</a>
+          <a href="dom.html">Document Object Model (DOM)</a>
+          <a href="textual.html">Marking up textual content</a>
+          <a href="semantics.html">Marking up semantic content</a>
+          <a href="interactive.html">Marking up interactive content</a>
+          <!--a class="bg-gray-100 text-gray-900" href="forms.html">Marking up forms</a-->    
+      </nav>
+    </div>  
+        
+    <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+	<h1 class="text-4xl font-medium leading-tight mt-0 mb-2 text-black-600">Marking up forms</h1>
+    
+  
+<section class="col-8 container">
+
+<ul class="nav nav-pills flex flex-col md:flex-row list-none pl-0 mx-40" id="pills-tabFill" role="tablist">
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+     <a href="#" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Form element</a>
+  </li> 
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+     <a href="#" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Form-associated elements</a>
+  </li> 
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+     <a href="#" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">input element</a>
+  </li> 
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+     <a href="#" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Grouping controls</a>
+  </li> 
+    <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+     <a href="#" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Other controls</a>
+  </li> 
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">pattern attribute</a>
+  </li>
+</ul>
+
+
+
+<!-- form element -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <h4 class="text-gray-900 text-2xl leading-tight font-medium mb-2 w-full sher-teal">Form element</h4>
+    <p class="text-gray-700 text-base w-full">
+      The HTML <code>&lt;form></code> element defines a form that is used to collect user input.	An HTML form contains form elements. Form elements are different types of input elements, like text fields, checkboxes, radio buttons, submit buttons, and more. HTML5 forms submit data to the web server as <code>name=value</code> pairs for processing by a specified server-side script. The <code>form</code> element acts as a container for controls. It specifies:</p>
+	<ul class="list-outside text-base">
+		<li>The layout of the form (given by the contents of the element).</li>
+		<li>The program that will handle the completed and submitted form (the action attribute). The receiving program must be able to parse name/value pairs in order to make use of them.</li>
+		<li>The method by which user data will be sent to the server (the method attribute).</li>
+		<li>A character encoding that must be accepted by the server in order to handle this form (the accept-charset attribute). User agents may advise the user of the value of the accept-charset attribute and/or restrict the user's ability to enter unrecognized characters.</li>
+		<li>A form can contain text and markup (paragraphs, lists, etc.) in addition to form controls.</li>
+	</ul>
+    <p hidden>https://www.w3.org/TR/2018/SPSD-html401-20180327/interact/forms.html</p>
+	<p>All form component elements are enclosed between <samp>form</samp> and <samp>/form</samp> tags, which must include an action attribute, to specify the URL of the processing script, and a method attribute to specify the submission method as GET or POST.</p>
+	
+	<h4 class="text-gray-900 text-xl leading-tight font-medium mb-2">Form submission method</h4>
+	<p>The method attribute of the FORM element specifies the HTTP method used to send the form to the processing agent. This attribute may take two values:</p>
+	<dl class="row">
+	  <dt class="col-sm-1 text-info">get</dt>
+	  <dd class="col-sm-11">With the HTTP "get" method, the form data set is appended to the URI specified by the action attribute (with a question-mark ("?") as separator) and this new URI is sent to the processing agent. (restricts form data set values to ASCII characters.)</dd>	 
+	  <dt class="col-sm-1 text-info">post</dt>
+	  <dd class="col-sm-11">With the HTTP "post" method, the form data set is included in the body of the form and sent to the processing agent. (with enctype="multipart/form-data", cover the entire [ISO10646] character set).</dd>	  	  
+	</dl>
+	<p>If the service associated with <strong>the processing of a form causes side effects</strong> (for example, if the form modifies a database or subscription to a service), <strong>the POST method should be used.</strong></p>
+	<p class="blockquote-footer">Read further  <cite title="[ https://www.w3.org/TR/html401/interact/forms.html#h-17.13 ]"><a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13" target="_blank"> Form submission (W3C)</a></cite></p>	      
+  </div>
+</div>
+
+ 
+
+ 
+<!-- Contact details -->
+<div id="contact-details"class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <h4 class="text-gray-900 text-2xl leading-tight font-medium mb-2 sher-teal">Contact details</h4>
+    <p>Highlights</p>
+    <h4>Example</h4>
+     <div class="grid grid-cols-2">
+        <div class="m-3"><h4>Output</h4>
+        <iframe srcdoc='<p>examples become available during course</p>'  height="298px" width="100%" style="border:1px dotted gray;" title="Iframe Example"></iframe>
+        </div>
+        <div class="m-3"><h4>Code</h4>
+<pre class="language-html"><code>
+&lt;!-- examples become available during course -->
+</code></pre>  
+        </div>
+    </div>
+    <p><a href="#" target="_blank">(full code)</a></p> 
+    <!-- <h4>More examples</h4> -->
+  </div>
+</div>
+
+
+
+ 
+<!-- Contact details -->
+<div id="contact-details"class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+    <h4 class="text-gray-900 text-2xl leading-tight font-medium mb-2 sher-teal">Contact details</h4>
+    <p>Highlights</p>
+    <h4>Example</h4>
+     <div class="grid grid-cols-2">
+        <div class="m-3"><h4>Output</h4>
+        <iframe srcdoc='<p>examples become available during course</p>'  height="298px" width="100%" style="border:1px dotted gray;" title="Iframe Example"></iframe>
+        </div>
+        <div class="m-3"><h4>Code</h4>
+<pre class="language-html"><code>
+&lt;!-- examples become available during course -->
+</code></pre>  
+        </div>
+    </div>
+    <p><a href="#" target="_blank">(full code)</a></p> 
+    <!-- <h4>More examples</h4> -->
+  </div>
+</div>
+ 
+
+
+
+ 
+  
+</section>
+     
+    </section>
+ </main>
+  
+
+  
+  <footer class="bg-dark-gray text-white"> 
+     <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
+      <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10049 Web development | Sheridan College</a>
+      </p>     
+    </section> 
+    <div class="container max-w-screen-lg mx-auto  px-8">   
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+          <ul class="text-sm font-medium pb-14 sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-y-10">
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</footer> 
+ 
+</body>
+<!--script src="https://cdn.tailwindcss.com/"></script>
+<script type="text/javascript" src="../scripts/index.min.js"></script-->
+<script>
+  // topnav
+  var topButton = document.getElementById("topnavButton");
+  var topnavList = document.getElementById("topnavList");
+  topButton.addEventListener("click", function() {
+    this.classList.toggle("active");
+    topnavList.classList.toggle("hidden");
+    document.getElementById("topnavOpen").classList.toggle("hidden");
+    document.getElementById("topnavClosed").classList.toggle("hidden");
+  });
+</script>
+<script src="../scripts/prism.js"></script>
+<!-- Required popper.js -->
+<script
+  src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+  charset="utf-8"
+></script>
+<script>
+  function openPopover(event, popoverID) {
+    let element = event.target;
+    while (element.nodeName !== "BUTTON") {
+      element = element.parentNode;
+    }
+    var popper = Popper.createPopper(
+      element,
+      document.getElementById(popoverID),
+      {
+        placement: "bottom",
+      }
+    );
+    document.getElementById(popoverID).classList.toggle("hidden");
+  }
+</body>
+</html>

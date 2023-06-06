@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+<title> SYST10049 learn HTML </title>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css"/> 
+<link rel="stylesheet" href="../css/prism_coy_dev.css"  />
+<style>
+dl, ol {
+  margin-bottom: 16px;
+}
+dt {font-weight: bold;}
+h4, h3 {
+  margin-top: 16px;
+}
+.ordered-list {
+  list-style-type: decimal;
+}
+.text-danger {
+  color: red;
+}
+.bg-dark-gray  {
+  background-color: #333940;
+}
+code {
+  color: black !important;
+}
+.sher-teal {
+  color: #00b2ce;
+}
+.bg-sher-teal {
+  background-color: #00b2ce;
+}
+figcaption {
+  color: #00b2ce;
+  font-weight: 500;
+}
+</style>
+</head>
+
+<body>
+  <nav id="navTop" class="w-full z-30 top-0 text-white bg-dark-gray ">
+    <div class="w-full container max-w-screen-lg mx-auto flex flex-wrap sm:flex-nowrap items-center justify-between mt-0 py-2">
+      <div class="md:pl-4">
+        <a class="text-white hover:text-white no-underline hover:no-underline
+        font-bold text-2xl lg:text-4xl rounded-lg hover:bg-nwoods-secondary " href="../">
+          <h1 class="mb-0 p-1 ">SYST10049</h1>
+        </a>
+      </div>
+      <button id="topnavButton" class="rounded-lg sm:hidden focus:outline-none focus:ring" aria-label="Navigation">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path id="topnavOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path id="topnavClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>      
+      <div id="topnavList" class="hidden sm:block items-center w-auto mt-0 text-white p-0 z-20">
+        <ul class="list-reset list-none font-semibold flex justify-end flex-wrap sm:flex-nowrap items-center px-0 pb-0">
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../index.html">Home</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnweb/index.html">Web development</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learnhtml/index.html">Learn HTML5</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="../learncss/index.html">Learn CSS3</a></li>
+          
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="https://piazza.com/sheridan/winter2022/syst10049bajcar" target="_blank">Class Q&amp;A</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-b border-gray-600 opacity-50 my-0 py-0" />
+  </nav>
+    
+  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+      
+    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+      <div class="flex-shrink-0 px-8 py-4">
+        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>   
+        </button>
+      </div>   
+      <nav id="navList" class="min-h-screen hidden md:block sidebar-nav flex-grow px-1 lg:px-4 pb-4 md:pb-0 md:overflow-y-auto break-words">
+
+          <a href="index.html">HTML Markup</a>
+          <a href="standards.html">Semantic Correctness and Accessibility</a>
+          <a href="grammar.html">Syntax, Elements, and Attributes</a>
+          <a href="document.html">HTML Document</a>
+          <a href="content.html">Content Models and Organization</a>
+          <a class="bg-gray-100 text-gray-900" href="form-process.html">HTML Forms</a>
+          <a href="dom.html">Document Object Model (DOM)</a>
+          <a href="textual.html">Marking up textual content</a>
+          <a href="semantics.html">Marking up semantic content</a>
+          <a href="interactive.html">Marking up interactive content</a>
+          <!--a href="forms.html">Marking up forms</a-->
+       
+      </nav>
+    </div>  
+        
+    <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+	<h1 class="text-5xl font-medium leading-tight mt-0 mb-2 text-black-600">HTML forms</h1>
+    
+  
+<section class="col-8 container">
+
+
+<div class="grid grid-cols-2 gap-4 w-3/4 mt-6 m-auto">
+  <div class="border-t-4 border-teal-500 pt-4">
+    <p class="uppercase sher-teal font-bold">HTML forms</p>
+    <p class="font-semibold">&lt;form> element
+    <br>Form-associated elements
+    <br>&lt;input> element
+    <br>Labeling controls &mdash; &lt;label> element
+    </p>
+  </div>
+  <div class="border-t-4 border-teal-500 pt-4">
+    <p class="uppercase sher-teal font-bold">Regular expressions</p>
+    <p class="font-semibold">pattern attribute
+    </p>
+  </div>
+</div>
+
+
+<!-- HTML forms -->
+<div class="my-5">
+  <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="flex items-center justify-center px-4 bg-sher-teal">  
+ <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="triangle-exclamation" class="w-6 h-6 text-white fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"></path></svg>     
+    </div>
+    <div class="px-4 py-2 -mx-3">
+      <div class="mx-3">
+        <span class="text-2xl font-semibold sher-teal">HTML Forms</span>
+		<p class="mb-0">An HTML form is a section of a document containing normal content, markup, special elements called controls (checkboxes, radio buttons, menus, etc.), and labels on those controls. Users generally "complete" a form by modifying its controls (entering text, selecting menu items, etc.), before submitting the form to an agent for processing (e.g., to a Web server, to a mail server, etc.)</p>
+		<p class="blockquote-footer">Read further  
+		  <cite title="[ www.w3.org/TR/html401/interact/forms.html ]">
+		    <a href="" target="_blank"> Forms &amp; W3C</a>
+		  </cite>
+		</p>        
+ 	<p>HTML5 makes available user interface elements that allow users to provide input. This ability to capture information from users is great, but you must make sure that user privacy and safety are protected as much as possible and that the website or web app cannot be exploited to disrupt the site's services. The objective is</p>
+	<ol>
+		<li>to choose the correct user input controls (HTML5 input types), and</li>
+		<li>to set the appropriate attributes on those controls to ensure that the data is validated.</li>
+	</ol>         
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- form element -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <h4 class="text-gray-900 text-2xl leading-tight font-medium mb-2 w-full sher-teal">Form element</h4>
+    <p class="text-gray-700 text-base w-full">
+      The HTML <code>&lt;form></code> element defines a form that is used to collect user input.	An HTML form contains form elements. Form elements are different types of input elements, like text fields, checkboxes, radio buttons, submit buttons, and more. HTML5 forms submit data to the web server as <code>name=value</code> pairs for processing by a specified server-side script. The <code>form</code> element acts as a container for controls. It specifies:</p>
+	<ul class="list-outside text-base">
+		<li>The layout of the form (given by the contents of the element).</li>
+		<li>The program that will handle the completed and submitted form (the action attribute). The receiving program must be able to parse name/value pairs in order to make use of them.</li>
+		<li>The method by which user data will be sent to the server (the method attribute).</li>
+		<li>A character encoding that must be accepted by the server in order to handle this form (the accept-charset attribute). User agents may advise the user of the value of the accept-charset attribute and/or restrict the user's ability to enter unrecognized characters.</li>
+		<li>A form can contain text and markup (paragraphs, lists, etc.) in addition to form controls.</li>
+	</ul>
+    <p hidden>https://www.w3.org/TR/2018/SPSD-html401-20180327/interact/forms.html</p>
+	<p>All form component elements are enclosed between <samp>form</samp> and <samp>/form</samp> tags, which must include an action attribute, to specify the URL of the processing script, and a method attribute to specify the submission method as GET or POST.</p>
+	
+	<h4 class="text-gray-900 text-xl leading-tight font-medium mb-2">Form submission method</h4>
+	<p>The method attribute of the FORM element specifies the HTTP method used to send the form to the processing agent. This attribute may take two values:</p>
+	<dl class="row">
+	  <dt class="col-sm-1 text-info">get</dt>
+	  <dd class="col-sm-11">With the HTTP "get" method, the form data set is appended to the URI specified by the action attribute (with a question-mark ("?") as separator) and this new URI is sent to the processing agent. (restricts form data set values to ASCII characters.)</dd>	 
+	  <dt class="col-sm-1 text-info">post</dt>
+	  <dd class="col-sm-11">With the HTTP "post" method, the form data set is included in the body of the form and sent to the processing agent. (with enctype="multipart/form-data", cover the entire [ISO10646] character set).</dd>	  	  
+	</dl>
+	<p>If the service associated with <strong>the processing of a form causes side effects</strong> (for example, if the form modifies a database or subscription to a service), <strong>the POST method should be used.</strong></p>
+	<p class="blockquote-footer">Read further  <cite title="[ https://www.w3.org/TR/html401/interact/forms.html#h-17.13 ]"><a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13" target="_blank"> Form submission (W3C)</a></cite></p>	      
+  </div>
+</div>
+
+
+<!-- Form-associated elements -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <h4 class="text-gray-900 text-2xl leading-tight font-medium mb-2 w-full sher-teal">Form-associated elements</h4>
+    <p class="text-gray-700 text-base w-full">
+	The <samp>form</samp> element represents a collection of form-associated elements, some of which can represent editable values that can be submitted to a server for processing. A number of the elements are form-associated elements, which means they can have a form owner.</p>
+	<p style="columns:3;">
+		<code>&lt;button></code><br>	
+		<code>&lt;fieldset></code><br>
+		<code>&lt;input></code><br>
+		<code>&lt;label></code><br>  
+		<code>&lt;object></code><br> 
+		<code>&lt;output></code><br>
+		<code>&lt;select></code><br>
+		<code>&lt;textarea></code><br>
+		<code>&lt;img></code>
+	</p>
+	<h6>Radio Buttons, Checkboxes, and Buttons</h6>
+	<p>Radio button and checkbox input elements submit their name and value attribute data only if they are checked. A form may be submitted by a regular submit <samp>input</samp> element, by an image <samp>input</samp> element, or by a <samp>button</samp> element. Logo images can be added to the button face by enclosing an <samp>img</samp> element between <samp>button</samp> <samp>/button</samp> tags.</p>
+	
+	<h6><samp>textarea</samp> Element</h6>
+	<p>A multi-line text field is created by <samp>textarea</samp> <samp>/textarea</samp> tags that require rows and cols attributes to specify its size.</p>
+	
+	<h6>Labels and Options</h6>
+	<p>An option list is created by enclosing a number of <samp>option</samp> elements between <samp>select</samp> <samp>/select</samp> tags.</p>
+
+	<p>Each form control can be enclosed by <samp>label</samp> <samp>/label</samp> tags to visually group with text for styling purposes.</p>
+  </div>
+</div>
+
+
+<!-- input element -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <h4 class="text-gray-900 text-2xl leading-tight font-medium mb-2 w-full sher-teal">input element</h4>
+    <p class="text-gray-700 text-base w-full">
+	<p>Each <samp>input</samp> element must include a <code>type</code> attribute to specify its component type, such as </p>
+	<p style="columns:4;">
+	<code>type="text"</code><br>
+	<code>type="password"</code><br>
+	<code>type="checkbox"</code><br>
+	<code>type="date"</code><br>
+  <code>type="time"</code><br>
+	<code>type="color"</code><br> 
+	<code>type="button"</code><br>
+	<code>type="hidden"</code><br>
+	<code>type="image"</code><br>
+	<code>type="file"</code><br>
+	<code>type="url"</code><br>
+	<code>type="email"</code><br>
+  <code>type="number"</code><br>
+	<code>type="radio"</code><br>
+	<code>type="range"</code><br>
+  <code>type="search"</code><br>
+	<code>type="submit"</code><br>
+	<code>type="reset"</code><br>  
+  <code>type="tel"</code><br>
+	</p>
+	<p>The default is <code>type="text"</code>, omitting the type attribute.</p>
+
+<pre class="language-html"><code>
+&lt;!-- text type input -->
+&lt;form>
+  &lt;p>&lt;input>&lt;/p>
+  &lt;p>&lt;input type="text">&lt;/p>
+&lt;/form></code></pre>
+<iframe style="width:100%;height:90px;" srcdoc='
+<form>
+  <p><input></p>
+  <p><input type="text"></p>
+</form>
+'></iframe>
+<p>Both controls appear to be the same; omitting the type defaults to text type. input element is an <strong>empty element</strong> and its default behaviour is <strong>inline</strong>. Paragraph container was used to place them on separate lines.</p>
+
+
+<p>An <samp>input</samp> tag can include name and value attributes to specify data for submission as a NAME=VALUE pair. </p>
+	<p style="columns:4;">
+		<code>name</code>
+        <code>value</code><br>
+	</p>
+
+<p>Other attributes:</p>
+	<p style="columns:4;">
+		<code>autofocus</code><br>
+        <code>checked</code><br>
+		<code>disabled</code><br>
+		
+		<code>max</code><br>
+        <code>maxlength</code><br>
+		
+		
+        <a href="#page10"><code>pattern</code></a><br>
+        <code>placeholder</code><br>
+        <code>readonly</code><br>
+        <code>required</code><br>
+        <code>size</code><br>
+        <code>spellcheck</code><br>
+	</p>
+    
+<figure>
+<pre class="language-html"><code>
+&lt;form method="get" action="http://some.domain/file.php">
+&lt;form>
+  &lt;p>Enter first name: &lt;input name="first" value="John">&lt;/p>
+  &lt;p>Enter last name: &lt;input name="last" value="Smith">&lt;/p>
+  &lt;p>&lt;input type="submit">&lt;p>
+&lt;/form></code></pre>
+<iframe style="width:100%;height:40px;" srcdoc='
+  <input style="font-size:1em" size="100" value="http://some.domain/file.php?first=John&last=Smith">
+'></iframe>
+<p> On form submission, browser constructs the URL to sent to the server as HTTP request.  It collects all the NAME attribute values and associated VALUE attribute values, as NAME=VALUE pairs, and appends them to the address, prepended with a question mark and the pairs are separated by &amp; symbol, when the GET method is specified.
+</p>
+    </p>      
+  </div>
+</div>
+</div>
+
+
+
+<!-- Labeling controls -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <h4 class="text-gray-900 text-2xl leading-tight font-medium mb-2 w-full sher-teal">Labeling controls - <code>&lt;label></code> element</h4>
+    <p class="text-gray-700 text-base w-full">
+        In left-to-right languages, it is customary to visually position labels to the right of radio buttons and checkboxes, and to the left or directly above other form fields. Maintaining this practice increases predictability and understandability of your form for all users. In general, placing labels above the form fields helps reduce horizontal scrolling for people with low vision and mobile device users. <a hidden href="" target="_blank">&hellip;W3C</a></p>
+		
+
+    <h6>Associating labels explicitly 
+		<br><small><a href="https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-explicitly" 
+		target="_blank">Read more&hellip; at W3C</a></small>
+	</h6>
+	<p>The objective of this technique is to use the label element to explicitly associate a form control with a label. A label is attached to a specific form control through the use of the for attribute. The value of the for attribute must be the same as the value of the id attribute of the form control. Elements that use explicitly associated labels are:</p>
+	<ul style="margin-top:0;padding-top:2px">
+		<li>input type="text"</li>
+		<li>input type="checkbox"</li>
+		<li>input type="radio"</li>
+		<li>input type="file"</li>
+		<li>input type="password"</li>
+		<li>textarea</li>
+		<li>select</li>
+	</ul>
+
+	<p>
+	<q cite="https://www.w3.org/WAI/GL/WCAG20/WD-WCAG20-TECHS-20071102/H44.html">The HTML specification allows both implicit and explicit labels. However, some assistive technologies do not correctly handle implicit labels.</q> <a class="w3-button" style="margin-right:25px" href="https://www.w3.org/TR/WCAG20-TECHS/H44.html" target="_blank">Read more...</a>
+	</p>
+
+    <h6>Associating labels implicitly 
+		<br><small><a href="https://www.w3.org/WAI/tutorials/forms/labels/#associating-labels-implicitly" 
+		target="_blank">Read more&hellip; at W3C</a></small>
+	</h6>
+	
+<pre class="language-html"><code>
+&lt;!-- explicit label -->
+&lt;form>
+  &lt;p>
+    &lt;label for="thisone">
+      My explicit label:
+    &lt;/label> 
+    &lt;input type="text" id="thisone"> 
+  &lt;/p>
+&lt;!-- implicit label -->
+  &lt;p>
+    &lt;label>
+      My implicit label: 
+      &lt;input type="text">
+    &lt;/label>  
+  &lt;/p>
+&lt;/form></code></pre>
+<iframe style="height:130px" srcdoc='
+<form>
+	<p>
+       <label for="thisone">My explicit label:</label> 
+       <input type="text" id="thisone">
+	</p>
+    <p><label>My implicit label: <input type="text"></label></p>
+</form>
+'></iframe>
+<p> Both controls appear to be the same; visually there is no difference; </p>
+
+
+<pre class="language-html"><code>
+&lt;!-- provide descriptive labels -->
+&lt;form>
+  &lt;p>
+    &lt;label>
+      Last name: &lt;input type="text" name="lastname"> 
+    &lt;/label> 
+  &lt;/p>
+  &lt;p>
+    &lt;label>
+      First name: &lt;input type="text" name="firstname">
+    &lt;/label>  
+  &lt;/p>
+&lt;/form></code></pre>
+<iframe style="height:100px" srcdoc='<form>
+	<p><label>Last name: <input type="text" name="lastname"></label> </p>
+	<p><label>First name: <input type="text" name="firstname"></label> </p>
+</form>'></iframe>
+<p> Providing descriptive labels. A form asks the name of the user. It consists of two input fields to ask for the first and last name. The first field is labeled "Last name", the second is labeled "First name". </p>
+
+    </p>      
+  </div>
+</div>
+ 
+
+<!-- The <code>pattern</code> attribute -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <h4 class="text-gray-900 text-2xl leading-tight font-medium mb-2 w-full sher-teal">The <code>pattern</code> attribute</h4>
+    <p class="text-gray-700 text-base w-full">
+        The core HTML input controls support a <strong>pattern</strong> attribute that allows you to apply a regular expression to validate user input. The <samp>input</samp> element's value is checked against the pattern on form submission. Use the global title attribute to describe the pattern to help the user.</p>
+	<p>The pattern attribute works with the following input types: text, date, search, url, tel, email, and password.</p>
+    <h5>Examples</h5>
+    
+    <figure class="figure">
+<pre class="language-html"><code>
+&lt;form>
+  &lt;label for="pwd">Password:&lt;/label>
+  &lt;input type="password" id="pwd" name="pwd" 
+         pattern=".{8,}" title="Eight or more alpha characters">
+  &lt;input type="submit">
+&lt;/form>
+</code></pre>
+<iframe style="height:130px" srcdoc='
+<form>
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" name="pwd" pattern="[A-Za-z]{8,}" title="Eight or more alpha characters">
+  <input type="submit">
+</form>
+'></iframe>
+<figcaption class="figure-caption"> Enter one or two characters and click Submit. Note the popup message. See more <a href="https://www.w3schools.com/tags/att_input_pattern.asp" target="">w3schools</a></figcaption>    
+    </figure>
+  
+
+    <figure class="figure">
+<pre class="language-html"><code>
+&lt;form>
+  &lt;label for="pwd">Password:&lt;/label>
+  &lt;input type="password" id="pwd" name="pwd" 
+         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+         title="Must contain at least one number and one uppercase and 
+                lowercase letter, and at least 8 or more characters">
+  &lt;input type="submit">
+&lt;/form>
+</code></pre>
+<iframe style="height:130px" srcdoc='
+<form>
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+  <input type="submit">
+</form>
+'></iframe>
+<figcaption class="figure-caption"> Enter one or two characters and click Submit. Note the popup message. See more <a href="https://www.w3schools.com/tags/att_input_pattern.asp" target="">w3schools</a></figcaption>    
+    </figure>
+
+  </div>
+</div>
+  
+  
+<!-- Regular expressions (regex) -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <h4 class="text-gray-900 text-2xl leading-tight font-medium mb-2 w-full sher-teal">Regular expressions (regex)</h4>
+    <p class="text-gray-700 text-base w-full">
+ 
+		<table>
+          <tr>
+          	<td>Symbol</td> <td><strong>Description</strong></td>
+          </tr>
+          <tr>
+		  <td>^</dt>
+		  <td>&mdash; [anchor] The caret character denotes the beginning of a string.</dd>	
+          </tr>
+          <tr>
+		  <td>$</dt>
+		  <td>&mdash; [anchor] The dollar sign denotes the end of a string.</dd>
+          </tr>
+          <tr>
+		  <td>.</dt>
+		  <td>&mdash; The period matches any single character.</dd>
+          </tr>
+          <tr>
+		  <td>[A-Z]</dt>
+		  <td>&mdash; Square brackets denote a character set, a list or a range. [A-Z] means any upper case alpha character.</dd>
+          </tr>
+          <tr>
+		  <td>[^abc]</td>
+		  <td>&mdash; The carret inside a character set negates the set; [^abc] means not a, not b, not c.</td>
+          </tr>
+          <tr>
+		  <td>\d</dt>
+		  <td>&mdash; This combination matches any numeric character.</td>
+          </tr>
+          <tr>
+		  <td>\w</dt>
+		  <td>&mdash; This combination matches any word character (alphanumeric including the underscore.</td>
+          </tr>
+          <tr>
+		  <td>\s</td>
+		  <td>&mdash; This combination matches a space character</td>
+          </tr>
+          <tr>
+		  <td>\</td>
+		  <td>&mdash; The backslash is an escape character. Used before a special character will match the special character literally. For example, to find the \ character in a string, the pattern would be \\</td>
+          </tr>
+          <tr>
+		  <td>+</td>
+		  <td>&mdash; [modifier] The plus sign denotes that the preceding character must match at least once, or more times.</td>
+          </tr>
+          <tr>
+		  <td>*</td>
+		  <td>&mdash; [modifier] The asterisk denotes that the preceding character may match zero or more times.</td>	
+          </tr>
+          <tr>
+		  <td>?</td>
+		  <td>&mdash; [modifier] The question mark denotes that the preceding character is optional</td>
+          </tr>
+          <tr>
+		  <td>?=n</td>
+		  <td>&mdash; Matches any string that is followed by a specific string n</td>
+          </tr>
+		</table>
+		<p class="figure-caption"> Table shows some of the common symbols and their meaning. <br>For more details and practice, see <a href="https://www.w3schools.com/jsref/jsref_obj_regexp.asp" target="_blank">w3schools JS RegExp</a>.</p>
+        
+	<h4>Evaluate regular expressions</h4>
+	<div class="list-group-item svg-clip"> <a href="http://regexone.com/" target="_blank">A comprehensive interactive tutorial on regexone.com</a>
+        <figure class="figure">
+            <img src="images/regex_groups.png" width="650" alt="example answer using RegexOne to capture groups">
+            <figcaption class="figure-caption"> Example answer using RegexOne to capture groups</a></figcaption>    
+        </figure>    
+    </div>
+	<p class="list-group-item svg-clip"> <a href="https://regexr.com/" target="_blank">RegExr is an online tool to learn, build, and test Regular Expressions (RegEx / RegExp).</a></p>	 
+  </div>
+</div>
+
+
+
+
+
+
+<!-- 
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <h4 class="text-gray-900 text-2xl leading-tight font-medium mb-2 w-full sher-teal">Form element</h4>
+    <p class="text-gray-700 text-base w-full">
+    </p>      
+  </div>
+</div>
+-->
+  
+</section>
+     
+    </section>
+ </main>
+  
+
+  
+  <footer class="bg-dark-gray text-white"> 
+     <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
+      <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10049 Web development | Sheridan College</a>
+      </p>     
+    </section> 
+    <div class="container max-w-screen-lg mx-auto  px-8">   
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+          <ul class="text-sm font-medium pb-14 sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-y-10">
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</footer> 
+ 
+</body>
+<!--script src="https://cdn.tailwindcss.com/"></script>
+<script type="text/javascript" src="../scripts/index.min.js"></script-->
+<script>
+  // topnav
+  var topButton = document.getElementById("topnavButton");
+  var topnavList = document.getElementById("topnavList");
+  topButton.addEventListener("click", function() {
+    this.classList.toggle("active");
+    topnavList.classList.toggle("hidden");
+    document.getElementById("topnavOpen").classList.toggle("hidden");
+    document.getElementById("topnavClosed").classList.toggle("hidden");
+  });
+</script>
+<script src="../scripts/prism.js"></script>
+<!-- Required popper.js -->
+<script
+  src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+  charset="utf-8"
+></script>
+<script>
+  function openPopover(event, popoverID) {
+    let element = event.target;
+    while (element.nodeName !== "BUTTON") {
+      element = element.parentNode;
+    }
+    var popper = Popper.createPopper(
+      element,
+      document.getElementById(popoverID),
+      {
+        placement: "bottom",
+      }
+    );
+    document.getElementById(popoverID).classList.toggle("hidden");
+  }
+</body>
+</html>
