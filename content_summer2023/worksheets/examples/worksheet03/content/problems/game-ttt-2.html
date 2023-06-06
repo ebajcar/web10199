@@ -65,7 +65,7 @@
     </header>
 
     <main>
-        <h2>Game of Tic Tac Toe  - <small>develop a solution</small></h2>
+        <h2>Game of Tic Tac Toe  - <small>data structures, methods, events </small></h2>
      <nav class="breadcrumbs" aria-label="breadcrumbs">
         <ol>
             <li><a href="index.html">Problems</a></li>
@@ -73,21 +73,21 @@
         </ol>
     </nav>       
 
-
+<!--
 <ul role="list" class="f-switch dense">
     <li class="box">
         <h3>a</h3>
 
     </li>
 </ul>
-
+-->
 
 <!--
   Data structures
 -->
 <ul role="list" class="f-switch dense">
     <li class="box">
-        <h4>heading</h4>
+        <h4>Data structures</h4>
 <pre class="language-js" tabindex="0"><code class="language-js">let player = "X"; // current player
 //array (collection) of 9 objects
 const board = document.getElementsByTagName("td"); 
@@ -97,10 +97,12 @@ const winSets = [[0,1,2],[3,4,5],[6,7,8],
                [0,4,8],[2,4,6]]; 
 let empty = 9; // number of available (empty) cells
 let gameover = false;  // true when game is over
-</code></pre>           
+</code></pre> 
+<!--          
         <div class="box ok">
             <strong class="block titlebar">Output</strong><p id="two"></p>
         </div>
+        -->
     </li>
 </ul> 
 
@@ -111,7 +113,7 @@ let gameover = false;  // true when game is over
 -->
 <ul role="list" class="f-switch dense">
     <li class="box">
-        <h4>heading</h4>
+        <h4>Checking for winner</h4>
 <pre class="language-js" tabindex="0"><code class="language-js">let len = winSets.length;
 for (let i = 0; i &lt; len; i++) {
   if ( board[winSets[i][0]].innerText == board[winSets[i][1]].innerText &&
@@ -120,11 +122,6 @@ for (let i = 0; i &lt; len; i++) {
     // we've got a winner!
   }
 }</code></pre>           
-        <div class="box ok">
-            <strong class="block titlebar">Output</strong><p id="two"></p>
-        </div>
-        
-      
     </li>
 </ul> 
 
@@ -203,7 +200,7 @@ for (let i = 0; i &lt; len; i++) {
         
 <!--
   unobtrusive JS
--->
+
 <ul role="list" class="f-switch dense">
     <li class="box">
         <h4>heading</h4>
@@ -214,7 +211,7 @@ for (let i = 0; i &lt; len; i++) {
         </div>
     </li>
 </ul> 
-
+-->
 		
     </main>
    <footer>
