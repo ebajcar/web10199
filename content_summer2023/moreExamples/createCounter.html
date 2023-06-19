@@ -19,6 +19,20 @@ const counter = createCounter();
 counter(); // Output: 1
 counter(); // Output: 2
 counter(); // Output: 3
+
+/*
+In this example, the createCounter function defines a local variable called count and returns an inner function.
+The inner function, which is assigned to the counter variable, increments the count variable by one and logs its value to the console.
+
+The interesting part is that even after the createCounter function has finished executing and returned the inner function, 
+the inner function still retains access to the count variable. This is possible because of closure. The inner function "closes over" 
+the environment in which it was created, preserving access to the variables of its parent scope.
+
+So, when counter is invoked multiple times, it continues to increment and log the count variable, as it still has access to it 
+through closure. Each time counter is called, it remembers the previous value of count and increments it by one.
+
+Closures are powerful in JavaScript as they allow functions to have persistent private variables, maintain state, and encapsulate functionality.
+*/
 </script>
 </body>
 
