@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<p>The output is:</p>
+
+<script>
+function createCounter() {
+  let count = 0;
+
+  return function() {
+    count++;
+    document.write("<p>" + count + "</p>");
+  };
+}
+
+const counter = createCounter();
+
+counter(); // Output: 1
+counter(); // Output: 2
+counter(); // Output: 3
+</script>
+</body>
+
+</html>
