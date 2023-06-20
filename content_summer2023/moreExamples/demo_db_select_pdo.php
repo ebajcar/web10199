@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-
+<!-- https://tryphp.w3schools.com/showphpfile.php?filename=demo_db_select_pdo -->
 <?php
 echo "<table style='border: solid 1px black;'>";
  echo "<tr><th>Id</th><th>Firstname</th><th>Lastname</th></tr>";
