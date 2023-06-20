@@ -121,10 +121,10 @@
         <li><a class="block border-l pl-4" href="sql.html">SQL database language</a></li>   
         <li><a class="block border-l pl-4" href="regex.html">Regular expressions</a></li>
     </ul>
-    
-    
+</li>    
+<li class="mt-12 lg:mt-8">    
     <h5 class="mt-6">
-        <a href="/docs" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4 text-gray-900">
+        <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4 text-gray-900">
             <div class="mr-3 rounded-md bg-gradient-to-br from-blue-500 to-blue-500">
                 <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6C10.0929 6 11.1175 6.29218 12 6.80269V16.8027C11.1175 16.2922 10.0929 16 9 16C7.90714 16 6.88252 16.2922 6 16.8027V6.80269C6.88252 6.29218 7.90714 6 9 6Z" fill="#FDF4FF"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15 6C16.0929 6 17.1175 6.29218 18 6.80269V16.8027C17.1175 16.2922 16.0929 16 15 16C13.9071 16 12.8825 16.2922 12 16.8027V6.80269C12.8825 6.29218 13.9071 6 15 6Z" fill="#FDF4FF"></path></svg>
             </div>
@@ -132,7 +132,7 @@
         </a>
     </h5>
     <h5>
-        <a href="https://play.tailwindcss.com" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4">
+        <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4">
             <div class="mr-3 rounded-md bg-gradient-to-br from-yellow-400 to-orange-500">
                 <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.196 6.02a1 1 0 01.785 1.176l-2 10a1 1 0 01-1.961-.392l2-10a1 1 0 011.176-.784z" fill="#FDE68A"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.293 9.293a1 1 0 011.414 0l2 2a1 1 0 010 1.414l-2 2a1 1 0 01-1.414-1.414L16.586 12l-1.293-1.293a1 1 0 010-1.414zM8.707 9.293a1 1 0 010 1.414L7.414 12l1.293 1.293a1 1 0 11-1.414 1.414l-2-2a1 1 0 010-1.414l2-2a1 1 0 011.414 0z" fill="#FDF4FF"></path></svg>
             </div>
@@ -142,230 +142,20 @@
 </li>
 </ul>
 </nav>
-
     </div>  
-   
-
-
-   
+        
 <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
-    <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Program flow</h2>
-
-    <h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">Any PHP script is built out of a series of statements. A statement can be an assignment, a function call, a loop, a conditional statement or even a statement that does nothing (an empty statement). Statements can be grouped into a statement-group by encapsulating a group of statements with curly braces. A statement-group is a statement as well, often referred to as control structure.</h6>
-
-    <ul class="nav nav-pills flex flex-col md:flex-row list-none pl-0 mb-4 mx-48" id="pills-tabFill" role="tablist">
-      <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
-        <a href="#1" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Simple statements</a>
-      </li>
-      <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
-        <a href="#2" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Selection (Decisions)</a>
-      </li>
-      <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
-        <a href="#3" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Iteration (loops)</a>
-      </li>
-      <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
-        <a href="#3" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Require and Include</a>
-      </li>
-    </ul>
-
-
-
-
-<!-- 2.1. Simple Statements -->
-<div id="1" class="flex justify-center mt-6">
-  <div class="block p-6 rounded-lg shadow-lg bg-white">
-    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Simple Statements</h5>
-    <p>Each PHP statement is an instruction to PHP interpreter to do something. Statements are interpretted one at a time, in the sequence they are written. </p>
-	
-<pre class="language-php"><code>statement1; 
-statement2; 
-statement3;</code></pre>
-	<p>PHP requires instructions to be terminated with a semicolon at the end of each simple statement. The closing tag of a block of PHP code automatically implies a semicolon;</p>
-    <p>Sometimes statements are combined into a block and executed together (decisions and iteration).</p>
-  </div>
-</div> 
-
-
-
-<!-- 2.2. Selection (Decisions) -->
-<div id="2" class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Selection (Decisions)</h5>	
+    <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Under construction</h2>
+    <h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">-</h6>
     
-            <span class="template-3col">
-                <b>if<br><small>&hellip;</small></b>
-                <b>elseif<br><small>&hellip;</small></b>
-                <b>else if<br><small>&hellip;</small></b>
-                <b>switch<br><small>&hellip;</small></b>
-                <b>break<br><small>break ends execution of the current switch structure</small></b>
-                <b>&nbsp;</b>
-             </span>
-    <p class="lead"><a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  target="_blank"  
-            href="http://php.net/manual/en/language.control-structures.php">Read more in PHP Manual	</a></p>
-  </div>
-</div> 
-
-
-
-<div class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">IF Statements</h5>
-	<p class="lead">The <code>if</code> statement allows for conditional execution of code fragments. PHP features an if structure that is similar to that of C (Java and Javascript).</p>
-<pre class="language-php"><code>
-if (condition) {
-	echo "code to be executed if condition is true";
-} else {
-	echo "code to be executed if condition is false";
-}</code></pre>
-	<p class="lead"><a style="cursor:pointer;"  target="_blank" role="button" 
-		hrRead more in ef="http://php.net/manual/en/control-structures.if.php">Read more in PHP Manual</a>
-    </p>
-  </div>
-</div> 
-
-
-<div class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">SWITCH Statements</h5>
-	<p class="lead">The <code>switch</code> statement is similar to a series of IF statements on the same expression.</p>
-
-<pre class="language-php"><code>
-switch (n) {
-	case label1:
-		// code to be executed if n=label1
-		break;
-	case label2:
-	... 
-	default:
-		// code to be executed if n is different from all labels
-}</code></pre>
-        <p class="lead"><a style="cursor:pointer;" 	target="_blank" role="button" 
-			href="http://php.net/manual/en/control-structures.switch.php">Read more in PHP Manual</a></p>
-  </div>
-</div> 
-
-
-
-<div id="1" class="flex justify-center mt-6">
-  <div class="block p-6 rounded-lg shadow-lg bg-white">
-    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Iteration (Loops)</h5>	
-    <span class="template-3col">
-        <b>for<br><small></small></b>
-        <b>foreach<br><small></small></b>
-        <b>while<br><small></small></b>
-        <b>do&hellip;while<br><small></small></b>
-                <b>&nbsp;</b>
-        <b>&nbsp;</b>
-        <b>break<br><small>break ends execution of the current for, foreach, while, do-while or switch structure</small></b>
-        <b>continue<br><small>used within looping structures to skip the rest of the current loop iteration&hellip;</small></b>
-        <b>return<br><small></small></b>
-
-     </span>
-    <p class="lead"><a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  target="_blank"  
-            href="http://php.net/manual/en/language.control-structures.php">Read more in PHP Manual	</a></p>
-  </div>
-</div> 
-
-
-
-<div class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">FOR Statements</h5>
-	<p class="lead">The <code>for</code> loop</p>
-    
-<pre class="language-php"><code>
-for (initialization; condition; finalExpression) { 
-	//code to be executed; 
-}</code></pre>
-	<p class="lead"><a style="cursor:pointer;"  target="_blank" role="button" 
-		href="http://php.net/manual/en/control-structures.for.php">Read more in PHP Manual	</a></p>
-  </div>
-</div> 
-
-
-
-<div class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">FOREACH Statements</h5>
-	<p class="lead">The <code>foreach</code> construct works only on arrays, and is used to loop through each key/value pair in an array.</p>
-<pre class="language-php"><code>
-foreach (arrayVariable as currentMemberValue) { 
-	//code to be executed; 
-}</code></pre>
-	<p class="lead"><a style="cursor:pointer;" target="_blank" role="button" 
-			href="http://php.net/manual/en/control-structures.foreach.php">Read more in PHP Manual	</a></p>
-  </div>
-</div> 
-
-
-
-<div class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">WHILE Statements</h5>
-    <p class="lead">The <code>while</code> statement</p>
-<pre class="language-php"><code>
-initialization; 
-while (condition) { 
-	// code to be executed; 
-	finalExpression; 
-}</code></pre>
-	<p class="lead"><a style="cursor:pointer;" target="_blank" role="button" 
-			href="http://php.net/manual/en/control-structures.while.php">Read more in PHP Manual</a></p>
-  </div>
-</div> 
-
-
-<div class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">DO&hellip;WHILE Statements</h5>
-	<p class="lead">The  <code>do&hellip;while</code> construct executes the code once, and then repeats the loop as long as the specified condition is true. the truth expression is checked at the end of each iteration </p>
-<pre class="language-php"><code>
-do {
-	code to be executed;
-} while (condition is true);</code></pre>
-			<p class="lead"><a class="btn btn-outline-secondary btn-block" style="cursor:pointer;" target="_blank" role="button" href="http://php.net/manual/en/control-structures.do.while.php">Read more in PHP Manual</a></p>
-  </div>
-</div> 
 
 
 
 
-
-
-<!-- 2.4. Requires and Includes -->
-<div id="11" class="flex justify-center mt-6">
-  <div class="block p-6 rounded-lg shadow-lg bg-white">
-    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Requires and Includes</h5>	
-    <p>PHP has four functions for using external files: <code>include()</code>, <code>include_once()</code>, <code>require()</code>, and <code>require_once()</code>. </p>
-    <p>Include files give you a way to create one version of the common elements of your web site, such as the header, footer, menu, etc., which you then reference on all web pages. The main difference between include() and require()</p>
-    <ul class="dialog-ul">
-        <li>include() function will print a warning on error but will continue to process the script.</li>
-        <li>require() function will print an error and halt the processing of the script.</li>
-        <li>otherwise, both functions work exactly the same when script is working properly.</li>
-        <li>Both functions also have a _once version. This ensures that the external file is only included once regardless of how many times the script may inadvertently try to include it.</li>	
-        <li><code>require</code> is identical to <code>include</code> <i>except upon failure it will also produce a fatal E_COMPILE_ERROR level error</i></li>
-        <li><code>require_once</code> and <code>include_once</code> <i>will check if the file has already been included, and if so, not include (require) it again</i>.</li>	
-    </ul>	
-    <a style="cursor:pointer;" target="_blank" role="button" 
-       href="http://php.net/manual/en/function.include.php"> Read more in PHP Manual</a>
-  </div>
-</div> 
-
-
-
-
-</section>
-
-
-
-      
+</section>      
   </main>
   
-  
+
   <footer class="bg-dark-gray text-white"> 
      <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
       <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
