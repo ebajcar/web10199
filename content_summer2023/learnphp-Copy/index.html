@@ -75,9 +75,9 @@
 </nav>
  
  
-  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+<main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
       
-    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+<aside id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
       <div class="flex-shrink-0 px-8 py-4">
         <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
           <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -91,11 +91,17 @@
 <li class="mt-12 lg:mt-8">  
 
     
-    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Web Programming</h5> 
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Server-side Programming</h5> 
     <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
-
+        <li><a class="block border-l pl-4" href="highlights.html">JS vs. PHP highlights</a></li>
         <li><a class="block border-l pl-4" href="dataflow.html">Client-server dataflow</a></li>
-        <li><a class="block border-l pl-4" href="highlights.html">JS vs PHP highlights</a></li>
+        <li>
+            <details>
+                <summary>Development process</summary>
+                <ul>
+                  <li><a class="block border-l pl-8" href="dataflow.html">SDLC</a></li>
+                </ul>
+        </li>
         
     </ul>
 </li>
@@ -145,58 +151,80 @@
 </ul>
 </nav>
 
-    </div>  
+</aside>  
    
 
 
    
-<section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+<article class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
     <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">PHP Language</h2>
 
 	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">What distinguishes PHP from something like client-side JavaScript is that the code is executed on the server, generating HTML which is then sent to the client. The client would receive the results of running that script, but would not know what the underlying code was.</h6>
-
-
-<div  id="page11">
-  <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-    <div class="flex items-center justify-center px-4 bg-blue-200">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="triangle-exclamation" class="w-6 h-6 text-white fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"></path></svg>     
-    </div>
+    
+    
+<!-- with edge -->
+<div class="my-5">
+    <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="flex items-center justify-center px-1 bg-dark-gray"></div>
     <div class="px-4 py-2 -mx-3">
-      <div class="mx-3">
-	<h3>Introduction to PHP</h3>
-	<p>PHP Hypertext Preprocessor (PHP) is an open source server-side scripting language designed for web develoment.</p>
-	<ul>
-	  <li>a PHP script is executed on the server, and the plain HTML result is sent backtot he browser.</li>
-	  <li>you need to have solid understanding of HTML, CSS, and Jaascript (PE approach applies)</li>
-	  <li>a PHP script <strong>processing instructions start with &lt;?php and end with ?></strong></li>
-	  <li><strong>File extension</strong> for PHP files is filename.php</li>
-
-	</ul>
-      </div>
+        <div class="mx-3">
+            <span class="text-2xl font-semibold sher-teal">Introduction</span>
+            <p class="text-base">PHP Hypertext Preprocessor (PHP) is an open source server-side scripting language designed for web develoment.</p>
+            <ul class="text-base list-disc list-outside pl-8">
+                <li>a PHP script is executed on the server, and the plain HTML result is sent back to the browser.</li>
+                <li>you need to have solid understanding of HTML, CSS, and Javascript. Progressive Enhancement approach applies. <br><span class="border border-dashed border-black rounded-lg px-4">1. Organize with HTML5 &rarr; 2. Style with CSS3 &rarr; 3. Add behavior with JS &rarr; 4. Enhance with PHP</span></li>
+                <li>a PHP script <strong>processing instructions</strong> start with <code>&lt;?php</code> and end with <code>?></code></li>
+                <li><strong>File extension</strong> for PHP files is <code>.php</code></li>
+            </ul>
+        </div>
     </div>
+    </div>
+</div>    
+
+<!-- no edge -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Resources</div>
+      <dl class="px-4 py-2 grid grid-cols-4 gap-4">
+        <dt class="border-t border-b border-gray-400 text-sm font-medium">
+          <a target="_blank" href="https://www.php.net/">PHP Manual (primary source)</a>
+        </dt>
+        <dd class="border-t border-b border-gray-400 text-sm mt-0 col-span-3">
+          PHP is a popular general-purpose scripting language that is especially suited to web development.  Check out the Language Reference - Basic syntax, Types, Variables, Constants, Expressions, Operators, Control Structures, Functions, Classes and Objects, Errors, Exceptions, and Predefined Variables,&hellip;
+        </dd>
+      </dl>  
+    <table class="border-collapse border border-slate-400 w-full my-4">
+      <thead>
+        <tr>
+          <th class="border border-slate-300 w-96">link</th>
+          <th class="border border-slate-300 ">notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>  
+          <td class="border border-slate-300 "><a href="https://www.php.net/manual/en/langref.php" target="_blank" class="bookmark source">www.php.net/manual/en/langref.php</a></td>
+          <td class="border border-slate-300 ">PHP Manual (<strong>Primary source</strong>). We are currently using PHP 7.</td>
+        </tr>
+        <tr>
+          <td class="border border-slate-300 "> <a href="https://overapi.com/php" target="_blank"><samp>overapi.com/php</samp></a></td>
+          <td class="border border-slate-300 ">Cheat sheet. Each item in the sheet is linked to the corresponding manual page.</td>
+        </tr>        
+        <tr>
+          <td class="border border-slate-300 "><a href="https://www.w3schools.com/php/default.asp" target="_blank"><samp>www.w3schools.com/php/default.asp</samp></a></td>
+          <td class="border border-slate-300 ">Tutorials and references on w3schools (<strong>Secondary source</strong>) Lots of examples.</td>
+        </tr>
+        <tr>
+          <td class="border border-slate-300 "><a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_intro" target="_blank"><samp>www.w3schools.com/php/phptryit.asp</samp></a></td>
+          <td class="border border-slate-300 ">Online PHP TryIt editor (provided by w3schools)</td>
+        </tr>
+        <tr>
+          <td class="border border-slate-300 "><a href="https://en.wikipedia.org/wiki/PHP" target="_blank"><samp>en.wikipedia.org/wiki/PHP</samp></a></td>
+          <td class="border border-slate-300 ">Good place to start and orient yourself...dig deeper with primary source</td>
+        </tr>
+      </tbody>
+    </table>      
   </div>
 </div>
-
-
-
-
-<!-- PHP Manual  -->
-<div id="2" class="flex justify-center mt-6">
-  <div class="block p-6 rounded-lg shadow-lg bg-white">
-      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Resources</div>
-      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">PHP Manual (primary source)</h5>	
-      <p>PHP is a popular general-purpose scripting language that is especially suited to web development.  Check out the Language Reference - Basic syntax, Types, Variables, Constants, Expressions, Operators, Control Structures, Functions, Classes and Objects, Errors, Exceptions, and Predefined Variables,&hellip;</p>
-      <p>We are currently using PHP 7. <a href="https://www.php.net/manual/en/langref.php" target="_blank" class="bookmark source">Link to PHP Manual(www.php.net)</a></p>
-
-	  <p><strong>Secondary source</strong>: tutorials, references on <a href="https://www.w3schools.com/php/default.asp" target="_blank"><samp>www.w3schools.com/php/default.asp</samp></a></p>
-	  <p>Explore more&hellip;  <a href="https://en.wikipedia.org/wiki/PHP" target="_blank"><samp>en.wikipedia.org/wiki/PHP</samp></a> (good place to start and orient yourself...dig deeper with primary source)</p>
-      
-      <p>Explore more&hellip;  <a href="https://overapi.com/php" target="_blank"><samp>en.wikipedia.org/wiki/PHP</samp></a> (cheat sheet)</p>
-  </div>
-</div>
-
-
-
 
 
 <!-- Resources  
@@ -227,17 +255,8 @@
 </div>
 -->
 
-
-
-
-
-
-
-
-
-
-</section>
- </main>
+</article>
+</main>
   
   
   <footer class="bg-dark-gray text-white"> 

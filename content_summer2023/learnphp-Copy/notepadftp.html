@@ -73,11 +73,11 @@
     </div>
   </div>
 </nav>
-    
-    
-  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+ 
+ 
+<main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
       
-    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+<aside id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
       <div class="flex-shrink-0 px-8 py-4">
         <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
           <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -91,11 +91,17 @@
 <li class="mt-12 lg:mt-8">  
 
     
-    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Web Programming</h5> 
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Server-side Programming</h5> 
     <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
-
+        <li><a class="block border-l pl-4" href="highlights.html">JS vs. PHP highlights</a></li>
         <li><a class="block border-l pl-4" href="dataflow.html">Client-server dataflow</a></li>
-        <li><a class="block border-l pl-4" href="highlights.html">JS vs PHP highlights</a></li>
+        <li>
+            <details>
+                <summary>Development process</summary>
+                <ul>
+                  <li><a class="block border-l pl-8" href="dataflow.html">SDLC</a></li>
+                </ul>
+        </li>
         
     </ul>
 </li>
@@ -140,94 +146,93 @@
             </div>
             <strong>Examples</strong>
         </a>
-    </h5>    
+    </h5>   
 </li>
 </ul>
 </nav>
 
-    </div>  
+</aside>  
    
 
 
    
 <article class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
-    <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Data types</h2>
-    <h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">PHP supports ten primitive types. Four scalar types: bool, int, float, string; Four compound types: array, object, callable, iterable; And finally two special types: resource, NULL.</h6>
+    <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Working remotely on the server using Notepad++</h2>
 
-
-<!-- Data types  
--->
+	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800"></h6>
+    
+    
+<!-- To add the NppFTP plugin in Notepad++ -->
 <div class="my-5">
-  <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
     <div class="flex items-center justify-center px-1 bg-dark-gray"></div>
-    <div class="px-8 py-2 -mx-3">    
-        <h4 class="text-gray-900 text-2xl leading-tight font-medium mb-2">PHP Data types</h4>
-        <table class="border-collapse border border-slate-400 w-full my-4">
-          <thead>
-            <tr>
-              <th class="border border-slate-300 w-24">Type</th>
-              <th class="border border-slate-300 ">Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="border border-slate-300 ">int</td>
-              <td class="border border-slate-300 ">Whole number.<br>An integer is a number of the set ℤ = {..., -2, -1, 0, 1, 2, ...}.</td>
-            </tr>
-            <tr>
-              <td class="border border-slate-300 ">float</td>
-              <td class="border border-slate-300 ">Numeric value with decimal digits.<br>
-              Floating point numbers (also known as "floats", "doubles", or "real numbers") can be specified using any of the following: 1.234, 1.2e3,  7E-10, 1_234.567 . The size of a float is platform-dependent, although a maximum of approximately 1.8e308 with a precision of roughly 14 decimal digits is a common value (the 64 bit IEEE format).</td>
-            </tr>
-            <tr>
-              <td class="border border-slate-300 ">string</td>
-              <td class="border border-slate-300 ">
-                    <p class="mb-0">A string is a sequence of characters.
-                        <a href="http://www.w3schools.com/php/php_datatypes.asp" target="_blank">
-                            Learn more about strings @ PHP manual</a><br>          
-                    The string in PHP is implemented as an array of bytes and an integer indicating the length of the buffer. It has no information about how those bytes translate to characters, leaving that task to the programmer. There are no limitations on the values the string can be composed of; in particular, bytes with value 0 (“NUL bytes”) are allowed anywhere in the string (however, a few functions, said in this manual not to be “binary safe”, may hand off the strings to libraries that ignore data after a NUL byte.)
-                    <a href="http://www.w3schools.com/php/php_string.asp" target="_blank">&mdash;PHP Manual</a>
-                    </p>         
-              </td>
-            </tr>     
-            <tr>
-              <td class="border border-slate-300 ">bool</td>
-              <td class="border border-slate-300 ">true or false<br>This is the simplest type. A boolean expresses a truth value. It can be either TRUE or FALSE.</td>
-            </tr>  
+    <div class="px-4 py-2 -mx-3">
+        <div class="mx-3">
+            <span class="text-2xl font-semibold sher-teal">To add the NppFTP plugin in Notepad++</span>
+            
+            <ul class="text-base list-decimal list-outside pl-8 pt-4">
+                <li>click on the Plugins menu</li>
+                <li>click on the Plugins Admin...</li>
+                <li>in Available panel search for NppFTP</li>
+                <li>select it</li>
+                <li>click on Install button</li>
+            </ul>
+            <p class="text-base font-medium  py-4">Once it is installed it will appear as a menu item in the Plugins menu. When you click on it, it will give you several options to select</p>
+            <ol start="6" class="text-base list-decimal list-outside pl-8">
+                <li>click on Show NppFTP Window</li>
+            </ol>
+            <p class="text-base font-medium  py-4">A new panel will open with a set of icons at the top:</p>
+            <ol start="7" class="text-base list-decimal list-outside pl-8">
+                <li>click on the cog (second last icon) and select Profile settings</li>
+                <li>click the Add new button (at the bottom of Profiles)</li>
+                <li>enter the name of your choice when prompted and click OK</li>
+                <li>note that the newly-created profile is selected (if not, make sure you select it by clicking on it)</li>
+                <li>enter Hostname: <code>dev.fast.sheridanc.on.ca</code></li>
+                <li>select Connection type: SFTP</li>
+                <li>default port should be 22 (change if it is not - but make sure you have chosen SFTP, the other choices default to other ports)</li>
+                <li>enter Username: same as cPanel and FileZilla</li>
+                <li>leave rest as is.</li>
+            </ol>
+           <p class="text-base font-medium  py-4">Once you have profile(s) set up, the link icon (first one) drops down with a menu item for each profile that you have set up. </p>
+            <ol start="16" class="text-base list-decimal list-outside pl-8">
+                <li>click on the menu item and wait for the connection</li>
+                <li>when the connection is successful, the panel will fill with the directory tree on the server, just like in FileZilla</li>
+                <li>when the connection is unsuccessful, the issues are the same as in FileZilla (check all information in your profile, if it works in FileZilla, you can make it work here)</li>
+            </ol>
+           
+        </div>
+    </div>
+    </div>
+</div>    
 
-            <tr>
-              <td class="border border-slate-300 ">NULL</td>
-              <td class="border border-slate-300 ">no value</td>
-            </tr>  
-            <tr>
-              <td class="border border-slate-300 ">array</td>
-              <td class="border border-slate-300 ">indexed multiple values</td>
-            </tr> 
-            <tr>
-              <td class="border border-slate-300 ">object</td>
-              <td class="border border-slate-300 ">structure created with a class</td>
-            </tr>  
-            <tr>
-              <td class="border border-slate-300 ">resource</td>
-              <td class="border border-slate-300 ">A reference that identifies a connection <strong>A resource</strong> is a special variable, holding a reference to an external resource,  special handles to opened files, database connections, image canvas areas&hellip; Resources are created and used by special functions. <a href="http://ca3.php.net/manual/en/language.types.resource.php">Read more.</a></td>
-            </tr> 
-             
-          </tbody>
-        </table>  
-        <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Additional type classification</div>
-        <p><strong>Pseudo-types</strong> are keywords used in the PHP documentation to specify the types or values an argument can have. Please note that they <strong>are not primitives</strong> of the PHP language. The pseudo-type <em>number</em> indicates that a parameter can be either integer or float.</p> 
-        <p><strong>Scalar types</strong>&mdash;boolean, integer, and float&mdash;<strong>are primitive types</strong>.</p>    
-  </div>
-  </div>
-</div>
+<!-- with edge -->
+<div class="my-5">
+    <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="flex items-center justify-center px-1 bg-dark-gray"></div>
+    <div class="px-4 py-2 -mx-3">
+        <div class="mx-3">
+            <span class="text-2xl font-semibold sher-teal">Using Notepad++</span>
 
 
+            <ol class="text-base list-disc list-outside pl-8 pt-4">
+                <li>navigate to public_html and to the location where you want to create a file, or where you already have a file</li>
+                <li>to create a new file, right-click on the directory (folder) where you want to store the file and select the option Create new file, name it when prompted (remember PHP files must have an extension php)</li>
+                <li>to name a file use the same conventions as before, for example file.php, myFile.php, any_name.php</li>
+                <li>once the file is created, find it in the listing and double-click on it (note the Download... message in the bottom panel and the file opens in the Notepad++ panel)</li>
+                <li>try adding some code and then save the file (like before, using the File menu or the Save icon) - note the Upload... message in the bottom panel</li>
+                <li>to test your page, open a browser window and enter your Web URL with the path and file name. Example: <code>http://username.dev.fast.sheridanc.on.ca/path/file.php</code></li>
+            </ol> 
+        </div>
+    </div>
+    </div>
+</div>  
 
-</article>    
+ 
+</article>
 </main>
   
   
-<footer class="bg-dark-gray text-white"> 
+  <footer class="bg-dark-gray text-white"> 
      <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
       <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
          <p class="text-sm text-gray-100 md:mb-6">
