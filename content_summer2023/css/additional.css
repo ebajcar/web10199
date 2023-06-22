@@ -26,6 +26,12 @@ figcaption {
 .active {
   font-weight: bold;
 }
+.list-inside{list-style-position:inside}
+.list-outside{list-style-position:outside}
+.list-none{list-style-type:none}
+.list-disc{list-style-type:disc}
+.list-circle{list-style-type:circle}
+.list-decimal{list-style-type:decimal}
 
 /* sql.html */
 * {
@@ -82,4 +88,50 @@ td:first-child {font-weight: bold;}
   padding: 2px 4px;
   border-radius: 5px;
   background-color: #eee;
+}
+
+
+/* forms */
+	.table {
+		border-spacing: 0 15px;
+	}
+
+	i {
+		font-size: 1rem !important;
+	}
+
+	.table tr {
+		border-radius: 20px;
+	}
+
+	tr td:nth-child(n+5),
+	tr th:nth-child(n+5) {
+		border-radius: 0 .625rem .625rem 0;
+	}
+
+	tr td:nth-child(1),
+	tr th:nth-child(1) {
+		border-radius: .625rem 0 0 .625rem;
+	}
+
+
+.date:after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #e2e8f0;
+  top: 12px;
+  width: 150px;
+}
+
+.date:after {
+  margin-left: 15px;
+}
+section {
+  margin-bottom: 30px;
+}
+.bg-dark-gray  {
+  background-color: #333940;
+}
+.sher-teal {
+  color: #00b2ce;
 }

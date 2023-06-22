@@ -75,9 +75,9 @@
 </nav>
 
     
-  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+<main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
       
-    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+<aside id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
       <div class="flex-shrink-0 px-8 py-4">
         <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
           <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -93,36 +93,40 @@
     
     <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Web Programming</h5> 
     <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
-
-        <li><a class="block border-l pl-4" href="dataflow.html">Client-server dataflow</a></li>
-        <li><a class="block border-l pl-4" href="highlights.html">JS vs PHP highlights</a></li>
+        <li><a class="block border-l pl-4" href=".html">How web works</a></li>
+        <li><a class="block border-l pl-4" href=".html">Full-stack development</a></li>
+        <li><a class="block border-l pl-4" href=".html">Development process</a></li>
+        <li><a class="block border-l pl-4" href=".html">Standards</a></li>
         
     </ul>
 </li>
 <li class="mt-12 lg:mt-8">
-    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">PHP Core Concepts</h5>
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">JS Core Concepts</h5>
     <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
-        <li><a class="block border-l pl-4" href="index.html">PHP Language</a></li>
+        <li><a class="block border-l pl-4" href="index.html">JS Language</a></li>
         <li><a class="block border-l pl-4" href="grammar.html">Grammar</a></li>
         <li><a class="block border-l pl-4" href="data_types.html">Data types</a></li>
         <li><a class="block border-l pl-4" href="variables.html">Variables</a></li>
         <li><a class="block border-l pl-4" href="operators.html">Operators</a></li>
         <li><a class="block border-l pl-4" href="control_flow.html">Program flow</a></li>
-        <li><a class="block border-l pl-4" href="collections.html">Data structures</a></li>
+        <li><a class="block border-l pl-4" href="objects.html">Objects</a></li> 
+        <li><a class="block border-l pl-4" href="collections.html">Built-in objects</a></li> 
+        <li><a class="block border-l pl-4" href="dom.html">DOM &amp; BOM</a></li>
         <li><a class="block border-l pl-4" href="functions.html">Functions</a></li>   
-        <li><a class="block border-l pl-4" href="sessions.html">Sessions</a></li>
-        <li><a class="block border-l pl-4" href="objects.html">Object-oriented PHP</a></li>         
+        <li><a class="block border-l pl-4" href="events.html">Events</a></li>
+        <li><a class="block border-l pl-4" href="forms.html">Forms</a></li>
+                
     </ul>
 </li>
 <li class="mt-12 lg:mt-8">
     <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Related Components</h5>
-    <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">               
-        <li><a class="block border-l pl-4" href="mysql.html">MySQL DBMS</a></li>
-        <li><a class="block border-l pl-4" href="sql.html">SQL database language</a></li>   
-        <li><a class="block border-l pl-4" href="regex.html">Regular expressions</a></li>
+    <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">  
+        <li><a class="block border-l pl-4" href=".html">Programming paradigms</a></li>
+        <li><a class="block border-l pl-4" href=".html">Problem solving</a></li>
+        <li><a class="block border-l pl-4" href=".html">Algorithms</a></li>   
+        <li><a class="block border-l pl-4" href=".html">Conventions, Best practices</a></li>
+        <li><a class="block border-l pl-4" href=".html">Publishing</a></li>
     </ul>
-    
-    
 </li>    
 <li class="mt-12 lg:mt-8">    
     <h5 class="mt-6">
@@ -144,38 +148,252 @@
 </li>
 </ul>
 </nav>
-    </div>  
+</aside>  
         
-<section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
-    <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Regular expressions</h2>
-    <h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">-</h6>
-    
+        
+<!-- 6. Javascript Data Structures -->        
+<article class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+    <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Built-in objects</h2>
+    <h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800"><h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800" title="defined by [MDN]">A data structure is an aggregate of other data items. The data items that it contains are its components, which may be elementary data items or another data structure. The built-in objects (structures) include Date, Math, RegExp, Function, Object, and Array. Each type of object comes with an appropriate set of properties and methods.</h6></h6>
 
-
- 
-<!--  1.2. Javascript vs. PHP highlights -->
-<section id="page12">
 
 <div class="my-5">
   <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-    <div class="flex items-center justify-center px-4 bg-blue-200">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="triangle-exclamation" class="w-6 h-6 text-white fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"></path></svg>     
+    <div class="flex items-center justify-center px-1 bg-dark-gray">
     </div>
     <div class="px-4 py-2 -mx-3">
       <div class="mx-3">
-        <h3>Regular expressions (regex)</h3>
-        <p></p>
+        <span class="text-2xl font-semibold sher-teal">Heading</span>
+ 			<ul class="text-base list-disc list-inside">
+                <li class="list-decimal list-inside">list-item</li>
+                <li class="list-disc list-inside">list-item
+                <ul class="text-base list-circle list-inside px-6">
+                   <li>list-item</li>
+                   <li>list-item</li>
+                </ul>
+                </li> 				
+			</ul>
+    <p class="text-base pt-8">paragraph.</p>   
+    <p class="blockquote-footer">Read further  <cite title="[ ]"><a href="" target="_blank"> link </a></cite></p>
       </div>
     </div>
   </div>
 </div>
 
+
+
+<!-- 7.1. Built-in types -->
+<section id="page71">
+<div>
+			<h4>Date</h4> 
+      <p>The Date object lets you work with dates (years, months, days, hours, minutes, seconds, and milliseconds)</p>
+      
+<figure>      
+<pre class="language-js"><code>new Date()
+new Date(value)
+new Date(dateString)
+new Date(year, monthIndex, day)
+new Date(year, monthIndex, day, hours)
+new Date(year, monthIndex, day, hours, minutes)
+new Date(year, monthIndex, day, hours, minutes, seconds)
+new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds)
+</code></pre>	
+  <figcaption><strong>Date object syntax</strong>. Read more 
+    <a href="https://www.w3schools.com/jsref/jsref_obj_date.asp">ECMA-262 Spec</a>
+  </figcaption>
+</figure>
+
+<figure>
+<pre class="language-js"><code>// creates a new date object with the current date and time
+var d = new Date();
+// 7 numbers specify year, month, day, hour, minute, second, 
+// and millisecond (in that order)
+var d = new Date(2018, 11, 24, 10, 33, 30, 0);
+// 3 numbers specify year, month, and day
+var d = new Date(2018, 11, 24);</code></pre>					
+  <figcaption><strong>Date object examples</strong>. More examples  
+    <a href="">w3schools</a>
+  </figcaption>
+</figure>
+		
+
+    
+			<h4>Math</h4> 
+      <p>The Math object allows you to perform mathematical tasks. Math is not a constructor. All properties/methods of Math can be called by using Math as an object, without creating it.</p>  
+
+<figure>      
+<pre class="language-js"><code>// Returns PI 𝝅 𝜋 π
+var x = Math.PI;
+// Returns the square root of 16            
+var y = Math.sqrt(16);      		
+//Return a random number between 1 and 10:
+Math.floor((Math.random() * 10) + 1);
+// Round a number downward to its nearest integer:
+Math.floor(1.6)
+// Round a number upward to its nearest integer
+Math.ceil(1.4)
+// Return the number with the lowest value
+Math.min(5, 10)
+// Return the number with the highest value
+Math.max(5, 10)
+// Round a number to the nearest integer
+Math.round(49.4999)
+Math.round(49.5)
+// Return the value of the number 4 to the power of 3 (4*4*4)
+Math.pow(4, 3)
+</code></pre>
+  <figcaption><strong>Math object</strong>.  More on   
+    <a href="https://www.w3schools.com/jsref/jsref_obj_math.asp">w3schools</a>
+  </figcaption>
+</figure>      
+			
+      
+			<h4>RegExp</h4> 
+      <p>A regular expression is an object that describes a pattern of characters. Regular expressions are used to perform pattern-matching and "search-and-replace" functions on text. </p>
+
+<figure>       
+<pre class="language-js"><code>// Use a regular expression to do a case-insensitive search 
+// for "w3schools" in a string
+var str = "The quick brown fox jumps over the lazy dog.";
+var n = str.search(/lazy/i);  // returns 35
+// Use a case insensitive regular expression to replace 
+// Microsoft with W3Schools in a string:
+var res = str.replace(/brown/i, "orange");</code></pre>						
+  <figcaption><strong>RegExp object</strong>. <small class="text-default"> (explored in depth with Javascript forms)</small> 
+  </figcaption>
+</figure>			
+      
+      
+      
+			<h4>Function</h4> 
+      <p>A JavaScript function is a block of code designed to perform a particular task. A JavaScript function is executed when "something" invokes it (calls it).</p>
+
+<figure>       
+<pre class="language-js"><code>// Function is called, return value will end up in x				
+var x = myFunction(4, 3);   
+ 
+// Function returns the product of a and b
+function myFunction(a, b) {
+    return a * b;            
+}</code></pre>	
+  <figcaption><strong>Function object</strong>. <small class="text-default"> (explored in depth in next unit.)</small> 
+  </figcaption>
+</figure>			
+			
+      
+			<h4>Object</h4> 
+      <p>A JavaScript object is a container for named values. The values are written as name:value pairs (name and value separated by a colon).</p> 
+
+<figure>       
+<pre class="language-js"><code>// object person
+var person = {
+  firstName:"John", 
+  lastName:"Doe"
+};	</code></pre>	
+  <figcaption><strong>Javascript Object</strong>. <small class="text-primary"> (see custom objects)</small> 
+  </figcaption>
+</figure>
+				
+ </div>
+
+	<hr>
+<div>
+	<h4>Array</h4>
+	  <ul class="w3-ul">
+ 			<li><strong>Array</strong> JavaScript arrays are used to store multiple values in a single variable.
+<pre class="brush: js; highlight: [0]; first-line: 3" title="">
+var cars = ["Saab", "Volvo", "BMW"];  // array</pre>					
+			</li>   
+    
+    
+		<li>An array is a JavaScript built-in object that can store multiple items of data in individual elements</li>
+		<li>The new keyword and the Array() constructor can be used to create an array instance for assignment to a named variable</li>
+		<li>Array elements are automatically numbered from zero and each array element can be referenced by stating its index number within square brackets after the array variable name</li>
+		<li>Loops are a great way to populate the elements of an array or to read each element’s value on successive iterations</li>
+		<li>Arrays have a length property that can be used to terminate a loop or to resize the array</li>
+		<li>By default, the sort() method of an array object converts all element values to strings, then sorts them in dictionary order, unless a comparison function is specified as its argument</li>
+		<li>Exception errors can be thrown from a try block to a catch block for error-handling and their name and message properties can describe the nature of the error</li>
+		<li>Arrays are numerically indexed lists of values, delimited with <code>[</code> and <code>]</code>
+<pre class="brush: js; highlight: [0]; first-line: 1" title="Code Snippet 3.02">
+var primes = [ 2,3,5,7,11 ];	// an array of prime numbers.
+primes[0]			// access the first element of the array
+primes.length			// length property; how many elements in the array
+primes[primes.length-1]	// references the last element in the array
+primes[5] = 24;		// add a new element by assignment
+primes[3] = 27	;		// alter an existing element by assignment			
+var empty = [];			// declare an empty array with no elements
+
+var newarr = primes.concat([7,8,9]);	// add new members to an array</pre>
+
+<!--
+var primes = [ 2,3,5,7,11 ];  // an array of prime numbers.
+console.log(primes);
+primes[0]          // access the first element of the array
+console.log(primes[0]);
+primes.length           // length property; how many elements in the array
+console.log(primes.length);
+primes[primes.length-1]  // references the last element in the array
+console.log(primes);
+primes[5] = 24;      // add a new element by assignment
+console.log(primes);
+primes[3] = 27 ;       // alter an existing element by assignment  
+console.log(primes);
+var empty = [];         // declare an empty array with no elements
+ console.log(empty);
+newarr = primes.concat([7,8,9]);   // add new members to an array
+console.log(newarr);
+--></li>  
+		<li>Arrays and objects can hold other arrays and objects
+<pre class="brush: js; highlight: [0]; first-line: 1" title="Code Snippet 3.03">
+// an array with two elements. Each element is an object
+var points = [
+	{ x : 0, y : 0 },
+	{ x : 3, y : 7 }
+];
+
+// An object with two properties. Value of each property is an array. 
+// The elements of the arrays are arrays.
+var data = [
+	trial1 : [ [ 1, 3 ], [ 3, 4 ] ],
+	trial2 : [ [ 4, 5 ], [ 7, 8 ] ]
+];</pre></li>                            
+    </ul> 	
+ 
+	<hr>
+	<h5>Array properties and methods</h5>
+	  <p>Explore methods at <a href="https://www.w3schools.com/js/js_array_methods.asp">https://www.w3schools.com/js/js_array_methods.asp</a>)</p>
+	  <ul class="col3">
+		<li><code>toString()</code> method</li>
+		<li><code>join()</code> method</li>
+		<li><code>push()</code> method</li>
+		<li><code>pop()</code> method</li>
+		<li><code>shift()</code> method</li>
+		<li><code>unshift()</code> method</li>
+		<li><code>splice()</code> method</li>
+		<li><code>concat())</code> method</li>
+		<li><code>slice()</code> method</li>
+		<li><code>length</code> property</li>
+		<li><code>delete</code> operator</li>
+	</ul>
+	<p>Explore more methods&hellip;</p>
+	<ul class="col3">
+		<li><code>sort()</code> method (<a href="https://www.w3schools.com/js/js_array_sort.asp">w3school</a>)</li>
+		<li><code>reverse()</code> method (<a href="https://www.w3schools.com/js/js_array_sort.asp">w3school</a>)</li>
+		<li title=""><code>forEach()</code> method (<a href="https://www.w3schools.com/jsref/jsref_forEach.asp">w3school</a>)</li>
+	</ul>
+
+	<iframe style="width:100%;min-height:460px;border:none;padding-bottom:0;margin-bottom:0" src="https://interactive-examples.mdn.mozilla.net/pages/js/array-foreach.html"></iframe>	
+	<hr>
+  </div>
 </section>
 
-</section>      
-  </main>
-  
 
+</article>
+
+
+</main>
+  
+  
   <footer class="bg-dark-gray text-white"> 
      <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
       <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
