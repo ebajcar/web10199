@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <nav class="bg-gray-800">
+<nav class="bg-gray-800">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -75,9 +75,9 @@
 </nav>
  
  
-  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+<main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
       
-    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+<aside id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
       <div class="flex-shrink-0 px-8 py-4">
         <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
           <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -145,67 +145,73 @@
 </ul>
 </nav>
 
-    </div>  
+</aside>  
    
 
-
-   
-<section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+<article class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
     <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Data structures</h2>   
     <h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800" title="defined by [MDN]">An array in PHP is actually an ordered map. A map is a type that associates values to keys. This type is optimized for several different uses; it can be treated as an array, list (vector), hash table (an implementation of a map), dictionary, collection, stack, queue, and probably more. As array values can be other arrays, trees and multidimensional arrays are also possible. <small><cite title="php.net/manual/en/language.types.array.php"><a href="http://php.net/manual/en/language.types.array.php"  target="_blank" role="button">PHP Manual</a></cite></small></h6>    
 
-
-
-<!-- 6.1. PHP Arrays -->
-<section id="page53">
-	
-	<h3>Explore three common types of arrays:</h3>	
-	<ul class="dialog-ul">
-		<li>Indexed arrays</li>
-		<li>Associative arrays</li>
-		<li>Multidimensional arrays</li>
-	</ul>
-	<p>Dig deeper: <a href="http://php.net/manual/en/language.types.array.php"  target="_blank" role="button">Exlore PHP Arrays @ w3schools.com</a></p>							
-				
-	<hr>
-</section>
-
-<!-- 6.2. Indexed (ordered) arrays -->
-<section id="page54">
-  <h3>Indexed arrays</h3>
-  <p>Indexed (ordered) arrays &mdash;Arrays with a numeric index</p>
-  
+ 
+<!-- Data structures - PHP Arrays -->
+<div class="my-5">
+  <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 w-full">
+    <div class="flex items-center justify-center px-1 bg-dark-gray"></div>
+    <div class="px-8 py-2 w-full">    
+        <h4 class="text-gray-900 text-2xl leading-tight font-medium mb-2">PHP Arrays</h4>
+        <table class="border-collapse border border-slate-400 table-auto w-full my-4">
+          <thead>
+            <tr>
+              <th class="border border-slate-300 w-24">Type</th>
+              <th class="border border-slate-300">Notes</th>
+              <th class="border border-slate-300 w-40">Tutorials</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr>
+                <td class="border border-slate-300 ">Indexed arrays</td>
+                <td class="border border-slate-300">
+                    <p>Indexed (ordered) arrays &mdash;Arrays with a numeric index</p>
 <figure>		
-<figcaption>FIGURE 1. <small>Indexed array.</small></figcaption>
+<figcaption>EXAMPLE: <small>Indexed array.</small></figcaption>
 <pre class="language-php"><code>$city = array("Oakville", 
               "Brampton", 
               "Mississauga");
 </code></pre>
-</figure>  
-  
-</section>
-	
-<!-- 6.3. Associative arrays -->
-<section id="page55">
-	<h3>Associative arrays</h3>
-  <p>Associative arrays&mdash;Arrays with named keys</p>
-  
+</figure>                 
+                </td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li><a href="https://www.w3schools.com/php/php_arrays.asp" target="_blank">PHP Arrays <span class="font-thin tracking-tighter text-xs">-W3schools</span></a></li>
+                        <li><a href="" target="_blank">link</a></li>
+                        <li><a href="" target="_blank">link</a></li>
+                    </ul>
+                </td>              
+            </tr>   
+             <tr>
+                <td class="border border-slate-300 ">Associative arrays</td>
+                <td class="border border-slate-300">
+                    <p>Associative arrays&mdash;Arrays with named keys</p>
 <figure>		
-<figcaption>FIGURE 3. <small>Associative array.</small></figcaption>
+<figcaption>EXAMPLE <small>Associative array.</small></figcaption>
 <pre class="language-php"><code>$province = array("ON"=>"Ontario",
                   "MB"=>"Manitoba",
                   "SK"=>"Saskatchewan");
 </code></pre>
-</figure>    
-  
-	<hr>
-</section>		
-
-<!-- 6.4. Multidimensional arrays -->
-<section id="page56">
-  <h3>Multidimensional arrays</h3>
-	<p>Multidimensional arrays &mdash;Arrays containing one or more arrays</p>
-
+</figure>                  
+                </td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li><a href="https://www.w3schools.com/php/php_arrays.asp" target="_blank">PHP Arrays <span class="font-thin tracking-tighter text-xs">-W3schools</span></a></li>
+                        <li><a href="" target="_blank">link</a></li>
+                        <li><a href="" target="_blank">link</a></li>
+                    </ul>
+                </td>              
+            </tr>  
+             <tr>
+                <td class="border border-slate-300 ">Multidimensional arrays</td>
+                <td class="border border-slate-300">
+                <p>Multidimensional arrays &mdash;Arrays containing one or more arrays</p>
 <figure>		
 <figcaption>FIGURE 2. <small>Associative array.</small></figcaption>
 <pre class="language-php"><code>$arr = array (  
@@ -224,18 +230,30 @@
 		"y" => 9
 	)
 );</code></pre>
-</figure>								
-	<p>Dig deeper: <a href="http://www.w3schools.com/php/php_arrays_multi.asp"  target="_blank" role="button">Multi-dimensional array @ w3schools.com</a></p>		
-	<hr>
-</section>		
+</figure>		                 
+                </td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li><a href="http://www.w3schools.com/php/php_arrays_multi.asp" target="_blank">PHP Multidimensional Arrays <span class="font-thin tracking-tighter text-xs">-W3schools</span></a></li>
+                        <li><a href="" target="_blank">link</a></li>
+                        <li><a href="" target="_blank">link</a></li>
+                    </ul>
+                </td>              
+            </tr>            
+          </tbody>
+        </table>  
+    
+  </div>
+  </div>
+</div>
 
 
-    </section>
-      
-  </main>
+
+</article>    
+</main>
   
-
-  <footer class="bg-dark-gray text-white"> 
+ 
+<footer class="bg-dark-gray text-white"> 
      <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
       <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
          <p class="text-sm text-gray-100 md:mb-6">
