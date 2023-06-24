@@ -75,9 +75,9 @@
 </nav>
 
     
-  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+<main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
       
-    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+<aside id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
       <div class="flex-shrink-0 px-8 py-4">
         <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
           <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -144,13 +144,9 @@
 </li>
 </ul>
 </nav>
-
-    </div>  
+</aside>  
    
-
-
-   
-<section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+<article class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
     <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Program flow</h2>
 
     <h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">Any PHP script is built out of a series of statements. A statement can be an assignment, a function call, a loop, a conditional statement or even a statement that does nothing (an empty statement). Statements can be grouped into a statement-group by encapsulating a group of statements with curly braces. A statement-group is a statement as well, often referred to as control structure.</h6>
@@ -171,66 +167,114 @@
     </ul>
 
 
-
-
 <!-- 2.1. Simple Statements -->
-<div id="1" class="flex justify-center mt-6">
-  <div class="block p-6 rounded-lg shadow-lg bg-white">
-    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Simple Statements</h5>
-    <p>Each PHP statement is an instruction to PHP interpreter to do something. Statements are interpretted one at a time, in the sequence they are written. </p>
-	
+<div class="my-5">
+    <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="flex items-center justify-center px-1 bg-dark-gray"></div>
+    <div class="px-4 py-2 -mx-3">
+        <div class="mx-3">
+            <span class="text-2xl font-semibold sher-teal">Simple Statements</span>
+    <p class="text-base">Each PHP statement is an instruction to PHP interpreter to do something. 
+                         Statements are interpretted one at a time, in the sequence they are written. </p>
 <pre class="language-php"><code>statement1; 
 statement2; 
 statement3;</code></pre>
-	<p>PHP requires instructions to be terminated with a semicolon at the end of each simple statement. The closing tag of a block of PHP code automatically implies a semicolon;</p>
-    <p>Sometimes statements are combined into a block and executed together (decisions and iteration).</p>
-  </div>
+            <ul class="text-base list-disc list-outside pl-8">
+                <li>PHP requires instructions to be terminated with a semicolon at the end of each simple statement.</li>
+                <li>The closing tag of a block of PHP code automatically implies a semicolon;</li>
+                <li>Sometimes statements are combined into a block and executed together (decisions and iteration).</li>
+            </ul>
+        </div>
+    </div>
+    </div>
 </div> 
 
-
-
+ 
 <!-- 2.2. Selection (Decisions) -->
-<div id="2" class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Selection (Decisions)</h5>	
-    
-            <span class="template-3col">
-                <b>if<br><small>&hellip;</small></b>
-                <b>elseif<br><small>&hellip;</small></b>
-                <b>else if<br><small>&hellip;</small></b>
-                <b>switch<br><small>&hellip;</small></b>
-                <b>break<br><small>break ends execution of the current switch structure</small></b>
-                <b>&nbsp;</b>
-             </span>
-    <p class="lead"><a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  target="_blank"  
-            href="http://php.net/manual/en/language.control-structures.php">Read more in PHP Manual	</a></p>
-  </div>
-</div> 
-
-
-
-<div class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">IF Statements</h5>
-	<p class="lead">The <code>if</code> statement allows for conditional execution of code fragments. PHP features an if structure that is similar to that of C (Java and Javascript).</p>
+<div class="my-5">
+  <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 w-full">
+    <div class="flex items-center justify-center px-1 bg-dark-gray"></div>
+    <div class="px-8 py-2 w-full">    
+        <h4 class="text-2xl leading-tight font-medium mb-2 sher-teal">Selection (Decisions)</h4>
+        <table class="border-collapse border border-slate-400 table-auto w-full my-4">
+          <thead>
+            <tr>
+              <th class="border border-slate-300 w-24">Type</th>
+              <th class="border border-slate-300">Notes</th>
+              <th class="border border-slate-300 w-48">Tutorials</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+                <td class="border border-slate-300 ">if<br>elseif<br>else if<br> </td>
+                <td class="border border-slate-300">
+                <p>The <code>if</code> statement allows for conditional execution of code fragments. PHP features an if structure that is similar to that of C (Java and Javascript).</p>
 <pre class="language-php"><code>
 if (condition) {
 	echo "code to be executed if condition is true";
 } else {
 	echo "code to be executed if condition is false";
-}</code></pre>
-	<p class="lead"><a style="cursor:pointer;"  target="_blank" role="button" 
-		hrRead more in ef="http://php.net/manual/en/control-structures.if.php">Read more in PHP Manual</a>
-    </p>
-  </div>
-</div> 
+}</code></pre>		                 
+                </td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="http://php.net/manual/en/language.control-structures.php" target="_blank">Control structures</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                          </li> 
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="http://php.net/manual/en/control-structures.if.php" target="_blank">PHP if structure</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                          </li>                          
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="https://www.php.net/manual/en/control-structures.else.php" target="_blank">PHP else statement</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                          </li>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="https://www.php.net/manual/en/control-structures.elseif.php" target="_blank">PHP elseif/else if</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                          </li> 
+                          
+                    </ul>
+                </td>              
+            </tr> 
 
-
-<div class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">SWITCH Statements</h5>
+            <tr>
+                <td class="border border-slate-300 ">switch</td>
+                <td class="border border-slate-300">
 	<p class="lead">The <code>switch</code> statement is similar to a series of IF statements on the same expression.</p>
 
 <pre class="language-php"><code>
@@ -242,133 +286,366 @@ switch (n) {
 	... 
 	default:
 		// code to be executed if n is different from all labels
-}</code></pre>
-        <p class="lead"><a style="cursor:pointer;" 	target="_blank" role="button" 
-			href="http://php.net/manual/en/control-structures.switch.php">Read more in PHP Manual</a></p>
-  </div>
-</div> 
+}</code></pre>               
+                </td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="http://php.net/manual/en/control-structures.switch.php" target="_blank">PHP Switch</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                          </li> 
+                    </ul>
+                </td>              
+            </tr>   
 
-
-
-<div id="1" class="flex justify-center mt-6">
-  <div class="block p-6 rounded-lg shadow-lg bg-white">
-    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Iteration (Loops)</h5>	
-    <span class="template-3col">
-        <b>for<br><small></small></b>
-        <b>foreach<br><small></small></b>
-        <b>while<br><small></small></b>
-        <b>do&hellip;while<br><small></small></b>
-                <b>&nbsp;</b>
-        <b>&nbsp;</b>
-        <b>break<br><small>break ends execution of the current for, foreach, while, do-while or switch structure</small></b>
-        <b>continue<br><small>used within looping structures to skip the rest of the current loop iteration&hellip;</small></b>
-        <b>return<br><small></small></b>
-
-     </span>
-    <p class="lead"><a class="btn btn-outline-secondary btn-block" style="cursor:pointer;"  target="_blank"  
-            href="http://php.net/manual/en/language.control-structures.php">Read more in PHP Manual	</a></p>
-  </div>
-</div> 
-
-
-
-<div class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">FOR Statements</h5>
-	<p class="lead">The <code>for</code> loop</p>
+            <tr>
+                <td class="border border-slate-300 ">break</td>
+                <td class="border border-slate-300">break ends execution of the current switch structure</td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li><a href="" target="_blank"></a></li>
+                    </ul>
+                </td>              
+            </tr>             
+          </tbody>
+        </table>  
     
+  </div>
+  </div>
+</div>
+
+
+<!-- 2.2. Iteration (loops) -->
+<div class="my-5">
+  <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 w-full">
+    <div class="flex items-center justify-center px-1 bg-dark-gray"></div>
+    <div class="px-8 py-2 w-full">    
+        <h4 class="sher-teal text-2xl leading-tight font-medium mb-2">Iteration (Loops)</h4>
+        <table class="border-collapse border border-slate-400 table-auto w-full my-4">
+          <thead>
+            <tr>
+              <th class="border border-slate-300 w-24">Type</th>
+              <th class="border border-slate-300">Notes</th>
+              <th class="border border-slate-300 w-48">Tutorials</th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+                <td class="border border-slate-300 ">for</td>
+                <td class="border border-slate-300">
+	<p class="lead">The <code>abc</code> xxx</p>
 <pre class="language-php"><code>
 for (initialization; condition; finalExpression) { 
 	//code to be executed; 
-}</code></pre>
-	<p class="lead"><a style="cursor:pointer;"  target="_blank" role="button" 
-		href="http://php.net/manual/en/control-structures.for.php">Read more in PHP Manual	</a></p>
-  </div>
-</div> 
+}</code></pre>               
+                </td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="http://php.net/manual/en/control-structures.for.php" target="_blank">PHP for loops</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                          </li> 
+                    </ul>
+                </td>              
+            </tr>   
 
-
-
-<div class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">FOREACH Statements</h5>
-	<p class="lead">The <code>foreach</code> construct works only on arrays, and is used to loop through each key/value pair in an array.</p>
-<pre class="language-php"><code>
+            <tr>
+                <td class="border border-slate-300 ">forEach</td>
+                <td class="border border-slate-300">The <code>foreach</code> 
+                construct works only on arrays, and is used to loop through each key/value pair in an array.
+ <pre class="language-php"><code>
 foreach (arrayVariable as currentMemberValue) { 
 	//code to be executed; 
-}</code></pre>
-	<p class="lead"><a style="cursor:pointer;" target="_blank" role="button" 
-			href="http://php.net/manual/en/control-structures.foreach.php">Read more in PHP Manual	</a></p>
-  </div>
-</div> 
+}</code></pre>               
+                </td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="https://www.php.net/manual/en/control-structures.foreach.php" target="_blank">PHP forEach construct</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                          </li> 
+                    </ul>
+                </td>              
+            </tr>         
 
-
-
-<div class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">WHILE Statements</h5>
-    <p class="lead">The <code>while</code> statement</p>
+            <tr>
+                <td class="border border-slate-300 ">while</td>
+                <td class="border border-slate-300">The <code>while</code> statement
 <pre class="language-php"><code>
 initialization; 
 while (condition) { 
 	// code to be executed; 
 	finalExpression; 
-}</code></pre>
-	<p class="lead"><a style="cursor:pointer;" target="_blank" role="button" 
-			href="http://php.net/manual/en/control-structures.while.php">Read more in PHP Manual</a></p>
-  </div>
-</div> 
+}</code></pre>  </td> 
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="https://www.php.net/manual/en/control-structures.while.php" target="_blank">PHP while loop</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                          </li> 
+                    </ul>
+                </td>              
+            </tr>    
 
 
-<div class="flex justify-center mt-6 w-full">
-  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">DO&hellip;WHILE Statements</h5>
-	<p class="lead">The  <code>do&hellip;while</code> construct executes the code once, and then repeats the loop as long as the specified condition is true. the truth expression is checked at the end of each iteration </p>
+            <tr>
+                <td class="border border-slate-300 ">do...while</td>
+                <td class="border border-slate-300">The  <code>do&hellip;while</code> construct executes the code once, and then 
+                repeats the loop as long as the specified condition is true. the truth expression is checked at the end of each iteration </p>
 <pre class="language-php"><code>
 do {
 	code to be executed;
 } while (condition is true);</code></pre>
-			<p class="lead"><a class="btn btn-outline-secondary btn-block" style="cursor:pointer;" target="_blank" role="button" href="http://php.net/manual/en/control-structures.do.while.php">Read more in PHP Manual</a></p>
+                </td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="https://www.php.net/manual/en/control-structures.do.while.php" target="_blank">PHP do-while loop</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                          </li> 
+                    </ul>
+                </td>              
+            </tr>   
+
+
+            <tr>
+                <td class="border border-slate-300 ">break</td>
+                <td class="border border-slate-300">break ends execution of the current <code>for</code>, <code>foreach</code>, 
+                                                                        <code>while</code>, <code>do-while</code> or <code>switch</code> structure</td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="https://www.php.net/manual/en/control-structures.break.php" target="_blank">PHP break</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                        </li>
+                    </ul>
+                </td>              
+            </tr> 
+            
+            
+            <tr>
+                <td class="border border-slate-300 ">continue</td>
+                <td class="border border-slate-300">used within looping structures to skip the rest of the current loop iteration&hellip;</td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="https://www.php.net/manual/en/control-structures.continue.php" target="_blank">PHP continue</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                        </li>
+                    </ul>
+                </td>              
+            </tr>  
+
+
+            <tr>
+                <td class="border border-slate-300 ">return</td>
+                <td class="border border-slate-300">return returns program control to the calling module. Execution resumes at the expression following the called module's invocation.</td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="https://www.php.net/manual/en/function.return.php" target="_blank">PHP return</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                        </li>
+                    </ul>
+                </td>              
+            </tr> 
+
+
+            
+          </tbody>
+        </table>  
+    
   </div>
-</div> 
-
-
-
-
+</div>
 
 
 <!-- 2.4. Requires and Includes -->
-<div id="11" class="flex justify-center mt-6">
-  <div class="block p-6 rounded-lg shadow-lg bg-white">
-    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Requires and Includes</h5>	
-    <p>PHP has four functions for using external files: <code>include()</code>, <code>include_once()</code>, <code>require()</code>, and <code>require_once()</code>. </p>
-    <p>Include files give you a way to create one version of the common elements of your web site, such as the header, footer, menu, etc., which you then reference on all web pages. The main difference between include() and require()</p>
-    <ul class="dialog-ul">
-        <li>include() function will print a warning on error but will continue to process the script.</li>
-        <li>require() function will print an error and halt the processing of the script.</li>
-        <li>otherwise, both functions work exactly the same when script is working properly.</li>
-        <li>Both functions also have a _once version. This ensures that the external file is only included once regardless of how many times the script may inadvertently try to include it.</li>	
-        <li><code>require</code> is identical to <code>include</code> <i>except upon failure it will also produce a fatal E_COMPILE_ERROR level error</i></li>
-        <li><code>require_once</code> and <code>include_once</code> <i>will check if the file has already been included, and if so, not include (require) it again</i>.</li>	
-    </ul>	
-    <a style="cursor:pointer;" target="_blank" role="button" 
-       href="http://php.net/manual/en/function.include.php"> Read more in PHP Manual</a>
+<div class="my-5">
+  <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 w-full">
+    <div class="flex items-center justify-center px-1 bg-dark-gray"></div>
+    <div class="px-8 py-2 w-full">    
+        <h4 class="sher-teal text-2xl leading-tight font-medium mb-2">Include and require external files</h4>
+    <p class="text-base">Include files give you a way to create one version of the common elements of your web site, such as the header, footer, menu, etc., 
+    which you then reference on all web pages. PHP has four functions for using external files: <code>include()</code>, <code>include_once()</code>, 
+   <code>require()</code>, and <code>require_once()</code>. </p>     
+        <table class="border-collapse border border-slate-400 table-auto w-full my-4">
+          <thead>
+            <tr>
+              <th class="border border-slate-300 w-24">Type</th>
+              <th class="border border-slate-300">Notes</th>
+              <th class="border border-slate-300 w-48">Tutorials/Reference</th>
+            </tr>
+          </thead>
+          <tbody>
+             <tr>
+                <td class="border border-slate-300 ">include</td>
+                <td class="border border-slate-300"><code>include</code> function will print a warning on error but will continue to process the script.</td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="" target="_blank">PHP include</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                        </li>
+                    </ul>
+                </td>              
+            </tr> 
+            
+             <tr>
+                <td class="border border-slate-300 ">require</td>
+                <td class="border border-slate-300"><code>require</code> function will print an error and halt the processing of the script. <br><code>require</code> is identical to <code>include</code> except upon failure it will also produce a fatal E_COMPILE_ERROR level error</td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="" target="_blank">PHP require</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                        </li>
+                    </ul>
+                </td>              
+            </tr> 
+
+
+
+             <tr>
+                <td class="border border-slate-300 ">require_once</td>
+                <td class="border border-slate-300"><code>require_once</code> will check if the file has already been included, and if so, not require it again</td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="" target="_blank">PHP require_once</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                        </li>
+                    </ul>
+                </td>              
+            </tr> 
+
+             <tr>
+                <td class="border border-slate-300 ">include_once</td>
+                <td class="border border-slate-300"><code>include_once</code> will check if the file has already been included, and if so, not include it again</td>
+                <td class="border border-slate-300">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a 
+                                      href="" target="_blank">PHP include_once</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                        </li>
+                    </ul>
+                </td>              
+            </tr>             
+          </tbody>
+        </table>  
+    <ul class="text-base list-disc list-outside pl-8">
+        <li>both functions work exactly the same when script is working properly.</li>
+        <li>both functions also have a _once version. This ensures that the external file 
+        is only included once regardless of how many times the script may inadvertently try to include it.</li>		
+    </ul>    
   </div>
-</div> 
+  </div>
+</div>
 
 
 
-
-</section>
-
-
-
-      
-  </main>
+</article>
+  
+</main>
   
   
-  <footer class="bg-dark-gray text-white"> 
+<footer class="bg-dark-gray text-white"> 
      <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
       <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
          <p class="text-sm text-gray-100 md:mb-6">

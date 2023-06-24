@@ -167,79 +167,108 @@
               <th class="border border-slate-300 ">Tutorials</th>
             </tr>
           </thead>
+          
+          
           <tbody>
             <tr>
-              <td class="border border-slate-300 ">int</td>
-              <td class="border border-slate-300 ">Whole number.<br>An integer is a number of the set ℤ = {..., -2, -1, 0, 1, 2, ...}.</td>
-              <td class="border border-slate-300 w-40">
-              <ul>
-                    <li><a href="" target="_blank">link</a></li>
-                    <li><a href="" target="_blank">link</a></li>
-                    <li><a href="" target="_blank">link</a></li>
-              </ul>
-              </td>
+                <td class="border border-slate-300 ">int</td>
+                <td class="border border-slate-300 ">Whole number.<br>An integer is a number of the set ℤ = {..., -2, -1, 0, 1, 2, ...}.</td>
+                <td class="border border-slate-300 w-40">
+                    <ul>
+                        <li><a href="" target="_blank">link</a></li>
+
+                    </ul>
+                </td>
             </tr>
             <tr>
-              <td class="border border-slate-300 ">float</td>
-              <td class="border border-slate-300 ">Numeric value with decimal digits.<br>
+                <td class="border border-slate-300 ">float</td>
+                <td class="border border-slate-300 ">Numeric value with decimal digits.<br>
               Floating point numbers (also known as "floats", "doubles", or "real numbers") can be specified using any of the following: 1.234, 1.2e3,  7E-10, 1_234.567 . The size of a float is platform-dependent, although a maximum of approximately 1.8e308 with a precision of roughly 14 decimal digits is a common value (the 64 bit IEEE format).</td>
-              <td class="border border-slate-300 w-40">
-                  <ul>
+                <td class="border border-slate-300 w-40">
+                    <ul>
                         <li><a href="" target="_blank">link</a></li>
                         <li><a href="" target="_blank">link</a></li>
                         <li><a href="" target="_blank">link</a></li>
-                  </ul> 
-              </td> 
+                    </ul> 
+                </td> 
             </tr>
             <tr>
-              <td class="border border-slate-300 ">string</td>
-              <td class="border border-slate-300 ">
+                <td class="border border-slate-300 ">string</td>
+                <td class="border border-slate-300 ">
                     <p class="mb-0">A string is a sequence of characters.
                         <a href="http://www.w3schools.com/php/php_datatypes.asp" target="_blank">
                             Learn more about strings @ PHP manual</a><br>          
                     The string in PHP is implemented as an array of bytes and an integer indicating the length of the buffer. It has no information about how those bytes translate to characters, leaving that task to the programmer. There are no limitations on the values the string can be composed of; in particular, bytes with value 0 (“NUL bytes”) are allowed anywhere in the string (however, a few functions, said in this manual not to be “binary safe”, may hand off the strings to libraries that ignore data after a NUL byte.)
                     <a href="http://www.w3schools.com/php/php_string.asp" target="_blank">&mdash;PHP Manual</a>
                     </p>         
-              </td>
-              <td class="border border-slate-300 w-48">
-                  <ul>
-                        <li><a href="" target="_blank">link</a></li>
-                        <li><a href="https://www.w3schools.com/php/php_string.asp" target="_blank">link</a></li>
-                        <li><a href="" target="_blank">PHP Strings  <span class="font-thin tracking-tighter text-xs">-W3schools</span></a></li>
-                  </ul>  
-              </td>              
-            </tr>     
+                </td>
+                <td class="border border-slate-300 w-48">
+                    <ul>
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a href="" target="_blank">Click here</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+                              </div>
+                            </div>
+                          </li>                  
+                        <li class="flex justify-between gap-x-6">
+                            <div class="flex gap-x-0">
+                              <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                              </svg>
+                              <div class="min-w-0 flex-auto">
+                                <span class="block font-semibold text-gray-900"><a href="https://www.w3schools.com/php/php_string.asp" target="_blank">PHP Strings</a></span>
+                                <p class="truncate text-xs w-full text-gray-500">W3schools</p>
+                              </div>
+                            </div>
+                        </li>                 
+                    </ul>  
+                </td>              
+            </tr>  
+
+            
             <tr>
               <td class="border border-slate-300 ">bool</td>
               <td class="border border-slate-300 ">true or false<br>This is the simplest type. A boolean expresses a truth value. It can be either TRUE or FALSE.</td>
-              <td class="border border-slate-300 w-40">
+              <td class="border border-slate-300">
               <ul>
-                    <li><a href="" target="_blank">link</a></li>
-                    <li><a href="" target="_blank">link</a></li>
                     <li><a href="" target="_blank">link</a></li>
               </ul>   
               </td>
             </tr>  
 
+
             <tr>
               <td class="border border-slate-300 ">NULL</td>
               <td class="border border-slate-300 ">no value</td>
-              <td class="border border-slate-300 w-40">
+              <td class="border border-slate-300">
               <ul>
-                    <li><a href="" target="_blank">link</a></li>
-                    <li><a href="" target="_blank">link</a></li>
                     <li><a href="" target="_blank">link</a></li>
               </ul>
               </td>                
-            </tr>  
+            </tr> 
+
+            
             <tr>
               <td class="border border-slate-300 ">array</td>
               <td class="border border-slate-300 ">indexed multiple values</td>
               <td class="border border-slate-300 w-40">
               <ul>
-                    <li><a href="" target="_blank">link</a></li>
-                    <li><a href="" target="_blank">link</a></li>
-                    <li><a href="" target="_blank">link</a></li>
+                  <li class="flex justify-between gap-x-6">
+                    <div class="flex gap-x-0">
+                      <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                      </svg>
+                      <div class="min-w-0 flex-auto">
+                        <span class="block font-semibold text-gray-900"><a href="https://www.w3schools.com/php/php_arrays.asp" target="_blank">PHP Arrays</a></span>
+                        <p class="truncate text-xs w-full text-gray-500">W3schools</p>
+                      </div>
+                    </div>
+                  </li> 
               </ul>
               </td>
             </tr> 
@@ -271,9 +300,17 @@
               <td class="border border-slate-300 "><strong>Pseudo-types</strong> are keywords used in the PHP documentation to specify the types or values an argument can have. Please note that they <strong>are not primitives</strong> of the PHP language. The pseudo-type <em>number</em> indicates that a parameter can be either integer or float.</td>
               <td class="border border-slate-300 w-40">
               <ul>
-                    <li><a href="https://www.w3schools.com/php/php_numbers.asp" target="_blank">PHP Numbers <span class="font-thin tracking-tighter text-xs">-W3schools</span></a></li>
-                    <li><a href="" target="_blank">link</a></li>
-                    <li><a href="" target="_blank">link</a></li>
+                <li class="flex justify-between gap-x-6">
+                    <div class="flex gap-x-0">
+                      <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+                      </svg>
+                      <div class="min-w-0 flex-auto">
+                        <span class="block font-semibold text-gray-900"><a href="https://www.w3schools.com/php/php_numbers.asp" target="_blank">PHP Numbers</a></span>
+                        <p class="truncate text-xs w-full text-gray-500">W3schools</p>
+                      </div>
+                    </div>
+                  </li>                    
               </ul>
               </td>              
             </tr>   
@@ -282,11 +319,19 @@
               <td class="border border-slate-300 "></td>
               <td class="border border-slate-300 "><strong>Scalar types</strong>&mdash;boolean, integer, and float&mdash;<strong>are primitive types</strong>.</td>
               <td class="border border-slate-300 w-40">
-              <ul>
-                    <li><a href="" target="_blank">link</a></li>
-                    <li><a href="" target="_blank">link</a></li>
-                    <li><a href="" target="_blank">link</a></li>
-              </ul>
+<ul role="list" class="divide-y divide-gray-100 divide-gray-100 rounded-md border border-gray-200">
+  <li class="flex justify-between gap-x-6">
+    <div class="flex gap-x-0">
+      <svg class="h-4 w-4 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+      </svg>
+      <div class="min-w-0 flex-auto">
+        <span class="block font-semibold text-gray-900"><a href="" target="_blank">Click here</a></span>
+        <p class="truncate text-xs w-full text-gray-500">PHP manual</p>
+      </div>
+    </div>
+  </li>
+</ul>
               </td>              
             </tr>             
           </tbody>
