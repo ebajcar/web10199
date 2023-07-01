@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <nav class="bg-gray-800">
+<nav class="bg-gray-800">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -75,9 +75,10 @@
 </nav>   
 
 
-  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
-      
-    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+<main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+
+ 
+<aside id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
       <div class="flex-shrink-0 px-8 py-4">
         <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
           <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -91,12 +92,19 @@
 <li class="mt-12 lg:mt-8">  
 
     
-    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Web Programming</h5> 
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Server-side Programming</h5> 
     <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
-
+        <li><a class="block border-l pl-4" href="highlights.html">JS vs. PHP highlights</a></li>
         <li><a class="block border-l pl-4" href="dataflow.html">Client-server dataflow</a></li>
-        <li><a class="block border-l pl-4" href="highlights.html">JS vs PHP highlights</a></li>
-        
+<!--
+        <li>
+            <details>
+                <summary>Development process</summary>
+                <ul>
+                  <li><a class="block border-l pl-8" href="dataflow.html">SDLC</a></li>
+                </ul>
+        </li>
+-->       
     </ul>
 </li>
 <li class="mt-12 lg:mt-8">
@@ -104,20 +112,6 @@
     <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
         <li><a class="block border-l pl-4" href="index.html">PHP Language</a></li>
         <li><a class="block border-l pl-4" href="grammar.html">Grammar</a></li>
-        <li>
-        <!--
-            <details open>
-                <summary><a href="grammar.html">Grammar</a></summary>
-                <ul>
-                    <li class="pl-8" ><a href="grammar.html#1">start/end tags</a></li>
-                    <li class="pl-8" ><a href="grammar.html#2">file extensions</a></li>
-                    <li class="pl-8" ><a href="grammar.html#3">organize code</a></li>
-                    <li class="pl-8" ><a href="grammar.html#3">whitespace</a></li>
-                    <li class="pl-8" ><a href="grammar.html#3">commenting</a></li>
-                </ul>
-            </details>
-        -->
-        </li>
         <li><a class="block border-l pl-4" href="data_types.html">Data types</a></li>
         <li><a class="block border-l pl-4" href="variables.html">Variables</a></li>
         <li><a class="block border-l pl-4" href="operators.html">Operators</a></li>
@@ -140,34 +134,46 @@
 </li>    
 <li class="mt-12 lg:mt-8">    
     <h5 class="mt-6">
-        <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4 text-gray-900">
-            <div class="mr-3 rounded-md bg-gradient-to-br from-blue-500 to-blue-500">
-                <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6C10.0929 6 11.1175 6.29218 12 6.80269V16.8027C11.1175 16.2922 10.0929 16 9 16C7.90714 16 6.88252 16.2922 6 16.8027V6.80269C6.88252 6.29218 7.90714 6 9 6Z" fill="#FDF4FF"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15 6C16.0929 6 17.1175 6.29218 18 6.80269V16.8027C17.1175 16.2922 16.0929 16 15 16C13.9071 16 12.8825 16.2922 12 16.8027V6.80269C12.8825 6.29218 13.9071 6 15 6Z" fill="#FDF4FF"></path></svg>
-            </div>
-            <strong>Worksheets</strong>
+        <a href="notepadftp.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4 text-gray-900">
+            <div class="mr-3 rounded-md bg-gradient-to-br from-pink-500 to-rose-500"><svg class="h-6 w-6" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6C10.0929 6 11.1175 6.29218 12 6.80269V16.8027C11.1175 16.2922 10.0929 16 9 16C7.90714 16 6.88252 16.2922 6 16.8027V6.80269C6.88252 6.29218 7.90714 6 9 6Z" fill="#FFF1F2"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15 6C16.0929 6 17.1175 6.29218 18 6.80269V16.8027C17.1175 16.2922 16.0929 16 15 16C13.9071 16 12.8825 16.2922 12 16.8027V6.80269C12.8825 6.29218 13.9071 6 15 6Z" fill="#FECDD3"></path></svg></div>
+            <strong>NppFTP plugin</strong>
         </a>
     </h5>
+<!--
     <h5>
         <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4">
             <div class="mr-3 rounded-md bg-gradient-to-br from-yellow-400 to-orange-500">
                 <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.196 6.02a1 1 0 01.785 1.176l-2 10a1 1 0 01-1.961-.392l2-10a1 1 0 011.176-.784z" fill="#FDE68A"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.293 9.293a1 1 0 011.414 0l2 2a1 1 0 010 1.414l-2 2a1 1 0 01-1.414-1.414L16.586 12l-1.293-1.293a1 1 0 010-1.414zM8.707 9.293a1 1 0 010 1.414L7.414 12l1.293 1.293a1 1 0 11-1.414 1.414l-2-2a1 1 0 010-1.414l2-2a1 1 0 011.414 0z" fill="#FDF4FF"></path></svg>
             </div>
-            <strong>Examples</strong>
+            <strong>Server access</strong>
         </a>
-    </h5>    
+    </h5>  
+
+    <h5>
+        <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4">
+            <div class="mr-3 rounded-md bg-gradient-to-br from-purple-500 to-indigo-500"><svg class="h-6 w-6" viewBox="0 0 24 24"><path d="M6 9l6-3 6 3v6l-6 3-6-3V9z" fill="#F5F3FF"></path><path d="M6 9l6 3v6l-6-3V9z" fill="#DDD6FE"></path><path d="M18 9l-6 3v6l6-3V9z" fill="#C4B5FD"></path></svg>
+            </div>
+            <strong>sss</strong>
+        </a>
+    </h5>  
+    <h5>
+        <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4">
+            <div class="mr-3 rounded-md bg-gradient-to-br from-green-400 to-cyan-500"><svg class="h-6 w-6" viewBox="0 0 24 24"><path d="M8 9a1 1 0 011-1h8a1 1 0 011 1v7.5a1.5 1.5 0 01-1.5 1.5h-7A1.5 1.5 0 018 16.5V9z" fill="#6EE7B7"></path><path d="M15 7a1 1 0 00-1-1H7a1 1 0 00-1 1v9.5A1.5 1.5 0 007.5 18H16v-.085a1.5 1.5 0 01-1-1.415V7z" fill="#ECFDF5"></path><path fill="#A7F3D0" d="M8 8h5v4H8zM8 14h5v2H8z"></path></svg></div>
+            <strong>sss</strong>
+        </a>
+    </h5>   
+-->    
 </li>
 </ul>
 </nav>
 
-    </div>  
+</aside>  
    
 
-
+ 
    
-<section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+<article class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
     <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Grammar</h2>
-
-
  	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">When PHP parses a file, it looks for opening and closing tags,which tell PHP to start and stop interpreting the code between them. Parsing in this manner allows PHP to be embedded in all sorts of different documents, as everything outside of a pair of opening and closing tags is ignored by the PHP parser.</h6>
 
 <ul class="nav nav-pills flex flex-col md:flex-row list-none pl-0 mb-4 mx-48" id="pills-tabFill" role="tablist">
@@ -211,8 +217,6 @@ echo $txt;
 </div> 
 
 
-
-
 <!-- Data types  -->
 <div id="2" class="flex justify-center mt-6">
   <div class="block p-6 rounded-lg shadow-lg bg-white">
@@ -225,7 +229,6 @@ http://userid.dev.fast.sheridanc.on.ca/file.php
 		
   </div>
 </div> 
-
 
 
 <!-- Data types  -->
@@ -266,8 +269,6 @@ TAG1;
 </div> 
 
 
-
-
 <!-- Data types  -->
 <div id="3" class="flex justify-center mt-6">
   <div class="block p-6 rounded-lg shadow-lg bg-white">
@@ -280,8 +281,7 @@ TAG1;
 </div> 
 
 
-
-<!-- Data types  -->
+<!-- Data types  --> 
 <div id="3" class="flex justify-center mt-6">
   <div class="block p-6 rounded-lg shadow-lg bg-white">
         <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
@@ -294,15 +294,13 @@ TAG1;
 
 
 
-        
-        
+</article>
 
-    </section>
       
-  </main>
+</main>
   
   
-  <footer class="bg-dark-gray text-white"> 
+<footer class="bg-dark-gray text-white"> 
      <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
       <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
          <p class="text-sm text-gray-100 md:mb-6">

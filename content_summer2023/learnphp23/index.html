@@ -76,7 +76,8 @@
  
  
 <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
-      
+ 
+ 
 <aside id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
       <div class="flex-shrink-0 px-8 py-4">
         <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
@@ -95,6 +96,7 @@
     <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
         <li><a class="block border-l pl-4" href="highlights.html">JS vs. PHP highlights</a></li>
         <li><a class="block border-l pl-4" href="dataflow.html">Client-server dataflow</a></li>
+<!--
         <li>
             <details>
                 <summary>Development process</summary>
@@ -102,7 +104,7 @@
                   <li><a class="block border-l pl-8" href="dataflow.html">SDLC</a></li>
                 </ul>
         </li>
-        
+-->       
     </ul>
 </li>
 <li class="mt-12 lg:mt-8">
@@ -242,6 +244,33 @@
   </div>
 </div>
 
+
+<!-- with edge -->
+<div class="my-5">
+    <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="flex items-center justify-center px-1 bg-red-600"></div>
+    <div class="px-4 py-2 -mx-3">
+        <div class="mx-3">
+            <span class="text-2xl font-semibold sher-teal">Coding and testing</span>
+            <p class="text-base">We are treating the server as a development server (and production server) for the remainder of the course.</p>
+            <ul class="text-base list-disc list-outside pl-8">
+                <li><strong>Continue working locally on your machine as before.</strong> The advantage is that you always have
+                a copy of your project locally. The disadvantage is that you will need to publish, frequently, every time to test and debug. </li>
+                <li><strong>Using online editor like the PHP Tryit Editor (w3schools)</strong> Most functionality can be tested by pasting your code in
+                    the editor, test and debug, then copying your code back into your file.</li>
+                <li><strong>Using sFTP plugin in your editor</strong> See the NppFTP plugin link, how to work directly on the server using Notepad++. This is good if you
+                are testing frequestly to debug your code. <mark> Don't forget to download the updated code to your local copy to keep them in sync.</mark>
+                If you are using VS Code editor, you will need to find the equivalent plugin.</li>
+                <li>Another option is to download a web server, XAMPP.    
+                <strong style="color:red">This is outside the scope of this course.</strong> One of the sites to explore, if interested, 
+                <a href="https://www.apachefriends.org/" target="_blank">www.apachefriends.org</a>.
+                <em>Keep in mind that you will need to publish your projects to (and recreate databases on) dev.fast.sheridanc.on.ca.</em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div>    
 
 <!-- Resources  
 <div id="2" class="flex justify-center mt-6">
