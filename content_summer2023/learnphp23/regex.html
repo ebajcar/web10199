@@ -176,24 +176,153 @@
     <h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">-</h6>
     
 
-
- 
-<!--  1.2. Javascript vs. PHP highlights -->
-<section id="page12">
-
-<div class="my-5">
-  <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
-    <div class="flex items-center justify-center px-4 bg-blue-200">
-        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="triangle-exclamation" class="w-6 h-6 text-white fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"></path></svg>     
-    </div>
-    <div class="px-4 py-2 -mx-3">
-      <div class="mx-3">
-        <h3>Regular expressions (regex)</h3>
-        <p></p>
-      </div>
-    </div>
+<!-- no edge -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Resources</div>
+    <!--
+      <dl class="px-4 py-2 grid grid-cols-4 gap-4">
+        <dt class="border-t border-b border-gray-400 text-sm font-medium">
+          <a target="_blank" href="https://www.php.net/">...</a>
+        </dt>
+        <dd class="border-t border-b border-gray-400 text-sm mt-0 col-span-3">
+          &hellip;
+        </dd>
+      </dl> 
+-->      
+    <table class="border-collapse border border-slate-400 w-full my-4">
+      <thead>
+        <tr>
+          <th class="border border-slate-300 w-96">link</th>
+          <th class="border border-slate-300 ">notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>  
+          <td class="border border-slate-300 "><a href="https://regexone.com/" target="_blank" class="bookmark source">regexone.com/</a></td>
+          <td class="border border-slate-300 "><strong>RegexOne</strong> Learn Regular Expressions with simple, interactive exercises.</td>
+        </tr>
+        <tr>
+          <td class="border border-slate-300 "> <a href="https://www.w3schools.com/js/js_regexp.asp" target="_blank">www.w3schools.com/js/js_regexp.asp</a></td>
+          <td class="border border-slate-300 ">JavaScript Regular Expressions </td>
+        </tr>        
+        <tr>
+          <td class="border border-slate-300 "><a href="https://www.w3schools.com/php/php_regex.asp" target="_blank">www.w3schools.com/php/php_regex.asp</a></td>
+          <td class="border border-slate-300 ">PHP Regular Expressions</td>
+        </tr>
+        <tr>
+          <td class="border border-slate-300 "><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions</a></td>
+          <td class="border border-slate-300 ">Creating regular expressions in Javascript (MDN guide)</td>
+        </tr>
+      </tbody>
+    </table>      
   </div>
 </div>
+
+
+<!-- character classes -->
+<div class="my-5">
+    <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="flex items-center justify-center px-1 bg-dark-gray"></div>
+    <div class="px-4 py-2 -mx-3">
+        <div class="mx-3">
+            <span class="text-2xl font-semibold sher-teal">Character classes</span>
+            <p class="text-base"><code>\ . \cX \d \D \f \n \r \s \S \t \v \w \W \0 \xhh \uhhhh \uhhhhh [\b]</code></p>
+            <h3 class="uppercase tracking-wide text-sm sher-teal font-semibold">Javascript examples</h3>
+            <ul class="text-base list-disc list-outside pl-8">
+                <li>
+                    
+                    <p>Try it <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes" target="_blank">@mdn web docs</a> 
+                    <br>Other examples: Looking for a series of digits. Looking for a word starting with A.</p>
+<pre>
+const chessStory = 'He played the King in a8 and she moved her Queen in c2.';
+const regexpCoordinates = /\w\d/g;
+console.log(chessStory.match(regexpCoordinates));
+// expected output: Array [ 'a8', 'c2']
+
+const moods = 'happy 🙂, confused 😕, sad 😢';
+const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
+console.log(moods.match(regexpEmoticons));
+// expected output: Array ['🙂', '😕', '😢']
+</pre>                    
+                </li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions" target="_blank">@mdn web docs</a> Regular expressions guide.</li>
+                <li><a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-characterclass" target="_blank">@ECMAScript specifications</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div> 
+ 
+
+
+<!-- character groups and ranges -->
+<div class="my-5">
+    <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="flex items-center justify-center px-1 bg-dark-gray"></div>
+    <div class="px-4 py-2 -mx-3">
+        <div class="mx-3">
+            <span class="text-2xl font-semibold sher-teal">Groups and Ranges</span>
+            <p class="text-base"><code>(x) (?:x) x|y [xyz] [^xyz] \Number</code></p>
+            <h3 class="uppercase tracking-wide text-sm sher-teal font-semibold">Javascript examples</h3>
+            <ul class="text-base list-disc list-outside pl-8">
+                <li>
+                    <p>Try it <a href="" target="_blank">@mdn web docs</a> <br>Other examples: Counting vowels. Using groups. Using named groups</p>
+<pre>
+const aliceExcerpt = 'The Caterpillar and Alice looked at each other';
+const regexpWithoutE = /\b[a-df-z]+\b/ig;
+console.log(aliceExcerpt.match(regexpWithoutE));
+// expected output: Array ["and", "at"]
+
+const imageDescription = 'This image has a resolution of 1440×900 pixels.';
+const regexpSize = /([0-9]+)×([0-9]+)/;
+const match = imageDescription.match(regexpSize);
+console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
+// expected output: "Width: 1440 / Height: 900."
+</pre>                    
+                </li>            
+                <li><a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-runtime-semantics-characterrange-abstract-operation" target="_blank">https://tc39.es/ecma262/#sec-classranges</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div> 
+ 
+ 
+ <!-- character quantifiers -->
+<div class="my-5">
+    <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="flex items-center justify-center px-1 bg-dark-gray"></div>
+    <div class="px-4 py-2 -mx-3">
+        <div class="mx-3">
+            <span class="text-2xl font-semibold sher-teal">Quantifiers</span>
+            <p class="text-base"><code>x* x+ x? x{n} x{n,} x{n,m}</code></p>
+            <h3 class="uppercase tracking-wide text-sm sher-teal font-semibold">Javascript examples</h3>
+            <ul class="text-base list-disc list-outside pl-8">
+               <li>
+                    <p>Try it <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers" target="_blank">@mdn web docs</a> <br>Other examples: Repeated pattern. Counting characters. Optional character. Greedy versus non-greedy</p>
+<pre>
+const ghostSpeak = 'booh boooooooh';
+const regexpSpooky = /bo{3,}h/;
+console.log(ghostSpeak.match(regexpSpooky));
+// expected output: Array ["boooooooh"]
+
+const modifiedQuote = '[He] ha[s] to go read this novel [Alice in Wonderland].';
+const regexpModifications = /\[.*?\]/g;
+console.log(modifiedQuote.match(regexpModifications));
+// expected output: Array ["[He]", "[s]", "[Alice in Wonderland]"]
+
+const regexpTooGreedy = /\[.*\]/g;
+console.log(modifiedQuote.match(regexpTooGreedy));
+// expected output: Array ["[He] ha[s] to go read this novel [Alice in Wonderland]"]
+</pre>                    
+                </li>              
+                <li><a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-quantifier" target="_blank">-</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</div> 
 
 </section>
 
