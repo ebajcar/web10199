@@ -205,20 +205,32 @@
         <tr>
           <td class="border border-slate-300 "> <a href="https://www.w3schools.com/js/js_regexp.asp" target="_blank">www.w3schools.com/js/js_regexp.asp</a></td>
           <td class="border border-slate-300 ">JavaScript Regular Expressions </td>
+        </tr>  
+        <tr>
+          <td class="border border-slate-300 "><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions</a></td>
+          <td class="border border-slate-300 "><strong>MDN docs</strong> Creating regular expressions in Javascript</td>
         </tr>        
         <tr>
           <td class="border border-slate-300 "><a href="https://www.w3schools.com/php/php_regex.asp" target="_blank">www.w3schools.com/php/php_regex.asp</a></td>
           <td class="border border-slate-300 ">PHP Regular Expressions</td>
         </tr>
         <tr>
-          <td class="border border-slate-300 "><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions</a></td>
-          <td class="border border-slate-300 ">Creating regular expressions in Javascript (MDN guide)</td>
+          <td class="border border-slate-300 "><a href="https://www.php.net/manual/en/book.pcre.php" target="_blank">www.php.net/manual/en/book.pcre.php</a></td>
+          <td class="border border-slate-300 "><strong>PHP Manual</strong> Regular Expressions (Perl-Compatible)</td>
         </tr>
       </tbody>
     </table>      
   </div>
 </div>
-
+<!--
+    filters https://www.php.net/manual/en/book.filter.php
+    RegexIterator class https://www.php.net/manual/en/class.regexiterator.php
+    preg_match https://www.php.net/manual/en/function.preg-match.php
+    Regular Expressions (Perl-Compatible) https://www.php.net/manual/en/book.pcre.php
+    REPC https://www.php.net/manual/en/reference.pcre.pattern.syntax.php
+    
+    
+-->
 
 <!-- character classes -->
 <div class="my-5">
@@ -228,13 +240,22 @@
         <div class="mx-3">
             <span class="text-2xl font-semibold sher-teal">Character classes</span>
             <p class="text-base"><code>\ . \cX \d \D \f \n \r \s \S \t \v \w \W \0 \xhh \uhhhh \uhhhhh [\b]</code></p>
-            <h3 class="uppercase tracking-wide text-sm sher-teal font-semibold">Javascript examples</h3>
-            <ul class="text-base list-disc list-outside pl-8">
-                <li>
-                    
-                    <p>Try it <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes" target="_blank">@mdn web docs</a> 
+
+        </div>
+    </div>
+    </div>
+</div> 
+ 
+
+<!-- classes JS examples -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Javascript examples</div>
+      <ul class="text-base list-disc list-outside pl-8">
+        <li>  
+          <p>Try it <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes" target="_blank">@mdn web docs</a> 
                     <br>Other examples: Looking for a series of digits. Looking for a word starting with A.</p>
-<pre>
+<pre class="language-js"><code>
 const chessStory = 'He played the King in a8 and she moved her Queen in c2.';
 const regexpCoordinates = /\w\d/g;
 console.log(chessStory.match(regexpCoordinates));
@@ -244,16 +265,44 @@ const moods = 'happy 🙂, confused 😕, sad 😢';
 const regexpEmoticons = /[\u{1F600}-\u{1F64F}]/gu;
 console.log(moods.match(regexpEmoticons));
 // expected output: Array ['🙂', '😕', '😢']
-</pre>                    
-                </li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions" target="_blank">@mdn web docs</a> Regular expressions guide.</li>
-                <li><a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-characterclass" target="_blank">@ECMAScript specifications</a></li>
-            </ul>
-        </div>
-    </div>
-    </div>
-</div> 
- 
+</code></pre>                   
+        </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions" target="_blank">@mdn web docs</a> Regular expressions guide.</li>
+        <li><a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-characterclass" target="_blank">@ECMAScript specifications</a></li>
+      </ul>    
+   </div>
+</div>
+
+
+<!-- classes PHP examples -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP examples</div>
+      <ul class="text-base list-disc list-outside pl-8">
+        <li>        
+          <p>Try it 
+            <a href="https://www.w3schools.com/php/phptryit.asp?filename=tryphp_func_regex_preg_filter" target="_blank">@w3schools Tryit Editor</a> 
+          </p>
+<pre class="language-php"><code>
+&lt;?php
+$input = [
+  "It is 5 o'clock",
+  "40 days",
+  "No numbers here",
+  "In the year 2000"
+];
+$result = preg_filter('/[0-9]+/', '($0)', $input);
+print_r($result);
+?>
+</code></pre>                   
+        </li>
+        <li><a href="" target="_blank"></a> - </li>  
+      </ul>     
+   </div>
+</div>
+
+
+
 
 
 <!-- character groups and ranges -->
@@ -264,11 +313,21 @@ console.log(moods.match(regexpEmoticons));
         <div class="mx-3">
             <span class="text-2xl font-semibold sher-teal">Groups and Ranges</span>
             <p class="text-base"><code>(x) (?:x) x|y [xyz] [^xyz] \Number</code></p>
-            <h3 class="uppercase tracking-wide text-sm sher-teal font-semibold">Javascript examples</h3>
+
+        </div>
+    </div>
+    </div>
+</div> 
+ 
+ 
+<!-- groups/ranges JS examples -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Javascript examples</div>
             <ul class="text-base list-disc list-outside pl-8">
                 <li>
                     <p>Try it <a href="" target="_blank">@mdn web docs</a> <br>Other examples: Counting vowels. Using groups. Using named groups</p>
-<pre>
+<pre class="language-php"><code>
 const aliceExcerpt = 'The Caterpillar and Alice looked at each other';
 const regexpWithoutE = /\b[a-df-z]+\b/ig;
 console.log(aliceExcerpt.match(regexpWithoutE));
@@ -279,17 +338,37 @@ const regexpSize = /([0-9]+)×([0-9]+)/;
 const match = imageDescription.match(regexpSize);
 console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
 // expected output: "Width: 1440 / Height: 900."
-</pre>                    
+</code></pre>                   
                 </li>            
                 <li><a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-runtime-semantics-characterrange-abstract-operation" target="_blank">https://tc39.es/ecma262/#sec-classranges</a></li>
-            </ul>
-        </div>
-    </div>
-    </div>
+            </ul>    
+   </div>
+</div>
+
+
+<!-- groups/ranges PHP examples -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP examples</div>
+      <ul class="text-base list-disc list-outside pl-8">
+        <li>        
+          <p>Try it 
+            <a href="" target="_blank">@w3schools Tryit Editor</a> 
+          </p>
+<pre class="language-php"><code>
+&lt;?php
+
+?>
+</code></pre>                   
+        </li>
+        <li><a href="" target="_blank"></a> - </li>  
+      </ul>     
+   </div>
 </div> 
  
  
- <!-- character quantifiers -->
+ 
+<!-- character quantifiers -->
 <div class="my-5">
     <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
     <div class="flex items-center justify-center px-1 bg-dark-gray"></div>
@@ -297,11 +376,21 @@ console.log(`Width: ${match[1]} / Height: ${match[2]}.`);
         <div class="mx-3">
             <span class="text-2xl font-semibold sher-teal">Quantifiers</span>
             <p class="text-base"><code>x* x+ x? x{n} x{n,} x{n,m}</code></p>
-            <h3 class="uppercase tracking-wide text-sm sher-teal font-semibold">Javascript examples</h3>
+
+        </div>
+    </div>
+    </div>
+</div> 
+
+
+<!-- quantifiers JS examples -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Javascript examples</div>
             <ul class="text-base list-disc list-outside pl-8">
                <li>
                     <p>Try it <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers" target="_blank">@mdn web docs</a> <br>Other examples: Repeated pattern. Counting characters. Optional character. Greedy versus non-greedy</p>
-<pre>
+<pre class="language-php"><code>
 const ghostSpeak = 'booh boooooooh';
 const regexpSpooky = /bo{3,}h/;
 console.log(ghostSpeak.match(regexpSpooky));
@@ -315,14 +404,33 @@ console.log(modifiedQuote.match(regexpModifications));
 const regexpTooGreedy = /\[.*\]/g;
 console.log(modifiedQuote.match(regexpTooGreedy));
 // expected output: Array ["[He] ha[s] to go read this novel [Alice in Wonderland]"]
-</pre>                    
+</code></pre>                   
                 </li>              
                 <li><a href="https://tc39.es/ecma262/multipage/text-processing.html#sec-quantifier" target="_blank">-</a></li>
-            </ul>
-        </div>
-    </div>
-    </div>
-</div> 
+            </ul>    
+   </div>
+</div>
+
+
+<!-- quantifiers PHP examples -->
+<div class="flex justify-center mt-6 w-full">
+  <div class="block p-6 rounded-lg shadow-lg bg-white w-full">
+    <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP examples</div>
+      <ul class="text-base list-disc list-outside pl-8">
+        <li>        
+          <p>Try it 
+            <a href="" target="_blank">@w3schools Tryit Editor</a> 
+          </p>
+<pre class="language-php"><code>
+&lt;?php
+
+?>
+</code></pre>                   
+        </li>
+        <li><a href="" target="_blank"></a> - </li>  
+      </ul>         
+   </div>
+</div>
 
 </section>
 
