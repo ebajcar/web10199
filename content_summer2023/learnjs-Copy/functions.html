@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+<title> SYST10199 learn Web programming</title>
+<link rel="stylesheet" href="../css/styles.css"/> 
+<link rel="stylesheet" href="../css/prism_coy_dev.css"  />
+<link rel="stylesheet" href="../css/additional.css">
+<script src="https://cdn.tailwindcss.com/"></script>
+</head>
+
+<body>
+  <nav class="bg-gray-800">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex flex-shrink-0 items-center">
+          <img class="hidden h-8 w-auto lg:block" src="https://ebajcar.github.io/web10199/images/svg/Sheridan.svg" alt="Sheridan College">
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">SYST10199</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Client-side Programming</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Server-side Programming</a>
+
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+          <span class="sr-only">View notifications</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+          </svg>
+        </button>
+
+        </div>
+      </div>
+    </div>
+ 
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="sm:hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">SYST10199</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Client-side programming</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Server-side programming</a>
+    </div>
+  </div>
+</nav>
+
+    
+  <main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+      
+    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+      <div class="flex-shrink-0 px-8 py-4">
+        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>   
+        </button>
+      </div>   
+<nav id="nav" class="lg:text-sm lg:leading-6 relative">
+<ul>
+<li class="mt-12 lg:mt-8">  
+
+    
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Web Programming</h5> 
+    <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
+        <li><a class="block border-l pl-4" href=".html">How web works</a></li>
+        <li><a class="block border-l pl-4" href=".html">Full-stack development</a></li>
+        <li><a class="block border-l pl-4" href=".html">Development process</a></li>
+        <li><a class="block border-l pl-4" href=".html">Standards</a></li>
+        
+    </ul>
+</li>
+<li class="mt-12 lg:mt-8">
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">JS Core Concepts</h5>
+    <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
+        <li><a class="block border-l pl-4" href="index.html">JS Language</a></li>
+        <li><a class="block border-l pl-4" href="grammar.html">Grammar</a></li>
+        <li><a class="block border-l pl-4" href="data_types.html">Data types</a></li>
+        <li><a class="block border-l pl-4" href="variables.html">Variables</a></li>
+        <li><a class="block border-l pl-4" href="operators.html">Operators</a></li>
+        <li><a class="block border-l pl-4" href="control_flow.html">Program flow</a></li>
+        <li><a class="block border-l pl-4" href="objects.html">Objects</a></li> 
+        <li><a class="block border-l pl-4" href="collections.html">Built-in objects</a></li> 
+        <li><a class="block border-l pl-4" href="dom.html">DOM &amp; BOM</a></li>
+        <li><a class="block border-l pl-4" href="functions.html">Functions</a></li>   
+        <li><a class="block border-l pl-4" href="events.html">Events</a></li>
+        <li><a class="block border-l pl-4" href="forms.html">Forms</a></li>
+                
+    </ul>
+</li>
+<li class="mt-12 lg:mt-8">
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Related Components</h5>
+    <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">  
+        <li><a class="block border-l pl-4" href=".html">Programming paradigms</a></li>
+        <li><a class="block border-l pl-4" href=".html">Problem solving</a></li>
+        <li><a class="block border-l pl-4" href=".html">Algorithms</a></li>   
+        <li><a class="block border-l pl-4" href=".html">Conventions, Best practices</a></li>
+        <li><a class="block border-l pl-4" href=".html">Publishing</a></li>
+    </ul>
+</li>    
+<li class="mt-12 lg:mt-8">    
+    <h5 class="mt-6">
+        <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4 text-gray-900">
+            <div class="mr-3 rounded-md bg-gradient-to-br from-blue-500 to-blue-500">
+                <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6C10.0929 6 11.1175 6.29218 12 6.80269V16.8027C11.1175 16.2922 10.0929 16 9 16C7.90714 16 6.88252 16.2922 6 16.8027V6.80269C6.88252 6.29218 7.90714 6 9 6Z" fill="#FDF4FF"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15 6C16.0929 6 17.1175 6.29218 18 6.80269V16.8027C17.1175 16.2922 16.0929 16 15 16C13.9071 16 12.8825 16.2922 12 16.8027V6.80269C12.8825 6.29218 13.9071 6 15 6Z" fill="#FDF4FF"></path></svg>
+            </div>
+            <strong>Worksheets</strong>
+        </a>
+    </h5>
+    <h5>
+        <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4">
+            <div class="mr-3 rounded-md bg-gradient-to-br from-yellow-400 to-orange-500">
+                <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.196 6.02a1 1 0 01.785 1.176l-2 10a1 1 0 01-1.961-.392l2-10a1 1 0 011.176-.784z" fill="#FDE68A"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.293 9.293a1 1 0 011.414 0l2 2a1 1 0 010 1.414l-2 2a1 1 0 01-1.414-1.414L16.586 12l-1.293-1.293a1 1 0 010-1.414zM8.707 9.293a1 1 0 010 1.414L7.414 12l1.293 1.293a1 1 0 11-1.414 1.414l-2-2a1 1 0 010-1.414l2-2a1 1 0 011.414 0z" fill="#FDF4FF"></path></svg>
+            </div>
+            <strong>Examples</strong>
+        </a>
+    </h5>    
+</li>
+</ul>
+</nav>
+    </div>  
+        
+<section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+    <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Functions</h2>
+    <h6  class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800"> A JavaScript function is a block of code designed to perform a particular task. A JavaScript function is executed when "something" invokes it (calls it). <strong>Functions are first-class objects!</strong> &hellip;which means that they can be 1) stored in a variable, object, or array, 2) passed as an argument to a function, and 3) returned from a function.</h6>
+    <!-- cite="McGrath, Mike (2013-06-24). JavaScript In Easy Steps (Kindle Locations 780-815). In Easy Steps. Kindle Edition."-->	
+
+<div class="my-5">
+  <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="flex items-center justify-center px-1 bg-dark-gray">
+    </div>
+    <div class="px-4 py-2 -mx-3">
+      <div class="mx-3">
+        <span class="text-2xl font-semibold sher-teal">Heading</span>
+ 			<ul class="text-base list-disc list-inside">
+                <li class="list-decimal list-inside">list-item</li>
+                <li class="list-disc list-inside">list-item
+                <ul class="text-base list-circle list-inside px-6">
+                   <li>list-item</li>
+                   <li>list-item</li>
+                </ul>
+                </li> 				
+			</ul>
+    <p class="text-base pt-8">paragraph.</p>   
+    <p class="blockquote-footer">Read further  <cite title="[ ]"><a href="" target="_blank"> link </a></cite></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 8. Javascript Functions  -->
+<article id="page80">
+	
+
+<!-- 7.1. Function basics -->
+<section id="page81">
+	<h3>Function basics</h3>
+		<ul class="w3-ul">
+      <li>Functions are parameterized blocks of Javascript code that we can invoke.</li>
+			<li>JavaScript functions are declared using the <code>function</code> keyword and the function name must have trailing parentheses, followed by a pair of { } braces enclosing statements to execute.</li>
+			<li>A function declaration may specify arguments within its trailing parentheses that must be passed from its caller.</li>
+			<li>A value can be returned to the caller using the return keyword.</li>
+			<li>Unlike global variables declared in the main script body, local variables declared inside a function are only accessible from within that function</li>
+      <li>The <code>return</code> and <em>parameter types</em> are not specified.</li>
+		</ul>
+
+<h4>Function definition</h4>
+<p>To write a basic function, use the keyword <mark>function</mark>, choose the name for your function, followed by open and close brackets, and putting the function code inside braces (similar to Java code). </p>
+
+<p>Figure 1 shows an example of a function definition. Function <code>foo</code> takes three parameters and returns the sum of the parameter values. The body of a function is enclosed in curly braces.</p>
+
+<figure>
+<figcaption>Figure 1.</figcaption>
+<pre class="language-js"><code>function foo(a,b,c) {
+  return a+b+c;
+}</code></pre>
+</figure>
+
+
+		
+    
+    <figure> 
+<pre class="language-js"><code>// define a function called plusOne with parameter x
+function plusOne( x ) { 
+  // return a value one larger than the value passed in
+  return x + 1;		
+}
+console.log(plusOne(4)); // function invocation; returns 5</code></pre>
+    <figcaption>Function definition and invocation. Function <code>plusOne</code> takes one parameter and returns the parameter value increased by one. The body of a function is enclosed in curly braces. Calling (invocating) the function with the value of 4.</figcaption>
+    </figure>
+
+    <p>Functions are values that can be assigned to variables.</p>
+    <figure>     
+<pre class="language-js"><code>var square = function plusOne ( x ) {   	
+	return x * x;			
+};		
+// semicolon marks the end of the assignment</code></pre>
+    <figcaption>Assignment of function to a variable.</figcaption>
+    </figure>
+
+    
+    
+<p>Add function definition in your script</p>
+<figure>	
+<pre class="language-js"><code>function wasClicked() {
+  alert("Click recorded     " + window.event.srcElement.tagName);
+}</code></pre>
+<figcaption>Function definition in the script.</figcaption>
+</figure>	
+
+
+<h4>Function vs. methods</h4>
+    <p>When functions are assigned to the properties of an object, we call them methods.</p>
+    <figure>     
+<pre class="language-js"><code>var arr = [];
+arr.push (1,2,3);	// push() method adds elements to the array
+arr.reverse();	// reverse() method reverses the order of elements</code></pre>
+    <figcaption>Assignment of function to a property of an object.</figcaption>
+    </figure>
+
+
+    <p>We can define our own methods. The this keyword refers to the object on which the method is defined.</p>
+    <figure>    
+<!--
+Computational geometry algorithm tutorial
+https://algorithmtutor.com/Computational-Geometry/Finding-the-closest-pair-of-points/
+-->    
+<pre class="language-js"><code>var points = [
+    {x:0, y:0},
+    {x:1, y:1}
+];
+points.dist = function () {  	
+	var p1 = this[0];
+	var p2 = this[1];
+	var a = p2.x - p1.x;
+	var b = p2.y - p1.y;
+	return Math.sqrt( a * a + b * b );
+};
+console.log(points.dist());</code></pre>
+    <figcaption>Definition and invocation of custom function..</figcaption>
+    </figure>
+    
+
+
+
+<h4>Function invocation (calling a function)</h4>
+<p>To call a function, you type out the name, and then parentheses.</p>
+<figure>	
+<pre class="language-js"><code>&lt;body onclick="wasClicked()"></code></pre>
+<figcaption>Add onclick event in your HTML file.</figcaption>
+</figure>
+
+
+<h4>Function arguments (parameters)</h4>
+<p>Arguments are a way to pass information or data into a function. Functions can take any number of arguments, any combination of type. When you define a function, you assign names to the arguments, these names then are used within the function as variables.</p>
+<figure>	
+<pre class="language-js"><code>function sayHello(message) {
+	alert(message);
+}
+sayHello("Hello World");
+sayHello("Message of the day...");</code></pre>
+<figcaption>Add function definition in your script.</figcaption>
+</figure>
+  
+    
+<figure>	
+<pre class="language-html"><code>&lt;!-- HTML code -->
+&lt;h1 id="helloMsg">&lt;/h1></code></pre>
+
+<pre class="language-js"><code>// JS code
+document.getElementById("helloMsg").onclick = writeMsg;
+function writeMsg() {
+  document.getElementById("helloMsg").innerHTML = "Hello World";
+}</code></pre>
+<figcaption> Add onclick event in your HTML file; also using DOM to target  elements.</figcaption>
+</figure>
+	
+		
+	<hr>
+</section>	
+
+<!-- 7.2. Anonymous Functions -->
+<section id="page82">
+	<h3>Anonymous Functions</h3>
+		<p>Anonymous functions are functions that are declared as they are run, and they have no name assigned to them. Anonymous functions perform better than a named function because there is nothing to reference; they just execute when needed. They are used only once; they cannot be reference over and over again.</p>	
+	<br>
+	<hr>
+</section>
+
+<!-- 7.3. Callback functions -->
+<section id="page83">
+	<h3>Callback functions</h3>
+		<p>
+			<q cite="https://en.wikipedia.org/wiki/Callback_(computer_programming)">
+			In computer programming, a callback is any executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at a given time. This execution may be immediate as in a synchronous callback, or it might happen at a later time as in an asynchronous callback. In all cases, the intention is to specify a function or subroutine as an entity that is, depending on the language, more or less similar to a variable (see first-class functions).</q>   
+			<small><a href="https://en.wikipedia.org/wiki/Callback_(computer_programming)" target="_blank">read more</a>&hellip;</small>
+		</p>
+		<p>
+			<q cite="https://en.wikipedia.org/wiki/First-class_function">In computer science, a programming language is said to have first-class functions if it treats functions as first-class citizens. This means the language supports passing functions as arguments to other functions, returning them as the values from other functions, and assigning them to variables or storing them in data structures. Some programming language theorists require support for anonymous functions (function literals) as well. In languages with first-class functions, the names of functions do not have any special status; they are treated like ordinary variables with a function type.</q>
+			<small><a href="https://en.wikipedia.org/wiki/First-class_function" target="_blank">read more</a>&hellip;</small>
+		</p>
+		<p>
+			<q cite="https://en.wikipedia.org/wiki/Event_(computing)#Event_handler">An event handler is a callback routine that operates asynchronously and handles inputs received into a program (events).</q>
+		</p>
+		<p>
+			<q>To manipulate HTML elements with Javascript, you have to find the elements first. You can find HTML elements by id, by tag name, by class name, by CSS selectors, <mark>HTML object collections</mark> (document.anchors, document.body, document.documentElement, document.embeds, document.forms, document.head, document.images, document.links, document.scripts, document.title). </q>
+			<small><a href="http://www.w3schools.com/js/js_htmldom_elements.a" target="_blank">read more</a>&hellip;</small>
+		</p>
+		<figure>
+			<p data-height="265" data-theme-id="0" data-slug-hash="NrNrRq" data-default-tab="result" data-user="ebajcar" data-embed-version="2" data-pen-title="timers and loaders" class="codepen">See the Pen <a href="https://codepen.io/ebajcar/pen/NrNrRq/">timers and loaders</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+			<figcaption>Timers and loaders</figcaption>
+		</figure>
+		
+		<figure>
+		<iframe src="https://pastebin.com/embed_iframe/Bzmy3LQn" style="border:none;width:100%"></iframe>
+			<figcaption>Code for timers.html.  Example how to provide a timer with your web app and how to flip between two images (back and face of a memory game).</figcaption>
+		</figure>  
+	<hr>
+</section>
+
+<!-- 7.4. Exception handling statements -->	
+<section id="page84">
+	<h3>Exception handling statements</h3>
+   <div class="box bg-dark w3-xlarge w3-text-orange text-center">
+        <p>It is critical that a program can deal with errors and unknown conditions in any software development, including Javascript.</p>	
+    </div>
+	<p>It is also important to check for null values to prevent errors and raise custom errors as needed to send error information back to a running program.</p>
+	<p>Structured error handling in Javascript is achieved with the <code>try...catch...finally</code> construct. You can throw exceptions using the throw statement and handle them using the try...catch statements.</p>
+	
+	<figure>		
+	<pre class="brush: html; highlight: [0]; first-line: 1">
+function myFunction() {
+    var message, x;
+    message = document.getElementById("p01");
+    message.innerHTML = "";
+    x = document.getElementById("demo").value;
+    try { 
+        if(x == "")  throw "empty";
+        if(isNaN(x)) throw "not a number";
+        x = Number(x);
+        if(x &lt; 5)    throw "too low";
+        if(x > 10)   throw "too high";
+    }
+    catch(err) {
+        message.innerHTML = "Input is " + err;
+    }
+}</pre>
+	<figcaption>Try the example live at <a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_throw_error" target="_blank">http://www.w3schools.com/js/tryit.asp?filename=tryjs_throw_error</a>. Also see <a href="#exercises2">Exercise 1</a> below.</figcaption>
+	</figure>	
+	<hr>
+</section>
+
+</article>
+
+</section>
+</main>
+  
+  
+  <footer class="bg-dark-gray text-white"> 
+     <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
+      <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10109 Web Programming | Sheridan College</a>
+      </p>     
+    </section> 
+    <div class="container max-w-screen-lg mx-auto  px-8">   
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+          <ul class="text-sm font-medium pb-14 sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-y-10">
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</footer> 
+ 
+
+<script src="../scripts/prism.js"></script>
+</body>
+</html>

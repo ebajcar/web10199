@@ -39,19 +39,17 @@
     </header>
 
     <main>
-        <h2>Version 1  - <small>Temperature Conversion</small></h2>
+        <h2>Version 8  - <small>Increment a number by one</small></h2>
      <nav class="breadcrumbs" aria-label="breadcrumbs">
         <ol>
             <li><a href="index.html">Problems</a></li>
             <li><a href="increment-problem.html">Problem statement</a></li>
-            <li><a href="#">increment-v1.html</a></li>
+            <li><a href="#">increment-v07.html</a></li>
         </ol>
     </nav>       
         
-        <p>Open Console with Inspect to see output</p>
-				
-		<p id="fahren"></p>
-		<p id="cels"></p>
+        <input id="uval" type="number" value="33">
+        <output id="out"></output>
     </main>
    <footer>
         <address>Ellen Bajcar &copy; Sheridan College</address>
@@ -60,28 +58,34 @@
 
 <script>
 /*
-  PROBLEM: 
+  PROBLEM: increment a number by one (modified version of add two numbers)
   
   SOLUTION: 
-  1. Get (pick) a number 
-  2. define a function that 
-  3. Call the function
-  4. display the result in the console.
+  1. Get (pick) a number to be incremented
+     - add HTML <input type=number>
+     - capure the value entered by user
+  2. define a function that takes one argument and returns the incremented value
+     - DONE
+  3. Call the function passing the picked number
+  4. display the result on the page.
+      - add <output> element 
 */
-// declare and initialize value in Fahrenheit
-let fahrenheit = 70;
-let celsius = convertToCelsius(fahrenheit);
-// display message in the console
-console.log(fahrenheit + "°F is " + celsius + "°C.");
-
-// look up the formula
-// T(°C) = (T(°F) - 32) × 5/9
-// &#xB0; &deg; ° degree sign
-function convertToCelsius(fahrenheit) {
-	return (fahrenheit - 32) * 5 / 9;
+// takes 2 arguments to add any two numbers
+// if only one argument passed, it will increment it by 1
+function sum( num1, num2=1 ) {
+    return num1 + num2;
 }
-function convertToFahrenheit(celsius) {
-	return (celsius * 9 / 5) + 32;
+// get value from the user WHEN 
+// the EVENT onchance occurs on the object identified as uval 
+// {event-driven programming}
+uval.onchange = function() {
+    let x = uval.valueAsNumber;
+    console.log("uval.valueAsNumber - type " + typeof(x));
+    console.log("uval.value - type " + typeof(uval.value));
+    console.log("converted ", typeof(Number(uval.value)));
+    // target output element and add as iys content
+    // available properties innerText, innerHTML, textContent
+    out.innerHTML = "<h2>" + x + " + 1  = " + sum(x) + "</h2>"; 
 }
 
 </script>

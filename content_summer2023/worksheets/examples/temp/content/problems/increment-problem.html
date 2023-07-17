@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet One Problems</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }        
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet One</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="index.html" class="current">Problems</a>
+            <a href="../exercises/index.html">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Problem Statement  - <small>Increment a number by one</small></h2>
+         <dl>
+            <dt><blockquote>&mdash;Write a program that increments a number numbers by one and displays result together with the value provided by the user.</blockquote></dt>
+            <dd>
+                <ul>
+                    <li><h3>Version 1 (procedural, hard-coded values, console output only) </h3>
+                        <p>Study the problem statement for <a href="add2numbers-problem.html" target="_blank">Add two numbers</a>. Start with documentation. Try different ways of doing every task.</p>
+                       <figure>
+                            <pre class="language-js" tabindex="0"><code class="language-html">&lt;script>
+/*
+  PROBLEM: increment a number by one (modified version of add two numbers)
+  
+  SOLUTION: 
+  1. Get (pick) a number to be incremented
+  2. define a function that takes one argument and returns the incremented value
+  3. Call the function passing the picked number
+  4. display the result in the console.
+*/
+let num = 57;
+function sum(num) {
+    return num + 1;
+}
+let result = sum(num);
+console.log(result);
+
+// do some testing
+console.log("22 + 1 is ", sum(22));
+console.log("no param ", sum());
+console.log("675 + 1 is " + sum(675));
+&lt;/script>
+&lt;/body></code></pre>
+                            <figcaption>Figure 1: <a href="increment-v01.html" target="_blank">increment-v01.html</a></figcaption>
+                        </figure>                 
+                    </li>
+                    
+                    
+                    <li><h3>Version 2 (using document.write method)</h3>
+                        <figure>
+                            <pre class="language-js" tabindex="0"><code class="language-js">   &hellip;                 
+let num = 57;
+function sum(num) {
+    return num + 1;
+}
+let result = sum(num);
+console.log(result);
+
+// do some testing
+document.write("22 + 1 is ", sum(22), "<br>" );
+document.write("no param passed ", sum(), "<br>");
+document.write("675 + 1 is " + sum(675));
+&lt;/script>
+&lt;/body></code></pre>
+                            <figcaption>Figure 2: <a href="increment-v02.html" target="_blank">increment-v02.html</a></figcaption>
+                        </figure>                     
+                    </li>
+                    
+                    
+                    <li><h3>Version 3 (generalize function to handle)</h3>
+                       <p>Refactor the function to handle both addition of two numbers and incrementing one number by one.</p>
+                       <figure>
+                            <pre class="language-js" tabindex="0"><code class="language-js">  &hellip;
+// takes 2 arguments to add any two numbers
+// if only one argument passed, it will increment it by 1
+function sum( num1, num2=1 ) {
+    return num1 + num2;
+}
+
+// do some testing
+let result = sum(57);
+let addition = sum(45,83);
+document.write("57 + 1 is ", result, "<br>" );
+document.write("45 + 83 is ", addition, "<br>" );
+document.write("22 + 7687.56 is ", sum(22,7687.56), "<br>" );
+document.write("no params passed ", sum(), "<br>");
+document.write("675.88 + 0.004567 is " + sum(675.88,0.004567), "<br>");
+document.write("-6 + 100.00 is " + sum(-6,100.00), "<br>");
+&lt;/script></code></pre>
+                            <figcaption>Figure 3: <a href="increment-v03.html" target="_blank">increment-v03.html</a></figcaption>
+                        </figure>                                     
+                    </li>
+                    
+                    
+                    <li><h3>Version 4 (add HTML to get value from user and display in specific element)</h3>
+                    <p>Expand and adjust documentation to describe the relevant tasks in more detail.</p>
+                       <figure>
+                            <pre class="language-html" tabindex="0"><code class="language-html">&lt;main>
+    &lt;input id="uval" type="number" value="33">
+    &lt;output id="out"></output>
+&lt;/main>
+&hellip;
+&lt;script>
+/*
+&hellip;
+  SOLUTION: 
+  1. Get (pick) a number to be incremented
+     - add HTML &lt;input type=number>
+     - capture the value entered by user
+  2. define a function that takes one argument and returns the incremented value
+     - DONE
+  3. Call the function passing the picked number
+  4. display the result on the page.
+      - add &lt;output> element 
+*/
+// takes 2 arguments to add any two numbers
+// if only one argument passed, it will increment it by 1
+function sum( num1, num2=1 ) {
+    return num1 + num2;
+}
+// get value from the user
+let x = uval.value;
+// display the value
+console.log(x);
+&lt;/script>
+&lt;/body></code></pre>
+                            <figcaption>Figure 4: <a href="increment-v04.html" target="_blank">increment-v04.html</a></figcaption>
+                        </figure>                                     
+                    </li>
+                     
+                    
+                    <li><h3>Version 5 (using event methods, test in console)</h3>
+                    <p>Event-driven programming: using event methods and listeners to react to user events; the flow of program is
+                    driven by the user.</p>
+                       <figure>
+                            <pre class="language-js" tabindex="0"><code class="language-js">&hellip;
+// takes 2 arguments to add any two numbers
+// if only one argument passed, it will increment it by 1
+function sum( num1, num2=1 ) {
+    return num1 + num2;
+}
+// get value from the user WHEN 
+// the EVENT onchance occurs on the object identified as uval 
+// {event-driven programming}
+uval.onchange = function() {
+    let x = uval.value;
+    // display the value
+    console.log(x);
+}
+&lt;/script></code></pre>
+                            <figcaption>Figure 5: <a href="increment-v05.html" target="_blank">increment-v05.html</a></figcaption>
+                        </figure>                                     
+                    </li>  
+
+
+                    <li><h3>Version 6 (using event methods, test with document.write() method)</h3>
+                    <p>id attributes can be used to refer to an object, such as <code>uval.onchange</code> 
+                    is the same as <code>document.getElementById("uval").onchange</code> <small>will be covered later</small></p>
+                    <p>Note why document.write method is not used once you have a DOM in place.</p>
+                       <figure>
+                            <pre class="language-js" tabindex="0"><code class="language-js">&hellip;
+// takes 2 arguments to add any two numbers
+// if only one argument passed, it will increment it by 1
+function sum( num1, num2=1 ) {
+    return num1 + num2;
+}
+// get value from the user WHEN 
+// the EVENT onchange occurs on the object identified as uval 
+// {event-driven programming}
+uval.onchange = function() {
+    let x = uval.value;
+    // display the value
+    document.write(x);
+}
+&lt;/script></code></pre>
+                            <figcaption>Figure 6: <a href="increment-v06.html" target="_blank">increment-v06.html</a></figcaption>
+                        </figure>                                     
+                    </li> 
+                    
+                    
+                    <li><h3>Version 7 (using object's properties to add content)</h3>
+                    <p>available properties innerText, innerHTML, textContent (we will dig deeper in Worksheet 4)</p>
+                       <figure>
+                            <pre class="language-html" tabindex="0"><code class="language-html">&lt;body>
+uval.onchange = function() {
+    let x = uval.value;
+    // target output element and add as its content
+    // available properties innerText, innerHTML, textContent
+    out.innerHTML = "<h2>" + x + " + 1 =</h2>";
+}
+&lt;/body></code></pre>
+                            <figcaption>Figure 7:  <a href="increment-v07.html" target="_blank">increment-v07.html</a></figcaption>
+                        </figure>                                     
+                    </li>  
+
+                    
+                    
+                    <li><h3>Version 8 (Strings vs. numbers, concatination vs. addition)</h3>
+                    <p>Note that values retrieved from INPUT fields may not be of desired data type.</p>
+                       <figure>
+                            <pre class="language-js" tabindex="0"><code class="language-js">    &hellip;
+uval.onchange = function() {
+    // using the property .valueAsNumber instead of .value 
+    let x = uval.valueAsNumber;
+    // testing in the console.
+    console.log("uval.valueAsNumber - type " + typeof(x));
+    console.log("uval.value - type " + typeof(uval.value));
+    console.log("converted ", typeof(Number(uval.value)));
+    // target output element and add as iys content
+    // available properties innerText, innerHTML, textContent
+    out.innerHTML = "<h2>" + x + " + 1  = " + sum(x) + "</h2>"; 
+}
+&lt;/script></code></pre>
+                            <figcaption>Figure 8: <a href="increment-v08.html" target="_blank">increment-v08.html</a></figcaption>
+                        </figure>                                     
+                    </li>   
+
+                    <li><h3>Version 9 (unobtrusive Javascript)</h3>
+                       <figure>
+                            <pre class="language-js" tabindex="0"><code class="language-js">&lt;script>
+function init() {
+    // takes 2 arguments to add any two numbers
+    // if only one argument passed, it will increment it by 1
+    function sum( num1, num2=1 ) {
+        return num1 + num2;
+    }
+    // get value from the user WHEN 
+    // the EVENT onchance occurs on the object identified as uval 
+    uval.onchange = function() {
+        // using the property .valueAsNumber instead of .value 
+        let x = uval.valueAsNumber;
+        // target output element and add as iys content
+        // available properties innerText, innerHTML, textContent
+        out.innerHTML = "<h2>" + x + " + 1  = " + sum(x) + "</h2>"; 
+    }
+}
+// Javascript processing is done as soon as the Document Object Model (DOM) 
+//is ready to be access
+document.addEventListener( "DOMContentLoaded", init )
+&lt;/script></code></pre>
+                            <figcaption>Figure 9: <a href="increment-v09.html" target="_blank">increment-v09.html</a></figcaption>
+                        </figure>                                     
+                    </li> 
+                    
+                    <li><h3>Version 9 (unobtrusive Javascript)</h3>
+                    <p>Convert to external Javascript file <a href="js/increment-v10.js" target="_blank">view code</a></p>
+                    <p>You can use minification tools, like <a href="https://minify-js.com/" target="_blank">minify-js.com</a> to reduce the size of JavaScript code  <a href="js/increment-min-v10.js" target="_blank">view minified code</a> (licensing is added back in after minification). Do not discard your full versions to be used for updated. Keep both in your projects. You will be expected to submit full versions in this course.</p>
+                       <figure>
+                            <pre class="language-js" tabindex="0"><code class="language-js">    &lt;/footer>
+&lt;script src="js/increment-min-v10.js">&lt;/script>    
+&lt;/body>               
+&lt;/html></code></pre>
+                            <figcaption>Figure 9: <a href="increment-v10.html" target="_blank">increment-v10.html</a></figcaption>
+                        </figure>                                     
+                    </li>                     
+                </ul>            
+            </dd>
+        </dl>      
+
+ 
+
+    </main>
+
+    <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+
+</script>
+</body>
+</html>

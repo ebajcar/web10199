@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+<title> SYST10199 learn Web programming</title>
+<link rel="stylesheet" href="../css/styles.css"/> 
+<link rel="stylesheet" href="../css/prism_coy_dev.css"  />
+<link rel="stylesheet" href="../css/additional.css">
+<script src="https://cdn.tailwindcss.com/"></script>
+</head>
+
+<body>
+<nav class="bg-gray-800">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex flex-shrink-0 items-center">
+          <img class="hidden h-8 w-auto lg:block" src="https://ebajcar.github.io/web10199/images/svg/Sheridan.svg" alt="Sheridan College">
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="../index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">SYST10199 Home</a>
+<!--
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Client-side Programming</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Server-side Programming</a>
+--> 
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+          <span class="sr-only">View notifications</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+          </svg>
+        </button>
+
+        </div>
+      </div>
+    </div>
+ 
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="sm:hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">SYST10199</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Client-side programming</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Server-side programming</a>
+    </div>
+  </div>
+</nav>
+ 
+ 
+<main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+  
+ 
+<aside id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+      <div class="flex-shrink-0 px-8 py-4">
+        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>   
+        </button>
+      </div>   
+<nav id="nav" class="lg:text-sm lg:leading-6 relative">
+<ul>
+<li class="mt-12 lg:mt-8">  
+
+    
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Server-side Programming</h5> 
+    <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
+        <li><a class="block border-l pl-4" href="highlights.html">JS vs. PHP highlights</a></li>
+        <li><a class="block border-l pl-4" href="dataflow.html">Client-server dataflow</a></li>
+<!--
+        <li>
+            <details>
+                <summary>Development process</summary>
+                <ul>
+                  <li><a class="block border-l pl-8" href="dataflow.html">SDLC</a></li>
+                </ul>
+        </li>
+-->       
+    </ul>
+</li>
+<li class="mt-12 lg:mt-8">
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">PHP Core Concepts</h5>
+    <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
+        <li><a class="block border-l pl-4" href="index.html">PHP Language</a></li>
+        <li><a class="block border-l pl-4" href="grammar.html">Grammar</a></li>
+        <li><a class="block border-l pl-4" href="data_types.html">Data types</a></li>
+        <li><a class="block border-l pl-4" href="variables.html">Variables</a></li>
+        <li><a class="block border-l pl-4" href="operators.html">Operators</a></li>
+        <li><a class="block border-l pl-4" href="control_flow.html">Program flow</a></li>
+        <li><a class="block border-l pl-4" href="collections.html">Data structures</a></li>
+        <li><a class="block border-l pl-4" href="functions.html">Functions</a></li>   
+        <li><a class="block border-l pl-4" href="sessions.html">Sessions</a></li>
+        <li><a class="block border-l pl-4" href="objects.html">Object-oriented PHP</a></li>         
+    </ul>
+</li>
+<li class="mt-12 lg:mt-8">
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Related Components</h5>
+    <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">               
+        <li><a class="block border-l pl-4" href="mysql.html">MySQL DBMS</a></li>
+        <li><a class="block border-l pl-4" href="sql.html">SQL database language</a></li>   
+        <li><a class="block border-l pl-4" href="regex.html">Regular expressions</a></li>
+    </ul>
+    
+    
+</li>    
+<li class="mt-12 lg:mt-8">    
+    <h5 class="mt-6">
+        <a href="notepadftp.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4 text-gray-900">
+            <div class="mr-3 rounded-md bg-gradient-to-br from-pink-500 to-rose-500"><svg class="h-6 w-6" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6C10.0929 6 11.1175 6.29218 12 6.80269V16.8027C11.1175 16.2922 10.0929 16 9 16C7.90714 16 6.88252 16.2922 6 16.8027V6.80269C6.88252 6.29218 7.90714 6 9 6Z" fill="#FFF1F2"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15 6C16.0929 6 17.1175 6.29218 18 6.80269V16.8027C17.1175 16.2922 16.0929 16 15 16C13.9071 16 12.8825 16.2922 12 16.8027V6.80269C12.8825 6.29218 13.9071 6 15 6Z" fill="#FECDD3"></path></svg></div>
+            <strong>NppFTP plugin</strong>
+        </a>
+    </h5>
+<!--
+    <h5>
+        <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4">
+            <div class="mr-3 rounded-md bg-gradient-to-br from-yellow-400 to-orange-500">
+                <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.196 6.02a1 1 0 01.785 1.176l-2 10a1 1 0 01-1.961-.392l2-10a1 1 0 011.176-.784z" fill="#FDE68A"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.293 9.293a1 1 0 011.414 0l2 2a1 1 0 010 1.414l-2 2a1 1 0 01-1.414-1.414L16.586 12l-1.293-1.293a1 1 0 010-1.414zM8.707 9.293a1 1 0 010 1.414L7.414 12l1.293 1.293a1 1 0 11-1.414 1.414l-2-2a1 1 0 010-1.414l2-2a1 1 0 011.414 0z" fill="#FDF4FF"></path></svg>
+            </div>
+            <strong>Server access</strong>
+        </a>
+    </h5>  
+
+    <h5>
+        <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4">
+            <div class="mr-3 rounded-md bg-gradient-to-br from-purple-500 to-indigo-500"><svg class="h-6 w-6" viewBox="0 0 24 24"><path d="M6 9l6-3 6 3v6l-6 3-6-3V9z" fill="#F5F3FF"></path><path d="M6 9l6 3v6l-6-3V9z" fill="#DDD6FE"></path><path d="M18 9l-6 3v6l6-3V9z" fill="#C4B5FD"></path></svg>
+            </div>
+            <strong>sss</strong>
+        </a>
+    </h5>  
+    <h5>
+        <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4">
+            <div class="mr-3 rounded-md bg-gradient-to-br from-green-400 to-cyan-500"><svg class="h-6 w-6" viewBox="0 0 24 24"><path d="M8 9a1 1 0 011-1h8a1 1 0 011 1v7.5a1.5 1.5 0 01-1.5 1.5h-7A1.5 1.5 0 018 16.5V9z" fill="#6EE7B7"></path><path d="M15 7a1 1 0 00-1-1H7a1 1 0 00-1 1v9.5A1.5 1.5 0 007.5 18H16v-.085a1.5 1.5 0 01-1-1.415V7z" fill="#ECFDF5"></path><path fill="#A7F3D0" d="M8 8h5v4H8zM8 14h5v2H8z"></path></svg></div>
+            <strong>sss</strong>
+        </a>
+    </h5>   
+-->    
+</li>
+</ul>
+</nav>
+
+</aside>  
+   
+  
+<article class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+    <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Variables</h2>
+
+ 	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">Variables in PHP are represented by a dollar sign followed by the name of the variable. The variable name is case-sensitive.&hellip;</h6>
+
+
+<ul class="nav nav-pills flex flex-col md:flex-row list-none pl-0 mb-4 mx-48" id="pills-tabFill" role="tablist">
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#1" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Expressions</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#2" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Identifiers and Constants</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#3" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Predefined variables</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#4" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Declaring variables</a>
+  </li>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+    <a href="#5" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Variable scope</a>
+  </li>
+</ul>
+
+
+<!-- <div id="page40">   2.6. Expressions -->
+ <div class="max-w-lg mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-6xl mt-8">
+  <div class="md:flex">
+    <div class="md:flex-shrink-0">
+      <a href="../slides/images/php_variable.png" target="_blank"><img class="h-full w-full object-cover md:w-48" src="../slides/images/php_variable.png" alt="Web taxonomy and status">
+      </a>
+    </div>
+    <div class="p-4">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Expressions</h5>
+	  <p>Expressions are the most important building blocks of PHP. In PHP, almost anything you write is an expression... "anything that has a value". The most basic forms of expressions are constants and variables. Slightly more complex examples for expressions are functions and the ternary conditional operator.</p>
+
+	<a target="_blank" 
+		href="http://ca3.php.net/manual/en/language.expressions.php">
+		What are expressions? Read more in <strong>PHP Manual</strong>	 
+	</a>	
+    </div>
+  </div>
+</div> 
+
+
+<!--    4.2. Identifiers and Constants -->
+<div id="2" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Identifiers and Constants</h5>	
+	<p>All variable names have a dollar sign in front; variable names must begin with a letter or an underscore (cannot begin with a number; can be any length; can include letters, numbers, and underscores only; case sensitive.</p>
+	<p><strong>Single quotes</strong> variable name is displayed by its name; <br><strong>Double quotes</strong> variable name is replaced by its value; <br><strong>Curly braces</strong> can be used around variable name to define the variable</p>  
+
+<pre class="language-php"><code>
+$pet="bird";
+echo "{$pet}cage";
+</code></pre>	
+
+	<p><strong>Constants</strong> cannot be changed by the script;</p> 
+
+<pre class="language-php"><code>
+define ("CONSTANTNAME",
+	"constant value"); 
+define ("AGE",29);
+</code></pre>
+		<!-- constants ( 
+		JS https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const 
+		ES6 https://www.w3schools.com/js/tryit.asp?filename=tryjs_es6_const ) ( 
+		PHP https://www.w3schools.com/php/php_constants.asp ) -->
+        
+
+<ul role="list" class="divide-y divide-gray-100 divide-gray-100 rounded-md border border-gray-200">
+  <li class="flex justify-between gap-x-6">
+    <div class="flex gap-x-4">
+      <svg class="h-6 w-6 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+      </svg>
+      <div class="min-w-0 flex-auto">
+        <span class="block font-semibold text-gray-900">Basics</span>
+        <p class="truncate w-full text-gray-500">Variables are represented by a dollar sign followed by the name of the variable. Variable name is case-sensitive.</p>
+      </div>
+    </div>
+    <div class="pr-2 sm:flex sm:flex-col sm:items-end">
+        <span class="text-gray-900"><a href="https://www.php.net/manual/en/language.variables.basics.php" target="_blank">Click here</a></span>
+        <span class="text-xs text-gray-500">PHP manual</span>
+      </div>
+   
+  </li>
+
+  <li class="flex justify-between gap-x-4">
+    <div class="flex gap-x-2">
+      <svg class="h-6 w-6 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+      </svg>
+      <div class="min-w-0 flex-auto">
+        <span class="block font-semibold text-gray-900">Variable scope</span>
+        <p class="truncate w-full text-gray-500">The scope of a variable is the context within which it is defined. For the most part all PHP variables only have a single scope. </p>
+      </div>
+    </div>
+    <div class="pr-2 sm:flex sm:flex-col sm:items-end">
+        <span class="text-gray-900"><a href="https://www.php.net/manual/en/language.variables.scope.php" target="_blank">Click here</a></span>
+        <span class="text-xs text-gray-500">PHP manual</span>
+     
+    </div>
+  </li>
+  
+  <li class="flex justify-between gap-x-4">
+    <div class="flex gap-x-2">
+      <svg class="h-6 w-6 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+      </svg>
+      <div class="min-w-0 flex-auto">
+        <span class="block font-semibold text-gray-900">Variables From External Sources <small>HTML Forms (GET and POST) </small></span>
+        <p class="truncate w-full text-gray-500">When a form is submitted to a PHP script, the information from that form is automatically made available to the script. </p>
+      </div>
+    </div>
+    <div class="pr-2 sm:flex sm:flex-col sm:items-end">
+        <span class="text-gray-900"><a href="https://www.php.net/manual/en/language.variables.external.php#language.variables.external" target="_blank">Click here</a></span>
+        <span class="text-xs text-gray-500">PHP manual</span>
+     
+    </div>
+  </li>  
+  
+  <li class="flex justify-between gap-x-4">
+    <div class="flex gap-x-2">
+      <svg class="h-6 w-6 flex-shrink-0 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M15.621 4.379a3 3 0 00-4.242 0l-7 7a3 3 0 004.241 4.243h.001l.497-.5a.75.75 0 011.064 1.057l-.498.501-.002.002a4.5 4.5 0 01-6.364-6.364l7-7a4.5 4.5 0 016.368 6.36l-3.455 3.553A2.625 2.625 0 119.52 9.52l3.45-3.451a.75.75 0 111.061 1.06l-3.45 3.451a1.125 1.125 0 001.587 1.595l3.454-3.553a3 3 0 000-4.242z" clip-rule="evenodd" />
+      </svg>
+      <div class="min-w-0 flex-auto">
+        <span class="block font-semibold text-gray-900">Predefined variables</span>
+        <p class="truncate w-full text-gray-500">PHP provides a large number of predefined variables to any script which it runs. </p>
+      </div>
+    </div>
+    <div class="pr-2 sm:flex sm:flex-col sm:items-end">
+        <span class="text-gray-900"><a href="https://www.php.net/manual/en/language.variables.predefined.php" target="_blank">Click here</a></span>
+        <span class="text-xs text-gray-500">PHP manual</span>
+     
+    </div>
+  </li>   
+</ul>
+  
+  
+  </div>
+</div> 
+
+
+<!-- 4.3. Predefined variables -->
+<div id="3" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Predefined variables</h5>	
+            <span class="template-3col">
+                <b>$GLOBALS<small>References all variables available in global scope</small></b>
+               
+                <b>$_SERVER<br><small>Server and execution environment information</small></b>
+                <b>$_GET<br><small>HTTP GET variables</small></b>
+                <b>$_POST<br><small>HTTP POST variables</small></b>
+                <b>$_FILES<br><small>HTTP File Upload variables</small></b>
+                <b>$_REQUEST<br><small>HTTP Request variables</small></b>
+                <b>$_SESSION<br><small>Session variables</small></b>
+                <!--
+                 <b><a href="https://www.php.net/manual/en/reserved.variables.session.php" target="_blank">$_SESSION</a><small>Session variables</b>
+                 -->
+                 <b>&nbsp;<br><small>&nbsp;</small></b>
+             </span>
+        <p></p>
+  </div>
+</div> 
+
+
+<!-- 4.4.Declaring variables  -->
+<div id="4" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Declaring variables</h5>	
+	<p>Variables are "containers" for storing information. To create (declare) a variable, you give it a name. In PHP, a variable starts with the $ sign, followed by the name of the variable</p>
+<pre class="language-php"><code>
+$txt = "Hello world!";
+$x = 5;
+$y = 10.5;
+</code></pre>
+	<p>After the execution of the statements above, the variable <code>$txt</code> will hold the value <var>Hello world!</var>, the variable <code>$x</code> will hold the value <var>5</var>, and the variable <code>$y</code> will hold the value <var>10.5</var></p>
+
+<p>A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Choose meaningful names that will make your code human-readable.</p>
+<h6>Rules for naming PHP variables</h6>
+<ul>
+<li>A variable starts with the $ sign, followed by the name of the variable</li>
+<li>A variable name must start with a letter or the underscore character</li>
+<li>A variable name cannot start with a number</li>
+<li>A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )</li>
+<li>Variable names are case-sensitive ($age and $AGE are two different variables)</li>
+</ul>
+<h6>Output Variables</h6>
+<p>The PHP echo statement is often used to output data to the screen.</p>
+
+<pre class="language-php"><code>
+
+// The following example will show how to output text and a variable:
+$txt = "Sheridan College";
+echo "I love $txt!";
+
+// The following example will produce the same output:
+$txt = "W3Schools.com";
+echo "I love " . $txt . "!";
+
+// The following example will output the sum of two variables:
+echo "The following example will output the sum of two variables:";
+$x = 5;
+$y = 4;
+echo $x + $y;
+</code></pre>
+		
+	<!--button  class="btn btn-outline-secondary btn-block" style="cursor:pointer;" 
+		onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/mTVf1L5Y', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/inclass/example_php_03.png" alt="example 2" style="width:99%;cursor:pointer;">Click to run an example in phpfiddle. Working with variables, see more on w3schools.com.</button-->	
+  </div>
+</div> 
+
+
+<!-- 4.5. Variable scope -->
+<div id="5" class="flex justify-center mt-6">
+  <div class="block p-6 rounded-lg shadow-lg bg-white">
+      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">PHP Language</div>
+      <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Variable scope</h5>	
+	<p>PHP is a Loosely Typed Language; we do not have to tell PHP which data type the variable is. PHP automatically converts the variable to the correct data type, depending on its value.</p>
+	<p>In PHP, variables can be declared anywhere in the script. The scope of a variable is the part of the script where the variable can be referenced/used. PHP has three different variable scopes: local, global, static.</p>
+    
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Global scope</h5>
+	<p>A variable declared outside a function has a <strong>GLOBAL SCOPE</strong> and can only be accessed outside a function:</p>
+
+<pre class="language-php"><code>
+$x = 5; // global scope
+function myTest() {
+    // using x inside this function will generate an error
+    echo "Variable x inside function myTest is: $x";
+} 
+myTest();
+echo "Variable x outside function myTest is: $x";
+</code></pre>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Local scope</h5>
+	<p>A variable declared within a function has a LOCAL SCOPE and can only be accessed within that function:</p>
+<pre class="language-php"><code>
+function myTest2() {
+    $x = 6; // local scope
+    echo "Variable x inside function myTest2 is: $x";
+} 
+myTest2();
+// using x outside the function will generate an error
+echo "Variable x outside function myTest2 is: $x";
+</code></pre>
+
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Using the global keyword</h5>
+	<p>The global keyword is used to access a global variable from within a function. To do this, use the global keyword before the variables (inside the function): </p>
+<pre class="language-php"><code>
+$x = 5;
+$y = 10;
+function myTest3() {
+    global $x, $y;
+    $y = $x + $y;
+}
+myTest3();
+echo $y; // outputs 15
+</code></pre>
+<h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Using the $GLOBALS predefined variables</h5>
+<p>PHP also stores all global variables in an array called $GLOBALS[index]. The index holds the name of the variable. This array is also accessible from within functions and can be used to update global variables directly. The example above can be rewritten like this:</p>
+<pre class="language-php"><code>
+$x = 5;
+$y = 10;
+function myTest4() {
+    $GLOBALS['y'] = $GLOBALS['x'] + $GLOBALS['y'];
+} 
+myTest4();
+echo $y; // outputs 15
+</code></pre>
+
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Using the static keyword</h5>
+<p>Normally, when a function is completed/executed, all of its variables are deleted. However, sometimes we want a local variable NOT to be deleted. We need it for a further job. To do this, use the static keyword when you first declare the variable:</p>
+
+<pre class="language-php"><code>
+function myTest5() {
+    static $x = 0;
+    echo $x;
+    $x++;
+}
+myTest5(); echo "&lt;br>";
+myTest5(); echo "&lt;br>";
+myTest5(); echo "&lt;br>";
+myTest5(); echo "&lt;br>";
+</code></pre>
+<p>Then, each time the function is called, that variable will still have the information it contained from the last time the function was called. Note: The variable is still local to the function.</p>	
+	
+    <!--
+		<button onclick="window.open('http://phpfiddle.org/lite?url=https://pastebin.com/raw/Y3gLsrT7', '_blank', 'height=370,width='+ window.screen.width * 0.7 + ', left=' + window.screen.width * 0.15 + ',top=' + (window.screen.height - 370)/2)" src="images/inclass/example_php_04.png" alt="example 2"  class="btn btn-outline-secondary btn-block" style="cursor:pointer;">Click to run the examples in phpfiddle.</button>	
+	-->
+  </div>
+</div> 
+
+
+
+
+</article>
+
+
+</main>
+  
+  
+  <footer class="bg-dark-gray text-white"> 
+     <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
+      <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10109 Web Programming | Sheridan College</a>
+      </p>     
+    </section> 
+    <div class="container max-w-screen-lg mx-auto  px-8">   
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+          <ul class="text-sm font-medium pb-14 sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-y-10">
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</footer> 
+ 
+
+<script src="../scripts/prism.js"></script>
+</body>
+</html>

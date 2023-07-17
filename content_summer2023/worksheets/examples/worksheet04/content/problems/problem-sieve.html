@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet Four Problems</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+
+	<style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }    
+
+.output {
+    -webkit-column-count: 7; /* Chrome, Safari, Opera */
+    -moz-column-count: 7; /* Firefox */
+    column-count: 7;
+	background-color: white;
+	color: black;
+}        
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Four</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="index.html" class="current">Problems</a>
+            <a href="../exercises/index.html">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Problem Statement  - <small>Sieve</small></h2>
+        
+        		
+		
+         <dl>
+            <dt><blockquote>&mdash;Write a program that </blockquote></dt>
+            <dd class="box">
+                <h2>Open console to view the results.</h2>
+                <var id="limit"></var>
+                <ol id="output" class="output"></ol>
+            </dd>
+            <dd>
+                <ul>
+                    <li><h3>Version 1 </h3>
+                    
+                    
+                    
+                        <p>Sample solution <a href=".html" target="_blank">Sample solution</a>.</p> 
+                        
+                        <p>Start with documentation. Try different ways of doing every task.</p>
+<figure>
+<pre class="language-js" tabindex="0"><code class="language-js">&lt;script>
+/**
+ *      Prime number list.
+ *
+ * Wait for the program to sieve-out the all of the
+ * prime numbers less than LIMIT.  Then use the scrollbar
+ * to explore the list.
+ * 
+ * Change the value of LIMIT for larger lists.  Be patient
+ * for large values.
+ */
+var LIMIT = 100*10;  /* Find all primes less than LIMIT */
+var limit = 39;  /* JS is case sensitive */
+&lt;/script>
+&lt;/body></code></pre>
+<figcaption>Figure 1: <a href="increment-v01.html" target="_blank">increment-v01.html</a></figcaption>
+</figure>                 
+                    </li>
+                       
+                </ul>            
+            </dd>
+        </dl>      
+
+ 
+
+    </main>
+
+    <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+/**
+ *      Prime number list.
+ *
+ * Wait for the program to sieve-out the all of the
+ * prime numbers less than LIMIT.  Then use the scrollbar
+ * to explore the list.
+ * 
+ * Change the value of LIMIT for larger lists.  Be patient
+ * for large values.
+ */
+var LIMIT = 100*10;  /* Find all primes less than LIMIT */
+var limit = 39;  /* JS is case sensitive */
+/*
+ * Return all the primes less than n.
+ * Implements a simple Sieve of Eratosthenes. See
+ * https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+ */
+function eratosthenes(n) {
+    var limit = Math.sqrt(n);
+    var composite = [];
+    /* Find primes between two and limit. */
+    for (var candidate = 2; candidate <= limit; candidate++) {
+        if (! composite[candidate]) {
+            /* A new prime! All its multiples are composite. */
+            for (var c = candidate * candidate; c < n; c += candidate) {
+                composite[c] = true;
+            }
+        }
+    }
+    /* Harvest the non-composites > 1 */
+    var primes = [];
+    for (candidate = 2; candidate < n; candidate++) {
+        if (! composite[candidate]) {
+            primes.push(candidate);
+        }
+    }
+    return primes;
+}
+
+// 10,000,000
+console.log(eratosthenes(LIMIT));
+var primes = eratosthenes(LIMIT);
+document.getElementById("limit").innerText = "Testing the first " + LIMIT + " numbers.";
+var parent = document.getElementById("output");
+for (curr of primes) {
+	parent.appendChild(document.createElement("li")).innerText = curr;
+}
+</script>
+</body>
+</html>

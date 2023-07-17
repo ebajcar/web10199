@@ -28,7 +28,7 @@ Description:
 		<!-- capture and process user input on the click event -->
 		<input type="number" id="guess" value="0" min="1" max="10">
 		<p id="ans"></p>	
-		<button id="reset">New Game</button>
+		
 	</main>
 	<footer><address>SYST10199 Web Programming @ Sheridan College</address></footer>
 <script>
@@ -57,6 +57,7 @@ guess.onclick = function() {
 	// if no, determine if 
 	//        guess is higher than number, let user know
 	//        guess is lower than number, let user know	
+    
 	if ( x == y ) {
 		ans.innerText = "Yes, the number is " + y;
 		//TODO: put in a delay to see the result.
