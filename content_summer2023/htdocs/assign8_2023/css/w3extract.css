@@ -1,0 +1,123 @@
+button, input, select, textarea {
+	font: inherit;
+	margin: 0
+}
+optgroup {
+	font-weight: bold
+}
+button, input {
+	overflow: visible
+}
+button, select {
+	text-transform: none
+}
+button, html [type=button], [type=reset], [type=submit] {
+	-webkit-appearance: button
+}
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+	border-style: none;
+	padding: 0
+}
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+	outline: 1px dotted ButtonText
+}
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: .35em .625em .75em
+}
+legend {
+	color: inherit;
+	display: table;
+	max-width: 100%;
+	padding: 0;
+	white-space: normal
+}
+textarea {
+	overflow: auto
+}
+[type=checkbox], [type=radio] {
+	padding: 0
+}
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+	height: auto
+}
+[type=search] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px
+}
+[type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
+	-webkit-appearance: none
+}
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 0.54
+}
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit
+}
+.w3-grey, .w3-hover-grey:hover, .w3-gray, .w3-hover-gray:hover {
+	color: #000!important;
+	background-color: #9e9e9e!important
+}
+.w3-orange, .w3-hover-orange:hover {
+	color: #000!important;
+	background-color: #ff9800!important
+}
+.w3-green, .w3-hover-green:hover {
+	color: #fff!important;
+	background-color: #4CAF50!important
+}
+.w3-center .w3-bar {
+	display: inline-block;
+	width: auto
+}
+.w3-block {
+	display: block;
+	width: 100%
+}
+.w3-input {
+	padding: 8px;
+	display: block;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	width: 100%
+}
+.w3-padding-16 {
+	padding-top: 16px!important;
+	padding-bottom: 16px!important
+}
+.w3-padding-24 {
+	padding-top: 24px!important;
+	padding-bottom: 24px!important
+}
+.w3-border {
+	border: 1px solid #ccc!important
+}
+.w3-border-bottom {
+	border-bottom: 1px solid #ccc!important
+}
+.w3-padding-32 {
+	padding-top: 32px!important;
+	padding-bottom: 32px!important
+}
+.w3-padding-48 {
+	padding-top: 48px!important;
+	padding-bottom: 48px!important
+}
+.w3-red, .w3-hover-red:hover {
+	color: #fff!important;
+	background-color: #f44336!important
+}
+.w3-margin-bottom {
+	margin-bottom: 16px!important
+}
+.w3-section, .w3-code {
+	margin-top: 16px!important;
+	margin-bottom: 16px!important
+}
+.w3-button:hover {
+	color: #000!important;
+	background-color: #ccc!important
+}
