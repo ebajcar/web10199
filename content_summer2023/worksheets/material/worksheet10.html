@@ -142,15 +142,122 @@
                 
                 <p><strong>10.3.1. Problem</strong> &mdash;Complete and publish the <chip>gameworks</chip> website, with registration to become a member, ability to log in to play the PHP versions of Tic Tac Toe, Casino Craps, and Rock-Paper-Scissors-Lizard-Spock games<br>
                 <em>Details coming soon.</em>
+                </p>            
                 <!--
                 <em>Use the modified Javascript solution <a href="" target="_blank">Click here</a> and convert the solution to PHP.</em>
-                -->
-                </p>            
 
                 <p><strong>10.3.2. Problem</strong> &mdash;Complete the login process.<br>
                 <em>Details coming soon.</em>
                 
                 <em>Resources <a href="" target="_blank">Click here</a>.</em></p>  
+                -->
+                
+    <dl>
+         <dt>Project organization</dt>
+        <dd>   
+            <img src="" alt="">
+            
+            <img src="" alt="">
+        </dd> 
+        <dt>STEP 1: Create an html document containing a form (copy from earlier exercises).</dt>
+        <dd>
+            <ul style="margin-bottom:10px;">
+                <li>NOTE: Code includes only the fields needed for BOTH the login and registration form; it is up to you (optional) to include and complete the remaining fields from the registration form.</li>
+            </ul>   
+        </dd>                
+        <dt>STEP 2: Use phpMyAdmin web tool, to set up table</dt>
+        <dd>
+            <ul style="margin-bottom:10px;">
+                <li>Either manually (as demonstrated in class) or using SQL tab in phpMyadmin, create a table to correspond to (you make up your own values):</li>
+<pre class="language-js" tabindex="0"><code class="language-js">CREATE TABLE `members` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `startdate` date NOT NULL,
+  `player` varchar(40) NOT NULL,
+  `password` varchar(20) NOT NULL
+  PRIMARY KEY (`id`)
+);
+INSERT INTO `members` (`id`, `startdate`, `player`, `password`) VALUES
+(1, '2016-07-14', 'ellen', 'elephant'),
+(2, '2016-07-06', 'charlie', 'cherries');
+</code></pre></li>               
+            </ul>   
+        </dd>                                
+        <dt>STEP 3-6: To process the form with PHP, you need to connect and work with databases</dt>
+        <dd>
+            <ul>
+                <li>Create a new file and name it "Member.class", store in subdirectory "includes" in your project <br><em><a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/worksheets/Member.class" target="_blank">Member.class code</a>.</em>         
+                </li>
+                <li>On your login page, add the following
+<pre class="language-js" tabindex="0"><code class="language-js">if ($_SERVER['REQUEST_METHOD'] == 'POST') {	
+   $_SESSION['formAttemp'] = true;
+   $_SESSION['id'] = session_id();
+   $_SESSION['isLoggedIn'] = false;
+
+   if (isset($_POST['password']))
+   	if (!empty($_POST['password'])) 
+   		$_SESSION['password'] = $_POST['password'];
+   if (isset($_POST['username']))
+   	if (!empty($_POST['username'])) {
+   		$safeuser = $_POST['username'];
+   		$_SESSION['firstName'] = $_POST['username'];
+   	} else {
+   	  // handle the bad name!
+   	}	
+   require_once("includes/Member.class");
+   $visitor = new Member;
+   if ($visitor->authenticate($_POST['username'], $_POST['password'])) {	
+   	// proceed to member site 
+   	// TODO: start with a simple message that it worked
+   } else {
+   	session_destroy();	
+   	// TODO: authentication unsuccessful, return to login
+   }
+}</code></pre> 
+                </li>
+                <li>
+                    Add the authenticate method to your Member.class
+                    <br><em> <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/worksheets/authenticate.method" target="_blank">authenticate method code</a>.</em>
+                </li>     
+                <li>
+                    Registration form processing: On your registration form page, add the following
+                    <br> <em> <a href="" target="_blank">registration processing code</a>.</em>
+                </li>  
+                <li>
+                    Add the registerMember method to your Member.class 
+                    <br> <em> <a href="" target="_blank">registerMember method code</a>.</em>
+                </li> 
+                <li>
+                    Test, debug, validate, update all comments and documentation.
+                </li>
+            </ul>   
+        </dd>                
+      <!--          
+         <dt>STEP .</dt>
+        <dd>
+            <ul>
+                <li>NOTE: Code includes only the fields needed for BOTH the login and registration form; it is up to you (optional) to include and complete the remaining fields from the registration form.</li>
+                <li></li>
+                
+            </ul>   
+        </dd>    
+
+        <dt>STEP .</dt>
+        <dd>
+            <ul>
+                <li>NOTE: Code includes only the fields needed for BOTH the login and registration form; it is up to you (optional) to include and complete the remaining fields from the registration form.</li>
+                <li></li>
+                <li></li>
+            </ul>   
+        </dd>            
+      -->          
+                
+    </dl>            
+                
+                
+                
+                
+                
+                
 
             </section>                  
 
