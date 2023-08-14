@@ -11,6 +11,7 @@ $pagetitle = (isset($_GET['pagetitle']))
 	<meta name="viewport" content="width=device-width">	
     <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
 	<link href="css/extra.css" rel="stylesheet">
+    <link href="css/ttt.css" rel="stylesheet">
     <style>
 		:root {
 			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
