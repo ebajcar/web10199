@@ -17,6 +17,14 @@
 			font-style: normal;
 			text-decoration: 1px dashed var(--muted-fg) underline;
 		}
+		code {
+		  background-color: #ededed;
+		  color: blue;
+		  padding-right: 5px;
+		  padding-left: 5px;
+		  border: 1px dotted lightgray;
+		  font-size: 0.9em;
+		}
 		code a {
 			font-family: inherit;
 		}
@@ -28,6 +36,9 @@
         footer ul {
             list-style: none;
         }
+		dd ul li {
+		  margin-bottom: 10px;
+		}
 	</style>
 </head>
 <body>
@@ -250,7 +261,7 @@ INSERT INTO `members` (`id`, `startdate`, `player`, `password`) VALUES
             <ul>
                 <li>Create a new file and name it "Member.class", store in subdirectory "includes" in your project <br><em><a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/worksheets/Member.class" target="_blank">Member.class code</a>.</em>         
                 </li>
-                <li>On your login page, add the following  (<a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/worksheets/login.process" target="_blank">raw code</a> here as well)
+                <li>On your login page (<code>content/login.php</code>), add the following  (<a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/worksheets/login.process" target="_blank">raw code</a> here as well)
 <pre class="language-js" tabindex="0"><code class="language-js">if ($_SERVER['REQUEST_METHOD'] == 'POST') {	
    $_SESSION['formAttemp'] = true;
    $_SESSION['id'] = session_id();
@@ -278,20 +289,20 @@ INSERT INTO `members` (`id`, `startdate`, `player`, `password`) VALUES
 }</code></pre> 
                 </li>
                 <li>
-                    Add the authenticate method to your Member.class
+                    Add the authenticate method to your <code>includes/Member.class</code> file
                     <br><em> <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/worksheets/authenticate.method" target="_blank">authenticate method code</a>.</em>
                 </li>     
                 <li>
-                    Registration form processing: On your registration form page, add the following
+                    Registration form processing: On your registration form page (<code>content/register.php</code>), add the following
                     <br> <em> <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/worksheets/register.process" target="_blank">registration processing code</a>.</em>
                 </li>  
                 <li>
-                    Add the registerMember method to your Member.class 
+                    Add the registerMember method to your  <code>includes/Member.class</code> file 
                     <br> <em> <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/worksheets/registerMember.method" target="_blank">registerMember method code</a>.</em>
                 </li> 
                 <li>
-                    The code for the index.php page 
-                    <br> <em> <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/worksheets/index.page" target="_blank">index.php code</a>.</em>
+                    The code for the <code>index.php</code> page 
+                    <br> <em> <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/worksheets/index.page" target="_blank">code</a>.</em>
                 </li> 				
                 <li>
                     Test, debug, validate, update all comments and documentation. Check all names (database, table, column, variables,...) and credentials.
