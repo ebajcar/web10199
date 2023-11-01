@@ -1,0 +1,128 @@
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.thisone {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: orange;
+}
+footer ul {
+    list-style: none;
+}
+nav ul li {
+    line-height: 0.8em;
+    & a {
+        font-size: 0.8em;
+        font-weight: normal;
+    }
+}        
+    .space {
+      margin-bottom: 20px !important;
+      border-bottom: 1px dashed lightgray;
+    }
+    .breadcrumbs ol {
+      border-bottom: 1px solid lightgray;
+      font-size: 1.1em;
+    }
+ 
+/* prev-next navigation */ 
+.prev-next {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 0;
+    padding-top: 0;
+}
+.prev-next * {
+    margin-top: 0;
+    padding-top: 0;    
+}
+header, h1 {
+    padding-bottom: 0;
+    margin-bottom:0;
+}
+
+
+    
+    
+ /* sidebar menu */   
+.hellip-one {
+  overflow: hidden;
+  z-index: 9;
+  position: relative;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin: 10px 0 0 5px;
+  line-height: 0.8em;
+}
+.lead-title {
+  padding-top: 1.2em;
+}
+
+/* worksheets */
+.hellip-four {
+  overflow: hidden;
+  z-index: 9;
+  position: relative;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.box {
+  border-radius: 5px;
+}
+
+
+.img {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.4s;
+  border: 1px lightgray solid;
+}
+.img-wrapper {
+  position: relative;
+  padding: 0;
+} 
+.img-wrapper img {
+  max-width: 100%;
+  /* max-height: 100px; */
+  padding: 0;
+   -o-object-fit: cover;
+     object-fit: cover;
+}
+.img a {
+  text-decoration: none;
+}
+.img section {
+  padding: 5px;
+}
+.img section h4 {
+  padding: 2px 0;
+  margin: 0;
+}
+.img section p {
+  padding: 0;
+  margin: 0;
+  line-height: 1.1em;
+  font-size: 0.8em;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(21, 20, 26, 0.63);
+  border-radius: 10px;
+}    
+
