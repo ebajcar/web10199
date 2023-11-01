@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
+<title> SYST10199 learn Web programming</title>
+<link rel="stylesheet" href="../css/styless.css"/> 
+<link rel="stylesheet" href="../css/prism_coy_dev.css"  />
+<link rel="stylesheet" href="../css/additional.css">
+<script src="https://cdn.tailwindcss.com/"></script>
+<style>
+
+</style>
+</head>
+
+<body>
+  <nav class="bg-gray-800">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex flex-shrink-0 items-center">
+          <img class="hidden h-8 w-auto lg:block" src="https://ebajcar.github.io/web10199/images/svg/Sheridan.svg" alt="Sheridan College">
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">SYST10199</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Client-side Programming</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Server-side Programming</a>
+
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        <button type="button" class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+          <span class="sr-only">View notifications</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+          </svg>
+        </button>
+
+        </div>
+      </div>
+    </div>
+ 
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="sm:hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pb-3 pt-2">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">SYST10199</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Client-side programming</a>
+      <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Server-side programming</a>
+    </div>
+  </div>
+</nav>
+
+    
+<main class="md:flex flex-col md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
+      
+    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
+      <div class="flex-shrink-0 px-8 py-4">
+        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>   
+        </button>
+      </div>   
+<nav id="nav" class="lg:text-sm lg:leading-6 relative">
+<ul>
+<li class="mt-12 lg:mt-8">  
+
+    
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Web Programming</h5> 
+    <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
+        <li><a class="block border-l pl-4" href=".html">How web works</a></li>
+        <li><a class="block border-l pl-4" href=".html">Full-stack development</a></li>
+        <li><a class="block border-l pl-4" href=".html">Development process</a></li>
+        <li><a class="block border-l pl-4" href=".html">Standards</a></li>
+        
+    </ul>
+</li>
+<li class="mt-12 lg:mt-8">
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">JS Core Concepts</h5>
+    <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
+        <li><a class="block border-l pl-4" href="index.html">JS Language</a></li>
+        <li><a class="block border-l pl-4" href="grammar.html">Grammar</a></li>
+        <li><a class="block border-l pl-4" href="data_types.html">Data types</a></li>
+        <li><a class="block border-l pl-4" href="variables.html">Variables</a></li>
+        <li><a class="block border-l pl-4" href="operators.html">Operators</a></li>
+        <li><a class="block border-l pl-4" href="control_flow.html">Program flow</a></li>
+        <li><a class="block border-l pl-4" href="objects.html">Objects</a></li> 
+        <li><a class="block border-l pl-4" href="collections.html">Built-in objects</a></li> 
+        <li><a class="block border-l pl-4" href="dom.html">DOM &amp; BOM</a></li>
+        <li><a class="block border-l pl-4" href="functions.html">Functions</a></li>   
+        <li><a class="block border-l pl-4" href="events.html">Events</a></li>
+        <li><a class="block border-l pl-4" href="forms.html">Forms</a></li>
+                
+    </ul>
+</li>
+<li class="mt-12 lg:mt-8">
+    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Related Components</h5>
+    <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">  
+        <li><a class="block border-l pl-4" href=".html">Programming paradigms</a></li>
+        <li><a class="block border-l pl-4" href=".html">Problem solving</a></li>
+        <li><a class="block border-l pl-4" href=".html">Algorithms</a></li>   
+        <li><a class="block border-l pl-4" href=".html">Conventions, Best practices</a></li>
+        <li><a class="block border-l pl-4" href=".html">Publishing</a></li>
+    </ul>
+</li>    
+<li class="mt-12 lg:mt-8">    
+    <h5 class="mt-6">
+        <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4 text-gray-900">
+            <div class="mr-3 rounded-md bg-gradient-to-br from-blue-500 to-blue-500">
+                <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 6C10.0929 6 11.1175 6.29218 12 6.80269V16.8027C11.1175 16.2922 10.0929 16 9 16C7.90714 16 6.88252 16.2922 6 16.8027V6.80269C6.88252 6.29218 7.90714 6 9 6Z" fill="#FDF4FF"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15 6C16.0929 6 17.1175 6.29218 18 6.80269V16.8027C17.1175 16.2922 16.0929 16 15 16C13.9071 16 12.8825 16.2922 12 16.8027V6.80269C12.8825 6.29218 13.9071 6 15 6Z" fill="#FDF4FF"></path></svg>
+            </div>
+            <strong>Worksheets</strong>
+        </a>
+    </h5>
+    <h5>
+        <a href="under_construction.html" class="flex items-center hover:text-gray-900 transition-colors duration-200 mb-4">
+            <div class="mr-3 rounded-md bg-gradient-to-br from-yellow-400 to-orange-500">
+                <svg class="h-6 w-6" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.196 6.02a1 1 0 01.785 1.176l-2 10a1 1 0 01-1.961-.392l2-10a1 1 0 011.176-.784z" fill="#FDE68A"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.293 9.293a1 1 0 011.414 0l2 2a1 1 0 010 1.414l-2 2a1 1 0 01-1.414-1.414L16.586 12l-1.293-1.293a1 1 0 010-1.414zM8.707 9.293a1 1 0 010 1.414L7.414 12l1.293 1.293a1 1 0 11-1.414 1.414l-2-2a1 1 0 010-1.414l2-2a1 1 0 011.414 0z" fill="#FDF4FF"></path></svg>
+            </div>
+            <strong>Examples</strong>
+        </a>
+    </h5>    
+</li>
+</ul>
+</nav>
+    </div>  
+
+<!-- content starts -->        
+<section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
+    <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">Javascript Grammar</h2>
+    <h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800">-</h6>
+
+    
+<section class="col-8 container">
+
+<ul class="nav nav-pills flex flex-col md:flex-row list-none pl-0 mx-40" id="pills-tabFill" role="tablist">
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+     <a href="#section2" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active"></a>
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+     <a href="#section1" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">documenting as you code</a>
+  </li> 
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+     <a href="#section2" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">debugging your code</a>
+  </li> 
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+     <a href="#section2" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active">Input and output</a>
+  </li> 
+  <li class="nav-item flex-auto text-center my-2 md:mr-2" role="presentation">
+     <a href="#section2" class=" nav-link w-full block font-medium text-xs leading-tight uppercase rounded px-6 py-3 focus:outline-none focus:ring-0 active"></a>
+  </li> 
+</ul>
+  
+</section>    
+
+<div class="my-5">
+  <div class="flex w-full mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
+    <div class="flex items-center justify-center px-1 bg-dark-gray">
+    </div>
+    <div class="px-4 py-2 -mx-3">
+      <div class="mx-3">
+        <span class="text-2xl font-semibold sher-teal">Basic grammar</span>
+ 			<ul class="text-base list-disc list-inside">
+                <li class="list-disc list-inside">JavaScript is <strong>case-sensitive</strong> and uses the Unicode character set.</li>
+                <li class="list-disc list-inside">In JavaScript, <strong>instructions</strong> are called statements. Spaces, tabs and newline characters are called<strong> whitespace</strong>.</li> 
+                <li class="list-disc list-inside">Each JavaScript <strong>statement</strong> must be terminated by <strong>a semi-colon</strong>.</li>
+                <li class="list-disc list-inside"><strong>Javascript code may also include helpful code comments.</strong> </li> 
+                <li class="list-disc list-inside">The parser ignores everything between
+                <ul class="text-base list-circle list-inside px-6">
+                   <li><strong>/* and */ characters</strong>, and </li>
+                   <li><strong>// characters and the end of a line</strong>.</li>
+                </ul>
+                </li> 				
+			</ul>
+    <p class="text-base pt-8">JavaScript follows the ECMA-262 standard..</p>   
+    <p class="blockquote-footer">Read further  <cite title="[ ]"><a href="" target="_blank"> about... </a></cite></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--  2.6. Basic Grammar -->
+<section id="page25"> 	<h3>Basic Grammar</h3>
+    
+<figure>		
+<figcaption>FIGURE 1. <small>Function definition block.</small></figcaption>
+<pre class="language-js"><code>/* 
+the function
+define the thing you want to happen
+*/
+function theFunction() {
+	//statements go here
+}</code></pre>
+</figure>	
+
+
+<figure>		
+<figcaption>FIGURE 2. <small>Variable declaration and initialization statement.</small></figcaption>
+<pre class="language-js"><code>/* 
+the variable
+get the element to work with
+*/
+const elem = document.getElementById("idname");</code></pre>
+</figure>	
+
+
+ <figure>		
+ <figcaption>FIGURE 3. <small>Event listener.</small></figcaption>
+<pre class="language-js"><code>/* 
+the event listener
+set up something to listen for, then execute the function
+*/
+elem.addEventListener("click", theFunction, false);</code></pre>			
+</figure>	   
+    
+    
+    
+    
+    
+<h3>Documenting as you code</h3>    
+ 
+<p title="developer.mozilla.org">Less code means better performance, and better performance means a better user experience.</p>
+
+    
+<figure>
+<figcaption>FIGURE 3. <small>Start with comments and update as you code.</small></figcaption>
+<pre class="language-js"><code>&lt;script> 
+/* This is a multi-line comment that describes the script’s 
+purpose and provides information about the author and date. */ 
+	
+// This is a single-line comment that describes a block or line of code. 
+&lt;/script></code></pre>
+		
+	</figure>
+
+	<hr>
+</section>
+
+
+<!--  2.7. Debugging Javascript Code -->
+<section id="page26">	<h3>Debugging Javascript Code</h3>
+	<ul class="w3-ul">
+		<li>Use the console to trace values of variables</li>
+		<li>Use the console.log() method to trace values of variables and to send messages to the console at critical places in the code</li>
+		<li>It takes practice to understand the code. Use comments to explain, in your own words, what the code does and why</li>
+		<li class="w3-hover-khaki">Use tools such as <a href="http://jshint.com/" target="_blank">jshint.com</a> to clean up Javascript code.</li>
+		<li>Review <a href="http://javascript.crockford.com/code.html" target="_blank">http://javascript.crockford.com/code.html</a></li>
+		<li>Here is a list of related suggestions covered in  <a href="https://www.evernote.com/shard/s687/sh/08e73a4c-06e0-4938-a3f4-e3e04108222d/138d63da448e70aed82a3ed545b3a95b" target="_blank">class</a></li>
+		<li>Compare <code>console.log</code> and <code>document.write</code>.</li>
+	</ul>   
+	<hr>
+</section>
+  
+ 
+<!-- 2.5. Input and Output -->
+<section id="page24">
+	<h3>Input and Output</h3>
+
+	<h5>Working with <code>document.write</code></h5>
+	<p>You can write directly to the document with the method <code>document.write</code>, although this is not a very good technique.</p>
+	
+<figure>		
+<pre class="language-js"><code>var myWindow = window.open("", "MsgWindow", "width=200, height=100");
+myWindow.document.write(
+       "&lt;p>This is 'MsgWindow'. 200px wide and 100px tall!&lt;/p>" 
+		+ something);</code></pre>			
+	<figcaption class="figure-caption">Using <code>document.write</code> method.</figcaption>
+</figure>
+
+<!--  MORE EXPLANATION HERE -->
+
+
+	<hr>
+	<h5>Working at the console</h5>	 
+  
+<figure>		
+<pre class="language-js"><code>// Use console.log() to help you debug your code
+var f = "4";
+console.log("a =" + a, b, c, d);
+console.log("The value of f is " + f);
+console.log(f.type);</code></pre>			
+	<figcaption class="figure-caption">Using <code>document.write</code> method.</figcaption>
+</figure>	
+					
+<figure class="figure" style="width:100%">	
+		<p data-height="265" data-theme-id="light" data-slug-hash="JXapzX" data-default-tab="js" data-user="ebajcar" data-embed-version="2" data-pen-title="JXapzX" class="codepen">See the Pen <a href="https://codepen.io/ebajcar/pen/JXapzX/">JXapzX</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+		<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>				
+		<figcaption class="figure-caption">Edit on codepen <a href="http://codepen.io/ebajcar/pen/JXapzX" target="_blank">Interrogate values with console</a></figcaption>
+</figure>	
+	
+  <footer class="blockquote-footer">Read further  
+		<svg class="bi bi-link-45deg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+		  <path d="M4.715 6.542L3.343 7.914a3 3 0 104.243 4.243l1.828-1.829A3 3 0 008.586 5.5L8 6.086a1.001 1.001 0 00-.154.199 2 2 0 01.861 3.337L6.88 11.45a2 2 0 11-2.83-2.83l.793-.792a4.018 4.018 0 01-.128-1.287z"/>
+		  <path d="M5.712 6.96l.167-.167a1.99 1.99 0 01.896-.518 1.99 1.99 0 01.518-.896l.167-.167A3.004 3.004 0 006 5.499c-.22.46-.316.963-.288 1.46z"/>
+		  <path d="M6.586 4.672A3 3 0 007.414 9.5l.775-.776a2 2 0 01-.896-3.346L9.12 3.55a2 2 0 012.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 00-4.243-4.243L6.586 4.672z"/>
+		  <path d="M10 9.5a2.99 2.99 0 00.288-1.46l-.167.167a1.99 1.99 0 01-.896.518 1.99 1.99 0 01-.518.896l-.167.167A3.004 3.004 0 0010 9.501z"/>
+		</svg> <cite title="explore the console object">	<a href="https://www.w3schools.com/jsref/obj_console.asp" target="_blank">Explore the Console Object; other methods available include clear(), error(), time(),&hellip;</a></cite>
+	</footer>	
+	
+	<hr>
+	
+	<h5>Working with dialogues</h5>
+  	<p>The browser object, <var>window</var>, has many useful methods and properties :<code>alert(), prompt(), confirm(), open(), close()</code>. ( See <a href="http://www.w3schools.com/jsref/obj_window.asp" target="_blank">The Window Object</a> )</p>
+    
+<figure>		
+<pre class="language-js"><code>// Use dialogues to interact with user                   
+prompt('What is your name? '); 
+confirm("You're programming in JavaScript!");
+confirm("Hello");
+alert("Hello");
+var something = prompt("Enter something");</code></pre>			
+	<figcaption class="figure-caption">Using dialogues to interact with user.</figcaption>
+</figure>	
+
+	<h5>Working with form elements</h5>
+	<p>You can also interact with user through <mark>form element</mark>. See Section <a href="#page100">10. Javascript forms</a>.</p>
+
+	<hr>
+</section>
+       
+        
+</section>
+<!-- content starts -->        
+</main>
+  
+  
+  <footer class="bg-dark-gray text-white"> 
+     <section class="max-w-screen-lg text-white container mx-auto py-2 px-12">  
+      <p id="version" class="leading-none mb-2 my-4">&copy;  This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.</p>
+         <p class="text-sm text-gray-100 md:mb-6">
+         <a class="text-white" href="">SYST10109 Web Programming | Sheridan College</a>
+      </p>     
+    </section> 
+    <div class="container max-w-screen-lg mx-auto  px-8">   
+        <div class="max-w-screen-lg xl:max-w-screen-xl mx-auto px-4 sm:px-6 md:px-8">
+          <ul class="text-sm font-medium pb-14 sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-y-10">
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Course Material</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Resources</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+              </ul>
+            </li>
+            <li class="list-none row-span-2">
+              <h2 class="text-base font-semibold tracking-wide">Sheridan College</h2>
+              <ul class="list-none space-y-4 md:space-y-1 px-0">
+                <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                 <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                 <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                 <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>                  
+                <li>
+                  <a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a>
+                  <span style="color:gray"><br>Office hours (by appointment)</span>
+                </li>
+                <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>  
+                <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</footer> 
+ 
+
+<script src="../scripts/prism.js"></script>
+</body>
+</html>

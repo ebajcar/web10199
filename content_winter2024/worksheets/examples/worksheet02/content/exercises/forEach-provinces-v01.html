@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet Two Problems</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }
+        .big-value {
+          font-size: 4em;
+          font-weight: normal;
+          text-align: left;
+          text-shadow: 2px 2px 2px gray;
+          padding-bottom: 20px;
+        }
+        /*
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+        
+        */
+        input:invalid + span::after {
+          content: "✖";
+          padding-left: 5px;
+          color: lightgray;
+        }
+
+        input:valid + span::after {
+          content: "✓";
+          padding-left: 5px;
+          color: gray;
+        }
+        select {
+          width: 100%;
+        }
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet One</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="../problems/index.html">Problems</a>
+            <a href="index.html" class="current">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+     <ul>
+        <li class="box">
+                <pre class="language-js" tabindex="0"><code class="language-js">// array of objects
+const province = [
+	{ name: "Alberta", 					postal: "AB" },
+	{ name: "British Comumbia", 		postal: "BC" },
+	{ name: "Manitoba", 				postal: "MB" },
+	{ name: "New Brunswick", 			postal: "NB" },
+	{ name: "Newfoundland and Labrador", postal: "NL" },
+	{ name: "Northwest Territories", 	postal: "NT" },
+	{ name: "Nova Scotia", 				postal: "NS" },
+	{ name: "Nunavut", 					postal: "NU" },
+	{ name: "Ontario", 					postal: "ON" },
+	{ name: "Prince Edward Island", 	postal: "PE" },
+	{ name: "Quebec", 					postal: "QC" },
+	{ name: "Saskatchewan", 			postal: "SK" },
+	{ name: "Yukon Territories", 		postal: "YT" }
+];</code></pre>
+        </li>
+        
+        <li class="box">
+                <pre class="language-js" tabindex="0"><code class="language-js">// 
+let list = [];
+// explore methods reverse() and forEach()
+// sort backwards first, then apply myFunction to each member
+province.reverse().forEach(myFunction);
+function myFunction(item, index) {
+	console.log(item.name + ", "+ item.postal);
+	list[index] = " " + index + " " + item.name;
+}
+console.log("list ", list);
+result.innerHTML = list;</code></pre>
+            <p>The output is:</p>   
+            <h3 id="result"></h3>
+        </li>
+        
+        
+        <li class="box">
+                <pre class="language-js" tabindex="0"><code class="language-js">// 
+result2.innerHTML = list.sort().join(" :) ");</code></pre>
+            <p>The output is:</p>   
+            <h3 id="result2"></h3>
+        </li>  
+
+        
+        <li class="box">
+                <pre class="language-js" tabindex="0"><code class="language-js">//The pop() method removes the last element from an array 
+result3.innerHTML = list.pop();</code></pre>
+            <p>The output is:</p>   
+            <h3 id="result3"></h3>
+        </li>    
+
+        <li class="box">
+                <pre class="language-js" tabindex="0"><code class="language-js">// 
+result4.innerHTML = list.shift();</code></pre>
+            <p>The output is:</p>   
+            <h3 id="result4"></h3>
+        </li>  
+
+        <li class="box">
+                <pre class="language-js" tabindex="0"><code class="language-js">//The push() method appends a new element to an array 
+list.push("ALBERTA");
+result5.innerHTML = list;</code></pre>
+            <p>The output is:</p>   
+            <h3 id="result5"></h3>
+        </li>   
+
+        <li class="box">
+                <pre class="language-js" tabindex="0"><code class="language-js">//The unshift() method adds new elements to the beginning of an array 
+list.unshift("ONTARIO");
+result6.innerHTML = list;</code></pre>
+            <p>The output is:</p>   
+            <h3 id="result6"></h3>
+        </li> 
+
+        <li class="box">
+                <pre class="language-js" tabindex="0"><code class="language-js">// 
+result7.innerHTML = list;</code></pre>
+            <p>The output is:</p>   
+            <h3 id="result7"></h3>
+        </li>         
+    </ul>
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+// array of objects
+const province = [
+	{ name: "Alberta", 					postal: "AB" },
+	{ name: "British Comumbia", 		postal: "BC" },
+	{ name: "Manitoba", 				postal: "MB" },
+	{ name: "New Brunswick", 			postal: "NB" },
+	{ name: "Newfoundland and Labrador", postal: "NL" },
+	{ name: "Northwest Territories", 	postal: "NT" },
+	{ name: "Nova Scotia", 				postal: "NS" },
+	{ name: "Nunavut", 					postal: "NU" },
+	{ name: "Ontario", 					postal: "ON" },
+	{ name: "Prince Edward Island", 	postal: "PE" },
+	{ name: "Quebec", 					postal: "QC" },
+	{ name: "Saskatchewan", 			postal: "SK" },
+	{ name: "Yukon Territories", 		postal: "YT" }
+];
+
+let list = [];
+// explore methods reverse() and forEach()
+// sort backwards first, then apply myFunction to each member
+province.reverse().forEach(myFunction);
+function myFunction(item, index) {
+	console.log(item.name + ", "+ item.postal);
+	list[index] = " " + item.name;
+}
+console.log("list ", list);
+result.innerHTML = list;
+
+result2.innerHTML = list.sort().join(" : ");
+
+result3.innerHTML = list.pop();
+
+result4.innerHTML = list.shift();
+
+list.push("ALBERTA");
+result5.innerHTML = list;
+
+list.unshift("ONTARIO");
+result6.innerHTML = list;
+
+result7.innerHTML = list;
+</script>
+</body>
+</html>
