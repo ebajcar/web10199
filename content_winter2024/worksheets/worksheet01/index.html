@@ -70,7 +70,7 @@ summary::first-line {
         <small>&mdash;Unknown <cite></cite></small>       
 
         <details>
-        <summary>Adding JS code to HTML</summary>
+            <summary>Adding JS code to HTML</summary>
                         <figure>
                             <pre class="language-html" tabindex="0"><code class="language-html">&lt;script>
 /* all scripts will go here */
@@ -88,8 +88,9 @@ document.write("Hello World!");
 
                             </figcaption>
                         </figure>      
-    </details>  
+        </details>  
 
+    <!-- Problem solving -->
      <details>
         <summary>Problem Solving</summary>
         <p>There are two reasons why we tend to see a problem as a problem: it has to be solved and we're not sure how to find the best solution, and there will probably be conflicts about what the best solution is. Most of us tend to be "conflict-averse". We don't feel comfortable dealing with conflict and we tend to have the feeling that something bad is going to happen. The goal of a good problem-solving process is to make us and our organization more "conflict-friendly" and "conflict-competent".</p>
@@ -150,24 +151,25 @@ document.write("Hello World!");
       
      <details>
         <summary>Unobtrusive Javascript &mdash;The principles to follow:</summary>
-	<ol class="ordered-list">
-		<li><strong>delay processing by including it at the end of body</strong>, after all marked up content.</li>
-		<li><strong>accelerate processing to the event</strong> <code>DOMContentLoaded</code>, before the window is loaded and rendering.</li>
-		<li><strong>avoid control boxes</strong> (alert, prompt,...), they pause all processing until the user dismisses them.</li>
-    <li><strong>avoid event attributes</strong>, you are mixing languages; hard to maintain.</li>
-    <li>ultimately, <strong>move all Javascript to external files</strong>.</li> 
-	</ol>  
-    <blockquote>
-    <span>Further, unobtrusive JavaScript</span>
-    <ol>
-        <li>separates structure and behaviour, in order to make your code cleaner and script maintenance easier</li>
-        <li>pre-empts browser incompatibilities</li>
-        <li>works with a clean, semantic HTML layer</li>
-    </ol>
-    </blockquote>
-    <p class="blockquote-footer">Read further  <cite title="[ Unobtrusive JavaScript defined ]"><a href="https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript#Unobtrusive_JavaScript_defined" target="_blank">  <q>The principles of unobtrusive JavaScript</q> on W3C</a></cite></p>   
-       
+        <ol class="ordered-list">
+            <li><strong>delay processing by including it at the end of body</strong>, after all marked up content.</li>
+            <li><strong>accelerate processing to the event</strong> <code>DOMContentLoaded</code>, before the window is loaded and rendering.</li>
+            <li><strong>avoid control boxes</strong> (alert, prompt,...), they pause all processing until the user dismisses them.</li>
+        <li><strong>avoid event attributes</strong>, you are mixing languages; hard to maintain.</li>
+        <li>ultimately, <strong>move all Javascript to external files</strong>.</li> 
+        </ol>  
+        <blockquote>
+        <span>Further, unobtrusive JavaScript</span>
+        <ol>
+            <li>separates structure and behaviour, in order to make your code cleaner and script maintenance easier</li>
+            <li>pre-empts browser incompatibilities</li>
+            <li>works with a clean, semantic HTML layer</li>
+        </ol>
+        </blockquote>
+        <p class="blockquote-footer">Read further  <cite title="[ Unobtrusive JavaScript defined ]"><a href="https://www.w3.org/wiki/The_principles_of_unobtrusive_JavaScript#Unobtrusive_JavaScript_defined" target="_blank">  <q>The principles of unobtrusive JavaScript</q> on W3C</a></cite></p>   
     </details>  
+    
+    
     
      <details>
         <summary>Progressive enhancement (PE) - core principles:</summary>
