@@ -65,9 +65,9 @@ ol {
       <div id="topnavList" class="hidden sm:block items-center w-auto mt-0 text-white p-0 z-20">
         <ul class="list-reset list-none font-semibold flex justify-end flex-wrap sm:flex-nowrap items-center px-0 pb-0">
           <li class="p-1 sm:p-0"><a class="topnav-link" href="index.html">Home</a></li>
-          <li class="p-1 sm:p-0"><a class="topnav-link" href="material/index.html">Course Material</a></li>
-          <li class="p-1 sm:p-0"><a class="topnav-link" href="material_worksheets/index.html">Worksheets</a></li>
-          <li class="p-1 sm:p-0"><a class="topnav-link" href="topical_syst10199_winter2024.html">Class Plan</a></li>
+          <!--li class="p-1 sm:p-0"><a class="topnav-link" href="material/index.html">Course Material</a></li-->
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="material_worksheets/index.html" target="_blank">Worksheets</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="topical_syst10199_winter2024.html" target="_blank">Class Plan</a></li>
         </ul>
       </div>
     </div>
@@ -75,39 +75,7 @@ ol {
   </nav>
     
   <main class="md:flex md:flex-row md:min-h-screen w-full max-w-screen-xl mx-auto">
-<!--      
-    <div id="navSide" class="flex flex-col w-full md:w-40 lg:w-48 text-gray-700 bg-white flex-shrink-0">
-      <div class="flex-shrink-0 px-8 py-4">
-        <button id="navButton" class="rounded-lg md:hidden focus:outline-none focus:ring" aria-label="Navigation">
-          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-            <path id="navOpen" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-            <path id="navClosed" class="hidden" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-          </svg>   
-        </button>
-      </div>   
-      <nav id="navList" class="min-h-screen hidden md:block sidebar-nav flex-grow px-1 lg:px-4 pb-4 md:pb-0 md:overflow-y-auto break-words">
-          <a href="#" class="text-3xl tracking-tight text-gray-900">Class Plan</a>
-
-<button class="bg-dark-gray sher-teal active:bg-purple-600 font-bold uppercase text-base px-8 py-3 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal(&quot;modal-example-large&quot;)">Learning Outcomes</button>
-
-<button class="bg-dark-gray sher-teal active:bg-purple-600 font-bold uppercase text-base px-4 py-3 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button"><a href="topical_syst10199-spring2023.html" target="_blank" style="color:white;">Topical Outline</a></button>
-
-<button class="bg-red sher-teal active:bg-purple-600 font-bold uppercase text-base px-4 py-3 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button"><a href="https://sheridanc-fast-syst10199.notion.site/5814db5d11c14844b0f84cfdd220cdb4?v=0b18f3287b484887bd83356628313e64" target="_blank" style="color:white;">Evaluation Timeline</a></button>
-
-<button class="bg-dark-gray sher-teal active:bg-purple-600 font-bold uppercase text-base px-4 py-3 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button"><a href="https://ebajcar.github.io/web10199/content_summer2023/worksheets/material/worksheet01.html" target="_blank" style="color:white;">Worksheets&nbsp;&nbsp;&nbsp;</a></button>
-
-<button class="bg-dark-gray sher-teal active:bg-purple-600 font-bold uppercase text-base px-4 py-3 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button"><a href="https://comm13729-sheridancollege.notion.site/Class-Plan-Information-c86adbe0453243a280fd72d003447ae0" target="_blank" style="color:white;">Classroom &amp; Evaluation Policies</a></button>
-
-<button class="bg-dark-gray sher-teal active:bg-purple-600 font-bold uppercase text-base px-4 py-3 rounded shadow-md hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button"><a href="https://ebajcar.github.io/web10199_worksheets/noteworthy/gradeCalc.html" target="_blank" style="color:#00b2ce;">A Guideline for Implementing Good Solutions</a></button>
-
-
-
-      </nav>
- 
- 
-    </div>  
-    
- -->      
+  
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
 
         <!-- Announcements -->
@@ -136,7 +104,7 @@ ol {
         
 <div class="bg-gray-100 rounded-lg py-5 px-6 mb-4 text-base text-gray-700" role="alert">
     <h4 class="text-2xl font-medium leading-tight mb-2">What you should already know from last semester</h4>
-    <details>
+    <details open>
         <summary>Programming Foundations - Python <small><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview.jsp?hide=true&term=1999&subjectCode=PROG&courseCode=12583" target="_blank">PROG12583</a></small></summary>
         <ul class="list-decimal list-outside">
             <li>Apply systematic problem-solving and analytical techniques in developing computerized solutions for simple scientific and/or business applications.</li>
@@ -150,7 +118,7 @@ ol {
         </ul>    
     </details>
     <hr class="border-gray-600 opacity-30">
-    <details>
+    <details open>
         <summary>Web Development <small><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview.jsp?hide=true&term=1999&subjectCode=SYST&courseCode=10049" target="_blank">SYST10049</a></small></summary>
             <ul class="list-decimal list-outside">
                 <li>Create a properly structured and accessible web page using (HTML).</li>
@@ -168,24 +136,7 @@ ol {
     <p>These learning outcomes are copied from the respective Course Outlines. The course outlines provide you with guidance for what you need to learn during the course. If you have not mastered the material during the course, it is your responsibility to catch up without impacting others' learning experience.  There is a lot of content to cover in each course and that leaves no time to learn something you should already have mastered. Now is the time to learn and practice deliberately the material currently being covered. If you need help, there is tutoring available &mdash; check out <a href="https://central.sheridancollege.ca/tutoring" target="_blank">https://central.sheridancollege.ca/tutoring</a>.</p>    
 </div>        
 
-        <div class="hidden flex flex-wrap">
-            <button  class="text-purple-500 bg-transparent hover:bg-purple-500 hover:text-white  active:bg-purple-600" onclick="openPopover(event,'popover-example-left')"> 
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" style="display:inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                </svg> REMINDERS
-            </button>
-            <div class="hidden bg-white border mr-3 block z-50 font-normal leading-normal text-sm max-w-xs text-left no-underline break-words rounded-lg" id="popover-example-left">
-              <div>
-                <div class="text-gray-700 opacity-75 font-semibold p-3 mb-0 border-b border-solid border-gray-100 uppercase rounded-t-lg">
-                  Reminder
-                </div>
-                <div class="text-gray-700 p-8">
-                    <p>Practice your communication. Use Piazza Q&A to ask questions and learn from each other.</p>
-                    <p>Check out Student Services</p>                 
-                </div>
-              </div>
-            </div>
-        </div>
+
          
 
  
@@ -215,245 +166,7 @@ ol {
 		</div>
 	</div>
 </div>
-<div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-example-large-backdrop"></div>
-         
-       
 
- <!-- topical outline -->
-<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-plan">
-	<div class="relative w-auto my-6 mx-auto max-w-6xl">
-		<div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-			<div class="flex items-start justify-between p-5 border-b border-solid border-gray-200 rounded-t">
-				<!--h3 class="text-3xl font-semibold">Topical Outline for Winter 2022 term</h3-->
-				<button class="p-1 ml-auto bg-transparent border-0 text-gray-300 float-right text-3xl leading-none font-semibold outline-none focus:outline-none" onclick="toggleModal(&quot;modal-plan&quot;)"><span class="bg-transparent h-6 w-6 text-2xl block outline-none focus:outline-none"><i class="fas fa-times"></i></span></button>
-			</div>
-			<!--div class="relative p-6 flex-auto"-->
-            <div class="relative p-6 flex-auto overflow-y-auto" style="height:500px;width:800px">
-
-				<iframe style="width:100%;height:400px" src="topical_syst10199-winter2022.html"></iframe>       
-</div> <!--  end of grid --> 
-			<div class="flex items-center justify-end p-6 border-t border-solid border-gray-200 rounded-b">
-				<button class="sher-teal text-white active:bg-purple-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" onclick="toggleModal(&quot;modal-plan&quot;)">understood</button>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-<div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-plan-backdrop"></div>
-      
-      
- <div class="hidden grid grid-cols-4 gap-3">
-   <!-- Week 1 -->
-  <div class="bg-green-700 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-700 flex justify-between items-center py-2 px-2 bg-clip-padding border-b border-green-500 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 1</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Jan 10 &mdash; Jan 14</p>
-      </div>
-    </div>
-    <div class="p-2 bg-green-700 rounded-b-lg break-words text-white">
-      <ul class="list-outside"><li>Review and prep</li><li>Web programming</li></ul>
-    </div>
-  </div>
-
-  <!-- Week 2 -->
-  <div class="bg-green-700 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-700 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-500 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 2</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Jan 17 &mdash; Jan 21</p>
-      </div>
-    </div>
-    <div class="py-1 px-3 bg-green-700 rounded-b-lg break-words text-white">
-      <ul class="list-outside leading-snug"><li>Javascript—client-side programming</li><li>Worksheet 2 (Assignment 1)</li></ul>
-    </div>
-  </div>
-  
-  <!-- Week 3 -->
-   <div class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 3</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Jan 24 &mdash; Jan 28</p>
-      </div>
-    </div>
-    <div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
-      <ul><li>Javascript—client-side programming</li><li>Worksheet 3 (Assignment 2)</li></ul>
-    </div>
-  </div> 
-  
-   <!-- Week 4 -->
-   <div class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 4</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Jan 31 &mdash; Feb 4 </p>
-      </div>
-    </div>
-    <div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
-      <ul><li>Javascript—client-side programming</li><li>Worksheet 4 (Assignment 3)</li></ul>
-    </div>
-  </div>  
-  
-  <!-- Week 5 -->
-   <div class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 5</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Feb 7 &mdash; Feb 11</p>
-      </div>
-    </div>
-    <div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
-      <ul><li>Javascript—client-side programming</li><li>Worksheet 5 (Assignment 4)</li></ul>
-    </div>
-  </div>   
-  
-  <!-- Week 6 -->
-   <div class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 6</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Feb 14 &mdash; Feb 18</p>
-      </div>
-    </div>
-    <div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
-      <ul><li>Javascript—client-side programming</li><li> </li></ul>
-    </div>
-  </div>   
-  
-  <!-- Week 7 -->
-   <div class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 7</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Feb 21 &mdash; Feb 25</p>
-      </div>
-    </div>
-    <div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
-      <ul><li>MIDTERM</li><li>written during class</i></ul>
-    </div>
-  </div>   
-  
-  <!-- break week -->
-   <div class="bg-white shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class=" bg-white flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-gray-200 rounded-t-lg">
-      <p class="font-bold text-gray-500">Reading break</p>
-      <div class="flex items-center">
-        <p class="text-gray-600 text-xs">Feb 28&mdash; Mar 4</p>
-      </div>
-    </div>
-    <div class="p-3 bg-white rounded-b-lg break-words text-gray-700">
-      There are no classes this week.
-    </div>
-  </div> 
- 
-  
-  <!-- Week 8 -->
-   <div class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 8</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Mar 7 &mdash; Mar 11</p>
-      </div>
-    </div>
-    <div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
-      <ul><li>PHP—server-side programming</li><li>&nbp;</i></ul>
-    </div>
-  </div> 
-
-  
-  <!-- Week 9 -->
-   <div class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 9</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Mar 14 &mdash; Mar 18</p>
-      </div>
-    </div>
-    <div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
-      <ul><li>PHP—server-side programming</li></ul>
-    </div>
-  </div>   
-  
-  
-  <!-- Week 10 -->
-   <div class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 10</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Mar 21 &mdash; Mar 25</p>
-      </div>
-    </div>
-    <div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
-      <ul><li>PHP—server-side programming</li><li>&nbp;</i></ul>
-    </div>
-  </div>   
-  
-  
-  <!-- Week 11 -->
-   <div class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 11</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Mar 28 &mdash; Apr 1</p>
-      </div>
-    </div>
-    <div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
-      <ul><li>PHP—server-side programming</li><li>&nbp;</i></ul>
-    </div>
-  </div> 
-
-   
-  <!-- Week 12 -->
-   <div class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 12</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Apr 4 &mdash; Apr 8</p>
-      </div>
-    </div>
-    <div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
-      <ul><li>Client-server (full-stack) programming</li><li>&nbp;</i></ul>
-    </div>
-  </div> 
-
-  
-  <!-- Week 13 -->
-  <div class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 13</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Apr 11 &mdash; Apr 15</p>
-      </div>
-    </div>
-    <div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
-      <ul>
-        <li>Client-server (full-stack) programming</li>
-        <li>&nbp; </i>
-      </ul>
-    </div>
-  </div>  
-  
-  
-  <!-- Week 14 -->
-  <div class="bg-green-500 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
-    <div class="bg-green-500 flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-green-400 rounded-t-lg">
-      <p class="font-bold text-white flex items-center"> Week 14</p>
-      <div class="flex items-center">
-        <p class="text-white opacity-90 text-xs uppercase">Apr 18 &mdash; Apr 22</p>
-      </div>
-    </div>
-    <div class="p-3 bg-green-500 rounded-b-lg break-words text-white">
-      <ul>
-        <li>FINAL EXAM</li>
-        <li>written during class</i>
-      </ul>
-    </div>
-  </div>  
-
-</div> <!--  end of grid -->  
 
 </section>
 
