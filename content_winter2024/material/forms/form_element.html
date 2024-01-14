@@ -18,7 +18,7 @@
     <nav>
       <ul role="list">
         <li><a href="html_forms.html">HTML forms</a></li>
-        <li><a href="form_tags.html">Form elements</a></li>        
+        <li><a href="form_tags.html">Elements</a></li>        
         <li><a aria-current="page" href="form_element.html">&lt;form></a></li>       
         <li><a href="input_element.html">&lt;input></a></li>
         <li><a href="label_controls.html">&lt;label></a></li>
@@ -33,18 +33,18 @@
     <div class="prev-next">
         <!--   <p style="color:lightgray;">Prev</p>   -->
         <p style="line-height: 1em;text-align:left;">
-            <a href="textual_italic_bold_underline.html">Prev</a>
-            <br><small>Previous topic</small>
+            <a href="form_tags.html">Prev</a>
+            <br><small>Form-associated elements</small>
         </p>
         <nav class="breadcrumbs" aria-label="Breadcrumbs">
             <ol>
-                <li><a href="index.html"  class="allcaps">Home</a></li>
-                <li><a href="#" aria-current="page">HTML Forms</a></li>
+                <li><a href="#"  class="allcaps">Home</a></li>
+                <li><a href="#" aria-current="page">&lt;form> element</a></li>
             </ol>               
         </nav> 
         <p style="line-height:1em;text-align:right;">
-            <a href="textual_quotations_citations.html">Next</a>
-            <br><small>Next topic</small>
+            <a href="input_element.html">Next</a>
+            <br><small>&lt;input> element</small>
         </p>
     </div>
     
@@ -64,9 +64,9 @@
 	
 	<h4 class="text-gray-900 text-xl leading-tight font-medium mb-2">Form submission method</h4>
 	<p>The method attribute of the FORM element specifies the HTTP method used to send the form to the processing agent. This attribute may take two values:</p>
-	<dl class="row">
-	  <dt class="col-sm-1 text-info">get</dt>
-	  <dd class="col-sm-11">With the HTTP "get" method, the form data set is appended to the URI specified by the action attribute (with a question-mark ("?") as separator) and this new URI is sent to the processing agent. (restricts form data set values to ASCII characters.)</dd>	 
+	<dl>
+	  <dt class="text-info">get</dt>
+	  <dd style="padding-bottom:10px;">With the HTTP "get" method, the form data set is appended to the URI specified by the action attribute (with a question-mark ("?") as separator) and this new URI is sent to the processing agent. (restricts form data set values to ASCII characters.)</dd>	 
 	  <dt class="col-sm-1 text-info">post</dt>
 	  <dd class="col-sm-11">With the HTTP "post" method, the form data set is included in the body of the form and sent to the processing agent. (with enctype="multipart/form-data", cover the entire [ISO10646] character set).</dd>	  	  
 	</dl>
