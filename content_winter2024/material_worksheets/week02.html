@@ -47,21 +47,168 @@
 
     <!-- 1. Review from previous weeks -->
     <section id="p1">
-        <h2>Under review - will be made available at a later time.</h2>
+        <h2>Review</h2>
+       
+        <details>
+            <summary>Why is it important to write maintainable code?</summary>
+            <p>Maintainable code means code is</p>
+            <ul>
+                <li>readable, consistent, predictable, documented</li>
+                <li>looks as if it was written by the same person</li>
+            </ul>
+            <p>As applications mature, your code needs to be reviewed, revised, and tweeked:</p>
+            <ul>
+                <li>bugs are uncovered</li>
+                <li>new features are added</li>
+                <li>application needs to work in new environments</li>
+                <li>code gets re-purposed</li>
+                <li>code gets completely rewritten from scratch or ported to another architecture or another language</li>
+            </ul>   
+            <p>Few hours spent writing the code initially ends up in weeks spent reading it.</p>
+        </details>
 
+        <details>
+            <summary>How do you organize files for your web projects?</summary>
+            <p>It is important to follow instructions (in class and on the job). Misunderstanding and miscommunication may lead to
+            a loss of marks on assignments, learning and applying wrong information, and a loss of credibility, time, and money on the job.</p>
+            <p>Use <code>index0.html</code> instead of <code>index.html</code> for all your web sites, unless (until) specifically asked otherwise. The professor must be able to see your directory content to evaluate that you are naming objects appropriately and that you are keeping your published solutions neat and clean (only the files that are used; no backups or unused files).</p>
+            <p>All assignment work will be organized in the assignments directory:</p>
+            <ul>
+                <li>local directory location <code>C:/public_html/syst10199/assignments</code></li>
+                <li>equivalent server location <code>/data/home/username/public_html/syst10199/assignments</code></li>
+                <li>equivalent URL <code>http://username.dev.fast.sheridanc.on.ca/syst10199/assignments</code></li>
+            </ul>
+            <p>All other solutions will be organized in the projects directory:</p>
+            <ul>
+                <li>local directory location <code>C:/public_html/syst10199/projects</code></li>
+                <li>equivalent server location <code>/data/home/username/public_html/syst10199/projects</code></li>
+                <li>equivalent URL <code>http://username.dev.fast.sheridanc.on.ca/syst10199/projects</code></li>
+            </ul>  
+        </details>        
+        
+        <details>
+            <summary>What is computer programming? What are programming paradigms?</summary>
+            <p>Computer programming is <strong>a process that starts with an original formulation of a problem and culminates in executable computer programs</strong>. Computer languages, like human languages, require you to use them in order to understand them.</p>
+            <p>Every program (process) has input and output.</p>
+            <p>A programming paradigm is a style of programming. To program professionally, you need to learn either the object-oriented or functional programming paradigms.</p>
+            <p><strong>State</strong>: One of the fundamental differences among the various programming paradigms is the ==handling of state==. State is the value of a program's variables while it is running. Global state is the value of a program's global variables while it is running.
+            <ul>
+                <li><strong>Procedural programming paradigm</strong> is a programming style in which you write a sequence of steps moving toward a solution— with each step changing the program's state.You store data in global variables and manipulate it with functions</li>
+                <li><strong>Functional programming paradigm</strong> addresses the problems that arise in procedural programming by eliminating global state. A functional programmer relies on functions that do not use or change global state, the only state they use are the parameters you pass to the function. The result, a function returns, is usually passed on to another function. A functional programmer can thus avoid global state by passing it from function to function.</li>
+                <li><strong>Object-oriented programming paradigm</strong> also addresses the problems that arise in procedural programming by eliminating global state, but instead of storing state in functions, it is stored in objects.</li>
+            </ul>
+        </details>         
+        
     </section>
 
 
-    <!-- 2. Read and explore course material -->
+    <!-- 2. Explore forms -->
     <section id="p2">
-        <h2></h2>
+        <h2>Explore and Dig deeper</h2>
+        <details>
+            <summary>Activity 1. Key elements of programming style</summary>
+            <ol>
+                <li>Expression</li>
+                <li>Control structure</li>
+                <li>Programming structure</li>
+                <li>Input and Output</li>
+                <li>Efficiency and instrumentation (measure performance)</li>
+                <li>Documentation</li>
+            </ol>
+            <p>Writing a computer program eventually boils down to writing a sequence of statements in the language at hand. How each statement is expressed determines what the program actually does.</p>
+            <p>Expressing each statement well:</p>
+            <ol>
+                <li>write clearly</li>
+                <li>be sparing with temporary variables</li>
+                <li>be unambiguous (parentheses, well-named identifiers)</li>
+                <li>make sure conditional tests read clearly</li>
+                <li>use the good features of a language; avoid the bad ones</li>
+                <li>avoid unnecessary branches</li>
+                <li>replace repetitive expressions by calls to a common function</li>
+            </ol>  
+            <p>A computer program is shaped by its data representation and the statements that determine its flow of control.</p>
+            <p>Write first in an easy-to-understand pseudo-language; then translate into whatever language you have to use.</p>
+            <p>Follow each decision as closely as possible with its associated action. Use data arrays to avoid repetitive control sequences. Choose a data representation that makes the program simple. Don't stop with your first draft!</p>
+            <p>Most programs are too big to be comprehended as a single chunk. They need to be divided into smaller pieces that can be conquered separately.</p>
+            <p>Subroutines, functions, procedures, methods, are the modules or building blocks of large programs. If properly designed, modules can be maintain nearly independently of each other, and often re-usable in other applications, contributing to a library of labor-saving routines. Make the coupling between modules visible. Each module should do one thing well. Every module should hide something. Let the data structure the program. Don't patch bad code - rewrite it.</p>
+            <h4>Input and Output</h4>
+            <p>Test input for validity and plausibility. Make input easy to prepare and output self-explanatory. Use uniform input formats. Localize input and output, instead of spreading it all over the program. Hide the details in functions.</p>
+            <h4>Common blunders</h4>
+            <p>make sure all variables are initialized before use. watch out for off-by-one errors. take care to branch the right way on equality. avoid multiple exits from loops. test programs at their boundary values.</p>
+            <h4>Efficiency</h4>
+            <p>Make it right before you make it faster. Keep it right when you make it faster. Make it clear before you make it faster. Don't sacrifice clarity for small gains in efficiency. Let the compiler do the simple optimizations. Make sure special cases are truly special. Keep it simple to make it faster. Don't diddle code to make it faster - find a better algorithm.</p>
+            <h4>Javascript Console</h4>
+            <p><a href="https://developer.chrome.com/docs/devtools/" target="_blank">Chrome for Developers - DevTools</a> provides documentation and information on the commands, shortcuts, and panels, including the panels "Console" and  "Analyze runtime performance".</p>
+        </details>
+        
+
+
+        <!-- Activity 2. Javascript Grammar and types -->  
+        <details>
+            <summary>Activity 2. JavaScript Grammar and types - complete MDN tutorials</summary>
+            <p>2.2.1. Complete MDN tutorial the basics <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types" target="_blank">Grammar and types</a></p>
+            <ul>
+                <li>Basics (case-sensitivity, Unicode, statements), Comments, Declarations (var,let,const), Variables, Declaring variables, Declaration and initialization, Variable scope, Variable hoisting, Global variables, Data structures and types: primitives ( Boolean, null, undefined, number, BigInt, String, Symbol) and Object, Data type conversion, Literals </li>
+            </ul>  
+            <!--
+                <p>Explore related material on w3schools<a href="" target="_blank">Grammar and types</a></p>
+                <p>Explore related course material on w3schools<a href="" target="_blank">Grammar and types</a></p>
+            -->
+        </details> 
+
+        
+        <details>
+            <summary>Activity 3. Web forms — Working with user data</summary>
+            <p>2.3.1. Explore <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms" target="_blank">Web forms — Working with user data</a></p>
+            <ul>
+                <li>Complete tutorial <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form" target="_blank">Your first form</a></li>
+                <li>Complete tutorial  <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form" target="_blank">How to structure a web form</a></li>
+                <li>Complete tutorial  <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls" target="_blank">Basic native form controls</a></li>
+                <li>Complete tutorial  <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types" target="_blank">The HTML5 input types</a></li>
+                <li>Complete tutorial  <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls" target="_blank">Other form controls</a></li>
+                
+            </ul>
+            <p>2.3.2. Explore individual elements on w3schools</p>
+            <ul style="columns:4">
+                <li><a href="https://www.w3schools.com/tags/tag_form.asp" target="_blank">FORM</a></li>     
+                <li><a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank">INPUT</a></li> 
+                <li><a href="https://www.w3schools.com/tags/tag_textarea.asp" target="_blank">TEXTAREA</a></li>      
+                <li><a href="https://www.w3schools.com/tags/tag_button.asp" target="_blank">BUTTON</a></li>      
+                <li><a href="https://www.w3schools.com/tags/tag_select.asp" target="_blank">SELECT</a></li>      
+                <li><a href="https://www.w3schools.com/tags/tag_optgroup.asp" target="_blank">OPTGROUP</a></li>      
+                <li><a href="https://www.w3schools.com/tags/tag_option.asp" target="_blank">OPTION</a></li>      
+                <li><a href="https://www.w3schools.com/tags/tag_label.asp" target="_blank">LABEL</a></li>      
+                <li><a href="https://www.w3schools.com/tags/tag_fieldset.asp" target="_blank">FIELDSET</a></li>      
+                <li><a href="https://www.w3schools.com/tags/tag_legend.asp" target="_blank">LEGEND</a></li>      
+                <li><a href="https://www.w3schools.com/tags/tag_datalist.asp" target="_blank">DATALIST</a></li>      
+                <li><a href="https://www.w3schools.com/tags/tag_output.asp" target="_blank">OUTPUT</a></li>   
+            </ul>
+            <p>Explore accessibility and complete tutorials on W3C Acessibility Initiative (WAI) <a href="https://www.w3.org/WAI/tutorials/forms/" target="_blank">Forms Tutorial</a>, <br>including Labeling Controls, Grouping Controls, Form Instructions, Validating Input, User Notifications, Multi-page Forms, and Custom Controls.</p>
+            <p>Explore related course material (highlights) <a href="https://ebajcar.github.io/web10199/content_winter2024/material/forms/html_forms.html" target="_blank">HTML5 Forms</a></p>
+        </details>  
+        
     </section>
 
 
-    <!-- 3. Practice -->
-    <section id="p3">
-        <h2></h2>    
-    </section>
+<!-- 3. Practice solving problems -->
+<section id="p3">
+    <h2>3. Practice solving problems</h2>
+                <p><strong>5. Fibonacci numbers</strong> &mdash;Write a program that will calculate and display a given number of Fibonacci numbers. Add to your <mark>mathClub</mark> project as a secondary page.</p>
+
+                <p>Create a new project called <mark>gamesClub</mark> in your local webspace, with standard file organization. Follow instructions in an earlier activity "Setting up your workspace" to create the home page and four secondary pages. Each problem is implemented as a secondary page. The home page has navigation to all pages. Do not write any JavaScript code! yet! Start with a problem statement and pseudocode in comments in each file. Reminder: the first two phases of Progressive Enhancement have been completed. You are starting Phase III with well-formed and valid HTML5 and valid CSS3 code.</p>
+                
+                <p><strong>6. Rock Paper Scissors</strong> &mdash;Write a program that will allow a user to play a game of rock-paper-scissors against the computer.</p> 
+                
+                <p><strong>7. Rock Paper Scissors Lizard Spock</strong> &mdash;Write a program that will allow a user to play a game of rock-paper-scissors-lizard-spock against the computer.</p> 
+                
+                <p><strong>8. Casino Craps</strong> &mdash;Write a program that will allow the user to guess a number between 1 and 10 that was randomly chosen by the program. 
+                <br><small>More info will be provided...</small></p>
+                
+                <p><strong>9. Tic-tac-toe</strong> &mdash;Write a program that will allow two human users play a game of tic-tac-toe at the same monitor.</p>     
+
+
+
+</section>
 
 </main>
 
