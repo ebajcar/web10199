@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Area of a circle, mathClub, version 1</title>
+    
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <!--  prism code syntax highlighting -->
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/material_worksheets/worksheet01/css/prism-coy-23.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/material_worksheets/worksheet01/scripts/prism-coy-23.js" defer></script>
+    <!-- missing.css -->
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link href="../css/custom.css" rel="stylesheet">
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Math Club</span> <sub-title>Area of a circle</sub-title></h1>
+    </header>
+
+    <main>
+    
+       
+<dl role="list"  class="box">
+
+        <dt>Problem Statement</dt>
+        <dd>Write a simple program that computes the area of a circle. 
+            <p><strong>Version 1</strong>&mdash; This version hardcodes input and sends output to the console.</p>
+        </dd>
+        
+        <dt>Algorithm</dt>
+        <dd>
+            <ol>
+                <li>Obtain the value of the radius of a circle</li>
+                <li>Calculate the area of the circle using the given radius value</li>
+                <li>Display the value</li>
+            </ol>
+        </dd>
+        
+        <dt>Constraints and notes</dt>
+        <dd>
+            <ol>
+                <li>values are constrained to integers and reals only (source: https://en.wikipedia.org/wiki/Number)</li>
+                <li>the formula for calculating is <code>area =  &pi;r<sup>2</sup></code> where &pi;=3.14159 (source: https://www.wikihow.com/Calculate-the-Area-of-a-Circle)</li>
+                <li>output is sent to the console</li>
+                <li><strong>Can a radius have a negative value?</strong> No, it is a DISTANCE from center to the circumfrance. Does it need to be addressed? What if the user provides a negative value? Do we care? In this calculation it does not matter, because when you square a negative number, the result will be positive.</li>
+                <li>what if we get an invalid value? need to test for valid and invalid values.</li>
+            </ol>
+        </dd>
+        
+</dl>
+
+ 
+<h3>Simple solution (code)</h3> 
+
+
+<pre class="language-js" tabindex="0"><code class="language-js">&lt;script>
+// declare and initialize variable radius; assign integer or float values only
+let radius = 5.7;
+
+// declare variable circleArea that will store the calculated value and 
+// assign it the formula &pi;*radius*radius
+let circleArea = Math.PI * radius * radius;
+
+// display the calculated value and the radius value in the console
+console.log("The area is ", circleArea, " when radius is ", radius);
+&lt;/script>
+&lt;/body>
+</code></pre>           
+        <div class="box">
+            <strong class="block titlebar">Notes</strong>
+            <p id="two">&bull; you can also use the <code>Math.pow(radius,2)</code> method which is equivalent to <code>radius * radius</code>
+            </p>
+            <p>TESTS</p>
+            <ul>
+                <li>The area is  37.053252198362316  when radius is  -3.4343</li>
+                <li>The area is  2.8274333882308137e+21  when radius is  -30000000000  (entered as -3e10)</li>
+                <li>The area is  16741.547250980006  when radius is  73</li>
+                <li>Uncaught ReferenceError: x73 is not defined (entered as x73)</li>
+                <li>The area is  NaN  when radius is  x75 (entered as "x75")</li>
+                <li>The area is  102.07034531513239  when radius is  5.7</li>
+                <li>The area is  102.07034531513239  when radius is  5.7 (entered as "5.7")</li>
+                <li>The area is  0  when radius is  0</li>
+                <li>The area is  NaN  when radius is  abc (entered as "abc")</li>
+                <li>The area is  NaN  when radius is  a (entered as "a"</li>
+            </ul>
+        </div>
+	
+ <h3 class="box warn">Open the Console (using "Inspect") to see the output and "View page source" to view the full code.</h3>   
+    </main>
+   <footer>
+        <address>Ellen Bajcar, 2023-2024 &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+// declare and initialize variable radius; assign integer or float values only
+let radius = "5.7";
+
+// declare variable circleArea that will store the calculated value and 
+// assign it the formula &pi;*radius*radius
+let circleArea = Math.PI * radius * radius;
+
+// display the calculated value and the radius value in the console
+console.log("The area is ", circleArea, " when radius is ", radius);
+</script>
+</body>
+</html>
