@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet One Exercises</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }        
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet One</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Data types - <code>compare primitives and objects</code></h2>
+        
+
+    <figure>
+        <pre class="language-js" tabindex="0"><code class="language-html">&lt;script>
+var x = "string";
+var y = new String("string");
+console.log("x value: ", x, " typeof: ", typeof(x));
+console.log("y value: ", y, " typeof: ", typeof(y));
+console.log("equal? ", (x == y));
+console.log("identical? ", (x === y));
+
+var primBoo = true;
+var objBoo = new Boolean(true);
+console.log("primBoo value: ", primBoo, " typeof: ", typeof(primBoo));
+console.log("objBoo value: ", objBoo, " typeof: ", typeof(objBoo));
+console.log("equal? ", (primBoo == objBoo));
+console.log("identical? ", (primBoo === objBoo));
+&lt;/script></code></pre>
+        <figcaption>Figure 1: Primitives  and objects (open dev tools to exam the output in the console).</code></figcaption>
+    </figure> 
+
+
+
+    </main>
+
+    <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+var x = "string";
+var y = new String("string");
+console.log("x value: ", x, " typeof: ", typeof(x));
+console.log("y value: ", y, " typeof: ", typeof(y));
+console.log("equal? ", (x == y));
+console.log("identical? ", (x === y));
+
+var primBoo = true;
+var objBoo = new Boolean(true);
+console.log("primBoo value: ", primBoo, " typeof: ", typeof(primBoo));
+console.log("objBoo value: ", objBoo, " typeof: ", typeof(objBoo));
+console.log("equal? ", (primBoo == objBoo));
+console.log("identical? ", (primBoo === objBoo));
+
+</script>
+</body>
+</html>

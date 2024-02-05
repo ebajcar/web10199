@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet Two Exercises</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../exercises_01/css/prism-coy-23.css">
+    <script src="../exercises_01/scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }        
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Two</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Worksheet Two Exercises</h2>
+        
+        <ul>
+            <li>Control structures: for, for-in, for-of, while, forEach</li>
+            <li>Assignment</li>
+            <li>conditionals</li>
+            <li>Math.random() returns a random number between 0 (inclusive),  and 1 (exclusive) https://www.w3schools.com/js/js_random.asp</li>
+        </ul> 
+        
+        <dl>
+            <dt> The forEach loop</dt>
+            <dd>
+                <ul>
+                    <li><a href="forEach-array-v01.html">forEach-array-v01.html</a></li>
+                    <li>an array method</li>
+                </ul>            
+            </dd> 
+
+             <dt> The forEach loop and Array of objects</dt>
+            <dd>
+                <ul>
+                    <li><a href="forEach-provinces-v01.html">forEach-provinces-v01.html</a></li>
+                    <li>Array of objects</li>
+                </ul>            
+            </dd>  
+        </dl>
+
+        
+        
+        <dl>      
+             <dt>The for loop</dt>
+            <dd>
+                <ul>
+                    <li><a href="for-family-array-v01.html">for-family-array-v01.html</a></li>
+                </ul>            
+            </dd>         
+             <dt>The for loop and Select control</dt>
+            <dd>
+                <ul>
+                    <li><a href="for-loop-v01.html">for-loop-v01.html</a></li>
+                    <li>
+                    <pre class="language-js" tabindex="0"><code class="language-js">function howMany(selectObject) {
+  let numberSelected = 0;
+  let len = selectObject.options.length;
+  for (let i = 0; i &lt; len; i++) {
+    if (selectObject.options[i].selected) {
+      numberSelected++;
+    }
+  }
+  return numberSelected;
+}
+const btn = document.getElementById('btn');
+const result = document.getElementById('result');
+btn.onclick = function() {
+	result.innerText = howMany(document.selectForm.musicTypes);
+}</code></pre>   
+                    </li>
+                    <li>The howMany function contains a for statement that counts the number 
+	of selected options in a scrolling list (a SELECT element that allows 
+	multiple selections). The for statement declares the variable i and 
+	initializes it to zero. It checks that i is less than the number of 
+	options in the SELECT element, performs the succeeding if statement, 
+	and increments i by one after each pass through the loop. </li>
+                </ul>            
+            </dd> 
+             
+             <dt>The while loop and Select control</dt>
+            <dd>
+                <ul>
+                    <li><a href="while-loop-v01.html">while-loop-v01.html</a></li>
+                    <li>
+                    <pre class="language-js" tabindex="0"><code class="language-js">function howMany(selectObject) {
+  let numberSelected = 0;
+  let len = selectObject.options.length;
+  console.log(len);
+  let i = 0;
+  while (i &lt; len) {
+    if (selectObject.options[i].selected) {
+      numberSelected++;
+      console.log(numberSelected);
+    }
+    i++;
+  }
+  return numberSelected;
+}
+const btn = document.getElementById('btn');
+const result = document.getElementById('result');
+btn.onclick = function() {
+	result.innerText = howMany(document.selectForm.musicTypes);
+}</code></pre>   
+                    </li>                    
+                </ul>            
+            </dd> 
+        </dl>
+        
+        
+        <dl>        
+             <dt>The for-in loop and objects</dt>
+            <dd>
+                <ul>
+                    <li><a href="for-in-object-v01.html">for-in-object-v01.html</a></li>
+                </ul>            
+            </dd>         
+             <dt>The for-of loop and arrays</dt>
+            <dd>
+                <ul>
+                    <li><a href="for-of-array-v01.html">for-of-array-v01.html</a></li>
+                </ul>            
+            </dd>            
+           
+             <dt>The for-of loop and strings</dt>
+            <dd>
+                <ul>
+                    <li><a href="for-of-string-v01.html">for-of-string-v01.html</a></li>
+                </ul>            
+            </dd>       
+        </dl>
+        
+        
+        <dl> 
+             <dt>Fibonacci numbers</dt>
+            <dd>
+                <ul>
+                    <li><a href="fib-v01.html">fib-v01.html</a></li>
+                    
+                 <pre class="language-js" tabindex="0"><code class="language-js">let values = [];
+let n = 10;
+let pre = 0, cur = 1;
+values.push(pre);
+values.push(cur);
+let i = 0;
+while (i &lt; n-2) {
+	var tmp = pre;
+	pre = cur;
+	cur += tmp;
+	values.push(cur);	
+	i++;
+}
+console.table(values);</code></pre>                   
+                    <li>initializes primitive array; uses push() method to add values to the array; uses while loop to calculate the values; displays results using console.table()</li>
+                </ul>            
+            </dd>
+ 
+<!-- 
+             <dt></dt>
+            <dd>
+                <ul>
+                    <li><a href=".html">.html</a></li>
+                    <li></li>
+                </ul>            
+            </dd>  
+-->            
+        </dl>
+    </main>
+
+    <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+</body>
+</html>
