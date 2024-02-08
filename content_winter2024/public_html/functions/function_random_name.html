@@ -5,7 +5,7 @@
 <title>Functions: Task 1</title>
 <style>
 h3 {
-  font-size: 3em;
+  font-size: 1.4em;
   margin: 0.5em;
 }
 section {
@@ -27,17 +27,20 @@ function random(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 // array random function
-function chooseItem(array, len) {
-  return array[random(0, len)];
+function chooseItem(array) {
+  return array[random(0, array.length)];
+}
+function createH3() {
+    const h3 = document.createElement('h3');
+    const section = document.querySelector('section');
+    section.appendChild(h3);
+    return h3;
 }
 
-document.getElementsByTagName("body")[0].onclick = function (h3) {
+document.getElementsByTagName("body")[0].onclick = function () {
   const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
-  var h3 = document.createElement('h3');
-  h3.textContent = chooseItem(names, names.length);
-  const section = document.querySelector('section');
-  section.innerHTML = "";
-  section.appendChild(h3);
+  let h3 = createH3();
+  h3.textContent = chooseItem(names);  
 }
 </script>
 </body>

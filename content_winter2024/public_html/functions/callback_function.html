@@ -1,24 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<title>Functions: Task 1</title>
+  <head>
+    <title>example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: February 8, 2024
+Version: 24.0
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Explore and practice unobtrusive Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+    class example
+-->
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
 <style>
-p {
-  font-size: 3em;
-  margin: 0.5em;
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
 }
-.preview {
-  background-color: #abceda;
-  height: 200px;
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
 }
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+}        
 </style>
-</head>
 
   <body>
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Examples</sub-title></h1>
+        <nav>
+            <p class="tool-bar">
+                <a href="#" class="current">Home</a>
+            </p>
+        </nav>
+    </header>
+    
     <main>
+        <h2>Code</h2>
+        <pre class="language-js" tabindex="0"><code class="language-html">&lt;script>
+//  idea based on https://en.wikipedia.org/wiki/Callback_(computer_programming)
+function calculate(num1, num2, callbackFunction) {
+    return callbackFunction(num1, num2);
+}
+function multiply(num1, num2) {
+    return num1 * num2;
+}
+function add(num1, num2) {
+    return num1 + num2;
+}
+function subtract(num1, num2) {
+    return num1 - num2;
+}
+function divide(num1, num2) {
+    return (num2 == 0 || typeof num2 !== "number")
+      ? "cannot complete operation" + (num1 / num2)
+      : num1 / num2;
+}
+const display = document.getElementsByTagName("output")[0];
+display.innerText = "5 x 15 is   " + calculate(5, 15, multiply) + "\n"; //  75
+display.innerText += "5 + 15 is   " + calculate(5, 15, add) + "\n"; //  20
+display.innerText += "5 / 15 is   " + divide(5, 15, divide) + "\n"; //  0.333
+display.innerText += "5 / NaN is   " + divide(5, NaN, divide) + "\n"; // NaN
+display.innerText += "5 / 0 is   " + divide(5, 0, divide) + "\n"; // cannot complete operation Infinity
+display.innerText += "5 / a is   " + divide(5, "a", divide) + "\n"; // cannot complete operation NaN
+display.innerText += "5 / null is   " + divide(5, null, divide) + "\n"; 
+                                                // cannot complete operation Infinity
+&lt;/script></code></pre>
+
+    
+        <h2>Output</h2>
+        <output></output>
     </main>
-  </body>
+    
+    <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
   <script>
 /*
   idea based on
@@ -38,21 +109,18 @@ function subtract(num1, num2) {
 }
 function divide(num1, num2) {
     return (num2 == 0 || typeof num2 !== "number")
-      ? "cannot complete operation" + (num1 / num2)
+      ? "cannot complete operation " + (num1 / num2)
       : num1 / num2;
 }
-//  75
-document.writeln(calculate(5, 15, multiply));
-//  20
-document.writeln(calculate(5, 15, add));
-//  divide  
-document.writeln(calculate(5, 15, divide)); //  0.333
-document.writeln(calculate(5, NaN, divide)); // NaN
-//  cannot complete operation 
-document.writeln(calculate(5, 0, divide));  // Infinity
-document.writeln(calculate(5, "a", divide));  // NaN 
-document.writeln(calculate(5, null, divide));  // Infinity
+const display = document.getElementsByTagName("output")[0];
+display.innerText = "5 x 15 is   " + calculate(5, 15, multiply) + "\n"; //  75
+display.innerText += "5 + 15 is   " + calculate(5, 15, add) + "\n"; //  20
+display.innerText += "5 / 15 is   " + divide(5, 15, divide) + "\n"; //  0.333
+display.innerText += "5 / NaN is   " + divide(5, NaN, divide) + "\n"; // NaN
+display.innerText += "5 / 0 is   " + divide(5, 0, divide) + "\n"; // cannot complete operation Infinity
+display.innerText += "5 / a is   " + divide(5, "a", divide) + "\n"; // cannot complete operation NaN
+display.innerText += "5 / null is   " + divide(5, null, divide) + "\n"; // cannot complete operation Infinity
 
-  </script>
-
+</script>
+</body>
 </html>

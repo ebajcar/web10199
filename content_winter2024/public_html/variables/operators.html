@@ -30,14 +30,24 @@
 <body>
 
 	<header>
-        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet One</sub-title></h1>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Variables &amp; Operators</sub-title></h1>
         <nav>
-            <p class="tool-bar"><a href="index.html">Home</a>
+            <p class="tool-bar">
+                <!--a href="../../index.html">Course Material</a-->
+                <a href="index.html">Home</a>
+                <a href="let-var-const.html">Variable declarations</a>
+                <a href="data-types.html">Data types</a>
+                <a href="data-conversion.html">Data conversion</a>
+                <a href="primitives.html">Primitives</a>
+                <a href="primitives-string.html">String</a>
+                <a href="primitives-number.html">Number</a>
+                <a href="operators.html" class="current">Operators</a>
+            </p>
         </nav>
     </header>
 
     <main>
-        <h2>Primitives - <code>number</code></h2>
+        <h2>Operators - <code>ternary operator</code></h2>
         
 
     <figure>
@@ -60,10 +70,22 @@ let theta = (zeta === beta)
   : "zeta and beta may be equal, but they are not identical";
 console.log("theta: ", theta);
 &lt;/script></code></pre>
-        <figcaption>Figure 1: Operators (open dev tools to exam the output in the console).</code></figcaption>
+        <figcaption>Figure 1: Ternary operator <strong>(open dev tools to examine the output in the console)</strong>.</code></figcaption>
     </figure> 
 
 
+
+    <figure>
+        <pre class="language-js" tabindex="0"><code class="language-html">&lt;script>
+let a = "3";
+let b = 3;
+console.log(a == b);  // will return true  (equal in value only)
+console.log(a === b); // will return false (equal value AND equal type)
+&lt;/script></code></pre>
+        <figcaption>Figure 2: Equality vs Identity <strong>(open dev tools to examine the output in the console)</strong>.</code></figcaption>
+    </figure>   
+
+    <p>Arithmetic ( + - * ** ? % ++ --) Assignment (= += -= *= /= %= **=) Comparison (== === != !== > &lt; >= &lt;= ?) Concatination (+) Logical (&& || !) Type (typeof, nstanceof)</p>
 
     </main>
 
@@ -91,6 +113,10 @@ let theta = (zeta === beta)
   : "zeta and beta may be equal, but they are not identical";
 console.log("theta: ", theta);
 
+let a = "3";
+let b = 3;
+console.log(a == b);  // will return true
+console.log(a === b); // will return false
 </script>
 </body>
 </html>

@@ -19,7 +19,7 @@ Description:
     class example
 -->
     <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
-    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
     <script src="scripts/prism-coy-23.js" defer></script>
 	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
 <style>
@@ -36,21 +36,8 @@ code a {
 }
 .current {
     font-weight: bold;
-}  
-
-/* page-specific */
-.preview {
-  background-color: #abceda;
-  height: 300px;
-  font-size: 3em;
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  padding-top: 50px;
-}
-
+}        
 </style>
-</head>
 
   <body>
 	<header>
@@ -63,39 +50,25 @@ code a {
     </header>
     
     <main>
+        <p>An arrow function expression has a shorter syntax compared to function expressions and does not have its own <code>this</code>, <code>arguments</code>, <code>super</code>, or <code>new.target</code>. Arrow functions are always anonymous. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#arrow_functions" target="_blank">Arrow functions (MDN)</a></p>
         <h2>Code</h2>
         <pre class="language-js" tabindex="0"><code class="language-html">&lt;script>
-function chooseName() {
-    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
-    const section = document.querySelector('section');
-    let randomNumber = Math.floor(Math.random() * names.length);
-    let choice = names[randomNumber];
-    section.textContent = choice;
-}
-document.getElementsByClassName("preview")[0].onclick = chooseName;
+
 &lt;/script></code></pre>
 
-
+    
         <h2>Output</h2>
-    <h3>Click anywhere inside the blue rectangle to get a random name</h3>
-    <section class="preview"></section>
+        <output></output>
     </main>
     
     <footer>
         <address>Ellen Bajcar &copy; Sheridan College</address>
         <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
     </footer>
-<script>
-function chooseName() {
-    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
-    const section = document.querySelector('section');
-    let randomNumber = Math.floor(Math.random() * names.length);
-    let choice = names[randomNumber];
-    section.textContent = choice;
-}
-document.getElementsByClassName("preview")[0].onclick = chooseName;
-// Uncaught reference error: section is not defined
-// console.log(section.textContent); 
+  <script>
+
+
+
 </script>
 </body>
 </html>
