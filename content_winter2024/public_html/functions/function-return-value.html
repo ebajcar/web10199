@@ -1,30 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Worksheet Three Exercises</title>
-    
+  <head>
+    <title>example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: February 8, 2024
+Version: 24.0
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Explore and practice unobtrusive Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+    class example
+-->
     <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
-    <link rel="stylesheet" href="../../css/prism-coy-23.css">
-    <script src="../../scripts/prism-coy-23.js" defer></script>
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
 	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+}        
 
-	<style>
-		:root {
-			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
-            --line-length: 60rem; /* Maximum line length for prose. */
-		}
-		dfn > code {
-			font-style: normal;
-			text-decoration: 1px dashed var(--muted-fg) underline;
-		}
-		code a {
-			font-family: inherit;
-		}
-        .current {
-            font-weight: bold;
-        }
         .big-value {
           font-size: 4em;
           font-weight: normal;
@@ -56,29 +69,21 @@
 <body>
 
 	<header>
-        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Three</sub-title></h1>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Class examples</sub-title></h1>
         <nav>
-            <p class="tool-bar"><a href="../../index.html">Home</a>
-            <a href="../problems/index.html">Problems</a>
-            <a href="index.html" class="current">Exercises</a>
+            <p class="tool-bar"><a href="#">Home</a>
         </nav>
     </header>
 
     <main>
-        <h2>Functions  - <small>explore properties and methods</small></h2>
-     <nav class="breadcrumbs" aria-label="breadcrumbs">
-        <ol>
-            <li><a href="index.html">Problems</a></li>
-            <li><a href="fibonacci-problem.html">Problem statement</a></li>
-            <li><a href="#">?</a></li>
-        </ol>
-    </nav>       
+        <h2>Functions  - <small>explore properties and methods</small></h2>      
 
         
     <p>
         <a class="chip bad" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function" target="_blank">functions</a>
         <a class="chip " href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#invoking_functions" target="_blank">Invoking functions</a>
     </p>
+    <!--
     <p>
         <a class="chip " href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#function_parameters" target="_blank">function parameters</a>
         <a class="chip ok" href="Optional parameters" target="_blank">Optional parameters</a>
@@ -89,7 +94,7 @@
         
     <p>Read more <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values#Active_learning_our_own_return_value_function" target="_blank">MDN web docs</a>.</p>
 
-
+-->
         
 <ul role="list" class="f-switch dense">
     <li class="box">  
@@ -141,7 +146,7 @@ input.onchange = function() {
         <p id="snippet">This exercise has brought up a couple of important points besides being a study on how to use the  RETURN statement. </p>
         <ol>
             <li>Look at another example of writing error handling into our functions. It is generally a good idea to check that any necessary parameters have been provided, and in the right datatype, and if they are optional, that some kind of default value is provided to allow for that. This way, your program will be less likely to throw errors.</li>
-            <li>Think about the idea of creating a function library. As you go further into your programming career, you'll start to do the same kinds of things over and over again. It is a good idea to start keeping your own library of utility functions that you use very often â€” you can then copy them over to your new code, or even just apply it to any HTML pages where you need it.</li>
+            <li>Think about the idea of creating a function library. As you go further into your programming career, you'll start to do the same kinds of things over and over again. It is a good idea to start keeping your own library of utility functions that you use very often; you can then copy them over to your new code, or even just apply it to any HTML pages where you need it.</li>
             </ol>
         <ul>
     </li>
@@ -159,7 +164,7 @@ input.onchange = function() {
   
   SOLUTION: 
   1. Get (pick) a number 
-  2. define a function that 
+  2. define a function to call 
   3. Call the function
   4. display the result in the console.
 */
