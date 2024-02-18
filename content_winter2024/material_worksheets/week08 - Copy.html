@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet 8</title>
+    <link rel="stylesheet" href="css/missing-css.css">
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css"-->
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing-prism.min.css"-->
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="css/prism-coy-23.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+	<style>
+
+	</style>
+</head>
+<body>
+
+
+<header>       
+    <h1><span class="allcaps">SYST<wbr>10199 Web Programming<v-h>:</v-h></span><sub-title>Worksheet 8</sub-title></h1>
+</header>
+
+<main>
+    <div class="prev-next">
+        <p><a href="week07.html">Prev</a></p>
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <ol>
+                <li><a href="../index.html"  class="allcaps">Home</a></li>
+                <li><a href="index.html"  class="allcaps">Worksheets</a></li>
+                <li><a href="week13.html" aria-current="page">Worksheet 8</a></li>
+            </ol>               
+        </nav> 
+        <p><a href="week09.html">Next</a></p>
+    </div>
+
+     <blockquote hidden style="font-size:1.4em;color:orange;">Under review - will be made available at a later time.</blockquote>
+
+    <!-- 1. Review from previous weeks -->
+    <section id="p1">
+        <h2>1. Review</h2>
+        <details open>
+            <summary>Revisit: JavaScript Built-in Objects</summary>
+            <dl>
+            <dt><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects" 
+                        target="_blank">Standard built-in objects (MDN)</a></dt>
+            <dd>
+                <ul>
+                    <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" 
+                            target="_blank">Date</a></li>
+                    <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" 
+                            target="_blank">Math</a></li> 
+                    <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" 
+                            target="_blank">Array</a></li>
+                    <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" 
+                            target="_blank">Function</a></li>
+                    <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" 
+                            target="_blank">String</a></li>
+                </ul> 
+            </dd>
+            </dl>
+        
+        </details>
+        
+        <details open>
+            <summary>Events &mdash; <a href="" target="_blank">Event index (MDN)</a></summary>
+            <dl>
+            <dt>Event attributes</dt>
+            <dd>
+                <ul>
+                    <li>obtrusive, does not comply with PE principles</li>
+                    <li>does not meet ARIA standards, not supported by assistive devices</li>
+                    <li>hard to debug and maintain code, code harder to read, inflate the markup, events nee to fire in JS, not in HTML code</li>
+                </ul>
+            </dd>
+            
+            <dt>Event methods &mdash using <em>onevent</em> properties</dt>
+            <dd> 
+            <ul>
+                <li>event handler: an object (function is an object) that contains an event handler functionality</li>
+            </ul>
+            </dd>
+            
+            <dt>Event listeners</dt>
+            <dd>             
+             <ul>
+                <li>most flexible way to set event handler is to use <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" target="_blank">EventTarget.addEventListener</a>.</li>
+                <li>allows multiple listeners to be assigned to an element and to remove listeners using EventTarget.removeEventListener. (i.e., the same button can perform different actions in different circumstances.); cleaning up old and unused event handlers can improve efficiency.</li>               
+            </ul>    
+            </dd>
+            
+ 
+          </dl>
+                <!-- Drag'n Drop example - numeric tictactoe 
+                 https://javascript.info/mouse-drag-and-drop
+                 
+                 https://javascript.info/bubbling-and-capturing
+                 
+                 
+
+https://javascript.info/event-delegation
+
+https://javascript.info/mouse-events-basics
+
+https://javascript.info/mousemove-mouseover-mouseout-mouseenter-mouseleave
+
+https://javascript.info/mouse-drag-and-drop
+
+https://javascript.info/pointer-events
+
+https://javascript.info/keyboard-events
+
+https://javascript.info/onload-ondomcontentloaded
+-->                 
+        </details>
+
+    </section>
+
+
+
+    <!-- 2. Read and explore course material -->
+    <section id="p2">
+        <h2>2. Explore and Dig deeper</h2>
+        <dl>
+        
+        <dt>JSON</dt>
+        <dd>
+             <ul>
+                <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" 
+                        target="_blank">JSON </a>.</li>
+                <li> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects" 
+                        target="_blank">Working with objects </a>.</li>
+            </ul> 
+        </dd>
+        <dt>Event Object &mdash; <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" target="_blank">Event (MDN)</a></dt>
+        <dd>             
+              <ul>
+                <li>The Event interface represents an event which takes place in the DOM.</li>
+                <li>Event.target is a read only reference to the object to which the event was originally dispatched. (see BOM examples)</li>
+        </ul>     
+        </dd>
+        
+        <dt>Error Object &mdash; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error" target="_blank">Error (MDN)</a></dt>
+        <dd>             
+              <ul>
+                <li>Error objects are thrown when runtime errors occur. The Error object can also be used as a base object for user-defined exceptions.</li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors" target="_blank">List of errors (MDN)</a></li>
+            </ul>     
+            </dd>       
+
+        <dt>Callbacks</dt>
+        <dd>
+            <ul>
+                <li> <a href="https://javascript.info/callbacks" 
+                        target="_blank">Introduction: callbacks (@javascript.info) </a>.</li>
+                <li> <a href="https://www.freecodecamp.org/news/asynchronous-programming-in-javascript-examples/" 
+                        target="_blank">Asynchronous Programming in JavaScript – Callbacks, Promises, & Async/Await Examples (@freeCodeCamp)</a></li>
+            </ul> 
+        </dd>
+        <dt>Promise</dt>
+        <dd>
+            <ul>
+                <li> <a href="" 
+                        target="_blank">Promise </a>.</li>
+                <li> <a href="" 
+                        target="_blank">Using promises </a>.</li>
+            </ul> 
+        </dd>            
+        </dl>
+            
+        <details hidden>
+            <summary>Activity 1. </summary>
+            
+            <dl>
+            
+                <dt>Complete MDN tutorial <a href="" target="_blank">xxx</a></dt>           
+                <dd><a href="" target="_blank">link</a> </dd>
+                
+                <dd>Explore w3schools tutorials
+                    <ul style="column-count: 2">                      
+                        <li><a href="" target="_blank">x</a></li>
+                        <li><a href="" target="_blank">x</a></li>
+                    </ul>  
+                </dd> 
+                
+                <dt>Complete MDN tutorial <a href="" target="_blank">xxx</a></dt>           
+                <dd><a href="" target="_blank">link</a> </dd>     
+                <dd>Explore w3schools tutorials
+                    <ul style="column-count: 2">                      
+                        <li><a href="" target="_blank">x</a></li>
+                        <li><a href="" target="_blank">x</a></li>
+                    </ul>  
+                </dd>                
+            </dl>   
+            
+        </details>     
+    </section>
+
+
+
+
+    <!-- 3. Practice -->
+    <section id="p3">
+        <h2>3. Practice solving problems</h2> 
+    </section>
+
+</main>
+
+<!-- footer section -->
+<footer>
+    <address><a href="">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>     
+</footer>
+
+
+</body>
+</html>

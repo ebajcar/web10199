@@ -279,13 +279,16 @@ function determineOutcome(sum) {
 		} else if (sum == 2 || sum == 3 || sum == 12) {
 			return "craps";
 		} else {
-		  point = sum; return point;
+		  point = sum; 
+          return point;
 		}
 	} else {
         if (sum == point) {
-			point = 0; return "point";
+			point = 0; 
+            return "point";
         } else if (sum == 7) {		
-			point = 0; return "seven";
+			point = 0; 
+            return "seven";
         } 
 	}
 }
