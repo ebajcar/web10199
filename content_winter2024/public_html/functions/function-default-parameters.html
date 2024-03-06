@@ -146,6 +146,32 @@ handl.innerHTML += "<p><code>multiply0(5);</code><br>" + multiply0(5) + "</p>";
 handl.innerHTML += "<p><code>multiply1(5);</code><br>" + multiply1(5) + "</p>";
 handl.innerHTML += "<p><code>multiply2(5);</code><br>" + multiply2(5) + "</p>";
 handl.innerHTML += "<p><code>multiply2(5,3);</code><br>" + multiply2(5,3) + "</p>";  
+
+function add3(a, b) {
+  return (b === undefined) ? a+3 : a+b;
+}
+console.log(add3(4, 8));
+console.log(add3(4));
+
+var b = 33;
+function add4(a, b) {
+  let total = a + b;
+  //console.log(total);
+  return total || a+3;
+}
+console.log(add4(14, 8));
+console.log(add4(24));
+
+function add5(a, b) {
+  if (b) {
+    return a + b; }
+  else
+    return a + 3;
+}
+console.log(add5(7, 8));
+console.log(add5(7));
+
+
 </script>
 </body>
 </html>

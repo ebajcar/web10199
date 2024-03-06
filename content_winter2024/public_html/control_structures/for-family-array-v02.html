@@ -6,8 +6,7 @@
 	<title>Worksheet Two Problems</title>
     
     <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
-    <link rel="stylesheet" href="../../css/prism-coy-23.css">
-    <script src="../../scripts/prism-coy-23.js" defer></script>
+
 	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
 
 	<style>
@@ -93,7 +92,7 @@ function showList() {
         </li>
         
         <li class="box">
-            <p>The output is:</p>   
+            <p>The output is:</p>    
             <h3 id="result"></h3>
             <p>Note the length property of the array and of each string. </p>
             <p>Note methods sort() and reverse(). What other methods are there? </p>
@@ -110,17 +109,17 @@ function showList() {
 
 <script>
 const family = ["Joan","Charlie","Peter","Anne","Tim"];
-showList();
-console.log(family);
+family.sort().reverse();
+let result = showList();
+console.log(result); 
 function showList() {
-	family.sort().reverse();
 	let len = family.length;
 	let list = "";
 	
 	for (let i = 0; i < len; i++) {
-		list += family[i] + " is " + family[i].length + " characters long.<br>";
+		list += family[i] + " is " + family[i].length + " characters long.\n";
 	}
-    result.innerHTML = list;
+    return list;
 }
 </script>
 </body>
