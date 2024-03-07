@@ -11,7 +11,49 @@
     <script src="css/prism-coy-23.js"></script>
     <link rel="stylesheet" href="css/main.css">
 	<style>
+dl dd dl dd li {
+  line-height: 1.1em;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+kbd {
+  color: darkorange;
+}
+kbd {
+  color: darkorange;
+}
+mark {
+  background-color: lightblue;
+}
+dd, ul, ol, dt {
+  margin-bottom:  5px;
+  margin-top: 5px;
+}
+dl h4 {
+  margin-bottom:  5px;
+  margin-top: 5px;
+}
+summary {
+  font-size: 1.2em;
+  background-color: white;
+}
+code {
+  background-color: beige;
+}
 
+
+div > a::after {
+  content: " (" attr(href) ")";
+}
+
+.external:after{
+    content: url('../images/external-link-alt.svg');
+    display: inline-block;
+    height:0.6em;
+    width:0.6em;
+    margin-left:3px;
+    margin-right:5px;
+    }
 	</style>
 </head>
 <body>
@@ -24,6 +66,23 @@
 <main>
     <div class="prev-next">
         <p><a href="week07.html">Prev</a></p>
+        <nav class="tool-bar">
+            <a href="week01.html"> 1 </a> | 
+            <a href="week02.html"> 2 </a> | 
+            <a href="week03.html"> 3 </a> | 
+            <a href="week04.html"> 4 </a> | 
+            <a href="week05.html"> 5 </a> | 
+            <a href="week06.html"> 6 </a> | 
+            <a href="week07.html"> 7 </a> | 
+            <a href="week08.html"  class="current"> 8 </a> | 
+            <a href="week09.html"> 9 </a> | 
+            <a href="week10.html"> 10 </a> | 
+            <a href="week11.html"> 11 </a> | 
+            <a href="week11.html"> 12 </a> | 
+            <a href="week11.html"> 13 </a> | 
+            <a href="week14.html"> 14 </a>  
+        </nav>
+        <!--         
         <nav class="breadcrumbs" aria-label="Breadcrumbs">
             <ol>
                 <li><a href="../index.html"  class="allcaps">Home</a></li>
@@ -31,16 +90,30 @@
                 <li><a href="week13.html" aria-current="page">Worksheet 8</a></li>
             </ol>               
         </nav> 
+        -->
         <p><a href="week09.html">Next</a></p>
     </div>
-
+<!--
      <blockquote style="font-size:1.4em;color:orange;">Under review - will be made available at a later time.</blockquote>
-
+-->
     <!-- 1. Review from previous weeks -->
     <section id="p1">
         <h2>1. Review</h2>
-        
-
+            <dl>     
+                <dt>Keep working with the material from previous worksheets and dig deeper</dt>    
+                <dd>
+                    <ul>                      
+                        <li>Worksheet 1: solving problems, development process, adding JavaScript code to HTML documents, unobtrusive JavaScript, JavaScript basic syntax</li>
+                        <li>Worksheet 2: key elements of programming style, JavaScript grammar and data types, Web forms</li>
+                        <li>Worksheet 3: Variables and operators, basic math, Math object, Date object, arrays, control structures</li>
+                        <li>Worksheet 4: Iteration, functions</li>
+                        <li>Worksheet 5: Working with DOM and BOM, reacting to events</li>                     
+                    </ul>  
+                </dd>   
+                <dt>Additional resources</dt>
+                <dd><a href="https://learnjavascript.online/" target="_blank">Learn JavaScript</a> &mdash;Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free.</dd>
+                <dd><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Howto" target="_blank">Solve common problems in your JavaScript code</a> (MDN)</dd>
+            </dl>
     </section>
 
 
@@ -48,30 +121,74 @@
     <!-- 2. Read and explore course material -->
     <section id="p2">
         <h2>2. Explore and Dig deeper</h2>
+        
+       <details open>
+            <summary>Activity 1. Working with built-in objects</summary>           
+            <dl>         
+                <dt>Read, make notes, try any examples: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics" target="_blank">Object basics (MDN guides)</a> </dt>           
+                <dd>Dot notation, Bracket notation, setting object members, what is "this", introducing constructors, you've been using objects all along  </dd>      
+                <!-- https://javascript.info/object -->
+                
+                 <dt>Read, make notes, try any examples:  <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes" target="_blank">Object prototypes (MDN guides)</a></dt>           
+                <dd>Prototype chains, Shadowing properties, Setting a prototype, Prototypes and inheritance  </dd>  
+
+                
+                 <dt>Read, make notes, try any examples:  <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming" target="_blank">Object-oriented programming (MDN guides)</a></dt>           
+                <dd>Classes and instances, Inheritance, Encapsulation, OOP and JavaScript</dd>   
+                
+                <dt>Read, make notes, try any examples:  <a href="" target="_blank">Working with objects</a></dt>           
+                <dd>&mdash; Creating new objects (using object initializers, using a constructor function, using the Object.create() method), Objects and properties (accessing properties, enumerating properties, deleting properties), Inheritance, Defining methods, Defining getters and setters, Comparing objects, </dd> 
+                <dd>Explore standard built-in objects
+                    <ul style="column-count: 3">                      
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Math</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error" target="_blank">Error</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank">RegExp</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank">JSON</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" target="_blank">Function</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a></li>
+                    </ul>  
+                </dd>   
+                
+               
+        </details>           
    
-        <details hidden>
-            <summary>Activity 1. </summary>
+        <details open>
+            <summary>Activity 2. JavaScript Object Notation (JSON)</summary>
             
             <dl>
-            
-                <dt>Complete MDN tutorial <a href="" target="_blank">xxx</a></dt>           
-                <dd><a href="" target="_blank">link</a> </dd>
+                <dt>Explore  <a href="https://www.json.org/json-en.html" target="_blank">Introducing JSON (www.json.org)</a></dt> 
+                <dd><q>JSON is a lightweight, text-based, language-independent syntax for defining data interchange formats. It was derived from the ECMAScript programming language, but is programming language independent. JSON defines a small set of structuring rules for the portable representation of structured data.</q> 
+                <cite> <a href="https://ecma-international.org/publications-and-standards/standards/ecma-404/" target="_blank">
+                        ECMA-404 The JSON Data Interchange Standard</a></cite>
+                </dd>
+ <!--
+
+
+--> 
                 
-                <dd>Explore w3schools tutorials
-                    <ul style="column-count: 2">                      
-                        <li><a href="" target="_blank">x</a></li>
-                        <li><a href="" target="_blank">x</a></li>
+                <dt>Complete MDN tutorial   <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON" target="_blank">Working with JSON</a></dt> 
+                <dd>JSON structure, Arrays as JSON, JSON.parse() method, JSON.stringify() method</dd>
+ 
+                <dt>Complete MDN tutorial  <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing" target="_blank">Introducing asynchronous JavaScript</a></dt>
+                <dd>Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs, rather than having to wait until that task has finished. Once that task has finished, your program is presented with the result.</dd>
+                <dd>Review event handlers and callbacks</dd> 
+                          
+                <dt>Complete MDN tutorial <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises" target="_blank">How to use promises</a></dt>
+                <dd>Using the fetch() API, chaining promises, catching errors, promise terminology, combining multiple promises, async and await</dd>       
+
+                <dt>More tutorials on javascript.info (The Modern JavaScript Tutorial project)
+                <dd>
+                    <ul>                      
+                        <li><a href="https://javascript.info/json" target="_blank">JSON methods, toJSON</a></li>
+                        <li><a href="https://javascript.info/promise-basics" target="_blank">Promise</a></li>
+                        <li><a href="https://javascript.info/callbacks" target="_blank">Introduction: callbacks</a></li> 
+                        <li><a href="https://javascript.info/promise-chaining" target="_blank">Promises chaining</a></li>
+                        <li><a href="https://javascript.info/fetch" target="_blank">Fetch</a></li>
                     </ul>  
-                </dd> 
-                
-                <dt>Complete MDN tutorial <a href="" target="_blank">xxx</a></dt>           
-                <dd><a href="" target="_blank">link</a> </dd>     
-                <dd>Explore w3schools tutorials
-                    <ul style="column-count: 2">                      
-                        <li><a href="" target="_blank">x</a></li>
-                        <li><a href="" target="_blank">x</a></li>
-                    </ul>  
-                </dd>                
+                </dd>                 
             </dl>   
             
         </details>     
@@ -83,6 +200,12 @@
     <!-- 3. Practice -->
     <section id="p3">
         <h2>3. Practice solving problems</h2> 
+         <dd>1. Complete the <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON#active_learning_working_through_a_json_example" target="_blank">Active learning: Working through a JSON example</a> Make sure you annotate (document) how the code works in your own words and make connections to the tutorials and readings above. </dd>  
+         <dd>2. Start with the code example in "A long-running synchronous function" (https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing). Remove duplicates from the primes array and display sorted (from smallest to largest number) under the "Finished generating N primes!". Add the page to your <kbd>mathClub_oo</kbd> project as a secondary page.</dd>
+         <dd>3. Copy your mathClub project. Name the new project <kbd>mathClub_oo</kbd>. Refactor your code as fully object-oriented solution.</dd>
+         <dd>4. Copy your mathClub project. Name the new project <kbd>gamesClub_oo</kbd>. Refactor your code as fully object-oriented solution.</dd>
+         <dd>5. Implement the <kbd>menu_json</kbd> project (https://github.com/ProfWendi/syst10199/tree/main/javascript/json) as a new project. Keep the organization as given. Rename the index.html to index0.html</dd>
+         <dd>6. Copy your <kbd>mathClub_oo</kbd> project to <kbd>mathClub_nav</kbd> project. Incorporate loading your navigation from a JSON file. Note: you will need to modify and create your own JSON file and load the menu to every <strong>secondary</strong> HTML file. Test your navigation. How can you modify the set up of the JSON file to be able to load the menu to the home page?  </dd>         
     </section>
 
 </main>
