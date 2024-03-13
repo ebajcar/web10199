@@ -81,12 +81,7 @@ dd {
             </dd>  
         </dl>
  
-        <dl> 
-            <dt>Nested functions</dt>
-            <dd>
 
-            </dd>  
-        </dl>
         
         <dl> 
             <dt>Applying CSS rules to dynamically created elements</dt>
@@ -98,12 +93,33 @@ dd {
             </dd>   
             <dd>
                 Start <strong>Phase 3</strong> with the output from Phase 2 and add behaviour with JavaScript (and enhance with server-side functional languages, such as Node.js, PHP, C#, Java, Python, etc.,). Whatever behaviour you add, it should enhance the user-experience, maintain accessibility of the content. When you are replacing a structure, such as a table or a list, you are using the DOM methods to produce exactly the same structure that you created manually in Phase 1. All CSS rules (usually class selectors) that you created and tested in Phase 1, will be applied to the created structure. You can manipulate properties through the CSSOM:<br>
-                <code>handleToElement.style.backgroundColor = "lightblue";</code><br>
-                or<br>
-                if you already have a class .lightblue in your CSS rule set:<br>
-                <code>handleToElement.setAttribute("class", "lightblue");</code><br>
+                <pre class="language-js" tabindex="0"><code class="language-js">handleToElement.style.backgroundColor = "lightblue";</code></pre>
+                This will produce
+                <pre class="language-html" tabindex="0"><code class="language-html">&lt;!-- assuming handleToElement is a TD element
+        specificity = 1000 -->
+&lt;td style="background-color:lightblue">...</code></pre>                
+                &mdash; or &mdash; if you already have a class <kbd>.lightblue{}</kbd> in your CSS rule set:<br>
+                <pre class="language-js" tabindex="0"><code class="language-js">handleToElement.setAttribute("class", "lightblue");</code></pre>
+               This will produce
+                <pre class="language-html" tabindex="0"><code class="language-html">&lt;!-- assuming handleToElement is a TD element
+        specificity = 10 -->
+&lt;td class="lightblue">...&lt;/td></code></pre>    
+                If you also have a CSS rule, such as the following:
+                <pre class="language-css" tabindex="0"><code class="language-css">/* background turns pink while user hovers over the cell 
+        specificity = 11 */
+td:hover {
+  background-color: pink;
+} </code></pre>
+                It will not work for any TD element that uses the style attribute above. Because of the high specificity, the inline style will win over a class/pseudo-class. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" target="_blank">Specificity (MDN web docs)</a> and <a href="https://www.w3.org/TR/selectors-3/#specificity" target="_blank">Calculating a selector's specificity (W3C)</a>.
             </dd>              
         </dl>        
+
+        <dl> 
+            <dt>Nested functions</dt>
+            <dd>
+                [still looking for good examples]
+            </dd>  
+        </dl>
         
     </section>
 
