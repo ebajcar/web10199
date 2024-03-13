@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Worksheet 9</title>
@@ -11,7 +12,9 @@
     <script src="css/prism-coy-23.js"></script>
     <link rel="stylesheet" href="css/main.css">
 	<style>
-
+dd {
+  margin-bottom: 7px;
+}
 	</style>
 </head>
 <body>
@@ -61,12 +64,47 @@
     <!-- 1. Review from previous weeks -->
     <section id="p1">
         <h2>1. Review</h2>
-      <!--  
-<h4>
-  <sub-title class="allcaps">Breaking<v-h>: </v-h></sub-title>
-  Bad Thing Happens
-<h4>
--->
+        <h3>
+          <sub-title class="allcaps">Classroom Discussions<v-h>: </v-h></sub-title>
+          Based on questions asked in class
+        </h3>
+        
+        <dl> 
+            <dt>Comparing objects</dt>
+            <dd>
+                <figure>
+                    <figcaption>Objects are stored by reference. <br>They are strictly equal only if they both point to the same object in memory.</figcaption>
+                    <img src="img/comparing-objects.png">
+                </figure>
+                <p>You can also compare two projects by iterating through each key and each value of the two objects and check that every key and every value is identical. You can also compare the JSON.stringify() format<br>
+                <code>JSON.stringify(obj1) === JSON.stringify(obj2);</code> which will evaluate to true.    </p>
+            </dd>  
+        </dl>
+ 
+        <dl> 
+            <dt>Nested functions</dt>
+            <dd>
+
+            </dd>  
+        </dl>
+        
+        <dl> 
+            <dt>Applying CSS rules to dynamically created elements</dt>
+            <dd>
+                Applying Progressive Enhancement principles, all content is marked up in <strong>Phase 1</strong>, even if you plan or anticipate creating parts of the document with JavaScript at a later point. The goal of this phase is to organize all content, selecting the most appropriate (semantically correct) elements and the <mark>output is a complete, well-formed, valid, semantically correct HTML5 code with accessible content.</mark> (usable and publishable without CSS and JS)
+            </dd>  
+            <dd>
+                Start <strong>Phase 2</strong> with the output from Phase 1 and style it with CSS (fonts, colours, layouts). Create a framework (a minimal set of CSS rules, properly organized and grouped). The goal of this phase is to style all marked-up content for presentation purpose and the <mark>output is a complete, valid CSS3/4 code with accessible content.</mark> If done correctly, there should be no changes to the HTML in this phase. (usable and publishable without JS)
+            </dd>   
+            <dd>
+                Start <strong>Phase 3</strong> with the output from Phase 2 and add behaviour with JavaScript (and enhance with server-side functional languages, such as Node.js, PHP, C#, Java, Python, etc.,). Whatever behaviour you add, it should enhance the user-experience, maintain accessibility of the content. When you are replacing a structure, such as a table or a list, you are using the DOM methods to produce exactly the same structure that you created manually in Phase 1. All CSS rules (usually class selectors) that you created and tested in Phase 1, will be applied to the created structure. You can manipulate properties through the CSSOM:<br>
+                <code>handleToElement.style.backgroundColor = "lightblue";</code><br>
+                or<br>
+                if you already have a class .lightblue in your CSS rule set:<br>
+                <code>handleToElement.setAttribute("class", "lightblue");</code><br>
+            </dd>              
+        </dl>        
+        
     </section>
 
 
