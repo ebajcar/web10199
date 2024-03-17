@@ -1,0 +1,25 @@
+UNOBTRUSIVE JAVASCRIPT
+delay processing — place at the end body
+accelerate processing — DOMContentLoaded event
+avoid control boxes (alert, prompt,...)
+avoid event attributes — hard to maintain
+ultimately, move code to an external file
+
+
+
+32203 Tu 2:00PM-5:00PM VIRTUAL 10199
+almunshi@sheridanc.on.ca, anghano@sheridanc.on.ca, assimy@sheridanc.on.ca, charanit@sheridanc.on.ca, chnikhil@sheridanc.on.ca, encinasv@sheridanc.on.ca, falzonm@sheridanc.on.ca, gomezdan@sheridanc.on.ca, jamsh@sheridanc.on.ca, jojoa@sheridanc.on.ca, kaursuf@sheridanc.on.ca, keshkesh@sheridanc.on.ca, kunvar@sheridanc.on.ca, mahajish@sheridanc.on.ca, abdullah.mahmood@sheridanc.on.ca, manastyr@sheridanc.on.ca, mavanih@sheridanc.on.ca, menegonj@sheridanc.on.ca, mojadimo@sheridanc.on.ca, moore49@sheridanc.on.ca, mulrainc@sheridanc.on.ca, newellnu@sheridanc.on.ca, parkeset@sheridanc.on.ca, paakshka@sheridanc.on.ca, pate4201@sheridanc.on.ca, patjayvi@sheridanc.on.ca, payashbe@sheridanc.on.ca, ranimans@sheridanc.on.ca, rathiha@sheridanc.on.ca, romansic@sheridanc.on.ca, sainiad@sheridanc.on.ca, shar1131@sheridanc.on.ca, sin13310@sheridanc.on.ca, thaksaum@sheridanc.on.ca, waliasom@sheridanc.on.ca
+
+32204 Mo 1:00PM-4:00PM Oakville G304 10199
+aarzooa@sheridanc.on.ca, albatayr@sheridanc.on.ca, alisann@sheridanc.on.ca, alvarez1@sheridanc.on.ca, ansari14@sheridanc.on.ca, bhaaryan@sheridanc.on.ca, delsocor@sheridanc.on.ca, dhankhre@sheridanc.on.ca, gargchir@sheridanc.on.ca, gener@sheridanc.on.ca, hettgen@sheridanc.on.ca, jawagurp@sheridanc.on.ca, kanfade@sheridanc.on.ca, kau15125@sheridanc.on.ca, kau15270@sheridanc.on.ca, kaziala@sheridanc.on.ca, kazmiu@sheridanc.on.ca, lyhao@sheridanc.on.ca, maparan@sheridanc.on.ca, nazmeen@sheridanc.on.ca, ogunniyo@sheridanc.on.ca, orazur@sheridanc.on.ca, pandyjim@sheridanc.on.ca, pate4972@sheridanc.on.ca, rupamr@sheridanc.on.ca, salisbun@sheridanc.on.ca, shar1140@sheridanc.on.ca, sheikbab@sheridanc.on.ca, sin13365@sheridanc.on.ca, sin12682@sheridanc.on.ca, sin12684@sheridanc.on.ca
+
+32003 Th 12:00PM-3:00PM VIRTUAL  13416
+ayantoye@sheridanc.on.ca, badhsukh@sheridanc.on.ca, bhattjai@sheridanc.on.ca, bishtd@sheridanc.on.ca, chahatej@sheridanc.on.ca, chavdau@sheridanc.on.ca, devanima@sheridanc.on.ca, dhharkir@sheridanc.on.ca, gillnob@sheridanc.on.ca, gosaim@sheridanc.on.ca, jhinzer@sheridanc.on.ca, karavita@sheridanc.on.ca, kau15268@sheridanc.on.ca, notamanp@sheridanc.on.ca, kau14089@sheridanc.on.ca, kawatraa@sheridanc.on.ca, koundala@sheridanc.on.ca, kumabhup@sheridanc.on.ca, parimana@sheridanc.on.ca, pate4932@sheridanc.on.ca, pate4884@sheridanc.on.ca, pate5008@sheridanc.on.ca, patsaads@sheridanc.on.ca, payashma@sheridanc.on.ca, preprern@sheridanc.on.ca, sharmpaa@sheridanc.on.ca, sin12833@sheridanc.on.ca, sin12690@sheridanc.on.ca, soutosc@sheridanc.on.ca, sundasuk@sheridanc.on.ca, trambads@sheridanc.on.ca, vankh@sheridanc.on.ca, yahyaf@sheridanc.on.ca
+
+32207 Mo 9:00AM-12:00PM VIRTUAL 13416
+anghano@sheridanc.on.ca, assimy@sheridanc.on.ca, bhagurno@sheridanc.on.ca, chaudade@sheridanc.on.ca, denningn@sheridanc.on.ca, desamahe@sheridanc.on.ca, gill970@sheridanc.on.ca, kau14748@sheridanc.on.ca, kau15264@sheridanc.on.ca, kaurpran@sheridanc.on.ca, kumkesha@sheridanc.on.ca, lytro@sheridanc.on.ca, abdullah.mahmood@sheridanc.on.ca, mohanaja@sheridanc.on.ca, moudgilg@sheridanc.on.ca, priyan21@sheridanc.on.ca, purirup@sheridanc.on.ca, sekhrit@sheridanc.on.ca, shaihamm@sheridanc.on.ca, shaarush@sheridanc.on.ca, sin13796@sheridanc.on.ca, sin13861@sheridanc.on.ca, sin13365@sheridanc.on.ca, sin14143@sheridanc.on.ca, sin14141@sheridanc.on.ca, sin13794@sheridanc.on.ca, sin13950@sheridanc.on.ca, surgule@sheridanc.on.ca, tahirsye@sheridanc.on.ca, tamrakar@sheridanc.on.ca, tarkmani@sheridanc.on.ca, veracapr@sheridanc.on.ca, virsukha@sheridanc.on.ca, zhoyuela@sheridanc.on.ca
+
+32208 We 8:00AM-11:00AM VIRTUAL 13416
+abdolmal@sheridanc.on.ca, alvesth@sheridanc.on.ca, burwoode@sheridanc.on.ca, chauahme@sheridanc.on.ca, chuxi@sheridanc.on.ca, delsocor@sheridanc.on.ca, faroahme@sheridanc.on.ca, gn@sheridanc.on.ca, hatcherh@sheridanc.on.ca, judgeman@sheridanc.on.ca, kadyrov@sheridanc.on.ca, kau13371@sheridanc.on.ca, kau15107@sheridanc.on.ca, kau15192@sheridanc.on.ca, kau12862@sheridanc.on.ca, kaursuf@sheridanc.on.ca, lewinale@sheridanc.on.ca, mehtaved@sheridanc.on.ca, newellnu@sheridanc.on.ca, nguye578@sheridanc.on.ca, nicollti@sheridanc.on.ca, patejayv@sheridanc.on.ca, patmeetp@sheridanc.on.ca, pate4972@sheridanc.on.ca, pareshmi@sheridanc.on.ca, payakshk@sheridanc.on.ca, patyashl@sheridanc.on.ca, pate5119@sheridanc.on.ca, pateyugp@sheridanc.on.ca, rathnayr@sheridanc.on.ca, sanghanv@sheridanc.on.ca, sin14089@sheridanc.on.ca, watord@sheridanc.on.ca, wuxium@sheridanc.on.ca
+
+

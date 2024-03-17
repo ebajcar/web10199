@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet One Problems</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }   
+        .huge {
+            font-size: 1.5em;
+        }   
+        .h-output {
+            min-height: 7em;
+        }   
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet One</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="index.html" class="current">Problems</a>
+            <a href="../problems/index.html">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Version 6  - <small>Increment a number by one</small></h2>
+     <nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Problems</a></li>
+            <li><a href="guess-a-number-problem.html">Problem statement</a></li>
+            <li><a href="#">guess-a-number-v06</a></li>
+        </ol>
+    </nav>                   
+    <!-- Prompt the user to guess a number between 1 and 10 -->
+    <section class="box info">
+        <h3>Guess a magic number between 1 and 10</h3>
+        <!-- capture and process user input on the click event -->
+        <input type="number" id="guess" value="0" min="1" max="10">
+    </section>
+    <!-- display result of processing -->
+    <section class="h-output">
+        <h3 id="ans">&nbsp;</h3> 
+        <!-- reset to start a new game -->
+        <strong><button  class="huge" id="reset" hidden>New Game?</button></strong>   
+     </section>
+     
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+/*
+	When the user chooses a number in the input element id=guess
+	and clicks the element, the number is captured and processed.
+	The response is displayed in the paragraph element id=ans.
+	Need a handle for the ELEMENT OBJECTS (part of DOM).
+*/
+document.addEventListener( "DOMContentLoaded", init )
+
+/*
+ *  1. Generate an integer between 1 and 10 inclusive
+ *  2. Capture user guess
+ *  3. Compare guess to generated number
+ *  4. Display outcome
+ *  5. if not correct, repeat 2 to 4
+ *  6. if correct, reset to start a new game
+ */
+function init() {
+    const ans = document.getElementById("ans");
+    const guess = document.getElementById("guess");
+    guess.removeAttribute("disabled", "disabled");
+    // Generate a random number to be guessed
+    const numToGuess = generateNumber();
+    console.log(numToGuess);
+
+    guess.addEventListener("change", function() {
+        // capture user guess as a number
+        let userGuess = guess.valueAsNumber;    
+        // compare user guess to number-to-guess
+        ans.innerText = compareNumbers(numToGuess,userGuess);
+    });
+}
+
+/*
+ * Generate an integer between 1 and 10 inclusive
+ *  
+ * 
+ * 
+function generateNumber() {
+  let randomNumber = Math.floor((Math.random() * 10) + 1);
+  console.log(randomNumber);
+  return randomNumber;
+}
+ */
+const generateNumber = () => Math.floor((Math.random() * 10) + 1);
+
+
+/*
+ * Determine whether the userGuess is the same as the randomNumber
+ * if yes, let the user know that they guessed correctly
+ * if no, determine if 
+ *      userGuess is higher than randomNumber, let user know guess is too high.
+ *      userGuess is lower than randomNumber, let user know guess is too low
+ */
+function compareNumbers(randomNumber,userGuess) {	
+    let output = "You guessed " + userGuess + ". ";   	
+	if ( randomNumber == userGuess ) {
+        output += " ✨ CONGRATULATIONS! ✨ You guessed correctly. The magic number is " + randomNumber + ". ";
+        // end of game. Prompt user to start a new game
+        playNewGame();
+	} else ( randomNumber < userGuess ) 
+            ? output +=  " Your guess is too high."
+            : output +=  " Your guess is too low.";
+    console.log(output);
+    return output;
+}
+
+function playNewGame() {
+    // end of game. Promp user to start a new game
+    // dsable the ability for user to select numbers
+    guess.setAttribute("disabled", "disabled");
+    // show button to start a new game
+    reset.removeAttribute("hidden", "hidden");
+}
+
+function resetGame() {
+	location.reload(); // reload page to start new game
+}
+reset.addEventListener("click", resetGame);
+
+
+
+
+
+
+</script>
+</body>
+</html>

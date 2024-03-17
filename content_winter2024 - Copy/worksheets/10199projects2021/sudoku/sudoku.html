@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!--
+Exploration of Sudoku game
+Ellen Bajcar, Spring 2019
+-->
+<html lang="en">
+    <head>
+        <title>Tic Tac Toe</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+<style>
+root { 
+    display: block;
+}
+body {
+    text-align:center;
+}
+table {
+    margin:auto;
+    min-width: 150px;
+    border-collapse: collapse;
+}
+td td {
+    width: 50px;
+    height: 50px;
+    border: 1px dotted black;
+    font-size:20px;
+    text-align:center;
+    font-family:arial, helvetica, sans-serif;
+}
+</style>
+    </head>
+    <body>
+        <h1>Sudoku</h1>
+    <table class="outer" border="1">
+        <tr>
+            <td>
+                <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table>
+            </td>
+            <td>
+                 <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table> 
+            </td>  
+            <td>
+                 <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table> 
+            </td> 
+        </tr>  
+            <td>
+                <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table>
+            </td>
+            <td>
+                 <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table> 
+            </td>  
+            <td>
+                 <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table> 
+            </td> 
+        </tr> 
+            <td>
+                <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table>
+            </td>
+            <td>
+                 <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table> 
+            </td>  
+            <td>
+                 <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table> 
+            </td> 
+        </tr>         
+    </table>    
+<p><input type="button" value="reset game" onclick="toggle();"></p> 
+<script>
+//var cells = document.querySelectorAll("td");
+var cells = document.getElementsByTagName("td");
+//console.log(cells.length);           
+var state = -1;
+var valueList = [ 1,2,3,4,5,6,7,8,9 ];
+var comboMaps = [{"row1": [1,2,3,11,12,13,21,22,23] },
+    {"row2": [4,5,6,14,15,16,24,25,26] },
+    {"row3": [7,8,9,17,18,19,27,28,29] },
+    {"row4": [31,32,33,41,42,43,51,52,53] },
+    {"row5": [34,35,36,44,45,46,54,55,56] },
+    {"row6": [37,38,39,47,48,49,57,58,59] },
+    {"row7": [61,62,63,71,72,73,81,82,83] },
+    {"row8": [64,65,66,74,75,76,84,85,86] },
+    {"row9": [67,68,69,77,78,79,87,88,89] },
+    {"blocks": [1,11,21,31,41,51,61, 71, 81] }
+    ];
+var colors = ["yellow", "green", "blue", "orange", "cyan", "teal", "maroon", "gray", "red" ];
+var block = [1,11,21,31,41,51,61, 71, 81];
+var cols = [1,2,3,11,12,13,21,22,23];
+ 
+/* TODO: create a function to highlight the row, block, and column 
+the user clicks (or hovers over) */ 
+//cells[j].style.backgroundColor = "lightgray";
+
+
+// function used to shuffle or scramble the order of the array's elements.
+// function takes one parameter: an array of any length
+// function does not return the array, array is modified by sort method
+function shuffle(array) {
+    array.sort(() => Math.random() - 0.5);
+}
+
+
+// function call the shuffle() function to randomly shuffle the valueList
+//   for each of the nine blocks and updates the board with the values
+//   then it calls the checkForDuplicates() function 
+function toggle() {
+    for ( var k = 0; k < 9; k++) {
+        shuffle(valueList);
+        for (var i=block[k], j=0; i<block[k]+9; i++, j++) {
+            cells[i].innerText = valueList[j];
+            cells[i].sudoku = valueList[j];
+            cells[i].style.color = colors[k];
+        }
+    }  
+    // check for duplicates in rows and columns
+    checkForDuplicates();    
+}
+
+
+// function removes duplicate values and sets to null all but the first
+// returns the modified array
+function removeDuplicates(inputArray) {
+    //var inputArray = [1, 2, 3, 3, 3, 6, 6, 7, 8, 9];
+    var encounteredIndices = {};
+    for(var i = 0; i < inputArray.length; i++) {
+      if (encounteredIndices[inputArray[i]]) {  
+        //console.log("at " + i + " "+ inputArray[i]); // Or add to some array if you wish
+        inputArray[i] = null;
+      } else {
+        encounteredIndices[inputArray[i]] = 1;
+      }
+    }  
+    //console.log(inputArray);  
+    return inputArray;
+}
+ 
+// function checks for duplicates in all rows and columns
+function checkForDuplicates() {
+    var curCol, idx1;
+    cols.forEach(function(col) {
+        curCol = [];
+        idx1 = [];
+        for (var i = col; i < 90; i+=30) {
+            for (var j = i; j < i+9; j+=3) {
+            curCol.push(cells[j].sudoku);
+            idx1.push(j);
+            }     
+        } 
+        removeDuplicates(curCol);
+        console.log("col" + curCol);
+        //console.log(curCol + " " + curCol.every(function(elem, i, array){return array.lastIndexOf(elem) === i}));
+        // UPDATE BOARD NODES
+        for (var m = 0; m < idx1.length; m++) {
+            cells[idx1[m]].sudoku = curCol[m];
+        }   
+    });
+ 
+    // remove duplicates in rows
+    for (var i = 1; i < 10; i++) {
+        curRow = [];
+        var temp = comboMaps[i-1]["row"+i];
+        temp.forEach(function(col) {curRow.push(cells[col].sudoku);});          
+        removeDuplicates(curRow);
+        console.log("row" + curRow);  
+        // UPDATE BOARD NODES
+        for (var m = 0; m < curRow.length; m++) 
+            cells[temp[m]].innerText = curRow[m];   
+    }       
+    
+    // update TABLE BOARD
+    var board = [];    
+    for (var i = 0; i < cells.length; i++) {
+        board.push(cells[i].sudoku);
+    }       
+}
+</script>		  
+</body>
+</html>

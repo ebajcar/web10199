@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet 7</title>
+    <link rel="stylesheet" href="css/missing-css.css">
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css"-->
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing-prism.min.css"-->
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="css/prism-coy-23.js"></script>
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .thisone {
+          text-decoration: underline;
+          text-decoration-style: wavy;
+          text-decoration-color: orange;
+        }
+        footer ul {
+            list-style: none;
+        }
+	</style>
+</head>
+<body>
+	<div class="sidebar-layout fullscreen">
+      <header>
+        <div class="<h1>">SYST10199</div>
+        <nav>
+            <ul role="list">
+                <li><a href="https://ebajcar.github.io/web10199/content_summer2023/" aria-current="page">Home</a></li>
+                <li><hr></li>
+                
+                <li>JS language (client-side programming)</li>
+                    <li class="margin"><a href="worksheet01.html">Worksheet 1</a></li>
+                    <li class="margin"><a href="worksheet02.html">Worksheet 2</a></li>
+                    <li class="margin"><a href="worksheet03.html">Worksheet 3</a></li>
+                    <li class="margin"><a href="worksheet04.html">Worksheet 4</a></li>
+                    <li class="margin"><a href="worksheet05.html">Worksheet 5</a></li>
+                <li><hr></li>
+                
+                <li>PHP language (server-side programming)</li>
+                    <li class="margin"><a href="worksheet06.html">Worksheet 6</a></li>
+                    <li class="margin thisone"><a href="worksheet07.html">Worksheet 7</a></li>
+                    <li class="margin"><a href="worksheet08.html">Worksheet 8</a></li>
+                    <li class="margin"><a href="worksheet09.html">Worksheet 9</a></li>
+                    <li class="margin"><a href="worksheet10.html">Worksheet 10</a></li>
+                <li><hr></li>           
+            </ul>            
+        </nav>
+      </header>
+    
+
+      <div> <!-- body container for main and footer -->
+        <main>
+            <h1>Worksheet 7</h1>
+            <nav class="breadcrumbs" aria-label="Breadcrumbs">
+                <ol>
+                    <li><a href="#"  class="allcaps">SYST10199</a></li>
+                    <li><a href="#" aria-current="page">Worksheet 7</a></li>
+                </ol>
+            </nav>        
+
+             <details open>
+                <summary>On this page&hellip;</summary>
+                <ol>
+                    <li><a href="#e02">Activity 7.1. Review and preparation</a></li>
+                    <li><a href="#e03">Activity 7.2. STUDY Course material</a></li>
+                    <li><a href="#e04">Activity 7.3. PRACTICE problem solving and coding in PHP</a></li> 
+                </ol>
+            </details>
+            
+              <section id="#e02">
+                <h2>Activity 7.1. Review and preparation</h2>
+                <div class="box info">
+                <p>Complete, review. dig deeper Worksheets 1, 2, 3, 4, 5, and 6. Catchup from previous weeks.</p> 
+                <p>Revisit the <a href="" target="_blank">Class Plan Information</a> and read about Active learning, Learning course
+                content, Learning for mastery, not grades, How evaluation works, Formative & Summative Evaluation, etc.</p> 
+                <p>Compare Java, Javascript, and PHP.
+                </p> 
+                  </div>
+            </section>  
+
+            <section id="#e03">
+                <h2>Activity 7.2. STUDY Course material</h2>
+                <p>Explore the following pages and the links provided on these pages to primary (PHP Manual) and secondary sources (w3schools). 
+                Compare to the Javascript language.</p>
+                <dl>
+                    <dt>7.2.1. <a href="">PHP Lanaguage</a></dt>
+                    <dd>&mdash;Keep working with the PHP language components from previous worksheet (6.2.1 - 6.2.9)</dd>
+                    
+                    <dt>7.2.2. <a href="">Functions</a></dt>
+                    <dd>&mdash;What is a function? a call to a function? array functions? string functions? print vs echo? variable handling functions? 
+                    mathematical functions? filesystem functions? error handling functions? date and time functions? </dd>
+                    <dd><strong>Class example</strong> <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set6/print_printf.html" target="_blank">echo, print, printf, sprintf, call_user_func_array</a></dd>
+                    <dd><strong>Class example</strong> <a href="" target="_blank">echo vs. print (try...catch, Exception object)</a></dd>
+                     
+                    <dt>7.2.3. <a href="">Sessions</a></dt>
+                    <dd>&mdash;What are sessions? what do use them for? </dd>    
+                    <!--
+                    <dd><strong>Class example</strong> <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set6/try_catch.php" target="_blank">Hybrid PHP</a></dd>
+
+                    <dd class="bad bg color">&mdash;Class example <a href="" target="_blank"></a> <chip>not available yet</chip></dd>  
+                    -->
+                    <dd class="ok bg color"><strong>Class example</strong> (See code on PHP Core Concepts > Sessions page). Create and name files as follows:
+                    <ul style="margin-top:0">
+                        <li><a href="../../learnphp23/sessions.html" target="_blank">Session Example 1: sessionTest.php</a></li>
+                        <li><a href="../../learnphp23/sessions.html" target="_blank">Session Example 2: message.php</a></li>
+                        <li><a href="../../learnphp23/sessions.html" target="_blank">Session Example 3: getStuff.html andgetStuff.php (run the html file)</a></li>
+                    </ul>
+                    </dd> 
+                </dl>                
+            </section>          
+            
+           <section id="#e04">     
+                <h2>Activity 7.3. PRACTICE problem solving and coding in PHP</h2>
+                
+                <div><strong>7.3.1. Problem</strong> &mdash;Write a program to play a game of Casino Craps.
+                    <ol style="margin-top:0;list-style-type: upper-alpha;">
+                        <li><em>Use the modified Javascript solution <a href="https://syst10199-examples.w3spaces.com/week8/modified-cc.html" target="_blank">Click here</a> and convert the solution to PHP.</em></li>
+                        <li>Compare Javascript and PHP solutions and implement. <br><a  style="width:200px;" href="../../slides/images/cc_simple_js_php.png" target="_blank"><img style="width:200px;" src="../../slides/images/cc_simple_js_php.png"></a></li>
+                        <li>Refactor both versions (using switch and nested ifs) to use switch instead of nested ifs</li>
+                        <li>Refactor as fully-functional or object-oriented solution, with appropriate user input.</li>
+                        <li>Add a simple score-keeping algorithm.</li>
+                    </ol>
+                </div>            
+                
+                <div><strong>7.3.2. Problem</strong> &mdash;Write a program to play a game of Rock-Paper-Scissors-Lizard-Spock.
+                <ol style="margin-top:0;list-style-type: upper-alpha;">
+                    <li><em>Use the modified Javascript solution of Rock-Paper-Scissors (both players random selections, no user input) 
+                    <br><a href="https://syst10199-examples.w3spaces.com/week8/modified-rps.html" target="_blank">Click here</a> and convert the solution to PHP.</em>
+                    </li>
+                    <li><em>Use the modified Javascript solution of Rock-Paper-Scissors-Lizard-Spock  (both players random selections, no user input)
+                    <br><a href="https://syst10199-examples.w3spaces.com/week8/modified-rpsls.html" target="_blank">Click here</a> and convert the solution to PHP.</em>
+                    </li>
+                    <li>Modify the PHP version to use an imput to capture user's selection (Hint: use GET method)</li>
+                    <li>Add a simple score-keeping algorithm. (For example, a scheme such as a winner of five consecutive games earns a point.)</li>
+                </ol>
+                </div> 
+                
+                <div><strong>7.3.3. Problem</strong> &mdash;Write a program to play a game Tic Tac Toe
+                <ol style="margin-top:0;list-style-type: upper-alpha;">
+                    <li><em>Use the modified Javascript solution <a href="https://syst10199-examples.w3spaces.com/week8/modified-ttt.html" target="_blank">Click here</a> and convert the solution to PHP.</em>  Note this solution will have NO Javascript code.</li>
+                    <li>Refactor as fully-functional or object-oriented code. Note this solution will have NO Javascript code.</a></li>
+				</div>
+            </section>                  
+ </main>
+
+        <footer>
+            <address><a href="">SYST101099 Web Programming | Ellen Bajcar et all, FAST, Sheridan College</a></address> 
+            <p>2021-2023 &copy;  The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+            <hr style="margin: 10px 0">
+            <ul class="f-switch" role="list">
+                <li>
+                  <h2>Course Material</h2>
+                  <ul>
+                    <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                    <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                    <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                    <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                    <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                    <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                    <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+                  </ul>
+                </li>
+                <li>
+                  <h2>Resources</h2>
+                  <ul>
+                    <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                    <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                    <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+                  </ul>
+                </li>
+                <li>
+                  <h2>Sheridan College</h2>
+                  <ul>
+                    <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                    <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>
+                    <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                    <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                    <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>  
+                    <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+                    <li><a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a><span style="color:gray"><br>Office hours (by appointment)</span></li>
+                  </ul>
+                </li>
+            </ul>
+        </footer>
+     
+     </div> <!-- body container for main and footer -->
+</div> <!-- sidebar -->
+
+	
+
+</body></html>

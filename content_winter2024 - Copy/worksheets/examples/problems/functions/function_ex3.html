@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W1 Practice 1</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: 
+Version: 0.1
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Practice Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+-->
+
+</head>
+<body>
+	<h3>Functions</h3>
+	<main>
+    
+  </main>
+<script>
+    /* 
+     * Example 3
+     *  arguments[i]
+     */
+    function myConcat(separator) {
+      var result = ''; // initialize list
+      var i;
+      // iterate through arguments
+      for (i = 1; i < arguments.length; i++) {
+        result += arguments[i] + separator;
+      }
+      return result;
+    }
+    // returns "red, orange, blue, "
+    document.write("<p>Output 3A: " + myConcat(', ', 'red', 'orange', 'blue') + "</p>");
+    // returns "elephant; giraffe; lion; cheetah; "
+    document.write("<p>Output 3B: " + myConcat('; ', 'elephant', 'giraffe', 'lion', 'cheetah') + "</p>");
+    // returns "sage. basil. oregano. pepper. parsley. "
+    document.write("<p>Output 3C: " + myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley') + "</p>");
+</script>	
+</body>
+</html>

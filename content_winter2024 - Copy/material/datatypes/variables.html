@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Page3</title>
+    <link rel="stylesheet" href="css/missing-css.css">
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="css/prism-coy-23.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+	<style>
+ dd {
+  padding-top: 10px;
+  
+}  
+	</style>
+</head>
+<body>
+
+
+<header class="navbar" style="height:64px;" >
+    <nav class="contents">
+      <ul role="list">
+        <li><a href="data_types.html">Data Types</a></li>
+        <li><a aria-current="page"  href="variables.html">Variables</a></li>
+        <li><a href="variable_scope.html">Variable scope</a></li>
+        <li><a href="declare_variables.html">Declaring variables</a></li>
+        <li><a href="operators.html">Operators</a></li>
+      </ul>
+    </nav>            
+</header>       
+            
+                   
+                   
+<main>           
+    <h2>Page3</h2>
+    <section id=#e01">   
+	<h6 class="text-lg font-light leading-relaxed mt-6 mb-4 text-gray-800" title="defined by [MDN]">A variable is a named memory location for storing a value. That way an unpredictable value can be accessed through a predetermined name.</h6>   
+
+	<h3>Identifiers and Constants</h3>
+		<ul class="checked" style="margin-top:8px">  		
+			<li>Javascript variable is a symbolic name for a value. <a href="https://en.wikipedia.org/wiki/Variable_(computer_science)" target="_blank" title="See more on Wikipedia">W</a> </li> 
+			<li>You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.</li>
+			<li>A JavaScript identifier must start with a letter, underscore <kbd>_</kbd>, or dollar sign <kbd>$</kbd>; subsequent characters can also be digits (0-9). Because JavaScript is case sensitive, letters include the characters "A" through "Z" (uppercase) and the characters "a" through "z" (lowercase).</li>
+			<li>Variable names and <mark>function</mark> names must avoid the JavaScript keywords, reserved words, and object names.</li>
+			<li>JavaScript variables are declared using the <code>var</code> keyword and can store any data type – boolean, number, string, function, or object</li>
+			<li>Unlike global variables declared in the main script body, local variables declared inside a function are only accessible from within that function</li>                        
+		</ul>
+
+ 	<h3>Expressions</h3>
+	<p>Statement is a group of words, numbers, and operators that performs a specific task. It is made up of one or more expressions.</p>
+  
+		<ul>
+			<li>An expression is a combination of variables, operators, and values that represents a single result value.</li> 
+			<li>An expression is any valid unit of code that resolves to a value.</li>
+		</ul>  
+	<p><strong>Expression</strong>
+	 is any reference to a variable or value, or a set of variables and values combined with operators</p>	
+
+<figure>
+<pre class="language-js"><code>// get the current value stored in variable b, multiply that value by 2, 
+// then store the result back into another variable called a
+a = b * 2;</code></pre> 
+<figcaption class="figure-caption">Expressions. In the example statement,
+	<ul>
+		<li>characters a and b are called variables</li>
+		<li>2 is just a value itself, called a literal value</li>
+		<li>= and * characters are operators</li>
+		<li>a semicolon (;) ends the statement</li>
+	</ul> 
+	
+	<ul>	<li style="list-style:none;margin-left:-20px;">This statement has four expressions:</li>
+		<li><code>2</code> is a <strong>literal value expression</strong></li>
+		<li><code>b</code> is a <strong>variable expression</strong></li>
+		<li><code>b * 2</code> is an <strong>arithmetic expression</strong></li>
+		<li><code>a = b * 2</code> is an <strong>assignment expression</strong></li>
+	</ul></figcaption>
+
+</figure> 
+
+ 
+<figure>
+<pre class="language-js"><code>b * 2;</code></pre>
+		<figcaption class="figure-caption">Example of a general expression statement</figcaption>
+	</figure>
+	
+
+<figure>
+<pre class="language-js"><code>alert(a);</code></pre>
+		<figcaption class="figure-caption">Example of a function call expression statement</figcaption>
+	</figure>	
+  
+  <!--
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function
+-->
+
+		<p>The JavaScript syntax defines two types of values:</p>
+		<ul>
+			<li><strong>fixed values</strong> are called <code>literals</code></li>
+			<li><strong>variable values</strong> are called <code>variables</code></li>
+		</ul>
+
+	<h3>Special values</h3>
+		<table class="w3-table w3-bordered">
+			<tr><td class="w3-indigo" style="min-width:120px"><code class="w3-large w3-text-white">undefined</code></td>
+				<td>&mdash;variable with no value yet, parameter with no matching argument passed.</td></tr>
+			<tr><td class="w3-indigo w3-text-yellow"><code class="w3-large w3-text-white">null</code></td> 
+				<td>&mdash;not quite undefined, often the value of a "no result" DOM call, and a way to programmatically assign "no value" to something.</td></tr>
+			<tr><td class="w3-indigo"><code class="w3-large w3-text-white">false true</code></td>
+				<td>&mdash;boolean literals.</td></tr>
+			<tr><td class="w3-indigo"><code class="w3-large w3-text-white">Infinity</code></td>
+				<td>&mdash;Numeric infinity (can be signed, e.g., -Infinity)</td></tr>
+			<tr><td class="w3-indigo"><code class="w3-large w3-text-white">NaN</code></td>
+				<td>&mdash;Result of a Not-A-Number expression, such as a failed number parse. Not equal to any numeric, including itself.  Use isNan(n) for proper detection.</td></tr>						
+		</table>
+		<div class="w3-panel w3-pale-green w3-border w3-border-green">
+			<i class="fas fa-code"></i> Explore <code>data types</code> examples on w3schools:    
+			<a href="http://www.w3schools.com/jsref/default.asp" target="_blank"><img 
+				src="http://www.w3schools.com/favicon.ico" class="icon" height="14"
+				title="w3schools.com" alt="link to w3schools.com"></a>.
+		</div>	
+       
+    </section>
+</main>
+
+
+<footer>
+    <address><a href="http://bajcar.dev.fast.sheridanc.on.ca/">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+    <div style="margin: 0 0 10px 0">&mdash;</div>
+</footer>
+
+
+</body>
+</html>

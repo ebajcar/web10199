@@ -1,0 +1,14 @@
+[
+    {
+        "file": "index.html",
+        "name": "Home"
+    },
+    {
+        "file": "foo.html",
+        "name": "Foobar"
+    },
+    {
+        "file": "content/index.html",
+        "name": "Content"
+    }
+]

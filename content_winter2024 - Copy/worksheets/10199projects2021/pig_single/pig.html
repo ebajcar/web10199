@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!-- 
+	rockLocStore.html, SYST10199 Web Programming, Summer 2015, Ellen Bajcar 
+	external css and js
+	https://en.wikipedia.org/wiki/Rock-paper-scissors#Additional_weapons
+	TODO: extend to Rock-paper-scissors-lizard-Spock
+-->
+<html>
+<head>
+	<title>PIG</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width" />
+<style>
+body {
+	background: #e0e0e0;
+    font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+main, section {
+	width: 100%;
+	margin: auto;
+	padding-top: 20px;
+	background-color: white;	
+}
+main {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	min-height: 300px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+header h1 {
+	color: #6f6f6f;   
+    font-family: Lato, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+	margin: 20px 0 0;
+    text-align: center;
+    text-shadow: 0 0 0 rgba(0,0,0,.4);
+}
+footer {
+	margin: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+button {
+	padding: 1rem;
+	border: 1px solid #ccc;
+	background-color: #ddd;
+	-webkit-transition: background-color 200ms ease;
+	transition: background-color 200ms ease;
+}
+button:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+
+
+/* navigation */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav a {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover {
+    background: #c2c2c2;
+    color: #818181;
+}
+
+/* game-specific rules */
+.aimove{ 
+	display: block; 
+	width: 376px; 
+	margin: 5px auto; 
+	height: 212px; 
+	border: 1px dotted lightgray;
+	font-size: 1.8em;
+	font-weight: bold;
+	font-family:monospace;
+	color: tomato;
+}
+section {
+	width: 600px;
+	text-align: left;
+}
+
+
+</style>
+</head>
+<body>
+	<header><h1>PIG</h1></header>
+
+	
+	<nav>
+		<a class="active" href="">PIG</a>
+		<a href="">Hangman</a>
+	</nav>		
+	<main>
+		<section id="intro">
+		<h3>Gameplay</h3>
+		<p>Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":</p>
+		<ul>
+			<li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+			<li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+			<li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+			<li>The first player to score 100 or more points wins.</li>
+		</ul>
+		<p>For example, the first player, Anne, begins a turn with a roll of 5. Anne could hold and score 5 points, but chooses to roll again. Anne rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again. Anne rolls a 1, and must end her turn without scoring. The next player, Bob, rolls the sequence 4-5-3-5-5, after which he chooses to hold, and adds his turn total of 22 points to his score.</p>	
+		</section>
+		<section id="game">
+			<h3 id="curr"></h3>
+			<button id="roll">Roll</button>
+			<label id="hold">Hold? <input type="checkbox" name="hold">yes <input type="checkbox" name="hold">no</label>
+			<p>Player 0 score: <span id="one"></span></p>
+			<p>Player 1 score: <span id="two"></span></p>
+		</section>
+	
+	</main>
+	<footer><address>SYST10199 Web Programming &copy; Sheridan College</address></footer>	
+
+<script>
+/*
+https://en.wikipedia.org/wiki/Pig_(dice_game)#cite_note-10
+Pig is a simple dice game first described in print by John Scarne in 1945.[1] As with many games of folk origin, Pig is played with many rule variations. Commercial variants of Pig include Pass the Pigs, Pig Dice,[2] and Skunk. Pig is commonly used by mathematics teachers to teach probability concepts.
+
+Pig is one of a family of dice games described by Reiner Knizia as "jeopardy dice games". For jeopardy dice games, the dominant type of decision is whether or not to jeopardize previous gains by rolling for potential greater gains. Most jeopardy dice games can be further subdivided into two categories: jeopardy race games and jeopardy approach games. In jeopardy race games, the object is to be the first to meet or exceed a goal score (e.g. Pig, Pass the Pigs, Cosmic Wimpout, Can't Stop). In jeopardy approach games, the object is to most closely approach a goal score without exceeding it.[3]
+
+Gameplay
+Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
+
+If the player rolls a 1, they score nothing and it becomes the next player's turn.
+If the player rolls any other number, it is added to their turn total and the player's turn continues.
+If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+The first player to score 100 or more points wins.
+
+For example, the first player, Anne, begins a turn with a roll of 5. Anne could hold and score 5 points, but chooses to roll again. Anne rolls a 2, and could hold with a turn total of 7 points, but chooses to roll again. Anne rolls a 1, and must end her turn without scoring. The next player, Bob, rolls the sequence 4-5-3-5-5, after which he chooses to hold, and adds his turn total of 22 points to his score.
+
+*/
+document.getElementById("intro").style.display = "none";
+var checkboxes = document.getElementsByName("hold");
+var goingToHold = document.getElementById("hold");
+var currPlayer = document.getElementById("curr");
+var total = [0,0];
+var player = 0;
+var roll;
+var gameover = false;
+
+//goingToHold.style.display = "none";
+//checkboxes[0].removeAttribute("checked");
+currPlayer.innerText = "Player ";
+
+	document.getElementById("roll").onclick = function() {
+		currPlayer.innerText = "Player " + player;
+		if (!gameover) {
+			roll = Math.floor(Math.random() * 6) + 1;	
+			currPlayer.innerText += " rolled " + roll;	
+			console.log(checkboxes);
+			if (roll != 1) {
+				//goingToHold.style.visibility = "visible";
+				goingToHold.addEventListener("click", function() {
+					// if hold is clicked
+					if (checkboxes[0].checked) {			
+						total[player] += roll;
+						console.log(roll);
+						document.getElementById("one").innerText = total[0];
+						document.getElementById("two").innerText = total[1];	
+					}
+				}, true );
+			} else {
+				console.log("turn over");
+				(player == 1) ? player = 0 : player = 1;			
+			} 
+			if ( total[0] > 99 ) { gameover = true; currPlayer.innerText = "Player 0 wins"; }
+			if ( total[1] > 99 ) { gameover = true; currPlayer.innerText = "Player 1 wins"; }		
+		}
+		//goingToHold.style.visibility = "hidden";
+		//checkboxes[0].removeAttribute("checked");
+		currPlayer.innerText = "Player " + player;		
+	};
+		
+
+</script>
+</body>
+</html>

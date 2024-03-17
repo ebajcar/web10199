@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet Three Exercises</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }
+        .big-value {
+          font-size: 4em;
+          font-weight: normal;
+          text-align: left;
+          text-shadow: 2px 2px 2px gray;
+          padding-bottom: 20px;
+        }
+        /*
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+        
+        */
+        input:invalid + span::after {
+          content: "✖";
+          padding-left: 5px;
+          color: lightgray;
+        }
+
+        input:valid + span::after {
+          content: "✓";
+          padding-left: 5px;
+          color: gray;
+        }
+        select {
+          width: 100%;
+        }
+ 
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Three</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="../problems/index.html">Problems</a>
+            <a href="index.html" class="current">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Functions  - <small>explore properties and methods</small></h2>
+     <nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Problems</a></li>
+            <li><a href="fibonacci-problem.html">Problem statement</a></li>
+            <li><a href="#">?</a></li>
+        </ol>
+    </nav>       
+
+        
+    <p>
+        <a class="chip bad" href="" target="_blank">b</a>
+        <a class="chip " href="" target="_blank">a</a>
+    </p>      
+    <p>Read more <a href="" target="_blank">MDN web docs</a>.</p>
+
+
+        
+<ul role="list" class="f-switch dense">
+    <li class="box">  
+	<h2>Enter a number
+    </h2>
+	  <input class="numberInput" type="text">
+      <h3 class="para"></h3>
+
+    </li>  
+</ul>
+	
+
+<ul role="list" class="f-switch dense">
+    <li class="box info">
+        <h4>Using traditional function</h4>
+<pre class="language-js" tabindex="0"><code class="language-js">let points = [
+  {x:0, y:0},
+  {x:1, y:1}
+];
+// creating custom methods using traditional function
+<b>points.dist = function () { </b> 	
+let p1 = this[0];
+let p2 = this[1];
+let a = p2.x - p1.x;
+let b = p2.y - p1.y;
+return Math.sqrt( a * a + b * b );
+};
+handl.innerText = points.dist(); 
+}</code></pre>           
+  <div class="box ok">
+    <strong class="block titlebar">Output</strong><p id="handl"></p>
+  </div>
+    </li>
+</ul> 
+
+
+
+
+
+<ul role="list" class="f-switch dense">
+    <li class="box info">
+        <h4>Using arrow function</h4>
+<pre class="language-js" tabindex="0"><code class="language-js">// An arrow function expression is a compact alternative to a traditional function
+// expression, but is limited and can't be used in all situations.
+// creating custom methods using arrow function
+points2.dist2 = () => { 
+    let p1 = this[0];
+    let p2 = this[1];
+    let a = p2.x - p1.x;
+    let b = p2.y - p1.y;
+    return Math.sqrt( a * a + b * b );
+};
+handl.innerText = points2.dist2();</code></pre> 
+  <div class="box ok">
+    <strong class="block titlebar">Output</strong><p id="handl2"></p>
+  </div>   
+        
+    </li>
+</ul>
+
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+const handl = document.getElementById("handl");
+let points = [
+    {x:0, y:0},
+    {x:1, y:1}
+];
+// creating custom methods using traditional function
+points.dist = function () {  	
+	let p1 = this[0];
+	let p2 = this[1];
+	let a = p2.x - p1.x;
+	let b = p2.y - p1.y;
+	return Math.sqrt( a * a + b * b );
+};
+handl.innerText = points.dist();
+</script>
+
+
+<script>
+  // An arrow function expression is a compact alternative to a traditional function
+  // expression, but is limited and can't be used in all situations.
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+let points2 = [
+    {x:0, y:0},
+    {x:1, y:1}
+];
+
+// creating custom methods using arrow function
+points2.dist2 = () => {
+	let p1 = points2[0];
+	let p2 = points2[1];
+	let a = p2.x - p1.x;
+	let b = p2.y - p1.y;
+	return Math.sqrt( a * a + b * b );
+};
+handl2.innerHTML += points2.dist2();
+</script>
+</body>
+</html>

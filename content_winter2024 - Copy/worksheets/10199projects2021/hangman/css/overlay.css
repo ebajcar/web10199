@@ -1,0 +1,29 @@
+/* overlay and popup messages styling */
+#messg {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black,-1px -1px 5px #fff;
+    display: none;
+    height: 30%;
+    left: 50%;
+    margin: auto;
+    padding: 20px;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    z-index: 200;
+}
+
+#overlay {
+    background-color: rgba(20,20,20,0.8);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}

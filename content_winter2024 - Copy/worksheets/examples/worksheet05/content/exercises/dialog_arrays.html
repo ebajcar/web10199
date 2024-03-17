@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet Five Exercises</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }
+        .big-value {
+          font-size: 4em;
+          font-weight: normal;
+          text-align: left;
+          text-shadow: 2px 2px 2px gray;
+          padding-bottom: 20px;
+        }
+
+
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Five</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="../problems/index.html">Problems</a>
+            <a href="index.html" class="current">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Forms  - <small>explore dialog and arrays</small></h2>
+     <nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Exercises</a></li>
+            <li><a href="#">constraint_validation.html</a></li>
+        </ol>
+    </nav>       
+
+        
+    <p>
+        <a class="chip bad" href="" target="_blank">SELECT</a>
+        <a class="chip warn" href="" target="_blank">OPTION</a>
+        <!--a class="chip ok" href="" target="_blank">x</a-->
+    </p>       
+        
+    <p>Read more <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog" target="_blank">MDN web docs</a>.</p>
+
+
+        
+<ul role="list" class="f-switch dense">
+    <li class="box">  
+	<h1>Dialog</h1>
+<!-- Simple pop-up dialog box, containing a form -->
+<dialog id="favDialog">
+  <form method="dialog">
+    <section>
+      <p><label for="favAnimal">Favorite animal:</label>
+      <select id="favAnimal">
+        <option></option>
+        <option>Brine shrimp</option>
+        <option>Red panda</option>
+        <option>Spider monkey</option>
+      </select></p>
+    </section>
+    <div>
+      <button id="cancel" type="reset">Cancel</button>
+      <button id="submit" type="submit">Confirm</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- element that triggers the opening of the dialogue box -->
+<div>
+  <button id="updateDetails">Update details</button>
+</div>
+ </li> 
+    <li class="box">   
+<!-- element used to display the result of processing and closing the dialogue box -->
+<p id="demo1"></p>
+    </li>  
+</ul>
+	
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+     <h4>Code snippets</h4>
+<pre class="language-html" tabindex="0"><code class="language-html">&lt;!-- Simple pop-up dialog box, containing a form -->
+&lt;dialog id="favDialog">
+  &lt;form method="dialog">
+    &lt;section>
+      &lt;p>&lt;label for="favAnimal">Favorite animal:&lt;/label>
+      &lt;select id="favAnimal">
+        &lt;option>&lt;/option>
+        &lt;option>Brine shrimp&lt;/option>
+        &lt;option>Red panda&lt;/option>
+        &lt;option>Spider monkey&lt;/option>
+      &lt;/select>&lt;/p>
+    &lt;/section>
+    &lt;div>
+      &lt;button id="cancel" type="reset">Cancel&lt;/button>
+      &lt;button id="submit" type="submit">Confirm&lt;/button>
+    &lt;/div>
+  &lt;/form>
+&lt;/dialog>
+&lt;/form></code></pre>
+
+<pre class="language-js" tabindex="0"><code class="language-js">  var updateButton = document.getElementById('updateDetails');
+  const cancelButton = document.getElementById('cancel');
+  const submitButton = document.getElementById('submit');
+  const favDialog = document.getElementById('favDialog');
+  submitButton.onclick = function() {
+    demo1.innerText += favAnimal.selectedOptions[0].value + "\n";
+  }
+  // Update button opens a modal dialog
+  updateButton.addEventListener('click', function() {
+    favDialog.showModal();
+  });
+
+  // Form cancel button closes the dialog box
+  cancelButton.addEventListener('click', function() {
+    favDialog.close();
+  });</code></pre>    
+
+    </li>
+</ul> 
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+/*
+  PROBLEM: 
+  
+  SOLUTION: 
+  1. Get (pick) a number 
+  2. define a function that 
+  3. Call the function
+  4. display the result in the console.
+*/
+//(function() {
+  const updateButton = document.getElementById('updateDetails');
+  const cancelButton = document.getElementById('cancel');
+  const submitButton = document.getElementById('submit');
+  const favDialog = document.getElementById('favDialog');
+  submitButton.onclick = function() {
+    demo1.innerText += favAnimal.selectedOptions[0].value + "\n";
+  }
+  // Update button opens a modal dialog
+  updateButton.addEventListener('click', function() {
+    favDialog.showModal();
+  });
+
+  // Form cancel button closes the dialog box
+  cancelButton.addEventListener('click', function() {
+    favDialog.close();
+  });
+//})();
+</script>
+</body>
+</html>

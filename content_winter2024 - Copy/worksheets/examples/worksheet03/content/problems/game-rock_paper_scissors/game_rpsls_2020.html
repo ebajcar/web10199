@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Play RPSLS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+Author: 		Ellen Bajcar
+File name: 		tictactoe.css
+Date Created:	Summer 2019
+Date Updated: 
+Version: 		2019.5.1 
+Purpose: 		learning Javascript programming; assignment requirements
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    See README.md file, located in this project's root directory
+-->
+<link rel="stylesheet" href="../css/grid.css">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Akronim|Asap+Condensed|Barrio|Frijole|Luckiest+Guy|Princess+Sofia');
+:root {
+	--bgwhite: #fff;	
+	--fontcolor: #093D6D;
+    --sherblue: #093D6D;
+    --sherteal: #1AC6D9;
+    --sherorange: #00CCCC;;
+	--fontfam: 'Luckiest Guy', cursive;
+	--fontbody: 'Asap Condensed', sans-serif;
+	--fonttitle: 'Akronim', cursive;
+	--gap-sm: 5px;
+	--gap-md: 10px;
+	--gap-lg: 25px;
+}
+
+
+* { 
+	box-sizing: border-box; 
+}
+
+body {
+	background: #e0e0e0;
+    font-family: 'Kaushan Script', cursive;
+    margin: 0 auto;
+    text-align: center;
+}
+main {
+	width: 100%;
+	margin: auto;
+	padding-top: 4px;
+	background-color: white;
+	min-height: 380px;
+	display: flex;
+	justify-content: center;	
+	font-family: initial;
+	font-size: 0.8em;
+}
+main > div {
+  margin: 5px;
+  padding: 5px;
+}
+header h1, dialog h2 {
+	color: #6f6f6f;   
+	text-shadow: 1px 1px cyan;
+    font-size: 60px;
+    font-weight: 400;
+	margin: 16px 0 0;
+    text-align: center;
+}
+dialog h2 {
+	font-size: 40px;
+}
+dialog {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: #e0e0e0;
+	padding: 3px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    width: 50%;
+}
+dialog section {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+        text-align: left;
+padding: 3px;
+        box-sizing: border-box;
+        height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+}
+dialog p {
+  font-family: initial;
+}
+
+
+footer {
+	margin: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+
+/* navigation */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav button {
+  border: none;
+}
+nav a, nav span, nav button {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover, nav span:hover, nav button:hover {
+    background: #c2c2c2;
+    color: #818181;
+    cursor: pointer;
+}
+
+.grid-container {
+	/*background-image: linear-gradient(to top right, var(--sherorange), var(--sherteal), var(--sherteal), var(--sherblue));*/
+	display: grid;
+	grid-template-columns: 70% 30%;
+	grid-gap: var(--gap-sm);
+	min-height: 300px;
+	padding: 10px;
+	font-family: var(--fontbody);
+}
+.grid-item {
+	/*background-color: var(--body-bg-color);*/
+    border: 1px dotted lightgray;
+	padding: 10px;
+	text-align: center;
+}
+.grid-item:last-child {
+	/*color: var(--sherblue);*/
+	text-align: left;
+}
+
+
+main button {
+	color: #00CCCC;
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #00CCCC;
+	text-shadow: 1px 1px 1px gray;
+	box-shadow: 1px 1px gray;
+	font-size: 24px;
+	outline: 0 solid white;
+	width: 100%;
+	cursor: pointer;
+}
+
+dl.gallery {
+  box-sizing: border-box;
+  border: 2px solid #00CCCC;
+  background-color: #eee;
+  width: 19%;
+  height: 200px;
+  text-align: center;
+  padding: 10px;
+  float: left;
+  margin-right: 1%;
+}
+.gallery dt { 
+  font-weight: bold; 
+  text-transform: uppercase;
+}
+.gallery dt img {
+  background-color: white;
+  border: 1px dashed #000;
+  width: 100%;
+  height: 100%;
+}
+.gallery dd {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  font-size: 0.75em;
+} 
+#aimove img {
+  vertical-align: text-bottom;
+  display: block; 
+  text-align: center;  
+  width: 100px;
+}
+#aimove {
+  font-size: 1.5em;
+}
+#aimove p {
+  display: table-cell;
+  width: 50%;
+  height: 80px;
+  padding: 25px 10px 10px 30px;
+  text-align: center;
+}
+#aimove h2 {
+  text-align: center;
+}
+
+.tooltip {
+  border-bottom: 1px dotted black;
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  background-color: black;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.7em;
+  left: 50%;
+  margin-left: -60px;
+  padding: 5px 0;
+  position: absolute;
+  text-align: center;
+  top: 150%;
+  visibility: hidden;
+  width: 120px;  
+  z-index: 1;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>Play Rock Paper Scissors Lizard Spock</h1>
+	</header>
+	<nav>
+		<a href="../home/game_template.html">Home</a>
+        <span  id="greset">New Game</span>
+        <span id="help" >Help</span>
+	</nav>	
+        
+		<main>   
+			<div class="grid-container">
+				<div class="grid-item">
+                      <dl class="gallery" data-human-choice="paper">
+                        <dt><img src="images/paper.png" alt="paper"></dt>
+                        <dt>paper</dt>
+                        <dd class="tooltip">
+                            <hr>covers rock<br>and<br>disproves Spock
+                            <span class="tooltiptext">PAPER<br>covers rock<br>and<br>disproves Spock</span>
+                        </dd> 
+                      </dl>
+                      <dl class="gallery" data-human-choice="rock">
+                        <dt><img src="images/rock.png" alt="rock"></dt>
+                        <dt>rock</dt>
+                        <dd class="tooltip">
+                            <hr>crushes scissors<br>and<br>crushes lizard
+                            <span class="tooltiptext">ROCK<br>crushes scissors<br>and<br>crushes lizard</span>                        
+                        </dd>
+                      </dl>
+                      <dl class="gallery" data-human-choice="scissors">
+                        <dt><img src="images/scissors.png" alt="scissors"></dt>
+                        <dt>scissors</dt>
+                        <dd class="tooltip">
+                            <hr>cuts paper<br>decapitates lizard 
+                            <span class="tooltiptext">SCISSORS<br>cuts paper<br>and<br>decapitates lizard</span>
+                        </dd>
+                      </dl>
+                      <dl class="gallery" data-human-choice="lizard">
+                        <dt><img src="images/lizard.png" alt="lizard"></dt>
+                        <dt>lizard</dt>
+                        <dd class="tooltip">
+                            <hr>poisons Spock<br>and<br>eats paper
+                            <span class="tooltiptext">LIZARD<br>poisons Spock<br>and<br>eats paper</span>
+                        </dd>
+                      </dl>
+                      <dl class="gallery" data-human-choice="spock">
+                        <dt><img src="images/spock.png" alt="spock"></dt>
+                        <dt>spock</dt>
+                        <dd class="tooltip">
+                            <hr>smashes scissors<br>and<br>vaporizes rock 
+                            <span class="tooltiptext">SPOCK<br>smashes scissors<br>and<br>vaporizes rock</span>
+                        </dd>
+                      </dl>	
+                      <p>Click on the image to select it.</p>
+				</div>
+				<div class="grid-item">
+                    <div id="aimove"></div> 
+
+				</div>
+			</div>			
+		</main>
+        
+    <footer>
+        <address>SYST10199 Web Programming, Spring 2019 &copy; Sheridan College</address>
+    </footer>
+<script>
+/*
+ *  function cellClick() executes when human player clicks on one of the
+ *  five images to make his choice. The function takes one argument which
+ *  is the node (object) representing the clicked element (dl)
+ */
+function cellClick(cell){
+    var machine;
+    var message = "";
+    var choices = ["paper", "scissors", "rock", "lizard", "spock" ];
+    var winner = { 
+        rock : [ "paper", "spock"],
+        paper : [ "scissors", "lizard"],
+        scissors : [ "spock", "rock" ],
+        lizard : [ "rock","scissors" ],
+        spock : [ "lizard", "paper" ]
+    };
+    removeResults(); 
+    machine = Math.floor((Math.random() * 5) + 1);
+    var csel = choices[machine-1];
+    var hsel = cell.getAttribute("data-human-choice");
+    if ( csel == hsel ) 
+        message = " IT'S A TIE! "; 
+    else
+        (winner[csel][0] == hsel || winner[csel][1] == hsel) 
+            ? message = " YOU WIN! " 
+            : message = " MACHINE WINS! ";  
+    displayResults(message, csel, hsel); 
+}  
+
+
+/*
+ *  function displayResults() is called by function cellClick() to render
+ *  the results of the current game.  It creates the elements and populates
+ *  them based on the outcome of the game; modifies live DOM.  It takes three 
+ *  arguments, the message who won, computer choice, and human player choice.
+ */
+function displayResults(message, csel, hsel) {     
+    var aimove = document.getElementById("aimove");
+    var par1 = aimove.appendChild(document.createElement("p"));
+    par1.innerText = "MACHINE \n chose \n" + csel;
+    par1.setAttribute("id", "par1");
+    var cImg = document.createElement("img");
+    cImg.setAttribute("src", "images/"+csel+".png");
+    cImg.setAttribute("alt", 'object chosen by human player');
+    cImg.setAttribute("width", "50");
+    par1.appendChild(cImg);
+    
+    var par2 = aimove.appendChild(document.createElement("p"));
+    par2.innerText = "YOU \n chose \n" + hsel;
+    par2.setAttribute("id", "par2");
+    var hImg = document.createElement("img");
+    hImg.setAttribute("src", "images/"+hsel+".png");
+    hImg.setAttribute("alt", 'object chosen by human player');
+    hImg.setAttribute("width", "50");
+    par2.appendChild(hImg);  
+    
+    var h2 = aimove.appendChild(document.createElement("h2"));
+    h2.setAttribute("id", "mesg");
+    h2.innerText = message;
+}
+   
+
+/*
+ *  function removeResults() is called by function cellClick() to remove the
+ *  elements and their content of the previous game created by function
+ *  displayResults(). It takes no arguments; modifies live DOM.
+ */   
+function removeResults() {
+    var parent = document.getElementById("aimove");
+    while(parent.hasChildNodes()) {
+       parent.removeChild(parent.lastChild);   
+    }
+}
+    
+    
+/*
+ *  function init() is called by the event listener "DOMContentLoaded".  It
+ *  sets up an event listener for each element that hold the
+ *  choice for the human player to choose by clicking on it.
+ */    
+function init() {
+    // event: when the user selects an option
+    var board = document.getElementsByTagName("DL");
+    var howMany = board.length;
+    for (let i=0; i < howMany; i++) {
+      board[i].addEventListener("click", function(){
+        cellClick(this);
+      });       
+    }
+    // event: when the user click reset button
+    document.getElementById("greset").addEventListener("click", function(){
+        location.reload();
+        }, false);
+} 
+
+
+/*
+ *
+ */
+document.addEventListener("DOMContentLoaded", init);
+</script>	    
+</body>
+</html>

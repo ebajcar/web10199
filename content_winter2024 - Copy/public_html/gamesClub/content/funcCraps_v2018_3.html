@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Casino Craps v.3.2018</title>
+	<meta charset="utf-8">
+<!--
+	Author: Ellen Bajcar
+	Program: funcCraps_v3.html
+	Date: Summer 2016 
+	Date Updated: March 2018
+	Version: 3.2018
+	Purpose: learning Javascript programming (SYST10199)
+	Copyright: This work is the intellectual property of Sheridan College. 
+		Any further copying and distribution outside of class must be within 
+		the copyright law. Posting to commercial sites for profit is prohibited.
+	Description:
+		Casino Craps v.3.2018
+		functional version
+-->
+<style>
+body {
+	background: #e0e0e0;
+    font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+main, section {
+	width: 100%;
+	margin: auto;
+	padding-top: 20px;
+	background-color: white;	
+}
+main {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	min-height: 300px;
+	display: flex;
+	justify-content: center;	
+}
+header h1 {
+	color: #6f6f6f;   
+    font-family: Lato, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+	margin: 20px 0 0;
+    text-align: center;
+    text-shadow: 0 0 0 rgba(0,0,0,.4);
+}
+footer {
+	margin: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+button {
+	padding: 1rem;
+	border: 1px solid #ccc;
+	background-color: #ddd;
+	-webkit-transition: background-color 200ms ease;
+	transition: background-color 200ms ease;
+}
+button:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+
+
+/* navigation */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav a {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover {
+    background: #c2c2c2;
+    color: #818181;
+}
+
+
+
+table {
+    margin: 0 auto;
+	background-color: transparent;
+	width: 420px;
+	text-align: center;	
+}
+td {
+	min-height: 100px;
+	background-color: transparent;
+	text-align: center;
+}
+tr:first-child > td:last-child {
+    width: 150px;
+	text-align: right;
+	padding-right: 10px;
+}
+var {
+	font-size: 4.5rem;
+}
+p {
+	margin: 0;
+	font-size: 0.8rem;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    width:100%;
+	text-align:center;
+}
+.show {
+	min-width: 280px;
+}
+.die {
+  height:100px;
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background: tomato;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #ebebeb;
+  border-right-width: 2px;
+  border-left-width: 2px;
+  border-bottom: 3px solid #ccc;
+}
+
+.die > span {
+  height: 15px;
+  width: 15px;
+  background: #222;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.die .a { top:15px;left:15px; }
+.die .b { top:15px;right: 15px; }
+.die .c { left: 15px;top: 40px; }
+.die .d { top: 40px;left:42px; }
+.die .e { top: 40px;right: 15px; }
+.die .f { bottom: 15px;left: 15px; }
+.die .g { bottom: 15px;right: 15px; }
+.die > span { opacity: 0; }
+
+#bravo {
+	float:right
+}
+table button {
+	width: 100%;
+}
+</style>		
+</head>
+<body>
+	<header>
+		<h1>Casino Craps</h1>
+	</header>
+	<nav>
+		<a href="">Home</a>
+		<a class="active" href="">Casino Craps</a>
+		<a href="">Tic Tac Toe</a>
+		<a href="">Bingo</a>
+		<a href="">Concentration</a>
+	</nav>	
+	<main>
+		<table>
+			<tr>
+				<td colspan="2">
+						<div class="wrapper">
+						  <div id="alpha" class="die">
+							<span class="a two three four five six"></span>
+							<span class="b four five six"></span>
+							<span class="c six"></span>
+							<span class="d one three five"></span>
+							<span class="e six"></span>
+							<span class="f four five six"></span>
+							<span class="g two three four five six"></span>
+						  </div>
+						  <div id="bravo" class="die">
+							<span class="a two three four five six"></span>
+							<span class="b four five six"></span>
+							<span class="c six"></span>
+							<span class="d one three five"></span>
+							<span class="e six"></span>
+							<span class="f four five six"></span>
+							<span class="g two three four five six"></span>
+						  </div>
+						</div>
+				</td>
+				<td><small>&hellip;you rolled</small><br><var id="total">&nbsp;</var></td>
+			</tr>
+
+			<tr>
+				<td>
+					<h4>Statistics</h4> 
+					<p>Wins: <span id="wins">0</span></p> 
+					<p>Losses: <span id="losses">0</span></p>
+				</td>
+				<td  class="show" colspan="2">
+					<p id="show">To start a game, roll the dice!</p>
+				</td>			
+			</tr>
+			<tr>
+				<td><button id="clear">Clear</button></td>
+				<td colspan="2"><button id="roll">Roll the dice!</button></td>			
+			</tr>			
+		</table>			
+	</main>	
+	<footer>
+		<address>SYST10199 Web Programming &copy; Sheridan College</address>
+	</footer>
+
+<script>
+const dice = [null, "one", "two", "three", "four", "five", "six"];
+const rollButton = document.getElementById("roll");
+const outcome = document.getElementById("total");
+const show = document.getElementById("show");
+const showWins = document.getElementById("wins");
+const showLosses = document.getElementById("losses");
+let point = 0;
+let wins = 0; 
+let losses = 0;
+const message = {
+	natural : "That's a natural. You win!",
+	craps 	: "That's craps. You lose!",
+	point 	: "You made your point. You win!",
+	seven 	: "That's a seven. You lose!",
+	};
+	
+rollButton.onclick = rollBoth;
+document.getElementById("clear").onclick = clear;	
+	
+
+
+function clear() { 
+	point = 0;
+	wins = 0;
+	losses = 0;
+	show.innerText = "To start a game, roll the dice!<br>";
+	showWins.innerText = wins;
+	showLosses.innerText = losses;
+	document.getElementById("alpha").innerHTML = "";
+	document.getElementById("bravo").innerHTML = "";
+	outcome.innerText = "";
+}
+
+function rollBoth() {
+	let sum = roll("alpha") + roll("bravo");
+	outcome.innerText = sum;
+	display(determineOutcome(sum)) ;
+}
+
+function roll(currDice){
+  let random = Math.floor((Math.random() * 6) + 1);
+  const thisDie = document.getElementById(currDice);
+  let clearMe = thisDie.getElementsByTagName("span");
+  let newDie = thisDie.getElementsByClassName(dice[random]); 
+  for (let i = 0; i < clearMe.length; i++) 
+		clearMe[i].style.opacity = "0"; 
+  for (let i = 0; i < newDie.length; i++) 
+		newDie[i].style.opacity = "1";
+  return random;
+}
+
+function determineOutcome(sum) {
+	if ( point == 0 ) {
+		if (sum == 7 || sum == 11) {
+			return "natural";
+		} else if (sum == 2 || sum == 3 || sum == 12) {
+			return "craps";
+		} else {
+		  point = sum; 
+          return point;
+		}
+	} else {
+        if (sum == point) {
+			point = 0; 
+            return "point";
+        } else if (sum == 7) {		
+			point = 0; 
+            return "seven";
+        } 
+	}
+}
+
+function display(msg) {
+	switch(msg) {
+		case "point":
+		case "natural":
+			show.innerText = message[msg];
+			showWins.innerText = ++wins;	
+			rollButton.innerText = "NEW GAME! Roll the dice!";		
+			break;
+		case "craps":
+		case "seven":
+			show.innerText = message[msg];
+			showLosses.innerText = ++losses;	
+			rollButton.innerText = "NEW GAME! Roll the dice!";	
+			break;			
+		default:
+			show.innerText = "Your point is " + point + ".";
+			rollButton.innerText = "Roll the dice!";	
+	}
+}
+
+</script>
+</body>
+</html>

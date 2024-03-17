@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Form Elements</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">	
-    <link rel="stylesheet" href="../../css/missing-css.css">
-    <link rel="stylesheet" href="../../css/prism_coy_dev.css">
-    <script src="../../scripts/prism.js"></script>
+  <head>
+    <title>Class examples</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: March 14, 2024
+Version: 24.3
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Explore and practice unobtrusive Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+    class example
+-->
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
     <link rel="stylesheet" href="../../css/main.css">
     <link rel="stylesheet" href="../../css/next-prev.css">
-	<style>
-	</style>
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+}        
+</style>
 </head>
-<body>
 
 
 <header class="navbar">
@@ -67,8 +95,8 @@ var cars = ["Saab", "Volvo", "BMW"];  // array</pre>
 		<li>By default, the sort() method of an array object converts all element values to strings, then sorts them in dictionary order, unless a comparison function is specified as its argument</li>
 		<li>Exception errors can be thrown from a try block to a catch block for error-handling and their name and message properties can describe the nature of the error</li>
 		<li>Arrays are numerically indexed lists of values, delimited with <code>[</code> and <code>]</code>
-<pre class="brush: js; highlight: [0]; first-line: 1" title="Code Snippet 3.02">
-var primes = [ 2,3,5,7,11 ];	// an array of prime numbers.
+<pre class="language-js">
+<code title="Code Snippet 3.02">var primes = [ 2,3,5,7,11 ];	// an array of prime numbers.
 primes[0]			// access the first element of the array
 primes.length			// length property; how many elements in the array
 primes[primes.length-1]	// references the last element in the array
@@ -97,8 +125,7 @@ newarr = primes.concat([7,8,9]);   // add new members to an array
 console.log(newarr);
 --></li>  
 		<li>Arrays and objects can hold other arrays and objects
-<pre class="brush: js; highlight: [0]; first-line: 1" title="Code Snippet 3.03">
-// an array with two elements. Each element is an object
+<pre class="language-js"><code>// an array with two elements. Each element is an object
 var points = [
 	{ x : 0, y : 0 },
 	{ x : 3, y : 7 }

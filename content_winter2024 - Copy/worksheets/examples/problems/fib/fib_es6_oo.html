@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+</style>
+</head>
+<body>
+<pre><code>
+var fibonacci = {
+    next: (function () {
+        var pre = 0, cur = 1;
+        return function () {
+            tmp = pre;
+            pre = cur;
+            cur += tmp;
+            return cur;
+        };
+    })()
+};
+
+var n;
+for (;;) {
+    n = fibonacci.next();
+    if (n > 1000)
+        break;
+    console.log(n);
+}
+</code></pre>
+
+<script>
+// first class functions can be returned by another function
+// first class functions can be assigned as to a property (method)
+var fibonacci = {
+    next: (function () {
+        var pre = 0, cur = 1;
+        return function () {
+            tmp = pre;
+            pre = cur;
+            cur += tmp;
+            return cur;
+        };
+    })()
+};
+
+
+var n;
+for (;;) {
+    n = fibonacci.next();
+    if (n > 1000)
+        break;
+    console.log(n);
+}
+</script>
+</body>
+</html>

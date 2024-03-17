@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Page1</title>
+    <link rel="stylesheet" href="css/missing-css.css">
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="css/prism-coy-23.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+	<style>
+dd {
+  padding-top: 10px;
+  
+}   
+	</style>
+</head>
+<body>
+
+
+<header class="navbar" style="height:64px;" >
+    <nav class="contents">
+      <ul role="list">
+        <li><a aria-current="page" href="form_process.html">Form porcess</a></li>
+        <li><a href="components.html">HTML&amp;CSS</a></li>
+        <li><a href="form_validation.html">Form validation</a></li>
+        <li><a href="data_validation.html">Data validation</a></li>
+        <li><a href="page5.html">Page 5</a></li>
+      </ul>
+    </nav>            
+</header>       
+            
+                                   
+<main>           
+    <h2>How forms are processed </h2>
+	<ol  class="divide-y-2 divide-gray-100">
+		<li class="p-1"><strong>value</strong>. Each element of a form can be dynamically assigned a <b>value</b> from JavaScript.</li>
+		<li class="p-1"><strong>id</strong>. If a form element contains an <b>id attribute</b>, that element can be referenced using the <code>document.getElementById()</code> method.</li>
+		<li class="p-1"><strong>id</strong>. A form element that does not contain an <b>id attribute</b> can be referenced using the <code>document.forms[].elements[]</code> arrays.</li>
+		<li class="p-1"><strong>name</strong>. The value assigned to the <b>name attribute</b> of a radio button group or checkbox button group is also the name of an array in which each button can be referenced by their index value.</li>
+		<li class="p-1"><strong>checkbox</strong>. When a form <b>radio button</b> or <b>checkbox button</b> has been selected its checked property becomes a true value.</li>
+		<li class="p-1"><strong>checked</strong>. A loop can be used to examine the checked property of each button in a button group to determine which are selected.</li>
+		<li class="p-1"><strong>options[]</strong>. The options of a <b>selection list object</b> are represented in the DOM by its options[] array</li>
+		<li class="p-1"><strong>selectedIndex</strong>. A selection list object has a <b>selectedIndex property</b> containing the array element index value of the currently-selected option</li>
+		<li class="p-1"><strong>selectedIndex</strong>. The value of the current selected option can be retrieved by specifying the selectedIndex value in the options[] array</li>
+		<li class="p-1"><strong>onchange</strong>. An event-handler function can be nominated by the <b>onchange property</b> to respond to changes in text field content</li>
+		<li class="p-1"><strong>onreset</strong>. An event-handler function can be nominated by the <b>onreset property</b> to respond when the user pushes a form’s reset button</li>
+		<li class="p-1"><strong>onsubmit</strong>. An event-handler function can be nominated by the <b>onsubmit property</b> to respond when the user pushes a submit button</li>
+		<li class="p-2"><strong>onsubmit</strong>. When the <b>onsubmit event-handler</b> returns a false value the form will not be submitted</li>
+		<li class="p-2"><strong>submit()</strong>. A form can be submitted from script by calling the <b>submit() method</b> of the form object</li>
+	</ol>  
+</main>
+
+
+<footer>
+    <address><a href="http://bajcar.dev.fast.sheridanc.on.ca/">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+    <div style="margin: 0 0 10px 0">&mdash;</div>
+</footer>
+
+
+</body>
+</html>

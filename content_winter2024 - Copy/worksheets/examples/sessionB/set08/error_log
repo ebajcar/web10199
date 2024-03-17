@@ -1,0 +1,4 @@
+[07-Aug-2021 18:23:22 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/bajcar/public_html/php10199/set08/array_count.php on line 37
+[07-Aug-2021 18:23:22 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/bajcar/public_html/php10199/set08/array_count.php on line 40
+[07-Aug-2021 18:23:22 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home2/bajcar/public_html/php10199/set08/array_count.php on line 43
+[07-Aug-2021 18:23:22 UTC] PHP Warning:  Use of undefined constant index - assumed 'index' (this will throw an Error in a future version of PHP) in /home2/bajcar/public_html/php10199/set08/array_count.php on line 63

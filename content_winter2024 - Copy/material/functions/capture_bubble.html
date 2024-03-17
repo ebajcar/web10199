@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">	
+    <link rel="stylesheet" href="../../css/missing-css.css">
+    <link rel="stylesheet" href="../../css/prism_coy_dev.css">
+    <script src="../../scripts/prism.js"></script>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/next-prev.css">
+	<style>
+	</style>
+</head>
+<body>
+
+
+<header class="navbar" style="height:64px;" >
+    <nav class="contents">
+      <ul role="list">
+        <li><a href="index.html">Events</a></li>
+        <li><a href="event_handler.html">Event Hendlers</a></li>
+        <li><a href="user_feedback.html">User Feedback</a></li>
+        <li><a href="using_events.html">Using Events</a></li>
+        <li><a aria-current="page" href="capture_bubble.html">Capture vs. Bubbling</a></li>
+      </ul>
+    </nav>            
+</header>       
+            
+                   
+<main>  
+
+    <div class="prev-next">
+        <!--   <p style="color:lightgray;">Prev</p>   -->
+        <p style="line-height: 1em;text-align:left;">
+            <a href="textual_italic_bold_underline.html">Prev</a>
+            <br><small>Previous topic</small>
+        </p>
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <ol>
+                <li><a href="../index.html"  class="allcaps">Home</a></li>
+                <li><a href="index.html">Events</a></li>
+                <li aria-current="page">Capture vs. Bubbling</li>
+            </ol>               
+        </nav> 
+        <p style="line-height:1em;text-align:right;">
+            <a href="textual_quotations_citations.html">Next</a>
+            <br><small>Next topic</small>
+        </p>
+    </div>
+    
+    
+    <section id=#e01">   
+	<h2>Event capture and bubbling</h2>
+		<p>Event bubbling is the concept that applies when the HTML document has nested elements. In this situation, one click event may trigger multiple events to fire. The last parameter of the addEventListener method accepts an optional Boolean parameter. This parameter allows you to specify the cascading or bubbling effect of the event, in which order the event processing occurs (false to bubble out, true to cascade down).</p>
+		<figure>
+<iframe style="width: 100%;height:420px;" scrolling="no" title="bubble vs. capture " src="https://codepen.io/ebajcar/embed/PzoLGK?default-tab=result&theme-id=light" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/ebajcar/pen/PzoLGK">
+  bubble vs. capture </a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+			<figcaption><strong>Example</strong>: The HTML renders three nested div elements, stacked on top of each other. The styling provides a visual distinction among the boxes. When a div box is clicked, the click event fires. The event listener in the assigned handler outputs the name of the clicked div to an ordered list so that the order in which the events are clicked is identified. Examine the following pen:</figcaption>	
+		</figure>           
+    </section>
+</main>
+
+
+<footer>
+    <address><a href="http://bajcar.dev.fast.sheridanc.on.ca/">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+    <div style="margin: 0 0 10px 0">&mdash;</div>
+</footer>
+
+</body>
+</html>
