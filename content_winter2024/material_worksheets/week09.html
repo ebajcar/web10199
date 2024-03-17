@@ -315,10 +315,77 @@ inputElement.addEventListener('blur', () => {
     <section id="p3">
         <h2>3. Practice solving problems</h2> 
         
-        <h4>
+        <h4 hidden>
   <sub-title class="allcaps">Under Review<v-h>: </v-h></sub-title>
   More coming soon&hellip;
-<h4>
+</h4>
+        <dl>
+            <dt>1. Complete a login page </dt>
+            <dd>Create a new project in <kbd>C:\public_html\syst10199\projects</kbd>, with standard file organization.</dd>
+             <dd>
+                <ol>
+                    <li>Start with the template <a href="https://www.w3schools.com/w3css/w3css_demo.asp" target="_blank">Modal Login</a>. This is the home page of your project. Name it index0.html.</li>
+                    <li>Add standard page areas: header with h1, footer with address, and navigation to register.html (see next exercise).<br>
+                        <a href="img/login_page_w3css.png">
+                            <img src="img/login_page_w3css.png" 
+                                 style="width:200px" 
+                                 title="click on the image to see larger version"
+                                 alt="sample output layout">
+                        </a>
+                    </li>  
+                    <li>[<strong>optional</strong>] You can add some introductory information about the site. Explore the W3.CSS framework <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">tutorials on w3schools</a>.</li>
+                    <li>For now, to test it change the value of the ACTION attribute as follows:
+                        <pre class="language-html" tabindex="0">
+<code>&lt;form class="w3-container" action="https://www.w3schools.com/action_page.php">
+</code></pre>         
+                </li>
+                <li>Example of validating the password field
+                <figure class="figure">
+<pre class="language-html"><code>
+&lt;form>
+  &lt;label for="pwd">Password:&lt;/label>
+  &lt;input type="password" id="pwd" name="pwd" 
+         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+         title="Must contain at least one number and one uppercase and 
+                lowercase letter, and at least 8 or more characters">
+  &lt;input type="submit">
+&lt;/form>
+</code></pre>
+<iframe style="height:130px" srcdoc='
+<form>
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+  <input type="submit">
+</form>
+'></iframe>
+<figcaption class="figure-caption"> Enter one or two characters and click Submit. Note the popup message. See more <a href="https://www.w3schools.com/tags/att_input_pattern.asp" target="">w3schools</a></figcaption>    
+    </figure></li>                
+                <li>Note that both username and password are already required fields. Can you think of any other validation that should be considered or implemented? What behaviour should be considered when the user checks the Remember me button? Capture your considerations in the comments of your document. 
+                </li>
+                <li>Convert obtrusive JavaScript to unobtrusive JavaScript.</li>
+                </ol>
+             </dd>
+        </dl>
+         
+        <dl>
+         <dt>2. Complete a registration page </dt>
+         <dd>Create a new secondary page in the same project. Use the same layout as the login page.</dd>
+            <dd>Include fields for
+                <ol>
+                    <li>first name, last name, street address, city, province, postal code,</li>
+                    <li>phone, email, web site, </li>
+                    <li>preferred browser (select only one), </li>
+                    <li>interests (make up a few topics and allow user to select all that apply), </li>
+                    <li>user name (let the user create what they want, but limit it to 10 characters and allow only <li>lowercase alpha characters), </li>
+                    <li>password (let the user choose, but ensure it contains lowercase and uppercase alpha, numbers, and symbols; must be at least 12 characters long), </li>
+                    <li>reenter password to confirm their choice (compare the two fields that they match)</li>
+                    </li>
+                </ol>
+             </dd>
+             <dd>Add HTML, CSS, and Javascript validation for all fields</dd>
+             <dd>When the user successfully submits the form, redirect them to a members_only.html page. (This is a temporary solution, so create another secondary page that has the same layout and simply welcomes the user to the site.)</dd>
+             <dd>When the user is not successful in submitting the form, redirect them to the login page. (This is a temporary solution.)</dd>
+        </dl>
     </section>
 
 
