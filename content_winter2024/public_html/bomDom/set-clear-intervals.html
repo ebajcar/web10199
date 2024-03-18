@@ -6,25 +6,25 @@
 	<title>Worksheet Three Exercises</title>
     
     <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
-    <link rel="stylesheet" href="../../css/prism-coy-23.css">
-    <script src="../../scripts/prism-coy-23.js" defer></script>
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
 	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+}        
 
-	<style>
-		:root {
-			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
-            --line-length: 60rem; /* Maximum line length for prose. */
-		}
-		dfn > code {
-			font-style: normal;
-			text-decoration: 1px dashed var(--muted-fg) underline;
-		}
-		code a {
-			font-family: inherit;
-		}
-        .current {
-            font-weight: bold;
-        }
         .big-value {
           font-size: 4em;
           font-weight: normal;
@@ -102,29 +102,14 @@
 
 	<header>
         <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Three</sub-title></h1>
-        <nav>
-            <p class="tool-bar"><a href="../../index.html">Home</a>
-            <a href="../problems/index.html">Problems</a>
-            <a href="index.html" class="current">Exercises</a>
-        </nav>
     </header>
 
     <main>
         <h2>Functions  - <small>explore properties and methods</small></h2>
-     <nav class="breadcrumbs" aria-label="breadcrumbs">
-        <ol>
-            <li><a href="index.html">Problems</a></li>
-            <li><a href="fibonacci-problem.html">Problem statement</a></li>
-            <li><a href="#">? object</a></li>
-        </ol>
-    </nav>       
 
-        
-    <p>
-        <a class="chip bad" href="" target="_blank">setInterval()</a>
-        <a class="chip warn" href="" target="_blank">clearInterval()</a>
-        <a class="chip ok" href="" target="_blank">setTimeout()</a>
-    </p>       
+    <p><a class="chip" href="https://developer.mozilla.org/en-US/docs/Web/API/setInterval" target="_blank">setInterval()</a> (global function), a method offered on the Window and WorkerGlobalScope interfaces, repeatedly calls a function or executes a code snippet, with a fixed time delay between each call. The returned intervalID is a numeric, non-zero value which identifies the timer created by the call to setInterval(); this value can be passed to clearInterval() to cancel the interval.</p>
+    <p><a class="chip warn" href="" target="_blank">clearInterval()</a></p>
+    <p><a class="chip ok" href="" target="_blank">setTimeout()</a></p>       
         
     <p>Functions — reusable blocks of code. Read more <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions" target="_blank">MDN web docs</a>. Some selected ones:</p>
  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions

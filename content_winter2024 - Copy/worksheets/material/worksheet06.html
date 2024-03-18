@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet 6</title>
+    <link rel="stylesheet" href="css/missing-css.css">
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css"-->
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing-prism.min.css"-->
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="css/prism-coy-23.js"></script>
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .thisone {
+          text-decoration: underline;
+          text-decoration-style: wavy;
+          text-decoration-color: orange;
+        }
+        footer ul {
+            list-style: none;
+        }
+	</style>
+</head>
+<body>
+	<div class="sidebar-layout fullscreen">
+      <header>
+        <div class="<h1>">SYST10199</div>
+        <nav>
+            <ul role="list">
+                <li><a href="https://ebajcar.github.io/web10199/content_summer2023/" aria-current="page">Home</a></li>
+                <li><hr></li>
+                
+                <li>JS language (client-side programming)</li>
+                    <li class="margin"><a href="worksheet01.html">Worksheet 1</a></li>
+                    <li class="margin"><a href="worksheet02.html">Worksheet 2</a></li>
+                    <li class="margin"><a href="worksheet03.html">Worksheet 3</a></li>
+                    <li class="margin"><a href="worksheet04.html">Worksheet 4</a></li>
+                    <li class="margin"><a href="worksheet05.html">Worksheet 5</a></li>
+                <li><hr></li>
+                
+                <li>PHP language (server-side programming)</li>
+                    <li class="margin thisone"><a href="worksheet06.html">Worksheet 6</a></li>
+                    <li class="margin"><a href="worksheet07.html">Worksheet 7</a></li>
+                    <li class="margin"><a href="worksheet08.html">Worksheet 8</a></li>
+                    <li class="margin"><a href="worksheet09.html">Worksheet 9</a></li>
+                    <li class="margin"><a href="worksheet10.html">Worksheet 10</a></li>
+                <li><hr></li>           
+            </ul>            
+        </nav>
+      </header>
+    
+
+      <div> <!-- body container for main and footer -->
+        <main>
+            <h1>Worksheet 6</h1>
+            <nav class="breadcrumbs" aria-label="Breadcrumbs">
+                <ol>
+                    <li><a href="#"  class="allcaps">SYST10199</a></li>
+                    <li><a href="#" aria-current="page">Worksheet 6</a></li>
+                </ol>
+            </nav>        
+ 
+             <details open>
+                <summary>On this page&hellip;</summary>
+                <ol>
+                    <li><a href="#e02">Activity 6.1. Review and preparation</a></li>
+                    <li><a href="#e03">Activity 6.2. STUDY Course material</a></li>
+                    <li><a href="#e04">Activity 6.3. PRACTICE problem solving and coding in PHP</a></li> 
+                </ol>
+            </details>
+
+             <section id="#e02">
+                <h2>Activity 6.1. Review and preparation</h2>
+                <div class="box info">
+                <p>Complete, review. dig deeper Worksheets 1, 2, 3, 4, and 5. Catchup from previous weeks.</p> 
+                <p>Revisit the <a href="" target="_blank">Class Plan Information</a> and read about Active learning, Learning course
+                content, Learning for mastery, not grades, How evaluation works, Formative & Summative Evaluation, etc.</p> 
+                <p>It is important to continue working with Javascript. Practice regularly. Refactor code, 
+                  explore different techniques to do the same thing, learn to evaluate your own work and identify how you can
+                  improve. Read and explore alternate problems and potential solution, practice communicating and collaborating
+                  with others. Write the same solution in both fully functional paradigm AND fully object-oriented paradigm.</p> 
+                  </div>
+            </section>          
+
+            
+             <section id="#e03">
+                <h2>Activity 6.2. STUDY Course material</h2>
+                <p>Explore the following pages and the links provided on these pages to primary (PHP Manual) and secondary sources (w3schools). 
+                Compare to the Javascript language.</p>
+                <dl>
+                    <dt>6.2.1. <a href="../../learnphp23/highlights.html" target="_blank">JS vs. PHP highlights</a></dt>
+                    <dd>&mdash;Compare the important features of Javascript and PHP. What is same or similar? What is different?</dd>
+                    <dd class="ok bg color">&mdash;Class example 
+                    <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set6/hello_world.php" target="_blank">Hello World!</a></dd>
+                    
+                    
+                    <dt>6.2.2. <a href="../../learnphp23/dataflow.html" target="_blank">Client-server dataflow</a></dt>
+                    <dd>&mdash;Examine how the data flows in the client-server environment. Dow do you get data from HTML page 
+                    to PHP environment? from PHP to HTML page? What role does HTML form play in the process?</dd>
+                    <dd class="ok bg color">&mdash;Class example 
+                    <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set6/say_hello.php" target="_blank">Passing data using GET method (say_hello.php)</a> &mdash; 
+                    <a href="https://bajcar.dev.fast.sheridanc.on.ca/10199/set06/say_hello.php?name=Sheridan%20College&password=abc" target="_blank">Implemented on dev.fast server</a>
+                    </dd>
+
+                    <dt>6.2.3. <a href="../../learnphp23/index.html" target="_blank">PHP Language</a></dt>
+                    <dd>&mdash;What is PHP? how does it fit with other web technologies and development strategies? 
+                    What resources are available? primary source?</dd>
+                     <dd class="ok bg color">&mdash;Class example 
+                     <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set6/using_here_doc.php" target="_blank">Pure PHP using here doc</a></dd>
+                     <dd class="warn bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set7/fibonacci_expressions.php" target="_blank">Hybrid PHP using PHP expressions &lt;?=  ?> &mdash; for and if structures &mdash; produced invalid HTML</a></dd>  
+
+
+                    <dt>6.2.4. <a href="../../learnphp23/grammar.html" target="_blank">Grammar</a></dt>
+                    <dd>&mdash;What are the start and end processing instructions? file extensions? pure and hybrid scripts? whitespace?
+                    case-sensitivity? commenting and documentation?</dd>
+
+                    <dt>6.2.5. <a href="../../learnphp23/data_types.html" target="_blank">Data types</a></dt>
+                    <dd>&mdash;What data types are supported in PHP?</dd>
+
+                    <dt>6.2.6. <a href="../../learnphp23/variables.html" target="_blank">Variables</a></dt>
+                    <dd>&mdash;what are expressions? identifiers? constants? predefined variables? how do you declare variables?
+                    what variable scopes are supported in PHP?</dd>  
+                     <dd class="ok bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set6_variables/variables1.php" target="_blank">Declaring variables</a></dd>
+                     <dd class="ok bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set6_variables/variables2.php" target="_blank">PHP variables</a></dd>
+                     <dd class="ok bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set6_variables/variables3_func_scope.php" target="_blank">Variable scope</a></dd>
+                     <dd class="ok bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set6_variables/variables4_global_key.php" target="_blank">Global keyword</a></dd>
+                     <dd class="ok bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set6_variables/variables5_static_key.php" target="_blank">Static keyword</a></dd>
+
+                    <dt>6.2.7. <a href="../../learnphp23/operators.html" target="_blank">Operators</a></dt>
+                    <dd>&mdash;what is an operator? what PHP operator types are available? what is the operator precedence?</dd>   
+
+                    <dt>6.2.8. <a href="../../learnphp23/control_flow.html" target="_blank">Program flow</a></dt>
+                    <dd>&mdash;what are simple statements? selection control structures, iteration control structures?
+                    how you include and require external files in PHP?</dd>  
+                    <dd class="bad bg color">&mdash;Class example <a href="" target="_blank"></a></dd>  
+
+                    <dt>6.2.9. <a href="../../learnphp23/collections.html" target="_blank">Data structures</a></dt>
+                    <dd>&mdash;what are indexed arrays? associative arrays? multidimensional arrays?</dd>
+                    <dd class="ok bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set7_arrays/array_indexed.php" target="_blank">Indexed array</a></dd>  
+                    <dd class="ok bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set7_arrays/array_associative.php" target="_blank">Associative arrays, foreach()</a></dd>  
+                    <dd class="ok bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set7_arrays/array_multi_dim.php" target="_blank">Multi-dimensional array</a></dd>  
+                    <dd class="ok bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set7_arrays/array_count.php" target="_blank">count() function</a></dd>  
+                    <dd class="ok bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set7_arrays/array_random.php" target="_blank">array_rand() function</a></dd> 
+                    <dd class="ok bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set7_arrays/array_ksort.php" target="_blank">ksort() function</a></dd> 
+                    <dd class="ok bg color">&mdash;Class example <a href="https://raw.githubusercontent.com/ebajcar/web10199_worksheets/master/examples/set7_arrays/array_asort.php" target="_blank">asort() function</a></dd> 
+                </dl>                
+            </section>
+
+            <section id="#e04">     
+                <h2>Activity 6.3. PRACTICE problem solving and coding in PHP</h2>
+                <p>Create a new project called  <chip>mathWorks</chip> with standard file organization (content, css, images, js) and 
+                home page (<code>index.html</code>) with appropriate navigation to secondary pages. </p>
+                
+                <p><strong>6.3.1. Problem</strong> &mdash;Write a program that adds two numbers and displays result together with the two 
+                values provided by the user.  Implement as a secondary page in the mathworks project.
+                <!--
+                <br><em>Use the modified Javascript solution <a href="" target="_blank">Click here</a> and convert the solution to PHP.</em>
+                -->
+                </p>
+                
+                <p><strong>6.3.2. Problem</strong> &mdash;Write a program that will allow the user to guess a number between 1 and 10 that
+                was randomly chosen by the program.  Implement as a secondary page in the mathworks project.
+                <!--
+                <br><em>Use the modified Javascript solution <a href="" target="_blank">Click here</a> and convert the solution to PHP.</em>
+                -->
+                </p>
+                
+                <p><strong>6.3.3. Problem</strong> &mdash;Write a program that calculates a given degrees Celsius in degrees Fahrenheit and 
+                displays a phrase that includes both values.  Implement as a secondary page in the mathworks project.
+                <!--
+                <br><em>Use the modified Javascript solution <a href="" target="_blank">Click here</a> and convert the solution to PHP.</em>
+                -->
+                </p>   
+           
+                <p><strong>6.3.4. Problem</strong> &mdash;Write a program to calculate roots of a quadratic equation.  
+                Implement as a secondary page in the mathworks project.
+                <!--
+                <br><em>Use the modified Javascript solution <a href="" target="_blank">Click here</a> and convert the solution to PHP.</em>
+                -->
+                </p> 
+           
+                <p><strong>6.3.5. Problem</strong> &mdash;Write a program to calculate area of a circle.  
+                Implement as a secondary page in the mathworks project.
+                <!--
+                <br><em>Use the modified Javascript solution <a href="" target="_blank">Click here</a> and convert the solution to PHP.</em>
+                -->
+                </p> 
+           
+                <p><strong>6.3.6. Problem</strong> &mdash;Write a program to calculate Fibonacci numbers.  
+                Implement as a secondary page in the mathworks project.
+                <!--
+                <br><em>Use the modified Javascript solution <a href="" target="_blank">Click here</a> and convert the solution to PHP.</em>
+                -->
+                </p>                 
+            </section>   
+            
+  </main>
+
+        <footer>
+            <address><a href="">SYST101099 Web Programming | Ellen Bajcar et all, FAST, Sheridan College</a></address> 
+            <p>2021-2023 &copy;  The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+            <hr style="margin: 10px 0">
+            <ul class="f-switch" role="list">
+                <li>
+                  <h2>Course Material</h2>
+                  <ul>
+                    <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                    <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                    <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                    <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                    <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                    <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                    <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+                  </ul>
+                </li>
+                <li>
+                  <h2>Resources</h2>
+                  <ul>
+                    <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                    <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                    <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+                  </ul>
+                </li>
+                <li>
+                  <h2>Sheridan College</h2>
+                  <ul>
+                    <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                    <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>
+                    <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                    <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                    <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>  
+                    <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+                    <li><a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a><span style="color:gray"><br>Office hours (by appointment)</span></li>
+                  </ul>
+                </li>
+            </ul>
+        </footer>
+     
+     </div> <!-- body container for main and footer -->
+</div> <!-- sidebar -->
+
+	
+
+</body></html>

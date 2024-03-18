@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: February 8, 2024
+Version: 24.0
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Explore and practice unobtrusive Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+    class example
+-->
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+}        
+
+        .big-value {
+          font-size: 4em;
+          font-weight: normal;
+          text-align: left;
+          text-shadow: 2px 2px 2px gray;
+          padding-bottom: 20px;
+        }
+        /*
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+        
+        */
+        input:invalid + span::after {
+          content: "✖";
+          padding-left: 5px;
+          color: lightgray;
+        }
+
+        input:valid + span::after {
+          content: "✓";
+          padding-left: 5px;
+          color: gray;
+        }
+        select {
+          width: 100%;
+        }
+ 
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Class examples</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="#">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Functions  - <small>explore properties and methods</small></h2>      
+
+        
+    <p>
+        <a class="chip bad" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function" target="_blank">functions</a>
+        <a class="chip " href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#invoking_functions" target="_blank">Invoking functions</a>
+    </p>
+    <!--
+    <p>
+        <a class="chip " href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#function_parameters" target="_blank">function parameters</a>
+        <a class="chip ok" href="Optional parameters" target="_blank">Optional parameters</a>
+        <a class="chip ok" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#default_parameters" target="_blank">Default parameters</a>
+        <a class="chip warn" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values" target="_blank">function return values</a>
+        <a class="chip bad" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions#anonymous_functions_and_arrow_functions" target="_blank">anonymous functions</a>
+    </p>       
+        
+    <p>Read more <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Return_values#Active_learning_our_own_return_value_function" target="_blank">MDN web docs</a>.</p>
+
+-->
+        
+<ul role="list" class="f-switch dense">
+    <li class="box">  
+	<h2>Enter a number
+    </h2>
+	  <input class="numberInput" type="text">
+      <h3 class="para"></h3>
+
+    </li>  
+</ul>
+	
+
+<ul role="list" class="f-switch dense">
+    <li class="box info">
+     <h4>Code snippet</h4>
+                <pre class="language-js" tabindex="0"><code class="language-js">// function called squared takes one argument and returns its squared value 
+function squared(num) {
+  return num * num;
+}
+// function called cubed takes one argument and returns its cubed value 
+function cubed(num) {
+  return num * num * num;
+}
+// function called factorial takes one parameter and returns its factorial value
+function factorial(num) {
+  let x = num;
+  while (x > 1) {
+    num *= x-1;
+    x--;
+  }
+  return num;
+}
+// onchange event method has assigned an anonymous function that retrieves 
+// the input value entered by a user; then tests if the value is numeric;
+// if yes, calls the functions squared, cubed, and factorial
+// and displays/renders on the screen
+// if no, prompts user to enter a number
+input.onchange = function() {
+  let num = input.value;
+  if (isNaN(num)) {
+    para.textContent = 'You need to enter a number!';
+  } else {
+    para.textContent = num + ' squared is ' + squared(num) + '. ' +
+                       num + ' cubed is ' + cubed(num) + '. ' +
+                       num + ' factorial is ' + factorial(num) + '.';
+  }
+}
+}</code></pre>    
+        <p id="snippet">This exercise has brought up a couple of important points besides being a study on how to use the  RETURN statement. </p>
+        <ol>
+            <li>Look at another example of writing error handling into our functions. It is generally a good idea to check that any necessary parameters have been provided, and in the right datatype, and if they are optional, that some kind of default value is provided to allow for that. This way, your program will be less likely to throw errors.</li>
+            <li>Think about the idea of creating a function library. As you go further into your programming career, you'll start to do the same kinds of things over and over again. It is a good idea to start keeping your own library of utility functions that you use very often; you can then copy them over to your new code, or even just apply it to any HTML pages where you need it.</li>
+            </ol>
+        <ul>
+    </li>
+</ul> 
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+/*
+  PROBLEM: 
+  
+  SOLUTION: 
+  1. Get (pick) a number 
+  2. define a function to call 
+  3. Call the function
+  4. display the result in the console.
+*/
+const input = document.querySelector('.numberInput');
+const para = document.querySelector('.para');
+    
+function squared(num) {
+  return num * num;
+}
+
+function cubed(num) {
+  return num * num * num;
+}
+
+function factorial(num) {
+  let x = num;
+  while (x > 1) {
+    num *= x-1;
+    x--;
+  }
+  return num;
+}
+input.onchange = function() {
+  let num = input.value;
+  if (isNaN(num)) {
+    para.textContent = 'You need to enter a number!';
+  } else {
+    para.textContent = num + ' squared is ' + squared(num) + '. ' +
+                       num + ' cubed is ' + cubed(num) + '. ' +
+                       num + ' factorial is ' + factorial(num) + '.';
+  }
+}
+
+</script>
+</body>
+</html>

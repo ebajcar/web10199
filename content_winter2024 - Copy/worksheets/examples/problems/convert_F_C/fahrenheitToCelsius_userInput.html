@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tutorial 1 Q3</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: 
+Version: 0.1
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Practice Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+	Write a simple program that converts Fahrenheit to Celsius.
+	Prompting user to enter temperature in Fahrenheit
+-->	
+</head>
+<body>
+	<header>
+		<h1>Write a simple program that converts Fahrenheit to Celsius.</h1>
+	</header>
+	<main>
+		<label>Choose value in Fahrenheit: </label>
+		<input type="number" name="f" value="32">
+		<p></p>
+		<p></p>
+	</main>
+	<footer>
+		<address>Web Programming @ Sheridan College</address>
+	</footer>
+<script>
+// initialize variables and handles
+// Do not change html code, use existing DOM nodes
+var fahrenheit, celsius;
+var textFahren = document.getElementsByTagName("p")[0];
+var textCels = document.getElementsByTagName("p")[1];
+var handleFahren = document.getElementsByName("f")[0];
+
+handleFahren.oninput = function() {
+	textFahren.innerText = "";
+	textCels.innerText = "";
+	fahrenheit = handleFahren.value;
+	celsius =  (fahrenheit - 32) * 5 / 9 ;
+	var p1Text = document.createTextNode("Temparature in Celsius is " + 
+		celsius + " °C.");
+	var p2Text = document.createTextNode("Temperature in Fahrenheit is " + 
+		fahrenheit + " °F.");
+	textFahren.appendChild(p2Text);
+	textCels.appendChild(p1Text);
+}	
+</script>	
+</body>
+</html>

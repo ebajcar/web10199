@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Elements</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">	
+    <link rel="stylesheet" href="../../css/missing-css.css">
+    <link rel="stylesheet" href="../../css/prism_coy_dev.css">
+    <script src="../../scripts/prism.js"></script>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/next-prev.css">
+	<style>
+	</style>
+</head>
+<body>
+
+<header class="navbar">
+    <nav>
+      <ul role="list">
+        <li><a href="index.html">Browser Environment</a></li>
+        <li><a aria-current="page" href="bom.html">Browser Object Model (BOM)</a></li>
+        <!--
+        <li><a href="page3.html">page3</a></li>       
+        <li><a href="page4.html">page4</a></li>
+        <li><a href="page5.html">page5</a></li>
+        -->
+      </ul>
+    </nav>            
+</header>         
+            
+                   
+<main>  
+    <div class="prev-next">
+        <!--   <p style="color:lightgray;">Prev</p>   -->
+        <p style="line-height: 1em;text-align:left;">
+            <a href="textual_italic_bold_underline.html">Prev</a>
+            <br><small>Previous topic</small>
+        </p>
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <ol>
+                <li><a href="../index.html"  class="allcaps">Home</a></li>
+                <li><a href="index.html">Browser Environment</a></li>
+                <li aria-current="page">Browser Object Model (BOM)</li>
+            </ol>               
+        </nav> 
+        <p style="line-height:1em;text-align:right;">
+            <a href="textual_quotations_citations.html">Next</a>
+            <br><small>Next topic</small>
+        </p>
+    </div>
+    
+    
+    <section id=#e01">   
+        <h2>Browser object model (BOM)</h2>
+        <p>The Browser Object Model (BOM) allows JavaScript to "talk to" the browser.</p>	
+        <p>There are no official standards for the Browser Object Model (BOM). Since modern browsers have implemented (almost) the same methods and properties for JavaScript interactivity, it is often referred to, as methods and properties of the BOM. It is a hierarchical representation of all components of a web page</p>
+        
+        <ol class="w3-ul">
+            <li>
+                <p>The <kbd>window</kbd> object is the top level in the DOM hierarchy and has properties describing the browser window. Examine the window properties:</p>
+                <figure>
+                    <p data-height="265" data-theme-id="0" data-slug-hash="rLBNoW" data-default-tab="js,result" data-user="ebajcar" data-embed-version="2" data-pen-title="windowProperties" class="codepen">See the Pen <a href="https://codepen.io/ebajcar/pen/rLBNoW/">windowProperties</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                    <figcaption><strong>Example:</strong> explore window properties</figcaption>
+                </figure>
+            </li>
+            <li>The <mark>screen</mark> object is a child of the window object and has properties describing the screen dimensions and color depth</li>
+            <li>The <mark>dialog</mark> messages can be displayed using the window object’s alert(), confirm(), and prompt() methods</li>
+            <li>A <mark>popup window</mark> can be created using the window object’s open() method but may be obstructed by a popup blocker </li>	
+            <li>The window object’s <mark>setTimeout()</mark> method creates a timer, which can be canceled later using the <mark>clearTimeout()</mark> method. Also see <a href="#exercises2">Exercise 2</a> below.</li>	
+            <li>The <mark>navigator object</mark> is a child of the window object and has properties describing the browser and host platform versions</li>	
+            <li>As the window object exists in the global namespace all its child objects need not include that part of the address, so that <mark>window.navigator</mark> can simply be referenced as <mark>navigator</mark> </li>	
+            <li class="w3-text-red">The practice of browser detection by querying the navigator properties is bad practice – feature detection should be used instead to ensure that DOM support exists <a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection" target="_blank">See Feature Detection at MDN</a>.</li>	
+            <li>The <mark>navigator.plugins</mark> and <mark>navigator.mimeTypes</mark> properties are both arrays on Mozilla browsers, in which each element contains details of a supported feature</li>	
+            <li>The <mark>location object</mark> is a child of the window object and has properties describing the address of the loaded document</li>
+            <li>The <mark>history object</mark> is a child of the window object that contains an array of visited locations in the current session and has methods to navigate along its elements</li>								
+        </ol>	      
+    </section>
+</main>
+
+
+<footer>
+    <address><a href="http://bajcar.dev.fast.sheridanc.on.ca/">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+    <div style="margin: 0 0 10px 0">&mdash;</div>
+</footer>
+
+
+</body>
+</html>

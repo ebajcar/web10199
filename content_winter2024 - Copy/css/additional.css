@@ -1,0 +1,137 @@
+dl, ol {
+  margin-bottom: 16px;
+}
+h4, h3 {
+  margin-top: 16px;
+}
+.ordered-list {
+  list-style-type: decimal;
+}
+.text-danger {
+  color: red;
+}
+.bg-dark-gray  {
+  background-color: #333940;
+}
+code {
+  color: black !important;
+}
+.sher-teal {
+  color: #00b2ce;
+}
+figcaption {
+  color: #00b2ce;
+  font-weight: 500;
+}
+.active {
+  font-weight: bold;
+}
+.list-inside{list-style-position:inside}
+.list-outside{list-style-position:outside}
+.list-none{list-style-type:none}
+.list-disc{list-style-type:disc}
+.list-circle{list-style-type:circle}
+.list-decimal{list-style-type:decimal}
+
+/* sql.html */
+* {
+  box-sizing: border-box;
+}
+span.template-3col, span.template-4col {
+  background: #fff;
+  padding: 0.2rem;
+  border-radius: 7px;
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.42);
+  height: 20vh;
+  display: grid;
+  grid-gap: 0.5rem;
+}
+span b {
+  background-color: #333940;
+  border-radius: 4px;
+  padding: 0.2rem 1.5rem;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+span b small {
+    line-height:1;
+    text-align:center;
+    font-variant:small-caps;
+    border-top:1px white solid;
+    font-size:0.5em;
+    padding-bottom:6px;
+}
+span b a, span b a:hover {
+  padding: 0;
+  margin: 0;
+  color: yellow;
+  text-decoration: none;
+  display: block;
+}
+span.template-3col {
+  grid-template-columns: repeat(3, 1fr);
+}
+span.template-4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+td, th {
+  border: 1px solid lightgray;
+  padding: 2px 6px;
+}
+td:first-child {font-weight: bold;}
+
+.func-border li {
+  border: 1px solid lightgray;
+  margin: 4px;
+  padding: 2px 4px;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+
+/* forms */
+	.table {
+		border-spacing: 0 15px;
+	}
+
+	i {
+		font-size: 1rem !important;
+	}
+
+	.table tr {
+		border-radius: 20px;
+	}
+
+	tr td:nth-child(n+5),
+	tr th:nth-child(n+5) {
+		border-radius: 0 .625rem .625rem 0;
+	}
+
+	tr td:nth-child(1),
+	tr th:nth-child(1) {
+		border-radius: .625rem 0 0 .625rem;
+	}
+
+
+.date:after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid #e2e8f0;
+  top: 12px;
+  width: 150px;
+}
+
+.date:after {
+  margin-left: 15px;
+}
+section {
+  margin-bottom: 30px;
+}
+.bg-dark-gray  {
+  background-color: #333940;
+}
+.sher-teal {
+  color: #00b2ce;
+}
