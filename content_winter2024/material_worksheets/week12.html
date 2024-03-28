@@ -52,29 +52,96 @@
     </div>
 
  
-    <blockquote style="font-size:1.4em;color:orange;">Under review - will be made available at a later time.</blockquote>
+    <blockquote hidden style="font-size:1.4em;color:orange;">Under review - will be made available at a later time.</blockquote>
 
     <!-- 1. Review from previous weeks -->
     <section id="p1">
         <h2>1. Review</h2>
 
-                <dt><a href="" target="_blank"></a></dt>  
-                <dd>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </dd> 
-                
- 
-                <dt><a href="" target="_blank"></a></dt>  
-                <dd>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </dd>          
+        <details>
+        <summary>Review material from Worksheets 1 to 11</summary>
+        <dl>           
+            <dt><a href="https://terminallearning.com/nodejs/cpanel.html" target="_blank">Running a Node.js App on cPanel</a></dt>  
+            <dd>
+                <ul>
+                    <li><em>Setting Up your Application on cPanel</em>&mdash;  what is cPanel? </li>
+                    <li><em>Apps with Third-Party Packages</em>&mdash;   did you test your apps on the server? </li>
+                    <li><em>Debugging with console.log()</em>&mdash;   did you try it? why do we need to debug this way on the server?</li>
+                </ul>
+            </dd> 
+        </dl>
+        
+        
+        <dl>
+            <dt><a href="https://terminallearning.com/nodejs/projectstructure.html" target="_blank">Node.js Project Structure</a></dt>  
+            <dd>
+                <ul>
+                    <li>Use <kbd>public</kbd> directory to store <kbd>css</kbd>, <kbd>js</kbd> (client-side scripts), and <kbd>images</kbd></li>
+                    <li></li>
+                </ul>
+            </dd>        
+        </dl>
+        
+        
+        <dl>
+            <dt><a href="https://terminallearning.com/basic/formProcessing.html" target="_blank">Processing Form Submission</a></dt> 
+            <dd>
+                <ul>
+                    <li>The action="" Attribute</li>
+                    <li>Query Strings</li>
+                    <li>GET vs POST Requests, </li>
+                    <li>Use POST when transmitting Sensitive Data, writing to a File/Database, transmitting Large Amounts of Data or Mixed Types of Data</li>
+                </ul>
+            </dd>
+        </dl>
+        
+        
+        <dl>        
+            <dt><a href="https://terminallearning.com/nodejs/routebasic.html#ex" target="_blank">Routing Requests</a></dt>  
+            <dd>
+            Examples: A Simple Route Handler (<kbd>/route_handler_simple</kbd>), Routing Requests for Files (<kbd>/route_handler_better</kbd>), Practice Exercises (<kbd>/ex4</kbd>)
+            </dd>
+            <dd>
+                <ul>
+                    <li>A route is a specific pathway or chain of functions that will execute for a specific request. A route uses a URL Pattern, which is a string containing a pattern of characters/values that are in the URL.</li>
+                    <li>A route handler (or router) is code that handles all the routes for a specific application. A route handler is exececuted when a certain URL is requested.</li>
+                </ul>
+            </dd>          
+        </dl>
 
+
+        <dl> 
+            <dt><a href="https://terminallearning.com/nodejs/expressRoutes.html" target="_blank">Basic Routing with Expres.js</a></dt> 
+            <dd>
+            Examples: First Express Application (<kbd>/firstExpress</kbd>),
+            </dd>        
+            <dd>
+                <ul>
+                    <li>Middleware in Express are functions that come into play after the server receives the request and before the response is sent to the client. They are arranged in a chain and are called in sequence. <a href="https://reflectoring.io/express-middleware/">Source</a> Express provides methods to specify the function to be called for a particular HTTP verb (GET, POST, SET, etc.) and URL pattern (“Route”).</li>
+                    <li><a href="" target="_blank">Express API reference</a> provides syntax and grammar for all available functions, including app.set(), app.get(), app.post(), app.use(), app.listen()</li>
+                    <li>URL patterns - 
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet" target="_blank">Regular expression syntax cheat sheet (MDN web docs)</a>, 
+                        <!--
+                          MDN overview: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions
+                          Guide
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions
+                        -->
+                        <a href="https://www.freecodecamp.org/news/how-to-write-a-regular-expression-for-a-url/">URL RegEx Pattern – How to Write a Regular Expression for a URL</a></li>
+                </ul>
+            </dd>  
+        </dl>
+        
+  
+        <dl hidden>     
+            <dt><a href="" target="_blank"></a></dt>  
+            <dd>
+                <ul>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </dd> 
+        </dl>    
+        </details>
     </section>
 
 
@@ -83,53 +150,85 @@
     <section id="p2">
         <h2>2. Explore and Dig deeper</h2>
  
-       <details open>
-            <summary>Activity 1. Introducing MVC</summary>
-            
-            <dl>           
-                <dt>Complete <a href="" target="_blank">The MVC Design Pattern</a></dt>   
+        <details open>
+        <summary>Activity 1. Introducing MVC, EJS, and sessions</summary> 
 
-                <dd hidden><a href="" target="_blank"> </a> </dd>
-                
-                 <dt>Complete <a href="" target="_blank">MVC with Express</a></dt>   
-                <dd>Routing with Node.js</dd> 
 
-                <dt>Complete <a href="" target="_blank">EJS Template</a></dt>   
-                <dd></dd> 
-                
-                <dt>Complete <a href="" target="_blank">Serving Static Files</a></dt>  
-                <dd></dd>                
-            </dl>              
-        </details> 
 
+        <dl>     
+            <dt><a href="https://terminallearning.com/javafx/mvc.html" target="_blank">The MVC Design Pattern</a></dt>  
+            <dd>
+                <ul>
+                    <li>The Model-View-Controller (MVC) Pattern: <em>Model</em> represents an object. <em>View</em> represents the visualization of the data that model contains. Controller acts on both model and view. <em>Controller</em> controls the data flow into model object and updates the view whenever data changes. controller keeps view and model separate. <a href="https://www.tutorialspoint.com/design_pattern/mvc_pattern.htm" target="_blank">Source</a></li>
+                    <li>"The MVC design pattern inserts a controller class between the view and the model to remove the model-view dependencies. With the dependencies removed, the model, and possibly the view, can be made reusable without modification.  This makes implementing new features and maintenance a breeze." <a href="https://www.tomdalling.com/blog/software-design/model-view-controller-explained/" target="_blank">Source</a> </li>
+                    <li>"In software engineering, SOLID is a mnemonic acronym for five design principles intended to make object-oriented designs more understandable, flexible, and maintainable." <br>
+                    <b>S</b>ingle responsibility,  
+                    <b>O</b>pen-closed,  
+                    <b>L</b>iskov substitution,  
+                    <b>I</b>nterface segregation, 
+                    <b>D</b>ependency inversion. 
+                    <a href="https://en.wikipedia.org/wiki/SOLID" target="_blank">Source</a> </li>                    
+                </ul>
+            </dd> 
+        </dl> 
+
+
+        <dl>     
+            <dt><a href="https://terminallearning.com/nodejs/expressMvc.html" target="_blank">MVC with Express (Model View Controller)</a></dt>  
+            <dd>
+                <ul>
+                    <li>Model View Controller in Express</li>
+                    <li>Creating an Express MVC Application</li>
+                    <li>Adding a Dynamic View</li>
+                    <li>Adding a Model</li>
+                    <li>Exercises: project /circle</li>
+                </ul>
+            </dd> 
+        </dl> 
+
+  
+        <dl>     
+            <dt><a href="https://terminallearning.com/nodejs/mvcEjs.html" target="_blank">EJS Template</a></dt>  
+            <dd>        
+                <dl>
+                    <dt>Templates are views that contain placeholders. </dt>
+                    <dd>Embedded JavaScript templating (EJS) "is a simple templating language that lets you generate HTML markup with plain JavaScript. No religiousness about how to organize things. No reinvention of iteration and control-flow. It's just plain JavaScript." <a href="https://ejs.co/" target="_blank">Source</a> </dd>
+                     <dd>
+                        <ul>
+                            <li>Output Tags (Expressions)</li>
+                            <li>Scriptlets: If Statements (selection)</li>
+                            <li>Scriptlets: Loops (iteration)</li>
+                        </ul>
+                    </dd>                       
+                    <dt>Install ejs:</dt>
+                    <dd><code>npm install express ejs -s</code></dd>
+                </dl>
+
+            </dd> 
+        </dl>
 
         
-        <details hidden>
-            <summary>Activity 1. -</summary>
-            
-            <dl>
-            
-                <dt>Complete MDN tutorial <a href="" target="_blank">xxx</a></dt>           
-                <dd><a href="" target="_blank">link</a> </dd>
-                
-                <dd>Explore w3schools tutorials
-                    <ul style="column-count: 2">                      
-                        <li><a href="" target="_blank">x</a></li>
-                        <li><a href="" target="_blank">x</a></li>
-                    </ul>  
-                </dd> 
-                
-                <dt>Complete MDN tutorial <a href="" target="_blank">xxx</a></dt>           
-                <dd><a href="" target="_blank">link</a> </dd>     
-                <dd>Explore w3schools tutorials
-                    <ul style="column-count: 2">                      
-                        <li><a href="" target="_blank">x</a></li>
-                        <li><a href="" target="_blank">x</a></li>
-                    </ul>  
-                </dd>                
-            </dl>   
-            
-        </details>     
+        <dl>     
+            <dt><a href="https://terminallearning.com/nodejs/sessions.html" target="_blank">Sessions in Express</a></dt>  
+            <dd><a href="https://expressjs.com/en/resources/middleware/session.html" target="_blank">Express Sessions documentation</a></dd>
+            <dd>
+                <ul>        
+                    <li>Session options: secret, resave, saveUnitiated, cookie</li>
+                    <li>req.session property</li>
+                    <li>session example</li>
+                </ul>            
+            </dd>
+            <dt>Install express-session:</dt>
+            <dd>
+               <code>npm install express express-session --save</code>
+            </dd> 
+        </dl>  
+  
+
+             
+        </details> 
+
+   
     </section>
 
 
@@ -138,10 +237,88 @@
     <!-- 3. Practice -->
     <section id="p3">
         <h2>3. Practice solving problems</h2> 
-                
-        <p hidden>e. Complete <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website" target="_blank">Express Tutorial: The Local Library website</a></p> 
+        
+        <dl>  
+            <dt>A. Read through and make notes  
+                <a href="https://terminallearning.com/javafx/mvc.html" target="_blank">The MVC Design Pattern</a> and <a href="https://terminallearning.com/nodejs/expressMvc.html" target="_blank">MVC with Express (Model View Controller)</a>
+            </dt>
+            <dd>Complete the project <kbd>/expressMvc/menu</kbd> locally. Make sure you add appropriate prologue and comments to every file. Publish and test on dev.fast.sheridanc.on.ca.</dd>
+            <dd>Complete the circles exercises <kbd>/expressMvc/circle1</kbd>, <kbd>/expressMvc/circle2</kbd>, <kbd>/expressMvc/circle3</kbd> locally. Make sure you add appropriate prologue and comments to every file. Publish and test on dev.fast.sheridanc.on.ca. Sample circle.js file:
+<pre class="language-js"><code>module.exports = class Circle {
+    constructor(radius=1) {
+        this.radius = radius;
+    }
+    get circumference() {
+        return 2 * Math.PI * this.radius;
+    }
+    get area() {
+        return Math.PI * this.radius ** 2;
+    }
+    toString = function() {
+        return `Circle: radius=${this.radius.toFixed(1)}`;
+    }
+}</code></pre>           
+            </dd>
+        </dl>         
+
+        <dl>
+            <dt>B. Read through and make notes  
+               <a href="https://terminallearning.com/nodejs/mvcEjs.html" target="_blank">EJS Template</a>
+            </dt>
+            <dd>Complete the project (ifs) <kbd>/expressMvc/esj1</kbd> locally. Make sure you add appropriate prologue and comments to every file. Publish and test on dev.fast.sheridanc.on.ca.</dd>
+            <dd>Complete the project (loops) <kbd>/expressMvc/esj2</kbd> locally. Make sure you add appropriate prologue and comments to every file. Publish and test on dev.fast.sheridanc.on.ca.</dd>            
+        </dl>
+               
+
+        <dl>
+            <dt>C. Read through and make notes  
+                <a href="https://terminallearning.com/nodejs/sessions.html" target="_blank">Sessions in Express</a>
+            </dt>
+            <dd>Complete the session project <kbd>/expressMvc/sessions</kbd> locally. Make sure you add appropriate prologue and comments to every file. Publish and test on dev.fast.sheridanc.on.ca.</dd>
+        </dl>
+
+        <p class="box warn"><strong>Note:</strong> since you can have only four (4) Node.js  projects active on the dev.fast.sheridanc.on.ca server , make notes and take screen shots as you add, register, and test your apps. Then unregister them to make room for more. <b>Keep your /zodiac project active on the server</b> until Assignment 6 is marked.</p>
+
+<figure>
+<figcaption>Example comments</figcaption>
+<pre class="language-js"><code>app.set("port", process.env.PORT || 3000);
+
+/*
+Source: https://expressjs.com/en/4x/api.html#app.use
+app.use mounts the specified middleware function or functions at the 
+specified path: the middleware function is executed when the base of 
+the requested path matches path.  
+Syntax: app.use([path,] callback [, callback...])
+
+A route will match any path that follows its path immediately with a “/”. 
+For example: app.use('/apple', ...) will match “/apple”, “/apple/images”, 
+“/apple/images/news”, and so on.
+
+Since path defaults to “/”, middleware mounted without a path will be 
+executed for every request to the app.  
+For example, this middleware function will be executed for every request 
+to the app:
+*/
+app.use((req, res, next) => {
+    console.log(`${req.method} request made to: ${req.url}`);
+    console.log("req.headers");
+    console.log(req.headers);
+    next(); // invoke next function                                  
+});</code></pre>
+</figure>
+         <dl hidden>
+            <dt>B. Read through and make notes  
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website" target="_blank">Express Tutorial: The Local Library website</a>
+            </dt>
+            <dd>Complete the project locally. Publish and test on dev.fast.sheridanc.on.ca.</dd>
+        </dl>
+        
     </section>
 
+
+
+
+<!-- prev/next footer in main -->
     <footer class="f-row flex-wrap:wrap justify-content:space-between">       
             <div>Previous ←
                 <strong><a href="week11.html">Worksheet 11</a></strong>
