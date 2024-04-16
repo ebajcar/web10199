@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minimal HTML5 Document</title>
+	<meta charset="utf-8">
+<style>
+* { 
+	box-sizing: border-box; 
+}
+html, body {
+	height: 100%;
+	width: 100%;
+	background: #eff3fa;
+	font-family: sans-serif;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+main {
+    width:50%;
+	text-align:center;
+}
+/* parts of output */
+aside {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 35%;
+	height: 50%;
+    border-left: 1px solid orange;
+	margin-top: 10px;
+	padding: 5px;
+}
+.show {
+    height: 100%;
+	overflow-y: scroll;
+	height: 60%;
+	margin-right: 120px;
+}
+footer, header {
+	margin-left: 10%;
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-right: 10%;
+}
+.die {
+	height: 100px;
+	width: 100px;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+	background-color: black;
+	color: white;
+	border-radius: 4px;
+	border: 1px solid #ebebeb;
+	box-shadow: 5px 5px 5px gray;
+	font-size: 80px;
+}
+button {
+	color: tomato;
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid tomato;
+	font-size: 30px;
+	outline: 0 solid white;
+}
+.total {
+	margin: 0 auto;
+	float: right;
+	padding-left: 20px;
+	width: 200px;
+}
+var {
+font-size: 10rem;
+}
+p {
+	clear: both
+	font-weight: bold;
+	font-size: 1.2em;
+}
+small {
+	text-align: left;
+}
+.roll {
+	width: 40%;
+}
+</style>		
+</head>
+<body>
+	 <aside>
+		<button id="clear">Clear</button>
+		<p>Wins: <span id="wins">0</span> Losses: <span id="losses">0</span></p>
+		<div id="show" class="show">To start a game, roll the dice!<br></div>
+	</aside> 
+	<header>
+		<h1>Casino Craps</h1>
+	</header>
+	<main>
+		<div class="total">
+			<small>You rolled&hellip;</small><br><var id="total"></var>
+		</div>
+		<div id="alpha" class="die"></div>
+		<div id="bravo" class="die"></div>		
+		<button id="roll" class="roll">Roll the dice!</button>				
+	</main>	
+	<footer>
+		<hr><address>2018 &copy; SYST10199 Web Programming, Sheridan College</address>
+	</footer>
+
+<script>
+document.getElementById("roll").onclick = rollBoth;
+document.getElementById("clear").onclick = clear;
+var outcome = document.getElementById("total");
+var show = document.getElementById("show");
+var showWins = document.getElementById("wins");
+var showLosses = document.getElementById("losses");
+var point = 0;
+var wins = 0; 
+var losses = 0;
+	
+function roll(x){
+  var random = Math.floor((Math.random() * 6) + 1);
+  document.getElementById(x).innerHTML = random;
+  return random;
+}
+
+function clear() { 
+	show.innerHTML = ""; 
+	point = 0;
+	wins = 0;
+	losses = 0;
+	showWins.innerHTML = 0;
+	showLosses.innerHTML = 0;
+}
+
+function rollBoth() {
+	var dice1 = roll("alpha"); 
+	var dice2 = roll("bravo");
+    var total = dice1 + dice2;
+	outcome.innerHTML = total;
+	if ( point == 0 ) {
+		if (total == 7 || total == 11){
+		  show.innerHTML = "That's a natural. You win!" +"<hr>NEW GAME<br>";
+		  showWins.innerHTML = ++wins;
+		} else if (total == 2 || total == 3 || total == 12) {
+		  show.innerHTML = "That's craps. You Lose." + "<hr>NEW GAME<br>";			  
+		  showLosses.innerHTML = ++losses;		  
+		} else {
+		  point = total;
+		  show.innerHTML = "Your point is " + point + ". Roll again!<br>";  
+		}
+	} else {
+        if (total == point) {
+			show.innerHTML = "You made your point. You win." + "<hr>NEW GAME<br>"; 
+			showWins.innerHTML = ++wins;		  
+			point = 0;
+        } else if (total == 7) {
+			show.innerHTML = "That's a 7. You lose." + "<hr>NEW GAME<br>"; 
+			showLosses.innerHTML = ++losses;		  
+			point = 0;
+        } else {
+			show.innerHTML += "Roll again!<br>";	
+		}
+	}
+}
+</script>
+</body>
+</html>

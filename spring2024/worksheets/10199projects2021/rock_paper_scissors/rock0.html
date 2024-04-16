@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>R-P-S v.0.0</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" />
+<!--
+File name: rockImg.html
+Author: Ellen Bajcar
+Date created: 2015
+Date modified: February 2018
+Version: 0.0
+Description:
+	game of rock-paper-scissors
+	human player vs. computer
+-->		
+<style>
+body {
+    text-align:center;
+}
+p {
+    font-family:monospace;
+}
+#aimove { 
+	display: block; 
+	width: 600px; 
+	margin: 0 auto; 
+	height: 100px; 
+	border: 1px dotted lightgray; 
+}
+</style>
+</head>
+<body>
+	<h1>Rock&mdash;Paper&mdash;Scissors (no images)</h1>
+	<div id="aimove"></div>
+	<form>
+		<label>Your move:</label>
+		<select id="move">
+			<option value="rock">rock</option>
+			<option value="paper">paper</option>
+			<option value="scissors">scissors</option>
+		</select>		
+	</form>
+	<p>
+		<button id="greset">Reset game</button>
+	</p> 
+		
+<script>
+	// declare and initialize variables
+
+	// event: when the user selects an option
+	document.getElementById("move").addEventListener("click", 
+		function(){
+			// machine choose randomly (1,2, or 3)
+			 
+			//get the value at corresponding index
+			
+			// get the user's choice
+			var hsel = document.getElementById("move").value; 
+			
+			if ( csel == hsel ) 
+				message = " IT'S A TIE! "; 
+			else
+				winner[csel] == hsel 
+					? message = " YOU WIN! " 
+					: message = " MACHINE WINS! ";
+			
+			// display results
+		}, true);
+		
+	// event: when the user click reset button
+	document.getElementById("greset").addEventListener("click", 
+			function(){ location.reload();});
+</script>		
+</body>
+</html>
