@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minimal HTML5 Document</title>
+	<meta charset="utf-8">
+<!--
+File name: consoleCraps.html
+Author: 
+Date created: 
+Date modified:
+Version: 1.0
+Description:
+	console procedural version
+	Program to play the casino game of Craps. 
+	At the beginning of the game, 
+		the player rolls a pair of dice and computes the total. 
+		If the total is 2, 3, or 12 (called "craps"), the player loses. 
+		If the total is 7 or 11 (called a "natural"), the player wins.
+		If the total is any other number, that number becomes the "point". 
+			From here, the player keeps rolling the dice until 
+				(a) the point comes up again, in which case the player wins, or 
+				(b) a 7 appears, in which case the player loses. 
+				The numbers 2,3,11, and 12 no longer have special 
+					significance after the first rolls.			
+-->	
+<style>
+* { 
+	box-sizing: 
+	border-box; 
+}
+html, body {
+	height: 100%;
+	width: 100%;
+	font-family: sans-serif;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+main {
+	display: flex;
+	align-items: right;
+	flex-flow: column nowrap;
+	justify-content: right;
+    width: 70%;
+}
+</style>		
+</head>
+<body>
+	<header><h1>Home Page</h1><hr></header>
+	<main>
+		<h1>Casino Craps Game</h1>
+		<p>Program to play the casino game of Craps. 
+		At the beginning of the game, the player rolls 
+		a pair of dice and computes the total. If the 
+		total is 2, 3, or 12 (called "craps"), the player 
+		loses. If the total is 7 or 11 (called a "natural"), 
+		the player wins.</p> 
+		<p>If the total is any other number, 
+		that number becomes the "point". From here, the 
+		player keeps rolling the dice until (a) the point 
+		comes up again, in which case the player wins, or 
+		(b) a 7 appears, in which case the player loses. 
+		The numbers 2,3,11, and 12 no longer have special 
+		significance after the first rolls.</p>
+		<iframe src="https://pastebin.com/embed_iframe/aLqsXPKS" style="border:none;width:100%"></iframe>
+	</main>
+	<footer>
+		<hr><address>2017-2018 @ Sheridan College, SYSt10199 Web Programming</address>		
+	</footer>
+<script>
+/* 	
+	At the beginning of the game, the player rolls a pair of dice 
+	and computes the total. 
+*/ 
+var dice1 = Math.floor((Math.random() * 6) + 1);
+var dice2 = Math.floor((Math.random() * 6) + 1);
+var total = dice1 + dice2; 
+console.log("Rolling dice: " +
+	  dice1 + " + " + dice2 + " = " + total);
+
+//  If the total is 2, 3, or 12 (called "craps"), the player loses. 
+// 	If the total is 7 or 11 (called a "natural"), the player wins. 
+if (total == 7 || total == 11){
+  console.log("That's a natural. You win!");
+} else if (total == 2 || total == 3 || total == 12) {
+  console.log("That's craps. You Lose.");
+} else {
+//	If the total is any other number, that number becomes the "point". 
+  var point = total;
+  console.log("Your point is " + point);
+/*
+	From here, the player keeps rolling the dice until 
+	(a) the point comes up again, in which case the player wins, or 
+	(b) a 7 appears, in which case the player loses. 
+	The numbers 2,3,11, and 12 no longer have special 
+	significance after the first rolls.
+*/	  
+  while (true) {
+	dice1 = Math.ceil((Math.random() * 6) + 1);
+	dice2 = Math.ceil((Math.random() * 6) + 1);
+	total = dice1 + dice2; 
+	console.log("Rolling dice: " +
+	  dice1 + " + " + dice2 + " = " + total);
+	if (total == point) {
+	  console.log("You made your point. You win.");
+	  break;
+	} else if (total == 7) {
+	  console.log("That's a 7. You lose.");
+	  break;
+	}
+  }    
+}  
+</script>
+</body>
+</html>

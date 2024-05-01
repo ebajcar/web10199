@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Casino Craps Instructions</title>
+	<meta charset="utf-8">
+		
+</head>
+<body>
+	 <aside>
+		<button id="clear">Clear</button>
+		<p>Wins: <span id="wins">0</span> Losses: <span id="losses">0</span></p>
+		<div id="show" class="show">To start a game, roll the dice!<br></div>
+	</aside> 
+	<header>
+		<h1>Casino Craps</h1>
+	</header>
+	<main>
+		<div class="total">
+			<small>You rolled&hellip;</small><br><var id="total"></var>
+		</div>
+		<div id="alpha" class="die"></div>
+		<div id="bravo" class="die"></div>		
+		<button id="roll" class="roll">Roll the dice!</button>				
+	</main>	
+	<footer>
+		<hr><address>2018 &copy; SYST10199 Web Programming, Sheridan College</address>
+	</footer>
+
+<script>
+// outcome is a handle to id=total
+var outcome = document.getElementById("total");
+// show is a handle to id=show
+var show = document.getElementById("show");
+// showWins is a handle to id=wins
+var showWins = document.getElementById("wins");
+// showLosses is a handle to id=losses
+var showLosses = document.getElementById("losses");
+// point is an integer that stores the point value, or 0 if there is no point
+var point = 0;
+// wins keeps track of winning statistics
+var wins = 0;
+// losses keeps track of losses statistics
+var losses = 0;
+// message is an object that holds text for natural, craps, point, and seven
+var message = {
+	natural : "That's a natural. You win!",
+	craps : "That's craps. You Lose.",
+	point : "You made your point. You win.",
+	seven : "That's a 7. You lose."
+};
+
+// onclick event for button with id=roll that will run the rollBoth() function
+document.getElementById("roll").onclick = rollBoth;
+// onclick event for button with id=clear that will run the clear() function
+document.getElementById("clear").onclick = clear;
+// roll(dice) function that will calculate a random number, 
+// display on the dice and return the random number	
+function roll(dice){
+//	var random = Math.floor((Math.random() * 6) + 1);
+//	return random;
+    return Math.floor((Math.random() * 6) + 1);
+}
+
+// clear() clears point, wins, losses, show, showWins, and showLosses
+function clear() { 
+	point = 0;
+	wins = 0;
+	losses = 0;
+	show.innerHTML = "To start a game, roll the dice!<br>";
+	showWins.innerHTML = "0";
+	showLosses.innerHTML = "0";
+	outcome.innerHTML = "";
+}
+
+// creates dice1 and dice2, calculates total
+// displays total in outcome and calls the determineOutcome(total)
+function rollBoth() {
+	var dice1 = roll("alpha");
+	document.getElementById("alpha").innerHTML = dice1;
+	var dice2 = roll("bravo");
+	document.getElementById("bravo").innerHTML = dice2;
+	var total = dice1 + dice2;
+	outcome.innerHTML = total;
+	determineOutcome(total);
+}
+
+// compares total to the rules and determines outcome (state of the game)
+function determineOutcome(total) {
+	if (point == 0) {
+		if (total == 7 || total == 11){
+		  display("natural", showWins, ++wins);				  
+		} else if (total == 2 || total == 3 || total == 12) {
+		  display("craps", showLosses, ++losses);		  
+		} else { 
+		  point = total;
+		  show.innerHTML = "Your point is " + point + ". Roll again!"
+		}
+	} else {
+		if (total == point) {
+		  display("point", showWins, ++wins);		  
+		  point = 0;
+		} else if (total == 7) {
+		  display("seven", showLosses, ++losses);
+		  point = 0;
+		}
+	} 
+}
+function display(msg, c, w) {
+	show.innerHTML = message[msg];
+	c.innerHTML = w;
+}
+
+</script>
+</body>
+</html>
