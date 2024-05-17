@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>htmlForms - Example10_017</title>   
+<!--
+Author:       Ellen Bajcar
+Program:      10.html (orig. example10_017.html)
+Date:         Winter 2017
+Updated:      May 10, 2024
+Version:      11.8
+Purpose:      create a styled web app/site
+Copyright:    
+    The materials provided in class and through SLATE are protected by copyright. They are intended 
+    for the personal, educational uses of students in this course and should not be shared externally 
+    or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright 
+    infringement and violation of Sheridan policies.
+Citations:    
+    original source material can be found (subject to original author's copyrights):
+Description: 
+    Web app/site developed using Progressive Enhancement (PE) approach, 
+    core HTML5 and CSS 3/4 technologies; standard page layout, responsive design
+-->
+    <link rel="stylesheet" href="../css/main.css">
+<style>
+form fieldset {
+  display: inline-block;
+}
+form label {
+  width: 14em;
+  margin-right: 1em;
+  float: left;
+  text-align: right;
+  display: block;
+}
+form legend {
+  font-size: 2em;
+}
+option[title], span {
+  color: blue;
+}
+</style>
+<body>
+	<header>
+        <h1>Styling Form Elements</h1>
+    </header>
+    <nav>
+        <a href="../index.html" class="current">Home</a>
+        <a href="1.html">Sample form</a>
+        <a href="2.html">Select</a>
+        <a href="3.html">Fieldset</a>
+        <a href="7.html">Range</a>
+        <a href="10.html">Provinces</a>
+        <a href="21.html">Labels</a>
+        <a href="2405.html">Radio/checkbox</a>
+    </nav>
+    <main>
+        <h2>Fieldset and Legend, Select and Options</h2> 
+        <form>
+            <fieldset>
+                <legend>Provinces and Territories of Canada</legend>
+                <label for="prov">Province (<span>Territory</span>): </label>
+                <select id="prov" name="prov">
+                    <option>Alberta (AB)</option>
+                    <option>British Columbia (BC)</option>
+                    <option>Manitoba (MB)</option>
+                    <option>New Brunswick (NB)</option>			
+                    <option>Newfoundland and Labrador (NL)</option>
+                    <option title="Territory">Northwest Territories (NT)</option>
+                    <option>Nova Scotia (NS </option>
+                    <option title="Territory">Nunavut (NU)</option>
+                    <option>Ontario (ON)</option>
+                    <option>Prince Edward Island (PE)</option>
+                    <option>Quebec (QC)</option>
+                    <option>Saskatchewan (SK)</option>
+                    <option title="Territory">Yukon Territories (YT)</option>				
+                </select>		
+            </fieldset>	
+        </form>
+    </main>
+
+    <footer>
+        <address>Web Development &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+</body>
+</html> 

@@ -72,7 +72,7 @@ html {
   --button-bg: #38334d;  /*mid blue-gray rgb(56, 51, 77) 353340 */
   --border-color: rgb(128 129 145 / 24%);  /*lighter blue-gray */
   --card-bg: #2d293d; /*darkest blue-gray  252936 */
-  --block-padding: 10px; 
+  --block-padding: 15px; 
   --delay: 0s;    
 }
 
@@ -111,8 +111,8 @@ main {
   display: flex;
   flex-flow: column;
   overflow: hidden;
-
-  background-color: var(--main-bg);
+  color: var(--dark-bg);
+  background-color: var(--white-color);
   font-size: 15px;
   font-weight: 500;
 }
@@ -155,7 +155,7 @@ nav {
   justify-content: space-around;
 }
 nav a {
-  color: var(--body-color);
+  color: var(--orange-color);
   font-size: 1.5em;
   display: inline-block;
   margin: 10px;
@@ -178,7 +178,9 @@ dt, dd {
   padding: 0;  
 }
 
-
+form {
+  padding: 0 var(--block-padding);
+}
 /* 
  *	small devices such as a phone 
  */

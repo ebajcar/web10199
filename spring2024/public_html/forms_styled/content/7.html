@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>htmlForms - Example10_007</title>   
+<!--
+Author:       Ellen Bajcar
+Program:      7.html (orig. Example10_007.html)
+Date:         Winter 2017
+Updated:      May 10, 2024
+Version:      11.8
+Purpose:      create a styled web app/site
+Copyright:    
+    The materials provided in class and through SLATE are protected by copyright. They are intended 
+    for the personal, educational uses of students in this course and should not be shared externally 
+    or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright 
+    infringement and violation of Sheridan policies.
+Citations:    
+    original source material can be found (subject to original author's copyrights):
+Description: 
+    Web app/site developed using Progressive Enhancement (PE) approach, 
+    core HTML5 and CSS 3/4 technologies; standard page layout, responsive design
+-->
+    <link rel="stylesheet" href="../css/main.css">
+<style>
+output {
+  font-size: 5em;
+  display: block;
+}
+[type=range] {
+  width: 300px;
+  display: block;
+  margin: 20px 0;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+	<header>
+        <h1>Styling Form Elements</h1>
+    </header>
+    <nav>
+        <a href="../index.html" class="current">Home</a>
+        <a href="1.html">Sample form</a>
+        <a href="2.html">Select</a>
+        <a href="3.html">Fieldset</a>
+        <a href="7.html">Range</a>
+        <a href="10.html">Provinces</a>
+        <a href="21.html">Labels</a>
+        <a href="2405.html">Radio/checkbox</a>
+    </nav>
+    <main>
+        <h2>Range Slider</h2> 
+        <form>
+            <label>Select range (0 to 150):</label>
+            <input type="range"  
+                   class="slider"
+                   id="rangeEl" 
+                   name="rangeEl" 
+                   min="0" 
+                   max="150" 
+                   step="1" />           	
+            <output id="output1">75</output>
+        </form>
+        <p>Learn more how-to on <a href="https://www.w3schools.com/howto/howto_js_rangeslider.asp" target="_blank">w3schools</a></p>
+    </main>
+    
+    <footer>
+        <address>Web Development &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+    
+<script>
+/*   
+Problem statement:
+    By default, the range input element does not display the value that corresponds to the position on the range bar.  This needs to be added by functional language like JavaScript. 
+Solution:
+    Write an unobtrusive JS method and target the range element, to display the value whenever the user changes the position on the slider.
+*/
+document.getElementById("rangeEl").addEventListener("input", function() {
+  document.getElementById('output1').innerHTML = 
+    document.getElementById('rangeEl').value;
+});
+</script>
+</body>
+</html>
+
