@@ -110,7 +110,7 @@ main {
   height: 95vh;
   display: flex;
   flex-flow: column;
-  overflow: hidden;
+  overflow: scroll;
   color: var(--dark-bg);
   background-color: var(--white-color);
   font-size: 15px;
