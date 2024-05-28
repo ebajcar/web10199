@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<style>
+form fieldset {
+	display: inline-block;
+}
+form label {
+	width: 8em;
+	margin-right: 1em;
+	float: left;
+	text-align: right;
+	display: block;
+}
+form legend {
+	font-size: 2em;
+}
+hr {
+	border: 1px dotted white;
+}
+#errorClass {
+	background-color: #C66;
+}
+.errorFeedback {
+	visibility: hidden;
+}
+</style>
+<body>
+<form>
+	<fieldset>
+		<legend>Custom Object Example</legend>
+		<label for="prov">Province: </label>
+		<select id="prov" name="prov"></select>		
+	</fieldset>	
+</form>
+<script>
+var nPostal = new Postal();
+nPostal.createDropdown();
+
+function Postal() {
+	this.province = [
+		{ name: "Alberta", 					postal: "AB" },
+		{ name: "British Comumbia", 		postal: "BC" },
+		{ name: "Manitoba", 				postal: "MB" },
+		{ name: "New Brunswick", 			postal: "NB" },
+		{ name: "Newfoundland and Labrador", postal: "NL" },
+		{ name: "Northwest Territories", 	postal: "NT" },
+		{ name: "Nova Scotia", 				postal: "NS" },
+		{ name: "Nunavut", 					postal: "NU" },
+		{ name: "Ontario", 					postal: "ON" },
+		{ name: "Prince Edward Island", 	postal: "PE" },
+		{ name: "Quebec", 					postal: "QC" },
+		{ name: "Saskatchewan", 			postal: "SK" },
+		{ name: "Yukon Territories", 		postal: "YT" }	
+	];
+	this.createDropdown = function createD() {
+		//var list = [];
+		this.province.forEach(myFunction);
+		//console.log(this.province);
+		function myFunction(item, index) {
+			var curr = document.getElementById("prov").appendChild(document.createElement("option")); 
+			curr.setAttribute("value", item.postal);
+			curr.innerHTML = item.name + "  ("+ item.postal +")";
+			//list[index] = item.name;
+		}		
+	}
+}
+</script>
+
+</body>
+</html>

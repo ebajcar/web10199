@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minimal HTML5 Document</title>
+	<meta charset="utf-8">
+<style>
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.intro-text {
+  max-width: 1000px;
+  margin: auto;
+}
+@media (min-width: 1000px) {
+  .intro-text p {
+    max-width: 50%;
+  }
+}
+
+.button {
+  margin-top: 1rem;
+}
+.button button {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #ddd;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+.button button:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.dialog {
+  width: 80vw;
+  border: 0;
+  background-color: tomato;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 400px) {
+  .dialog {
+    width: 50vw;
+    border: 0;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+#close {
+  display: block;
+  margin-top: 2rem;
+}
+pre {
+	background-color: white;
+}
+</style>		
+</head>
+<body>
+
+<main>
+  <div class="intro-text">
+    <h1>Casino Craps Game</h1>
+    <p>Program to play the casino game of Craps. 
+	At the beginning of the game, the player rolls 
+	a pair of dice and computes the total. If the 
+	total is 2, 3, or 12 (called "craps"), the player 
+	loses. If the total is 7 or 11 (called a "natural"), 
+	the player wins.</p> <p>If the total is any other number, 
+	that number becomes the "point". From here, the 
+	player keeps rolling the dice until (a) the point 
+	comes up again, in which case the player wins, or 
+	(b) a 7 appears, in which case the player loses. 
+	The numbers 2,3,11, and 12 no longer have special 
+	significance after the first rolls.</p>
+    <div class="button">
+      <button id="modal-button">View Code</button>
+      <button id="popup-button">Play Game</button>
+    </div>
+  </div>
+  <dialog class="dialog" id="modal">
+    <h3>Procedural Console Version Of Craps</h3>
+    <pre class="prettyprint linenums">
+    var dice1 = Math.ceil((Math.random() * 6) + 1);
+    var dice2 = Math.ceil((Math.random() * 6) + 1);
+    var total = dice1 + dice2; 
+    console.log("Rolling dice: " +
+          dice1 + " + " + dice2 + " = " + total);
+    if (total == 7 || total == 11){
+      console.log("That's a natural. You win!");
+    } else if (total == 2 || total == 3 || total == 12) {
+      console.log("That's craps. You Lose.");
+    } else {
+      var point = total;
+      console.log("Your point is " + point);
+      while (true) {
+        dice1 = Math.ceil((Math.random() * 6) + 1);
+        dice2 = Math.ceil((Math.random() * 6) + 1);
+        total = dice1 + dice2; 
+        console.log("Rolling dice: " +
+          dice1 + " + " + dice2 + " = " + total);
+        if (total == point) {
+          console.log("You made your point. You win.");
+          break;
+        } else if (total == 7) {
+          console.log("That's a 7. You lose.");
+          break;
+        }
+      }    
+    }</pre>
+    <button id="modal-close">Close</button>
+  </dialog>
+  <dialog class="dialog" id="popup">
+    <iframe width="640" height="500" src="rollDice.html" frameborder="0" encrypted-media" allowfullscreen></iframe><br>
+    <button id="popup-close">Close</button>
+  </dialog>
+</main>	
+<script>
+// At this point, the dialog API seems to work only with vanilla javascript. I have tried it with jQuery but it does not work.
+
+
+//-----------------------------------
+// Declare Variables
+//-----------------------------------
+
+// Modal
+var modalButton = document.getElementById('modal-button');
+var modal = document.getElementById('modal');
+var modalClose = document.getElementById('modal-close');
+
+// Popup
+var popupButton = document.getElementById('popup-button');
+var popup = document.getElementById('popup');
+var popupClose = document.getElementById('popup-close');
+
+
+//-----------------------------------
+// Button Actions
+//-----------------------------------
+
+// on click, show as a modal
+modalButton.addEventListener('click', function() {
+  modal.showModal();
+});
+
+// close modal on click
+modalClose.addEventListener('click', function() {
+  modal.close();
+});
+
+// on click, show as a popup
+popupButton.addEventListener('click', function() {
+  popup.showModal();
+});
+
+// close popup on click
+popupClose.addEventListener('click', function() {
+  popup.close();
+});
+</script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script>
+    var dice1 = Math.ceil((Math.random() * 6) + 1);
+    var dice2 = Math.ceil((Math.random() * 6) + 1);
+    var total = dice1 + dice2; 
+    console.log("Rolling dice: " +
+          dice1 + " + " + dice2 + " = " + total);
+    if (total == 7 || total == 11){
+      console.log("That's a natural. You win!");
+    } else if (total == 2 || total == 3 || total == 12) {
+      console.log("That's craps. You Lose.");
+    } else {
+      var point = total;
+      console.log("Your point is " + point);
+      while (true) {
+        dice1 = Math.ceil((Math.random() * 6) + 1);
+        dice2 = Math.ceil((Math.random() * 6) + 1);
+        total = dice1 + dice2; 
+        console.log("Rolling dice: " +
+          dice1 + " + " + dice2 + " = " + total);
+        if (total == point) {
+          console.log("You made your point. You win.");
+          break;
+        } else if (total == 7) {
+          console.log("That's a 7. You lose.");
+          break;
+        }
+      }    
+    }
+</script>
+</body>
+</html>

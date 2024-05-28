@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet Two Problems</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }
+        .big-value {
+          font-size: 4em;
+          font-weight: normal;
+          text-align: left;
+          text-shadow: 2px 2px 2px gray;
+          padding-bottom: 20px;
+        }
+        /*
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+        
+        */
+        input:invalid + span::after {
+          content: "✖";
+          padding-left: 5px;
+          color: lightgray;
+        }
+
+        input:valid + span::after {
+          content: "✓";
+          padding-left: 5px;
+          color: gray;
+        }
+        select {
+          width: 100%;
+        }
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet One</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="../problems/index.html">Problems</a>
+            <a href="index.html" class="current">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Version 1  - <small>The while loop</small></h2>
+     <nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Problems</a></li>
+            <li><a href="fibonacci-problem.html">Problem statement</a></li>
+            <li><a href="#">The while loop</a></li>
+        </ol>
+    </nav>       
+        
+  <form name="selectForm">
+<ul role="list" class="f-switch dense">
+<li>
+	  <label for="musicTypes">Choose some music types (genres and moods), <br>then click the button.</label>
+	  <br>
+	  <select id="musicTypes" name="musicTypes" multiple="multiple" size="12">
+		<option selected>Blues</option>
+		<option>Classical</option>
+		<option>Focus</option>
+		<option>Hip Hop</option>
+		<option>Jazz</option>
+		<option>Latin</option>
+		<option>Opera</option>
+		<option>Movie</option>	 
+		<option>R&amp;B</option>
+		<option>Reggae</option>  
+	  </select>
+</li>
+<li class="box">
+	<p><strong><input id="btn" type="button" value="How many are selected?" /></strong></p>
+    <h3>Number of options selected: </h3>
+	<h3 id="result" class="big-value"></h3>
+</ul>
+  </form>
+    
+		
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+/*
+  PROBLEM: 
+  
+  SOLUTION: 
+  1. Get (pick) a number 
+  2. define a function that 
+  3. Call the function
+  4. display the result in the console.
+*/
+/*
+	The following function contains a for statement that counts the number 
+	of selected options in a scrolling list (a <select> element that allows 
+	multiple selections). The for statement declares the variable i and 
+	initializes it to zero. It checks that i is less than the number of 
+	options in the <select> element, performs the succeeding if statement, 
+	and increments i by one after each pass through the loop. 
+*/
+function howMany(selectObject) {
+  let numberSelected = 0;
+  let len = selectObject.options.length;
+  console.log(len);
+  let i = 0;
+  while (i < len) {
+    if (selectObject.options[i].selected) {
+      numberSelected++;
+      console.log(numberSelected);
+    }
+    i++;
+  }
+  return numberSelected;
+}
+
+const btn = document.getElementById('btn');
+const result = document.getElementById('result');
+
+btn.onclick = function() {
+	result.innerText = howMany(document.selectForm.musicTypes);
+}
+
+/*
+https://www.w3schools.com/jsref/dom_obj_document.asp 
+https://www.w3schools.com/tags/att_name.asp
+The name attribute specifies a name for the element.
+This name attribute can be used to reference the element in a JavaScript.
+For form elements it is also used as a reference when the data is submitted,
+For iframe element it can be used to target a form submission.
+For the map element, the name attribute is associated with the <img>'s usemap attribute and creates a relationship between the image and the map.
+For the meta element, the name attribute specifies a name for the information/value of the content attribute.
+For the param element, the name attribute is used together with the value attribute to specify parameters for the plugin specified with the <object> tag.
+*/
+
+</script>
+</body>
+</html>

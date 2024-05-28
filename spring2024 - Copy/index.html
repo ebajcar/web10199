@@ -27,7 +27,9 @@ h4 {
   color: red;
 }
 
-
+a:hover {
+  color: gray;
+}
 
 
 .bg-dark-gray {
@@ -66,8 +68,8 @@ ol {
         <ul class="list-reset list-none font-semibold flex justify-end flex-wrap sm:flex-nowrap items-center px-0 pb-0">
           <li class="p-1 sm:p-0"><a class="topnav-link" href="index.html">Home</a></li>
           <!--li class="p-1 sm:p-0"><a class="topnav-link" href="material/index.html">Course Material</a></li-->
-          <li class="p-1 sm:p-0"><a class="topnav-link" href="https://ebajcar.github.io/web10199/spring2024/material_worksheets/index.html" target="_blank">Worksheets</a></li>
-          <li class="p-1 sm:p-0"><a class="topnav-link" href="topical_syst10199_spring2024.html" target="_blank">Class Plan</a></li>
+          <li hidden class="p-1 sm:p-0"><a class="topnav-link" href="https://ebajcar.github.io/web10199/spring2024/material_worksheets/index.html" target="_blank">Worksheets</a></li>
+          <li class="p-1 sm:p-0"><a class="topnav-link" href="topical_syst10199_spring2024_7A.html" target="_blank">Class Plan</a></li>
         </ul>
       </div>
     </div>
@@ -78,33 +80,32 @@ ol {
   
     <section class="pt-4 px-2 md:px-0 lg:px-4 pb-16 w-full overflow-hidden">
 
-        <!-- Announcements -->
-
-
-
-        
-        
+        <!-- Announcements     
         <section>
         <hr style="margin:20px 0;">
- <div class="max-w-lg mx-auto bg-white rounded-xl shadow-md overflow-hidden  w-full md:max-w-6xl">
-  <div class="md:flex  w-full">
-    <div class="md:flex-shrink-0">
-      <img class="h-full object-cover md:w-48" src="images/jscode.png" alt="Web development">
-    </div>
-    <div class="p-8">
-      <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Course Overview</div>
-      <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">SYST10199 Web Programming</a>
-      <p class="mt-2 text-gray-500">This is a programming course in which students learn the basics of web app design using JavaScript and PHP programming languages. Students learn how to program simple, dynamic, client-side web apps using the JavaScript programming language to manipulate the HTML DOM. Students also learn how to write web app code on the server-side using the PHP programming language with a MySQL database to present custom content to a user.</p>
-    </div>
-  </div>
-</div>       
         
-<hr style="margin:20px 0;">
-        
-        
-<div class="bg-gray-100 rounded-lg py-5 px-6 mb-4 text-base text-gray-700" role="alert">
+         <div class="max-w-lg mx-auto bg-white rounded-xl shadow-md overflow-hidden  w-full md:max-w-6xl">
+          <div class="md:flex  w-full">
+            <div class="md:flex-shrink-0">
+              <img class="h-full object-cover md:w-48" src="images/jscode.png" alt="Web development">
+            </div>
+            <div class="p-8">
+              <div class="uppercase tracking-wide text-sm sher-teal font-semibold">Course Overview</div>
+              <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">SYST10199 Web Programming</a>
+              <p class="mt-2 text-gray-500">This is a programming course in which students learn the basics of web app design using JavaScript and PHP programming languages. Students learn how to program simple, dynamic, client-side web apps using the JavaScript programming language to manipulate the HTML DOM. Students also learn how to write web app code on the server-side using the PHP programming language with a MySQL database to present custom content to a user.</p>
+            </div>
+          </div>
+        </div>       
+        --> 
+           <div class="bg-gray-100 rounded-lg py-5 px-6 mb-4 text-base text-gray-700" role="alert">
+           <h4 class="text-2xl font-medium leading-tight mb-2">Class Plan</h4>
+            <iframe style="width:100%;height:300px" src="topical_syst10199_spring2024_7A.html"></iframe>
+</div>          
+        <hr style="margin:20px 0;">
+ 
+ <div class="bg-gray-100 rounded-lg py-5 px-6 mb-4 text-base text-gray-700" role="alert">
     <h4 class="text-2xl font-medium leading-tight mb-2">What you should already know from last semester</h4>
-    <details open>
+    <details>
         <summary>Programming Foundations - Python <small><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview.jsp?hide=true&term=1999&subjectCode=PROG&courseCode=12583" target="_blank">PROG12583</a></small></summary>
         <ul class="list-decimal list-outside">
             <li>Apply systematic problem-solving and analytical techniques in developing computerized solutions for simple scientific and/or business applications.</li>
@@ -118,7 +119,7 @@ ol {
         </ul>    
     </details>
     <hr class="border-gray-600 opacity-30">
-    <details open>
+    <details>
         <summary>Web Development <small><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview.jsp?hide=true&term=1999&subjectCode=SYST&courseCode=10049" target="_blank">SYST10049</a></small></summary>
             <ul class="list-decimal list-outside">
                 <li>Create a properly structured and accessible web page using (HTML).</li>
@@ -137,9 +138,127 @@ ol {
 </div>        
 
 
-         
+
+<!-- overlay for popups -->
+<div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-plan-backdrop"></div>
+
+<!-- worksheet grid -->
+<h4 class="text-2xl font-medium leading-tight mb-2">Worksheets</h4>
+           
+ <div class=" grid grid-cols-6 gap-3">
+ 
+   <!-- Week 1 -->
+  <div class="bg-dark-gray shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
+    <div class="bg-dark-gray flex justify-between items-center pt-2 px-3 bg-clip-padding border-b border-green-500 rounded-t-lg">
+    <p class="font-bold sher-teal  uppercase flex items-center"> Week 1</p>
+      <div class="flex items-center">
+      </div>
+    </div>
+    <div class="p-2 sher-teal rounded-b-lg break-words text-white" style="text-align:center">
+      Complete <a href="worksheets/worksheet01.html" target="_blank" class="text-white uppercase">Worksheet 1</a>
+    </div>
+  </div>
+
+  <!-- Week 2 -->
+  <div class="bg-dark-gray shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
+    <div class="bg-dark-gray  flex justify-between items-center pt-2 px-3 bg-clip-padding border-b border-green-500 rounded-t-lg">
+    <p class="font-bold sher-teal  uppercase flex items-center"> Week 2</p>
+      <div class="flex items-center">
+      </div>
+    </div>
+    <div class="p-2  sher-teal  rounded-b-lg break-words text-white" style="text-align:center">
+      Complete <a href="worksheets/worksheet02.html" target="_blank" class="text-white uppercase">Worksheet 2</a>
+    </div>
+  </div>
+  
+  <!-- Week 3 -->
+   <div class="bg-dark-gray shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
+    <div class="bg-dark-gray flex justify-between items-center pt-2 px-3  bg-clip-padding border-b border-green-400 rounded-t-lg">
+    <p class="font-bold sher-teal  uppercase flex items-center"> Week 3</p>
+      <div class="flex items-center">
+      </div>
+    </div>
+    <div class="p-2 sher-teal rounded-b-lg break-words text-white" style="text-align:center">
+      Complete <a href="worksheets/worksheet03.html" target="_blank" class="text-white uppercase">Worksheet 3</a>
+    </div>
+  </div> 
+  
+   <!-- Week 4 -->
+   <div class="bg-dark-gray shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
+    <div class="bg-dark-gray flex justify-between items-center pt-2 px-3  bg-clip-padding border-b border-green-400 rounded-t-lg">
+    <p class="font-bold sher-teal  uppercase flex items-center"> Week 4</p>
+      <div class="flex items-center">
+      </div>
+    </div>
+    <div class="p-2 sher-teal rounded-b-lg break-words text-white" style="text-align:center">
+      Complete <a href="worksheets/worksheet04.html" target="_blank" class="text-white uppercase">Worksheet 4</a>
+    </div>
+  </div>  
+  
+  <!-- Week 5 -->
+   <div class="bg-dark-gray shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
+    <div class="bg-dark-gray  flex justify-between items-center pt-2 px-3  bg-clip-padding border-b border-green-400 rounded-t-lg">
+        <p class="font-bold sher-teal  uppercase flex items-center"> Week 5</p>
+      <div class="flex items-center">
+
+      </div>
+    </div>
+    <div class="p-2 sher-teal  rounded-b-lg break-words text-white" style="text-align:center">
+      Complete <a href="worksheets/worksheet05.html" target="_blank" class="text-white uppercase">Worksheet 5</a>
+    </div>
+  </div>   
+  
+  <!-- Week 6 -->
+   <div class="bg-dark-gray shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
+    <div class="bg-dark-gray flex justify-between items-center pt-2 px-3  bg-clip-padding border-b border-green-400 rounded-t-lg">
+        <p class="font-bold sher-teal  uppercase flex items-center"> Week 6</p>
+      <div class="flex items-center">
+
+      </div>
+    </div>
+    <div class="p-2 sher-teal rounded-b-lg break-words text-white" style="text-align:center">
+      Complete <a href="worksheets/worksheet06.html" target="_blank" class="text-white uppercase">Worksheet 6</a>
+    </div>
+  </div>   
+  
+
+  
+  <!-- break week
+   <div class="bg-white shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3" id="static-example" role="alert" aria-live="assertive" aria-atomic="true" data-mdb-autohide="false">
+    <div class=" bg-white flex justify-between items-center py-2 px-3 bg-clip-padding border-b border-gray-200 rounded-t-lg">
+      <p class="font-bold text-gray-500">Reading break</p>
+      <div class="flex items-center">
+        <p class="text-gray-600 text-xs">Feb 28&mdash; Mar 4</p>
+      </div>
+    </div>
+    <div class="p-3 bg-white rounded-b-lg break-words text-gray-700">
+      There are no classes this week.
+    </div>
+  </div> 
+  -->
+  
+  
+
+</div> <!--  end of grid -->  
+
+
+
+
+
+
+
+
+
+
+
 
  
+        
+
+
+         
+
+<!-- hidden old learning outcomes in a pop-up -->
 <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-example-large">
 	<div class="relative w-auto my-6 mx-auto max-w-6xl">
 		<div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">

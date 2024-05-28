@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet 8</title>
+    <link rel="stylesheet" href="css/missing-css.css">
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css"-->
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing-prism.min.css"-->
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="css/prism-coy-23.js"></script>
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code {
+            color: red;
+            padding-left: 5px;
+            padding-right: 5px;
+		}        
+		code a {
+			font-family: inherit;
+		}
+        .thisone {
+          text-decoration: underline;
+          text-decoration-style: wavy;
+          text-decoration-color: orange;
+        }
+        footer ul {
+            list-style: none;
+        }
+	</style>
+</head>
+<body>
+	<div class="sidebar-layout fullscreen">
+      <header>
+        <div class="<h1>">SYST10199</div>
+        <nav>
+            <ul role="list">
+                <li><a href="https://ebajcar.github.io/web10199/content_summer2023/" aria-current="page">Home</a></li>
+                <li><hr></li>
+                
+                <li>JS language (client-side programming)</li>
+                    <li class="margin"><a href="worksheet01.html">Worksheet 1</a></li>
+                    <li class="margin"><a href="worksheet02.html">Worksheet 2</a></li>
+                    <li class="margin"><a href="worksheet03.html">Worksheet 3</a></li>
+                    <li class="margin"><a href="worksheet04.html">Worksheet 4</a></li>
+                    <li class="margin"><a href="worksheet05.html">Worksheet 5</a></li>
+                <li><hr></li>
+                
+                <li>PHP language (server-side programming)</li>
+                    <li class="margin"><a href="worksheet06.html">Worksheet 6</a></li>
+                    <li class="margin"><a href="worksheet07.html">Worksheet 7</a></li>
+                    <li class="margin thisone"><a href="worksheet08.html">Worksheet 8</a></li>
+                    <li class="margin"><a href="worksheet09.html">Worksheet 9</a></li>
+                    <li class="margin"><a href="worksheet10.html">Worksheet 10</a></li>
+                <li><hr></li>           
+            </ul>            
+        </nav>
+      </header>
+    
+
+      <div><!-- body container for main and footer -->
+        <main>
+            <h1>Worksheet 8</h1>
+            <nav class="breadcrumbs" aria-label="Breadcrumbs">
+                <ol>
+                    <li><a href="#"  class="allcaps">SYST10199</a></li>
+                    <li><a href="#" aria-current="page">Worksheet 8</a></li>
+                </ol>
+            </nav>  
+            
+            <details open>
+                <summary>On this page&hellip;</summary>
+                <ol>
+                    <li><a href="#e02">Activity 8.1. Review and preparation</a></li>
+                    <li><a href="#e03">Activity 8.2. STUDY Course material</a></li>
+                    <li><a href="#e04">Activity 8.3. PRACTICE problem solving and coding in PHP</a></li> 
+                </ol>
+            </details>
+            
+            <section id="#e02">
+                <h2>Activity 8.1. Review and preparation</h2>
+                <div class="box info">
+                    <p>Complete, review. dig deeper Worksheets 1, 2, 3, 4, 5, and 6. Catchup from previous weeks.</p> 
+                    <p>Revisit the <a href="" target="_blank">Class Plan Information</a> and read about Active learning, Learning course
+                    content, Learning for mastery, not grades, How evaluation works, Formative & Summative Evaluation, etc.</p> 
+                    <p>Compare Java, Javascript, and PHP.</p> 
+                </div>
+            </section>  
+
+            <section id="#e03">
+                <h2>Activity 8.2. STUDY Course material</h2>
+                <p>Explore the following pages and the links provided on these pages to primary (PHP Manual) and secondary sources (w3schools). Compare to the Javascript language.</p>
+                <dl>
+                    <dt>8.2.1. <a href="../../learnphp23/index.html">PHP Lanaguage</a></dt>
+                    <dd>&mdash;Keep working with the PHP language components from previous worksheet (6.2, 7.2)</dd>
+
+
+                    <dt>8.2.2. <a href="../../learnphp23/objects.html">Object-oriented PHP</a></dt>
+                    <dd>
+                        <a class="btn btn-default btn-block" href="http://ca3.php.net/manual/en/language.oop5.php" target="_blank">Read more about Classes in PHP Manual</a>	
+	
+                        <br><a href="http://ca3.php.net/manual/en/book.classobj.php" target="_blank">Read more aboutClass/Object Information in PHP Manual</a>
+                        
+                        <br></a> Experiment with functions <code>class_exists</code>, <code>get_class_methods</code>, <code>get_class_vars</code>, <code>method_exists</code>, <code>property_exists</code>.	What other functions are available? 
+                    </dd>
+                    
+                    
+                    
+                    <dd>Class example:&mdash; <chip>vegetables</chip> <a href="https://github.com/ebajcar/web10199_worksheets/blob/master/examples/set8/vegetables.php" target="_blank">vegetables.php</a> file
+                    <br>A single file solution that contains the classes and the processing code.
+                    <br>Class example:&mdash; <chip>create table</chip> 
+                        <a href="https://github.com/ebajcar/web10199_worksheets/blob/master/examples/set8/create_table.php" target="_blank">create_table.php</a> file
+                        <br>creates TableRows class which extends an existing class called RecursiveIteratorIterator 
+                        Explore <a href="https://www.php.net/manual/en/class.recursiveiteratoriterator.php" target="_blank">PHP manual page</a> 
+                    </dd>
+                    
+                    <dt>8.2.3. <a href="../../learnphp23/control_flow.html">Program flow</a></dt>
+                    <dd>&mdash;require and include</dd>
+                    <dd>Class example:&mdash; <chip>veggies</chip> 
+                        <a href="https://github.com/ebajcar/web10199_worksheets/blob/master/examples/set8/vegetables.php" target="_blank">vegetables.php</a> file, 
+                        <a href="https://github.com/ebajcar/web10199_worksheets/blob/master/examples/set8/Vegetable.class" target="_blank">Vegetable.class</a> file, 
+                        <a href="https://github.com/ebajcar/web10199_worksheets/blob/master/examples/set8/Spinach.class" target="_blank">Spinach.class</a> file.
+                        <br>Each class is stored in its own file. The processing code uses requires/includes to access the classes.
+                        <br><a href="http://ca3.php.net/manual/en/classobj.examples.php" target="_blank">Original examples on PHP Manual page</a></dd>
+                   
+                </dl>                
+            </section>          
+            
+           <section id="#e04">     
+                <h2>Activity 8.3. PRACTICE problem solving and coding in PHP</h2>
+                <div><strong>8.3.1. Problem</strong> &mdash;Create an object-oriented ??</div>
+                <ol style="margin-top:0;list-style-type: lower-alpha;">
+                    <li>Implement Class example <chip>vegetables</chip>. 
+                        Add the rest of the HTML5 document, validate, test.</li>
+                    <li>Implement Class example <chip>veggies</chip>. <a href="" target="_blank">Code</a>
+                        <br>Add the rest of the HTML5 document, validate, test. Add other properties and methods. Add other classes by extending the base class.</li>
+                    <!-- 
+                    <li><em>See <a href="" target="_blank">Code example</a></em></li> 
+                    <li></li>
+                    -->
+                    <li>Implement Class example <chip>create table</chip> using class <code>TableRows</code>.
+                    <br>Refactor the solution to create TableRows.class file and replace the code with an require/include function.</li> 
+                </ol>            
+                
+                <div>
+                    <strong>8.3.2. Problem</strong> &mdash;Create a new project called  
+                    <chip>gameWorks</chip>  and complete the following conversion:
+                </div>  
+                <ol style="margin-top:0;list-style-type: lower-alpha;">
+                    <li>Start with a standard file organization: <code>content</code>, <code>css</code>, <code>images</code>, and <code>scripts</code>.</li>
+                    <li>Add directory called <code>includes</code>.</li>
+                    <li>Create a home page, <code>index.html</code>. Style and test. Validate all code.</li>
+                    <li>Split your <code>index.html</code> into <code>header.html</code>, <code>nav.html</code>, , and <code>footer.html</code>. Store them in the <code>includes</code> directory. Store the <code>main.html</code> in the <code>content</code> sub-directory.</li>
+                    <li>Create <code>index.php</code> file that includes/requires the html fragments to recompose the page. </li>
+                    <li>Use this <a href="https://sheridanc-fast-syst10199.notion.site/Using-requires-and-includes-5db2552507aa45508159d45fafb13c5a?pvs=4" target="_blank">example</a> and convert your solution to PHP. <chip class="ok">UPDATED LINK</chip> </li>
+                    
+                </ol>                
+                
+               
+                <p style="margin-bottom:0;"><strong>8.3.3. Problem</strong> &mdash;Create an object-oriented Casino Craps game.</p>
+                <ol style="margin-top:0;list-style-type: lower-alpha;">
+                    <li><em>Incorporate as a secondary page in <chip>gameWorks</chip> project(stored in <code>content</code> sub-directory.</em> (Note:the page contains only the appropriate code fragment, like the main.html)</li>
+                    <li>Re-factor previous solutions. <!--<em>See <a href="" target="_blank">Code example</a></em> --></li>
+                </ol>
+                
+                <p style="margin-bottom:0;"><strong>8.3.4. Problem</strong> &mdash;Create a Rock-Paper-Scissors game using object-oriented PHP.</p>
+                <ol style="margin-top:0;list-style-type: lower-alpha;">
+                    <li>Re-factor previous solutions. <!--<em>See <a href="" target="_blank">Code example</a></em> --></li>
+                </ol>
+                
+                <p style="margin-bottom:0;"><strong>8.3.5. Problem</strong> &mdash;Create a Tic Tac Toe game using object-oriented PHP.</p>
+                <ol style="margin-top:0;list-style-type: lower-alpha;">
+                    <li>Re-factor previous solutions. <!--<em>See <a href="" target="_blank">Code example</a></em> --></li>
+                </ol>                
+                
+            </section>                  
+            
+        </main>
+
+        <footer>
+            <address><a href="">SYST101099 Web Programming | Ellen Bajcar et all, FAST, Sheridan College</a></address> 
+            <p>2021-2023 &copy;  The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+            <hr style="margin: 10px 0">
+            <ul class="f-switch" role="list">
+                <li>
+                  <h2>Course Material</h2>
+                  <ul>
+                    <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                    <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                    <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                    <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                    <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                    <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                    <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+                  </ul>
+                </li>
+                <li>
+                  <h2>Resources</h2>
+                  <ul>
+                    <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                    <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                    <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+                  </ul>
+                </li>
+                <li>
+                  <h2>Sheridan College</h2>
+                  <ul>
+                    <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                    <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>
+                    <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                    <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                    <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>  
+                    <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+                    <li><a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a><span style="color:gray"><br>Office hours (by appointment)</span></li>
+                  </ul>
+                </li>
+            </ul>
+        </footer>
+     
+     </div> <!-- body container for main and footer -->
+</div> <!-- sidebar -->
+
+	
+
+</body></html>

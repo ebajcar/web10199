@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<embed style="width:500px;height:200px;border:1px solid;" src="https://indify.co/widgets/live/weather/iuLXpMtl5jq8C1dNOw9W"></embed>
+<p id="one"></p>
+<script>
+function sum2(num1, num2) {
+ 	if (num2 === undefined) {
+      num2 = 1;
+    }
+    return num1 + num2;
+}
+/*
+function sum0(num1, num2) {
+  try {
+ 	if (num2 === undefined) {
+      num2  1;
+    }
+    return num1 + num2;
+  } catch (e) {
+      document.getElementById("one").innerHTML = e + "error occured";
+  }
+}
+*/
+function sum5(num1, num2) {
+ 	if (num1 && num2) {
+      return num1 += 1;
+    } else
+      return num1 + num2;
+}
+function sum6(num1, num2) {
+ 	if (typeof num2 === "undefined") {
+      return num1 += 1; 
+    } else
+      return num1 + num2;  
+}
+const sum = (num1, num2) => num2 === undefined ? num1 + 1 : num1 + num2
+document.getElementById("one").innerHTML = sum(3,4);
+</script>
+<p id="two"></p>
+<script>
+let i = 5;
+for (let i = 0; i < 10; i++) {
+// some statements
+}
+document.getElementById("two").innerHTML = sum(3);
+</script>
+</body>
+
+</html>

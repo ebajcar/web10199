@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet 11</title>
+    <link rel="stylesheet" href="css/missing-css.css">
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css"-->
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing-prism.min.css"-->
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="css/prism-coy-23.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+	<style>
+
+	</style>
+</head>
+<body>
+
+
+<header>       
+    <h1><span class="allcaps">SYST<wbr>10199 Web Programming<v-h>:</v-h></span><sub-title>Worksheet 11</sub-title></h1>
+</header>
+
+<main>
+    <div class="prev-next">
+        <p><a href="week10.html">Prev</a></p>
+        <nav class="tool-bar">|
+            <a href="week01.html"> 1 </a> | 
+            <a href="week02.html"> 2 </a> | 
+            <a href="week03.html"> 3 </a> | 
+            <a href="week04.html"> 4 </a> | 
+            <a href="week05.html"> 5 </a> | 
+            <a href="week06.html"> 6 </a> | 
+            <a href="week07.html"> 7 </a> | 
+            <a href="week08.html"> 8 </a> | 
+            <a href="week09.html"> 9 </a> | 
+            <a href="week10.html"> 10 </a> | 
+            <a href="week11.html"  class="current"> 11 </a> | 
+            <a href="week12.html"> 12 </a> | 
+            <a href="week13.html"> 13 </a> | 
+            <a href="week14.html"> 14 </a> |
+        </nav>
+        <!--               
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <ol>
+                <li><a href="../index.html"  class="allcaps">Home</a></li>
+                <li><a href="index.html"  class="allcaps">Worksheets</a></li>
+                <li><a href="week13.html" aria-current="page">Worksheet 11</a></li>
+            </ol>               
+        </nav> 
+        -->
+        <p><a href="week12.html">Next</a></p>
+    </div>
+
+    <blockquote hidden style="font-size:1.4em;color:orange;">Under review - will be made available at a later time.</blockquote>
+
+    <!-- 1. Review from previous weeks -->
+    <section id="p1">
+        <h2>1. Review</h2>
+        
+    
+            
+        <h3>Review and make sure you have completed studying the material and completed the install and applications:</h3>
+            <dl>           
+                <dt><a href="https://terminallearning.com/nodejs/terms.html" target="_blank">Glossary - Intro to Node.js</a></dt>   
+                <dd>Terminology: Asynchronous, Blocking, Framework, HTTP Headers, Middleware,
+                    MVC (Model View Controller), Module, Non-Blocking, Opinionated, Route,
+                    Route Handler, Synchronous, Thread, Unopinionated</dd>
+                    
+
+
+                <dt><a href="https://terminallearning.com/nodejs/install.html" target="_blank">Installing Node.js Locally</a></dt>  
+                <dd>
+                    <ul>
+                        <li>Installing Node.js Locally</li>
+                        <li>Test Your Installation (contains section titled <em>Running an App Using Nodemon</em>)</li>
+                    </ul>
+                </dd>    
+
+                     
+                <dt><a href="https://terminallearning.com/nodejs/firstnode.html" target="_blank">Your First Node.js Programs</a> </dt>
+                <dd>
+                    <ul>
+                        <li>Creating and Using the Server</li>
+                        <li>Adding a Third-Party Module</li>
+                        <li>Adding Your Own Module</li>
+                    </ul>
+                </dd>
+
+                <dt>Answer the questions IN YOUR OWN WORDS.</dt>
+                <dd>
+                    <ol>
+                        <li>The terms include “Synchronous” and “Asynchronous”.   Explain the difference between an asynchronous operation and a synchronous operation. Include an example of each in your explanation.</li>
+                        <li>What is a framework?</li>
+                        <li>What is meant by “blocking” and “non-blocking”?</li>
+
+                        <li>Is Node.js a framework? Explain why or why not.</li>
+                        <li>Is Express.js a framework? Explain why or why not.</li>
+                        <li>What is meant by “full-stack” development?</li>
+                        <li>What is the event loop? </li>
+                        <li>What is the problem that can occur with blocking operations on the event loop?</li>
+                        <li>Describe two kinds of applications or app features that Node.js is better at (better than other technologies).</li>
+                        <li>Explain four benefits of using Node.js for web applications.</li>
+                    </ol>
+                </dd>
+        </dl>  
+
+        <h3>Additional Resources</h3>
+        <dl>           
+            <dt>Node.js</dt>   
+            <dd><a href="https://nodejs.org/docs/latest/api/" target="_blank">Node.js v21.7.1 documentation</a></dd>
+            <dd><a href="https://expressjs.com/" target="_blank">Express</a> <small>Fast, unopinionated, minimalist web framework for Node.js</small></dd>
+            <dd><a href="https://expressjs.com/en/resources/middleware.html" target="_blank">Express Middleware </a> </dd>
+            <dd hidden><a href="" target="_blank"> </a> </dd>
+           
+        </dl>          
+    </section>
+
+
+
+    <!-- 2. Read and explore course material -->
+    <section id="p2">
+        <h2>2. Explore and Dig deeper</h2>
+
+       <details open>
+            <summary>Activity 1. Routing</summary>
+            
+            <dl>   
+                <dt><a href="https://terminallearning.com/nodejs/cpanel.html" target="_blank">Running a Node.js App on cPanel</a></dt>  
+                <dd>
+                    <ul>
+                        <li>Setting Up your Application on cPanel</li>
+                        <li>Apps with Third-Party Packages</li>
+                        <li>Debugging with console.log()</li>
+                    </ul>
+                </dd>              
+            </dl>
+ 
+            <dl>   
+                <dt><a href="https://terminallearning.com/nodejs/projectstructure.html" target="_blank">Node.js Project Structure</a></dt>  
+                <dd>
+                    <ul>
+                        <li><code>app.js</code> is your main Node.js file, the starting point of your app</li>
+                        <li><code>package.json</code> contains information about the project (generated automatically when you run <code>npm init</code>)</li>
+                        <li><code>package-lock.json</code> used by NPM to keep track of your package installations and dependencies</li>
+                        <li><code>/node_modules</code> contains the files for any packages you installed</li>
+                        <li><code>/public</code> any directories or static files that are considered "public"</li>
+                        <li><code>/routes</code> contains all the .js files that perform routing tasks in your application</li>
+                        <li><code>/views</code> contains templates that are used to show HTML pages to a user with dynamic data</li>
+                    </ul>
+                </dd>              
+            </dl> 
+
+ 
+            <dl>   
+                <dt><a href="https://terminallearning.com/nodejs/routebasic.html#ex" target="_blank">Routing Requests</a></dt>  
+                <dd>
+                    <ul>
+                        <li>A Simple Route Handler</li>
+                        <li>Routing Requests for Files</li>
+                    </ul>
+                </dd> 
+                <dd>Additional info 
+                    <ul>
+                        <li><a href="https://terminallearning.com/basic/formProcessing.html" target="_blank">Processing Form Submission</a></li>
+                    </ul>
+                </dd>      
+            </dl>            
+ 
+ 
+            <dl>   
+                <dt><a href="https://terminallearning.com/nodejs/expressRoutes.html" target="_blank">Basic Routing with Expres.js</a></dt>  
+                <dd>
+                    <ul>
+                        <li>Express Middleware</li>
+                        <li>Adding Express to an Application</li>
+                        <li>First Express Application</li>
+                        <li>Handling POST Requests</li>
+                        <!-- https://github.com/ProfWendi/TerminalLearning/tree/main/nodejsapps/expressRoutes  -->
+                    </ul>
+                </dd>    
+                <dd>Additional resources:
+                    <ul>
+                        <li><a href="https://expressjs.com/en/guide/using-middleware.html" target="_blank">Using middleware</a></li>
+                        <li><a href="https://reflectoring.io/express-middleware/" target="_blank">Complete Guide to Express Middleware</a></li>
+
+                    </ul>
+                </dd>                 
+            </dl>  
+            
+ 
+            <dl hidden>   
+                <dt><a href="" target="_blank"></a></dt>  
+                <dd>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>                        
+                    </ul>
+                </dd>              
+            </dl>  
+
+   
+    </section>
+
+
+
+
+    <!-- 3. Practice -->
+    <section id="p3">
+        <h2>3. Practice solving problems</h2> 
+        
+        <dl>
+            <dt>A. Upload and setup projects in cPanel on <kbd>dev.fast.sheridanc.on.ca</kbd> server.
+            <dd>Complete the <strong>Setting Up your Application on cPanel</strong> and <strong>Apps with Third-Party Packages</strong> in <a href="https://terminallearning.com/nodejs/cpanel.html" target="_blank">Running a Node.js App on cPanel</a>. Publish the projects</dd>   
+            <dd>
+                <ul>
+                    <li>/firstprogram</li>
+                    <li>/testapp</li>
+                    <li>/zodiac</li>
+                </ul>
+            </dd>
+        </dl>
+        <!-- Also contains "Debug Output" instructions -->
+
+        <dl>  
+            <dt>B. Complete the <a href="https://terminallearning.com/nodejs/firstnode.html#ex" target="_blank">Practice Exercises</a> and publish on  <kbd>dev.fast.sheridanc.on.ca</kbd> server.</dt>
+            <dd>1. project <kbd>/myname</kbd> <br>2. project <kbd>/circle</kbd></dd>
+        </dl>   
+        
+        <dl>  
+            <dt>C. Complete the <a href="https://terminallearning.com/nodejs/routebasic.html#ex" target="_blank">Practice Exercises</a> (Your First Node.js Programs) </dt>
+            <dd>Read <a href="https://terminallearning.com/nodejs/projectstructure.html" target="_blank">Node.js Project Structure</a>.</dd>    
+            <dd>Complete project <kbd>/ex4</kbd> and publish on  <kbd>dev.fast.sheridanc.on.ca</kbd> server.</dd>
+        </dl>  
+
+
+
+        <dt>D. Read, and make notes, through <a href="https://terminallearning.com/nodejs/expressRoutes.html" target="_blank">Basic Routing with Expres.js</a> (Routing Requests) and complete the <strong>First Express Application</strong>.</dt> 
+
+        <dl>  
+            <dt>E. Study the material, implement the projects, then answer the following questions IN YOUR OWN WORDS.</dt>
+            <dd>
+                <ol>
+                    <li>What is routing? What is a route handler?</li>
+                    <li>What is a middleware function?</li>
+                    <li>What are the four main objects in Express that you can use to write better Node.js applications?</li>       
+                    <li>What do the statements below do?
+<pre class="language-js"><code>const express = require("express"),
+      app = express();
+</code></pre>                    
+                    </li>  
+                    <li>What does the express .use() function do?  </li>  
+                    <li>What does the express function get() do? What does the .post() function do?</li>  
+                    <li>What is the next parameter for in a middleware function?  Do all middleware functions need this parameter? Why or why not?</li>  
+                    <li>What are two reasons why you might prefer routing with Express over vanilla Node.js?</li>  
+                </ol>
+            </dd>
+        </dl> 
+  
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <footer class="f-row flex-wrap:wrap justify-content:space-between">       
+            <div>Previous ←
+                <strong><a href="week10.html">Worksheet 10</a></strong>
+            </div>   
+            <div>Next →
+                <strong><a href="week12.html">Worksheet 12</a></strong>
+            </div>       
+    </footer>
+</main>
+
+<!-- footer section -->
+<footer>
+    <address><a href="">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>     
+</footer>
+
+
+</body>
+</html>
