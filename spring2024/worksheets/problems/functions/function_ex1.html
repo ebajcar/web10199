@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: February 8, 2024
+Version: 24.0
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Explore and practice unobtrusive Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+    class example
+-->
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+}        
+</style>
+</head>
+
+<body>
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Examples</sub-title></h1>
+        <nav>
+            <p class="tool-bar">
+                <a href="#" class="current">Home</a>
+            </p>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Code</h2>
+        <pre class="language-js" tabindex="0"><code class="language-html">&lt;script>
+// creating custom methods
+let points = [{
+    x: 0,
+    y: 0
+  },
+  {
+    x: 1,
+    y: 1
+  }
+];
+points.dist = function() {
+  let p1 = this[0];
+  let p2 = this[1];
+  let a = p2.x - p1.x;
+  let b = p2.y - p1.y;
+  return Math.sqrt(a * a + b * b);
+};
+document.getElementsByTagName("output")[0].innerText += "Output: points.dist()  " + points.dist();
+&lt;/script></code></pre>
+
+    
+        <h2>Output</h2>
+        <output></output>
+    </main>
+    
+    <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+ 
+<script>
+/* 
+ * creating custom methods
+ */
+let points = [{
+    x: 0,
+    y: 0
+  },
+  {
+    x: 1,
+    y: 1
+  }
+];
+points.dist = function() {
+  let p1 = this[0];
+  let p2 = this[1];
+  let a = p2.x - p1.x;
+  let b = p2.y - p1.y;
+  return Math.sqrt(a * a + b * b);
+};
+document.getElementsByTagName("output")[0].innerText += "Output: points.dist()  " + points.dist();
+</script>	
+</body>
+</html>
