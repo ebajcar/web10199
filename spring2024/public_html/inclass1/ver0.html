@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
 Author: 		Ellen Bajcar
-File name: 		ver9.html
+File name: 		ver0.html
 Date Created:	Summer 2021
 Date Updated:   Summer 2024
 Version: 		2024.1 
@@ -23,13 +23,14 @@ Description:
         2. calculate the sum of the number and 1
         3. display the result on the screen
 -->
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> 
-<link rel="stylesheet" href="../css/style.css"> 
 <style>
   body {
     width: 80%;
     margin: auto;
+  }
+  footer {
+    margin-top: 30px;
+    border-top: 1px dotted green;
   }
   input, output {
     font-size: 1.5em;
@@ -59,7 +60,13 @@ Description:
       <address>SYST10199 Web Programming &copy; Sheridan College</address>
   </footer>
 <script>
- 
+let num1, num2, sum;
+// num1 = 5;
+num2 = 1;
+sum = num1 + num2;
+console.log("The sum of " + num1 + " and " + num2 + " is " + sum );
+num1 = document.getElementById("uval").value;
+console.log(num1);
 </script>	
 </body>
 </html>
