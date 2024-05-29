@@ -73,11 +73,11 @@ function divide(num1, num2) {
 const display = document.getElementsByTagName("output")[0];
 display.innerText = "5 x 15 is   " + calculate(5, 15, multiply) + "\n"; //  75
 display.innerText += "5 + 15 is   " + calculate(5, 15, add) + "\n"; //  20
-display.innerText += "5 / 15 is   " + divide(5, 15, divide) + "\n"; //  0.333
-display.innerText += "5 / NaN is   " + divide(5, NaN, divide) + "\n"; // NaN
-display.innerText += "5 / 0 is   " + divide(5, 0, divide) + "\n"; // cannot complete operation Infinity
-display.innerText += "5 / a is   " + divide(5, "a", divide) + "\n"; // cannot complete operation NaN
-display.innerText += "5 / null is   " + divide(5, null, divide) + "\n"; 
+display.innerText += "5 / 15 is   " + calculate(5, 15, divide) + "\n"; //  0.333
+display.innerText += "5 / NaN is   " + calculate(5, NaN, divide) + "\n"; // NaN
+display.innerText += "5 / 0 is   " + calculate(5, 0, divide) + "\n"; // cannot complete operation Infinity
+display.innerText += "5 / a is   " + calculate(5, "a", divide) + "\n"; // cannot complete operation NaN
+display.innerText += "5 / null is   " + calculate(5, null, divide) + "\n"; 
                                                 // cannot complete operation Infinity
 &lt;/script></code></pre>
 
@@ -115,11 +115,11 @@ function divide(num1, num2) {
 const display = document.getElementsByTagName("output")[0];
 display.innerText = "5 x 15 is   " + calculate(5, 15, multiply) + "\n"; //  75
 display.innerText += "5 + 15 is   " + calculate(5, 15, add) + "\n"; //  20
-display.innerText += "5 / 15 is   " + divide(5, 15, divide) + "\n"; //  0.333
-display.innerText += "5 / NaN is   " + divide(5, NaN, divide) + "\n"; // NaN
-display.innerText += "5 / 0 is   " + divide(5, 0, divide) + "\n"; // cannot complete operation Infinity
-display.innerText += "5 / a is   " + divide(5, "a", divide) + "\n"; // cannot complete operation NaN
-display.innerText += "5 / null is   " + divide(5, null, divide) + "\n"; // cannot complete operation Infinity
+display.innerText += "5 / 15 is   " + calculate(5, 15, divide) + "\n"; //  0.333
+display.innerText += "5 / NaN is   " + calculate(5, NaN, divide) + "\n"; // NaN
+display.innerText += "5 / 0 is   " + calculate(5, 0, divide) + "\n"; // cannot complete operation Infinity
+display.innerText += "5 / a is   " + calculate(5, "a", divide) + "\n"; // cannot complete operation NaN
+display.innerText += "5 / null is   " + calculate(5, null, divide) + "\n"; // cannot complete operation Infinity
 
 </script>
 </body>
