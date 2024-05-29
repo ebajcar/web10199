@@ -85,19 +85,7 @@ function showItem(value) {
     </footer>
 
 <script>
-/*
-Given
-let i = 5;
-for (let i = 0; i < 10; i++) {
-// some statements
-}
-
-// what is the value of i here (after the loop)?
-5
-
-*/
 const family = ["Joan","Charlie","Peter","Anne","Tim"];
-
 console.log(family);
 let result = "";
 family.sort().reverse();
@@ -105,14 +93,10 @@ family.sort().reverse();
 family.forEach(showItem);
 console.log(family);
 
-//document.getElementsByTagName("main")[0].innerText += result;
-console.log(result);
-
 function showItem(value) {	
 	listItem = value + " is " + value.length + " characters long.\n";
     display(listItem);
     result +=listItem;
-
 }
 function display(listItem) {
     let child = document.createElement("li");
