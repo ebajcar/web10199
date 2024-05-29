@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>forEach</title>
+	<title>Fibonacci - while</title>
     
     <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
     <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
@@ -28,7 +28,7 @@
         .big-value {
           font-size: 4em;
           font-weight: normal;
-          text-align: left;
+          text-align: right;
           text-shadow: 2px 2px 2px gray;
           padding-bottom: 20px;
         }
@@ -47,48 +47,30 @@
           padding-left: 5px;
           color: gray;
         }
-        select {
-          width: 100%;
-        }
 	</style>
 </head>
 <body>
 
 	<header>
-        <h1><span class="allcaps">Web Programming</span> <sub-title>forEach loop</sub-title></h1>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Control structures</sub-title></h1>
+
     </header>
 
     <main>
-      
+        <h2>Using a while loop &mdash;<small>Fibonacci numbers</small></h2>
+     
         
-    <ul role="list" class="f-switch dense">
-        <li class="box">
-                <pre class="language-js" tabindex="0"><code class="language-js">
-var out = "";
-var numbers = 
-  [ 45,4,"abc", 16, [1,2,3], 25, "efg" ];
-numbers.forEach(myFunction);
-
-function myFunction(value, index, array) {
-  out += value + " (" + index + ")<br>";
-}
-console.log("numbers ", numbers);
-result.innerHTML = numbers;
-console.log("out ", out);
-result2.innerHTML = out;             
-                </code></pre>
- 
-       
-        </li>
-        <li class="box">
-
-           
-<p>The result is:</p>   
-            <h3 id="result"></h3>
-            <h3 id="result2"></h3>
-        </li>
-    </ul>
-
+        <h3>This version is set to 10 numbers.</h3>
+        <ul role="list" class="f-switch dense">
+            <li class="box">
+                <h2><label>How many? <input type="number" id="limit" pattern="[0-9]+" value="10" readonly></label></h2>
+                <small>Note: this input is readonly.</small>
+                <hr>
+                <p><span id="fahren">Open the Console to see the output</p>
+            </li>          
+        </ul>
+    
+		
 		
     </main>
    <footer>
@@ -97,22 +79,39 @@ result2.innerHTML = out;
     </footer>
 
 <script>
+/*
+  PROBLEM: 
+  
+  SOLUTION: 
+  1. Get (pick) a number 
+  2. define a function that 
+  3. Call the function
+  4. display the result in the console.
+*/
+// Calculate and display in console the first 5 Fibbonaci numbers
 
-
-// forEach() method calls a function once for each element in an array, in order.
-// https://www.w3schools.com/js/js_array_iteration.asp
-
-var out = "";
-var numbers = [ 45,4,"abc", 16, [1,2,3], 25, "efg" ];
-numbers.forEach(myFunction);
-
-function myFunction(value, index, array) {
-  out += value + " (" + index + ")<br>";
+// properties and methods available for arrays
+// https://www.w3schools.com/jsref/jsref_obj_array.asp
+let values = [];
+let n = 10;
+let pre = 0, cur = 1;
+//console.log(pre); 
+values.push(pre);
+//console.log(cur); 
+values.push(cur);
+// explore the while loop
+let i = 0;
+while (i < n-2) {
+	var tmp = pre;
+	pre = cur;
+	cur += tmp;
+    //console.log(cur);
+	values.push(cur);	
+	i++;
 }
-console.log("numbers ", numbers);
-result.innerHTML = numbers;
-console.log("out ", out);
-result2.innerHTML = out;
+console.table(values);
+// https://www.w3schools.com/jsref/obj_console.asp
+
 </script>
 </body>
 </html>
