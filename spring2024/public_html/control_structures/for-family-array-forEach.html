@@ -3,10 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Worksheet Two Problems</title>
+	<title>forEach - family</title>
     
-    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
-	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+  <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+  <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
 
 	<style>
 		:root {
@@ -53,17 +55,27 @@
 <body>
 
 	<header>
-        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet One</sub-title></h1>
-        <nav>
-            <p class="tool-bar"><a href="../../index.html">Home</a>
-            <a href="../problems/index.html">Problems</a>
-            <a href="index.html" class="current">Exercises</a>
-        </nav>
+        <h1><span class="allcaps">Web Programming</span> 
+          <sub-title>Control Structures</sub-title></h1>
     </header>
 
     <main>
     <p>Output:</p>
     <ul></ul>
+    <ul>
+      <li class="box">
+        <pre class="language-js" tabindex="0"><code class="language-js">// code snippet
+const family = ["Joan","Charlie","Peter","Anne","Tim"];
+family.sort().reverse();
+family.forEach(showItem);
+
+function showItem(value) {	
+	listItem = value + " is " + value.length + " characters long.\n";
+    display(listItem);
+    result +=listItem;
+}</code></pre>
+</li>
+    </ul>
 
 		
     </main>
@@ -73,19 +85,7 @@
     </footer>
 
 <script>
-/*
-Given
-let i = 5;
-for (let i = 0; i < 10; i++) {
-// some statements
-}
-
-// what is the value of i here (after the loop)?
-5
-
-*/
 const family = ["Joan","Charlie","Peter","Anne","Tim"];
-
 console.log(family);
 let result = "";
 family.sort().reverse();
@@ -93,14 +93,10 @@ family.sort().reverse();
 family.forEach(showItem);
 console.log(family);
 
-//document.getElementsByTagName("main")[0].innerText += result;
-console.log(result);
-
 function showItem(value) {	
 	listItem = value + " is " + value.length + " characters long.\n";
     display(listItem);
     result +=listItem;
-
 }
 function display(listItem) {
     let child = document.createElement("li");

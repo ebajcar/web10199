@@ -1,15 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>while - select</title>
+	<title>Worksheet Two Problems</title>
     
-    
-  <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
-  <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
-  <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
-<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
 
 	<style>
 		:root {
@@ -56,12 +56,23 @@
 <body>
 
 	<header>
-        <h1><span class="allcaps">Web Programming</span> <sub-title>Control Structures</sub-title></h1>
-
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet One</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="../problems/index.html">Problems</a>
+            <a href="index.html" class="current">Exercises</a>
+        </nav>
     </header>
 
     <main>
-      
+        <h2>Version 1  - <small>The for loop</small></h2>
+     <nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Problems</a></li>
+            <li><a href="fibonacci-problem.html">Problem statement</a></li>
+            <li><a href="#">The for loop</a></li>
+        </ol>
+    </nav>       
         
   <form name="selectForm">
 <ul role="list" class="f-switch dense">
@@ -69,59 +80,28 @@
 	  <label for="musicTypes">Choose some music types (genres and moods), <br>then click the button.</label>
 	  <br>
 	  <select id="musicTypes" name="musicTypes" multiple="multiple" size="12">
-      <option selected>Blues</option>
-      <option>Classical</option>
-      <option>Focus</option>
-      <option>Hip Hop</option>
-      <option>Jazz</option>
-      <option>Latin</option>
-      <option>Opera</option>
-      <option>Movie</option>	 
-      <option>R&amp;B</option>
-      <option>Reggae</option>  
+		<option selected>Blues</option>
+		<option>Classical</option>
+		<option>Focus</option>
+		<option>Hip Hop</option>
+		<option>Jazz</option>
+		<option>Latin</option>
+		<option>Opera</option>
+		<option>Movie</option>	 
+		<option>R&amp;B</option>
+		<option>Reggae</option>  
 	  </select>
 </li>
 <li class="box">
 	<p><strong><input id="btn" type="button" value="How many are selected?" /></strong></p>
     <h3>Number of options selected: </h3>
-	<h3 id="result" class="big-value"></h3>
+	<h3  id="result" class="big-value"></h3>
 </ul>
   </form>
-
+    
+		
+		
     </main>
-    <aside>
-<pre class="language-js" tabindex="0"><code class="language-js">
-  /*
-	The following function contains a for statement that counts the number 
-	of selected options in a scrolling list (a <select> element that allows 
-	multiple selections). The for statement declares the variable i and 
-	initializes it to zero. It checks that i is less than the number of 
-	options in the <select> element, performs the succeeding if statement, 
-	and increments i by one after each pass through the loop. 
-*/
-function howMany(selectObject) {
-  let numberSelected = 0;
-  let len = selectObject.options.length;
-  console.log("length is " + len);
-  let i = 0;
-  while (i &lt; len) {
-    if (selectObject.options[i].selected) {
-      numberSelected++;
-      console.log(selectObject.options[i].innerText);
-    }
-    i++;
-  }
-  return numberSelected;
-}
-
-const btn = document.getElementById('btn');
-const result = document.getElementById('result');
-
-btn.onclick = function() {
-	result.innerText = howMany(document.selectForm.musicTypes);
-}            
-</code></pre>
-    </aside>
    <footer>
         <address>Ellen Bajcar &copy; Sheridan College</address>
         <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
@@ -148,14 +128,10 @@ btn.onclick = function() {
 function howMany(selectObject) {
   let numberSelected = 0;
   let len = selectObject.options.length;
-  console.log("length is " + len);
-  let i = 0;
-  while (i < len) {
+  for (let i = 0; i < len; i++) {
     if (selectObject.options[i].selected) {
       numberSelected++;
-      console.log(selectObject.options[i].innerText);
     }
-    i++;
   }
   return numberSelected;
 }
