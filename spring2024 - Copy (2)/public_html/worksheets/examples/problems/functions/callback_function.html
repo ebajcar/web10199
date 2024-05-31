@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Functions: Task 1</title>
+<style>
+p {
+  font-size: 3em;
+  margin: 0.5em;
+}
+.preview {
+  background-color: #abceda;
+  height: 200px;
+}
+</style>
+</head>
+
+  <body>
+    <main>
+    </main>
+  </body>
+  <script>
+/*
+  idea based on
+  https://en.wikipedia.org/wiki/Callback_(computer_programming)
+*/
+function calculate(num1, num2, callbackFunction) {
+    return callbackFunction(num1, num2);
+}
+function multiply(num1, num2) {
+    return num1 * num2;
+}
+function add(num1, num2) {
+    return num1 + num2;
+}
+function subtract(num1, num2) {
+    return num1 - num2;
+}
+function divide(num1, num2) {
+    return (num2 == 0 || typeof num2 !== "number")
+      ? "cannot complete operation" + (num1 / num2)
+      : num1 / num2;
+}
+//  75
+document.writeln(calculate(5, 15, multiply));
+//  20
+document.writeln(calculate(5, 15, add));
+//  divide  
+document.writeln(calculate(5, 15, divide)); //  0.333
+document.writeln(calculate(5, NaN, divide)); // NaN
+//  cannot complete operation 
+document.writeln(calculate(5, 0, divide));  // Infinity
+document.writeln(calculate(5, "a", divide));  // NaN 
+document.writeln(calculate(5, null, divide));  // Infinity
+
+  </script>
+
+</html>

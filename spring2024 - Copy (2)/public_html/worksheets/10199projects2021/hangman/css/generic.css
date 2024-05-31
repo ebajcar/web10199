@@ -1,0 +1,73 @@
+@import  http://fonts.googleapis.com/css?family=Allan:700;
+
+/*
+Author: Ellen Bajcar
+Program: hangman.html
+Date: Summer 2016
+Date Updated: 8:25 AM June-09-16
+Version: 5.0 (Week 5 stage)
+Purpose: learning Javascript programming
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    Example for SYST10199 Web Programming, Summer 2016, Ellen Bajcar 
+ 	http://codepen.io/ebajcar/pen/EyxZyx
+	https://simple.wikipedia.org/wiki/List_of_countries_by_continents	
+	https://www.codecademy.com/courses/javascript-intermediate-tpoPb/0/1
+*/
+/* general */
+body {
+	background: url(../../../images/bg11.jpg) no-repeat;
+    background-size: cover;
+    font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+    width: 680px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    height: 100%;
+    font-size: 18px;
+}
+
+.wrappper {
+    width: 480px;
+    margin: 0 auto;
+    border: 5px solid #000;
+}
+
+.wrappper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+canvas {
+    color: #fff;
+    background: black;
+    border: orange solid 1px;
+	box-shadow: 1px 1px 15px gray;
+    padding: 15px 30px;
+}
+
+h1,h3 {
+    font-size: 4em;
+    margin: .2em 0;
+    color: #00f;
+    text-shadow: 1px 1px 1px #fff,2px 2px 6px #000;
+}
+
+h2 {
+    font-family: 'Roboto',sans-serif;
+    font-weight: 100;
+    margin: 5px 0;
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+
+p {
+    font-size: .9em;
+}
+
+
+

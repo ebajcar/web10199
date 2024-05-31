@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
+/* font-family: 'Monoton', cursive; */
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt&display=swap");
+/*font-family: 'Rock Salt', cursive; */
+
+/* 
+	GENERAL STYLES
+*/
+body {
+  background-color: #e0e0e0;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+footer {
+  margin: auto;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 0.8em;
+}
+main {
+  background-color: white;
+  background: linear-gradient(to bottom, white 0%, lightgray 100%);
+  display: flex;
+
+  padding: 0 25% 2%;
+}
+article,
+section {
+  flex: 4;
+  padding: 15px;
+}
+h2 {
+  line-height: 1.1em;
+  font-family: "Rock Salt", cursive;
+  margin-top: 2px;
+}
+
+/* 
+  || header layout 
+*/
+header {
+  margin-bottom: 10px;
+}
+header h1 {
+  color: #6f6f6f;
+  font-family: "Rock Salt", cursive;
+  font-size: 3rem;
+  line-height: 3rem;
+  padding: auto;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 4px white, 2px 2px 10px black;
+}
+header > img {
+  display: inline-block;
+  top: 5px;
+  right: 20px;
+  width: 90px;
+  opacity: 0.3;
+  padding: 15px;
+  position: absolute;
+  transform: scaleX(-1);
+}
+
+/* navigation */
+nav {
+  flex: 100%;
+  min-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+nav a {
+  background: #a4a4a4;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 2px;
+  padding: 7px;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px black;
+}
+nav a.active,
+nav a:hover {
+  background: #c2c2c2;
+  color: #818181;
+}
+
+/* aside */
+aside {
+  flex: 1;
+  margin-left: 10px;
+  padding: 25px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+}
+
+.grid-container img {
+  width: 100%;
+}

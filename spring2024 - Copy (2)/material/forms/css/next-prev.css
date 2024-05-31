@@ -1,0 +1,29 @@
+/* prev-next navigation */ 
+.prev-next {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 0;
+    padding-top: 0;
+}
+.prev-next * {
+    margin-top: 0;
+    padding-top: 0;    
+}
+header, h1 {
+    padding-bottom: 0;
+    margin-bottom:0;
+}
+
+.steps {
+    margin-left: 0;
+    padding-right: 0;
+    list-style-type: none;
+}    
+.steps li {
+    counter-increment: step-counter;
+}    
+.steps li::before {
+  content: "STEP " counter(step-counter) ": ";
+} 

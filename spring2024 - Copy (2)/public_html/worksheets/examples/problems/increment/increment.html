@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>increment an integer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: 		Ellen Bajcar
+File name: 		tictactoe.css
+Date Created:	Summer 2019
+Date Updated: 
+Version: 		2019.5.1 
+Purpose: 		learning Javascript programming; assignment requirements
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    See README.txt file, located in this project's root directory
+-->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> 
+<link rel="stylesheet" href="../css/style.css"> 
+<link rel="stylesheet" href="../css/components.css">
+<style>
+  input, output {
+    font-size: 1.5em;
+    width: 100%;
+  }
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>Class exercises</h1>
+	</header>
+  <nav>
+    <a href="../index_members.html">Home</a>
+    <div class="dropdown">
+      <span>Exercises</span>
+      <div class="dropdown-content">
+        <a href="#">Increment</a> 
+        <a href="#">Convert</a> 
+        <a href="#">Add</a> 
+        <a href="#">Exercise X</a> 
+        <a href="#">Exercise Y</a> 
+        <a href="#">Exercise Z</a> 
+        
+      </div>
+    </div>    
+    <a href="../index_public.html">Logout</a>
+  </nav>
+  
+  
+  
+  
+  <main>  
+    <section class="grid-container">
+      <h2>Incrementing a number!</h2>
+      <p>Select a number using the spinner or typing it in:<br>
+          <input id="uval" type="number"></p>
+      <output id="out">Result will appear here.</output>
+    </section>
+  </main>
+  <footer>
+      <address>SYST10199 Web Programming &copy; Sheridan College</address>
+  </footer>
+  <script>
+function plusOne(x) {
+	return x + 1;
+}
+// start processing the input only when user change the value
+uval.onchange = function() {
+  // get value from the user; treat it as a number
+  var x = uval.valueAsNumber;
+  console.log("x " + x + " type " + typeof(x));
+  var y = uval.valuey;
+  console.log("y " + y + " type " + typeof(y));  
+  out.innerText = "plusOne(" + x + ") " + plusOne(x);
+}
+// Next step: explore alternatives, dig deeper 
+</script>	
+</body>
+</html>

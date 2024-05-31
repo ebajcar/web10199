@@ -1,0 +1,44 @@
+/* 
+    Document   : tictactoe
+    Created on : 23-May-2012, 1:41:52 PM
+    Author     : Sam Scott
+    Description:
+        CSS for a mobile Tic Tac Toe app.
+*/
+
+root { 
+    display: block;
+}
+body {
+    text-align:center;
+}
+p {
+    font-family:monospace;
+}
+table {
+    margin:auto;
+}
+td {
+    width:50px;
+    height:50px;
+    border: 1px solid black;
+    font-size:40px;
+    text-align:center;
+    font-family:arial, helvetica, sans-serif;
+}
+
+#cell00, #cell10, #cell20 {
+    border-left-style: none;
+}
+
+#cell02, #cell12, #cell22 {
+    border-right-style: none;
+}
+
+#cell00, #cell01, #cell02 {
+    border-top-style: none;
+}
+
+#cell20, #cell21, #cell22 {
+    border-bottom-style: none;
+}

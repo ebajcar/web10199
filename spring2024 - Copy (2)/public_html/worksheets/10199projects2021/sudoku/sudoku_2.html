@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+Exploration of Sudoku game
+Ellen Bajcar, Spring 2019
+-->
+<html lang="en">
+    <head>
+        <title>Tic Tac Toe</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="css/sudoku.css"/>
+
+    </head>
+    <body>
+        <h1>Sudoku</h1>
+    <table class="outer" border="1">
+        <tr>
+            <td>
+                <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table>
+            </td>
+            <td>
+                 <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table> 
+            </td>  
+            <td>
+                 <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table> 
+            </td> 
+        </tr>  
+            <td>
+                <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table>
+            </td>
+            <td>
+                 <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table> 
+            </td>  
+            <td>
+                 <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table> 
+            </td> 
+        </tr> 
+            <td>
+                <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table>
+            </td>
+            <td>
+                 <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table> 
+            </td>  
+            <td>
+                 <table>
+                    <tr> <td>1</td> <td>2</td> <td>3</td> </tr>
+                    <tr> <td>4</td> <td>5</td> <td>6</td> </tr>  
+                    <tr> <td>7</td> <td>8</td> <td>9</td> </tr>                 
+                </table> 
+            </td> 
+        </tr>         
+    </table>    
+        <p><input type="button" value="reset game" onclick="toggle();"></p> 
+        <script>
+             //var cells = document.querySelectorAll("td");
+            var cells = document.getElementsByTagName("td");
+            console.log(cells.length);           
+            var state = -1;
+            
+            function toggle() {
+                console.log(cells);
+                var symbol, color, background, message;
+                state = (state + 1) % 3;
+                switch (state) {
+                    case 0:
+                        symbol = "X";
+                        color = "red";
+                        background = "white";
+                        message = "It's all Xs!";
+                        break;
+                    case 1:
+                        symbol = "O";
+                        color = "blue";
+                        background = "white";
+                        message = "It's all Os!";
+                        break;
+                    case 2:
+                        symbol = "";
+                        color = "white";
+                        background = "black";
+                        message = "????????????";
+                        break;
+                }
+                for (var i=1; i<cells.length; i++) {
+                  //if (i != 10 && i != 20) {
+                  if (i % 10 != 0) {
+                    cells[i].innerText = i;
+                    cells[i].style.color = color;
+                    cells[i].style.backgroundColor = background;
+                    }
+                }                
+/*
+                for (var i=1; i<10; i++) {
+                    cells[i].innerText = i;
+                    cells[i].style.color = color;
+                    cells[i].style.backgroundColor = background;
+                }
+                for (var i=11; i<20; i++) {
+                    cells[i].innerText = i;
+                    cells[i].style.color = color;
+                    cells[i].style.backgroundColor = background;
+                }    
+                for (var i=21; i<30; i++) {
+                    cells[i].innerText = i;
+                    cells[i].style.color = color;
+                    cells[i].style.backgroundColor = background;
+                }
+                */
+                return cells;
+                //document.getElementById("message").innerHTML = message;
+            }
+        </script>		  
+    </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Worksheet Three Exercises</title>
+
+<link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+<link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+<script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+}
+
+header {
+  background-color: #eee; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, white, white, lightgray, white, white); /* Standard syntax (must be last)  */
+}
+</style>
+<link rel="stylesheet" href="css/colours.css">
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Colour name and value example</sub-title></h1>
+        <nav>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <table>
+            <caption>Color names and RGB values</caption>
+
+            <tr>
+                <td style="background-color:black"></td>
+                <td>black = "#000000"</td>
+                <td style="background-color:green"></td>
+                <td>green = "#008000"</td>
+            </tr>
+
+            <tr>
+                <td style="background-color:#C0C0C0"></td>
+                <td>silver = "#C0C0C0"</td>
+                <td style="background-color:#00FF00"></td>
+                <td>lime = "#00FF00"</td>
+            </tr>
+
+            <tr>
+                <td style="background-color:#808080"></td>
+                <td>gray = "#808080"</td>
+                <td style="background-color:#808000"></td>
+                <td>olive = "#808000"</td>
+            </tr>
+
+            <tr>
+                <td style="background-color:white"></td>
+                <td>white = "#FFFFFF"</td>
+                <td style="background-color:yellow"></td>
+                <td>yellow = "#FFFF00"</td>
+            </tr>
+
+            <tr>
+                <td style="background-color:maroon"></td>
+                <td>maroon = "#800000"</td>
+                <td style="background-color:navy"></td>
+                <td>navy = "#000080"</td>
+            </tr>
+
+            <tr>
+                <td style="background-color:red"></td>
+                <td>red = "#FF0000"</td>
+                <td style="background-color:blue"></td>
+                <td>blue = "#0000FF"</td>
+            </tr>
+
+            <tr>
+                <td style="background-color:purple"></td>
+                <td>purple = "#800080"</td>
+                <td style="background-color:teal"></td>
+                <td>teal = "#008080"</td>
+            </tr>
+
+            <tr>
+                <td style="background-color:fuchsia"></td>
+                <td>fuchsia = "#FF00FF"</td>
+                <td style="background-color:aqua"></td>
+                <td>aqua = "#00FFFF"</td>
+            </tr>
+        </table>
+
+        <hr>
+        <button id="modal-button">Comments</button>
+        
+  <dialog class="dialog" id="modal">
+    <h2>Comments</h2>
+	<h3>Explore HTML Elements</h3>
+	<p>Start with a four-column table and a caption.</p>
+	<h3>Explore CSS Properties and Values</h3>
+	<p>Use the <code>:nth-child(An+B)</code> to style different columns.</p>
+	<h3>Alternative Layouts</h3>
+	<p>CSS grid, CSS flexbox, &hellip;</p>
+    <button id="modal-close">Close</button>
+  </dialog>
+
+            
+    </main>
+
+    <footer>
+        <address>Web Programming, Spring 2024 &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+//-----------------------------------
+// Declare Variables
+//-----------------------------------
+
+// Handles to modal
+const commentsButton = document.getElementById('modal-button');
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modal-close');
+
+//-----------------------------------
+// Button Actions
+//-----------------------------------
+
+// on click, show as a modal
+commentsButton.addEventListener('click', function() {
+  modal.showModal();
+});
+
+// close modal on click
+modalClose.addEventListener('click', function() {
+  modal.close();
+});
+</script>
+</body>
+</html>

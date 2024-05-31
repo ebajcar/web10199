@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet 4</title>
+    <link rel="stylesheet" href="css/missing-css.css">
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css"-->
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing-prism.min.css"-->
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="css/prism-coy-23.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <base target="_blank">
+	<style>
+kbd {
+  color: darkorange;
+}
+mark {
+  background-color: lightblue;
+}
+dd, ul, ol, dt {
+  margin-bottom:  5px;
+  margin-top: 5px;
+}
+dl h4 {
+  margin-bottom:  5px;
+  margin-top: 5px;
+}
+summary {
+  font-size: 1.2em;
+  background-color: white;
+}
+code {
+  background-color: beige;
+}
+	</style>
+</head>
+<body>
+
+
+<header>       
+    <h1><span class="allcaps">SYST<wbr>10199 Web Programming<v-h>:</v-h></span><sub-title>Worksheet 4</sub-title></h1>
+</header>
+
+<main>
+    <div class="prev-next">
+        <p><a href="week03.html">Prev</a></p>
+        <nav class="tool-bar">| 
+            <a href="week01.html"> 1 </a> | 
+            <a href="week02.html"> 2 </a> | 
+            <a href="week03.html"> 3 </a> | 
+            <a href="week04.html"  class="current"> 4 </a> | 
+            <a href="week05.html"> 5 </a> | 
+            <a href="week06.html"> 6 </a> | 
+            <a href="week07.html"> 7 </a> | 
+            <a href="week08.html"> 8 </a> | 
+            <a href="week09.html"> 9 </a> | 
+            <a href="week10.html"> 10 </a> | 
+            <a href="week11.html"> 11 </a> | 
+            <a href="week11.html"> 12 </a> | 
+            <a href="week11.html"> 13 </a> | 
+            <a href="week14.html"> 14 </a> |  
+        </nav>
+        <!--     
+        
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <ol>
+                <li><a href="../index.html"  class="allcaps">Home</a></li>
+                <li><a href="index.html"  class="allcaps">Worksheets</a></li>
+                <li><a href="week13.html" aria-current="page">Worksheet 4</a></li>
+            </ol>               
+        </nav>-->
+        <p><a href="week05.html">Next</a></p>
+    </div>
+
+
+   <!-- 1. Review from previous weeks -->
+    <section id="p1">
+        <h2>1. Review</h2>
+        <details>
+            <summary>Completing tutorials in Worksheets 1 2, and 3</summary>
+            <p>After completing the tutorials, you should know (and apply)</p>
+            <ul>
+                <li>see Review in previous worksheets</li>
+                <li>What is a variable? How to declare a variable. How to initialize a variable. How to update a variable. What are the variable naming rules. What are keywords. What are variable types (number, string, Boolean, Array, Object. What it means that JS is a dynamically typed language. What are constants? how are they different from variables? </li>
+                <li>How to manipulate numbers? What types of numbers are there? What Number methods are there? How to convert to number data types? What is the operator precedence? Increment and decrement operators. Assignment operators? Comparison operators. <span hidden>Machine start/stop Example</span></li> 
+                <li>What is an array? How to create arrays. Find the length of an array - <code>.length</code>. Access and modify array items. Find an index of items in an array - <code>.indexOf()</code>. Add to the end - <code>.push()</code>. Add to the start  - <code>.unshift()</code>. Remove last item  - <code>.pop()</code>. Remove the first item  - <code>.shift()</code>. How to access every item ( - <code>for&hellip;of</code>  - <code>.map()</code> - <code>.filter()</code>.</li> Convert between strings and arrays  - <code>split()</code>  - <code>join()</code> - <code>.toString()</code>. What other methods have you discovered?
+                <li>What is the syntax of basic <code>if&hellip;else</code> statement? How do you chain additional <code>else if</code> blocks? <span hidden>weather select example</span> What are comparison operators? Logical operators AND, OR, and NOT. What are switch statements? how do you use them? What is ternary operator? how do you use it? <span hidden>page black/white theme example</span> <span hidden>Calendar example</span></li> 
+            </ul>
+            <p>Keep up with examples and exercises. Practice every day. Develop solutions.</p>
+          
+            <p>Consider creating another project for your own implementation of the various examples throughout the tutorials as you read and study.</p>
+        </details>
+    </section>
+
+
+
+    <!-- 2. Read and explore course material -->
+    <section id="p2">
+        <h2>2. Explore and Dig deeper</h2>
+        <details>
+            <summary>Activity 1. Looping code</summary>           
+            <dl>         
+                <dt>Complete MDN tutorial <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code" target="_blank">Looping code</a></dt>           
+                <dd hidden><a href="" target="_blank">link</a> </dd>
+                <dd>Loops are all about doing the same thing over and over again. Often, the code will be slightly different each time round the loop, or the same code will run but with different variables. Looping through a collection using <code>for&hellip;of</code>, <code>.map()</code>, <code>.filter()</code>; the standard for loop; exiting loops with break; skipping iterations with continue; while and do&hellip;while. Which loop type should you use?</dd>
+                <dd>Explore w3schools tutorials
+                    <ul style="column-count: 2">                      
+                        <li><a href="https://www.w3schools.com/js/js_if_else.asp" target="_blank">JavaScript if, else, and else if</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_switch.asp" target="_blank">JavaScript Switch Statement</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_loop_for.asp" target="_blank">JavaScript For Loop</a></li>
+                         <li><a href="https://www.w3schools.com/js/js_loop_while.asp" target="_blank">JavaScript While Loop</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_break.asp" target="_blank">JavaScript Break and Continue</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_comparisons.asp" target="_blank">JavaScript Comparison and Logical Operators</a></li>                       
+                    </ul>  
+                </dd> 
+        </details>   
+        
+        <details>
+            <summary>Activity 2. Functions</summary>    
+            <dl>
+                <dt>Complete MDN tutorial <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions" target="_blank">Functions — reusable blocks of code</a> </dt>           
+                <dd>Built-in browser functions. Functions versus methods. Invoking functions. Function parameters (optional, default). Anonymous functions and arrow functions. </dd>      
+                <dd>Explore w3schools tutorials
+                    <ul style="column-count: 2">                      
+                        <li><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">JavaScript Functions</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_definition.asp" target="_blank">JavaScript Function Definitions</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_parameters.asp" target="_blank">JavaScript Function Parameters</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_invocation.asp" target="_blank">JavaScript Function Invocation</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_call.asp" target="_blank">JavaScript Function call()</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_apply.asp" target="_blank">JavaScript Function apply()</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_bind.asp" target="_blank">JavaScript Function bind()</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_closures.asp" target="_blank">JavaScript Closures</a></li>
+                    </ul>  
+                </dd>                           
+            </dl>   
+
+            <dl>
+                <dt>Complete MDN tutorial <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function" target="_blank">Build your own function</a> </dt>           
+                <dd>The basic function. Calling the function. Improving the function with parameters.</dd>      
+                 <dt>Complete MDN tutorial <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function" target="_blank">Function return values</a> </dt>           
+                <dd>What are return values?</dd>  
+                
+                 <dt>Read further <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions" target="_blank">Function overview</a> (MDN reference)</dt>           
+                <dd>What are first-clss objects? </dd> 
+                
+                <dt>Read further <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank">Arrow function expressions</a> (MDN reference)</dt>           
+                <dd>An arrow function expression is a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage:</dd> 
+
+                 <dt>Read further <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters" target="_blank">Default parameters</a> (MDN reference)</dt>           
+                <dd>Syntax. Description. Examples.  </dd> 
+                
+                 <dt>Read further <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters" target="_blank">Rest parameters</a> (MDN reference)</dt>           
+                <dd>Syntax. Description. Examples.  </dd>                
+                
+                 <dt>Read further <a href="https://www.impressivewebs.com/callback-functions-javascript/" target="_blank">Callback functions in Javascript</a> </dt>           
+                <dd>a common JavaScript pattern is to pass a function into another function as an argument. It is then called inside the first function.</dd>                  
+            </dl>               
+
+        </details> 
+        
+    </section>
+
+
+
+
+    <!-- 3. Practice -->
+    <section id="p3">
+        <h2>3. Practice solving problems</h2> 
+        <h4>
+          <sub-title class="allcaps">Project<v-h>: </v-h></sub-title>
+          mathClub
+        </h4>
+
+                    <details open><summary>Version 1</summary>
+                    <ol style="column-count: 1">                      
+                        <li>Make sure your local copy is complete and tested.</li>
+                        <li>Is your site published? in <code>projects</code> directory? </li>
+                        <li>Are your project files organized and named properly? standard organization? (<code>content</code>, <code>css</code>, <code>images</code>, <code>js</code>), file naming conventions? meaningful names? home page named index0.html? secondary pages in <code>content</code> directory?</li>
+                        <li>Make sure you keep your project files clean (remove any unused files and remove any extra files and directories that may have been added created by the tools you use (if you did not create it, before you publish!).</li>
+                        <li>Did you use Progressive enhancement (PE) approach? </li>
+                        <li>Did you test and validate all your HTML code? all warnings and errors removed? <br><a href="https://validator.w3.org/" target="_blank">validator.w3.org</a></li>
+                        <li>Did you test and validate all your CSS code? all warnings and errors removed? no inline CSS, a single external CSS file organized and documented properly, applied to all pages. <br><a href="https://jigsaw.w3.org/css-validator/" target="_blank">jigsaw.s3.org/css-validator</a></li> 
+                        <li>Did you test your navigation? from every page to every other page</li>
+                        <li>Do you have sufficient documentation? prologue on every page, comments explaining why. Include notes on alternatives that you considered.</li>    
+                        <li>Is all content accessible? all errors, contrast errors, and alerts removed? <br><a href="https://wave.webaim.org/" target="_blank">WAVE web accessibility evaluation tool</a></li>
+                        <li>Is your design responsive? (does not matter for this version, but look forward!) Even for this version, do not use the entire width of the screen for your content, use only 60-80% only and make the right and left margins equal.Reminder: HEADER, FOOTER, and NAV are common page areas.</li>
+                        <li>Is all JS functionality working? (console output only) <br>Increment a number (<code>increment.html</code>), Add two numbers (<code>add.html</code>), Guess a number (<code>guess.html</code>), Convert temperature (<code>convert.html</code>), Fibonacci numbers (<code>fib.html</code>), Area of a circle (<code>circle.html</code>)</li>
+
+                    </ol>  
+                    </details>
+
+
+
+                    <details><summary>Version 8</summary>
+                    <ol>                      
+                        <li>Make sure your local copy is complete and tested.</li>
+                        <li>Is your site published? in <code>projects</code> directory? </li>
+                        <li>Evaluate your work by asking yourself questions 3 to 10 from Version 1 above.</li>
+                        <li value="11">Is your design responsive?
+                            <ul>
+                                <li>use flexbox to style NAV as a single row for large screens and a single column for small screens</li>
+                                <li>use flexbox to style MAIN that has three children, ASIDE, SECTION, ASIDE, in a row for large screens and in a column for small screens (generally, you can leave the ASIDEs blank)</li>
+                            </ul>
+                        </li>                        
+                        <li>Is all JS functionality working? <br>Increment a number (<code>increment.html</code>), Add two numbers (<code>add.html</code>), Guess a number (<code>guess.html</code>), Convert temperature (<code>convert.html</code>), Fibonacci numbers (<code>fib.html</code>), Area of a circle (<code>circle.html</code>)
+                            <ul>
+                                <li>JS code is embedded properly in the HTML document (internal)</li>
+                                <li>using event methods (not event attributes)</li>
+                                <li>getting value from user with &lt;input type="number"> with appropriate constraints</li>
+                                <li>using functions to make code reusable</li>
+                                <li>consistent code style and sufficient useful comments; include notes on testing (how did you test it)</li>
+                            </ul> 
+                        </li>
+                    </ol>  
+                    </details>
+
+
+                    <details><summary>Version 9</summary>
+                    <ul>                      
+                        <li>Make sure your local copy is complete and tested.</li>
+                        <li>Is your site published? in <code>assignments</code> directory? </li>
+                        <li>Evaluate your work by asking yourself questions 3 to 11 from Version 8 above.</li>
+                        <li>Is your design responsive?</li>
+                        <li>Is your JavaScript unobtrusive? (See Activity 6 In Worksheet 1). </li>
+                        <li>Is all JS functionality working? <br>Increment a number (<code>increment.js</code>), Add two numbers (<code>add.js</code>), Guess a number (<code>guess.js</code>), Convert temperature (<code>convert.js</code>), Fibonacci numbers (<code>fib.js</code>), Area of a circle (<code>circle.js</code>). Do not minify your code!</li>
+                    </ul>  
+                </details>
+
+            
+          
+        <h4 hidden>
+          <sub-title class="allcaps">Project<v-h>: </v-h></sub-title>
+          gamesClub
+        </h4>
+
+ 
+ 
+            
+<!-- exercises -->
+             <dl hidden>
+                <dt>More exercises</dt>           
+                <dd hidden><a href="" target="_blank">link</a> </dd>
+                <dd>
+                    <details open><summary>Exercise 1</summary>
+                    more to come...
+                    </details>
+                </dd> 
+                <dd hidden>
+                    <details><summary>Exercise 2</summary>
+                        more to come...
+                    </details>
+                </dd>
+            </dl>       
+        
+    </section>
+
+    <footer class="f-row flex-wrap:wrap justify-content:space-between">       
+        <div>Previous ←
+            <strong><a href="week03.html">Worksheet 3</a></strong>
+        </div>        
+        <div>Next →
+            <strong><a href="week05.html">Worksheet 5</a></strong>
+        </div>       
+    </footer>
+</main>
+
+<!-- footer section -->
+<footer>
+    <address><a href="">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>     
+</footer>
+
+
+</body>
+</html>

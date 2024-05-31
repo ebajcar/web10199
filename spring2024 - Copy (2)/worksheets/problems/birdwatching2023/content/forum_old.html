@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Birdwatching forum</title>
+	<meta charset="utf-8">	
+	<style type="text/css">
+	@import url(http://fonts.googleapis.com/css?family=Allan:700);
+
+	
+
+    
+
+	
+    /* blog form */
+	#blog {
+		float : left;
+		height : auto;
+		padding : 0 20px 0 0;
+		width : 100%;
+		}
+		#blog p {
+			margin : 0 0 20px 0;
+		}
+		#blog img {
+			float : left;
+			margin : 6px 10px 0 0;
+		}
+	/* Forms */
+		#blog form {
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			background : #DDD;
+			margin : 0 0 20px;
+			padding : 10px;
+			}
+		#blog label {
+			color : #666;
+			display : inline;
+			font-size : 1em;
+			font-weight : bold;
+			margin : 0 0 0 2px;
+		}
+        #blog fieldset {
+            background : white;
+            padding: 5px 10px;
+            border: none;
+            margin: 0;
+            width: 95%;
+            color: black;
+        }
+		#blog textarea {
+			height : 150px;
+		}
+		#blog input {
+			margin : 0 0 10px;
+		}
+      
+		#blog input[type=text], #blog textarea {
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border : 1px solid #CCC;
+			font-size : 1.1em;
+			padding : 4px 5px;
+			width : 97%;
+		}
+        
+		#blog input.button, .bttn {
+			background: #999;
+			border : 1px solid #888;
+			color: #FFF;
+			cursor : pointer;
+			font-weight : bold;
+			margin : 10px 0 0 0;
+			text-shadow : 0 -1px 1px rgba(0,0,0,0.25);
+			width : 25%;
+		}
+	
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Birdwatching</h1>
+		<img src="../images/dove.png" alt="bird logo" width="50">
+		<nav>
+			<a href="#">Home</a>
+			<a href="#">Get Started</a>
+			<a href="#">Photos</a>
+			<a href="#">Gear</a>
+			<a href="#">Forum</a>
+		</nav>
+	</header>	
+	<main>
+		<section id="blog">
+			<h2>Forum</h2>
+				<form id="blogform">
+					<label>Name</label>
+					<input name="username" id="username" type="text" value="" placeholder="Your Name">
+					<label>Email</label>
+					<input name="email" type="text" value="" placeholder="Your Email">
+                    <label>Select Tags</label>
+                    <fieldset>
+                        <input name="btags" type="checkbox" value="Food">  gear
+                        <input name="btags" type="checkbox" value="Passion"> Ontario
+                        <input name="btags" type="checkbox" value="School"> sightings
+                        <input name="btags" type="checkbox" value="Holidays"> World
+                        <input name="btags" type="checkbox" value="Technology"> Canada
+                    </fieldset>
+					<label>Blog Heading</label>
+					<input name="bloghead" type="text" value="" placeholder="Your Blog Heading">                    
+					<label>Your Comments</label>
+					<textarea name="blogbody" id="blogbody" placeholder="Your comments here..."></textarea>
+					<br>
+					<input class="bttn" id="bttn" type="button" value="submit">
+				</form> 
+		</section>
+		<aside>
+			<h2>Aside Heading</h2>
+			<p> Donec consectetur lorem eu felis faucibus pulvinar. Fusce molestie est interdum nisi eleifend tempor. Fusce nec velit tellus. </P>
+		</aside>
+	</main>
+	<footer>
+		<p>This fake website example is CC0 - any part of this code may be reused in any way you wish. Original exmaple written by Chris Mills, 2016.</p>
+		<p><a href="#">Dove icon</a> by Lorc.</p>
+	</footer>
+</body>
+</html>

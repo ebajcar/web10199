@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W1 Practice 1</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: 
+Version: 0.1
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Practice Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+-->
+
+</head>
+<body>
+	<h3>Functions</h3>
+	<main>
+    
+  </main>
+<script>
+    /* 
+     * Example 1
+     * creating custom methods
+     */
+    var points = [{
+        x: 0,
+        y: 0
+      },
+      {
+        x: 1,
+        y: 1
+      }
+    ];
+    points.dist = function() {
+      var p1 = this[0];
+      var p2 = this[1];
+      var a = p2.x - p1.x;
+      var b = p2.y - p1.y;
+      return Math.sqrt(a * a + b * b);
+    };
+    document.write("<p>Output 1: " + points.dist() + "</p>");
+</script>	
+</body>
+</html>

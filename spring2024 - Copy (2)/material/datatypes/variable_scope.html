@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Page5</title>
+    <link rel="stylesheet" href="css/missing-css.css">
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="css/prism-coy-23.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+	<style>
+dd {
+  padding-top: 10px;
+  
+}   
+	</style>
+</head>
+<body>
+
+
+<header class="navbar" style="height:64px;" >
+    <nav class="contents">
+      <ul role="list">
+        <li><a href="data_types.html">Data Types</a></li>
+        <li><a href="variables.html">Variables</a></li>
+        <li><a aria-current="page" href="variable_scope.html">Variable scope</a></li>
+        <li><a href="declare_variables.html">Declaring variables</a></li>
+        <li><a href="operators.html">Operators</a></li>
+      </ul>
+    </nav>            
+</header>       
+            
+                   
+<main>           
+    <h2>Page5</h2>
+    <section id=#e01">   
+ 	<h3>Variable scope</h3>
+		<p>Variables begin their life with a declaration. The remainder of their life within the application depends on where the variables are declared. They are accessible from anywhere in their containing scope (generally, the current function). JavaScript has two scopes: global and local.</p> 
+		<div class="w3-panel w3-pale-yellow w3-border w3-border-yellow">
+			<h6 class="w3-wide">Local variables</h6> must be declared using <code>var</code>.<p> You should strive not to use (leak) global variables.</p>
+			<p class="w3-large">A variable that is declared inside a function definition is local. It is created and destroyed every time the function is executed, and it cannot be accessed by any code outside the function </p> 
+		</div>				
+		<div class="w3-panel w3-pale-yellow w3-border w3-border-yellow">				
+			<h6>Global variables</h6> are declared three different ways:
+			<ol>
+				<li>Defining them with <q>var</q> outside a function.</li>
+				<li>Adding something directly to the window object.</li>
+				<li>Defining them anywhere without using <q>var</q>.</li>
+			</ol>
+			<p class="w3-large">A variable that is declared outside a function definition is a global variable, and its value is accessible and modifiable throughout your program. </p> 
+		</div>
+				<figure>
+				<figcaption>Variables begin their life with a declaration. The remainder of their life within the application depends on where the variables are declared. Open console to see values when you click on the divs. Note: functions called from the Div3 event handler functions DO NOT inherit and have no access to local variables.</figcaption>
+					<p data-height="265" data-theme-id="0" data-slug-hash="LyzNGG" data-default-tab="js" data-user="ebajcar" data-embed-version="2" data-pen-title="LyzNGG" class="codepen">See the Pen <a href="https://codepen.io/ebajcar/pen/LyzNGG/">LyzNGG</a> by Ellen Bajcar (<a href="https://codepen.io/ebajcar">@ebajcar</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+					<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>			
+				</figure>     
+        <div class="box warn">
+            <strong class="block titlebar">Important!</strong>
+            <strong>Term</strong>...
+        </div>        
+    </section>
+</main>
+
+
+<footer>
+    <address><a href="http://bajcar.dev.fast.sheridanc.on.ca/">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+    <div style="margin: 0 0 10px 0">&mdash;</div>
+</footer>
+
+
+</body>
+</html>

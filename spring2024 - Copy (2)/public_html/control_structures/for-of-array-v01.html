@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet Two Problems</title>
+  <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+  <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+  <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }
+        .big-value {
+          font-size: 4em;
+          font-weight: normal;
+          text-align: left;
+          text-shadow: 2px 2px 2px gray;
+          padding-bottom: 20px;
+        }
+        /*
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+        
+        */
+        input:invalid + span::after {
+          content: "✖";
+          padding-left: 5px;
+          color: lightgray;
+        }
+
+        input:valid + span::after {
+          content: "✓";
+          padding-left: 5px;
+          color: gray;
+        }
+        select {
+          width: 100%;
+        }
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Control Structures</sub-title></h1>
+
+    </header>
+
+    <main>
+      
+        
+    <ul role="list" class="f-switch dense">
+        <li>
+            <figure>
+                <pre class="language-js" tabindex="0"><code class="language-js">const arr = [
+  0, 
+  1 , 
+  { name: "John", age: 49 }, 
+  1, 
+  2, 
+  "abc", 
+  3, 
+  [1, 2, "x"], 
+  5, 
+  8, 
+  13
+];
+</code></pre>
+                <figcaption>Figure 1: Array called "anArray"<br><br></figcaption>
+            </figure>  
+        </li>
+        <li class="box">
+            <p>The for&hellipof structure takes each member in an array and processes the member, in this case, attaches the value of the member to a string, initialized to empty, and sepapares each member if a space.</p>
+            <pre class="language-js" tabindex="0"><code class="language-js">let str = "";
+for (membr of anArray) {
+    str += " " + membr;
+}</code></pre>
+            <p>The result of taking the array in Figure 1 is:</p>
+
+            <h3 id="result"></h3>
+            <p><strong>Note</strong> how objects and member arrays are parsed.</p>
+        </li>
+    </ul>
+
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+// The for...of statement loops through the values of an iterable object.
+// iterable object includes string and array; NOT object
+/*
+for (variable of iterable) {
+  code block to be executed
+}
+*/
+const anArray = [
+  0, 
+  1 , 
+  { name: "John", age: 49 }, 
+  1, 
+  2, 
+  "abc", 
+  3, 
+  [1, 2, "x"], 
+  5, 
+  8, 
+  13
+];
+let membr, str = "";
+
+for (membr of anArray) {
+  str += " " + membr;
+}
+console.log("for membr of anArray ", str);
+result.innerHTML = str;
+</script>
+</body>
+</html>
