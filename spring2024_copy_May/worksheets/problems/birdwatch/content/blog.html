@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Birdwatching Forum</title>
+<meta charset="utf-8">	
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<!--
+File: 		forum.css
+Author: 	Ellen Bajcar
+Date: 		Fall 2019
+Date 		
+Version: 	1.7
+Purpose: 	explore css selectors and properties
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.
+Dependencies:
+	used in assignment 3, Fall 2019
+Description:
+	- an example implementation of the forum.html for the Birdwatching site
+    - contains intermal styles for blog form
+-->
+<link rel="stylesheet" href="../css/blog.css">
+<style>
+/* 
+    resize section and aside for this page only
+*/
+section {
+    flex: 1
+}
+aside {
+    flex: 2;
+    height: 450px;
+    overflow-y: scroll;
+}
+aside h3, aside h4, aside h5 {
+    margin: 0;
+}
+
+/* 
+    used for fontawesome dove symbol
+    see for more details 
+    https://www.w3schools.com/icons/default.asp (tutorial)
+    https://fontawesome.com/?from=io (home)
+*/
+.grey {
+    color: lightgrey;
+}	
+
+/* 
+    BLOG FORM 
+*/
+form {
+	box-sizing: border-box;
+	width: 100%;
+} 
+label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size:0.7em;
+}
+input, textarea, fieldset {
+    border : 1px solid #CCC;
+    border-radius: 5px;
+    display: block;
+    font-size : 1.1em;
+    margin: 0 0 5px 0;
+    padding: 4px 5px;
+    outline: none;
+    width: 100%;  		
+}
+textarea {
+    height: 100px;
+}
+fieldset {
+    background : white;
+}
+fieldset input {
+    display: initial;
+    width: initial;
+    color: gray;
+}
+input[type=button] {
+    background: #999;
+    border : 1px solid #888;
+    color: #FFF;
+    cursor : pointer;
+    font-weight : bold;
+    margin : 10px 0 0 0;
+    text-variant: small-caps;
+    text-shadow : 0 -1px 1px rgba(0,0,0,0.25);
+    width : 50%;
+}
+</style>
+</head>
+<body>
+	<header>
+		<h1>Birdwatching</h1>
+		<img src="../images/dove.png" alt="bird logo">
+		<nav>
+			<a href="../index.html">Home</a>
+			<a href="#">Get Started</a>
+			<a href="#">Photos</a>
+			<a href="#">Gear</a>
+			<a class="active" href="#">Forum</a>
+		</nav>
+	</header>	
+	<main>
+		<section> 
+            <h3><i class='fas fa-dove grey'></i>Welcome To Our Forum</h3>		
+            <form class="blogform">
+                <label>Name</label>
+                <input name="username" id="username" type="text" value="" placeholder="Your Name" autofocus>
+                <label>Email</label>
+                <input name="email" type="text" value="" placeholder="Your Email">
+                
+                <label>Select Tags</label>
+                <fieldset>
+                    <input name="btags" type="checkbox" value="gear">  gear       
+                    <input name="btags" type="checkbox" value="sightings"> sightings
+                    <input name="btags" type="checkbox" value="Ontario"> Ontario
+                    <input name="btags" type="checkbox" value="Canada"> Canada
+                    <input name="btags" type="checkbox" value="World"> World
+                </fieldset>
+                
+                <label>Heading</label>
+                <input name="bloghead" type="text" value="" placeholder="Your Blog Heading">                    
+                <label>Comments</label>
+                <textarea name="blogbody" id="blogbody" placeholder="Your comments here..."></textarea>
+                
+                <input type="button" value="submit">
+            </form> 
+		</section>
+		<aside>
+			<h2><i class='fas fa-dove grey'></i> Recent Posts</h2>       
+            <article>
+                <h3>I love birdwatching</h3>
+                <h4>Post by Jane Dane, Sep 27, 2019.</h4>
+                <h5>Tags: Ontario, sightings</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </article>          
+            <article>
+                <h3>Best places for birdwatching</h3>
+                <h4>Post by James Smith, Dec 1, 2018.</h4>
+                <h5>Tags: world, gear</h5>
+              <p> In hac habitasse platea dictumst. Nullam lorem velit, posuere vel purus sed, tincidunt malesuada risus. Morbi posuere rutrum metus eget pharetra. Morbi varius, urna quis egestas lobortis, est eros pellentesque urna, eleifend pulvinar lorem nisi non ligula. </p>	 
+           </article>
+            <article>
+                <h3>Another Post Here</h3>
+                <h4>Post by James Smith, Nov 21, 2018.</h4>
+                <h5>Tags: Canada, gear</h5>
+              <p> In hac habitasse platea dictumst. Nullam lorem velit, posuere vel purus sed, tincidunt malesuada risus. Morbi posuere rutrum metus eget pharetra. Morbi varius, urna quis egestas lobortis, est eros pellentesque urna, eleifend pulvinar lorem nisi non ligula. </p>	 
+           </article>           
+		</aside>
+	</main>
+	<footer>
+        SYST10049 Web Development, Fall 2019 &copy; Sheridan College
+		<br>Original example written by Chris Mills, 2016.
+        <br><a href="#">Dove icon</a> by Lorc.
+	</footer>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>    
+</body>
+</html>

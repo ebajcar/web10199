@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet 9</title>
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css"> <!-- navigation -->
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+}        
+dd {
+  margin-bottom: 7px;
+}
+	</style>
+</head>
+<body>
+
+
+<header>       
+    <h1><span class="allcaps">SYST<wbr>10199 Web Programming<v-h>:</v-h></span><sub-title>Worksheet 9</sub-title></h1>
+</header>
+
+<main>
+    <div class="prev-next">
+        <p><a href="week08.html">Prev</a></p>
+        <nav class="tool-bar">| 
+            <a href="week01.html"> 1 </a> | 
+            <a href="week02.html"> 2 </a> | 
+            <a href="week03.html"> 3 </a> | 
+            <a href="week04.html"> 4 </a> | 
+            <a href="week05.html"> 5 </a> | 
+            <a href="week06.html"> 6 </a> | 
+            <a href="week07.html"> 7 </a> | 
+            <a href="week08.html"> 8 </a> | 
+            <a href="week09.html"  class="current"> 9 </a> | 
+            <a href="week10.html"> 10 </a> | 
+            <a href="week11.html"> 11 </a> | 
+            <a href="week11.html"> 12 </a> | 
+            <a href="week11.html"> 13 </a> | 
+            <a href="week14.html"> 14 </a> | 
+        </nav>
+        <!--
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <ol>
+                <li><a href="../index.html"  class="allcaps">Home</a></li>
+                <li><a href="index.html"  class="allcaps">Worksheets</a></li>
+                <li><a href="week09.html" aria-current="page">Worksheet 9</a></li>
+            </ol>               
+        </nav> 
+        -->
+        <p><a href="week10.html">Next</a></p>
+    </div>
+
+
+
+
+
+    <blockquote hidden style="font-size:1.4em;color:orange;">Under review - will be made available at a later time.</blockquote>
+
+    <!-- 1. Review from previous weeks -->
+    <section id="p1">
+        <h2>1. Review</h2>
+        <h3>
+          <sub-title class="allcaps">Classroom Discussions<v-h>: </v-h></sub-title>
+          Based on questions asked in class
+        </h3>
+        
+        <dl> 
+            <dt>Comparing objects</dt>
+            <dd>
+                <figure>
+                    <figcaption>Objects are stored by reference. <br>They are strictly equal only if they both point to the same object in memory.</figcaption>
+                    <img src="img/comparing-objects.png">
+                </figure>
+                <p>You can also compare two projects by iterating through each key and each value of the two objects and check that every key and every value is identical. You can also compare the JSON.stringify() format<br>
+                <code>JSON.stringify(obj1) === JSON.stringify(obj2);</code> which will evaluate to true.    </p>
+            </dd>  
+        </dl>
+ 
+
+        
+        <dl> 
+            <dt>Applying CSS rules to dynamically created elements</dt>
+            <dd>
+                Applying Progressive Enhancement principles, all content is marked up in <strong>Phase 1</strong>, even if you plan or anticipate creating parts of the document with JavaScript at a later point. The goal of this phase is to organize all content, selecting the most appropriate (semantically correct) elements and the <mark>output is a complete, well-formed, valid, semantically correct HTML5 code with accessible content.</mark> (usable and publishable without CSS and JS)
+            </dd>  
+            <dd>
+                Start <strong>Phase 2</strong> with the output from Phase 1 and style it with CSS (fonts, colours, layouts). Create a framework (a minimal set of CSS rules, properly organized and grouped). The goal of this phase is to style all marked-up content for presentation purpose and the <mark>output is a complete, valid CSS3/4 code with accessible content.</mark> If done correctly, there should be no changes to the HTML in this phase. (usable and publishable without JS)
+            </dd>   
+            <dd>
+                Start <strong>Phase 3</strong> with the output from Phase 2 and add behaviour with JavaScript (and enhance with server-side functional languages, such as Node.js, PHP, C#, Java, Python, etc.,). Whatever behaviour you add, it should enhance the user-experience, maintain accessibility of the content. When you are replacing a structure, such as a table or a list, you are using the DOM methods to produce exactly the same structure that you created manually in Phase 1. All CSS rules (usually class selectors) that you created and tested in Phase 1, will be applied to the created structure. You can manipulate properties through the CSSOM:<br>
+                <pre class="language-js" tabindex="0"><code class="language-js">handleToElement.style.backgroundColor = "lightblue";</code></pre>
+                This will produce
+                <pre class="language-html" tabindex="0"><code class="language-html">&lt;!-- assuming handleToElement is a TD element
+        specificity = 1000 -->
+&lt;td style="background-color:lightblue">...</code></pre>                
+                &mdash; or &mdash; if you already have a class <kbd>.lightblue{}</kbd> in your CSS rule set:<br>
+                <pre class="language-js" tabindex="0"><code class="language-js">handleToElement.setAttribute("class", "lightblue");</code></pre>
+               This will produce
+                <pre class="language-html" tabindex="0"><code class="language-html">&lt;!-- assuming handleToElement is a TD element
+        specificity = 10 -->
+&lt;td class="lightblue">...&lt;/td></code></pre>    
+                If you also have a CSS rule, such as the following:
+                <pre class="language-css" tabindex="0"><code class="language-css">/* background turns pink while user hovers over the cell 
+        specificity = 11 */
+td:hover {
+  background-color: pink;
+} </code></pre>
+                It will not work for any TD element that uses the style attribute above. Because of the high specificity, the inline style will win over a class/pseudo-class. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" target="_blank">Specificity (MDN web docs)</a> and <a href="https://www.w3.org/TR/selectors-3/#specificity" target="_blank">Calculating a selector's specificity (W3C)</a>.
+            </dd>              
+        </dl>        
+
+        <dl> 
+            <dt>Nested functions</dt>
+            <dd>
+                [still looking for good examples]
+            </dd>  
+        </dl>
+        
+    </section>
+
+
+
+    <!-- 2. Read and explore course material -->
+    <section id="p2">
+        <h2>2. Explore and Dig deeper</h2>
+         
+       <details open>
+            <summary>Activity 1. Web forms — Working with user data</summary>
+            <dl>
+                <dt>Explore <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms" target="_blank">Web forms — Working with user data</a></dt>
+                <dd>
+                    <ul>
+                        <li>Complete tutorial <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form" target="_blank">Your first form</a></li>
+                        <li>Complete tutorial  <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form" target="_blank">How to structure a web form</a></li>
+                        <li>Complete tutorial  <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Basic_native_form_controls" target="_blank">Basic native form controls</a></li>
+                        <li>Complete tutorial  <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types" target="_blank">The HTML5 input types</a></li>
+                        <li>Complete tutorial  <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Other_form_controls" target="_blank">Other form controls</a></li>
+                        
+                    </ul>
+                </dd>
+                <dt>Explore individual elements on w3schools</dt>
+                <dd>
+                    <ul style="columns:4">
+                        <li><a href="https://www.w3schools.com/tags/tag_form.asp" target="_blank">FORM</a></li>     
+                        <li><a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank">INPUT</a></li> 
+                        <li><a href="https://www.w3schools.com/tags/tag_textarea.asp" target="_blank">TEXTAREA</a></li>      
+                        <li><a href="https://www.w3schools.com/tags/tag_button.asp" target="_blank">BUTTON</a></li>      
+                        <li><a href="https://www.w3schools.com/tags/tag_select.asp" target="_blank">SELECT</a></li>      
+                        <li><a href="https://www.w3schools.com/tags/tag_optgroup.asp" target="_blank">OPTGROUP</a></li>      
+                        <li><a href="https://www.w3schools.com/tags/tag_option.asp" target="_blank">OPTION</a></li>      
+                        <li><a href="https://www.w3schools.com/tags/tag_label.asp" target="_blank">LABEL</a></li>      
+                        <li><a href="https://www.w3schools.com/tags/tag_fieldset.asp" target="_blank">FIELDSET</a></li>      
+                        <li><a href="https://www.w3schools.com/tags/tag_legend.asp" target="_blank">LEGEND</a></li>      
+                        <li><a href="https://www.w3schools.com/tags/tag_datalist.asp" target="_blank">DATALIST</a></li>      
+                        <li><a href="https://www.w3schools.com/tags/tag_output.asp" target="_blank">OUTPUT</a></li>   
+                    </ul>
+                </dd>
+            </dl>
+        </details>              
+
+    <details open>
+        <summary>Activity 2. Styling forms</summary>
+        <dl>
+            <dt>Complete MDN tutorial <a href="" target="_blank">xxx</a></dt>
+            <dd>
+                <ul>
+                    <li>how  <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/UI_pseudo-classes" target="_blank">link</a> UI pseudo-classes</li>
+                    <li>The original pseudo-classes that are relevant to forms  <a href="https://www.w3.org/TR/CSS21/selector.html#dynamic-pseudo-classes" target="_blank">from CSS 2.1</a> (:hover, :focus, :active)</li>
+                    <li>how  <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/UI_pseudo-classes" target="_blank">CSS selectors</a>  provide several other pseudo-classes related to HTML forms</li>
+                    <li hidden>how  <a href="" target="_blank">link</a> stuff</li>
+                    <li hidden>
+                        <p>Explore w3schools tutorials</p>
+                        <ul style="list-style:none;column-count: 2">                      
+                            <li><a href="" target="_blank"></a></li>
+                        </ul>  
+                    </li>               
+                </ul> 
+            </dd>
+        </dl>
+    </details>         
+   
+
+    <details open>
+        <summary>Activity 3. Making forms accessible</summary>           
+        <dl>         
+            <dt>Read, make notes, try any examples: <a href="" target="_blank"> (MDN guides)</a> </dt>           
+            <dd>
+                <p>Explore accessibility and complete tutorials on W3C Acessibility Initiative (WAI) <a href="https://www.w3.org/WAI/tutorials/forms/" target="_blank">Forms Tutorial</a>, <br>including Labeling Controls, Grouping Controls, Form Instructions, Validating Input, User Notifications, Multi-page Forms, and Custom Controls.</p>
+                <p hidden>Explore related course material (highlights) <a href="https://ebajcar.github.io/web10199/content_winter2024/material/forms/html_forms.html" target="_blank">?</a></p>
+            </dd>      
+        </dl>
+    </details> 
+        
+        <details open>
+            <summary>Activity 4. Validation</summary>  
+            <dl>
+                <dt>Form validation is crucial for ensuring that user-submitted data meets the expected criteria. In HTML, you can perform client-side validation to catch errors before the form is submitted to the server. Let’s explore some techniques: <cite>Excerpt from <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms" target="_blank">MDN</a></cite></dt>
+                
+                <dl>
+                  <dt>Required Attribute:</dt>
+                  <dd>The simplest HTML validation feature is the required attribute. To make an input mandatory, add this attribute to the element.
+                When this attribute is set, the element matches the :required UI pseudo-class, and the form won’t submit if the input is empty. An error message is displayed on submission</dd>
+                
+                  <dt>Built-in Form Validation:</dt>
+                  <dd>HTML provides built-in form validation features. For instance, if a form field is empty, the required attribute prevents form submission.
+                Example:
+                HTML
+                <pre class="language-html" tabindex="0">
+<code>&lt;form action="/submit" method="post">
+    &lt;input type="text" name="username" required>
+    &lt;input type="password" name="password" required>
+    &lt;input type="submit" value="Submit">
+&lt;/form></code></pre>
+                In this example, both the username and password fields are required</dd>
+                
+                  <dt>Custom Validation:</dt>
+                  <dd>You can use the pattern attribute to specify a regular expression pattern that the input value must match.
+                Example:
+                HTML
+                <pre class="language-html" tabindex="0">
+<code>&lt;input type="text" name="phone" pattern="\d{3}-\d{4}" placeholder="xxx-xxxx">
+</code></pre>
+                
+                This ensures that the phone number is entered in the format xxx-xxxx</dd>
+                
+                  <dt>JavaScript Validation:</dt>
+                  <dd>While HTML validation is useful, you can enhance it with JavaScript.
+                Use event listeners (e.g., blur, change) to check field validity sooner (before form submission).
+                Example:
+                JavaScript
+                <pre class="language-html" tabindex="0">
+<code>const inputElement = document.querySelector('input[name="email"]');
+inputElement.addEventListener('blur', () => {
+    if (!inputElement.checkValidity()) {
+    // Display an error message or style the input
+    }
+});</code></pre>
+                Here, we check the validity of the email input when the user moves away from it (on blur)</dd>
+                
+                <dd>Client-side validation improves user experience, but it’s not exhaustive for security. Always perform server-side validation to prevent malicious data from reaching your server.
+                </dd>              
+            </dl>
+            
+
+
+            <dl hidden>         
+                <dt>Read, make notes, try any examples: <a href="" target="_blank"> (MDN guides)</a> </dt>           
+                <dd></dd>      
+ 
+                
+                <dt>Read, make notes, try any examples:  <a href="https://javascript.info/form-elements" target="_blank">Form properties and methods</a> (javascript.info)</dt>
+                <dd>&mdash; named collections (both named and ordered, navigate using both by name and index), fieldsets as subforms, backreference: element.form, input and textarea (never use textarea.innerHTML), select and option, new Option, </dd> 
+                <dd hidden>
+                    <ul style="column-count: 3">                      
+                    <li><a href="" target="_blank">xxx</a></li>
+
+                    </ul>  
+                </dd>      
+        </details> 
+        
+        <details hidden>
+            <summary>Activity 5. Adding more behaviour with JavaScript</summary>           
+            <dl hidden>         
+                <dt>Read, make notes, try any examples: <a href="" target="_blank"> (MDN guides)</a> </dt>           
+                <dd></dd>      
+ 
+                
+                <dt>Read, make notes, try any examples:  <a href="https://javascript.info/form-elements" target="_blank">Form properties and methods</a> (javascript.info)</dt>
+                <dd>&mdash; named collections (both named and ordered, navigate using both by name and index), fieldsets as subforms, backreference: element.form, input and textarea (never use textarea.innerHTML), select and option, new Option, </dd> 
+                <dd>
+                    <ul style="column-count: 3">                      
+                    <li><a href="" target="_blank">xxx</a></li>
+
+                    </ul>  
+                </dd> 
+            </dl>
+            <!--
+<form class="table rows">
+  <p>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+  </p>
+  <p>
+      <label for="adr">Address</label>
+      <input type="text" id="adr" name="adr">
+  </p>
+</form>     
+-->       
+        </details>   
+        
+        
+    </section>
+
+
+
+
+    <!-- 3. Practice -->
+    <section id="p3">
+        <h2>3. Practice solving problems</h2> 
+        
+        <h4 hidden>
+  <sub-title class="allcaps">Under Review<v-h>: </v-h></sub-title>
+  More coming soon&hellip;
+</h4>
+        <dl>
+            <dt>1. Complete a login page </dt>
+            <dd>Create a new project in <kbd>C:\public_html\syst10199\projects</kbd>, with standard file organization.</dd>
+             <dd>
+                <ol>
+                    <li>Start with the template <a href="https://www.w3schools.com/w3css/w3css_demo.asp" target="_blank">Modal Login</a>. This is the home page of your project. Name it index0.html.</li>
+                    <li>Add standard page areas: header with h1, footer with address, and navigation to register.html (see next exercise).<br>
+                        <a href="img/login_page_w3css.png">
+                            <img src="img/login_page_w3css.png" 
+                                 style="width:200px" 
+                                 title="click on the image to see larger version"
+                                 alt="sample output layout">
+                        </a>
+                    </li>  
+                    <li>[<strong>optional</strong>] You can add some introductory information about the site. Explore the W3.CSS framework <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">tutorials on w3schools</a>.</li>
+                    <li>For now, to test it change the value of the ACTION attribute as follows:
+                        <pre class="language-html" tabindex="0">
+<code>&lt;form class="w3-container" action="https://www.w3schools.com/action_page.php">
+</code></pre>         
+                </li>
+                <li>Example of validating the password field
+                <figure class="figure">
+<pre class="language-html"><code>
+&lt;form>
+  &lt;label for="pwd">Password:&lt;/label>
+  &lt;input type="password" id="pwd" name="pwd" 
+         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+         title="Must contain at least one number and one uppercase and 
+                lowercase letter, and at least 8 or more characters">
+  &lt;input type="submit">
+&lt;/form>
+</code></pre>
+<iframe style="height:130px" srcdoc='
+<form>
+  <label for="pwd">Password:</label>
+  <input type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+  <input type="submit">
+</form>
+'></iframe>
+<figcaption class="figure-caption"> Enter one or two characters and click Submit. Note the popup message. See more <a href="https://www.w3schools.com/tags/att_input_pattern.asp" target="">w3schools</a></figcaption>    
+    </figure></li>                
+                <li>Note that both username and password are already required fields. Can you think of any other validation that should be considered or implemented? What behaviour should be considered when the user checks the Remember me button? Capture your considerations in the comments of your document. 
+                </li>
+                <li>Convert obtrusive JavaScript to unobtrusive JavaScript.</li>
+                </ol>
+             </dd>
+        </dl>
+         
+        <dl>
+         <dt>2. Complete a registration page </dt>
+         <dd>Create a new secondary page in the same project. Use the same layout as the login page.</dd>
+            <dd>Include fields for
+                <ol>
+                    <li>first name, last name, street address, city, province, postal code,</li>
+                    <li>phone, email, web site, </li>
+                    <li>preferred browser (select only one), </li>
+                    <li>interests (make up a few topics and allow user to select all that apply), </li>
+                    <li>user name (let the user create what they want, but limit it to 10 characters and allow only <li>lowercase alpha characters), </li>
+                    <li>password (let the user choose, but ensure it contains lowercase and uppercase alpha, numbers, and symbols; must be at least 12 characters long), </li>
+                    <li>reenter password to confirm their choice (compare the two fields that they match)</li>
+                    </li>
+                </ol>
+             </dd>
+             <dd>Add HTML, CSS, and Javascript validation for all fields</dd>
+             <dd>When the user successfully submits the form, redirect them to a members_only.html page. (This is a temporary solution, so create another secondary page that has the same layout and simply welcomes the user to the site.)</dd>
+             <dd>When the user is not successful in submitting the form, redirect them to the login page. (This is a temporary solution.)</dd>
+        </dl>
+	<p>Examples of form validation: <a href="../public_html/exercises_forms" target="_blank">click here</a></p>
+    </section>
+
+
+
+    <footer class="f-row flex-wrap:wrap justify-content:space-between">       
+            <div>Previous ←
+                <strong><a href="week08.html">Worksheet 8</a></strong>
+            </div>   
+            <div>Next →
+                <strong><a href="week10.html">Worksheet 10</a></strong>
+            </div>       
+    </footer>
+</main>
+
+<!-- footer section -->
+<footer>
+    <address><a href="">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>     
+</footer>
+
+
+</body>
+</html>

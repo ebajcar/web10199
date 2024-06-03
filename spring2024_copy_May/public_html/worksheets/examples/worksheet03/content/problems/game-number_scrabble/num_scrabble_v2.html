@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>Drag and Drop</title>
+<style>
+body, table {
+    margin: auto;
+    width: 100%
+    text-align: center;
+}
+p, h3 {text-align: center;}
+img {
+  cursor: grab;
+  height: 4em;
+}
+td { 
+	border: black solid; 
+	margin: 1em 2em;
+	height: 5em; 
+	text-align: center;
+	width: 5em; 
+}
+</style>
+ </head>
+ <body>
+     <h2>Number Scrabble</h2>
+     
+     <table>
+       <tr>
+         <td id="cell0"></td>
+         <td id="cell1"></td>
+         <td id="cell2"></td>
+       </tr>
+       <tr>
+         <td id="cell3"></td>
+         <td id="cell4"></td>
+         <td id="cell5"></td>
+       </tr>   
+       <tr>
+         <td id="cell6"></td>
+         <td id="cell7"></td>
+         <td id="cell8"></td>
+       </tr>     
+    </table>
+
+    <p>
+        <img src="images/1.png" id="one" draggable="true" alt="1">
+        <img src="images/2.png" id="two" draggable="true" alt="2">
+        <img src="images/3.png" id="three" draggable="true" alt="3">
+        <img src="images/4.png" id="four" draggable="true" alt="4">
+        <img src="images/5.png" id="five" draggable="true" alt="5">
+        <img src="images/6.png" id="six" draggable="true" alt="6">
+        <img src="images/7.png" id="seven" draggable="true" alt="7">
+        <img src="images/8.png" id="eight" draggable="true" alt="8">
+        <img src="images/9.png" id="nine" draggable="true" alt="9">
+    </p>
+
+<script>
+// image source: https://paradite.com/wp-content/uploads/2017/09/numbers-1336520_960_720-620x279.jpg
+// game trees: https://en.wikipedia.org/wiki/Game_tree
+// number scrabble: https://en.wikipedia.org/wiki/Number_Scrabble
+/*
+var cell0 = document.getElementById("cell"+"0");
+cell0.ondrop = function() {drop(this, event)};
+cell0.ondragenter = function() {return false};
+cell0.ondragover = function() {return false};
+
+var cell1 = document.getElementById("cell1");
+cell1.ondrop = function() {drop(this, event)}; 
+cell1.ondragenter = function() {return false};
+cell1.ondragover = function() {return false};
+
+var cell2 = document.getElementById("cell2");
+cell2.ondrop = function() {drop(this, event)}; 
+cell2.ondragenter = function() {return false};
+cell2.ondragover = function() {return false};    
+
+
+var cell3 = document.getElementById("cell3");
+cell3.ondrop = function() {drop(this, event)}; 
+cell3.ondragenter = function() {return false};
+cell3.ondragover = function() {return false};  
+
+
+var cell4 = document.getElementById("cell4");
+cell4.ondrop = function() {drop(this, event)}; 
+cell4.ondragenter = function() {return false};
+cell4.ondragover = function() {return false};    
+
+
+var cell5 = document.getElementById("cell5");
+cell5.ondrop = function() {drop(this, event)}; 
+cell5.ondragenter = function() {return false};
+cell5.ondragover = function() {return false};   
+
+
+var cell6 = document.getElementById("cell6");
+cell6.ondrop = function() {drop(this, event)}; 
+cell6.ondragenter = function() {return false};
+cell6.ondragover = function() {return false};      
+
+
+var cell7 = document.getElementById("cell7");
+cell7.ondrop = function() {drop(this, event)}; 
+cell7.ondragenter = function() {return false};
+cell7.ondragover = function() {return false};  
+
+
+var cell8 = document.getElementById("cell8");
+cell8.ondrop = function() {drop(this, event)}; 
+cell8.ondragenter = function() {return false};
+cell8.ondragover = function() {return false};      
+*/
+var cells = [];
+for (var i = 0; i < 9; i++) {
+    console.log(cells);
+    cells[i] = document.getElementById("cell"+i);
+    cells[i].ondrop = function() {drop(this, event)};
+    cells[i].ondragenter = function() {return false};
+    cells[i].ondragover = function() {return false};
+}
+
+var items = document.getElementsByTagName("img");
+for (var i = 0; i < items.length; i++)
+    items[i].ondragstart = function() {drag(this, event)};
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(target, ev) {
+ ev.dataTransfer.setData('Text', target.id);
+}
+
+function drop(target, ev) {
+ // console.log("target " + target.id + " ev " + ev);    
+ // console.log(target.children.length);
+ // console.log(target.contains(document.getElementsByTagName("img")[0]));
+ if (target.children.length == 0) {
+     var id = ev.dataTransfer.getData('Text');
+     target.appendChild(document.getElementById(id));
+     document.getElementById(id).setAttribute("draggable","false");
+     document.getElementById(id).style.cursor = 'no-drop';
+     console.log(id);
+     ev.preventDefault();
+ }
+}
+</script>
+
+</body>
+</html>

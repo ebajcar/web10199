@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Play Casino Craps </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+	Author: Ellen Bajcar
+	Program: ooCraps_v5.html
+	Date: Summer 2016 
+	Date Updated: March 2018
+	Version: 5
+	Purpose: learning Javascript programming (SYST10199)
+	Copyright: This work is the intellectual property of Sheridan College. 
+		Any further copying and distribution outside of class must be within 
+		the copyright law. Posting to commercial sites for profit is prohibited.
+	Description:
+		Casino Craps v.5
+		object oriented version
+-->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+* { 
+	box-sizing: border-box; 
+}
+
+body {
+	background: #e0e0e0;
+    font-family: 'Kaushan Script', cursive;
+    margin: 0 auto;
+    text-align: center;
+}
+main {
+	width: 100%;
+	margin: auto;
+	padding-top: 4px;
+	background-color: white;
+	min-height: 380px;
+	display: flex;
+	justify-content: center;	
+}
+main > div {
+  margin: 5px;
+  padding: 5px;
+}
+header h1, dialog h2 {
+	color: #6f6f6f;   
+	text-shadow: 1px 1px cyan;
+    font-size: 60px;
+    font-weight: 400;
+	margin: 16px 0 0;
+    text-align: center;
+}
+dialog h2 {
+	font-size: 40px;
+}
+dialog {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: #e0e0e0;
+	padding: 3px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    width: 50%;
+}
+dialog section {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+        text-align: left;
+padding: 3px;
+        box-sizing: border-box;
+        height: 300px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+}
+dialog p {
+  font-family: initial;
+}
+
+
+footer {
+	margin: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+
+/* navigation */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav button {
+  border: none;
+}
+nav a, nav span, nav button {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover, nav span:hover, nav button:hover {
+    background: #c2c2c2;
+    color: #818181;
+    cursor: pointer;
+}
+
+
+main button {
+	color: #00CCCC;
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid #00CCCC;
+	text-shadow: 1px 1px 1px gray;
+	box-shadow: 1px 1px gray;
+	font-size: 24px;
+	outline: 0 solid white;
+	width: 100%;
+	cursor: pointer;
+}
+
+
+
+
+table {
+    margin: 20px auto;
+	background-color: transparent;
+	width: 420px;
+	text-align: center;	
+}
+td {
+	min-height: 100px;
+	background-color: transparent;
+	text-align: center;
+}
+tr:first-child > td:last-child {
+    width: 150px;
+	text-align: right;
+	padding-right: 10px;
+}
+var {
+	font-size: 4.5rem;
+}
+p {
+	margin: 0;
+	font-size: 0.8rem;
+}
+
+
+
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    width:100%;
+	text-align:center;
+}
+.show {
+	min-width: 280px;
+
+}
+.die {
+  height:100px;
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background: #00CCCC;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #ebebeb;
+  border-right-width: 2px;
+  border-left-width: 2px;
+  border-bottom: 3px solid #ccc;
+}
+.die > span {
+  height: 15px;
+  width: 15px;
+  background: #222;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.die .a { top:15px;left:15px; }
+.die .b { top:15px;right: 15px; }
+.die .c { left: 15px;top: 40px; }
+.die .d { top: 40px;left:42px; }
+.die .e { top: 40px;right: 15px; }
+.die .f { bottom: 15px;left: 15px; }
+.die .g { bottom: 15px;right: 15px; }
+.die > span { opacity: 0; }
+
+#bravo {
+	float:right
+}
+</style>		
+</head>
+<body>
+	<header><h1>Play Casino Craps!</h1></header>
+	<nav>
+		<a href="">Home</a>
+        <button  id="reset">New Game</button>
+        <span id="help" >Help</span>
+	</nav>		
+	<main>	
+
+		<div>
+
+		<table>
+			<tr>
+				<td colspan="2">
+						<div class="wrapper">
+						  <div id="alpha" class="die">
+							<span class="a two three four five six"></span>
+							<span class="b four five six"></span>
+							<span class="c six"></span>
+							<span class="d one three five"></span>
+							<span class="e six"></span>
+							<span class="f four five six"></span>
+							<span class="g two three four five six"></span>
+						  </div>
+						  <div id="bravo" class="die">
+							<span class="a two three four five six"></span>
+							<span class="b four five six"></span>
+							<span class="c six"></span>
+							<span class="d one three five"></span>
+							<span class="e six"></span>
+							<span class="f four five six"></span>
+							<span class="g two three four five six"></span>
+						  </div>
+						</div>
+				</td>
+				<td><small>&hellip;you rolled</small><br><var id="total">&nbsp;</var></td>
+			</tr>
+
+			<tr>
+				<td>
+					<h4>Statistics</h4> 
+					<p>Wins: <span id="wins">0</span></p> 
+					<p>Losses: <span id="losses">0</span></p>
+				</td>
+				<td  class="show" colspan="2">
+					<p id="show">To start a game, roll the dice!</p>
+				</td>			
+			</tr>
+			<tr>
+				<td><button id="clear">Clear</button></td>
+				<td colspan="2"><button id="roll">Roll the dice!</button></td>			
+			</tr>			
+		</table>
+		</div>		
+	</main>	
+	<footer>
+		<address>SYST10199 Web Programming &copy; Sheridan College</address>
+	</footer>
+
+<script>
+var Game = function () {
+	this.dice = [null, "one", "two", "three", "four", "five", "six"];
+	this.rollButton = document.getElementById("roll");
+	this.clearButton = document.getElementById("clear");
+	this.outcome = document.getElementById("total");
+	this.show = document.getElementById("show");
+	this.showWins = document.getElementById("wins");
+	this.showLosses = document.getElementById("losses");
+	this.alpha = document.getElementById("alpha");
+	this.bravo = document.getElementById("bravo");
+	this.point = 0;
+	this.wins = 0; 
+	this.losses = 0;
+	this.message = {
+		natural : "That's a natural. You win!",
+		craps 	: "That's craps. You lose!",
+		point 	: "You made your point. You win!",
+		seven 	: "That's a seven. You lose!",
+		};
+	this.rollBoth = function () {
+		var sum = this.roll(this.alpha) + this.roll(this.bravo);
+		this.outcome.innerHTML = sum;
+		this.display(this.determineOutcome(sum)) ;
+	}		
+	this.clearStats = function () { 
+		this.point = 0;
+		this.wins = 0;
+		this.losses = 0;
+		this.show.innerHTML = "To start a game, roll the dice!<br>";
+		this.showWins.innerHTML = 0;
+		this.showLosses.innerHTML = 0;
+	}	
+	this.roll = function(currDice){
+	  var random = Math.floor((Math.random() * 6) + 1);
+	  this.displayRolledDice(currDice, random);
+	  return random;
+	}
+	this.displayRolledDice = function(thisDie, random) {
+	  var clearMe = thisDie.getElementsByTagName("span");
+	  var newDie = thisDie.getElementsByClassName(this.dice[random]); 
+	  for (var i = 0; i < clearMe.length; i++) 
+			clearMe[i].style.opacity = "0"; 
+	  for (var i = 0; i < newDie.length; i++) 
+			newDie[i].style.opacity = "1";
+	}	
+	this.display = function(msg) {
+		switch(msg) {
+			case "point":
+			case "natural":
+				this.show.innerHTML = this.message[msg] + "<br>To start a game, roll the dice!";
+				this.showWins.innerHTML = ++this.wins;	
+				this.rollButton.innerText = "Roll the dice!";		
+				break;
+			case "craps":
+			case "seven":
+				this.show.innerHTML = this.message[msg] + "<br>To start a game, roll the dice!";
+				this.showLosses.innerHTML = ++this.losses;	
+				this.rollButton.innerText = "Roll the dice!";	
+				break;			
+			default:
+				this.show.innerHTML = "Your point is " + this.point + ".";
+				this.rollButton.innerText = "Roll the dice!";	
+		}
+	}
+	this.determineOutcome = function(sum) {
+		if ( this.point == 0 ) {
+			if (sum == 7 || sum == 11) {
+				return "natural";
+			} else if (sum == 2 || sum == 3 || sum == 12) {
+				return "craps";
+			} else {
+			  this.point = sum; return this.point;
+			}
+		} else {
+			if (sum == this.point) {
+				this.point = 0; return "point";
+			} else if (sum == 7) {		
+				this.point = 0; return "seven";
+			} 
+		}
+	}
+	
+}		
+/*
+ *	main set up board, start game, set up event listeners
+ */
+function playCraps() {
+	// create the game object
+	var curGame = new Game();
+	// initialize the event listeners
+	curGame.clearButton.addEventListener("click", function() {
+			curGame.clearStats();
+		});
+	curGame.rollButton.addEventListener("click", function() {
+			curGame.rollBoth();
+		});
+}
+document.addEventListener("DOMContentLoaded", playCraps);
+// the end
+
+</script>
+</body>
+</html>

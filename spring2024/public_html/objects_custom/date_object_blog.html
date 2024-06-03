@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Date object (blog)</title>
+
+<link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+<link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+<script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+}
+ 
+.post-title {
+	margin: 0;
+	padding: 0;
+	font: bold 180%/120% "Lucida Grande", Arial, "Lucida Sans Unicode", sans-serif;
+}
+.post-content {
+	margin: 0 0 0 72px;
+	font-family:  Arial, Helvetica, sans-serif;
+}
+.list-post .post-date {
+	font-weight: bold;
+	float: left;
+	width: 58px;
+	text-align: center;
+	margin: 6px 12px 5px 0;
+	border: solid 1px #bebebe;
+	background: #fff;
+	background: linear-gradient(-90deg, #ffffff, #ecebeb);
+	border-radius: 5px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+}	
+.list-post .post-date .month {
+	color: #333;
+	font: bold 12px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: block;
+	padding: 2px 0;
+	width: 100%;
+	position: relative;
+	left: -1px;
+	top: -1px;
+	border: solid 1px #00ee16;
+	background: #00ff24;
+	background: linear-gradient(-90deg, #00ff24, #30bb10);
+	box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.list-post .post-date .day {
+	color: #666;
+	padding: 2px 0 1px;
+	font: bold 18px/100% Arial, Helvetica, sans-serif;
+	display: block;
+}
+.list-post .post-date .year {
+	color: #999;
+	padding: 0 0 4px;
+	font: 10px/100% Arial, Helvetica, sans-serif;
+	display: block;
+}
+.post-content time {
+	font-style: italic;
+	display: block;
+	margin: 0;
+}        
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Objects (built-ins, custom, DOM)</sub-title></h1>
+ 
+    </header>
+
+    <main>
+        <h2>Date object  - <small>date range</small></h2>
+
+<ul role="list" class="f-switch dense">
+    <li class="box"> 
+   <div class="list-post">
+    <div class="post-date">
+      <span class="month"></span>
+      <span class="day"></span>
+      <span class="year"></span>
+    </div>
+    <div class="post-content">
+      <h3 class="post-title">Post Heading</h3>
+      <time></time>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id turpis sed metus dictum scelerisque vel ut nisi. Pellentesque porta ligula eu interdum sollicitudin. Pellentesque vestibulum pretium nisi nec facilisis. Aliquam vitae quam risus.         Morbi risus turpis, venenatis a maximus at, pharetra posuere nisl. Pellentesque urna neque, aliquet sed ipsum sit amet, fermentum commodo justo. </p>
+    </div>
+  </div>      
+    </li>
+  
+</ul>
+<ul role="list" class="f-switch dense">
+    <li class="box">
+     <h4>Example functions</h4>
+                <pre class="language-js" tabindex="0"><code class="language-js">
+const shortMonth = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+const schedDate = new Date(); 
+document.getElementsByClassName("month")[0].innerText = shortMonth[schedDate.getMonth()];
+document.getElementsByClassName("day")[0].innerText = schedDate.getDate();
+document.getElementsByClassName("year")[0].innerText = schedDate.getFullYear();
+let postDate = new Date('2024-02-18T00:00:00+05:30');; 
+document.getElementsByTagName("time")[0].innerText ="Posted: " + (postDate.getMonth() + 1) +
+        '/' + postDate.getDate() + '/' +  postDate.getFullYear();
+</code></pre>    
+        <div id="snippet"></div>
+    </li>
+</ul> 
+		
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+/*
+  PROBLEM: 
+  
+  SOLUTION: 
+
+*/
+const shortMonth = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+const schedDate = new Date(); 
+let postDate = new Date('2024-02-18T00:00:00+05:30');
+document.getElementsByClassName("month")[0].innerText = shortMonth[schedDate.getMonth()];
+document.getElementsByClassName("day")[0].innerText = schedDate.getDate();
+document.getElementsByClassName("year")[0].innerText = schedDate.getFullYear();
+document.getElementsByTagName("time")[0].innerText ="Posted: " + (postDate.getMonth() + 1) + '/' + postDate.getDate() + '/' +  postDate.getFullYear();
+
+</script>
+</body>
+</html>

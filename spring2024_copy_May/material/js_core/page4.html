@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Page4</title>
+    <link rel="stylesheet" href="css/missing-css.css">
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="css/prism-coy-23.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+	<style>
+dd {
+  padding-top: 10px;
+  
+}   
+	</style>
+</head>
+<body>
+
+
+<header class="navbar" style="height:64px;" >
+    <nav class="contents">
+      <ul role="list">
+        <li><a href="page1.html">Client-side JavaScript</a></li>
+        <li><a href="page2.html">Code location</a></li>
+        <li><a href="page3.html">Unobstrusive JavaScript</a></li>
+        <li><a aria-current="page" href="page4.html">Basic Grammar</a></li>
+        <li><a href="page5.html">Debugging</a></li>
+      </ul>
+    </nav>            
+</header>       
+                              
+
+<main>           
+    
+    <section id=#e01">   
+    <h2>Basic Grammar</h2>
+	<ul class="w3-ul">
+		<li>JavaScript follows the <a href="https://tc39.github.io/ecma262" target="_blank"> ECMA-262 standard</a>.</li>
+		<li>JavaScript is <strong>case-sensitive</strong> and uses the Unicode character set.</li>
+		<li>In JavaScript, <strong>instructions</strong> are called statements. Spaces, tabs and newline characters are called<strong> whitespace</strong>.</li> 
+		<li>Each JavaScript <strong>statement</strong> must be terminated by <strong>a semi-colon</strong>.</li>
+		<li><strong>Javascript code may also include helpful code comments.</strong> </li> 
+		<li>The parser ignores everything <strong>between /* and */ characters</strong>, and ignores everything <strong>between // characters and the end of a line</strong>.
+
+		</li>  
+	</ul>    
+    
+<figure>		
+<figcaption>FIGURE 1. <small>Function definition block.</small></figcaption>
+<pre class="language-js"><code>/* 
+the function
+define the thing you want to happen
+*/
+function theFunction() {
+	//statements go here
+}</code></pre>
+</figure>	
+
+
+<figure>		
+<figcaption>FIGURE 2. <small>Variable declaration and initialization statement.</small></figcaption>
+<pre class="language-js"><code>/* 
+the variable
+get the element to work with
+*/
+const elem = document.getElementById("idname");</code></pre>
+</figure>	
+
+
+ <figure>		
+ <figcaption>FIGURE 3. <small>Event listener.</small></figcaption>
+<pre class="language-js"><code>/* 
+the event listener
+set up something to listen for, then execute the function
+*/
+elem.addEventListener("click", theFunction, false);</code></pre>			
+</figure>	
+
+
+   
+<h3>Documenting as you code</h3>    
+ 
+<p title="developer.mozilla.org">Less code means better performance, and better performance means a better user experience.</p>
+
+    
+<figure>
+<figcaption>FIGURE 3. <small>Start with comments and update as you code.</small></figcaption>
+<pre class="language-js"><code>&lt;script> 
+/* This is a multi-line comment that describes the script’s 
+purpose and provides information about the author and date. */ 
+	
+// This is a single-line comment that describes a block or line of code. 
+&lt;/script></code></pre>
+		
+	</figure>
+
+
+
+
+
+       
+    </section>
+</main>
+
+
+<footer>
+    <address><a href="http://bajcar.dev.fast.sheridanc.on.ca/">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+    <div style="margin: 0 0 10px 0">&mdash;</div>
+</footer>
+
+
+</body>
+</html>

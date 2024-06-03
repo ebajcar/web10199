@@ -1,0 +1,126 @@
+/*
+Author: 		Ellen Bajcar
+File name: 		components.css
+Date Created:	Summer 2019
+Date Updated: 
+Version: 		2019.5.1 
+Purpose: 		learning Javascript programming; assignment requirements
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    See README.txt file, located in this project's root directory
+In this file:
+    dl.gallery
+    .gallery dt
+    .gallery dt img
+    .gallery dd
+    
+    #aimove img
+    #aimove p
+    #aimove h2
+    #greset
+    
+    .tooltip
+    .tooltip .tooltiptext
+    .tooltip .tooltiptext::after
+    .tooltip:hover .tooltiptext
+*/
+
+
+dl.gallery {
+  box-sizing: border-box;
+  border: 2px solid #ff5C10;
+  background-color: #eee;
+  width: 19%;
+  height: 160px;
+  text-align: center;
+  padding: 10px;
+  float: left;
+  margin-right: 1%;
+}
+
+.gallery dt { 
+  font-weight: bold; 
+  text-transform: uppercase;
+}
+
+.gallery dt img {
+  background-color: white;
+  border: 1px dashed #000;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery dd {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  font-size: 0.75vw;
+} 
+
+#aimove img {
+  vertical-align: text-bottom;
+  display: block; 
+  text-align: center;  
+}
+
+#aimove p {
+  display: table-cell;
+  width: 50%;
+  height: 80px;
+  padding: 25px 10px 10px 30px;
+  text-align: center;
+}
+
+#aimove h2 {
+  text-align: center;
+}
+
+#greset {
+  background-color: #eee;
+  border: 2px dashed #ff5C10;
+  outline: 0px dashed white;
+  padding: 8px 0;
+  text-align: center;
+  text-transform: small-caps;
+  width: 100%;
+}
+
+.tooltip {
+  border-bottom: 1px dotted black;
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  background-color: black;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1.7em;
+  left: 50%;
+  margin-left: -60px;
+  padding: 5px 0;
+  position: absolute;
+  text-align: center;
+  top: 150%;
+  visibility: hidden;
+  width: 120px;  
+  z-index: 1;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

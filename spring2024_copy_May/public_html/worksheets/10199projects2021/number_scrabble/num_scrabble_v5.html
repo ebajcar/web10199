@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>Number Scrabble</title>
+<style>
+body, table {
+    margin: auto;
+    text-align: center;
+}
+p, h2, td {text-align: center;}
+img {
+  cursor: grab;
+  height: 3em;
+  opacity: 0.8;
+}
+td { 
+	border: black solid; 
+	height: 3.4em; 
+	width: 3.4em; 
+    vertical-align: bottom;
+}
+dl, dt, dd, ul {
+    margin: 0;
+    padding: 0;
+}
+dt {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+dd, ul {
+    text-align: left;
+    padding: 0 0 15px 15px;
+}
+dt:first-child button {
+    width: 100%;
+}
+
+/* grid used for the core content: games */
+.grid-container {
+	background-image: linear-gradient(to top right, var(--sherorange), var(--sherteal), var(--sherteal), var(--sherblue));
+	display: grid;
+	grid-template-columns: 65% auto;
+	grid-gap: var(--gap-sm);
+	min-height: 340px;
+	padding: var(--gap-md);
+    border: 1px dotted lightgray;
+}
+.grid-item {
+	background-color: var(--sherblue);
+	padding: var(--gap-md);
+	text-align: center;
+    border: 1px dotted lightgray;
+}
+.grid-item:last-child {
+	color: var(--bgwhite);
+	text-align: left;
+}
+</style>
+ </head>
+ <body>
+     <h2>Number Scrabble</h2>
+			<div class="grid-container">
+				<div class="grid-item">
+                     <table>
+                       <tr>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                       </tr>
+                       <tr>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                       </tr>   
+                       <tr>
+                         <td></td>
+                         <td></td>
+                         <td></td>
+                       </tr>     
+                    </table>
+                     <p>
+                        <img src="images/1.png" id="one" draggable="true" alt="1">
+                        <img src="images/2.png" id="two" draggable="true" alt="2">
+                        <img src="images/3.png" id="three" draggable="true" alt="3">
+                        <img src="images/4.png" id="four" draggable="true" alt="4">
+                        <img src="images/5.png" id="five" draggable="true" alt="5">
+                        <img src="images/6.png" id="six" draggable="true" alt="6">
+                        <img src="images/7.png" id="seven" draggable="true" alt="7">
+                        <img src="images/8.png" id="eight" draggable="true" alt="8">
+                        <img src="images/9.png" id="nine" draggable="true" alt="9">
+                    </p>               
+				</div>
+				<dl class="grid-item">    
+                    <dt><button id="gameReset">Click To Start Over</button></dt>    
+                    <dd id="out0"></dd>
+                    <dt>Log: Who Wins</dt>
+                    <dd id="out"></dd>
+                    <dt>Endgame Board State</dt>
+                    <dd id="out2"></dd>   
+                                        
+				</dl>
+			</div>	     
+
+<script>
+// image source: https://paradite.com/wp-content/uploads/2017/09/numbers-1336520_960_720-620x279.jpg
+// game trees: https://en.wikipedia.org/wiki/Game_tree
+// number scrabble: https://en.wikipedia.org/wiki/Number_Scrabble
+// https://glitch.com/~accidental-country similar application of drag and drop
+
+// TODO: replace with unload function to remove all nodes used for this game
+// reloads the page - everything is reset 
+
+document.getElementById("gameReset").onclick = function() { 
+    //console.log("restart clicked");
+    location.reload(); 
+};
+
+var board = [0,0,0,0,0,0,0,0,0];
+var cells = document.getElementsByTagName("td");
+for (var i = 0; i < 9; i++) {
+    cells[i].boardIndex = i;
+    //console.log(cells[i].boardIndex);
+    cells[i].ondrop = function() {drop(this, event)};
+    cells[i].ondragenter = function() {return false};
+    cells[i].ondragover = function() {return false};
+}
+
+var items = document.getElementsByTagName("img");
+for (var i = 0; i < items.length; i++)
+    items[i].ondragstart = function() {drag(this, event)};
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(target, ev) {
+ ev.dataTransfer.setData('Text', target.id);
+}
+
+function drop(target, ev) {
+// allow drop only if the cell is empty
+ if (target.children.length == 0) {
+     var id = ev.dataTransfer.getData('Text');
+     target.appendChild(document.getElementById(id));
+     document.getElementById(id).setAttribute("draggable","false");
+     document.getElementById(id).style.cursor = 'no-drop';
+     target.style.backgroundImage = (count % 2 === 0)
+                                ? "radial-gradient(circle, white, white, white, orange)" 
+                                : "radial-gradient(circle, white, white, white, teal)";
+     board[target.boardIndex] = document.getElementById(id).alt;
+     ev.preventDefault();
+     checkStatusOfBoard(target.boardIndex);
+     count++;
+ }
+}
+    var count = 1;
+    var flag = false;
+    var totals = [0,0,0,0,0,0,0,0];
+    var results = [
+        { name: "row1", boardCells:  [0,1,2], runningTotal: 0, complete: false },
+        { name: "row2", boardCells:  [3,4,5], runningTotal: 0, complete: false  },
+        { name: "row3", boardCells:  [6,7,8], runningTotal: 0, complete: false  },
+        { name: "col1", boardCells:  [0,3,6], runningTotal: 0, complete: false  },
+        { name: "col2", boardCells:  [1,4,7], runningTotal: 0, complete: false  },
+        { name: "col3", boardCells:  [2,5,8], runningTotal: 0, complete: false  },
+        { name: "diag1", boardCells:  [0,4,8], runningTotal: 0, complete: false  },
+        { name: "diag2", boardCells:  [2,4,6], runningTotal: 0, complete: false  }
+        ];
+
+function isItCompletelyFilled() {
+    
+}        
+function checkStatusOfBoard(lastNumberPlaced) {
+    // check calculations and update states      
+    for (let i = 0; i < 8; i++) {
+        let a = parseInt(board[results[i].boardCells[0]]);
+        let b = parseInt(board[results[i].boardCells[1]]);
+        let c = parseInt(board[results[i].boardCells[2]]);
+        results[i].runningTotal = a + b + c;
+        totals[i] =  results[i].runningTotal;        
+        if (a === 0 || b === 0 || c === 0 ) {
+            console.log("not all cells placed");
+        } else {
+          if (!results[i].complete)
+            //console.log("ready to evaluate " + results[i].name + " cells " + results[i].boardCells);
+            results[i].complete = true;
+        }   
+        if (!flag && totals.indexOf(15) > -1 && results[i].complete) { 
+          //console.log(results[totals.indexOf(15)].boardCells.includes(0)); 
+          let curPlayer = (count % 2 === 0)? "player o" : "player x";
+          document.getElementById("out").innerText += "First total of 15 was reached on " + results[i].name + 
+                                                        "\nlast cell placed in cell "+ lastNumberPlaced + 
+                                                        "\n on turn: " + count +
+                                                        "\n by : " + curPlayer;
+          flag = true;
+        }
+    }
+    // when all cells are filled, display results of all combinations
+    if (!board.includes(0)) {
+      var parentEl = document.getElementById("out2").appendChild(document.createElement("ul"))
+      for (let j = 0; j < 8; j++) {
+          var newLi = document.createElement("li");
+          newLi.innerText = results[j].name + " total is " + results[j].runningTotal;
+          parentEl.appendChild(newLi);
+        if (totals[j] === 15) {  
+          newLi.style.fontWeight = "bold";
+          newLi.style.color = "red";
+        }
+      }
+    }
+}
+</script>
+
+</body>
+</html>

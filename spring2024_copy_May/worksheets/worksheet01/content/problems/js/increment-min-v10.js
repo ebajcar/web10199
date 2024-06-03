@@ -1,0 +1,2 @@
+/*Copyright:  
+  The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.*/document.addEventListener("DOMContentLoaded",(function(){uval.onchange=function(){let n=uval.valueAsNumber;out.innerHTML="<h2>"+n+" + 1  = "+function(n,e=1){return n+e}(n)+"</h2>"}}));

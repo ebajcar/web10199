@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>R-P-S v.19.0</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+<!--
+File name: rock2.html
+Author: Ellen Bajcar
+Date created: 2015
+Date modified: May 2019
+Version: 2.0
+Description:
+	game of rock-paper-scissors
+	human player vs. computer
+	includes images
+-->	
+<style>
+body {
+    text-align:center;
+}
+p {
+    font-family:monospace;
+}
+#aimove { 
+	display: block; 
+	width: 420px; 
+	margin: 0 auto; 
+	height: 450px; 
+	border: 1px dotted lightgray; 
+}
+</style>
+</head>
+<body>
+	<h1>Rock&mdash;Paper&mdash;Scissors (images)</h1>
+	<div id="aimove"></div>
+	<form>
+		<label>Your move:</label>
+		<select id="move">
+			<option value="rock">rock</option>
+			<option value="paper">paper</option>
+			<option value="scissors">scissors</option>
+		</select>		
+	</form>
+	<p>
+		<button id="greset">Reset game</button>	
+	</p> 
+		
+<script>
+	var machine;
+	var message = "";
+	var choices = new Array( "paper", "scissors", "rock" );
+	var winner = { rock : "paper", paper : "scissors", scissors : "rock" };
+	var aimove = document.getElementById("aimove");
+	aimove.innerHTML = "<br> Welcome!<br> ";
+	function init() {
+		// event: when the user selects an option
+		document.getElementById("move").addEventListener("click", 
+			function(){
+				machine = Math.floor((Math.random() * 3) + 1);
+				var csel = choices[machine-1];
+				var hsel = document.getElementById("move").value;
+				//console.log( "machine selected " + csel + " you selected " + hsel );
+				if ( csel == hsel ) 
+					message = " IT'S A TIE! "; 
+				else
+					winner[csel] == hsel 
+						? message = " YOU WIN! " 
+						: message = " MACHINE WINS! ";
+						
+				aimove.innerHTML = "<br> Computer chose:<br> ";
+				aimove.innerHTML += "<img src='images/"+csel+".png' alt='' > <br>" + csel;
+				aimove.innerHTML += "<br><br> You chose<br> ";
+				aimove.innerHTML += "<img src='images/"+hsel+".png' alt='' > <br>" + hsel;
+				aimove.innerHTML += "<br><br>  " + message;
+			}, true);
+		// event: when the user click reset button
+		document.getElementById("greset").addEventListener("click", function(){
+			location.reload();
+			}, false);
+	} // end of init function	
+	document.addEventListener("DOMContentLoaded", init, false);
+</script>		
+</body>
+</html>

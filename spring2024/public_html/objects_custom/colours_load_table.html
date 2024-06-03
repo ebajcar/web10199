@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Worksheet Three Exercises</title>
+<title>DOM methods (colours)</title>
 
 <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
 <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
@@ -29,22 +29,25 @@ header {
   background-color: #eee; /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, white, white, lightgray, white, white); /* Standard syntax (must be last)  */
 }
-       
+.inverse-color {
+  color: white;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.5em;
+}       
 </style>
 <link rel="stylesheet" href="css/colours.css">
 </head>
 <body>
 
 	<header>
-        <h1><span class="allcaps">Web Programming</span> <sub-title>Colour name and value example</sub-title></h1>
-        <nav>
-        </nav>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>DOM Manipulation</sub-title></h1>
     </header>
 
     <main>
         <table></table>
         <hr>
-        <button id="modal-button">Comments</button>
+        <button id="modal-button">Click to read Comments</button>
               
     </main>
 
@@ -55,16 +58,44 @@ header {
 
 <dialog class="dialog" id="modal">
     <h2>Comments</h2>
-	<h3>Explore HTML Elements</h3>
-	<p>Start with a four-column table and a caption.</p>
-	<h3>Explore CSS Properties and Values</h3>
-	<p>Use the <code>:nth-child(An+B)</code> to style different columns.</p>
-	<h3>Alternative Layouts</h3>
-	<p>CSS grid, CSS flexbox, &hellip;</p>
+    <p class="inverse-color">Using DOM methods, we create a table with rows and columns and populate data from the custom object named "colours".</p>
+    <aside>       
+        <pre class="language-js" tabindex="0"><code class="language-html">&lt;script>
+const colours = {
+  black:  "000000",
+  green:  "008000",
+...
+  aqua:   "00FFFF",
+  fuchsia:"FF00FF"
+};
+
+function createColorTable(obj) {
+  let parent = document.getElementsByTagName("table")[0];
+  parent.appendChild(document.createElement("caption")).innerText = 
+        "Color names and RGB values";
+  let index = 0, td1, td2, tr;
+  for (let property in obj) {
+      if (!(index % 2)) {
+        tr = parent.appendChild(document.createElement("tr")); 
+      }
+      index++;
+      td1 = tr.appendChild(document.createElement("td"));
+      td1.style.backgroundColor = property;     
+      td2 = tr.appendChild(document.createElement("td"));  
+      td2.innerText = property + "= #" + obj[property];
+  }
+}
+createColorTable(colours);
+
+&lt;/script></code></pre>	
+    
+    </aside>
     <button id="modal-close">Close</button>
+    
   </dialog>
   
 <script>
+"use strict";
 //-----------------------------------
 // Declare Variables
 //-----------------------------------
