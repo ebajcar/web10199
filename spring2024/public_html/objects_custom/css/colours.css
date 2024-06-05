@@ -2,7 +2,10 @@
   styling for colours.html and colours_load_table.html
 */
 
-
+.dialog aside {
+      overflow-y: scroll;
+      max-height: 500px;
+}
 /* 
 https://www.w3schools.com/howto/howto_css_style_hr.asp 
 */

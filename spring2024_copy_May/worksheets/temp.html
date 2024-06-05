@@ -1,0 +1,41 @@
+MVC with Express
+
+How it works with Node.js:
+
+Model = JSON data, db schema, etc
+
+View = HTML pages, templates
+
+- you would typically have multiple views
+- views are stored in the /views directory of a project
+- templates are used for views with dynamic data
+    - contains placeholders where data will go when the view is processed on the server
+    - the response will contain the view with actual data in the placeholders
+
+Controller = code/modules that perform routing, process requests, etc.
+
+- you would typically have multiple controllers
+
+
+
+EJS Templates
+
+- you can cover this as you do other stuff (the original mvc program was the menu read from the json file but I moved the json over into the next lesson)
+    - output <%= %>
+    - scriptlets (loops, ifs) <% %>
+    
+    
+## Serving Static Files
+
+…so you can include the CSS, images, client-side JS, etc
+
+
+Project Structure
+public_html is available to the public (hence the name)
+
+
+Routing with Node.js
+- Express.js adds some extra functionality and capabilities you can’t get with Node.js alone
+    - e.g. post requests, sessions, database access, and so many other things
+    
+    

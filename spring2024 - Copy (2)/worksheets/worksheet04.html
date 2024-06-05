@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet 4</title>
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+} 
+kbd {
+    font-family: monospace;
+    color: green;
+    font-size: 1.5em;
+    padding-left: 5px;
+    padding-right: 5px;
+}  
+
+dd {
+  margin-bottom: 7px;
+}
+dd:first-of-type ol{
+  list-style-type: lower-alpha;
+}
+  
+.steps {
+    margin-left: 0;
+    padding-right: 0;
+    list-style-type: none;
+    padding-left: 10px;
+}    
+.steps li {
+    counter-increment: step-counter;
+}    
+.steps li::before {
+  content: "STEP " counter(step-counter) ": ";
+  font-weight: bold;
+}     
+</style>
+</head>
+<body>
+
+
+<!-- header section -->
+<header>       
+    <h1><span class="allcaps">SYST<wbr>10199 Web Programming<v-h>:</v-h></span><sub-title>Worksheet 4</sub-title></h1>
+</header>
+
+<!-- main section -->
+<main>
+ 
+
+<section id="p1">
+    <h3>
+      <sub-title class="allcaps">Prepare<v-h>: </v-h></sub-title>
+     Review and catch up&hellip;
+    </h3>
+
+
+
+</section>
+
+
+
+<!-- 2. Activities -->
+<section id="p2">   
+    <h3>
+      <sub-title class="allcaps">Review<v-h>: </v-h></sub-title>
+      Read and try examples, make notes, add annotations to code, make connections&hellip;
+    </h3>
+ 
+ <!-- Working with built-in objects -->
+     <details>
+            <summary>Working with built-in objects</summary>           
+            <dl>         
+                <dt>Read, make notes, try any examples: <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics" target="_blank">Object basics (MDN guides)</a> </dt>           
+                <dd>Dot notation, Bracket notation, setting object members, what is "this", introducing constructors, you've been using objects all along  </dd>      
+                <!-- https://javascript.info/object -->
+                
+                 <dt>Read, make notes, try any examples:  <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes" target="_blank">Object prototypes (MDN guides)</a></dt>           
+                <dd>Prototype chains, Shadowing properties, Setting a prototype, Prototypes and inheritance  </dd>  
+
+                
+                 <dt>Read, make notes, try any examples:  <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming" target="_blank">Object-oriented programming (MDN guides)</a></dt>           
+                <dd>Classes and instances, Inheritance, Encapsulation, OOP and JavaScript</dd>   
+                
+                <dt>Read, make notes, try any examples:  <a href="" target="_blank">Working with objects</a></dt>           
+                <dd>&mdash; Creating new objects (using object initializers, using a constructor function, using the Object.create() method), Objects and properties (accessing properties, enumerating properties, deleting properties), Inheritance, Defining methods, Defining getters and setters, Comparing objects, </dd> 
+                <dd>Explore standard built-in objects
+                    <ul style="column-count: 3">                      
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Math</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error" target="_blank">Error</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank">Object</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp" target="_blank">RegExp</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank">JSON</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" target="_blank">Function</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">Array</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a></li>
+                    </ul>  
+                </dd>   
+            </dl>
+               
+        </details>     
+
+
+ <!-- Functions -->
+         <details>
+            <summary>Functions</summary>    
+            <dl>
+                <dt>Complete MDN tutorial <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Functions" target="_blank">Functions — reusable blocks of code</a> </dt>           
+                <dd>Built-in browser functions. Functions versus methods. Invoking functions. Function parameters (optional, default). Anonymous functions and arrow functions. </dd>      
+                <dd>Explore w3schools tutorials
+                    <ul style="column-count: 2">                      
+                        <li><a href="https://www.w3schools.com/js/js_functions.asp" target="_blank">JavaScript Functions</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_definition.asp" target="_blank">JavaScript Function Definitions</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_parameters.asp" target="_blank">JavaScript Function Parameters</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_invocation.asp" target="_blank">JavaScript Function Invocation</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_call.asp" target="_blank">JavaScript Function call()</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_apply.asp" target="_blank">JavaScript Function apply()</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_bind.asp" target="_blank">JavaScript Function bind()</a></li>
+                        <li><a href="https://www.w3schools.com/js/js_function_closures.asp" target="_blank">JavaScript Closures</a></li>
+                    </ul>  
+                </dd>                           
+            </dl>   
+
+            <dl>
+                <dt>Complete MDN tutorial <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function" target="_blank">Build your own function</a> </dt>           
+                <dd>The basic function. Calling the function. Improving the function with parameters.</dd>      
+                 <dt>Complete MDN tutorial <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Build_your_own_function" target="_blank">Function return values</a> </dt>           
+                <dd>What are return values?</dd>  
+                
+                 <dt>Read further <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions" target="_blank">Function overview</a> (MDN reference)</dt>           
+                <dd>What are first-clss objects? </dd> 
+                
+                <dt>Read further <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank">Arrow function expressions</a> (MDN reference)</dt>           
+                <dd>An arrow function expression is a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage:</dd> 
+
+                 <dt>Read further <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters" target="_blank">Default parameters</a> (MDN reference)</dt>           
+                <dd>Syntax. Description. Examples.  </dd> 
+                
+                 <dt>Read further <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters" target="_blank">Rest parameters</a> (MDN reference)</dt>           
+                <dd>Syntax. Description. Examples.  </dd>                
+                
+                 <dt>Read further <a href="https://www.impressivewebs.com/callback-functions-javascript/" target="_blank">Callback functions in Javascript</a> </dt>           
+                <dd>a common JavaScript pattern is to pass a function into another function as an argument. It is then called inside the first function.</dd>                  
+            </dl>               
+
+        </details> 
+
+        
+</section>
+
+
+
+<!-- 3. Practice solving problems -->
+<section id="p3">
+      <h3>
+      <sub-title class="allcaps">Practice<v-h>: </v-h></sub-title>
+      Practice solving problems&hellip;
+    </h3>   
+
+   <dl>
+        <dt>Control structures examples</dt>
+        <dd>&mdash;Examine, implement, and add own comments. Add each example as a secondary page to a new project. </dd>
+        <dd>
+            <ol>
+                <li><a href="../public_html/control_structures/for-family-array-for.html" target="_blank">for() loop (array family)</a></li>
+                <li><a href="../public_html/control_structures/for-family-array-forEach.html" target="_blank">forEach loop (array family)</a></li>	
+				
+                <li><a href="../public_html/control_structures/forEach-array-v01.html" target="_blank">forEach loop (numbers)</a></li>				
+                <li><a href="../public_html/control_structures/forEach-provinces-v01.html" target="_blank">forEach and other array methods (array of objects)</a></li>
+				
+				<li><a href="../public_html/control_structures/while-loop-v01.html" target="_blank">while loop (select)</a></li>
+				
+                <li><a href="../public_html/control_structures/fib-v01.html" target="_blank">while loop (Fibonacci)</a></li>	
+
+                <li><a href="../public_html/control_structures/for-in-object-v01.html" target="_blank">for&hellip;in loop (object)</a></li>	
+
+                <li><a href="../public_html/control_structures/for-of-string-v01.html" target="_blank">for&hellip;of loop (string)</a></li>		
+                <li><a href="../public_html/control_structures/for-of-array-v01.html" target="_blank">for&hellip;of loop (array)</a></li>	
+
+                <li><a href="../public_html/bomDom/innerhtml-innertext-textcontent.html" target="_blank">differences: innerHTML, innerText, textContent</a></li>				
+            </ol>        
+        </dd>
+    </dl>  
+
+   <dl>
+        <dt>Function examples</dt>
+        <dd>&mdash;Examine, implement, and add own comments. Add each example as a secondary page to a new project. </dd>
+        <dd>
+            <ol start="11">
+                <li><a href="../public_html/functions/callback_function.html" target="_blank">Callback functions</a></li>
+                <li><a href="../public_html/functions/function_ex1.html" target="_blank">Creating custom methods</a></li>
+                <li><a href="../public_html/functions/function_ex3.html" target="_blank">function arguments[i]</a></li>
+                <li><a href="../public_html/functions/function_ex4.html" target="_blank">default parameters</a></li>
+                <li><a href="../public_html/functions/function_ex5.html" target="_blank">rest parameters</a></li>
+                <li><a href="../public_html/functions/function1.html" target="_blank">function chooseNmae() from an array using onclick method</a></li>
+                <li><a href="../public_html/functions/function_ex2.html" target="_blank">nested functions</a></li>
+                <li><a href="../public_html/functions/function-return-value.html" target="_blank">function return values</a></li>
+            </ol>        
+        </dd>
+    </dl>
+
+	
+    <dl>
+        <dt>Problem 1:  Increment a number</dt>
+        <dd>&mdash;Write a program that will allow the user to increment a number by 1.</dd>
+        <dd>&mdash;Examine the development stages of the development process by <a href="problems/increment/cm-index.html" target="_blank">refactoring code</a> from console version to unobtrusive JavaScript code.</dd>
+    </dl>
+    
+	
+    <dl>
+        <dt>Problem 2:  Add two numbers</dt>
+        <dd>&mdash;Write a program that adds two numbers and displays result together with the two values provided by the user.</dd>
+        <dd>&mdash;Study the <a href="../public_html/problems/add2numbers-problem.html" target+"_blank">Problem Statement and analysis</a> example. Develop your own.</dd>
+        <dd>&mdash;Reuse the function used in Problem 1. Increment a number.</dd>
+    </dl>
+
+	
+    <dl>
+        <dt>Problem 3: Guess a number </dt>
+        <dd>&mdash;Write a program that adds two numbers and displays result together with the two values provided by the user.</dd>
+    </dl>
+
+	
+    <dl>
+        <dt>Problem 4: Area of a circle</dt>
+        <dd>&mdash;Write a program that will allow the user to guess a number between 1 and 10 that was randomly chosen by the program.</dd>
+    </dl>
+ 
+ 
+    <dl>
+        <dt>Problem 5: Convert temperature</dt>
+        <dd>&mdash;Write a program that calculates a given degrees Celsius in degrees Fahrenheit and displays a phrase that includes both values..</dd>
+    </dl>
+
+ 
+    <dl>
+        <dt>Problem 6: Fibonacci numbers</dt>
+        <dd>&mdash;Write a program that will calculate and display a given number of Fibonacci numbers.</dd>
+    </dl> 
+
+<!-- 
+    <dl>
+        <dt>Problem 7: Casino craps game</dt>
+        <dd>&mdash;Write a program to play a game of Casino Craps.</dd>
+        <dd>We will skip keeping score and making bets. Focus on the logic of rolling two dice, adding the values and the logic to determine and display the results, for a single player:
+                <pre>At the beginning of the game, 
+		the player rolls a pair of dice and the program computes the total. 
+		If the total is 2, 3, or 12 (called "craps"), the player loses. 
+		If the total is 7 or 11 (called a "natural"), the player wins.
+		If the total is any other number, that number becomes the "point". 
+			From here, the player keeps rolling the dice until 
+				(a) the point comes up again, in which case the player wins, or 
+				(b) a 7 appears, in which case the player loses. 
+				The numbers 2,3,11, and 12 no longer have special 
+					significance after the first rolls.</pre>
+                    <a href="https://www.youtube.com/embed/7T8ee3Nl5bY" target="_blank">example of console output</a>
+        </dd>
+    </dl>
+-->
+
+</section>
+
+
+
+
+
+</main>
+
+<!-- footer section -->
+<footer>
+    <address>2021-2024 &copy; Ellen Bajcar et al</address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>     
+</footer>
+
+
+</body>
+</html>

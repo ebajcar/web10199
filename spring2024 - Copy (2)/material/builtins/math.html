@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Class examples</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: March 14, 2024
+Version: 24.3
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Explore and practice unobtrusive Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+    class example
+-->
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/next-prev.css">
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+}        
+</style>
+</head>
+
+<header class="navbar">
+    <nav>
+      <ul role="list">
+        <li><a href="date.html">Date</a></li>
+        <li><a aria-current="page" href="math.html">Math</a></li>
+        <li><a href="regexp.html">Regexp</a></li>
+        <li><a href="function.html">Function</a></li>
+        <li><a href="array.html">Array</a></li>
+        <li><a href="object.html">Object</a></li>
+        <li><a href="string.html">String</a></li>
+      </ul>
+    </nav>            
+</header>       
+            
+                   
+<main>  
+    <div class="prev-next">
+        <!--   <p style="color:lightgray;">Prev</p>   -->
+        <p style="line-height: 1em;text-align:left;">
+            <a href="textual_italic_bold_underline.html">Prev</a>
+            <br><small>Previous topic</small>
+        </p>
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <ol>
+                <li><a href="index.html"  class="allcaps">Home</a></li>
+                <li><a href="#" aria-current="page">Current Topic</a></li>
+            </ol>               
+        </nav> 
+        <p style="line-height:1em;text-align:right;">
+            <a href="textual_quotations_citations.html">Next</a>
+            <br><small>Next topic</small>
+        </p>
+    </div>
+         
+    
+    <section id=#e01">   
+    <h2>Math</h2>
+     <p>The Math object allows you to perform mathematical tasks. Math is not a constructor. All properties/methods of Math can be called by using Math as an object, without creating it.</p>  
+
+<figure>      
+<pre class="language-js"><code>// Returns PI 𝝅 𝜋 π
+var x = Math.PI;
+// Returns the square root of 16            
+var y = Math.sqrt(16);      		
+//Return a random number between 1 and 10:
+Math.floor((Math.random() * 10) + 1);
+// Round a number downward to its nearest integer:
+Math.floor(1.6)
+// Round a number upward to its nearest integer
+Math.ceil(1.4)
+// Return the number with the lowest value
+Math.min(5, 10)
+// Return the number with the highest value
+Math.max(5, 10)
+// Round a number to the nearest integer
+Math.round(49.4999)
+Math.round(49.5)
+// Return the value of the number 4 to the power of 3 (4*4*4)
+Math.pow(4, 3)
+</code></pre>
+  <figcaption><strong>Math object</strong>.  More on   
+    <a href="https://www.w3schools.com/jsref/jsref_obj_math.asp">w3schools</a>
+  </figcaption>
+</figure> 
+    
+    </section>
+</main>
+
+
+<footer>
+    <address><a href="http://bajcar.dev.fast.sheridanc.on.ca/">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+    <div style="margin: 0 0 10px 0">&mdash;</div>
+</footer>
+
+
+</body>
+</html>

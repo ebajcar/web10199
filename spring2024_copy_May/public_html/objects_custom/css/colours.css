@@ -1,0 +1,84 @@
+/* 
+  styling for colours.html and colours_load_table.html
+*/
+
+
+/* 
+https://www.w3schools.com/howto/howto_css_style_hr.asp 
+*/
+hr:last-of-type {
+  margin: auto;
+  margin-top: 20px;
+  height: 3px;
+  border: none;
+  width: 50%;
+  background-color: navy;
+  -ms-transform: rotate(-1deg); /* IE 9 */
+  -webkit-transform: rotate(-1deg); /* Safari 3-8 */
+  transform: rotate(-1deg);
+  box-shadow: 2px 2px 5px gray;
+  text-align: center;
+}
+
+/* 
+table-related elements
+*/
+table {
+  margin: auto;
+}
+
+caption {
+  font-weight: bold;
+  font-size: 1.6em;
+  margin: 15px;
+}
+
+td:first-child, td:nth-child(3) {
+  width:16px;
+  height:16px;
+}
+
+td:nth-child(2n) {
+  text-align:right;
+  padding-left: 10px;
+}
+
+td:nth-child(2) {
+  padding-right: 55px;
+}  
+
+
+/* 
+dialogue and button to open it 
+*/
+button {
+  display: block;
+  padding: 0.7rem;
+  margin: 15px auto;
+  border: 1px solid #ccc;
+  background-color: #ddd;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+.dialog {
+  width: 80vw;
+  border: none;
+  background-color: tomato;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 400px) {
+  .dialog {
+    width: 50vw;
+    border: none;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  }
+}        

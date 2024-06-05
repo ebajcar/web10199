@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>example</title>
+    <title>BOM open new window</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--
@@ -55,26 +55,22 @@ button {
 <body>
 
 	<header>
-        <h1><span class="allcaps">Web Programming</span> <sub-title>Class examples</sub-title></h1>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>BOM Properties</sub-title></h1>
     </header>
 
     <main>
-        <h2>BOM   - <small>explore window properties and methods</small></h2>
- 
+        <ul role="list" class="f-switch dense">
+            <li class="box">
+                <h4>mouseover event</h4>
+                <p><a href="blah.html">Move mouse over this text</a></p>
+                <button>Open a new window</button>
+                <div id="panel"></div>
+            </li>
+        </ul>
 
-<ul role="list" class="f-switch dense">
-    <li class="box">
-        <h4>mouseover event</h4>
-        <p><a href="blah.html">Move mouse over this text</a></p>
-      	<button>Open a new window</button>
-        <div id="panel"></div>
-    </li>
-
-</ul>
-
-<ul role="list" class="f-switch dense">
-    <li class="box">
-        <h4>Code snippet</h4>
+        <ul role="list" class="f-switch dense">
+            <li class="box">
+                <h4>Code snippet</h4>
 <pre class="language-js" tabindex="0"><code class="language-js">
 document.links[0].addEventListener("mouseover", function() { 
         alert('you rolled over me'); 
@@ -93,12 +89,10 @@ document.querySelect("button").addEventListener("click", function() {
     false
 );
 </code></pre>
-    </li>
-</ul> 
-
-
-		
+            </li>
+        </ul> 
     </main>
+    
    <footer>
         <address>Ellen Bajcar &copy; Sheridan College</address>
         <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>

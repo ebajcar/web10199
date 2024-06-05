@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W1 Practice 1</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: 
+Version: 0.1
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Practice Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+-->
+
+</head>
+<body>
+	<h3>Functions</h3>
+	<main>
+    
+  </main>
+<script>
+    /* 
+     * Example 4
+     * default parameters
+     */
+    function multiply1(a, b) {
+      b = typeof b !== 'undefined' ? b : 1; // you could test 
+      return a * b;
+    }
+    // better using default parameters
+    function multiply2(a, b = 1) {
+      return a * b;
+    }
+    document.write("<p>Output 4A: using multiply2(5) " + multiply2(5) + "</p>");
+    document.write("<p>Output 4B: using multiply2(5,3) " + multiply2(5, 3) + "</p>");
+    
+</script>	
+</body>
+</html>

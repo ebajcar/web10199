@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>scroller</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+<style>
+body {
+	background: #e0e0e0;
+    font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+main, section {
+	width: 100%;
+	margin: auto;
+	padding-top: 20px;
+	background-color: white;	
+}
+main {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	min-height: 300px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+}
+header h1 {
+	color: #6f6f6f;   
+    font-family: Lato, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+	margin: 20px 0 0;
+    text-align: center;
+    text-shadow: 0 0 0 rgba(0,0,0,.4);
+}
+footer {
+	margin: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+button {
+	padding: 1rem;
+	border: 1px solid #ccc;
+	background-color: #ddd;
+	-webkit-transition: background-color 200ms ease;
+	transition: background-color 200ms ease;
+}
+button:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+
+
+/* navigation */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav a {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover {
+    background: #c2c2c2;
+    color: #818181;
+}
+#fscrollerns { width: 250px;, height: 300px; margin: auto; text-align:left; }
+
+
+
+</style>
+</head>
+<body>
+	<header><h1>scroller</h1></header>	
+	<nav>
+		<a class="active" href="">1</a>
+		<a href="">2</a>
+	</nav>		
+	<main>
+		<h3>scroller</h3>
+		<div id="fscrollerns">
+			<div id="fscroller" style="width:'+fwidth+';height:'+fheight+';"></div>
+		</div>
+	</main>
+	<footer><address>SYST10199 Web Programming &copy; Sheridan College</address></footer>	
+
+<script>
+/*
+Fading Scroller- By DynamicDrive.com
+For full source code, 100's more DHTML scripts, and TOS,
+visit http://www.dynamicdrive.com
+*/
+
+var delay = 2000; //set delay between message change (in miliseconds)
+var fcontent = new Array()
+begintag='<section>'; //set opening tag, such as font declarations
+fcontent[0]="<h3>Knowledge</h3><ol>" +
+			"<li>SQL's Data Definition Language (DDL) and its syntax.</li>" +
+			"<li>Data Manipulation Lanaguage (DML) and its syntax.</li>" +
+			"<li>The syntax and use of SQL's aggregate functions and multi-table query techniques.</li>" +
+			"<li>Architecture of three-tier database applications.</li></ol>";
+fcontent[1]="<strong>Knowledge</strong><br>5. Multi-tier database application focusing on front end and middle tier application<br>6. Validation requests from the front-end to the back-end of a database.<br>7. Database reporting, develoing code using different tools. <br>8. Setting up applications to be deployable on client machines."
+fcontent[2]="<strong>Skills</strong><br>1. Create a relational database and use both SQL and tools supported by ADO programming.<br>2.  Query and maintain database.<br>3. Develop three-tier application with Visual programming language using ADO object model.<br>4. Create re-usable Class Modules and JComponents (COM) private library."
+fcontent[3]="<strong>Skills</strong><br>5. Retrieve information from a database using Connection, RecordSet, and command object to the front-end application. <br>6. Generate reports from accessible object in a database. <br>7. Package and deploy applications. <br>8. Use the online resources to search solutions for programming problems. "
+fcontent[4]="<strong>Attitudes</strong><br>1. Honesty.<br>2. Organization in planning, execution, and validation of work.<br>3. Punctual delivery of work, using good time-management and self-reliance.<br>4. Willingness to approach problems from several perspectives, and accept direction."
+fcontent[5]="<strong>Attitudes</strong><br>5. Appreciation for the value of standards, guidelines, and the imporatance of testing software.<br>6. Willingness to adopt new technologies in programming."
+fcontent[6]="<strong>Evaluation</strong><br>Midterm 30%<br>Final 35%<br>Project 20% <br>Quizzes/Assignments 15%<br><br>A passing average of 50% minimum between the Midterm and Final must be attained to pass the course."
+fcontent[7]="Instructor's Site<br><a href=http://www-acad.sheridanc.on.ca/staff/bajcar/eeb/index.htm>Ellen's Homepage</a>"
+closetag='</section>'
+
+var fwidth = 250; //set scroller width
+var fheight = 250; //set scroller height
+
+var faderdelay=0;
+var index=0;
+//function to change content
+function changecontent(){
+	if (index >= fcontent.length)
+		index=0;
+// TODO: replace innerHTML
+	document.getElementById("fscroller").style.color="rgb(255,255,255)";
+	document.getElementById("fscroller").innerHTML=begintag+fcontent[index]+closetag;
+	colorfade();
+	index++;
+	setTimeout("changecontent()",delay+faderdelay);
+}
+
+frame = 20;
+hex = 255  // Initial color value.
+
+function colorfade() {	         	
+	// 20 frames fading process
+	if(frame>0) {	
+		hex-=12; // increase color value
+		document.getElementById("fscroller").style.color="rgb("+hex+","+hex+","+hex+")"; // Set color value.
+		frame--;
+		setTimeout("colorfade()", 20);	
+	} else {
+		document.getElementById("fscroller").style.color="rgb(0,0,0)";
+		frame = 20;
+		hex = 255
+	}   
+}
+//document.getElementById("fscrollerns").innerHTML = '<div id="fscroller" style="width:'+fwidth+';height:'+fheight+';"></div>';
+//document.write('<div id="fscroller" style="border:0px solid black;width:'+fwidth+';height:'+fheight+';padding:2px"></div>');
+// TODO: replace with Event listener
+window.onload = changecontent;
+</script>
+</body>
+</html>

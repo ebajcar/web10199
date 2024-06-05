@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Functions: Task 1</title>
+<style>
+h3 {
+  font-size: 3em;
+  margin: 0.5em;
+}
+section {
+  border: 1px black solid;
+}
+.preview {
+  background-color: #a1fabe;
+  height: 200px;
+}
+</style>
+</head>
+
+<body>
+  <h1>Encapsulation</h1>
+
+<script>
+var person = function () {
+
+  var fullName = "Jason Shapiro";
+  var reg = new RegExp(/\d+/);
+
+  return {
+    setFullName : function (newValue) {
+      if( reg.test(newValue) ) {
+        document.write("<br>Invalid Name");
+      }
+      else {
+        fullName = newValue;
+      }
+    },
+    getFullName : function () {
+     return fullName; 
+    }
+  }; // end of the return
+}();
+
+ // Note the '()', this means we're calling the function 
+     // and assigning the *returned object,* instead of 
+     // the *function itself* for the value of 'person.'
+ 
+document.write("<br>Call 1: " + person.getFullName());   // Jason Shapiro
+person.setFullName( "Jim White" );
+document.write("<br>Call 2: " + person.getFullName());  // Jim White
+person.setFullName( 42 ); // Invalid Name; the name is not changed.
+person.fullName = 42;     // Doesn't affect the private fullName variable.
+document.write("<br>Call 3: " + person.getFullName());  // Jim White is printed again.
+
+</script>
+</body>
+</html>

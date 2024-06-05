@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>v9 increment an integer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: 		Ellen Bajcar
+File name: 		ver9.html
+Date Created:	Summer 2021
+Date Updated:   Summer 2024
+Version: 		2024.1 
+Purpose: 		learning Javascript programming; assignment requirements
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    Problem statement
+        increment a number by one
+    Algorithm:
+        1. obtain a number
+        2. calculate the sum of the number and 1
+        3. display the result on the screen
+-->
+<style>
+  body {
+    width: 80%;
+    margin: auto;
+  }
+  footer {
+    margin-top: 30px;
+    border-top: 1px dotted green;
+  }
+  input, output {
+    font-size: 1.5em;
+    width: 100%;
+  }
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>Class exercise: Increment a number</h1>
+	</header>
+  <nav>
+    <a href="">About</a>
+    <a href="#">Increment</a>      
+    <a href="">Logout</a>
+  </nav>
+  <main>  
+    <section class="grid-container">
+      <h2>Incrementing a number!</h2>
+      <p>Select a number using the spinner or typing it in:<br>
+          <input id="uval" type="number"></p>
+      <output id="out">Result will appear here.</output>
+    </section>
+  </main>
+  <footer>
+      <address>SYST10199 Web Programming &copy; Sheridan College</address>
+  </footer>
+<script>
+function plusOne(x, y=1) {
+	return x + y;
+}
+// start processing the input only when user change the value
+uval.onchange = function() {
+  // get value from the user; treat it as a number
+  var x = document.getElementById("uval").valueAsNumber;
+  console.log("x " + x + " type " + typeof(x));
+  //var y = uval.valuey;
+  //console.log("y " + y + " type " + typeof(y));  
+  out.innerText = "plusOne(" + x + ") " + plusOne(x);
+}
+// Next step: explore alternatives, dig deeper 
+</script>	
+</body>
+</html>

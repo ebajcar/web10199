@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Class examples</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: March 14, 2024
+Version: 24.3
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Explore and practice unobtrusive Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+    class example
+-->
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/next-prev.css">
+	<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+} 
+
+	</style>
+</head>
+<body>
+
+<header class="navbar">
+    <nav>
+      <ul role="list">
+        <li><a href="html_forms.html">HTML forms</a></li>
+        <li><a href="form_tags.html">Elements</a></li>        
+        <li><a aria-current="page" href="form_element.html">&lt;form></a></li>       
+        <li><a href="input_element.html">&lt;input></a></li>
+        <li><a href="label_controls.html">&lt;label></a></li>
+        <li><a href="pattern_attribute.html">Attributes</a></li>
+        <li><a href="regex.html">Regex</a></li>
+      </ul>
+    </nav>            
+</header>       
+            
+                   
+<main>  
+    <div class="prev-next">
+        <!--   <p style="color:lightgray;">Prev</p>   -->
+        <p style="line-height: 1em;text-align:left;">
+            <a href="form_tags.html">Prev</a>
+            <br><small>Form-associated elements</small>
+        </p>
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <ol>
+                <li><a href="#"  class="allcaps">Home</a></li>
+                <li><a href="#" aria-current="page">&lt;form> element</a></li>
+            </ol>               
+        </nav> 
+        <p style="line-height:1em;text-align:right;">
+            <a href="input_element.html">Next</a>
+            <br><small>&lt;input> element</small>
+        </p>
+    </div>
+    
+    <h2>Form Element</h2>
+
+   <p class="text-gray-700 text-base w-full">
+      The HTML <code>&lt;form></code> element defines a form that is used to collect user input.	An HTML form contains form elements. Form elements are different types of input elements, like text fields, checkboxes, radio buttons, submit buttons, and more. HTML5 forms submit data to the web server as <code>name=value</code> pairs for processing by a specified server-side script. The <code>form</code> element acts as a container for controls. It specifies:</p>
+	<ul class="list-outside text-base">
+		<li>The layout of the form (given by the contents of the element).</li>
+		<li>The program that will handle the completed and submitted form (the action attribute). The receiving program must be able to parse name/value pairs in order to make use of them.</li>
+		<li>The method by which user data will be sent to the server (the method attribute).</li>
+		<li>A character encoding that must be accepted by the server in order to handle this form (the accept-charset attribute). User agents may advise the user of the value of the accept-charset attribute and/or restrict the user's ability to enter unrecognized characters.</li>
+		<li>A form can contain text and markup (paragraphs, lists, etc.) in addition to form controls.</li>
+	</ul>
+    <p hidden>https://www.w3.org/TR/2018/SPSD-html401-20180327/interact/forms.html</p>
+	<p>All form component elements are enclosed between <samp>form</samp> and <samp>/form</samp> tags, which must include an action attribute, to specify the URL of the processing script, and a method attribute to specify the submission method as GET or POST.</p>
+	
+	<h4 class="text-gray-900 text-xl leading-tight font-medium mb-2">Form submission method</h4>
+	<p>The method attribute of the FORM element specifies the HTTP method used to send the form to the processing agent. This attribute may take two values:</p>
+	<dl>
+	  <dt class="text-info">get</dt>
+	  <dd style="padding-bottom:10px;">With the HTTP "get" method, the form data set is appended to the URI specified by the action attribute (with a question-mark ("?") as separator) and this new URI is sent to the processing agent. (restricts form data set values to ASCII characters.)</dd>	 
+	  <dt class="col-sm-1 text-info">post</dt>
+	  <dd class="col-sm-11">With the HTTP "post" method, the form data set is included in the body of the form and sent to the processing agent. (with enctype="multipart/form-data", cover the entire [ISO10646] character set).</dd>	  	  
+	</dl>
+	<p>If the service associated with <strong>the processing of a form causes side effects</strong> (for example, if the form modifies a database or subscription to a service), <strong>the POST method should be used.</strong></p>
+	<p class="blockquote-footer">Read further  <cite title="[ https://www.w3.org/TR/html401/interact/forms.html#h-17.13 ]"><a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13" target="_blank"> Form submission (W3C)</a></cite></p>	      
+  </div>
+</main>
+
+
+<footer>
+    <address><a href="http://bajcar.dev.fast.sheridanc.on.ca/">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+    <div style="margin: 0 0 10px 0">&mdash;</div>
+</footer>
+
+
+</body>
+</html>

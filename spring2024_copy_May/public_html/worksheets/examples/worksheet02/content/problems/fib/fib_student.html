@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+</style>
+</head>
+<body>
+
+<script>
+// function ...
+let createFibArray = function(num) {
+if (num === 1) {
+return[0, 1]
+}else {
+let seq = createFibArray (num - 1);
+seq.push(seq[seq.length - 1] + seq[seq.length - 2]);
+return seq;
+}
+};
+console.log(createFibArray(6));
+
+
+
+
+
+
+//example function call
+let first10nums = createFibArray(10);
+</script>
+</body>
+</html>

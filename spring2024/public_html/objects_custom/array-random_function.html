@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Date object example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: February 8, 2024
+Version: 24.0
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Explore and practice unobtrusive Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+    class example
+-->
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+} 
+div p {
+  margin: 0;
+  padding: 0;
+}   
+
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Objects (built-ins, custom, DOM)</sub-title></h1>
+    </header>
+
+    <main>
+        <h2>Array object and Function objects  - <small>explore properties and methods</small></h2>
+        <p>Using an earlier example (array-random-onclick.html), the code is refactored so the code can be re-used for any array by passing the name of the array to a function. This example uses event listeners to display the result.</p>
+        <p>Compare using event methods (array-random-function.html) and event listeners (array-random-listener.html).</p>
+ 
+
+        
+<ul role="list" class="f-switch dense">
+    <li class="box">  
+    <section></section>
+    <section class="preview"><h6>Click anywhere to generate next random name and display it here.</h6>
+    <small><em>Note: the removal of existing sub-structure has been commented out to see that only the second onclick method has executed on each click event.</em></small>
+    </section> 
+    </li>  
+</ul>
+	
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+     <h4>Example functions</h4>
+                <pre class="language-js" tabindex="0"><code class="language-js">
+"use strict";
+// generic random number generator
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+// calls the function random()
+// returns the randomly picked member from array names
+function chooseItem(array, len) {
+  return array[random(0, len)];
+}
+
+const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+const numbers = [ 343, 333, 234, 1001, 23413, 234234, 1, 34, 534, 98 ];
+
+function displayChoice(arr) {
+  let h3 = document.createElement('h3');
+  h3.textContent = chooseItem(arr, arr.length);
+  const section = document.querySelector('section');
+  //section.innerHTML = "";  // removes existing sub-structure
+  section.appendChild(h3);
+  console.log(section.innerHTML);
+}
+
+document.getElementsByTagName("body")[0].onclick = function () { displayChoice(numbers); };
+document.getElementsByTagName("body")[0].onclick = function () { displayChoice(names); };
+</code></pre>    
+        <div id="snippet"></div>
+    </li>
+</ul> 
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+"use strict";
+// generic random number generator
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+// calls the function random()
+// returns the randomly picked member from array names
+function chooseItem(array, len) {
+  return array[random(0, len)];
+}
+
+const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+const numbers = [ 343, 333, 234, 1001, 23413, 234234, 1, 34, 534, 98 ];
+
+function displayChoice(arr) {
+//  const names =
+//    ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+  let h3 = document.createElement('h3');
+  h3.textContent = chooseItem(arr, arr.length);
+  const section = document.querySelector('section');
+  //section.innerHTML = "";  // removes existing sub-structure
+  section.appendChild(h3);
+  console.log(section.innerHTML);
+}
+
+document.getElementsByTagName("body")[0].onclick = function () { displayChoice(numbers); };
+document.getElementsByTagName("body")[0].onclick = function () { displayChoice(names); };
+</script>
+</body>
+</html>

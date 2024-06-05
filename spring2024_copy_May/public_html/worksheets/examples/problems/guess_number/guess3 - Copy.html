@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess Number 2</title>
+	<meta charset="utf-8">
+<!-- 
+Author: Ellen Bajcar
+Date: Winter 2018
+Version: 1.0
+Purpose: learning Javascript programming
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+	Web app that generates a random number between 1 and 10 (inclusive)
+	and prompts the user to guess what the number is. The user's guess is
+	compared to the random number and advises the user whether the guess is too
+	low, too high, and there is a match.  The game ends when the user guesses the
+	number.
+-->	
+</head>
+<body>
+    <header><h1>Example</h1></header>
+	<main>
+		<!-- Prompt the user to guess a number between 1 and 10 -->
+		<label>Guess a magic number between 1 and 10</label>
+		<!-- capture and process user input on the click event -->
+		<input type="number" id="guess" value="0" min="1" max="10">
+		<p id="ans"></p>	
+		<button id="reset">New Game</button>
+	</main>
+	<footer><address>SYST10199 Web Programming @ Sheridan College</address></footer>
+<script>
+// Generate a random number to be guessed
+var y = Math.floor((Math.random() * 10) + 1);
+console.log(y);
+var x = 0;
+function testCom
+// Prompt the user to guess a number between 1 and 10
+/*
+	When the user chooses a number in the input element id=guess
+	and clicks the element, the number is captured and processed.
+	The response is displayed in the paragraph element id=ans.
+	Need a handles for the ELEMENT OBJECTS (part of DOM).
+*/
+
+
+guess.onclick = function() {
+	x = parseInt(guess.value);
+	
+	
+	
+	
+	// Determine whether the guess is the same as the number
+	// if yes, let the user know
+	// if no, determine if 
+	//        guess is higher than number, let user know
+	//        guess is lower than number, let user know	
+	if ( x == y ) {
+		ans.innerText = "Yes, the number is " + y;
+		//TODO: put in a delay to see the result.
+		//current solution is to move the reset to a button
+		//TODO: (NEW) disable to button during game and enable when number matches??
+	}
+	else if ( x < y ) 
+		ans.innerText = "Your guess is too low";
+	else 
+		ans.innerText = "Your guess is too high";
+}
+
+var reset = document.getElementById("reset");
+console.log(reset);
+reset.onclick = function() {
+	location.reload(); // reload page to start new game
+}
+</script>
+</body>
+</html>

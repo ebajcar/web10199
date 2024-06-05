@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Sliding Puzzle</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+Author: Ellen Bajcar
+Program: bingo.html
+Date: Summer 2016
+Date Updated: 
+Version: 20.0 
+Purpose: learning Javascript programming
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+		A two-player game. 
+		The players are presented with a board of three-by-three table and a reset button.
+		The reset button starts a game where players take turns selecting one of the nine
+		available empty cells with the goal of completing a row, a column, or a diagonal to
+		win the game.
+		A message specifying which player's turn is presented during the same.
+		When a winning state occurs, a message is presented that the game is over.	
+		font-family: 'Baloo', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Russo One', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Chewy', cursive;
+font-family: 'Modak', cursive;
+font-family: 'Rock Salt', cursive;
+font-family: 'Fredoka One', cursive;
+font-family: 'Baloo', cursive;
+-->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Akronim|Asap+Condensed|Barrio|Frijole|Luckiest+Guy|Princess+Sofia');
+:root {
+	--bgwhite: #fff;	
+	--fontcolor: #093D6D;
+    --sherblue: #093D6D;
+    --sherteal: #1AC6D9;
+    --sherorange: #00CCCC;;
+	--fontfam: 'Luckiest Guy', cursive;
+	--fontbody: 'Asap Condensed', sans-serif;
+	--fonttitle: 'Akronim', cursive;
+	--gap-sm: 2px;
+	--gap-md: 10px;
+	--gap-lg: 25px;
+}
+body {
+	background: #e0e0e0;
+    font-family: 'Kaushan Script', cursive;
+    margin: 0 auto;
+    text-align: center;
+}
+main {
+	width: 100%;
+	margin: auto;
+	padding-top: 4px;
+	background-color: white;
+	min-height: 360px;
+	display: flex;
+	justify-content: center;	
+}
+main > div {
+  margin: 5px;
+  padding: 5px;
+}
+header h1, dialog h2 {
+	color: #6f6f6f;   
+	text-shadow: 1px 1px cyan;
+    font-size: 60px;
+    font-weight: 400;
+	margin: 16px 0 0;
+    text-align: center;
+}
+dialog h2 {
+	font-size: 40px;
+}
+footer {
+	margin: auto;
+	padding-top: 2px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+button {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #ddd;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+  width: 100%;
+  box-shadow: 1px 1px 3px gray;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+/* 
+ *	dialog (help)
+ *
+ */
+dialog {
+	position: fixed;
+	top: 50%;
+	transform: translate(0, -50%);
+	background: #e0e0e0;
+	padding: 3px;
+	border: 1px solid gray;
+	box-sizing: border-box;
+	width: 50%;
+}
+dialog h2 {
+	font-size: 40px;
+}
+dialog section {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	text-align: left;
+	padding: 3px;
+	box-sizing: border-box;
+	height: 300px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+dialog p, dialog ul {
+	font-family: var(--fontbody);
+}
+
+/* navigation */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav a, nav span {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover, nav span:hover {
+    background: #c2c2c2;
+    color: #818181;
+    cursor: pointer;
+}
+/* 
+ *	main grid 
+ *
+ */
+.grid-container {
+	display: grid;
+	grid-template-columns: auto 140px;
+	grid-gap: var(--gap-sm);
+	min-height: 340px;
+	width: 600px;
+	padding: 1px;
+	font-family: var(--fontbody);
+}
+.grid-item {
+	/*background-color: var(--body-bg-color);*/
+    border: 1px dotted lightgray;
+	padding: 0;
+	margin: 0;
+	max-height:340px;
+	text-align: center;
+}
+.grid-item p {
+  font-family: var(--fontbody);
+}
+
+
+.picture {
+	border: 1px solid cyan;
+}
+canvas {
+	border: 2px solid cyan;
+	box-shadow: 2px 2px 5px white;
+}
+.pick, #slider, footer {
+	margin-top: 25px;
+}
+
+p {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+table {
+	margin: auto;
+} 
+.inner {
+	margin: 1px;
+	padding: 1px;
+}
+.inner td {
+	border: 1px solid blue;
+	height: 28px;
+	width: 28px;
+	font-size: 1.4em;
+}   
+tr:first-child td {
+	border-top: none;
+}
+tr:nth-child(3) td {
+	border-bottom: none;
+}
+td:first-child {
+	border-left: none;
+}
+td:last-child {
+	border-right: none;
+}
+.top-win {
+	width: 100%; 
+	height:100%; 
+	display: block;
+	background: lightblue; 
+	border: 1px dotted blue;
+	position: absolute; 
+	opacity: 0.3;
+	font-size: 5em;
+	font-family: 'Fredoka One', cursive;
+	top:0; 
+	left:0; 
+	z-index: 100;
+}
+.top-win:hover {
+	visibility: hidden;
+}
+td {
+	position:relative;
+}
+</style>
+</head>
+<body>
+	<header>
+		<h1>Ultimate Tic Tac Toe</h1>
+	</header>
+ 	<nav>
+		<a href="#">Home</a>
+        <span id="reset">New Game</span>
+        <span id="help" >Help</span>
+	</nav>   
+    <main>
+      <div class="grid-container">
+        <div class="grid-item">	
+	<table id="outer">
+		<tr>
+			<td>
+				<div class="top-win">
+					X
+				</div>
+				<table class="inner">
+					<tr>
+						<td>X</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>X</td>
+						<td>O</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>O</td>
+						<td>X</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table class="inner">
+					<tr>
+						<td>X</td>
+						<td>O</td>
+						<td>O</td>
+					</tr>
+					<tr>
+						<td>X</td>
+						<td></td>
+						<td>O</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>O</td>
+						<td>X</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table class="inner">
+					<tr>
+						<td>X</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>O</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="inner">
+					<tr>
+						<td></td>
+						<td></td>
+						<td>O</td>
+					</tr>
+					<tr>
+						<td>X</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>O</td>
+						<td>X</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<div class="top-win">
+					O
+				</div>
+				<table class="inner">
+					<tr>
+						<td>O</td>
+						<td>O</td>
+						<td>O</td>
+					</tr>
+					<tr>
+						<td>X</td>
+						<td>X</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>X</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table class="inner">
+					<tr>
+						<td></td>
+						<td></td>
+						<td>O</td>
+					</tr>
+					<tr>
+						<td>X</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>O</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="inner">
+					<tr>
+						<td></td>
+						<td></td>
+						<td>O</td>
+					</tr>
+					<tr>
+						<td>X</td>
+						<td></td>
+						<td>O</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td>X</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table class="inner">
+					<tr>
+						<td>X</td>
+						<td>O</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>X</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>O</td>
+						<td>X</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<div class="top-win">
+					X
+				</div>
+				<table class="inner">
+					<tr>
+						<td>X</td>
+						<td></td>
+						<td>O</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>X</td>
+						<td>O</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>O</td>
+						<td>X</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table><!-- outer -->
+	</div>
+	<div class="grid-item">	
+	<p> Player <span id="player">X</span> go!</p>
+          </div>
+      </div> 
+    </main>
+	<footer><address>SYST10199 Web Programming &copy; Sheridan College</address></footer>	
+<script>
+/*
+    Tic Tac Toe Game functionality
+*/
+// set up all variable and data structures
+var player = "X"; // current player
+var boards = document.getElementsByClassName("inner");
+var board = boards[0].getElementsByTagName("td"); //array (collection) of 9 objects
+var winSets = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]; //all winning combinations, 3 rows, 3 columns, 2 diagonals
+var empty = 9; // number of available (empty) cells
+var gameover = true;  // game not in session (false if in process)
+/* 
+	function checkWin() is called to check all winning combinations
+	TODO: if one of them is found true, 
+*/	
+function checkWin() {
+	// TODO: check if there are any remaining empty cells
+	// TODO: if no empty cells, display game over
+    for (var i = 0; i < winSets.length; i++) {
+        if ( board[winSets[i][0]].innerHTML == board[winSets[i][1]].innerHTML &&
+             board[winSets[i][1]].innerHTML == board[winSets[i][2]].innerHTML &&
+              board[winSets[i][0]].innerHTML != "" ) {
+            console.log("we've got a winner");
+			// TODO: highlight the winning combo on screen
+			// TODO: display the end of the game message - game over
+        }
+    }
+}
+/*
+		Function cellClick() is called 
+			when the event listeners for the "td" cells fire which occurs
+			when the user clicks on one of the nine cells of the board
+		1. sets the content of the clicked cell to the current player's mark
+		2. checks whether or not there is a winner
+		3. flips (changes) the current player
+		4. updates the message tot he current player
+		TODO: 1-4 should occur only when the selected cell is empty !!	
+*/
+function cellClick(cell) {
+    console.log("Yes we are here!" + cell.innerHTML);    
+    cell.innerHTML = player; // place the user character
+    checkWin(); // check if there is a winning combination
+    ( player == "X" ) ? player = "O" : player = "X";
+    document.getElementById("player").innerHTML = player;
+}
+/*
+	function gameReset() is called when user clicks on the "game reset" button
+	1. sets content of all 9 cells to nothing
+	2. sets the starting player (this version, X always starts the game)
+	3. updates the message to the current player
+	4. resets the number of empty cells to 9
+	5. sets the game over flag to false to indicate that the game is in progress
+*/
+function gameReset() {    
+    for (var i=0; i < board.length; i++) 
+        board[i].innerHTML = "";
+    player = "X";
+    document.getElementById("player").innerHTML = "X";
+    empty = 9;
+    gameover = false;
+	document.getElementsByClassName("top-win")
+}
+/*
+	Set up event listeners
+	1. when user clicks on the reset button (id="reset")
+	2. when user clicks on the the 9 cells of the board
+*/
+document.getElementById("reset").addEventListener("click", gameReset);
+for (var i=0; i < board.length; i++) 
+    board[i].addEventListener("click", function(){cellClick(this);});
+/*
+	Further enhancements
+	- change the background of the last cell played to indicate what was the last move (TODO: in class 3)
+	- display and style overlays with messages (TODO: in class 3)
+	- create the board (table) with Javascript (TODO: in class 3)
+	- load and initialize entire game on "DOMContentLoaded" event (TODO: in class 3)
+	- make the starting player random
+	- keep track of statistics (how many times X wins )
+	- display who is the winner
+*/	
+</script>    
+</body>
+</html>
+
+
+
+
+
+
+
+

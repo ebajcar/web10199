@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet One Problems</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }
+        .big-value {
+          font-size: 4em;
+          font-weight: normal;
+          text-align: right;
+          text-shadow: 2px 2px 2px gray;
+          padding-bottom: 20px;
+        }
+        /*
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+        
+        */
+        input:invalid + span::after {
+          content: "✖";
+          padding-left: 5px;
+          color: lightgray;
+        }
+
+        input:valid + span::after {
+          content: "✓";
+          padding-left: 5px;
+          color: gray;
+        }
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet One</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="index.html" class="current">Problems</a>
+            <a href="../problems/index.html">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Version 6  - <small>Temperature Conversion</small></h2>
+     <nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Problems</a></li>
+            <li><a href="increment-problem.html">Problem statement</a></li>
+            <li><a href="#">convert-temperature-v06.html</a></li>
+        </ol>
+    </nav>       
+        
+        <h3>Enter either value to calculate the other.</h3>
+        <ul role="list" class="f-switch dense">
+            <li class="box">
+            <!-- Accessibility
+                https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+                 <input type="text" inputmode="numeric" pattern="[0-9]*" id="fdegree">
+                 //let celsius = parseInt(cdegree.value);
+                 //let fahrenheit = parseInt(fdegree.value);
+                 
+                See additional validation styling   
+            -->
+                <h2><label>Fahrenheit <input type="number" id="fdegree" pattern="[0-9]+.?[0-9]+" value="0"><span></span></label></h2>
+                <hr>
+                <p class="big-value"><span id="fahren">-</span>&deg;F</p>
+            </li>          
+            <li class="box">
+                <h2><label>Celsius <input type="number" id="cdegree"><span></span></label></h2>
+                <hr>
+                <p class="big-value"><span id="cels">-</span>&deg;C</p>
+            </li>
+        </ul>
+    
+		
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+/*
+  PROBLEM: 
+  
+  SOLUTION: 
+  1. Get (pick) a number 
+  2. define a function that 
+  3. Call the function
+  4. display the result in the console.
+*/
+
+// set handles for input and output elements
+const fdegree = document.querySelector("#fdegree");
+const cdegree = document.querySelector("#cdegree");
+const cels = document.querySelector("#cels");
+const fahren = document.querySelector("#fahren");
+
+// declare and initialize value in Fahrenheit
+// capture user guess as a number
+// compare user guess to number-to-guess
+// how to clear an input number when a button is clicked https://stackoverflow.com/questions/72993484/how-to-clear-an-input-of-type-number-when-a-button-is-clicked#:~:text=For%20example%3A%20const%20clearBtn%20%3D%20document.querySelector%20%28%22%23clearBtn%22%29%3B%20clearBtn.addEventListener,%22%22%3B%20%7D%29%3B%20%3Cinput%20type%3D%22number%22%20id%3D%22total%22%20%2F%3E%20%3Cbutton%20id%3D%22clearBtn%22%3EReset%3C%2Fbutton%3E 
+fdegree.addEventListener("change", function() {
+    cdegree.value = "";
+    let fahrenheit = fdegree.valueAsNumber; 
+        console.log(typeof(fahrenheit));
+    let celsius = convertToCelsius(fahrenheit);  
+
+    cels.innerText = celsius.toFixed(1);
+    fahren.innerText = fahrenheit.toFixed(1);
+});
+
+// capture user guess as a number
+// compare user guess to number-to-guess
+cdegree.addEventListener("change", function() {
+    fdegree.value = "";
+    let celsius = cdegree.valueAsNumber;  
+    let fahrenheit = convertToFahrenheit(celsius); 
+    let cleanFahrenheit = sanitize(fahrenheit);
+    console.log(typeof(cleanFahrenheit));
+    cels.innerText = celsius.toFixed(1);
+    fahren.innerText = fahrenheit.toFixed(1);
+});
+
+// look up the formula
+// T(°C) = (T(°F) - 32) × 5/9
+// &#xB0; &deg; ° degree sign
+function convertToCelsius(fahrenheit) {
+	return (fahrenheit - 32) * 5 / 9;
+}
+function convertToFahrenheit(celsius) {
+	return (celsius * 9 / 5) + 32;
+}
+// check whether values are numeric
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN
+function sanitize(x) {
+  if (isNaN(x)) {
+    return Number.NaN;
+  }
+  return x;
+}
+</script>
+</body>
+</html>

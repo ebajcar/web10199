@@ -2,11 +2,20 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
+    <title>Our superheroes</title>
 
+    <!-- 
+      See "Working with JSON" at https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+    -->
     <title>Our superheroes</title>
 
     <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    
+    <!--
     <link rel="stylesheet" href="style.css">
+    https://github.com/mdn/learning-area/blob/main/javascript/oojs/json/style.css
+    Copied here as internal CSS.
+    -->
     <style>
 /* || general styles */
 
@@ -70,7 +79,7 @@ h2 {
       </section>
 
     <script>
-
+    "use strict";
     async function populate() {
 
       const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
@@ -92,7 +101,7 @@ h2 {
       header.appendChild(myH1);
 
       const myPara = document.createElement('p');
-      myPara.textContent = `Hometown: ${obj.homeTown} // Formed: ${obj.formed}`;
+      myPara.textContent = `Hometown: ${obj.homeTown}`; // Formed: ${obj.formed}
       header.appendChild(myPara);
     }
 
@@ -129,9 +138,7 @@ h2 {
         section.appendChild(myArticle);
       }
     }
-
     populate();
-
     </script>
   </body>
 </html>

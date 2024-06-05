@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Casino Craps v.4.00</title>
+	<meta charset="utf-8">
+<!--
+	Author: Ellen Bajcar
+	Program: funcCraps_v3.html
+	Date: Summer 2016 
+	Date Updated: March 2018
+	Version: 3.05
+	Purpose: learning Javascript programming (SYST10199)
+	Copyright: This work is the intellectual property of Sheridan College. 
+		Any further copying and distribution outside of class must be within 
+		the copyright law. Posting to commercial sites for profit is prohibited.
+	Description:
+		Casino Craps v.3.05
+		functional version
+-->	
+<style>
+* { 
+	box-sizing: border-box; 
+}
+body {
+    background-size: cover;
+    font-family: sans-serif;
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: center;
+	background:#efefef;
+}
+h1,h3 {
+    font-size: 2.5em;
+    margin: .5em 0;
+	color: #093D6D;
+}
+footer {
+    color: gray;
+    margin-top: 1%;
+	font-size: 0.7em;
+}
+h4 {
+	margin-bottom: 0;
+	padding-bottom: 2px;
+}
+button {
+	color: tomato;
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid tomato;
+	font-size: 18px;
+	outline: 0 solid white;
+	width: 100%;
+	cursor: pointer;
+}
+table {
+    margin: 0 auto;
+	background-color: whitesmoke;
+	width: 420px;
+	text-align: center;	
+	box-shadow: 1px 1px 1px silver, 3px 3px 6px white;
+}
+td {
+	min-height: 100px;
+	background-color: transparent;
+	text-align: center;
+}
+tr:first-child td {
+	padding-top: 10px;
+}
+tr:first-child > td:last-child {
+    width: 150px;
+	text-align: right;
+	padding-right: 10px;
+}
+var {
+	font-size: 4.5rem;
+}
+p {
+	margin: 0;
+	font-size: 0.8rem;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    width:100%;
+	text-align:center;
+}
+.show {
+	min-width: 280px;
+}
+.die {
+  height:100px;
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background: tomato;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #ebebeb;
+  border-right-width: 2px;
+  border-left-width: 2px;
+  border-bottom: 3px solid #ccc;
+}
+
+.die > span {
+  height: 15px;
+  width: 15px;
+  background: #222;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.die .a { top:15px;left:15px; }
+.die .b { top:15px;right: 15px; }
+.die .c { left: 15px;top: 40px; }
+.die .d { top: 40px;left:42px; }
+.die .e { top: 40px;right: 15px; }
+.die .f { bottom: 15px;left: 15px; }
+.die .g { bottom: 15px;right: 15px; }
+.die > span { opacity: 0; }
+
+#bravo {
+	float:right
+}
+</style>	
+</head>
+<body>
+	<header>
+		<h1>Casino Craps</h1>
+	</header>
+	<main>
+		<table>
+			<tr>
+				<td colspan="2">
+						<div class="wrapper">
+						  <div id="alpha" class="die">
+							<span class="a two three four five six"></span>
+							<span class="b four five six"></span>
+							<span class="c six"></span>
+							<span class="d one three five"></span>
+							<span class="e six"></span>
+							<span class="f four five six"></span>
+							<span class="g two three four five six"></span>
+						  </div>
+						  <div id="bravo" class="die">
+							<span class="a two three four five six"></span>
+							<span class="b four five six"></span>
+							<span class="c six"></span>
+							<span class="d one three five"></span>
+							<span class="e six"></span>
+							<span class="f four five six"></span>
+							<span class="g two three four five six"></span>
+						  </div>
+						</div>
+				</td>
+				<td><small>&hellip;you rolled</small><br><var id="total">&nbsp;</var></td>
+			</tr>
+
+			<tr>
+				<td>
+					<h4>Statistics</h4> 
+					<p>Wins: <span id="wins">0</span></p> 
+					<p>Losses: <span id="losses">0</span></p>
+				</td>
+				<td  class="show" colspan="2">
+					<p id="show">To start a game, roll the dice!</p>
+				</td>			
+			</tr>
+			<tr>
+				<td><button id="clear">Clear</button></td>
+				<td colspan="2"><button id="roll">Roll the dice!</button></td>			
+			</tr>			
+		</table>			
+	</main>	
+	<footer>
+		<address>SYST10199 Web Programming &copy; Sheridan College</address>
+	</footer>
+
+<script>
+/*
+-----------------------------
+| Game 						|
+-----------------------------
+| - dice 					|
+| - total					|
+| - point					|
+| + wins 					|
+| + losses					|
+-----------------------------
+| roll(dice) 				|
+| clear() 					|
+| rollBoth()				|
+| display(msg, where, what) |
+-----------------------------
+*/
+var dice = [null, "one", "two", "three", "four", "five", "six"];
+var rollButton = document.getElementById("roll");
+var outcome = document.getElementById("total");
+var show = document.getElementById("show");
+var showWins = document.getElementById("wins");
+var showLosses = document.getElementById("losses");
+var alpha = document.getElementById("alpha");
+var bravo = document.getElementById("bravo");
+var point = 0;
+var wins = 0; 
+var losses = 0;
+var message = {
+	natural : "That's a natural. You win!",
+	craps 	: "That's craps. You lose!",
+	point 	: "You made your point. You win!",
+	seven 	: "That's a seven. You lose!",
+	};
+	
+rollButton.onclick = rollBoth;
+document.getElementById("clear").onclick = clear;	
+	
+
+
+function clear() { 
+	point = 0;
+	wins = 0;
+	losses = 0;
+	show.innerHTML = "To start a game, roll the dice!<br>";
+	showWins.innerHTML = wins;
+	showLosses.innerHTML = losses;
+	alpha.innerHTML = "";
+	bravo.innerHTML = "";
+	outcome.innerHTML = "";
+}
+
+function rollBoth() {
+	var sum = roll(alpha) + roll(bravo);
+	outcome.innerHTML = sum;
+	display(determineOutcome(sum)) ;
+}
+
+function roll(currDice){
+  var random = Math.floor((Math.random() * 6) + 1);
+  //currDice.innerHTML = random;
+  displayRolledDice(currDice, random);
+  return random;
+}
+
+function displayRolledDice(thisDie, random) {
+  var clearMe = thisDie.getElementsByTagName("span");
+  var newDie = thisDie.getElementsByClassName(dice[random]); 
+  for (var i = 0; i < clearMe.length; i++) 
+		clearMe[i].style.opacity = "0"; 
+  for (var i = 0; i < newDie.length; i++) 
+		newDie[i].style.opacity = "1";
+}
+
+function determineOutcome(sum) {
+	if ( point == 0 ) {
+		if (sum == 7 || sum == 11) {
+			return "natural";
+		} else if (sum == 2 || sum == 3 || sum == 12) {
+			return "craps";
+		} else {
+		  point = sum; return point;
+		}
+	} else {
+        if (sum == point) {
+			point = 0; return "point";
+        } else if (sum == 7) {		
+			point = 0; return "seven";
+        } 
+	}
+}
+
+function display(msg) {
+	switch(msg) {
+		case "point":
+		case "natural":
+			show.innerHTML = message[msg];
+			showWins.innerHTML = ++wins;	
+			rollButton.innerText = "NEW GAME! Roll the dice!";		
+			break;
+		case "craps":
+		case "seven":
+			show.innerHTML = message[msg];
+			showLosses.innerHTML = ++losses;	
+			rollButton.innerText = "NEW GAME! Roll the dice!";	
+			break;			
+		default:
+			show.innerHTML = "Your point is " + point + ".";
+			rollButton.innerText = "Roll the dice!";	
+	}
+}
+
+</script>
+</body>
+</html>

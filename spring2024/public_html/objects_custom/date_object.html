@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Date object example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: February 8, 2024
+Version: 24.0
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Explore and practice unobtrusive Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+    class example
+-->
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+} 
+div p {
+  margin: 0;
+  padding: 0;
+}   
+
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Objects (built-ins, custom, DOM)</sub-title></h1>
+    </header>
+
+    <main>
+        <h2>Date object  - <small>date range</small></h2>
+        <!-- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date -->
+        <dl>
+          <dt>Date <small>standard built-in object</small> &mdash; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">MDN docs</a> and <a href="https://javascript.info/date" target="_blank">Javascript.info</a></dt>
+          <dd>You can interact with the timestamp value directly using the getTime() and setTime() methods.</dd>
+          <dd>All static methods (Date.now(), Date.parse(), and Date.UTC()) return timestamps instead of Date objects.</dd>
+          <dd>The Date() constructor can be called with a timestamp as the only argument.</dd>
+          <dd>A date is represented internally as a single number, the timestamp.</dd>
+        </dl>
+        
+
+<ul role="list" class="f-switch dense">
+    <li class="box"> 
+        <h4>Output</h4>
+        <p>Today is <span id="today"></span></p>
+<p>It's only <span class="daysTill" id="readweek"></span> days until reading week.</p>
+		<p>It's only <span class="daysTill" id="endterm"></span> days till the end of semester.</p>  
+    </li>    
+</ul>
+
+        <pre class="language-js" tabindex="0"><code class="language-html">&lt;script>
+"use strict";
+const all_tags = document.getElementsByTagName("*");
+
+function showDays() {
+    let allTags = document.getElementsByTagName("*");
+    let len = allTags.length;
+    for (let i=0;i &lt; len; i++) {
+        if (allTags[i].className.indexOf("daysTill") > -1) {
+            //console.log("className.indexOf " + showTheDaysTill(allTags[i].id));
+            allTags[i].innerText = showTheDaysTill(allTags[i].id);
+            //console.log("allTags " + allTags[i].className);
+        }
+    }
+}  
+  
+function showTheDaysTill(thisDate) {
+    let theDays;
+    switch(thisDate) {
+        case "readweek":
+            theDays = daysTill(6,21);
+            break;
+        case "endterm":
+            theDays = daysTill(8,23);
+            break;					
+        default:
+    }
+    return theDays + " ";
+}
+
+function daysTill(mm,dd) {
+    let now = new Date();
+    let inDate = new Date(now.getFullYear(), mm-1,dd);
+    if (inDate.getTime() &lt; now.getTime()) {
+        inDate.setYear(now.getFullYear()+1);
+    }
+    return (Math.ceil(dayToDays(inDate) - dayToDays(now)));
+}
+
+function dayToDays(inTime) {
+    return (inTime.getTime() / (1000 * 60 * 60 * 24));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    showDays();
+    today.innerText = new Date();
+    today.innerHTML += "&lt;br>Output of Date.now() - timestamp: " + Date.now();
+});
+&lt;/script></code></pre>		
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+"use strict";
+const all_tags = document.getElementsByTagName("*");
+
+function showDays() {
+    let allTags = document.getElementsByTagName("*");
+    let len = allTags.length;
+    for (let i=0;i < len; i++) {
+        if (allTags[i].className.indexOf("daysTill") > -1) {
+            console.log("className.indexOf " + showTheDaysTill(allTags[i].id) + " " + allTags[i].className);
+            allTags[i].innerText = showTheDaysTill(allTags[i].id);
+        }
+    }
+}    
+function showTheDaysTill(thisDate) {
+    let theDays;
+    switch(thisDate) {
+        case "readweek":
+            theDays = daysTill(6,21);
+            break;
+        case "endterm":
+            theDays = daysTill(8,23);
+            break;					
+        default:
+    }
+    return theDays + " ";
+}
+
+function daysTill(mm,dd) {
+    let now = new Date();
+    let inDate = new Date(now.getFullYear(), mm-1,dd);
+    if (inDate.getTime() < now.getTime()) {
+        //console.log("inDate.getTime " + inDate.getTime());
+        //console.log("now.getTime " + now.getTime());
+        inDate.setYear(now.getFullYear()+1);
+    }
+    return (Math.ceil(dayToDays(inDate) - dayToDays(now)));
+}
+
+function dayToDays(inTime) {
+    return (inTime.getTime() / (1000 * 60 * 60 * 24));
+}
+
+//document.addEventListener("DOMContentLoaded", showDays);
+document.addEventListener("DOMContentLoaded", () => {
+    showDays();
+    today.innerText = new Date();
+    today.innerHTML += "<br>Output of Date.now() - timestamp: " + Date.now();
+});
+</script>
+</body>
+</html>

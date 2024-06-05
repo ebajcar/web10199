@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>htmlForms - Example10_021</title>   
+<!--
+Author:       Ellen Bajcar
+Program:      index0.css
+Date:         May 10, 2024
+Updated:      
+Version:      0.38
+Purpose:      create a styled web app/site
+Copyright:    
+    The materials provided in class and through SLATE are protected by copyright. They are intended 
+    for the personal, educational uses of students in this course and should not be shared externally 
+    or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright 
+    infringement and violation of Sheridan policies.
+Citations:    
+    original source material can be found (subject to original author's copyrights):
+Description: 
+    Web app/site developed using Progressive Enhancement (PE) approach, 
+    core HTML5 and CSS 3/4 technologies; standard page layout, responsive design
+-->
+    <link rel="stylesheet" href="../css/main.css">
+<style>
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:  wrap;
+  justify-content: center;
+  width: 100%
+}
+/* https://codepen.io/murias/pen/maEQLo */
+
+
+input.radiobutton {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: absolute;
+  display: inline-block;
+  width: 164px;
+  height: 123px;
+  border-radius: 8px;
+  box-shadow: inset 164px 164px 0px 164px gainsboro;
+  outline: none;
+}
+input.radiobutton:checked {
+  box-shadow: inset 164px 164px 0px 164px #2196f3;
+}
+input.radiobutton:checked + label.radiobutton-label {
+  color: white;
+}
+input.radiobutton:checked + label.radiobutton-label:after {
+  content: "✓";
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 48px;
+  background-color: white;
+  color: #2196f3;
+  box-shadow: 0px 0px 0px 2px #2196f3;
+  z-index: 999;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
+
+label.radiobutton-label {
+  width: 164px;
+  height: 123px;
+  position: relative;
+  font-size: 23.625px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  color: #2196f3;
+  text-align: center;
+  font-size: 1.6rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+label.radiobutton-label span {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+</style>
+</head>
+<body>
+	<header>
+        <h1>Styling Form Elements</h1>
+    </header>
+    <nav>
+        <a href="../index.html" class="current">Home</a>
+        <a href="1.html" title="1. Sample form with various input types">Sample</a>
+        <a href="2.html" title="2. Styling select, option, and optgroup">Select</a>
+        <a href="3.html" title="3. Styling fieldset and legend">Fieldset</a>
+        <a href="7.html" title="7. Styling range">Range</a>
+        <a href="10.html" title="10. Fieldset, legend, select, option">Provinces</a>
+        <a href="21.html">Labels</a>
+        <a href="2405.html">Radio</a>
+        <a href="2411.html">required</a>
+        <a href="2412.html">pseudo</a>
+    </nav>
+        
+    <main>
+        <h2>Radio and checkbox elements</h2> 
+
+        <hr>
+      <form>
+        <p>
+          <input checked class="radiobutton" type="radio" name="products" id="radio3" value="1">
+          <label class="radiobutton-label" for="radio3">Cherry<span>Small sweet fruit, picked from cherry trees.</span></label>
+        </p>
+        <p>
+          <input class="radiobutton" type="radio" name="products" id="radio4" value="2">
+          <label class="radiobutton-label" for="radio4">Banana<span>Category: fruit</span></label>
+        </p>
+        <p>
+          <input class="radiobutton" type="radio" name="products" id="radio5" value="3">
+          <label class="radiobutton-label" for="radio5">Tomato<span>Category: fruit</span></label>
+        </p>
+        <p>
+          <input class="radiobutton" type="radio" name="products" id="radio6" value="3">
+          <label class="radiobutton-label" for="radio6">Radish<span>Category: vegetable</span></label>
+        </p>
+        <p>
+          <input class="radiobutton" type="radio" name="products" id="radio7" value="3">
+          <label class="radiobutton-label" for="radio7">Cucumber<span>Category: vegetable</span></label>
+        </p>
+        <p>
+          <input class="radiobutton" type="radio" name="products" id="radio8" value="3">
+          <label class="radiobutton-label" for="radio8">Kiwi<span>Category: fruit</span></label>
+        </p>      
+        <p>
+          <input class="radiobutton" type="checkbox" name="products" id="radio9" value="3">
+          <label class="radiobutton-label" for="radio9">Pepper<span>Category: vegetable</span></label>
+        </p>  
+        <p>
+          <input class="radiobutton" type="checkbox" name="products" id="radio0" value="3">
+          <label class="radiobutton-label" for="radio0">Avocado<span>Category: fruit</span></label>
+        </p>          
+      </form>
+        <pre><code>
+
+        </code></pre>
+    </main>
+
+    <footer>
+        <address>Web Development &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+</body>
+</html> 
+
+
+
+
+

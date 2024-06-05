@@ -1,0 +1,178 @@
+/*
+  external styling sheet for
+  Assignment 2, Web Development (SYST10049)
+  Sheridan College, Winter 2021
+  
+  DO NOT MAKE ANY CHANGES TO THIS FILE
+*/
+
+
+/* || General setup */
+
+html, body, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  background-color: #a9a9a9;
+}
+
+body {
+  width: 50%;
+  min-width: 800px;
+  margin: 0 auto;
+}
+
+/* || typography */
+
+h1, h2, h3 {
+  font-family: 'Cinzel Decorative', cursive;
+  color: #2a2a2a;
+}
+
+p, input, a, h4, h5, h6, legend, dl {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #2a2a2a;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 2px 2px 10px black;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+p, li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* || header layout */
+
+header {
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+body > * {
+  background-color: red;
+  padding: 1%;
+}
+
+main, header, nav, article, aside, footer, section {
+  background-color: rgba(0,255,0,0.5);
+  padding: 1%;
+}
+legend, dl {
+  font-size: 1.5em;
+}
+dt {
+  font-weight: bold;
+  border-top: 2px dashed gray;
+  margin-top: 15px;
+}
+h1 {
+  flex: 5;
+  text-transform: uppercase;
+}
+
+header img {
+  display: block;
+  height: 60px;
+  padding-top: 20.15px;
+}
+
+nav {
+  height: 50px;
+  flex: 100%;
+  display: flex;
+  justify-content:space-evenly; 
+  align-items: baseline;
+}
+
+/* || main navigation */
+
+nav a {
+  display: block;
+  font-size: 2rem;
+  line-height: 2.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+.active {
+  font-weight: bold;
+}
+/* || main layout */
+
+main {
+  display: flex;
+}
+
+article {
+  flex: 4;
+}
+
+aside {
+  flex: 1;
+  margin-left: 10px;
+  padding: 1%;
+}
+
+aside a {
+  display: block;
+  float: left;
+  width: 50%;
+}
+
+aside img {
+  max-width: 100%;
+}
+
+/* || footer layout */
+
+footer {
+  margin-top: 10px;
+}
+footer address {
+  font-size: 2em;
+  text-align: center;
+}
+footer p{
+  text-align: center;
+  margin: 0;
+}
+
+/* || form layout */
+
+label {
+  display: inline-block;
+  width: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 5px;
+  font-size: 1.5em;
+}
+
+input {
+  min-width: 25%;
+}
+textarea {
+  width: 100%;
+  min-height: 10em;
+}
+aside {
+   min-width: 25%;
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Elements</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">	
+    <link rel="stylesheet" href="../../css/missing-css.css">
+    <link rel="stylesheet" href="../../css/prism_coy_dev.css">
+    <script src="../../scripts/prism.js"></script>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/next-prev.css">
+	<style>
+	</style>
+</head>
+<body>
+
+<header class="navbar">
+    <nav>
+      <ul role="list">
+        <li><a href="index.html">Document Object Model (DOM)</a></li>
+        <li><a href="visual.html">Visual Representation</a></li>
+        <li><a aria-current="page" href="methods.html">Methods &amp; Properties</a></li>       
+        <li><a href="live_dom.html">Live DOM</a></li>
+        <li><a href="terminology.html">Terminology</a></li>
+      </ul>
+    </nav>            
+</header>         
+            
+                   
+                   
+<main>   
+    <div class="prev-next">
+        <!--   <p style="color:lightgray;">Prev</p>   -->
+        <p style="line-height: 1em;text-align:left;">
+            <a href="textual_italic_bold_underline.html">Prev</a>
+            <br><small>Previous topic</small>
+        </p>
+        <nav class="breadcrumbs" aria-label="Breadcrumbs">
+            <ol>
+                <li><a href="../index.html"  class="allcaps">Home</a></li>
+                <li><a href="index.html">Document Object Model (DOM)</a></li>
+                <li aria-current="page">Methods &amp; Properties</li>
+            </ol>               
+        </nav> 
+        <p style="line-height:1em;text-align:right;">
+            <a href="textual_quotations_citations.html">Next</a>
+            <br><small>Browser Object Model (BOM)</small>
+        </p>
+    </div>
+    
+    
+    <section id=#e01">   
+        <h2>DOM methods and properties</h2>
+<!-- 7.3.1. DOM methods and properties  -->
+<section>
+
+
+<table>
+    <caption>Document methods and properties</caption>
+    <thead>
+        <tr>
+            <th>method or property</th>
+            <th>description</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <th><code>document.addEventListener()</code></th>
+            <td>Attaches an event handler to the document</td>
+        </tr>
+
+        <tr>
+            <th><code>document.anchors</code></th>
+            <td>Returns a collection of all &lt;a> elements in the document that have a name attributer</td>
+        </tr>
+
+        <tr>
+            <th><code>document.body</code></th>
+            <td>Sets or returns the document's body (the &lt;body> element)</td>
+        </tr>
+
+        <tr>
+            <th><code>document.close()</code></th>
+            <td>Closes the output stream previously opened with document.open()</td>
+        </tr>
+
+        <tr>
+            <th><code>document.createElement()</code></th>
+            <td>Creates an Element node</td>
+        </tr>
+
+        <tr>
+            <th><code>document.createTextNode()</code></th>
+            <td>Creates a Text node</td>
+        </tr>
+
+        <tr>
+            <th><code>document.forms</code></th>
+            <td>Returns a collection of all &lt;form> elements in the document</td>
+        </tr>
+
+        <tr>
+            <th><code>document.getElementById()</code></th>
+            <td>Returns the element that has the ID attribute with the specified value</td>
+        </tr>
+
+        <tr>
+            <th><code>document.getElementsByClassName()</code></th>
+            <td>Returns a NodeList containing all elements with the specified class name</td>
+        </tr>
+
+        <tr>
+            <th><code>document.getElementsByName()</code></th>
+            <td>Returns a NodeList containing all elements with a specified name</td>
+        </tr>
+
+        <tr>
+            <th><code>document.getElementsByTagName()</code></th>
+            <td>Returns a NodeList containing all elements with the specified tag name</td>
+        </tr>
+
+        <tr>
+            <th><code>document.images</code></th>
+            <td>Returns a collection of all <img> elements in the document</td>
+        </tr>
+
+        <tr>
+            <th><code>document.links</code></th>
+            <td>Returns a collection of all &lt;a> and &lt;area> elements in the document that have a href attribute</td>
+        </tr>
+
+        <tr>
+            <th><code>document.open()</code></th>
+            <td>Opens an HTML output stream to collect output from document.write()</td>
+        </tr>
+
+        <tr>
+            <th><code>document.querySelector()</code></th>
+            <td>Returns the first element that matches a specified CSS selector(s) in the document</td>
+        </tr>
+
+        <tr>
+            <th><code>document.querySelectorAll()</code></th>
+            <td>Returns a static NodeList containing all elements that matches a specified CSS selector(s) in the document</td>
+        </tr>
+
+        <tr>
+            <th><code>document.readyState</code></th>
+            <td>Returns the (loading) status of the document</td>
+        </tr>
+
+        <tr>
+            <th><code>document.removeEventListener()</code></th>
+            <td>Removes an event handler from the document (that has been attached with the addEventListener() method)</td>
+        </tr>
+
+        <tr>
+            <th><code>document.title</code></th>
+            <td>Sets or returns the title of the document</td>
+        </tr>
+
+        <tr>
+            <th><code>document.write()</code></th>
+            <td>Writes HTML expressions or JavaScript code to a document</td>
+        </tr>
+    </tbody>
+</table>
+    
+    
+  
+    
+    <h3>Element properties</h3>
+    <p>nodeType, nodeName, nodeValue, innerHTML, childNodes, id, style, firstChild, nextSibling, nextElementSibling</p>	
+    
+   
+
+
+<table>
+<caption>Finding HTML Elements</caption>
+<tr>
+<th>Method</th>
+<th>Searches by...</th>
+<th>Any element?</th>
+<th>Live?</th>
+</tr>
+<tr>
+<th><code>querySelector</code></th>
+<td>CSS-selector</td>
+<td>✔</td>
+<td>-</td>
+</tr>
+<tr>
+<th><code>querySelectorAll</code></th>
+<td>CSS-selector</td>
+<td>✔</td>
+<td>-</td>
+</tr>
+<tr>
+<th><code>getElementById</code></th>
+<td><code>id</code></td>
+<td>a method of the global document object</td>
+<td>-</td>
+</tr>
+<tr>
+<th><code>getElementsByName</code></th>
+<td><code>name</code></td>
+<td>a method of the global document object</td>
+<td>✔</td>
+</tr>
+<tr>
+<th><code>getElementsByTagName</code></th>
+<td>tag or <code>'*'</code></td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+<tr>
+<th><code>getElementsByClassName</code></th>
+<td>class</td>
+<td>✔</td>
+<td>✔</td>
+</tr>
+</table>
+
+<pre class="language-js"><code>//returns one node
+document.getElementById("elementID")
+
+//returns array of nodes		
+document.getElementsByTagName("elementType")
+//reference to a specific node i	
+document.getElementsByTagName("elementType")[i]	
+
+//returns array of nodes that have name="value" attribute
+document.getElementsByName("value")	
+
+//returns an array of nodes (HTML5 only)	
+document.getElementsByClassName("className");</code></pre>	
+
+
+
+<!--
+byName
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_doc_getelementsbyname_loop
+
+
+byClassName
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_document_getelementsbyclassname_loop
+
+-->
+<hr>
+	<h6>Attribute <code>name="value"</code></h6>
+	<ul>
+		<li>The name attribute specifies a name for the element.</li>
+		<li>This name attribute can be used to reference the element in a JavaScript.</li>
+		<li>For form elements it is also used as a reference when the data is submitted,</li>
+		<li hidden>See example forLoop1.html below</li>
+	</ul>
+  <footer class="blockquote-footer">Explore further  <cite title="[ www.w3schools.com/tags/att_name.asp ]"><a href="https://www.w3schools.com/tags/att_name.asp" target="_blank"> www.w3schools.com/tags/att_name.asp</a></cite></footer> 
+<hr>
+
+
+  <h3>Modifying DOM structure</h3>
+<pre class="language-js"><code>// create a new element
+document.createElement("elementType")
+
+// create a new text node
+document.createTextNode("text here")
+
+// append a new element or text node
+parentElement.appendChild(node)
+
+// insert a new node
+parentElement.insertBefore(newElement, targetElement)
+parentElement.insertAfter(newElement, targetElement) // this is a jQuery method
+
+// remove an existing node
+parentElement.removeChild(elementToBeRemoved)</code></pre>	
+
+
+<h3>Accessing CSS</h3>
+<pre class="language-js"><code>document.getElementById("elementID").style.property = value;
+anyElement.style.property = value;</code></pre>		   	
+
+<!--
+https://www.w3schools.com/jsref/dom_obj_style.asp
+-->
+
+<h5>Modifying attributes</h5>
+<pre class="language-js"><code>myElement.getAttribute("attributeName")
+myElement.setAttribute("attributeName", "attributeValue")</code></pre>		  
+  
+  
+	<h3>Finding Elements using HTML DOM Collections</h3>
+	<ul>
+		<li><code>document.images</code> Returns a collection of all &lt;img> elements in the document</li>
+		<li><code>document.links</code> Returns a collection of all &lt;a> and &lt;area> elements in the document that have a href attribute</li>
+		<li><code>document.anchors</code> Returns a collection of all &lt;a> elements in the document that have a name attribute</li>
+	</ul>	
+  <footer class="blockquote-footer">Explore further  <cite title="[ www.w3schools.com/jsref/dom_obj_document ]"><a href="https://www.w3schools.com/jsref/dom_obj_document.asp" target="_blank"> www.w3schools.com/jsref/dom_obj_document</a></cite></footer>  
+  
+ 
+    
+    </section>
+</main>
+
+
+<footer>
+    <address><a href="http://bajcar.dev.fast.sheridanc.on.ca/">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+    <div style="margin: 0 0 10px 0">&mdash;</div>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Generate primes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: February 8, 2024
+Version: 24.0
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Explore and practice unobtrusive Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+    class example
+-->
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+}        
+
+.big-value {
+  font-size: 4em;
+  font-weight: normal;
+  text-align: left;
+  text-shadow: 2px 2px 2px gray;
+  padding-bottom: 20px;
+}
+
+
+button {
+    font-size: 1em;
+    height: 50px;
+    width: 200px;
+}
+
+input {
+  width: 405px;
+  margin-bottom: 20px;
+  height: 3em;
+}
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Generate primes</sub-title></h1>
+    </header>
+
+    <main>
+        <p>Start with the code example in "A long-running synchronous function" (https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)</p>
+        
+        <label for="quota">Number of primes:</label>
+        <input type="text" id="quota" name="quota" />
+
+        <button id="generate">Generate primes</button>
+        <button id="reload">Reload</button>
+
+        <div id="output"></div>
+        <div id="nums"></div>
+    </main>
+    
+<!-- footer section -->
+<footer>
+    <address><a href="">2021-2024 &copy; Ellen Bajcar et al</a></address> 
+    <p>The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>     
+</footer>
+
+
+<script>
+/*
+document.querySelector("#generate").addEventListener("click",...){} calls
+    generatePrimes(quota.value)
+    uniqueChars.sort(compareNumbers)
+
+generatePrimes(quota) {}
+    random(MAX_PRIME)
+    isPrime(candidate)
+
+isPrime(n) {}
+
+removeDuplicateElements(arr, size) {}
+
+compareNumbers(a,b)
+
+*/
+const MAX_PRIME = 100;
+const quota = document.querySelector("#quota");             // handle to Generate primes button
+const nums = document.querySelector("#nums");               // handle to Reload button
+
+const random = (max) => Math.floor(Math.random() * max);
+
+function isPrime(n) {
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return n > 1;
+}
+
+function generatePrimes(quota) {
+  const primes = [];
+  while (primes.length < quota) {
+    const candidate = random(MAX_PRIME);
+    if (isPrime(candidate)) {
+      primes.push(candidate);
+    }
+  }
+  return primes;
+}
+
+// https://www.makeuseof.com/remove-duplicate-elements-from-array/
+// Function to remove duplicate elements from an unsorted array
+function removeDuplicateElements(arr, size) {
+ let m = new Map();
+
+for (let i = 0; i < size; i++) {
+ // Print the element if it's not present in the hash map
+ if (m.get(arr[i]) == null) {
+ console.log(arr[i] + " ");
+ }
+ // Insert the element in the hash map
+ m.set(arr[i], true);
+ }
+console.log(" ");
+}
+
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+function compareNumbers(a, b) {
+  return a - b;
+}
+
+document.querySelector("#generate").addEventListener("click", () => {
+  const primes = generatePrimes(quota.value);
+  output.textContent = `Finished generating ${quota.value} primes!`;
+
+    // 1) Remove duplicates from an array using a Set
+    // https://www.javascripttutorial.net/array/javascript-remove-duplicates-from-array/
+    let uniqueChars = [...new Set(primes)];
+
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+    console.log(uniqueChars.sort(compareNumbers)); 
+    nums.innerText = uniqueChars.sort(compareNumbers);
+});
+
+document.querySelector("#reload").addEventListener("click", () => {
+  document.location.reload();
+});
+// TODO: add event listener "DOMContentLoaded" and move js code to external file
+</script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Play blackjack</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--
+Author: 		Ellen Bajcar
+File name: 		blackjack.html
+Date Created:	Summer 2019
+Date Updated: 
+Version: 		2019.5.1 
+Purpose: 		learning Javascript programming; assignment requirements
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    See README.md file, located in this project's root directory
+-->
+<link rel="stylesheet" href="../css/grid.css">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Akronim|Asap+Condensed|Barrio|Frijole|Luckiest+Guy|Princess+Sofia');
+:root {
+	--bgwhite: #fff;	
+	--fontcolor: #093D6D;
+    --sherblue: #093D6D;
+    --sherteal: #1AC6D9;
+    --sherorange: #00CCCC;;
+	--fontfam: 'Luckiest Guy', cursive;
+	--fontbody: 'Asap Condensed', sans-serif;
+	--fonttitle: 'Akronim', cursive;
+	--gap-sm: 2px;
+	--gap-md: 10px;
+	--gap-lg: 25px;
+}
+* { 
+	box-sizing: border-box; 
+}
+body {
+	background: #e0e0e0;
+    font-family: 'Kaushan Script', cursive;
+    margin: 0 auto;
+    text-align: center;
+}
+main {
+	width: 100%;
+	margin: auto;
+	padding-top: 4px;
+	background-color: white;
+	min-height: 380px;
+	display: flex;
+	justify-content: center;	
+	font-family: initial;
+	font-size: 0.8em;
+}
+main > div {
+	margin: 5px;
+	padding: 5px;
+}
+header h1, dialog h2 {
+	color: #6f6f6f;   
+	text-shadow: 1px 1px cyan;
+    font-size: 60px;
+    font-weight: 400;
+	margin: 16px 0 0;
+    text-align: center;
+}
+footer {
+	margin: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+
+/* 
+ *	dialog (help)
+ *
+ */
+dialog {
+	position: fixed;
+	top: 50%;
+	transform: translate(0, -50%);
+	background: #e0e0e0;
+	padding: 3px;
+	border: 1px solid gray;
+	box-sizing: border-box;
+	width: 50%;
+}
+dialog h2 {
+	font-size: 40px;
+}
+dialog section {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	text-align: left;
+	padding: 3px;
+	box-sizing: border-box;
+	height: 300px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+dialog p, dialog ul {
+	font-family: initial;
+}
+
+
+
+/* 
+ *	navigation 
+ *
+ */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav button {
+  border: none;
+}
+nav a, nav span, nav button {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover, nav span:hover, nav button:hover {
+    background: #c2c2c2;
+    color: #818181;
+    cursor: pointer;
+}
+
+
+
+/* 
+ *	main grid 
+ *
+ */
+.grid-container {
+	display: grid;
+	grid-template-columns: 35% 35% 30%;
+	grid-gap: var(--gap-sm);
+	min-height: 300px;
+	width: 600px;
+	padding: 1px;
+	font-family: var(--fontbody);
+}
+.grid-item {
+	/*background-color: var(--body-bg-color);*/
+    border: 1px dotted lightgray;
+	padding: 0;
+	margin: 0;
+	max-height:230px;
+	text-align: center;
+}
+.grid-item:last-child {
+	/*color: var(--sherblue);
+	text-align: left;*/
+}
+
+.gallery {
+	position: relative;
+}
+.gallery dd {
+  display: block;
+}
+
+
+/* */
+.club1 {  background-position: 0px 0px; }
+.club2 {  background-position: -73px 0px; }
+.club3 {  background-position: -146px 0px; }
+.club3 {  background-position: -219px 0px; }
+
+.heart4 {  background-position: -219px -196px; }
+.heartJ {  background-position: -731px -196px }
+
+.diamondK {  background-position: -876px -294px }
+.cards {
+  background-image: url('cards.png'); 
+  height:97px; width:72px;
+}
+.backs {
+  background-image: url('backs.jpg'); 
+  height:96px; width:72px;
+  border: 1px solid black; background-position: -4px 0px;
+}
+</style>
+</head>
+
+<body>
+	<header>
+		<h1>Play Blackjack!</h1>
+	</header>
+	<nav>
+		<a href="">Home</a>
+        <span  id="greset">New Game</span>
+        <span id="help" >Help</span>
+	</nav>	
+        
+		<main>   
+			<div class="grid-container">
+				<dl class="grid-item gallery">
+					<dt><h3>Player</h3></dt>
+					<dd class="cards club1"></dd>
+					<dd style="position:relative;top:-97px; left:15px;" class="cards heart4"></dd>
+					<dd style="position:relative;top:-140px; left:40px;" class="cards heartJ"></dd>
+				</dl>
+				<dl class="grid-item gallery">
+					<dt><h3>Dealer</h3></dt>
+					<dd class="cards diamondK"></dd>
+					<dd style="position:relative;top:-96px; left:15px;" class="backs"></dd>
+
+				</dl>
+				<div class="grid-item">
+					<h3>Deck</h3>
+					
+					<p style="text-align: center; margin: auto;" class="backs"></p>
+					<p>47 cards left</p>
+					
+				</div>
+				<div class="grid-item">
+					<h3>Bet</h3>
+					<p><input type="number" min="0" step="5" placeholder="  $10.00"></p>
+				</div>
+				<div class="grid-item">
+					<h3>Turn</h3>
+					<p>Hit</p>
+					<p>Stand</p>
+				</div>				
+				<div class="grid-item">
+					<h2>GAME OVER!</h2>
+				</div>				
+			</div>			
+		</main>
+        
+    <footer>
+        <address>SYST10199 Web Programming &copy; Sheridan College</address>
+    </footer>
+	
+	
+   <dialog open id="dialog0">
+        <h2>Help</h2>
+       <section>
+	   <!-- https://www.wikihow.com/Sample/Blackjack-Rules 
+	   https://bicyclecards.com/how-to-play/blackjack/ -->
+	   					<h3>Objective</h3>
+					<p>To beat the dealer by having a higher card total without going over 21</p>
+        <h3>Card Values</h3>
+		<ul>
+			<li>2 to 10 = Face Value</li>
+			<li>J, Q, K = 10</li>
+			<li>Ace = 1 or 11</li>
+			
+			
+		</ul>
+        <p>**Note: The card suits are irrelevant in Blackjack.**</p>
+		 <h3>Definitions</h3>
+		<ul>
+			<li>Blackjack = an Ace and a card worth 10 points (21 total)</li>
+			<li>Hole = the dealer’s card that is face down</li>
+			<li>Hit = draw another card</li>
+			<li>Stand = take no more cards</li>
+			<li>Bust = going over 21</li>
+		</ul>	
+ <h3>How to Play</h3>	
+		<ul>
+			<li>Players place bets by putting the desired number of chips in the circle in front of their seat.</li>
+			<li>The dealer deals two cards face up to each player. The dealer receives one card face up and one face down.</li>
+			<li>The dealer asks each player, in turn, whether they want to hit or stand.</li>
+			<li>Base your decision on the assumption that the dealer has a card worth 10 points in the hole.</li>
+			<li>Indicate that you want a hit by tapping the table or making a motion to beckon another card (as if motioning someone to “come on back”). Continue until you desire no more cards.</li>
+			<li> **Note: Most casinos do not allow you to touch the cards.**</li>
+			<li>If you don’t want a hit (or are finished hitting), indicate so by waving your hand back and forth face down over your cards.</li>
+			<li>Once all players have made their decisions, the dealer reveals his hole card and hits or stands as appropriate.</li>
+			<li>Payouts are issued based on the outcome.</li>
+		</ul> 
+		 <h3>Winning</h3>
+        <p>If your total is higher than the dealer’s (or if the dealer busts), you win.</p>
+		<h3>Payouts</h3>
+		<ul>
+			<li>If you get Blackjack, the dealer pays you 3 to 2.</li>
+			<li>If you and the dealer both get Blackjack, it is a push and no chips are given or taken away.</li>
+			<li>If you have a higher total than the dealer (or the dealer busts), the dealer matches the amount of your chips.</li>
+			<li>If you have a lower total than the dealer (or you bust), the dealer takes your chips.</li>
+		</ul>	
+<h3>Doubling Down</h3>		
+        <p>You are allowed to double your bet after receiving your first two cards. You do this by placing the additional chips next to your original bet. If you decide to do this, you receive only one additional card.</p>
+
+<h3>Splitting</h3>		
+        <p>If you receive two cards of the same number, you can split them into two separate hands. Do this by placing another equal bet alongside your first bet. The dealer will separate your cards and give you an additional card to make each one a complete hand by itself. You will then play each hand separately as you normally would.</p>
+
+<h3>Insurance</h3>		
+        <p>If the dealer’s face up card is an ace, he will offer players the option of buying insurance. If you choose to do so you can then wager half your original bet (in addition to it) that the dealer does have Blackjack. If he does, your insurance is paid 2 to 1 but your original bet is lost (meaning you break even for the hand). If he does not have Blackjack, you lose your insurance.
+</p>
+
+<h3>Even Money</h3>		
+        <p>If you have Blackjack and the dealer has an ace showing, the dealer will offer you even money for your Blackjack (instead of 3 to 2). If you do not take it and the dealer also has Blackjack, you will have a push just like normal.
+</p>
+	
+      </section>
+      <h4 id="close">Click here to dismiss this box.</h4>
+    </dialog>	
+<script>
+   
+/*
+ *  function init() is called by the event listener "DOMContentLoaded".  It
+ *  sets up an event listener for each element that hold the
+ *  choice for the human player to choose by clicking on it.
+ */    
+function init() {
+
+    // event: when the user click reset button
+    document.getElementById("greset").addEventListener("click", function(){
+        location.reload();
+        }, false);
+
+"use strict;"
+document.getElementById("help").onclick = function() {
+  document.getElementById("dialog0").setAttribute("open", "open");
+}
+document.getElementById("close").onclick = function() {
+    document.getElementById("dialog0").removeAttribute("open");
+}		
+} 
+
+
+/*
+ *
+ */
+document.addEventListener("DOMContentLoaded", init);
+</script>	    
+</body>
+</html>

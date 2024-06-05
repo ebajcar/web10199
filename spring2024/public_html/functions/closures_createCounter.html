@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Closures (createCounter)</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: February 8, 2024
+Version: 24.0
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Explore and practice unobtrusive Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+    class example
+-->
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="https://ebajcar.github.io/web10199/content_winter2024/css/prism_coy_dev.css">
+    <script src="https://ebajcar.github.io/web10199/content_winter2024/scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+<style>
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+    --line-length: 60rem; /* Maximum line length for prose. */
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.current {
+    font-weight: bold;
+} 
+div p {
+  margin: 0;
+  padding: 0;
+}   
+</style>
+</head>
+
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Functions</sub-title></h1>
+    </header>
+    
+    <main>
+         <p>In this example, the createCounter function defines a local variable called count and returns an inner function.
+        The inner function, which is assigned to the counter variable, increments the count variable by one and logs its value to the console.</p>
+
+        <p>The interesting part is that even after the createCounter function has finished executing and returned the inner function, 
+        the inner function still retains access to the count variable. This is possible because of closure. The inner function "closes over" 
+        the environment in which it was created, preserving access to the variables of its parent scope.</p>
+
+        <p>So, when counter is invoked multiple times, it continues to increment and log the count variable, as it still has access to it 
+        through closure. Each time counter is called, it remembers the previous value of count and increments it by one.</p>
+
+        <p>Closures are powerful in JavaScript as they allow functions to have persistent private variables, maintain state, and encapsulate functionality.</p>   
+        
+        <div class="box ok">
+            <p>The output is:</p>
+        </div>
+
+        <pre class="language-js" tabindex="0"><code class="language-html">&lt;script>
+const handl = document.getElementsByTagName("div")[0];
+function createCounter() {
+  let count = 0;
+  return function(astring="") {
+    count++;
+    handl.innerHTML += "<p>" + count + ". " + astring + "</p>";
+    console.log("inner " + count + ". " + astring);
+  };
+}
+const counter = createCounter();
+counter("First time the function is called."); // Output: 1 First time the function is called.
+counter("Second time"); // Output: 2.  Second time
+counter("Third time"); // Output: 3. Third time
+counter(); // Output: 4.
+&lt;/script></code></pre>
+
+
+    </main>
+    <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+    
+    
+<script>
+const handl = document.getElementsByTagName("div")[0];
+function createCounter() {
+  let count = 0;
+  return function(astring="") {
+    count++;
+    handl.innerHTML += "<p>" + count + ". " + astring + "</p>";
+    console.log("inner " + count + ". " + astring);
+  };
+}
+
+const counter = createCounter();
+counter("First time the function is called."); // Output: 1 First time the function is called.
+counter("Second time"); // Output: 2.  Second time
+counter("Third time"); // Output: 3. Third time
+counter(); // Output: 4.
+
+/*
+In this example, the createCounter function defines a local variable called count and returns an inner function.
+The inner function, which is assigned to the counter variable, increments the count variable by one and logs its value to the console.
+
+The interesting part is that even after the createCounter function has finished executing and returned the inner function, 
+the inner function still retains access to the count variable. This is possible because of closure. The inner function "closes over" 
+the environment in which it was created, preserving access to the variables of its parent scope.
+
+So, when counter is invoked multiple times, it continues to increment and log the count variable, as it still has access to it 
+through closure. Each time counter is called, it remembers the previous value of count and increments it by one.
+
+Closures are powerful in JavaScript as they allow functions to have persistent private variables, maintain state, and encapsulate functionality.
+*/
+</script>
+</body>
+
+</html>

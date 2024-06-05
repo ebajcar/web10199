@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet 9</title>
+    <link rel="stylesheet" href="css/missing-css.css">
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css"-->
+	<!--link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing-prism.min.css"-->
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/prism-coy-23.css">
+    <script src="css/prism-coy-23.js"></script>
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .thisone {
+          text-decoration: underline;
+          text-decoration-style: wavy;
+          text-decoration-color: orange;
+        }
+        footer ul {
+            list-style: none;
+        }
+	</style>
+</head>
+<body>
+	<div class="sidebar-layout fullscreen">
+      <header>
+        <div class="<h1>">SYST10199</div>
+        <nav>
+            <ul role="list">
+                <li><a href="https://ebajcar.github.io/web10199/content_summer2023/" aria-current="page">Home</a></li>
+                <li><hr></li>
+                
+                <li>JS language (client-side programming)</li>
+                    <li class="margin"><a href="worksheet01.html">Worksheet 1</a></li>
+                    <li class="margin"><a href="worksheet02.html">Worksheet 2</a></li>
+                    <li class="margin"><a href="worksheet03.html">Worksheet 3</a></li>
+                    <li class="margin"><a href="worksheet04.html">Worksheet 4</a></li>
+                    <li class="margin"><a href="worksheet05.html">Worksheet 5</a></li>
+                <li><hr></li>
+                
+                <li>PHP language (server-side programming)</li>
+                    <li class="margin"><a href="worksheet06.html">Worksheet 6</a></li>
+                    <li class="margin"><a href="worksheet07.html">Worksheet 7</a></li>
+                    <li class="margin"><a href="worksheet08.html">Worksheet 8</a></li>
+                    <li class="margin thisone"><a href="worksheet09.html">Worksheet 9</a></li>
+                    <li class="margin"><a href="worksheet10.html">Worksheet 10</a></li>
+                <li><hr></li>           
+            </ul>            
+        </nav>
+      </header>
+    
+
+      <div> <!-- body container for main and footer -->
+        <main>
+            <h1>Worksheet 9</h1>
+            <nav class="breadcrumbs" aria-label="Breadcrumbs">
+                <ol>
+                    <li><a href="#"  class="allcaps">SYST10199</a></li>
+                    <li><a href="#" aria-current="page">Worksheet 9</a></li>
+                </ol>
+            </nav>        
+
+            <details open>
+                <summary>On this page&hellip;</summary>
+                <ol>
+                    <li><a href="#e02">Activity 9.1. Review and preparation</a></li>
+                    <li><a href="#e03">Activity 9.2. STUDY Course material</a></li>
+                    <li><a href="#e04">Activity 9.3. PRACTICE problem solving and coding in PHP</a></li> 
+                </ol>
+            </details>
+            
+              <section id="#e02">
+                <h2>Activity 9.1. Review and preparation</h2>
+                <div class="box info">
+                <p>Complete, review. dig deeper Worksheets 1, 2, 3, 4, 5, and 6. Catchup from previous weeks.</p> 
+                <p>Revisit the <a href="" target="_blank">Class Plan Information</a> and read about Active learning, Learning course
+                content, Learning for mastery, not grades, How evaluation works, Formative & Summative Evaluation, etc.</p> 
+                <p>Compare Java, Javascript, and PHP.
+                </p> 
+                  </div>
+            </section>  
+
+            <section id="#e03">
+                <h2>Activity 9.2. STUDY Course material</h2>
+                <p>Explore the following pages and the links provided on these pages to primary (PHP Manual) and secondary sources (w3schools). 
+                Compare to the Javascript language.</p>
+                <dl>
+                    <dt>9.2.1. <a href="../../learnphp23/index.html">PHP Lanaguage</a></dt>
+                    <dd>&mdash;Keep working with the PHP language components from previous worksheet (6.2, 7.2, 8.2)</dd>
+
+                    <dt>9.2.2. <a href="../../learnphp23/mysql.html">MySQL DBMS</a></dt>
+                    <dd>
+                      <ul style="margin-bottom:0;padding-bottom:3px;">
+                        <li><a href="https://share.vidyard.com/watch/3gdnQsTP1L6CBJsyhRGWEU?" target="_blank">Accessing cPanel off-campus (video)</a> (if you are on campus, select the first cPanel URL)</li>
+                        <li><a href="https://share.vidyard.com/watch/fm3LLNWqLdE2igybs7XzJW?" target="_blank">Creating a database (video)</a></li> 
+                        <li><a href="https://share.vidyard.com/watch/pnMPft49epWVZUW5wwtsNP?" target="_blank">Using phpMyadmin - introduction (video)</a></li> 
+                        <li><strong>&mdash;start here </strong> <a href="https://tech.fast.sheridanc.on.ca/" target="_blank">tech.fast.sheridanc.on.ca</a></li>
+                      </ul>
+                      
+                      <h6 style="padding-top:0;margin-top:0;padding-bottom:0;margin-bottom:0"><a href="https://www.w3schools.com/mysql/default.asp" target="_blank">MySQL Tutorials</a> @w3schools</h6>
+                      <ul style="padding-top:0;margin-top:0;margin-bottom:10px;columns:2">
+                        <li><a href="https://www.w3schools.com/mysql/mysql_intro.asp" target="_blank">Introduction to MySQL</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_rdbms.asp" target="_blank">MySQL RDBMS</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_create_db.asp" target="_blank">MySQL CREATE DATABASE Statement</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_drop_db.asp" target="_blank">The MySQL DROP DATABASE Statement</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_create_table.asp" target="_blank">MySQL CREATE TABLE Statement</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_drop_table.asp" target="_blank">MySQL DROP TABLE Statement</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_constraints.asp" target="_blank">MySQL Constraints</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_notnull.asp" target="_blank">MySQL NOT NULL Constraint</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_unique.asp" target="_blank">MySQL UNIQUE Constraint</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_primarykey.asp" target="_blank">MySQL PRIMARY KEY Constraint</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_foreignkey.asp" target="_blank">MySQL FOREIGN KEY Constraint</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_autoincrement.asp" target="_blank">MySQL AUTO INCREMENT Field</a></li>
+                      </ul>
+                    </dd>
+                    
+                    <dt>9.2.3. <a href="../../learnphp23/sql.html">SQL database language</a></dt>
+                    <dd><q>SQL Standards (Oracle) "Technically speaking, SQL is a data sublanguage. The purpose of SQL is to provide an interface to a relational database such as Oracle Database, and all SQL statements are instructions to the database. In this SQL differs from general-purpose programming languages like C&hellip;</q><br><small><em>&mdash;https://docs.oracle.com/cd/B13789_01/server.101/b10759/intro002.htm</em></small></dd>   
+                    <dd>
+                      <h6 style="padding-top:0;margin-top:0;padding-bottom:0;margin-bottom:0"><a href="https://www.w3schools.com/mysql/default.asp" target="_blank">MySQL Tutorials</a> @w3schools</h6>
+                      <ul style="padding-top:0;margin-top:0;columns:2">
+                        <li><a href="https://www.w3schools.com/mysql/mysql_sql.asp" target="_blank">MySQL SQL</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_select.asp" target="_blank">SQL SELECT Statement</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_where.asp" target="_blank">SQL WHERE Clause</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_orderby.asp" target="_blank">SQL ORDER BY Keyword</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_insert.asp" target="_blank">SQL INSERT INTO Statement</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_update.asp" target="_blank">SQL UPDATE Statement</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_delete.asp" target="_blank">SQL DELETE Statement</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_count_avg_sum.asp" target="_blank">SQL COUNT(), AVG() and SUM() Functions</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_like.asp" target="_blank">SQL LIKE Operator</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_wildcards.asp" target="_blank">SQL Wildcards</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_datatypes.asp" target="_blank">SQL Data Types</a></li>
+                        <li><a href="https://www.w3schools.com/mysql/mysql_comments.asp" target="_blank">SQL Comments</a></li>
+                      </ul>
+                    </dd>
+                    
+                    <dt style="margin-top:10px;">9.2.4. <a href="../../learnphp23/objects.html">PHP Data Objects (PDO) Class</a></dt>
+                    <dd>
+                     <h6 style="padding-bottom:0;margin-bottom:0">PHP Data Objects (PDO) is a <strong>data-aware class</strong> &mdash;<a href="https://www.php.net/manual/en/book.pdo.php" target="_blank"><small>PHP Manual</small></a></h6>   
+                     <ul style="padding-top:0;margin-top:0;padding-bottom:0;margin-bottom:0">
+                        <li>a class connects to a database</li>
+                        <li>the class becomes the <strong>data source</strong></li>
+                        <li>the form (business object) that uses the data becomes the <strong>data consumer</strong></li>
+                      </ul>      
+                     <h6 style="padding-bottom:0;margin-bottom:0;padding-top:0;margin-top:0;">In this course, we use PDO only! (Why? Compare to MySQLi)</h6>   
+                     <ul style="padding-top:0;margin-top:0;padding-bottom:0;margin-bottom:0;">
+                        <li>PDO connections are established by creating instances of the PDO base class.a database</li>
+                        <li>It doesn't matter which driver you want to use; you always use the PDO class name.</li>
+                        <li>The constructor accepts parameters for specifying the database source (known as the DSN) and optionally for the username and password (if any).</li>
+                        <li><a href="https://www.w3schools.com/php/php_mysql_connect.asp" target="_blank">PHP Connect to MySQL @w3schools</a></li>
+                      </ul>  
+                     <h6 style="padding-bottom:0;margin-bottom:0;padding-top:0;margin-top:0;">General process</h6>   
+                     <ul style="padding-top:0;margin-top:0;list-style:number">
+                        <li>Design and construct user interface - HTML form.</li>
+                        <li>Design, build and maintain a database.</li>
+                        <li>Connect to data file.</li>
+                        <li>Send an SQL query.</li>
+                        <li>Process retrieved data.</li>
+                        <li>Close connection to data file.</li>
+                      </ul>                       
+                    </dd>                     
+                </dl>                
+            </section>          
+            
+           <section id="#e04">     
+                <h2>Activity 9.3. PRACTICE problem solving and coding in PHP</h2>
+                
+                <p style="padding-bottom:0;margin-bottom:0;"><strong>9.3.1. Exercise</strong> &mdash;using  <a href="https://www.w3schools.com/mysql/trymysql.asp?filename=trysql_select_columns" target="_blank">[The Try-MySQL Editor @ w3schools]</a> develop SQL statement to
+                <ol  style="padding-top:0;margin-top:0;">
+                    <li>select everything in the Customers table</li>
+                    <li>select all records that contain "ee" in Categories' Description</li>
+                    <li>try some of the examples from earlier w3schools tutorials<br>
+                    <strong>complete the rest on dev.fast.sheridanc.on.ca, using phpMyAdmin tool:</strong></li>
+                    <li>create database `exercises` (**note**: it will be preceded by "yourusername_"; you have a limit of 5 databases) </li>
+                    <li>create `Customers` table with the same field names as above (in Try-MySQL Editor)</li>
+                    <li>insert a record into the Customers table
+<pre class="language-js" tabindex="0"><code class="language-js">INSERT INTO Customers 
+  (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES 
+  ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+</code></pre> 
+                    </li>
+                    <li>choose at least four (4) more records and insert</li>
+                    <li>update one of the five records, for example
+<pre class="language-js" tabindex="0"><code class="language-js">UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City = 'Frankfurt'
+WHERE CustomerID = 1;
+</code></pre> 
+                    </li>
+                    <li>update any two records to change the city to Toronto</li>
+                    <li>delete all records where city is Toronto
+<pre class="language-js" tabindex="0"><code class="language-js">DELETE FROM Customers WHERE City='Toronto';
+</code></pre> 
+                    </li>
+                    
+                    
+                </ol>
+                
+                <p><strong>9.3.2. Problem</strong> &mdash;Use PHP Iterators to create and PDO to populate an HTML table</p>
+                <ul>
+                    <li>To create the database table for this problem, log in to phpMyAdmin, select your database, and click on the SQL tab. Enter and run the following SQL statement:
+ <pre class="language-js" tabindex="0"><code class="language-js">CREATE TABLE MyGuests (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  firstname varchar(50) NOT NULL,
+  lastname varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+)               
+</code></pre>                
+                    </li>
+                    <li>Implement the following <a href="https://gist.github.com/ebajcar/7c9d4f98d8dd59b2cf4e22ecbfbabf34" target="_blank">guests_db.php code</a>. Make sure to go through the code, add comments to describe how the code works in your own words. Test and debug. Validate the HTML code generated by PHP. Also, compare to an earlier example in which we used an Iterator class also to populate HTML table from an associative array.</li>
+                    
+                    
+                </ul>
+                
+                <p><strong>9.3.3. Problem</strong> &mdash;Write a PHP program to keep track of scores</p>
+                <ul>
+                    <li>To create the database table for this problem, log in to phpMyAdmin, select your database, and click on the SQL tab. Enter and run the following SQL statement:
+ <pre class="language-js" tabindex="0"><code class="language-js">CREATE TABLE scores (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  player varchar(50) NOT NULL,
+  score int(11) NOT NULL,
+  date date NOT NULL,
+  PRIMARY KEY (`id`)
+)
+</code></pre>                
+                    </li>
+                    <li>Implement the following <a href="https://gist.github.com/ebajcar/e484387d1d480bc7ba3aa273fcfd3f0e" target="_blank">scoredb2.php code</a>. Make sure to go through the code, add comments to describe how the code works in your own words. Test and debug. Validate the HTML code generated by PHP.</li>
+                </ul>
+            </section>                  
+
+
+
+        </main>
+
+        <footer>
+            <address><a href="">SYST101099 Web Programming | Ellen Bajcar et all, FAST, Sheridan College</a></address> 
+            <p>2021-2023 &copy;  The materials provided in class and through SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>  
+            <hr style="margin: 10px 0">
+            <ul class="f-switch" role="list">
+                <li>
+                  <h2>Course Material</h2>
+                  <ul>
+                    <li><a href="https://ulysses.sheridanc.on.ca/coutline/coutlineview_sal.jsp?appver=sal&subjectCode=SYST&courseCode=10199&version=2021011800&sec=0&reload=true">Course Outline</a></li>      
+                    <li><a href="https://notepad-plus-plus.org/">Notepad++ Text Editor</a></li>  
+                    <li><a href="https://www.filezilla-project.net/">FileZilla Client</a></li>  
+                    <li><a href="https://www.w3schools.com/tryit/trycompiler.asp?filename=demo_php">Online Backend editor (PHP)</a></li>  
+                    <li><a href="https://www.w3schools.com/tryit/tryit.asp?filename=tryhtml_hello">Online Frontend editor (HTML/CSS/JS)</a></li>
+                    <li><a href="https://validator.w3.org/">HTML validator</a></li>   
+                    <li><a href="https://jigsaw.w3.org/css-validator/">CSS validator</a></li>                  
+                  </ul>
+                </li>
+                <li>
+                  <h2>Resources</h2>
+                  <ul>
+                    <li><a href="https://www.w3.org/">World Wide Web Consortium (W3C)</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/">w3schools</a> </li>  
+                    <li><a href="https://www.php.net/manual/en/index.php">PHP Manual</a></li>   
+                    <li><a href="https://www.ecma-international.org/publications-and-standards/standards/ecma-262/">ECMAScript language specification</a></li>                 
+                  </ul>
+                </li>
+                <li>
+                  <h2>Sheridan College</h2>
+                  <ul>
+                    <li><a href="https://www.sheridancollege.ca/">Davis &mdash; HMC &mdash; Trafalgar</a></li>
+                    <li><a href="https://slate.sheridancollege.ca/d2l/home">SLATE</a></li>
+                    <li><a href="https://central.sheridancollege.ca/counselling-services">Wellness &amp; Counselling Services</a></li>   
+                    <li><a href="https://central.sheridancollege.ca/library-services">Library Services</a></li>  
+                    <li><a href="https://it.sheridancollege.ca/service-catalogue/tech-essentials/index.html">Tech Essentials</a></li>  
+                    <li><a href="http://tech.fast.sheridanc.on.ca/">Fast Tech (web server access)</a></li>
+                    <li><a href="http://bajcar.dev.fast.sheridanc.on.ca/">Prof. Ellen Bajcar</a><span style="color:gray"><br>Office hours (by appointment)</span></li>
+                  </ul>
+                </li>
+            </ul>
+        </footer>
+     
+     </div> <!-- body container for main and footer -->
+</div> <!-- sidebar -->
+
+	
+
+</body></html>

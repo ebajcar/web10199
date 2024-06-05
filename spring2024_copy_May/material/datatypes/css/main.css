@@ -1,0 +1,48 @@
+:root {
+    --main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+}
+dfn > code {
+    font-style: normal;
+    text-decoration: 1px dashed var(--muted-fg) underline;
+}
+code a {
+    font-family: inherit;
+}
+.thisone {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: orange;
+}
+footer ul {
+    list-style: none;
+}
+nav ul li {
+    line-height: 0.8em;
+    & a {
+        font-size: 0.8em;
+        font-weight: normal;
+    }
+}        
+    .space {
+      margin-bottom: 20px !important;
+      border-bottom: 1px dashed lightgray;
+    }
+    .breadcrumbs ol {
+      border-bottom: 1px solid lightgray;
+      font-size: 1.1em;
+    }
+    
+ /* sidebar menu */   
+.hellip-one {
+  overflow: hidden;
+  z-index: 9;
+  position: relative;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  margin: 0 0 0 5px;
+  line-height: 0.5em;
+}
+.lead-title {
+  padding-top: 1.2em;
+}

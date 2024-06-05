@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minimal HTML5 Document</title>
+	<meta charset="utf-8">
+	
+</head>
+<body>
+	 <aside>
+		<button id="clear">Clear</button>
+		<p>Wins: <span id="wins">0</span> Losses: <span id="losses">0</span></p>
+		<div id="show" class="show">To start a game, roll the dice!<br></div>
+	</aside> 
+	<header>
+		<h1>Casino Craps</h1>
+	</header>
+	<main>
+		<div class="total">
+			<small>You rolled&hellip;</small><br>total <var id="total"></var>
+		</div>
+		dice1 <div id="alpha" class="die"></div>
+		dice2 <div id="bravo" class="die"></div>		
+		<button id="roll" class="roll">Roll the dice!</button>				
+	</main>	
+	<footer>
+		<hr><address>2018 &copy; SYST10199 Web Programming, Sheridan College</address>
+	</footer>
+
+<script>
+/*
+-----------------------------
+| Game 						|
+-----------------------------
+| dice 						|
+| total						|
+| point						|
+| wins 						|
+| losses					|
+-----------------------------
+| roll(dice) 				|
+| clear() 					|
+| rollBoth()				|
+| display(msg, where, what) |
+-----------------------------
+*/
+var outcome = document.getElementById("total");
+var show = document.getElementById("show");
+var showWins = document.getElementById("wins");
+var showLosses = document.getElementById("losses");
+var point = 0;
+var wins = 0; 
+var losses = 0;
+var message = {
+	natural : "That's a natural. You win!",
+	craps 	: "That's craps. You lose!",
+	point 	: "You made your point. You win!",
+	seven 	: "That's a seven. You lose!"
+	};
+	
+document.getElementById("roll").onclick = rollBoth;
+document.getElementById("clear").onclick = clear;	
+	
+function roll(dice){
+  var random = Math.floor((Math.random() * 6) + 1);
+  document.getElementById(dice).innerHTML = random;
+  return random;
+}
+
+function clear() { 
+	point = 0;
+	wins = 0;
+	losses = 0;
+	show.innerHTML = ""; 
+	showWins.innerHTML = 0;
+	showLosses.innerHTML = 0;
+}
+
+function rollBoth() {
+	var dice1 = roll("alpha"); 
+	var dice2 = roll("bravo");
+    var total = dice1 + dice2;
+	outcome.innerHTML = total;
+	determineOutcome(total);
+}
+
+function determineOutcome(total) {
+	if ( point == 0 ) {
+		if (total == 7 || total == 11) {
+			display("natural", showWins, wins);
+		} else if (total == 2 || total == 3 || total == 12) {
+			display("craps", showLosses, losses);		  
+		} else {
+		  point = total;
+		  show.innerHTML = "Your point is " + point + ". Roll again!<br>";  
+		}
+	} else {
+        if (total == point) {
+			w++;
+			display("point", showWins, wins);
+			point = 0;
+        } else if (total == 7) {	
+			display("seven", showLosses, losses);			
+			point = 0;
+        } 
+	}
+}
+
+function display(msg, c, w) {
+	show.innerHTML = message[msg];
+	c.innerHTML = ++w;
+    var newEl = document.createElement("hr");
+    show.appendChild(newEl);	
+	show.innerHTML +=  "NEW GAME. Roll the dice!";
+}
+
+</script>
+</body>
+</html>
