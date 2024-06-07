@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Play Tic Tac Toe</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 
+Author: Ellen Bajcar
+Program: ttt_create_remove_board.html
+Date: Summer 2016
+Date Updated: 8:25 AM June-01-2020
+Version: 20.6.1 
+Purpose: learning Javascript programming
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    A two-player game of tic tac toe, sitting at the same monitor.
+    In this version, we explore the DOM methods of creating and
+    destroying the game board.
+-->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+body {
+  margin: 0 auto;
+  text-align: center;
+}
+main {
+	width: 100%;
+	margin: auto;
+	padding-top: 4px;
+	background-color: white;
+	min-height: 200px;
+	display: flex;
+	justify-content: center;	
+}
+
+/* navigation */
+nav span {
+  background-color: #ddd;
+  color: black;
+  display: inline-block;
+  font-size: 15px;
+  padding: 7px;
+  text-decoration: none;
+}
+table {
+  margin: 20px auto;
+  background-color: transparent;
+}
+td {
+  height: 50px;
+  width: 50px;
+  font-size: 2.2em;
+  font-family: sans-serif;
+  border: 1px solid #00CCCC;
+  background-color: transparent;
+}
+td:nth-child(1) {
+  border-left-style: none;
+}
+td:nth-child(3) {
+  border-right-style: none;
+}
+tr:nth-child(1)>td {
+  border-top-style: none;
+}
+tr:nth-child(3)>td {
+  border-bottom-style: none;
+}
+</style>
+</head>
+<body>
+<h3>Create and remove board using DOM methods</h3>
+<nav><span id="start">Start</span>&nbsp;&nbsp;<span id="end">Reset</span></nav>
+<main id="game">	
+  <!-- game board and related content -->
+</main>	
+
+<script>
+/*
+ *	function createBoard() creates a 3x3 tic tac toe board
+ *  using DOM methods
+ */
+function createBoardForTicTacToe() {
+	let myTable, myRow, myCell, myData, myBoard, myTitle, i, j;
+  let gameTitle = ["T", "I", "C", "T", "A", "C", "T", "O", "E"];
+	myBoard = document.getElementById("game");
+	myTable = document.createElement("table");
+	myBoard.appendChild(myTable);
+	for (i = 0; i < 3; i++) {
+		myRow = document.createElement("tr");		
+		for (j = 0; j < 3; j++) {
+			myCell = document.createElement("td");
+			myRow.appendChild(myCell);
+			myData = document.createTextNode(gameTitle[j + (i * 3)]);
+			myCell.appendChild(myData);
+		}
+    myTable.appendChild(myRow);
+	}
+}
+/*
+ *	function removeBoard() destroys the 3x3 tic tac toe board
+ *  that is created by createBoard() function
+ */	
+function removeBoard() {
+	var parent = document.getElementById("game");
+	while(parent.hasChildNodes()) 
+	   parent.removeChild(parent.lastChild);
+}	
+/*
+ *	TODO: main set up board, start game, set up event listeners
+ *
+ *  Testing the creation and removal of the board
+ */
+start.onclick = function() {
+  createBoardForTicTacToe();
+};
+end.onclick = function() {
+  removeBoard();
+};
+</script> 
+</body>
+</html>

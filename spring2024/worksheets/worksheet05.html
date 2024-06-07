@@ -52,7 +52,16 @@ dd:first-of-type ol{
 </style>
 </head>
 <body>
+<!--
+Add
+dom/bom content_summer2023/learnjs/dom.html
+built-in /content_summer2023/learnjs/collections.html  (date, math, RegExp, Function, Object, array)
+events /content_summer2023/learnjs/events.html
 
+
+
+
+-->
 
 <!-- header section -->
 <header>       
@@ -69,20 +78,175 @@ dd:first-of-type ol{
       Review, catch up,&hellip;
     </h3>
 
- 
+      <details open>
+            <summary><a href="https://javascript.info/" target="_blank">Javascript.info</a> The Modern JavaScript Tutorial</summary>   
+                    
+            <dl>         
+                         
+                <dd hidden><a href="" target="_blank">link</a> </dd>
+                
+                <dt><a href="https://javascript.info/while-for" target="_blank">Loops: while and for</a></dt>
+                <dd>Curly braces are not required for a single-line body. Inline variable declaration. <!-- consider not evaluating variable inline = how does it affect performance? --> Skipping parts. Breaking the loop (break). Continue to the next iteration (continue). Labels for break/continue.</dd> <!-- -->
+                
+                 <dt><a href="https://javascript.info/switch" target="_blank">The "switch" statement</a></dt>
+                <dd>Syntax. If there is no break then the execution continues with the next case without any checks. Any expression can be a switch/case argument. Grouping of “case”. Type matters.</dd>
+                <dd><a href="https://javascript.info/task/rewrite-switch-if-else" target="_blank">Complete the exercise "Rewrite the switch into an if"</a> and <a href="https://javascript.info/task/rewrite-if-switch" target="_blank">Complete the exercise "Rewrite the if into a switch"</a> <span></dd>
+
+                <dt><a href="" target="_blank"></a> </dt>  
+                <dd></dd>
+
+                <dt><a href="" target="_blank"></a> </dt>  
+                <dd></dd>                
+                
+                
+                
+                <dd hidden>
+                    <ul style="column-count: 3">                      
+                    <li><a href="" target="_blank">DOM intro</a></li>
+                    </ul>  
+                </dd> 
+        </details>    
+
 </section>
 
 
 <!-- 2. Activities -->
 <section id="p2">   
-      
+    <h3>
+      <sub-title class="allcaps">Explore<v-h>: </v-h></sub-title>
+      Read and try examples, make notes, add annotations to code, make connections&hellip;
+    </h3>
+ 
+ <!-- Working with the DOM and BOM -->
+      <details open>
+            <summary>Working with the DOM and BOM </summary>           
+            <dl>         
+                <dt>Complete MDN tutorial <a href="" target="_blank">Manipulating documents</a></dt>           
+                <dd hidden><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents" target="_blank">link</a> </dd>
+                <dd>a set of APIs for controlling HTML and styling information that makes heavy use of the Document  object.</dd>
+                <dd>JavaScript HTML DOM (w3schools)
+                    <ul style="column-count: 3">                      
+                    <li><a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank">DOM intro</a></li>
+                    <li><a href="https://www.w3schools.com/js/js_htmldom_methods.asp" target="_blank">DOM methods</a></li>
+                    <li><a href="https://www.w3schools.com/js/js_htmldom_document.asp" target="_blank">DOM document</a></li>
+                    <li><a href="https://www.w3schools.com/js/js_htmldom_elements.asp" target="_blank">DOM elements</a></li>
+                    <li><a href="https://www.w3schools.com/js/js_htmldom_collections.asp" target="_blank">DOM collections</a></li>
+                    <li><a href="https://www.w3schools.com/js/js_htmldom_nodelist.asp" target="_blank">Node Lists</a></li>
+                    
+                    </ul>  
+                </dd> 
+                <dd>JavaScript HTML BOM (w3schools)
+                    <ul style="column-count: 4">                      
+                    <li><a href="https://www.w3schools.com/js/js_window.asp" target="_blank">JS window</a></li>
+                    <li><a href="https://www.w3schools.com/js/js_window_location.asp" target="_blank">JS location</a></li>
+                    <li><a href="https://www.w3schools.com/js/js_window_screen.asp" target="_blank">JS screen</a></li>
+                    <li><a href="https://www.w3schools.com/js/js_window_navigator.asp" target="_blank">JS navigator</a></li>                    
+                    </ul>  
+                </dd> 
+			    <dd><a href="../../content_summer2023/learnjs/dom2024.html" target="_blank">DOM &amp; BOM (class notes)</a>
+				<dd><a href="https://javascript.info/document" target="_blank">Document (javascript.info)</a>	</dd>			
+				
+            </dl>
+        </details>          
+ 
+          <details open>
+            <summary>Reacting to events</summary>           
+            <dl>         
+                <dt>Complete MDN tutorial <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events"" target="_blank">Introduction to events</a></dt>           
+                <dd hidden><a href="" target="_blank">link</a> </dd>
+                <dd>&mdash; Events are actions or occurrences that happen in the system you are programming, which the system tells you about so your code can react to them.</dd> 
+                <dd>JavaScript HTML BOM  (w3schools)
+                    <ul style="column-count: 3">                      
+                    <li><a href="https://www.w3schools.com/js/js_events.asp" target="_blank">JS Events</a></li>
+                    <li><a href="https://www.w3schools.com/js/js_htmldom_events.asp" target="_blank">DOM events</a></li>
+                    <li><a href="https://www.w3schools.com/js/js_htmldom_eventlistener.asp" target="_blank">DOM event listeners</a></li>                   
+                    </ul>  
+                </dd> 
+			    <dd><a href="../../content_summer2023/learnjs/events2024.html" target="_blank">Events (class notes)</a></dd>
+				<dd><a href="https://javascript.info/events" target="_blank">Introduction to events (javascript.info)</a></dd>
+        </details> 
+          
 </section>
 
 
 
 <!-- 3. Practice solving problems -->
 <section id="p3">
+      <h3>
+      <sub-title class="allcaps">Practice<v-h>: </v-h></sub-title>
+      Practice solving problems&hellip;
+    </h3>   
 
+
+	<dl>
+        <dt>Built-in Objects and Events</dt>
+        <dd hidden><a href="" target="_blank">link</a> </dd>
+        <dd>
+            <ol>
+                <li><a href="../public_html/objects_custom/math_object.html" target="_blank">Math object example</a></li>
+				
+                <li><a href="../public_html/objects_custom/date_object.html" target="_blank">Date object example</a></li>
+                <li><a href="../public_html/objects_custom/date_object_blog.html" target="_blank">Date object (blog) example</a></li>
+				
+                <li><a href="../public_html/objects_custom/colours_load_table.html" target="_blank">DOM manipulation example (colours)</a></li>
+				
+                <li><a href="../public_html/objects_custom/array-random_onclick.html" target="_blank">Array (event method)</a></li>	
+                <li><a href="../public_html/objects_custom/array-random_function.html" target="_blank">Array (multiple events using event methods)</a></li>
+                <li><a href="../public_html/objects_custom/array-random_listener.html" target="_blank">Array (multiple events using event listeners)</a></li>	
+
+                <li><a href="../public_html/bomDom/query-vs-getElement.html" target="_blank">Using querySelect vs. getElementsBy</a></li>
+				
+                <li><a href="ttt_create_destroy.html" target="_blank">DOM methods</a> Create and destroy the Tic Tac Toe game board</li>				
+            </ol>
+        </dd>
+
+        <dt>BOM</dt>
+        <dd hidden><a href="" target="_blank">link</a> </dd>
+        <dd>
+            <ol>
+                <li><a href="../public_html/bomDom/window-properties.html" target="_blank">BOM - explore window properties</a></li>
+            <!--    <li><a href="../public_html/bomDom/innerhtml.html" target="_blank">Properties innerHTML, innerText, and textContent</a></li> -->
+                <li><a href="../public_html/bomDom/bom-open-new-window.html" target="_blank">BOM - explore window properties and methods (open new window)</a></li>
+            </ol>
+        </dd>				
+    </dl>
+
+
+
+
+    <d1>
+        <dt>Problem 7: Casino craps game</dt>
+        <dd>&mdash;Write a program to play a game of Casino Craps.</dd>
+        <dd>We will skip keeping score and making bets. Focus on the logic of rolling two dice, adding the values and the logic to determine and display the results, for a single player:
+                <pre>At the beginning of the game, 
+		the player rolls a pair of dice and the program computes the total. 
+		If the total is 2, 3, or 12 (called "craps"), the player loses. 
+		If the total is 7 or 11 (called a "natural"), the player wins.
+		If the total is any other number, that number becomes the "point". 
+			From here, the player keeps rolling the dice until 
+				(a) the point comes up again, in which case the player wins, or 
+				(b) a 7 appears, in which case the player loses. 
+				The numbers 2,3,11, and 12 no longer have special 
+					significance after the first rolls.</pre>
+                    <a href="https://www.youtube.com/embed/7T8ee3Nl5bY" target="_blank">example of console output</a>
+        </dd>
+    </dl>
+
+    <d1>
+        <dt>Problem 8: Rock Paper Scissors game</dt>
+        <dd>&mdash;rite a program that will allow a user to play a game of rock-paper-scissors against the computer.</dd>
+    </dl>    
+ 
+    <d1>
+        <dt>Problem 9: Rock Paper Scissors Lizard Spock game</dt>
+        <dd>&mdash;Write a program that will allow a user to play a game of rock-paper-scissors-lizard-spock against the computer.</dd>
+    </dl>   
+
+    <d1>
+        <dt>Problem 10: Tic Tac Toe game</dt>
+        <dd>&mdash;Write a program that will allow two human users play a game of tic-tac-toe at the same monitor.</dd>
+    </dl>       
+    
 </section>
 
 
