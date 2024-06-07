@@ -147,8 +147,21 @@ function createColorTable(obj) {
   parent.appendChild(document.createElement("caption")).innerText = "Color names and RGB values";
   let index = 0, td1, td2, tr;
   for (let property in obj) {
+      /*
+       Example of verification and validation(added as followup to a class discussion)      
+            We want to create a TR on every other pass through the for loop,
+            starting with the first pass when index=0 (then 2, 4, 6,...)
+            
+       -- Using logging to see what is going on in the code  
+       
+       -- Confirmed data conversion: true becomes 1 and false becomes 0 and vice versa
+          (note "true" and "false" are string type, not Boolean)
+       Sources: https://javascript.info/type-conversions and
+                JS Type Conversion Table https://www.w3schools.com/js/js_type_conversion.asp
+      */
+      console.log(index + " (index%2)-> " + (index % 2) +" Boolean(index%2)-> " + Boolean(index % 2) + " !(index%2)-> " + !(index % 2));
       if (!(index % 2)) {
-        console.log(index);
+        
         tr = parent.appendChild(document.createElement("tr")); 
       }
       index++;
