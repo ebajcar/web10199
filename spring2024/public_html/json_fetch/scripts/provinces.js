@@ -37,7 +37,7 @@ console.log("entered getProvinces");
                 //nav.append(a)
             }
             // add nav to the header element
-            document.body.querySelector("prov").append(list);
+            document.getElementById("prov").appendChild(list);
         // for debugging
         }).catch(error => {
             console.log(error);
