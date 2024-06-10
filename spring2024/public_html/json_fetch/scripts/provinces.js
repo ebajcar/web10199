@@ -1,6 +1,6 @@
-"use strict";
+console.log("start");
 document.addEventListener("DOMContentLoaded", () => {
-    getProvinces;
+    getProvinces();
 });
 
 function getProvinces() {
@@ -25,6 +25,8 @@ function getProvinces() {
                 curr.setAttribute("value", item.postal);
                 curr.setAttribute("title", item.title);
                 curr.innerHTML = item.name + "  ("+ item.postal +")";
+                //list[index] = item.name;
+                console.log(index);
                 index++;
             }
         // for debugging
