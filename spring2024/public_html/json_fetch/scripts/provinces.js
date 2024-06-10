@@ -1,36 +1,25 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
-    getProvinces();
+    getProvinces;
 });
 
 function getProvinces() {
-console.log("entered getProvinces");
-    // fetch the .json file with the menu objects
+    // fetch the .json file with the option objects
     fetch("data/provinces.json")
         // when the response arrives, parse it as json data
         .then(response => response.json())
         
-        // when we get the json data, build the <select> and 
-        // add it to the <header>
+        // when we get the json data, build the <option> and 
+        // add it to the <select id="prov">
         .then(data => {
-            console.log("attempting to get data");
-            //let list = [];
-            //let selectList = document.createElement("select");
             let parent = document.getElementById("prov");
-            console.log(parent);
-            let index = 0;
             // for each item in the collection
             for (const item of data) {
                 let curr = parent.appendChild(document.createElement("option")); 
                 curr.setAttribute("value", item.postal);
                 curr.setAttribute("title", item.title);
-                curr.innerHTML = item.name + "  ("+ item.postal +")";
-                //list[index] = item.name;
-                console.log(index);
-                index++;
+                curr.innerText = item.name + "  ("+ item.postal +")";
             }
-            // add nav to the header element
-            //document.getElementById("prov").appendChild(list);
         // for debugging
         }).catch(error => {
             console.log(error);
