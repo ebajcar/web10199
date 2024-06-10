@@ -14,7 +14,7 @@ console.log("entered getProvinces");
         // add it to the <header>
         .then(data => {
             console.log("attempting to get data");
-            let list = [];
+            //let list = [];
             //let selectList = document.createElement("select");
             let parent = document.getElementById("prov");
             console.log(parent);
@@ -25,8 +25,8 @@ console.log("entered getProvinces");
                 curr.setAttribute("value", item.postal);
                 curr.setAttribute("title", item.title);
                 curr.innerHTML = item.name + "  ("+ item.postal +")";
-                list[index] = item.name;
-                console.log(list);
+                //list[index] = item.name;
+                console.log(index);
                 index++;
             }
             // add nav to the header element
