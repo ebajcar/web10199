@@ -16,12 +16,12 @@ console.log("entered getProvinces");
             console.log("attempting to get data");
             let list = [];
             //let selectList = document.createElement("select");
-            let curr = document.getElementById("prov")
+            let parent = document.getElementById("prov");
             let index = 0;
             // for each item in the collection
             for (const item of data) {
 
-                curr.appendChild(document.createElement("option")); 
+                let curr = parent.appendChild(document.createElement("option")); 
                 curr.setAttribute("value", item.postal);
                 curr.setAttribute("title", item.title);
                 curr.innerHTML = item.name + "  ("+ item.postal +")";
