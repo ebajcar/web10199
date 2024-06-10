@@ -20,6 +20,7 @@ function getProvinces() {
                 curr.setAttribute("title", item.title);
                 curr.innerText = item.name + "  ("+ item.postal +")";
             }
+            console.log(parent);
         // for debugging
         }).catch(error => {
             console.log(error);
