@@ -71,7 +71,8 @@ dd:first-of-type ol{
        <details>
             <summary>Followup to class discussion:  Boolean objects and type conversion</summary>
             <dl>
-                <dt></dt>
+                <dt>We want to create a TR on every other pass through the for loop,<br>
+            starting with the first pass when index=0 (then 2, 4, 6,...)</dt>
                 <dd>
                   <figure>
                     <a href="img/colours_index_mod_2_console.png" target="_blank">
@@ -98,7 +99,7 @@ if (!(index % 2)) {
             </dl>
         </details>
         
-       <details>
+       <details open>
             <summary>Followup to class discussion: event listeners</summary>
             <dl>
                 <dt>Removing event listeners</dt>
@@ -114,6 +115,41 @@ if (!(index % 2)) {
             </dl>            
         </details>        
 
+       <details open>
+            <summary>More on functions...</summary>
+            <p>Source: javascript.info <a href="https://javascript.info/arrow-functions-basics" target="_blank">Arrow functions, the basics</a> and  <a href="https://javascript.info/arrow-functions" target="_blank">Arrow functions revisited</a> </p>
+            <dl>
+                <dt>Function Declaration</dt>
+                <dd>A global Function Declaration is visible in the whole script, no matter where it is.</dd>
+                <dd>In strict mode, when a Function Declaration is within a code block, it’s visible everywhere inside that block. But not outside of it.</dd>
+                <dd><pre class="language-js" tabindex="0"><code class="language-js">// Function Declaration
+function sum(a, b) {
+  return a + b;
+}</code></pre></dd>
+                <dd>
+                  <figure hidden>
+                    <a href="" target="_blank">
+                        <img src="" alt="">
+                    </a>
+                    <figcaption>Fig. 6.3. </figcaption>
+                  </figure>
+                </dd>
+                <dt>Function Expression</dt> 
+                <dd>A Function Expression is created when the execution reaches it and is usable only from that moment.</dd>
+                <dd><pre class="language-js" tabindex="0"><code class="language-js">// Function Expression
+let sum = function(a, b) {
+  return a + b;
+};</code></pre></dd>
+            
+                <dt>Arrow functions</dt>
+                <dd>A very simple and concise syntax for creating functions, that’s often better than Function Expressions.</dd>
+                <dd><pre class="language-js" tabindex="0"><code class="language-js">let sum = (a,b) => a + b;</code></pre></dd>
+                <dd>is a shorter version of</dd>
+                <dd><pre class="language-js" tabindex="0"><code class="language-js">let sum = function(a,b) {
+  return a + b;
+};</code></pre></dd>
+            </dl>            
+        </details>  
 
 </section>
 
@@ -143,7 +179,7 @@ JSON
                 
                 <dt>Complete MDN tutorial   <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON" target="_blank">Working with JSON</a></dt> 
                 <dd>JSON structure, Arrays as JSON, JSON.parse() method, JSON.stringify() method</dd>
- 
+
                 <dt>Complete MDN tutorial  <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing" target="_blank">Introducing asynchronous JavaScript</a></dt>
                 <dd>Asynchronous programming is a technique that enables your program to start a potentially long-running task and still be able to be responsive to other events while that task runs, rather than having to wait until that task has finished. Once that task has finished, your program is presented with the result.</dd>
                 <dd>Review event handlers and callbacks</dd> 
