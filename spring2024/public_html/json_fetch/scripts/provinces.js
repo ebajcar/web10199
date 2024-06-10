@@ -17,27 +17,20 @@ console.log("entered getProvinces");
             let list = [];
             //let selectList = document.createElement("select");
             let parent = document.getElementById("prov");
+            console.log(parent);
             let index = 0;
             // for each item in the collection
             for (const item of data) {
-
                 let curr = parent.appendChild(document.createElement("option")); 
                 curr.setAttribute("value", item.postal);
                 curr.setAttribute("title", item.title);
                 curr.innerHTML = item.name + "  ("+ item.postal +")";
                 list[index] = item.name;
+                console.log(list);
                 index++;
-            
-                // make a link
-                //let option = document.createElement("option");
-                //a.href = link.file;
-                //option.textContent = item.name;
-
-                // add link to nav
-                //nav.append(a)
             }
             // add nav to the header element
-            document.getElementById("prov").appendChild(list);
+            //document.getElementById("prov").appendChild(list);
         // for debugging
         }).catch(error => {
             console.log(error);
