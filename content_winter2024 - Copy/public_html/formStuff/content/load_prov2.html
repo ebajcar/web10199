@@ -77,51 +77,10 @@ https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Alberta-Provincial-Leg
         <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
     </footer>
 
-<script>
-"use strict";
-let nPostal = new Postal();
-nPostal.createDropdown();
-//nPostal.filterProvinces();
+<script src="provinces.js"></script>
+</body>
+</html>
 
-function Postal() {
-    
-	this.province = [
-		{ name: "Alberta", 					postal: "AB",    title: "Province"  },
-		{ name: "British Comumbia", 		postal: "BC",    title: "Province"  },
-		{ name: "Manitoba", 				postal: "MB",    title: "Province"  },
-		{ name: "New Brunswick", 			postal: "NB",    title: "Province"  },
-		{ name: "Newfoundland and Labrador", postal: "NL",   title: "Province"  },
-		{ name: "Northwest Territories", 	postal: "NT",    title: "Territory" },
-		{ name: "Nova Scotia", 				postal: "NS",    title: "Province"  },
-		{ name: "Nunavut", 					postal: "NU",    title: "Territory" },
-		{ name: "Ontario", 					postal: "ON",    title: "Province"  },
-		{ name: "Prince Edward Island", 	postal: "PE",    title: "Province"  },
-		{ name: "Quebec", 					postal: "QC",    title: "Province"  },
-		{ name: "Saskatchewan", 			postal: "SK",    title: "Province"  },
-		{ name: "Yukon Territories", 		postal: "YT",    title: "Territory" }	
-	];
-    
-	this.createDropdown = function () {
-		let list = [];
-		this.province.forEach(myFunction);
-		//console.log(this.province);
-		function myFunction(item, index) {
-			let curr = document.getElementById("prov").appendChild(document.createElement("option")); 
-			curr.setAttribute("value", item.postal);
-            curr.setAttribute("title", item.title);
-			curr.innerHTML = item.name + "  ("+ item.postal +")";
-			list[index] = item.name;
-		}		
-	}
-   /* 
-    this.filterProvinces = function () {
-        console.log(this.province);
-        this.provOnly = this.provinces.forEach(filterProv);
-        function myFunction(item, index); {
-             
-        }
-    } */
-}
 
 </script>
 </body>
