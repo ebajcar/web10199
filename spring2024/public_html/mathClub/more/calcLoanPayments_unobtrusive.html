@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+Years: <input type="range" id="years" value="5" min="1" max="15"><output id="rangeOutput">-</output>
+<br>Interest: <input type="number" id="percent" value="2.5">
+<br>Principal: <input type="number" id="amount" value="5000" step="500">
+<br>Payments: <output id="monthly"></output>
+<br>Total Payments: <output id="total"></output>
+</form>
+
+<script>
+var principal = parseFloat(amount.value);
+var interest = parseFloat(percent.value) / 100 / 12;
+var payments = parseFloat(years.value) * 12;
+
+document.getElementById("amount").addEventListener( "change", function() {
+    principal = parseFloat(amount.value);
+	recalc();
+}, false ) ;
+
+document.getElementById("percent").addEventListener( "change", function() {
+    interest = parseFloat(percent.value) / 100 / 12;
+	recalc();
+}, false ) ;
+
+document.getElementById("years").addEventListener( "change", function() {
+    payments = parseFloat(years.value) * 12;
+	recalc();
+}, false ) ;
+
+document.getElementsByTagName("form")[0].addEventListener( "input", recalc, false ) ;
+function recalc() {
+    var x = Math.pow(1 + interest, payments);
+    var result = (principal * x * interest)/(x - 1);
+	monthly.value = result.toFixed(2);
+	var totalPayments = result * payments;
+	//console.log(totalPayments);
+	total.value = totalPayments.toFixed(2);
+}
+/*
+document.getElementsByTagName("form")[0].oninput = function () {
+    var x = Math.pow(1 + interest, payments);
+    var result = (principal * x * interest)/(x - 1);
+	console.log(result);
+	monthly.value = result.toFixed(2);
+};
+*/
+document.getElementsByTagName("form")[0].addEventListener( "input", function() {
+	document.getElementById('rangeOutput').innerHTML = document.getElementById('years').value;
+}, false ) ;
+/*	
+document.getElementsByTagName("form")[0].oninput = function () {
+	document.getElementById('rangeOutput').innerHTML = document.getElementById('years').value;
+}
+*/
+</script>
+</body>
+</html>

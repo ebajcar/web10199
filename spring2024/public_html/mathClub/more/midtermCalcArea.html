@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Midterm Question D</title>
+</head>
+<body>
+	<input type="number" id="radius" value="5.7" placeholder="Enter radius value">		
+	<p id="result"></p>
+	<p id="colors"></p>
+<script>
+/*
+ Complete the program, using unobtrusive, functional Javascript, so that the answer appears in the paragraph whenever  the user inputs a new value for the radius. Display result with five decimal places.
+*/
+radius.oninput = function() { 
+	r2 = radius.value;
+	area2 = calc(r2); 
+	console.log(result);
+	result.innerHTML = 
+		"The area is " + area2.toFixed(5) + " when radius is " + r2;
+};
+function calc(radius) {
+	return Math.PI * Math.pow(radius,2);
+}		
+
+var colors = new Array();
+colors[0]="red";
+colors[1]="white";
+colors[4]="green";
+console.log(colors);
+document.getElementById("colors").innerText = colors;
+
+if ( true == 1 ) {
+	console.log("Hello World");
+} else {
+	console.log("See you next time");
+}
+
+</script>	
+</body>
+</html>

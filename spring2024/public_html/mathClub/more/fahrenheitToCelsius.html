@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tutorial 1 Q3</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: 
+Version: 0.1
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Practice Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+	Write a simple program that converts Fahrenheit to Celsius.
+-->	
+</head>
+<body>
+	<header>
+		<h1>Write a simple program that converts Fahrenheit to Celsius.</h1>
+	</header>
+	<main>
+
+	</main>
+	<footer>
+		<address>Web Programming @ Sheridan College</address>
+	</footer>
+<script>
+// How to convert Celsius to Fahrenheit
+// T(°F) = T(°C) × 9/5 + 32
+//How to convert Fahrenheit to Celsius
+// T(°C) = (T(°F) - 32) × 5/9
+var fahrenheit = 90;
+var celsius =  (fahrenheit - 32) * 5 / 9 ;
+// The toFixed() method converts a number into a string, 
+// keeping a specified number of decimals
+document.write("<p>" + fahrenheit, "°F temparature is ", celsius.toFixed(2), "°C</p>" );
+
+// The toPrecision() method formats a number to a specified length.
+var fahrenheit = 40.5;
+var celsius =  (fahrenheit - 32) * 5 / 9 ;
+//document.write(fahrenheit, "°F temparature is ", celsius.toPrecision(5), "°C" );
+//document.appendChild(document.createElement("p")).innerHTML = "hello world";
+document.getElementsByTagName("main")[0].textContent = "hello world";
+var colors = [];
+colors[0] = 5;		
+</script>	
+</body>
+</html>
