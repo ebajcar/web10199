@@ -195,18 +195,18 @@ p {
 | display(msg, where, what) |
 -----------------------------
 */
-var dice = [null, "one", "two", "three", "four", "five", "six"];
-var rollButton = document.getElementById("roll");
-var outcome = document.getElementById("total");
-var show = document.getElementById("show");
-var showWins = document.getElementById("wins");
-var showLosses = document.getElementById("losses");
-var alpha = document.getElementById("alpha");
-var bravo = document.getElementById("bravo");
-var point = 0;
-var wins = 0; 
-var losses = 0;
-var message = {
+const dice = [null, "one", "two", "three", "four", "five", "six"];
+const rollButton = document.getElementById("roll");
+const outcome = document.getElementById("total");
+const show = document.getElementById("show");
+const showWins = document.getElementById("wins");
+const showLosses = document.getElementById("losses");
+const alpha = document.getElementById("alpha");
+const bravo = document.getElementById("bravo");
+let point = 0;
+let wins = 0; 
+let losses = 0;
+const message = {
 	natural : "That's a natural. You win!",
 	craps 	: "That's craps. You lose!",
 	point 	: "You made your point. You win!",
@@ -231,21 +231,21 @@ function clear() {
 }
 
 function rollBoth() {
-	var sum = roll(alpha) + roll(bravo);
+	let sum = roll(alpha) + roll(bravo);
 	outcome.innerHTML = sum;
 	display(determineOutcome(sum)) ;
 }
 
 function roll(currDice){
-  var random = Math.floor((Math.random() * 6) + 1);
+  let random = Math.floor((Math.random() * 6) + 1);
   //currDice.innerHTML = random;
   displayRolledDice(currDice, random);
   return random;
 }
 
 function displayRolledDice(thisDie, random) {
-  var clearMe = thisDie.getElementsByTagName("span");
-  var newDie = thisDie.getElementsByClassName(dice[random]); 
+  let clearMe = thisDie.getElementsByTagName("span");
+  let newDie = thisDie.getElementsByClassName(dice[random]); 
   for (var i = 0; i < clearMe.length; i++) 
 		clearMe[i].style.opacity = "0"; 
   for (var i = 0; i < newDie.length; i++) 
