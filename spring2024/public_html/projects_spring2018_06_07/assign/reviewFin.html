@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!-- 
+Author: Ellen Bajcar
+Date: Summer 2016
+Version: 3.0
+Purpose: learning Javascript programming
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Description: 
+	a review page for midterm preparation
+
+http://www.w3schools.com/js/tryit.asp?filename=tryjs_throw_error
+
+http://www.w3schools.com/js/tryit.asp?filename=tryjs_finally_error	
+http://talks.php.net/show/starting_php5/
+
+-->
+<html>
+<head>
+	<title>Final Exam Review</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">	       
+	<link type="text/css" rel="Stylesheet" href="../../js/syntax/styles/shCoreDefault.css"/>
+	<link type="text/css" rel="Stylesheet" href="../../js/syntax/styles/shThemeDefault.css"/>
+    <style>
+body {
+	
+    background-image: url('../../images/sher_lbshort.jpg');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+	max-width: 1080px;
+	width: 62%;
+	margin: 25px auto;
+}
+.narrow {
+	background-color: white;
+	border-radius: 4px;
+}
+.col150 {
+	width: 150px;
+}
+code {
+	font-weight: bolder;
+}
+li.L0, li.L1, li.L2, li.L3,
+li.L5, li.L6, li.L7, li.L8 { 
+    list-style-type: decimal !important 
+}
+.prettyprint {
+    border: 1px solid lightgray !important;
+    border-left: 5px solid orange !important;
+}    
+[data-toggle=popover] {
+    color: orange;
+    font-weight: bold;
+}
+.icon {
+    height: 1.2em;
+}
+pre {width: 80%;}
+.w3-container > ol > li {margin-bottom: 9px;}
+.w3-myfont {
+  font-style: italic;
+  font-size: 0.9em;
+}
+</style>
+</head>
+<body>	
+<div class="narrow">
+	<div class="w3-container w3-red">
+	  <span class="w3-closebtn" onclick="this.parentElement.style.display='none'">X</span>
+	  <h2>Check here regularly in preparation for the final exam.</h2>
+	</div>
+	
+	<div class="w3-container"> 
+		<h2>Final Exam Review &mdash;  <small>covers Weeks 1-13</small></h2>
+		<hr>
+		<h3>Test Information</h3>
+		<ul>
+
+		<li>
+			<i class="fa fa-circle-o-notch fa-spin"></i> 
+			The exam includes all material covered in weeks 1 through 13.</li>
+		<li>
+			<i class="fa fa-exclamation-triangle"></i> 
+			All questions are answered on test paper. 
+			Write clearly and submit ALL papers provided.</li>
+		<li>
+			<i class="fa fa-exclamation-triangle"></i> 
+			The exam is a closed book test and, therefore, you have no access 
+			to your computer or any online material.</li>
+		<li>
+			<i class="fa fa-exclamation-triangle"></i> 
+			You are permitted to use your handwritten, original notes! 
+			(no reproductions, no printouts).</li>
+		<li>
+			<i class="fa fa-exclamation-triangle"></i> 
+			YOU KEEP YOUR NOTES, DO NOT SUBMIT with your exam.</li>
+		<li>
+			<i class="fa fa-exclamation-triangle"></i> 
+			If you are caught with any reproduced material, ALL notes will be 
+			taken away and your exam mark may be a subject to penalty! 
+			( Please review Academic Honesty policies. )</li>
+		<li class="w3-khaki">
+			<i class="fa fa-percent"></i> 
+			The length of the exam is two (2) hours. 
+			The maximum number of marks is 50. Breakdown: 
+			<ul>
+				<li>about 1/3 multiple choice and true-false questions,</li>
+				<li>about 1/3 short answers and correcting code, </li>
+				<li>about 1/3 writing code.</li>
+			</ul>
+		</li>
+		<li>
+			All exams are written in Week 14.  
+			You have to write during your scheduled section, unless you make 
+			arrangements one week ahead of time, in person, confirming 
+			the arrangement through email.
+		</li>
+		<li>
+			<i class="fa fa-circle-o-notch fa-spin"></i> 
+			This review does not intend to be comprehensive, only to highlight 
+			important concepts and components. It is your responsibility to go 
+			over all the material (examples, references, ...) to ensure that 
+			you understand the material and prepare for the exam properly. 
+			If you have been making notes all along, it is a good practice to 
+			review, outline, and summarize your own notes. 
+			<a href="https://www.evernote.com/shard/s687/sh/ba566b61-c3f4-4c14-955d-05111b507b62/762e4cec74f62cd2e8a177d0fde89d11" 
+				target="_blank">How To</a> Get An A...
+		</li>
+		<li>
+			<a href="https://www.evernote.com/shard/s687/sh/d7f08e9d-473a-41a2-b952-d6b5e1c61b35/5e8134971dd9a9d50dfd2600e70cebbd" 
+			target="_blank">Exam Protocol</a> 
+			<span class="label label-danger">IMPORTANT</span> 
+		</li>			
+	</ul>		
+	</div> <!-- w3-container ends -->
+	<hr>
+	<div class="w3-container">
+		<h3>Material to review</h3>
+		<ul>
+			<li><a href="../php_summary.html" target="_blank">PHP overview</a> [updated August 5, 2016]</li>
+			<li><a href="../js_summary.html" target="_blank">Javascript overview</a></li>
+			<li><a href="../js_tut05.html" target="_blank">Tutorial Set 5</a></li>
+			<li><a href="../php_tut06.html" target="_blank">Tutorial Set 6</a></li>
+			<li><a href="../php_tut07.html" target="_blank">Tutorial Set 7</a></li>
+		</ul>
+	</div>
+	
+	
+	<div class="w3-container w3-section w3-light-grey w3-leftbar w3-rightbar w3-border-indigo">
+		<h3>PHP Language Hightlights</h3>
+		<ul>
+			<li>Arrays: indexed and associative (compare to Javascript)
+			  <div class="w3-code notranslate">
+			  $a = array();<br>
+			  $a[0] = "first item";<br>
+			  $b["carMake"] = "Honda";<br>
+			  $c = array("first item", "second item", "third item");<br>
+			  $d = array("firstKey" => "value associated with firstKey", <br>
+			  &nbsp;&nbsp;&nbsp;&nbsp;"anotherKey" => "value associated with anotherKey");<br>
+			  </div>		
+			</li>
+			<li>Objects and classes (compare to Javascript)</li>
+			<li>Control structures: in addition to loops and decisions, make use of include and require</li>
+			<li>Error handling: explore die(), try-throw-catch, error_log, ...</li>
+			<li>PHP Functions &amp; Methods
+				<p><span class="w3-code w3-padding-4">empty($var)</span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">returns true if <samp>$var</samp> is empty array, string, or other data structure; otherwise false.</span></p>	
+				
+				<p><span class="w3-code w3-padding-4">strlen($str)</span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">returns the length of a string.</span></p>	
+
+				<p><span class="w3-code w3-padding-4">isset($var)</span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">returns true if $var exists and has a value; false if it does not exist.</span></p>	
+
+				<p><span class="w3-code w3-padding-4">is_numeric($var)</span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">returns true if $var contains a numeric value or can be case to a numeric value; otherwise false.</span></p>
+
+				<p><span class="w3-code w3-padding-4">trim($str), stripslashes($str), htmlspecialchars($str)</span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">functions to trim, remove slashes and replace HTML special characters with HTML entity codes; return a new version of the string passed as a parameter.</span></p>
+				
+				<p><span class="w3-code w3-padding-4">rand($min,$max)</span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">returns a random integer from $max to $min; for example use rand(1,6) to simulate rolling a standard die.</span></p>	
+
+				
+				<p><span class="w3-code w3-padding-4">fopen(); fwrite(), fclose(), error_log(), file(), readfile()</span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">functions to read and write to text files stored on the server.</span></p>	
+					
+				<p><span class="w3-code w3-padding-4">session_start(); session_destroy();</span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">starts or resumes a session; terminates the session.</span></p>					
+			</li>
+			<li>Database connection: use PDO object as preferred choice.<br>
+				<p><span class="w3-code w3-padding-4">new PDO("mysql:host=localhost;dbname=$DATABASE", $USERID, $PASSWORD)</span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">creates a connection handle to $DATABASE database using the given $USERID and $PASSWORD credentials; returns a PDO object representing the connection or throws an exception.</span></p>				
+				
+				<p><span class="w3-code w3-padding-4">prepare($command) </span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">PDO method which precompiles a given SQL query string and retuns a PDO Statement object. The query string can contain question marks for values to be filled in at execution time.</span></p>	
+				
+				<p><span class="w3-code w3-padding-4">execute() </span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">PDO Statement method to execute the prepared statement.</span></p>	
+				
+				<p><span class="w3-code w3-padding-4">execute($params) </span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">PDO Statement method to excute the prepared statement, using $params array to fill in the question marks in the prepared statement.</span></p>	
+				
+				<p><span class="w3-code w3-padding-4">fetch() </span><br>
+					<span  class="w3-slim w3-padding-4 w3-myfont">PDO Statement method to fetch the next row from the dataset; returns the row as an associative array or false if there are no more rows.</span></p>	
+					
+					</li>
+			<li class="w3-cyan">...will add more as we go through the review in week 13</li>
+		</ul>
+	</div>
+	<div class="w3-container">			
+		<h3>Sample Questions</h3>
+		<ol>
+			<li>[T <input type="checkbox" checked> F <input type="checkbox">] PHP allows you to send emails directly from a script.</li>		
+			<li>[T <input type="checkbox" checked> F <input type="checkbox">] The PHP syntax is most similar to Perl and C languages..</li>	
+			<li>[T <input type="checkbox"> F <input type="checkbox" checked>] In PHP, you elicit feedback from a user through events.</li>
+			<li>[T <input type="checkbox"> F <input type="checkbox" checked>] PHP requires instructions to be terminated with a semicolon at the end of each statement, including the closing tag of a block of PHP code. You need to have a semicolon terminating the last line of a PHP block.</li>
+			
+			<li>[T <input type="checkbox"> F <input type="checkbox">] PHP has an exception model similar to that of other programming languages. An exception can be thrown, and caught ("catched") within PHP. Code may be surrounded in a try block, to facilitate the catching of potential exceptions. Each try must have at least one corresponding catch or finally block..</li>
+			<li>[T <input type="checkbox"> F <input type="checkbox">] Current version of PHP is version 7.</li>
+			<li>[T <input type="checkbox"> F <input type="checkbox">] The foreach construct provides an easy way to iterate over arrays. .</li>
+			<li>[T <input type="checkbox"> F <input type="checkbox">] Direct SQL Command Injection is a technique where an attacker creates or alters existing SQL commands to expose hidden data, or to override valuable ones, or even to execute dangerous system level commands on the database host. This is accomplished by the application taking user input and combining it with static parameters to build an SQL query.</li>
+			<li>[T <input type="checkbox"> F <input type="checkbox">] <code>$_SERVER['HTTP_USER_AGENT']</code> in PHP provides the same information as Javascript's <code>navigator.userAgent</code>.</li>
+			<li>[T <input type="checkbox"> F <input type="checkbox">] In PHP, strings are not objects; therefore the dot operator is not available to access properties and methods.</li>
+			
+			<li>What is the correct way to open the file "calendar.txt" as readable?	 
+				<ol type="a">
+					<li><samp>open("calendar.txt","read");</samp></li>
+					<li><samp>open("calendar.txt");</samp></li>
+					<li><samp>fopen("calendar.txt","r+");</samp></li>
+					<li><samp>fopen("calendar.txt","r");</samp></li>
+				</ol>				
+			</li>
+			<li>Which of the following identifiers are acceptable in PHP and Javascript? 	 
+				<ol type="a">
+					<li><samp>$_hello</samp></li>
+					<li><samp>$n123-456</samp></li>
+					<li><samp>helloWorld</samp></li>
+					<li><samp>$Hello_World</samp></li>
+				</ol>				
+			</li>	
+			<li>Which of the following literals are valid PHP variable names?  	 
+				<ol type="a">
+					<li><samp>$_hello</samp></li>
+					<li><samp>$n123-456</samp></li>
+					<li><samp>helloWorld</samp></li>
+					<li><samp>$Hello_World</samp></li>
+				</ol>				
+			</li>			
+			<li>
+				A point in 2D space has a pair of values (x,y); a rectangular 
+				area can be described with four (4) vertices (points). Declare 
+				and initialize an array called rect which stores the vertices 
+				(2,3), (15,3), (2,10), and (15,10)	
+			</li>
+			<li>
+				Declare and initialize an array called family that contains 
+				the values: Charlie, John, Helen, Omar, Harry, Olivia, Anna, and Peter.
+			</li>
+			<li>
+				What are the differences and similarities 
+				between the client session and the server session?	
+			</li>
+			<li>
+				What are the differences and similarities 
+				between POST and GET methods?	
+			</li>			
+			<li>
+				What programming approach allows you to organize code better and 
+				to take advantage of encapsulation and inheritance, sometimes
+				at the expense of performance?
+			</li>	
+			<li title="answer: &lt;?= $foobar ?>">
+				Using the PHP expression tag, display the value of variable foobar.
+			</li>	
+			<li title="answer: &lt;?= $x + $y ?>">
+				Using the PHP expression tag, display the sum of variables x and y.
+			</li>	
+			<li>
+				What is returned by the following function when the values are $a = 7; $b = 8; $c = 5;?
+				<pre class="brush: js;">function ($a,$b,$c) { return $a.$b.$c; }</pre>
+			</li>			
+			<li>
+				What is returned by the following function when the values are $a = 7; $b = 8; $c = 5;?
+				<pre class="brush: js;">function ($a,$b,$c) { return $a+$b+$c; }</pre>
+			</li>			
+			<li class="w3-cyan">...will add more as we go through the review in week 13</li>
+		</ol>	
+	</div>
+	
+	
+   <hr> 
+	<h4>Assignment-related Examples</h4>
+	<dl>
+		<dt class="w3-deep-orange" title="Reflect and explain in your own words."> &nbsp;<i class="fa fa-question w3-xlarge" aria-hidden="true"></i> Which one is better and why?</dt> <!-- http://www.phpied.com/extreme-javascript-optimization/ -->
+		<dd>
+<pre class="brush: js; highlight: [0]; first-line: 1" title="Version A">
+for (var i = 0; i &lt; arr.length; i++) {
+    // some code here
+}</pre>
+		<p>or</p>
+<pre class="brush: js; highlight: [0]; first-line: 1" title="Version B">
+var len = arr.length;
+for (var i = 0; i &lt; len; i++) {
+    // some code here
+}</pre>		
+		</dd>
+		
+		<dt class="w3-deep-orange" title="Reflect and explain in your own words."> 
+			&nbsp;<i class="fa fa-question w3-xlarge" aria-hidden="true"></i> 
+			What does the code do?</dt>
+		<dd>
+		<details>
+			<summary>Javascript code used in the memory game: create a standard
+				HTML5 document with the following content. Test, comment, and
+				explain what it does, how it works, and what modifications
+				you have considered.</summary>
+<pre class="brush: js; highlight: [0]; first-line: 10" title="">
+&lt;body>
+	&lt;main>&lt;/main>
+&lt;script>
+var elRoot = document.getElementsByTagName("main")[0];
+var map=new Array(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 
+	10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18);
+var temparray = new Array();
+var len = map.length;
+var num = 5;
+scramble();
+function scramble() {
+	var elParag = document.createElement("p");
+	elRoot.appendChild(elParag);			
+	elParag.innerHTML = map;
+	for (var z = 0; z &lt; num; z++) {
+		for (var x = 0; x &lt; len; x++) {
+			temparray[0] = Math.floor(Math.random()*len);
+			temparray[1] = map[temparray[0]];
+			temparray[2] = map[x];
+			map[x] = temparray[1];
+			map[temparray[0]] = temparray[2];
+		}  
+		var elParag = document.createElement("p");
+		elRoot.appendChild(elParag);			
+		elParag.innerHTML = map;	  
+		elParag.innerHTML += "&lt;hr>";
+	}
+}
+&lt;/script></pre>		
+		</details>
+		<hr>
+	</dd>		
+		
+		<dt class="w3-deep-orange" title="Reflect and explain in your own words."> 
+			&nbsp;<i class="fa fa-question w3-xlarge" aria-hidden="true"></i> 
+			What does the code do?</dt>
+		<dd>
+		<details>
+			<summary>Javascript code used in the memory game: <p>two timers, one uses setTimeout to delay the callback to <samp>changeImg()</samp> to flip between the two images every two seconds; the second timer uses setTimeout to update the clock (callback <samp>runclk()</samp> every second. Also note the use of other DOM properties and methods (document.formName.inputName and document.images).</p><p>Note the use of <samp>curImg.src.search()</samp>. Why not use use the condition <samp>( curImg.src == "../media/rock.png" )</samp> ? What is the output of <samp>console.log(curImg.src);</samp></summary>
+			<form style="width: 280px;" name="mForm"> 
+				<img src="../media/rock.png">
+				<input name="mButton" type="button" value="Click to start the timer" 
+					style="display:inline-block; height: 100px;  font-size: 2em;
+							width: 100px; float: right; margin-right: 10px;">
+			</form>	
+<pre class="brush: js; highlight: [0]; first-line: 10" title="">
+&lt;body>
+	&lt;form name="mForm"> 
+		&lt;img src="rock.png">
+		&lt;input name="mButton" type="button" value="Click to start the timer" >
+	&lt;/form>
+&lt;script>
+	var id, ticker = 0, min = 0, sec = 0;
+	clearTimeout(id);
+	document.mForm.mButton.value = ""; 
+	runclk();
+	function runclk() {
+		min = Math.floor(ticker/60);
+		sec = (ticker-(min*60))+'';
+		if(sec.length == 1) {sec = "0"+sec};
+		ticker++;
+		document.mForm.mButton.value = min+":"+sec; 
+		id = setTimeout('runclk()', 1000);
+	}
+	
+	var curImg = document.images[0];
+	setTimeout('changeImg()', 2000);	
+	function changeImg() {
+		( curImg.src.search("rock") &lt; 0 ) 
+			? curImg.src = "../media/rock.png" 
+			: curImg.src = "../media/paper.png";
+		setTimeout('changeImg()', 2000);
+	}
+&lt;/script></pre>		
+		</details>
+	</dd>		
+<script>
+	var id, ticker = 0, min = 0, sec = 0;
+	clearTimeout(id);
+	document.mForm.mButton.value = ""; 
+	runclk();
+	function runclk() {
+		min = Math.floor(ticker/60);
+		sec = (ticker-(min*60))+'';
+		if(sec.length == 1) {sec = "0"+sec};
+		ticker++;
+		document.mForm.mButton.value = min+":"+sec; 
+		id = setTimeout('runclk()', 1000);
+	}
+	
+	var curImg = document.images[0];
+	setTimeout('changeImg()', 2000);	
+	function changeImg() {
+		( curImg.src.search("rock") < 0 ) 
+			? curImg.src = "../media/rock.png" 
+			: curImg.src = "../media/paper.png";
+		setTimeout('changeImg()', 2000);
+	}
+</script> 		
+		
+		
+		
+	</dl>
+
+</div>  <!-- narrow ends -->
+		<hr>
+        <div class="panel-footer panel-primary"> 
+            <div class="small fa fa-copyright">
+                <em>This work is the intellectual property of Sheridan College. Any further copying 
+                    and distribution outside of class must be within the copyright law. Posting to 
+                    commercial sites for profit is prohibited.</em>
+                    <br>Sheridan College @ SYST10199 Web Programming
+            </div>
+        </div>
+
+
+		
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://www.w3schools.com/lib/w3codecolor.js"></script>
+<script type="text/javascript" src="../../js/syntax/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../js/syntax/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../js/syntax/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="../../js/syntax/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../../js/syntax/scripts/shBrushBash.js"></script>
+<script type="text/javascript" src="../../js/syntax/scripts/shBrushPlain.js"></script>
+<script src="../js/mytest.js"></script>
+<script>
+    SyntaxHighlighter.all();  
+    /* bootstrap activation */
+    $('#myTabs a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+
+//document.getElementById(text1).title="New tooltip";
+  
+</script> 
+
+</body>
+</html>

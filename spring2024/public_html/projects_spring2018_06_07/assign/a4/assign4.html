@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Assignment 4</title>	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>  
+    <link type="text/css" rel="Stylesheet" href="../../../js/syntax/styles/tutorials.css"/>
+	<link type="text/css" rel="Stylesheet" href="../../../js/syntax/styles/shCoreDefault.css"/>
+	<link type="text/css" rel="Stylesheet" href="../../../js/syntax/styles/shThemeDefault.css"/>	
+
+<style>
+body {
+    background-image: url('../../../images/sher_shorter.gif');
+    background-repeat: repeat-x;
+    background-attachment: initial;
+}
+address span {
+    margin-left:6px;
+    padding-left:6px;
+    font-size: 1em;
+    font-family:Arial;
+    border-left:1px solid gray;
+    display:inline-block;
+    height:24px;
+    vertical-align:text-bottom;
+}
+address img {
+    height:24px;
+    vertical-align:text-bottom;
+}
+#underRev { 
+    position: fixed; 
+    width: 100%; 
+    height:100%; 
+    background-color: black; 
+    z-index: 666; 
+    opacity: 0.9; 
+}
+#underRev h1 { 
+    font-size: 100px; 
+    color: red; 
+    text-shadow: 1px 1px 3px white; 
+    text-align: center; 
+    padding-top: 100px; 
+    -ms-transform: rotate(-7deg); /* IE 9 */
+    -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+    transform: rotate(-7deg);
+}
+body .syntaxhighlighter .line {
+        white-space: pre-wrap !important; /* make code wrap */
+}  
+pre {
+	width: 80%;
+}        
+</style>
+</head>
+
+<body> 
+    <header> 
+        &nbsp;
+    </header> 
+    
+    <div class="container">
+        <div class="panel">
+             <div class="panel-heading"> 
+                <!-- part 1 -->
+                <h1>Assignment 4 <small>SYST10199 Web Programming</small></h1>
+                <hr>
+                <h4>Complete all of the following steps:</h4>
+                <p></p>
+                <p>&nbsp;</p>
+                    <dl class="dl-horizontal">
+                    <dt class="btn btn-lg btn-danger">Objective</dt>
+                    <dd>
+                        <blockquote>
+                            <h3>Construct solution for a memory game and add it to a web site.</h3>
+                        </blockquote>
+                        <hr>	
+                    </dd>         
+                </dl>
+                <h4>Complete the web application:</h4>
+                <dl class="dl-horizontal">
+                    <dt class="btn btn-warning">Step 1</dt>
+                    <dd>
+                        <p>Create a six-by-six memory game (also known as pick-a-pair and concentration).</p> 
+						<p>Use the layout and overlays in Tic Tac Toe.</p> 
+                        <hr> 
+                        <object width="54%" height="700px" data="a4_MEM.swf">
+							<param name="scale" value="exactFit" /></object>
+                        <hr> 
+                    </dd>
+					
+					
+                    <dt class="btn btn-warning">Step 2</dt>
+                    <dd>
+						<p>Copy the entire Assignment 3 substructure and add the memory sub-tree. Make sure you "freeze" Assignment 3 structure! Do not overwrite and stop modifying the previous assignments. All current changes should be done within the assign4 structure!.</p>
+						<p><button type="button" class="btn btn-primary" data-toggle="modal" 
+									data-target="#modalA">Organize directories and files properly and publish appropriately.</button></p>						
+                        <hr>  
+  <h5 class="btn btn-success">Create assign4/index.html</h5> 
+			<p>The content of the page should look like: <br> 
+			<img width="760" src="assign4a.png" alt=""></p>
+			<hr>
+			<p>Use the W3 CSS framework to style your website.</p>
+<pre class="syntaxhighlight brush: html;">
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1">
+	&lt;link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	&lt;link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"></pre>			
+		<p>Explore the <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS framwork</a> and the <a href="http://fontawesome.io/" target="_blank">font awesome toolkit</a></p>
+		<p>Style the header, navigation, form and footer similarly. Choose your own colour scheme, choose your images to "blend in".  Make it look polished.  Use the W3.CSS as a guide and reference.</p>
+			<hr>
+			<p>The main content of the page is the logon form.</p>
+<pre class="syntaxhighlight brush: html;">
+	&lt;div class="w3-container w3-text-orange">
+		&lt;h1  class="w3-text-shadow">Welcome!&lt;/h1>
+		&lt;h4>Log in to browse and play:&lt;/h4>
+		&lt;/div>
+	&lt;form id="logon"  class="w3-container">
+		&lt;label class="w3-label w3-text-amber">User ID&lt;/label>&lt;input class="w3-input" name="id" type="text">
+		&lt;label class="w3-label w3-text-amber">Password&lt;/label>&lt;input class="w3-input" name="pass" type="password">
+		&lt;br>
+		&lt;input type="button" value="LOGIN"  class="w3-btn w3-orange w3-xlarge">
+		&lt;input type="button" value="RESET"  class="w3-btn w3-orange w3-xlarge">
+		&lt;input type="button" value="Create Account" disabled  class="w3-btn w3-orange  w3-xlarge">
+	&lt;/form></pre>	
+<hr>
+			<p>Embed a script that provides the following functionality.</p>
+<pre class="syntaxhighlight brush: js;">
+// use document.querySelector("[value=LOGIN]") to add event listener
+// that will call a function passUser(thisForm) which will check
+// that both user ID and password are valid (use "foo" and "bar" respectively)
+// if both are valid, window.location to load page2.html</pre>	
+<hr>			
+  <h5 class="btn btn-success">Create assign4/page2.html</h5> 
+			<p>The content of the page should look like: <br> 
+			<img width="760" src="assign4b.png" alt=""></p>
+			<hr>	
+				<p>The footer and header areas should be exactly the same as index.html. This page has a navigation bar styled with W3CSS that provides the user with selection of games. The navigation should connect to the tic-tac-toe, bingo, rock-paper-scissors, and memory games.</p>
+                    </dd>
+					
+					
+                    <dt class="btn btn-warning">Step 3</dt>
+                    <dd>    
+						<p>Prior to submission, review 
+							<button class="btn btn-default"  data-toggle="modal" data-target="#myModal">Evaluation Factors</button> &bull;
+							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalB">How to print electronic code?.</button> &bull; and
+							<a class="btn btn-default" href="https://www.evernote.com/shard/s687/sh/08e73a4c-06e0-4938-a3f4-e3e04108222d/138d63da448e70aed82a3ed545b3a95b" 
+								target="_blank">How to document code?</a>
+						</p>					
+						<p>Ask questions and discuss on Piazza Q&amp;A. Reference all sources and group members.</p><hr>
+                        <p>Attach an electronic code printout of the <strong>memory game Javascript file only</strong> as<code>userid_a4.pdf</code> to the SLATE Dropbox. NOTE: only one pdf file is required! If, for some reason, you wish to upload more than one file, DO NOT ZIP them.</p>	<hr>
+                        <p>In the Dropbox Comments field, provide the URL to the <strong>published assign4 web app on dev.fast.sheridanc.on.ca</strong>. Note that the directory structure on the server must match your local machine. It is recommended that the <code>C:\public_html</code> corresponds to <code>public_html/syst10199</code> on the server.</p>
+                        <hr> 
+                        <h3 class="btn btn-lg btn-danger">Do not leave your assupmptions unvalidated! Ask questions on Piazza Q&A and in class!</h3>
+                        <hr>						
+                    </dd>  
+                    <dt class="btn btn-warning">Optional</dt>
+                    <dd>    
+						<p>Track the number of clicks in addition to time. </p>
+						<p>Allow user to pause the game. (start-stop clock) </p>
+						<hr>
+                        
+                    </dd> 					
+                </dl>    
+            </div>
+        </div>
+
+        <!-- 
+        *********************************************
+        Footer
+        *********************************************
+        -->	
+        <hr>	
+        <p class="text-right"><a href="#">Back to top</a></p>
+		<footer>
+        <div class="panel-footer panel-primary"> 
+            <div class="small fa fa-copyright">
+                <em>This work is the intellectual property of Sheridan College. Any further copying 
+                    and distribution outside of class must be within the copyright law. Posting to 
+                    commercial sites for profit is prohibited.</em> 
+                    &mdash; <strong>Sheridan College @ SYST10199 Web Programming</strong>
+            </div>
+        </div>        
+		</footer>
+    </div>   <!-- container -->
+
+<!-- Modal -->
+    <div aria-labelledby="myModalLabel" class="modal fade" id="modalB" role=
+    "dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button aria-label="Close" class="close" data-dismiss=
+                    "modal" type="button"><span aria-hidden=
+                    "true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Electronic Code Printouts</h4>
+                </div>
+                <div class="modal-body">
+					<iframe src="https://docs.google.com/presentation/d/118QvWb6xgUsspKdD2toB5IvDA4nokAntD1koaaVoN7Q/embed?start=false&loop=false&delayms=3000" frameborder="0" width="570" height="350" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>  
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" type=
+                    "button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+<!-- Modal -->
+    <div aria-labelledby="myModalLabel" class="modal fade" id="modalA" role=
+    "dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button aria-label="Close" class="close" data-dismiss=
+                    "modal" type="button"><span aria-hidden=
+                    "true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">File Organization for Web Apps</h4>
+                </div>
+                <div class="modal-body">
+					<p>&bull; Review the standard file organization and naming conventions (see Review &amp; Preparation).</p>
+					<p>&bull; On the client (your machine), all assignments should be organized under <samp  class="btn btn-primary">C:\public_html\syst10199</samp> or <samp>C:\xampp\htdocs\syst10199</samp></p>
+					<p>&bull; Thereunder, create the <samp>assign1</samp> directory (called <b>project directory</b>), with the following structure:
+<pre style="background-color:white;border: 0px solid;">
+├── syst10199/	
+│   ├── assign1/		
+...		 
+│   ├── assign2/
+... 
+│   ├── assign3/
+... 
+│   ├── assign4/
+│   │   ├── index.html
+│   │   ├── page2.html
+│   │   ├── content/
+│   │   │   │   
+│   │   │   ├── ttt/
+│   │   │   │   ├── ttt.html			or index.html
+│   │   │   │   ├── css/
+│   │   │   │   │   └── ttt.css
+│   │   │   │   ├── images/
+│   │   │   │   └── js/
+│   │   │   │       └── ttt.js
+│   │   │   │ 
+│   │   │   ├── rsp/
+│   │   │   │   ├── rsp.html			or index.html
+│   │   │   │   ├── css/
+│   │   │   │   │   └── rsp.css
+│   │   │   │   ├── images/
+│   │   │   │   │   ├── paper.png
+│   │   │   │   │   ├── rock.png
+│   │   │   │   │   └── scissors.png
+│   │   │   │   └── js/
+│   │   │   │       └── rsp.js
+│   │   │   │
+│   │   │   ├── surveyLS/
+│   │   │   │   ├── surveyLS.html		or index.html
+│   │   │   │   ├── css/
+│   │   │   │   │   └── surveyLS.css
+│   │   │   │   ├── images/
+│   │   │   │   └── js/
+│   │   │   │       ├── data.jsonp
+│   │   │   │       └── surveyLS.js
+│   │   │   │
+│   │   │   └── memory/
+│   │   │       ├── memory.html		or index.html
+│   │   │       ├── css/
+│   │   │       │   └── memory.css
+│   │   │       ├── images/
+│   │   │       └── scripts/
+│   │   │           └── memory.js
+│   │   │ 
+│   │   ├── css/
+│   │   ├── images/
+│   │   └── js/
+</pre>		</p>	<p><strong>Do not overwrite your previous assignment projects!</strong></p>					
+					<p>&bull; When you are publishing on <samp>dev.fast.sheridanc.on.ca</samp>, copy the entire project structure to <samp class="btn btn-primary">/home/userid/public_html/syst10199</samp>.</p>
+					<p>Using sftp protocol, open a connection, position yourself on the server with the <b>cd</b> commmand, on the client with the <b>lcd</b> command, and upload the entire project with the <b>mput -r</b> command
+<pre class="syntaxhighlight brush: js;">
+cd public_html/syst10199
+lcd C:\public_html\syst10199
+mput -r assign1</pre></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" type=
+                    "button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>	
+
+	<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Evaluation Factors</h3>
+      </div>
+      <div class="modal-body">
+            <h4>Algorithm Design</h4>
+            <ul>
+                <li>Use appropriate programming structures [weight factor: 1/10]</li>
+                <li>Test all cases [weight factor: 1/10]</li>
+                <li>Error Handling [weight factor: 1/10]</li>
+            </ul>
+            <h4>Program Style</h4>
+            <ul>
+                <li>Comments [weight factor: 1/10]</li>
+                <li>Naming variables, files,... [weight factor: 1/10]</li>
+                <li>Readability and Indentation [weight factor: 2/10]</li>
+            </ul>                    
+            <h4>Program Correctness</h4>
+            <ul>
+                <li>Ability to Compile or Interpret without Errors [weight factor: 1/10]</li>
+                <li>Program Correctness, Correct Results [weight factor: 2/10]</li>
+            </ul> 
+            <h4>Citation</h4>
+            <p>Lack of Source [weight factor: -4/10] In comments, reference all sources used (classroom, course material, references, videos, websites,...) and describe what changes you've made.  </p>                               
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>		
+	
+	
+	
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>		
+
+<script type="text/javascript" src="../../../js/syntax/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushBash.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushPlain.js"></script>
+<script type="text/javascript">SyntaxHighlighter.all();</script>   
+</body>
+</html>

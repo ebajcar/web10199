@@ -1,0 +1,130 @@
+@import  http://fonts.googleapis.com/css?family=Allan:700;
+
+/*
+Author: Ellen Bajcar
+Program: bingo.css
+Date: Summer 2016
+Date Updated: 8:25 AM June-09-16
+Version: 5.0 (Week 5 stage)
+Purpose: learning Javascript programming
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+	Styling for the interface for a bingo card
+	Functionality for a bingo card (game board) and calling numbers (caller) 
+		in separate file (bingo.js)
+	See also: 
+		Javascript, Eighth Ed., Negrino & Smith
+		https://piazza.com/class/inrun9m79bc5q2?cid=15
+	Bingo terminology: 
+		http://blog.casinocashjourney.com/2013/01/18/bingo-terms/
+*/
+
+/* general type selectors */
+body {
+    background: url(../../../images/bg11.jpg) no-repeat;
+    background-size: cover;
+    font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+    width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+table {
+    margin: 0 auto;
+}
+h1,h3 {
+    font-size: 4em;
+    margin: .2em 0;
+    color: #00f;
+    text-shadow: 1px 1px 1px #fff,2px 2px 6px #000;
+}
+
+/* format of the cells on the "BINGO face" (game board) */
+td, th {
+    width:50px;
+    height:50px;
+    border: 1px solid black;
+    font-size:36px;
+    text-align:center;
+    font-family:arial, helvetica, sans-serif;
+}
+th {
+	background-color: lightblue;
+}
+td#cell22, .cell22 {
+	background-color: black;
+	color: white;
+	font-size: 16px;
+}
+button {
+    min-width: 200px;
+    height: 1.6em;
+    background-color: orange;
+    font-size: 1.2em;
+    margin: 8px auto;
+}
+
+/* caller */
+p,#message {
+    font-family: monospace;
+	color: white;
+}
+
+p,#past,#called {
+    margin: 5px auto;
+    width: 400px;
+    display: block;
+    border: 1px dotted green;
+}
+
+#usedlist {
+    word-break: break-all;
+    background: #000;
+    color: #fff;
+
+}
+
+#called {
+    color: red;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+/* overlay and popup messages styling */
+#messg {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black,-1px -1px 5px #fff;
+    display: none;
+    height: 30%;
+    left: 50%;
+    margin: auto;
+    padding: 20px;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    z-index: 200;
+}
+
+#overlay {
+    background-color: rgba(20,20,20,0.8);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+#myBoard {
+    background-color: #fff;
+    padding: 25px 5px 5px;
+    border: 1px solid orange;
+    border-radius: 9px;
+    box-shadow: 2px 2px 5px gray;
+}

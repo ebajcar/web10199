@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Order of events</title>
+    <style>
+input {
+    font-size: 1.2em;
+    border-radius: 4px;
+    padding: 4px;
+}
+    </style>
+  </head>
+  <body>
+		<input id="num" type="number" min="0" value="" placeholder="Pick a number" />
+
+		<div id="result"></div>
+    <script>
+/* Event test with html5 input[type="number"] 
+   by @girlie_mac
+
+   This quick demo shows that it is ideal to use 'input' event for better user-experience over 'change' (which requires a user to blur the field once), or 'keyup' event (which doesn't fire when you use the up/down arrow to change the values).
+
+    Try this on the browser that supports the html5 input attributes and the html5 oninput event, such as Chrome.
+
+*/
+var i=0, c=0, k=0;
+var n = document.getElementById("num"),
+    r = document.getElementById("result");
+
+n.addEventListener("input", function(e) {
+    r.innerText += ++i + " input event triggered\n";
+}, true);
+
+n.addEventListener("keyup", function(e) {
+    r.innerText += ++k + " keyup event triggered\n";
+}, false);
+
+n.addEventListener("change", function(e) {
+    r.innerText += ++c + " change event triggered\n";
+}, false);
+    </script>
+  </body>
+</html>

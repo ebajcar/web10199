@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- 
+Author: Ellen Bajcar
+Program: loading3.html
+Date: Summer 2016
+Date Updated: 8:25 AM June-09-16
+Version: 1.4
+Purpose: learning Javascript programming
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    Example for SYST10199 Web Programming, Summer 2016, Ellen Bajcar 
+	Explore loaders and setTimeout
+	http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_loader5  
+	on codepen - http://codepen.io/ebajcar/pen/NrNrRq
+-->
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>loaders and timers</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+<style>
+body {
+	width: 60%;
+	margin: auto;
+	text-align: center;
+}
+.loader {
+	margin: 14px auto;
+	border: 6px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 6px solid #3498db;
+	width: 30px;
+	height: 30px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+#myProgress {
+	margin: auto;
+    position: relative;
+    width: 20%;
+    height: 30px;
+    background-color: lightgrey;
+}
+#myBar {
+    position: absolute;
+    width: 1%;
+    height: 100%;
+    background-color: orange;
+}
+/* If you want the label inside the progress bar */
+#label {
+    text-align: center; /* If you want to center it */
+    line-height: 30px; /* Set the line-height to the same as the height of 
+			the progress bar container, to center it vertically */
+    color: white;
+}
+</style>
+<body>
+
+	<h1>Callback Example with setTimeout and loader</h1>
+	
+	<div class="loader" id="loader"></div>
+	
+	<div id="output"></div>
+	
+	<div id="myProgress">
+		<div id="myBar">
+			<div id="label">10%</div>
+		</div>
+	</div>
+
+<script>
+// explore seTimeout and loaders
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 10;
+  var id = setInterval(frame, 50);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      document.getElementById("label").innerHTML = width * 1  + '%';
+    }
+  }
+}
+
+// starting doing something
+document.getElementById('output').innerHTML += ('loading ...');
+
+// Wait 5 seconds before firing the writeEnding() function
+// note this is listed here, but delayed until  the move() is done
+var myTimer = window.setTimeout(writeEnding, 5000);
+document.getElementById('output').innerHTML += ('continuing to load ...');
+move();
+
+// Define the Write Ending Function
+function writeEnding() {
+    // Write "ending!"
+    document.getElementById('output').innerHTML += ('done!');
+	document.getElementById("loader").style.display = "none";
+	document.getElementById("myProgress").style.display = "none";
+}
+</script>
+
+</body>
+</html>

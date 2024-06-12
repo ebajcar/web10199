@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+<title>A7 instructions</title>
+<style>
+body {
+	font-family: Source Sans Pro;
+	color: black;
+	font-size: 15px;
+	line-height: 1;
+	background-color: #efefef;
+	background-image:url('bg6.jpg');
+	padding: 5%;
+	-webkit-hyphens: auto;
+	margin: 0.0px 0.0px 0.0px 0.0px;
+	-webkit-text-size-adjust: none;
+}
+
+h1 {
+	font-size: 1.4em;
+	text-align: left;
+	font-weight: bold;
+	line-height: 1.5em;
+	margin: 0em 0px 1.25em 0px;
+}
+
+h2 {
+	font-size: 1.2em;
+	text-align: left;
+	font-weight: normal;
+	line-height: 1.5em;
+	margin: 0.9em 0 1em 0;
+	text-transform: uppercase;
+	border-bottom:1px solid #aaa;
+	padding-top: 0.8em;
+}
+
+h1 + h2 {
+	margin-top: 1.5em;
+}
+
+h3 {
+	font-size: 1.1em;
+	font-weight: normal;
+	margin: 2.5em 0 1em 0;
+	text-transform: uppercase;
+}
+
+h2 + h3 {
+	margin-top: 2.5em;
+}
+
+h4 {
+	font-size: 1em;
+	margin-top: 2em;
+}
+code {
+	font-weight: bold;
+	color: red;
+}
+
+/* --------------------------------- */
+/* Pandoc author and date headers    */
+/* (h1.title, h2.author and h3.date) */
+
+div#header, header {
+	border-bottom: 1px solid #aaa;
+	padding-bottom: 1em;
+	margin-bottom: 2.5em;
+}
+
+.title {
+	text-align: center;
+	margin: 0em 0px 0.5em 0px;
+	border-bottom:none;
+	color: #000000;
+}
+
+.author {
+	text-align: center;
+	margin: 0em 0px 0em 0px;
+	border-bottom:none;
+	color: #000000;
+}
+
+.date {
+	text-align: center;
+	margin: 0em 0px 1.25em 0px;
+	color: #000000;
+}
+
+/* div for table of contents */
+/* with divider at top and bottom */
+div#TOC, nav#TOC {
+	border-top: 1px solid #aaa;
+	padding-top: 1.5em;
+	margin-top: 2.5em;
+	border-bottom: 1px solid #aaa;
+	padding-bottom: 1.5em;
+	margin-bottom: 2.5em;
+}
+
+/* ... unless we are following the header */
+div#header + div#TOC {
+	border-top: 0px solid #aaa;
+	padding-top: 0em;
+	margin-top: 0em;
+}
+
+/* print TOC in smaller font */
+@media print {
+	div#TOC, nav#TOC {
+		/* Don't display TOC in print */
+		/*display: none;*/
+		font-size: 0.8em;
+	}
+}
+/* --------------------------------- */
+
+a {
+	text-decoration: none !important;
+	color:#627aa7;
+}
+
+img {
+	width:auto;
+	max-width:80%;
+	height:auto;
+	background-color: #fff;
+	
+	/* drop a slight shadow */
+	-webkit-border-radius: 1px;
+	border: none;
+	overflow: hidden;
+	-webkit-box-shadow: 0 1px 3px #9e9c93;
+	
+	/* center image */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* --------- Table ---------- */
+
+table {
+	font-size: 15px;
+	border-collapse: collapse;
+	margin-top:    2em;
+	border-top:    1pt solid #888;
+	border-bottom: 1pt solid #888;
+}
+
+td, th  {
+	vertical-align: top;
+	vertical-align: baseline;
+	padding-left:   1.5em;
+	padding-right:  1.5em;
+	padding-top:    0.2em;
+	padding-bottom: 0.2em;
+}
+
+thead, th {
+	border-bottom: 1pt solid #aaa;
+	padding-top:    0.4em;
+	padding-bottom: 0.4em;
+}
+
+/* --------------------------------- */
+
+hr {
+	height: 1px;
+	margin: 2em 0em 4em 0;
+	text-align: center;
+	background-color: #ddd;
+	border-width: 0;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1px;
+	padding: 0 .75em 0 1.25em;
+	border-left: 3px solid #ddd;
+}
+
+blockquote strong {
+	font-weight: bold;
+	font-size: 1em;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+ul, ol {
+	padding-left: 1.25em;
+	margin-left: 1em;
+	text-indent:0em;
+}
+
+li {
+	margin-top:3px;
+	margin-bottom:3px
+}
+
+pre {
+	line-height: 1.45em;
+	background-color: inherit;
+	margin: 2em 2em 2em 1em;
+	padding: 5px 0 5px 10px;
+	border-width: 1px;
+	border-color: #ddd;
+	border-style: solid;
+	padding:6px 10px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	width: auto;
+	white-space: pre-wrap;
+	display:block;
+}
+
+code {
+	font-size: 0.91em;
+}
+
+
+/* ---- Definition Lists ---- */
+
+dl {
+	border-top:  1pt solid #888;
+	padding-top: 0.5em;
+	border-bottom: 1pt solid #888;
+	margin-top: 2em;
+	margin-bottom: 1.5em;
+	padding-left:   1.5em;
+	padding-right:  1.5em
+}
+
+dt {
+	font-weight: bold;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+dd {
+	margin-bottom: 0.5em;
+}
+
+dd+dt {
+	border-top:  1pt solid #ddd;
+	padding-top: 0.5em;
+}
+
+dd+dd {
+	border-top: 1px solid #ddd;
+	padding-top: 0.5em;
+}
+
+
+/* ---- Footnotes ---- */
+
+a.footnote, a.footnoteRef {
+	font-size: small;
+	vertical-align: text-top;
+}
+
+@media print {
+	a[href^="#fnref"], a.reversefootnote  {
+		display: none;
+	}
+}
+
+/* from http://css-tricks.com/examples/hrs/ */
+
+div.footnotes > hr {
+	margin-top: 4em;
+	padding: 0;
+	border: none;
+	border-top: double;
+	border-color: #eee;
+	border-width: 1pt;
+	color: #000;
+	text-align: center;
+}
+
+div.footnotes > hr:after {
+	content: "NOTES";
+	display: inline-block;
+	position: relative;
+	top: -0.8em;
+	font-size: 0.8em;
+	padding: 0 0.5em;
+	background: white;
+}
+
+
+/* ------------------------------------------------ */
+/* Custom classes
+ 
+ /* use this for an empty div to enforce a pagebreak */
+/* in Markdown you just need > %pagebreak%           */
+.pagebreak {
+	page-break-before: always;
+}
+
+/* This is the caption for tables or images */
+/* in Markdown, us it like >%caption%       */
+.caption {
+	caption-side: top;
+	border: none;
+	font-size:  0.9em;
+	font-style: italic;
+	text-align: center;
+	margin-top:  0.5em;
+	margin-bottom:  0.3em;
+	padding-bottom: 0.2em;
+}
+
+/* ------------------------------------------------ */
+
+@media print  {
+	
+	body {
+		background: white;
+		padding: 0%;
+	}
+	
+	h1 {
+		page-break-before: always;
+	}
+	
+	h1:first-of-type {
+		page-break-before: avoid;
+		counter-reset: page;
+	}
+	
+	h1, h2, h3, h4, h5, h6 {
+		page-break-after:avoid;
+		page-break-inside:avoid
+	}
+	
+	blockquote, table, pre {
+		page-break-inside:avoid
+	}
+	
+	ul, ol, dl  {
+		page-break-before:avoid
+	}
+	
+	img {
+		page-break-inside:avoid;
+		page-break-after:avoid;
+	}
+	
+	a {
+		text-decoration: none !important;
+		color: #000000;
+	}
+}
+
+</style>
+</head>
+<body>
+	<h1>Assignment 7 <small>instructions</small></h1>
+	
+	<h2>1. Objective</h2>
+	<ul>
+		<li>Create a members-only web site that provides members with an opportunity to play a variety of games.</li>
+	</ul>
+	
+	<h2>2. Home page</h2>
+	<ol>
+		<li>Use the template as specified in Assignment 4 to create the single-page site.  Make sure that all obtrusive Javascript is replaced with external Javascript (js/main.js). Make sure that all inline styles are replaced with external styles file (css/main.js). Note keep the home page files separate from the games.</li>
+		<li>An updated version of the template used in Assignment 4 is available. All files have been placed in a single directory; you will need to organize appropriately. The code has not been validated! Make sure you validate everything and often. Also, make sure you prettify (format) and comment code appropriately</li>		
+		<li>The template uses images bg3.jpg, canvas logo (js file),  </li>
+		<li>Evaluate carefully what code to leave internal or make external.</li>
+		<li>If you are using your own Assignment 4, please make sure that you make all changes to match the layout and mechanics of the provided solution.</li>
+		<li>Watch the page to page transitions <a href="https://drive.google.com/file/d/0B6oTn8-TJQCZb2dSM1dkVndSRm8/view">here</a>.</li>
+		<li>Once you have the template working, copy it to <code>index.php</code>.  Keep the <code>template.html</code> as a backup in case you need to revert to an earlier copy.</li>
+	</ol>
+	
+
+	<h2>3. Game pages</h2>
+	<ol>
+		<li>An updated version of the template used in Assignment 5 is available, see anyGame.html, which links in games.css.</li>
+		<li><strong>Classic Tic Tac Toe (JS)</strong> Apply the games styles to your simple (single) tic tac toe game.  Make sure you use an unobtrusive Javascript version. If you did not create your own, you should adopt one of the available version provided during the course. Link to the first image in the first row, replacing the anyGame.html.  Note when the user clicks on it, it opens in the same window.  The close button reloads the index page in the same window.</li>
+		<li><strong>Ultimate Tic Tac Toe (JS)</strong> Apply the games styles to your ultimate tic tac toe game.  Make sure you use an unobtrusive Javascript version. Link to the second image in the first row, replacing the anyGame.html.  Note when the user clicks on it, it opens in the same window.  The close button reloads the index page in the same window.</li>
+		<li><strong>Classic Rock Paper Scissors (JS)</strong> Apply the games styles to your rock paper scissors game (Javascript version).  Make sure you use an unobtrusive Javascript version. Link to the third image in the first row, replacing the anyGame.html.  Note when the user clicks on it, it opens in the same window.  The close button reloads the index page in the same window.</li>		
+		<li><strong>Classic Tic Tac Toe (PHP)</strong> Apply the games styles to your tic tac toe game (PHP version). Link to the first image in the second row, replacing the anyGame.html.  Note when the user clicks on it, it opens in the same window.  The close button reloads the index page in the same window.</li>		
+		<li><strong>Rock Paper Scissors Lizard Spock (PHP)</strong> Apply the games styles to your rpsls game (PHP version). Link to the second image in the second row, replacing the anyGame.html.  Note when the user clicks on it, it opens in the same window.  The close button reloads the index page in the same window.</li>
+		<li>The third image in the second row does not have any game linked to it.  In the description, let the members know what and when they can expect to see next (game release announcement).</li>
+	</ol>	
+
+	<h2>4. Form pages</h2>
+	<ol>
+		<li>An updated version of the template used in Assignment 5 is available, see anyGame.html, which links in games.css.</li>
+		<li><strong>Login form</strong> Attach the login form page to the login button.  Open the form in the same window. If the authentication is successful, present the home page with the LOGIN button displaying <code>LOGOUT</code>.  When the user presses the LOGOUT button, log the user out and present the home page with the button displaying <code>LOGIN</code>. No other changes on the page at this time.</li>
+		<li style="color: blue;font-weight:bold;">BONUS: Modify the header to say “Welcome back, Firstname!” on successful login, and reverse both the tab and header on LOGOUT to the original content.</li>
+		<li><strong>Registration form</strong> Attach the registeration form page to the membership button.  Open the form in the same window. Make sure you apply all possible css, js, and php validation to clean data before inserting the record into your database. On successful registration, advise the user that they can log in and take them to the home page. If unsuccessful, present the registration form if the user wishes to try again.</li>	
+		<li><strong>Blog form</strong> Complete the blog form and incorporate on the site, attach to all <code>fa-comments</code> icons under each game.  Open the form in the same window. Make sure you apply all possible css, js, and php validation to clean data before inserting the record into your database. </li>			
+		<li style="color: blue;font-weight:bold;">BONUS: display two random blog entries in the BLOG POSTS area.</li>
+		<li></li>
+	</ol>
+	<h2>5. General</h2>
+	<ol>
+		<li>For all games, use php to keep the <code>&lt;title></code> current.</li>
+		<li>Add the last updated date on all pages in the footer using php.</li>
+		<li>Makes sure to preserve the size of images and containers as in template. Size images to fit the smallest dimension (in this case, the height). If the contains are not the same height, consider using a link "...more" that will display the entire text in a modal.</li>
+	</ol>	
+	<h2>6. Available files</h2>
+	<ol>
+		<li>Right-click on each link and choose "Save link as..." in the popup menu:
+		<ul>
+			<li><a href="anyGame.html">anyGame.html</a></li>
+			<li><a href="template.html">template.html</a></li>
+			<li><a href="loginForm.html">loginForm.html</a></li>
+			<li><a href="games.css">games.css</a></li>
+			<li><a href="canvasLogo.js">canvasLogo.js</a></li>
+			<li><a href="bg3.jpg">bg3.jpg</a></li>
+		</ul>
+		</li>
+	</ol>	
+</body>
+</html>

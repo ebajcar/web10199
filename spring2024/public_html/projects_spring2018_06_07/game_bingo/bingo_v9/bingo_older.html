@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- 
+Author: Ellen Bajcar
+Program: bingo.html
+Date: Summer 2016
+Date Updated: 8:25 AM June-09-16
+Version: 5.0 (Week 5 stage)
+Purpose: learning Javascript programming
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    Interface for a bingo card
+    Functionality for a bingo card (game board) and calling numbers (caller)
+    See also: 
+        Javascript, Eighth Ed., Negrino & Smith
+        https://piazza.com/class/inrun9m79bc5q2?cid=15
+    Bingo terminology: 
+        http://blog.casinocashjourney.com/2013/01/18/bingo-terms/
+-->
+<html>
+<head>
+    <title>Bingo Card</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width" name="viewport">
+    <link href="css/bingo.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Bingo Card</h1>
+    </header><!-- create a bingo card -->
+    <button id="reset">Generate New Card</button>
+    <table id="myBoard">
+        <tr>
+            <th>B</th>
+            <th>I</th>
+            <th>N</th>
+            <th>G</th>
+            <th>O</th>
+        </tr><!-- add 5 rows, each row containing 5 cells (td) -->
+    </table><!-- create all elements for calling numbers -->
+    <footer>
+        <address>
+            Ellen @ SYST10199 Web Programming, Sheridan College
+        </address>
+    </footer>
+    <script src="scripts/bingo2.js">
+    </script>
+</body>
+</html>
+
+

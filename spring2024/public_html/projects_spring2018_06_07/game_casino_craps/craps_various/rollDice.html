@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minimal HTML5 Document</title>
+	<meta charset="utf-8">
+<style>
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background:#eff3fa;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    width:50%;
+}
+.wrapper {
+  text-align:center;
+}
+aside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+	height: 95%;
+    border-left: 1px solid orange;
+	margin-top: 10px;
+	padding: 5px;
+}
+#results {
+    height: 550px;
+    width: 100%;
+    overflow: auto;
+}
+#show {
+    height: 1800px;
+}
+footer {
+	margin-left: 10%;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.die {
+  height:100px;
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  background: #fff;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #ebebeb;
+  border-right-width: 2px;
+  border-left-width: 2px;
+  border-bottom: 3px solid #ccc;
+}
+
+.die > span {
+  height: 15px;
+  width: 15px;
+  background: #222;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.die .a { top:15px;left:15px; }
+.die .b { top:15px;right: 15px; }
+.die .c { left: 15px;top: 40px; }
+.die .d { top: 40px;left:42px; }
+.die .e { top: 40px;right: 15px; }
+.die .f { bottom: 15px;left: 15px; }
+.die .g { bottom: 15px;right: 15px; }
+.die > span { opacity: 0; }
+</style>		
+</head>
+<body>
+<header>
+<h1>Casino Craps</h1>
+</header>
+<main>
+	<div class="wrapper">
+	  <div id="alpha" class="die">
+		<span class="a two three four five six"></span>
+		<span class="b four five six"></span>
+		<span class="c six"></span>
+		<span class="d one three five"></span>
+		<span class="e six"></span>
+		<span class="f four five six"></span>
+		<span class="g two three four five six"></span>
+	  </div>
+	  <div id="bravo" class="die">
+		<span class="a two three four five six"></span>
+		<span class="b four five six"></span>
+		<span class="c six"></span>
+		<span class="d one three five"></span>
+		<span class="e six"></span>
+		<span class="f four five six"></span>
+		<span class="g two three four five six"></span>
+	  </div>
+	  <button id="roll">Roll</button>
+	</div>
+</main>	
+<footer>
+	<p>Wins: <span id="wins">0</span><br>
+	Losses: <span id="losses">0</span></p>
+</footer>
+
+ <aside>
+ <button id="clear">Clear</button>
+ <div id="results" onscroll="myFunction()">
+	<div id="show">
+		Roll the dice!
+	</div>
+ </div>
+</aside> 
+<script>
+var dice = [null, "one", "two", "three", "four", "five", "six"];
+var rollDice = document.getElementById("roll");
+var show = document.getElementById("show");
+var results = document.getElementById("results");
+var clearButton = document.getElementById("clear");
+var showWins = document.getElementById("wins");
+var showLosses = document.getElementById("losses");
+var end = 0;
+var point = 0;
+var wins = 0; var losses = 0;
+rollDice.onclick = rollBoth;	
+clearButton.onclick = clear;
+results.scrollTop = end;
+function roll(x){
+  var random = Math.floor((Math.random() * 6) + 1);
+  var thisDie = document.getElementById(x);
+  var clearMe = thisDie.getElementsByTagName("span");
+  var newDie = thisDie.getElementsByClassName(dice[random]);
+  
+  for (var i = 0; i < clearMe.length; i++) {
+    clearMe[i].style.opacity = "0";
+  }
+  
+  for (var i = 0; i < newDie.length; i++) {
+    newDie[i].style.opacity = "1";
+  }
+  return random;
+}
+function clear() { show.innerHTML = ""; }
+
+function rollBoth() {
+	if (end > 300)
+		results.scrollTop = end;
+	end += 16;
+	var dice1 = roll("alpha"); 
+	var dice2 = roll("bravo");
+    var total = dice1 + dice2; 	
+    show.innerHTML += "Rolled: " +
+          dice1 + " + " + dice2 + " = " + total +"<br>";
+	if ( point == 0 ) {
+		if (total == 7 || total == 11){
+		  show.innerHTML += "That's a natural. You win!" +"<br>";
+		  show.innerHTML += "<hr>NEW GAME" + "<br>";
+		  wins++; 
+		  showWins.innerHTML = wins;
+		} else if (total == 2 || total == 3 || total == 12) {
+		  show.innerHTML += "That's craps. You Lose." + "<br>";
+		  show.innerHTML += "<hr>NEW GAME" + "<br>";			  
+		  losses++; 
+		  showLosses.innerHTML = losses;		  
+		} else {
+		  point = total;
+		  show.innerHTML += "Your point is " + point + "<br>";  
+		  show.innerHTML += "Roll again<br>";
+		  end += 35;
+		}
+	} else {
+        if (total == point) {
+          show.innerHTML += "You made your point. You win." + "<br>";
+		  show.innerHTML += "<hr>NEW GAME" + "<br>";
+		  wins++; 
+		  showWins.innerHTML = wins;		  
+		  point = 0;
+        } else if (total == 7) {
+          show.innerHTML += "That's a 7. You lose." + "<br>";
+		  show.innerHTML += "<hr>NEW GAME" + "<br>";
+		  losses++; 
+		  showLosses.innerHTML = losses;		  
+		  point = 0;
+        } else {
+		  show.innerHTML += "Roll again<br>";	
+		  end += 35;
+		}
+	}
+}
+
+function myFunction() {
+    var elmnt = document.getElementById("myDIV");
+    var x = elmnt.scrollLeft;
+    var y = elmnt.scrollTop;
+    document.getElementById("show").innerHTML += "Horizontally: " + x + "px<br>Vertically: " + y + "px";
+}
+</script>
+</body>
+</html>

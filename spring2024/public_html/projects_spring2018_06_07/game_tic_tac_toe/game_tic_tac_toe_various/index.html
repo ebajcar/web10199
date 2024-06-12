@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- 
+Author: Ellen Bajcar
+Program: ticTacToe.html
+Date: Summer 2016
+Date Updated: 8:25 AM June-09-16
+Version: 5.0 (Week 5 stage)
+Purpose: learning Javascript programming
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    A two-player game. 
+    The players are presented with a board of three-by-three table and a reset button.
+    The reset button starts a game where players take turns selecting one of the nine
+    available empty cells with the goal of completing a row, a column, or a diagonal to
+    win the game.
+    A message specifying which player's turn is presented during the same.
+    When a winning state occurs, a message is presented that the game is over.
+-->
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <meta charset="utf-8">
+    <link href="css/ticTacToe.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Tic Tac Toe</h1>
+    </header><!-- game board and related content -->
+    <div id="game"></div>
+
+    <div id="messg">
+        <p>GAME OVER!</p>
+        <h2 id="winner"></h2><p>&mdash; click anywhere in the box to
+        dismiss this message &mdash;</p>
+    </div>
+    <div id="overlay"></div>
+    <script src="js/ticTacToe.js">
+    </script> 
+    <script>
+    document.addEventListener("DOMContentLoaded", playTicTac());
+    </script> 
+</body>
+</html>

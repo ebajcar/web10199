@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scramble Array</title>
+	<meta charset="UTF-8" />		
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	p { margin: 1px; font-family: monospace;}
+	</style>
+</head>
+<body>
+	<header>Scrambling Tiles for Memory Game</header>
+	<main>
+	</main>
+	<footer>@ SYST10199 Web Programming, Sheridan College</footer>	
+<script>
+var elRoot = document.getElementsByTagName("main")[0];
+var map=new Array(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 
+	10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18);
+var temparray = new Array();
+var len = map.length;
+var num = 5;
+scramble();
+function scramble() {
+	var elParag = document.createElement("p");
+	elRoot.appendChild(elParag);			
+	elParag.innerHTML = map;
+	for (var z = 0; z < num; z++) {
+		for (var x = 0; x < len; x++) {
+			temparray[0] = Math.floor(Math.random()*len);
+			temparray[1] = map[temparray[0]];
+			temparray[2] = map[x];
+			map[x] = temparray[1];
+			map[temparray[0]] = temparray[2];
+		}  
+		var elParag = document.createElement("p");
+		elRoot.appendChild(elParag);			
+		elParag.innerHTML = map;	  
+		elParag.innerHTML += "<hr>";
+	}
+}
+</script> 
+</body>
+</html>

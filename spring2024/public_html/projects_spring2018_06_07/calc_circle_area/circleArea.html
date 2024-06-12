@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>W1 Practice 1</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+Author: Ellen Bajcar
+Date created: May 18, 2017
+Date updated: 
+Version: 0.1
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Purpose: 
+	Practice Javascript, HTML5, CSS3, and progressive enhancement	
+Description:	
+	See handout http://bajcar.dev.fast.sheridanc.on.ca/web10199/content/pdf/W01_10199.pdf
+-->
+<style>
+body {
+	background-color: lightblue;
+	width: 70%;
+	margin: 0 auto;
+}
+.answer {
+	color: pink;
+	background: black;
+	font-size: 1.2em
+}
+h3, h4 {
+	margin-bottom: 0;
+	border-bottom: 1px dotted blue;
+}
+</style>	
+</head>
+<body>
+	<header>
+		<h1>Week 1</h1>
+	</header>
+	<main>
+		<h3>Practice 1</h3>
+		<p>Write a simple program that computes the area of a circle.</p>
+		<h4>Answer 1</h4>
+		<pre>
+var r = 5.7;
+var area =  Math.PI * r * r;
+console.log("The area is ", area, " when radius is ", r);		
+		</pre>
+		<p>Note you can also use the <code>Math.pow(r,2)</code> method</p>
+		<h4>Answer 2</h4>
+		<p class="answer" id="ans"></p>
+		<pre>
+var r2 = document.getElementById("radius").value;
+var area2 = reCalc(r2); 
+document.getElementById("ans").innerHTML = "The area is " + area2 + " when radius is " + r2;		
+		</pre>
+		
+		<h4>Answer 3</h4>
+		<input type="number" id="radius" value="7.4" placeholder="Enter radius value">		
+		<p class="answer" id="ans2"></p>
+		<pre>
+document.getElementById("radius").oninput = function() { 
+	r2 = document.getElementById("radius").value;
+	area2 = reCalc(r2); 
+	document.getElementById("ans2").innerHTML 
+		= "The area is " + area2 + " when radius is " + r2;
+};
+function reCalc(radius) {
+	return Math.PI * r2 * r2;
+}
+		</pre>
+	<h4>Other alternative answers?</h4>
+	</main>
+	<footer>
+		<address>Web Programming @ Sheridan College</address>
+	</footer>
+<script>
+/* 
+	Area of a circle formula is A = PI*radius* radius*
+	https://www.khanacademy.org/math/basic-geo/basic-geo-area-and-perimeter/area-circumference-circle/a/radius-diameter-circumference
+	http://www.mathgoodies.com/lessons/vol2/circle_area.html
+	https://www.w3schools.com/jsref/jsref_obj_math.asp
+*/
+var r = 5.7;
+var area =  Math.PI * r * r;
+console.log("The area is ", area, " when radius is ", r);
+
+var r2 = document.getElementById("radius").value;
+var area2 = reCalc(r2); 
+document.getElementById("ans").innerHTML = "The area is " + area2 + " when radius is " + r2;
+
+document.getElementById("radius").oninput = function() { 
+	r2 = document.getElementById("radius").value;
+	area2 = reCalc(r2); 
+	document.getElementById("ans2").innerHTML = "The area is " + area2 + " when radius is " + r2;
+};
+function reCalc(radius) {
+	return Math.PI * r2 * r2;
+}		
+</script>	
+</body>
+</html>

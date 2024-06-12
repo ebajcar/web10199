@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myDIV {
+    height: 250px;
+    width: 250px;
+    overflow: auto;
+}
+
+#content {
+    height: 800px;
+    width: 2000px;
+    background-color: coral;
+}
+</style>
+</head>
+<body>
+
+<p>Click the button to scroll the contents of div to 50px horizontally and 10px vertically.</p>
+
+<button onclick="myFunction()">Scroll contents of div</button><br><br>
+
+<div id="myDIV">
+  <div id="content">
+    Some text inside a div element.<br><br>
+    Some text inside a div element.
+  </div>
+</div>
+
+<script>
+function myFunction() {
+    var elmnt = document.getElementById("myDIV");
+    elmnt.scrollLeft = 50;
+    elmnt.scrollTop = 10;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scramble Array</title>
+<meta charset="UTF-8" />		
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- 
+Author: Ellen Bajcar
+Program: scrambleAlphabet.html
+Date: Summer 2018
+Date Updated: 
+Version: 1.0
+Purpose: learning Javascript programming
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    Preparation and set up for memory (pick-a-pair, concentration) game.
+
+-->
+<style>
+body {
+	background: #e0e0e0;
+    font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+main, section, aside {
+	width: 100%;
+	margin: auto;
+	padding-top: 5px;
+	background-color: white;	
+}
+main {
+	padding-bottom: 10px;
+	min-height: 300px;
+	display: flex;
+	justify-content: center;	
+}
+header h1 {
+	color: #6f6f6f;   
+    font-family: Lato, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+	margin: 20px 0 0;
+    text-align: center;
+    text-shadow: 0 0 0 rgba(0,0,0,.4);
+}
+footer {
+	margin: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+button {
+	padding: 1rem;
+	border: 1px solid #ccc;
+	background-color: #ddd;
+	-webkit-transition: background-color 200ms ease;
+	transition: background-color 200ms ease;
+}
+button:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+
+
+/* navigation */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav a {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover {
+    background: #c2c2c2;
+    color: #818181;
+}
+
+
+/* format of the cells on the game board */
+table {
+    margin: auto;
+	text-align: center;	
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+	
+	td { 
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		font-size: 30px; 
+		font-family: monospace;
+		border: 1px dotted pink;
+		}
+	.show {
+		color: black;
+	}
+	.hide {
+		color: white;
+		-webkit-user-select: none; /* Safari 3.1+ */
+		-moz-user-select: none; /* Firefox 2+ */
+		-ms-user-select: none; /* IE 10+ */
+		user-select: none; /* Standard syntax */
+	}
+	</style>
+</head>
+<body>
+	<header><h1>Utilities for Memory Game</h1></header>
+	<nav>
+		<a href="">Home</a>
+		<a href="">Casino Craps</a>
+		<a href="">Tic Tac Toe</a>
+		<a href="">Bingo</a>
+		<a class="active" href="">Concentration</a>
+	</nav>
+	<aside>
+		<button id="start">Start</button>
+		<button id="reveal">Show All</button>
+		<button id="mButton">Timer</button>
+	</aside>
+	<main>	
+	</main>
+	<footer>
+		<address>Web Programming &copy; Sheridan College</address>
+	</footer>	
+<script>
+var elRoot = document.getElementsByTagName("main")[0];
+var myButton = document.getElementById("mButton");
+var revealButton = document.getElementById("reveal");
+var startButton = document.getElementById("start");
+var map = new Array(1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 
+	10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 16, 16, 17, 17, 18, 18);
+var temparray = [];
+var len = map.length;
+var num = 5;
+var curCell;
+var stuff = alphabet();  // array of objects to display
+console.log(stuff);
+createBoard();
+var allCells = document.getElementsByTagName("td");
+var scrambledStuff;
+for (var td = 0; td < allCells.length; td++) {
+	allCells[td].addEventListener("click", 
+		function() {
+			startBlink(this);
+		});
+	}
+var id, ticker = 0, min = 0, sec = 0;
+
+revealButton.onclick = function() {
+	if (revealButton.innerText == "Show All") {
+		showAll();
+		revealButton.innerText = "Hide All";
+	} else {
+		hideAll();
+		revealButton.innerText = "Show All";	
+	}
+}
+startButton.onclick = startTimer;
+
+function startTimer() {
+	scrambledStuff = scramble();
+	populateBoard();
+	ticker = 0; min = 0; sec = 0;
+	clearTimeout(id);
+	myButton.innerText = ""; 
+	runclk();
+}
+
+function runclk() {
+	min = Math.floor(ticker/60);
+	sec = (ticker-(min*60))+'';
+	if(sec.length == 1) {sec = "0"+sec};
+	ticker++;
+	myButton.innerText = min+":"+sec; 
+	id = setTimeout('runclk()', 1000);
+}
+
+function scramble() {	
+	for (var z = 0; z < num; z++) {
+		for (var x = 0; x < len; x++) {
+			temparray[0] = Math.floor(Math.random()*len);
+			temparray[1] = map[temparray[0]];
+			temparray[2] = map[x];
+			map[x] = temparray[1];
+			map[temparray[0]] = temparray[2];
+		} 
+	}
+	var newArr = [];
+	for ( var j = 0; j < len; j++ )
+		newArr[j] = stuff[map[j]];		
+	return newArr;	
+}
+
+function alphabet() {
+    var res = [];
+    for (var i=65, j=0; i<84; i++,j++)
+    	res[j] = String.fromCharCode(i);
+	return res;
+}
+
+function createBoard() {
+	var newTable = elRoot.appendChild(document.createElement("table"));
+	for (r = 0; r <= 5; r++) {
+		var newRow = newTable.appendChild(document.createElement("tr"));
+		for (c = 0; c <= 5; c++) {
+			var newCell = newRow.appendChild(document.createElement("td"));
+			newCell.setAttribute("class","show");
+			newCell.innerText = "";
+		}
+	}
+}
+
+function populateBoard() {
+	for (var i = 0; i < allCells.length; i++) {
+		allCells[i].setAttribute("class","hide");
+		allCells[i].innerText = scrambledStuff[i];
+	}
+}
+
+function showAll() {
+	for (var i = 0; i < allCells.length; i++) {
+		allCells[i].setAttribute("class","show");
+		allCells[i].innerText = scrambledStuff[i];
+	}
+}
+
+function hideAll() {
+	for (var i = 0; i < allCells.length; i++) {
+		allCells[i].setAttribute("class","hide");
+		allCells[i].innerText = scrambledStuff[i];
+	}
+}
+
+function startBlink(x) {
+	curCell = x;
+	setTimeout('changeImg()', 1000);
+	clearTimeout(id);
+}
+
+function changeImg() {
+	console.log(curCell.getAttribute("class"));
+	( curCell.getAttribute("class") == "hide" ) 
+		? curCell.setAttribute("class", "show") 
+		: curCell.setAttribute("class", "hide");
+	id = setTimeout('changeImg()', 1000);
+}
+
+</script> 
+</body>
+</html>

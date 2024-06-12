@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>forEach() </title>
+	<meta charset="utf-8">
+<!-- 
+Author: Ellen Bajcar
+Date: Winter 2018
+Version: 1.0
+Purpose: learning Javascript programming
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+	Web app that generates a random number between 1 and 10 (inclusive)
+	and prompts the user to guess what the number is. The user's guess is
+	compared to the random number and advises the user whether the guess is too
+	low, too high, and there is a match.  The game ends when the user guesses the
+	number.
+-->	
+</head>
+<body>
+
+<script>
+
+// array of objects
+var province = [
+	{ name: "Alberta", 					postal: "AB" },
+	{ name: "British Comumbia", 		postal: "BC" },
+	{ name: "Manitoba", 				postal: "MB" },
+	{ name: "New Brunswick", 			postal: "NB" },
+	{ name: "Newfoundland and Labrador", postal: "NL" },
+	{ name: "Northwest Territories", 	postal: "NT" },
+	{ name: "Nova Scotia", 				postal: "NS" },
+	{ name: "Nunavut", 					postal: "NU" },
+	{ name: "Ontario", 					postal: "ON" },
+	{ name: "Prince Edward Island", 	postal: "PE" },
+	{ name: "Quebec", 					postal: "QC" },
+	{ name: "Saskatchewan", 			postal: "SK" },
+	{ name: "Yukon Territories", 		postal: "YT" }
+];
+// Array.prototype.forEach()
+// The forEach() method executes a provided function once for each array element.
+// developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+var list = [];
+province.reverse().forEach(myFunction);
+function myFunction(item, index) {
+	//console.log(item.name + ", "+ item.postal);
+	list[index] = item.name;
+}
+console.log("list ", list);
+</script>
+</body>
+</html>

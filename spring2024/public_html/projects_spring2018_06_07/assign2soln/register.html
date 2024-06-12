@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!-- 
+Author: Ellen Bajcar
+Date: Summer 2016
+Version: 3.0
+Purpose: learning Javascript programming
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+	a common "home" page for collection of games and other web apps
+	created for course SYST10199 Web Programming
+-->
+<html>
+<head>
+	<title>Games</title>
+	<meta charset="utf-8">
+
+</head>
+<body>	
+<header>
+	<!-- usually name and logo information -->
+	<h1>Assignment 2</h1>
+	<h2>SYST10049 Web Development</h2> 
+</header>
+<nav>
+	<a href="#">Home</a> 	
+	<a href="#">News</a> 		
+	<nav>
+		<span>Play Games</span>
+		<a href="#">Tic Tac Toe</a>
+		<a href="#">Bingo</a>			
+		<a href="#">Hangman</a> 
+		<a href="#">Memory</a> 	
+	</nav>		
+	<nav>
+		<span>How To</span>
+		<a href="#">What's Your Learning Style?</a> 
+		<a href="#">How To Play Blackjack?</a> 
+	</nav>		
+	<nav>
+		<span>Members</span>
+		<a href="#">Login</a> 			
+		<span>Logout</span> 
+		<a href="#">Register</a> 
+	</nav>
+</nav>
+<hr>	
+	
+	<!-- First Grid -->
+	<div class="w3-row-padding w3-padding-64 w3-container" id="intro">
+		<div class="w3-content">
+			<div class="w3-container w3-text-orange">
+				<h1  class="w3-text-shadow">Create Account</h1>
+				<h4>Complete the following form to create an account:</h4>
+			</div>		
+			<!--form class="w3-container w3-text-orange"-->
+			<form id="myForm" class="w3-container w3-text-orange">
+				<fieldset>
+					<legend>Personal Information</legend>
+					<p>
+					<input class="w3-input" type="text" name="first" required>
+					<label class="w3-label w3-validate">First Name</label></p>
+					<p>
+					<input class="w3-input" type="text" name="last" required>
+					<label class="w3-label w3-validate">Last Name</label></p>	
+					<fieldset>
+						<legend>Gender</legend>
+						<input class="w3-radio" type="radio" name="gender" value="male" checked>
+						<label class="w3-validate">Male</label>
+						<input class="w3-radio" type="radio" name="gender" value="female">
+						<label class="w3-validate">Female</label>
+					</fieldset>			
+					<p>
+					<input class="w3-input" type="email" name="email" required>
+					<label class="w3-label w3-validate">Email</label></p>
+					<p>
+					<input id="phone" class="w3-input" type="tel" name="phone" required>
+					<label class="w3-label w3-validate">Phone</label></p>		
+					<select class="w3-select" name="prov" id="prov">
+						<option disabled selected>Select Province</option>
+					</select>			
+				</fieldset>	
+				<fieldset>
+					<legend>Choose a password</legend>
+					<p class="fieldWrapper">
+						<input class="w3-input" type="password" name="pass1" 
+								id="pass1" required 
+								onkeyup="chkPasswordStrength(this.value,document.getElementById('strength'),document.getElementById('error'))">
+						<label for="pass1" class="w3-label w3-validate">Password</label> <span id="strength" class="strength5"><strong>Password Strength</strong></span> &nbsp;&nbsp; <span id="error"></span>
+					</p>
+					<p class="fieldWrapper">					
+						<input class="w3-input" type="password" name="pass2" id="pass2" onkeyup="checkPass(); return false;" required>
+						<label for="pass2" class="w3-label w3-validate">Confirm Password</label> <span id="confirmMessage" class="confirmMessage"></span>
+					</p>		
+
+				</fieldset>		
+				<br>
+				<input type="button" id="butSubmit" value="Submit request"  class="w3-btn w3-orange w3-large">
+				<input type="button" id="butReset" value="Reset form" class="w3-btn w3-orange w3-large">
+			</form>
+		</div>
+	</div>		
+
+</main>
+
+<footer>
+	<hr>
+	<address>
+		Name, 2017 &copy; SYST10049 Web Development, Sheridan College
+	</address>
+</footer>	
+
+	
+
+</body>
+</html>

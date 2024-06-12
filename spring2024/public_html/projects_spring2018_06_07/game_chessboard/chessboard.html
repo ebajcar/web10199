@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chessboard</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+	<style>
+body {
+	background: #e0e0e0;
+    font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+main, section {
+	width: 100%;
+	margin: auto;
+	padding-top: 20px;
+	background-color: white;	
+}
+main {
+	padding-top: 20px;
+	padding-bottom: 10px;
+	min-height: 300px;
+	display: flex;
+	justify-content: center;	
+}
+header h1 {
+	color: #6f6f6f;   
+    font-family: Lato, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+	margin: 20px 0 0;
+    text-align: center;
+    text-shadow: 0 0 0 rgba(0,0,0,.4);
+}
+footer {
+	margin: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+button {
+	padding: 1rem;
+	border: 1px solid #ccc;
+	background-color: #ddd;
+	-webkit-transition: background-color 200ms ease;
+	transition: background-color 200ms ease;
+}
+button:hover {
+	cursor: pointer;
+	background-color: #eee;
+}
+
+
+/* navigation */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav a {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover {
+    background: #c2c2c2;
+    color: #818181;
+}
+
+/* 
+	chessboard-specific styles
+*/	
+table {
+	box-sizing: border-box;
+    border: 5px #fff solid;
+    border-collapse: collapse;
+}
+td {
+	width: 1.6em;
+	height: 1.6em;
+	padding: 0;
+    font-size: 1.4em;
+	background-color: #D38E4B;
+	text-align: center;
+	font-weight: bold;
+}
+tr:nth-child(even) > td:nth-child(even),
+tr:nth-child(odd) > td:nth-child(odd) {
+    background-color: #F3C496;
+}
+tr:nth-child(1),tr:nth-child(2),tr:nth-child(4) {
+    color: white;
+}
+tr:nth-child(7),tr:nth-child(8) {
+    color: black;
+}
+::selection {
+    color: orange;
+    text-shadow: 3px 3px 14px #ff0;
+}
+</style>
+</head>
+<body>
+<header><h1>Chessboard</h1></header>
+	<nav>
+		<a class="active" href="">Chessboard</a>
+		<a href="">Hangman</a>
+		<a href="">Rock Paper Scissors</a>
+	</nav>
+	<section>	
+		<button id="reset">New Game</button>
+		<button id="timed">Next move (black)</button>
+	</section>
+<main>
+	<table>	
+		<tr>
+			<td>♜</td> <td>♞</td> <td>♝</td> <td>♛</td> <td>♚</td> <td>♝</td> <td>♞</td> <td>♜</td> 
+		</tr>
+		<tr>
+			<td>♟</td> <td>♟</td> 	<td>♟</td> <td>♟</td> <td>♟</td>	<td>♟</td> 	<td>♟</td> <td>♟</td> 
+		</tr>
+		<tr>
+			<td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td> </td> <td> </td> <td> </td> <td> </td> <td> </td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td>
+		</tr>	
+		<tr>
+			<td>♙</td> <td>♙</td> <td>♙</td> <td>♙</td> <td>♙</td> <td>♙</td> <td>♙</td> <td>♙</td>
+		</tr>
+		<tr>
+			<td>♖</td> <td>♘</td> <td>♗</td> <td>♕</td> <td>♔</td>	<td>♗</td> 	<td>♘</td> <td>♖</td>
+		</tr>	
+	</table>			
+</main>
+<footer>
+	<address>Web Programming &copy; Sheridan College</address>	
+</footer>
+<script>
+/*
+    Author: Ellen Bajcar
+    Date: Summer 2018
+    Version: 1.0
+    Purpose: explore development of chessboard game
+	Copyright: This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.
+	Description:
+		See more details in Tutorial set 3	
+*/
+
+// from MDN; added entities instead of letters
+// to represent the different chess pieces
+var board = [ 
+  ['♜','♞','♝','♛','♚','♝','♞','♜'],
+  ['♟','♟','♟','♟','♟','♟','♟','♟'],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  ['♙','♙','♙','♙','♙','♙','♙','♙'],
+  ['♖','♘','♗','♕','♔','♗','♘','♖'] ];
+
+console.log('\n' + board.join('\n') + '\n\n');
+// original setup from MDN
+var board0 = [ 
+  ['R','N','B','Q','K','B','N','R'],
+  ['P','P','P','P','P','P','P','P'],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  [' ',' ',' ',' ',' ',' ',' ',' '],
+  ['p','p','p','p','p','p','p','p'],
+  ['r','n','b','q','k','b','n','r'] ];
+// Move King's Pawn forward 2
+board[3][4] = board[1][4];
+board[1][4] = ' ';
+console.log(board.join('\n')); 
+
+// CREATE the collection of tr handles (1st dim)
+var chessboard = document.getElementsByTagName("tr");
+var chess = [];
+
+// CREATE the collection of td handles for each tr (2nd dim)
+// more efficient to evaluate length once prior to the loop
+//      than evaluating it many times in the loop!
+var length = chessboard.length;
+for (var i = 0; i < length; i++) 
+	chess[i] = chessboard[i].getElementsByTagName("td");
+// alternative which necessitates multiple creation of the handle
+// to reduce the access to DOM, create it once, use it many times
+//		chess[i] = 
+//			document.getElementsByTagName("tr")[i].getElementsByTagName("td");
+
+// since the size of the chessboard does not change, no need to save the number
+for (var i = 0; i < 8; i++)
+	for (var j = 0; j < 8; j++)
+		chess[i][j].innerText = board[i][j];
+		
+/*
+	different ways of initializing multi-dimensional arrays
+*/
+// ways of initializing 2D arrays
+// causes error
+//var b5 = [[][]];
+//console.log("b5 ", b5);
+
+// creates a 2D array: (2) [Array(0), Array(0)]
+var b6 = [[],[]];
+console.log("b6 ", b6);
+
+// creates a 2D array: (2) [Array(1), Array(1)]   0:[8] 1:[8] length:2
+var b7 = [[8],[8]];
+console.log("b7 ", b7);
+
+// creates a 2D array: 
+// (2) [Array(8), Array(8)]
+//		0:(8) [empty × 8] 
+//		1:(8) [empty × 8]
+//		length:2
+var b8 = [[,,,,,,,,],[,,,,,,,,]];
+console.log("b8 ", b8);
+
+// creates a 2D array 
+// Array(8) 0:[] 1 : [] 2 : [] 3 : [] 4 : [] 5 : [] 6 : [] 7 : []
+var b1 = new Array(8);
+for (var i=0;i<8;i++)
+	b1[i] = [];
+console.log("b1 ", b1);
+
+// creates a 2D array 
+// Array(8) 0:[] 1 : [] 2 : [] 3 : [] 4 : [] 5 : [] 6 : [] 7 : []
+var b2 = [];
+for (var i=0;i<8;i++)
+	b2[i] = [];
+console.log("b2 ", b2);
+
+// creates a 2D array 
+// Array(8) 0:[] 1 : [] 2 : [] 3 : [] 4 : [] 5 : [] 6 : [] 7 : []
+var b4 = [[],[],[],[],[],[],[],[]];
+console.log("b4 ", b4);
+
+// creates a 2D array 
+// Array(8)
+// 0:(8) [empty × 8] 1:(8) [empty × 8] 2:(8) [empty × 8] 3:(8) [empty × 8] 
+// 4:(8) [empty × 8] 5:(8) [empty × 8] 6:(8) [empty × 8] 7:(8) [empty × 8]
+var b3 = new Array(
+	new Array(8),new Array(8), new Array(8),new Array(8),
+	new Array(8),new Array(8), new Array(8),new Array(8));
+console.log("b3 ", b3);			
+</script>
+</body>
+</html>			

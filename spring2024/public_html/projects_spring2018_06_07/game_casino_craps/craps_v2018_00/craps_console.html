@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Casino Craps (console)</title>
+	<meta charset="utf-8">
+<!--
+File name: craps_console.html
+Author: Ellen Bajcar
+Date created: Winter 2018
+Date modified: Summer 2018
+Version: 2.0
+Pastebin: https://pastebin.com/aLqsXPKS
+Description:
+	console procedural version
+	Program to play the casino game of Craps. 
+	At the beginning of the game, 
+		the player rolls a pair of dice and computes the total. 
+		If the total is 2, 3, or 12 (called "craps"), the player loses. 
+		If the total is 7 or 11 (called a "natural"), the player wins.
+		If the total is any other number, that number becomes the "point". 
+			From here, the player keeps rolling the dice until 
+				(a) the point comes up again, in which case the player wins, or 
+				(b) a 7 appears, in which case the player loses. 
+				The numbers 2,3,11, and 12 no longer have special 
+					significance after the first rolls.			
+-->	
+<style>
+body {
+	background: #e0e0e0;
+    font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+main, section {
+	width: 100%;
+	margin: auto;
+	padding-top: 10px;
+	background-color: white;	
+}
+main {
+	padding-bottom: 10px;
+	min-height: 300px;
+}
+header h1 {
+	color: #6f6f6f;   
+    font-family: Lato, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+	margin: 20px 0 0;
+    text-align: center;
+    text-shadow: 0 0 0 rgba(0,0,0,.4);
+}
+footer {
+	margin: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+
+/* navigation */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav a {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover {
+    background: #c2c2c2;
+    color: #818181;
+}
+</style>		
+</head>
+<body>
+	<header><h1>Casino Craps (console)</h1></header>
+	<nav>
+		<a href="">Home</a>
+		<a class="active" href="">Casino Craps</a>
+		<a href="">Tic Tac Toe</a>
+		<a href="">Bingo</a>
+		<a href="">Concentration</a>
+	</nav>	
+	<main>
+
+		<div class="img">
+			<h4>Instructions</h4>
+			<p>Program to play the casino game of Craps. 
+			At the beginning of the game, the player rolls 
+			a pair of dice and computes the total. If the 
+			total is 2, 3, or 12 (called "craps"), the player 
+			loses. If the total is 7 or 11 (called a "natural"), 
+			the player wins.</p> 
+			<p>If the total is any other number, 
+			that number becomes the "point". From here, the 
+			player keeps rolling the dice until (a) the point 
+			comes up again, in which case the player wins, or 
+			(b) a 7 appears, in which case the player loses. 
+			The numbers 2,3,11, and 12 no longer have special 
+			significance after the first rolls.</p>
+		</div>
+
+	</main>
+	<footer>
+		<address>Web Programming &copy; Sheridan College</address>			
+	</footer>
+<script>
+/* 	
+	At the beginning of the game, the player rolls a pair of dice 
+	and computes the total. 
+	1. calculate dice1
+	2. calculate dice2
+	3. calculate total
+	4. display in console "Rolling dice: dice1 dice2 total
+*/ 
+var dice1 = Math.floor((Math.random() * 6) + 1);
+var dice2 = Math.floor((Math.random() * 6) + 1);
+var total = dice1 + dice2; 
+console.log("Rolling dice: " +
+	  dice1 + " + " + dice2 + " = " + total);
+
+//  If the total is 2, 3, or 12 (called "craps"), the player loses. 
+// 	If the total is 7 or 11 (called a "natural"), the player wins. 
+if (total == 7 || total == 11){
+  console.log("That's a natural. You win!");
+} else if (total == 3 || total == 2 || total == 12) {
+  console.log("That's craps. You Lose.");
+} else {
+//	If the total is any other number, that number becomes the "point". 
+  var point = total;
+  console.log("Your point is " + point);
+/*
+	From here, the player keeps rolling the dice until 
+	(a) the point comes up again, in which case the player wins, or 
+	(b) a 7 appears, in which case the player loses. 
+	The numbers 2,3,11, and 12 no longer have special 
+	significance after the first rolls.
+*/	  
+  while (true) {
+// 	1. calculate dice1
+//	2. calculate dice2
+//	3. calculate total
+//	4. display in console "Rolling dice: dice1 dice2 total
+	dice1 = Math.floor((Math.random() * 6) + 1);
+	dice2 = Math.floor((Math.random() * 6) + 1);
+	total = dice1 + dice2; 
+	console.log("Rolling dice: " +
+	  dice1 + " + " + dice2 + " = " + total);
+// if total == point, announce winner and break out of loop	  
+	if (total == point) {
+	  console.log("You made your point. You win.");
+	  break;
+// else if total is 7, announce loser and break out of loop
+	} else if (total == 7) {
+	  console.log("That's a 7. You lose.");
+	  break;
+	}
+// otherwise, keep keep rolling
+  }    
+}  
+</script>
+</body>
+</html>

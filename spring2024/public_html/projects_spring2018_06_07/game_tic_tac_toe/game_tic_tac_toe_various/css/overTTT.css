@@ -1,0 +1,103 @@
+@import  http://fonts.googleapis.com/css?family=Allan:700;
+
+/*
+Author: Ellen Bajcar
+Program: ticTacToe.css 
+Date: Summer 2016 
+Date Updated: 8:25 AM June-09-16
+Version: 5.0 (Week 5 stage)
+Purpose: learning Javascript programming
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+	A two-player game. 
+	The players are presented with a board of three-by-three table and a reset button.
+	The reset button starts a game where players take turns selecting one of the nine
+	available empty cells with the goal of completing a row, a column, or a diagonal to
+	win the game.
+	A message specifying which player's turn is presented during the same.
+	When a winning state occurs, a message is presented that the game is over.
+*/
+body {
+	background-color: transparent;
+    background-size: cover;
+    font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+    max-width: 480px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1,h3 {
+    font-size: 4em;
+    margin: .2em 0;
+    color: #00f;
+    text-shadow: 1px 1px 1px #fff,2px 2px 6px #000;
+}
+
+table {
+    margin: 0 auto;
+	background-color: transparent;
+}
+
+footer {
+    color: lightgray;
+    margin-top: 10px;
+}
+
+h1,h3 {
+    font-size: 4em;
+    margin: .2em 0;
+    color: #00f;
+    text-shadow: 1px 1px 1px #fff,2px 2px 6px #000;
+}
+
+td {
+    height: 50px;
+    width: 50px;
+    font-size: 2.2em;
+    font-family: sans-serif;
+    border: 1px solid #00f;
+	background-color: transparent;
+}
+
+button {
+    min-width: 200px;
+    height: 1.6em;
+    background-color: orange;
+    font-size: 1.2em;
+    margin: 8px auto;
+}
+
+td:nth-child(1) {
+    border-left-style: none;
+}
+
+td:nth-child(3) {
+    border-right-style: none;
+}
+
+tr:nth-child(1)>td {
+    border-top-style: none;
+}
+
+tr:nth-child(3)>td {
+    border-bottom-style: none;
+}
+#playerMsg {
+	font-family: monospace;
+}
+#message {
+    font-family: monospace;
+}
+
+#game {
+	background: url(../images/bg3.jpg) no-repeat;
+	background-size: 	100% 100%;
+    background-color: transparent;
+    padding: 25px 0 5px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+}

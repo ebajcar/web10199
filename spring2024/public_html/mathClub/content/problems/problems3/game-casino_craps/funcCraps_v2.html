@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minimal HTML5 Document</title>
+	<meta charset="utf-8">
+<!--
+	Author: Ellen Bajcar
+	Program: funcCraps_v2.html
+	Date: Summer 2016 
+	Date Updated: March 2018
+	Version: 2.1
+	Purpose: learning Javascript programming (SYST10199)
+	Copyright: This work is the intellectual property of Sheridan College. 
+		Any further copying and distribution outside of class must be within 
+		the copyright law. Posting to commercial sites for profit is prohibited.
+	Description:
+		Casino Craps v.2.1
+		functional version
+-->	
+<style>
+* { 
+	box-sizing: border-box; 
+}
+body {
+	background-color: transparent;
+    background-size: cover;
+    font-family: sans-serif;
+    max-width: 580px;
+    margin: 0 auto;
+    text-align: center;
+}
+h1,h3 {
+    font-size: 2.5em;
+    margin: .5em 0;
+	color: #093D6D;
+}
+footer {
+    color: lightgray;
+    margin-top: 1%;
+	font-size: 0.7em;
+}
+button {
+	color: tomato;
+	background: #fff;
+	border-radius: 5px;
+	border: 1px solid tomato;
+	font-size: 20px;
+	outline: 0 solid white;
+	width: 100%;
+}
+table {
+    margin: 0 auto;
+	background-color: transparent;
+	width: 400px;
+	text-align: center;	
+}
+td {
+
+	background-color: transparent;
+	text-align: center;
+	vertical-align: bottom;
+	border: 1px dotted green;
+}
+var {
+	font-size: 2rem;
+}
+p {
+	margin: 0;
+	font-size: 0.8rem;
+}
+</style>		
+</head>
+<body>
+	<header>
+		<h1>Casino Craps</h1>
+	</header>
+	<main>
+		<table>
+			<tr>
+				<td colspan="2"><div id="alpha" class="die"></div><div id="bravo" class="die"></div></td>
+				<td><small>You rolled&hellip;</small><br><var id="total">&nbsp;</var></td>
+			</tr>
+			<tr>
+				<td>
+					<p>STATS</p>
+					<p>Wins: <span id="wins">0</span></p> 
+					<p>Losses: <span id="losses">0</span></p>
+				</td>
+				<td colspan="2">
+					<p id="show" class="show">To start a game, roll the dice!</p>
+				</td>			
+			</tr>
+			<tr>
+				<td><button id="clear">Clear</button></td>
+				<td colspan="2"><button id="roll" class="roll">Roll the dice!</button>	</td>			
+			</tr>			
+		</table>			
+	</main>	
+	<footer>
+		<address>SYST10199 Web Programming &copy; Sheridan College</address>
+	</footer>
+
+<script>
+//variables and handles
+var outcome = document.getElementById("total");
+var show = document.getElementById("show");
+var showWins = document.getElementById("wins");
+var showLosses = document.getElementById("losses");
+var point = 0;
+var wins = 0; 
+var losses = 0;
+var message = {
+	natural : "That's a natural. You win!",
+	craps 	: "That's craps. You lose!",
+	point 	: "You made your point. You win!",
+	seven 	: "That's a seven. You lose!",
+	};
+//events
+document.getElementById("roll").onclick = rollBoth;
+document.getElementById("clear").onclick = clearStats;	
+//functions
+function clearStats() { 
+	point = 0;
+	wins = 0;
+	losses = 0;
+	show.innerHTML = "To start a game, roll the dice!<br>";
+	showWins.innerHTML = wins;
+	showLosses.innerHTML = losses;
+}
+
+function rollBoth() {
+	var sum = roll("alpha") + roll("bravo");
+	outcome.innerHTML = sum;
+	display(determineOutcome(sum)) ;
+}
+
+function roll(dice){
+  var random = Math.floor((Math.random() * 6) + 1);
+  document.getElementById(dice).innerHTML = random;
+  return random;
+}
+
+function determineOutcome(sum) {
+	if ( point == 0 ) {
+		if (sum == 7 || sum == 11) return "natural";
+		else 
+			if (sum == 2 || sum == 3 || sum == 12) return "craps";
+		 else 
+			point = sum; return point;
+	} else {
+        if (sum == point) {
+			point = 0; return "point";
+        } else if (sum == 7) {		
+			point = 0; return "seven";
+        } 
+	}
+}
+
+function display(msg) {
+	switch(msg) {
+		case "point":
+		case "natural":
+			show.innerHTML = message[msg];
+			showWins.innerHTML = ++wins;
+			var newEl = document.createElement("hr");
+			show.appendChild(newEl);	
+			show.innerHTML +=  "NEW GAME. Roll the dice!";			
+			break;
+		case "craps":
+		case "seven":
+			show.innerHTML = message[msg];
+			showLosses.innerHTML = ++losses;
+			var newEl = document.createElement("hr");
+			show.appendChild(newEl);	
+			show.innerHTML +=  "NEW GAME. Roll the dice!";			
+			break;			
+		default:
+			show.innerHTML = "Your point is " + point + ". Roll again!<br>";
+	}
+}
+
+</script>
+</body>
+</html>

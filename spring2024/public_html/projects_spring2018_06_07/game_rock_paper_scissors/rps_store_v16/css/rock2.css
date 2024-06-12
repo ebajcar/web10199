@@ -1,0 +1,87 @@
+/* 
+	rockLocStore.html, SYST10199 Web Programming, Summer 2015, Ellen Bajcar 
+	external css and js
+*/
+@import  "http://fonts.googleapis.com/css?family=Allan:700";
+
+body {
+    background: url(../images/bg-gray.gif);
+    font-family: Allan;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+header {
+    color: orange;
+    font-size: 2.1em;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 5px black,4px 4px 7px #fff;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+.games {
+    display: block;
+    width: 680px;
+    font-size: 2em;
+    margin: 0 auto;
+    height: 450px;
+    background-color: lightgray;
+    background: url(../images/bg-light.jpg);
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 5px #000;
+}
+
+#cmove,#hmove {
+    display: block;
+    width: 50%;
+    float: left;
+    text-align: center;
+    min-height: 250px;
+}
+
+#clear {
+    clear: both;
+}
+
+#msg {
+    font-size: 2.5em;
+    background-color: #000;
+    color: #fff;
+    margin-top: 69px;
+    background: url(../images/bg-striped.png);
+}
+
+footer {
+  /*  position: fixed;
+    bottom: 15px; */
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    color: #fff;
+}
+
+div > button {
+    background: url(../images/bg-orange.jpg);
+}
+
+p {
+    color: orange;
+}
+#greset,#reset {
+    width: 174px;
+    font-size: 1.6em;
+    font-family: Allan;
+    background: teal;
+    margin: 5px auto;	
+}
+#greset {
+    margin-top: 45px;
+}
+
+#stats {
+    font-size: .7em;
+}

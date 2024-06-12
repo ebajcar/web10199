@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!-- 
+Author: Ellen Bajcar
+Date: Summer 2016
+Version: 3.0
+Purpose: learning Javascript programming
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Description: 
+	a review page for midterm preparation
+	
+TODO: Week 5
+
+http://www.w3schools.com/js/tryit.asp?filename=tryjs_throw_error
+
+http://www.w3schools.com/js/tryit.asp?filename=tryjs_finally_error	
+
+-->
+<html>
+<head>
+	<title>Games - Review</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Teko:400,600);	
+body {
+	
+    background-image: url('../../images/sher_lbshort.jpg');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+	max-width: 1080px;
+	width: 62%;
+	margin: 25px auto;
+}
+.narrow {
+	background-color: white;
+	border-radius: 4px;
+}
+.col150 {
+	width: 150px;
+}
+code {
+	font-weight: bolder;
+}
+</style>
+</head>
+<body>	
+<div class="narrow">
+	<div class="w3-container w3-red">
+	  <span class="w3-closebtn" onclick="this.parentElement.style.display='none'">X</span>
+	  <h2>Check here regularly in preparation for midterm.</h2>
+	</div>
+	
+	<div class="w3-container"> 
+		<h2>Midterm Review &mdash;  <small>covers Weeks 1-6</small></h2>
+		<hr>
+		<h3>Midterm Information</h3>
+		<ul>
+
+		<li>
+			<i class="fa fa-circle-o-notch fa-spin"></i> The midterm exam includes all material covered in weeks 1 through 6.</li>
+		<li>
+			<i class="fa fa-exclamation-triangle"></i> All questions are answered on test paper. Write clearly and submit ALL papers provided.</li>
+		<li>
+			<i class="fa fa-exclamation-triangle"></i> The midterm exam is a closed book test and, therefore, you have no access to your computer or any online material.</li>
+		<li>
+			<i class="fa fa-exclamation-triangle"></i> You are permitted to use your handwritten, original notes! (no reproductions, no printouts).</li>
+		<li>
+			<i class="fa fa-exclamation-triangle"></i> YOU KEEP YOUR NOTES, DO NOT SUBMIT with your exam.</li>
+		<li>
+			<i class="fa fa-exclamation-triangle"></i> If you are caught with any reproduced material, ALL notes will be taken away and your exam mark may be a subject to penalty! ( Please review Academic Honesty policies. )</li>
+		<li class="w3-khaki"><i class="fa fa-percent"></i> The length of the exam is 100 minutes. The maximum number of marks is 50. Breakdown: 
+			<ul>
+				<li>about 1/3 multiple choice and true-false questions,</li>
+				<li>about 1/3 short answers and correcting code, </li>
+				<li>about 1/3 writing code.</li>
+			</ul>
+		</li>
+			<li>All exams are written in Week 7.  You have to write during your scheduled section, unless you make arrangements one week ahead of time, in person, confirming the arrangement through email.</li>
+		<li>
+			<i class="fa fa-circle-o-notch fa-spin"></i> This review does not intend to be comprehensive, only to highlight important concepts and components. It is your responsibility to go over all the material (examples, references, ...) to ensure that you understand the material and prepare for the exam properly. If you have been making notes all along, it is a good practice to review, outline, and summarize your own notes. <a href="https://www.evernote.com/shard/s687/sh/ba566b61-c3f4-4c14-955d-05111b507b62/762e4cec74f62cd2e8a177d0fde89d11" target="_blank">How To</a> Get An A...</li>
+			<li><a href="https://www.evernote.com/shard/s687/sh/d7f08e9d-473a-41a2-b952-d6b5e1c61b35/5e8134971dd9a9d50dfd2600e70cebbd" target="_blank">Exam Protocol</a> <span class="label label-danger">IMPORTANT</span> </li>			
+	</ul>		
+	</div>
+	
+	<div class="w3-container"> 
+		<h3>Posted examples</h3>
+		<ul class="w3-ul w3-large">
+			<li class="w3-hover-khaki">Explore the Math object, properties and methods&hellip;
+					<a target="_blank" href="http://codepen.io/ebajcar/pen/GqReGO">Math functions <i class="fa fa-codepen"></i></a></li>
+			<li class="w3-hover-khaki">"useCapture" is an optional parameter of addEventListener&hellip; 
+					<a target="_blank" href="http://codepen.io/ebajcar/pen/PzoLGK">bubble vs. capture <i class="fa fa-codepen"></i></a><br>
+					<code><small>addEventListener(event, function, useCapture) &bull; removeEventListener</small></code></li>
+			<li class="w3-hover-khaki">Window properties may differ from browser to browser&hellip; 
+					<a target="_blank" href="http://codepen.io/ebajcar/pen/rLBNoW">Window properties <i class="fa fa-codepen"></i></a></li>
+			<li class="w3-hover-khaki">Explore BOM with window.events&hellip; 
+					<a target="_blank" href="http://codepen.io/ebajcar/pen/ZOEwgq">target event tag names <i class="fa fa-codepen"></i></a></li>
+			<li class="w3-hover-khaki">Explore the Date object, properties and methods&hellip;  
+					<a target="_blank" href="http://codepen.io/ebajcar/pen/beGzyr">Date object <i class="fa fa-codepen"></i></a></li>
+			<li class="w3-hover-khaki">Explore the Date object, properties and methods&hellip; 
+					<a target="_blank" href="http://codepen.io/ebajcar/pen/oLNRbJ">Event Schedule <i class="fa fa-codepen"></i></a></li>
+			<li class="w3-hover-khaki">An example of manipulating a string object&hellip; 
+					<a target="_blank" href="http://bajcar.dev.fast.sheridanc.on.ca/sites/crumbs/">breadcrumbs <i class="fa fa-server"></i></a></li>
+
+
+		</ul>
+	</div>
+	
+	<div class="w3-container w3-section w3-light-grey w3-leftbar w3-rightbar w3-border-orange">
+		<h3>Debugging code</h3>
+		<ul>
+			<li>Use the console to trace values of variables</li>
+			<li>Use the console.log() method to trace values of variables and to send messages to the console at critical places in the code</li>
+			<li>It takes practice to understand the code. Use comments to explain, in your own words, what the code does and why</li>
+			<li class="w3-hover-khaki">Use tools such as <a href="http://jshint.com/" target="_blank">jshint.com</a> to clean up Javascript code.</li>
+			<li>Review <a href="http://javascript.crockford.com/code.html" target="_blank">http://javascript.crockford.com/code.html</a></li>
+			<li>Here is a list of related suggestions covered in  <a href="https://www.evernote.com/shard/s687/sh/08e73a4c-06e0-4938-a3f4-e3e04108222d/138d63da448e70aed82a3ed545b3a95b" target="_blank">class</a></li>
+		</ul>
+		<h3>REMINDER: use Progressive Enhancement (PE) approach</h3>
+		<ul>
+			<li><strong>STEP 1: </strong>Using HTML5 only, organize your input and output layout. You may want to do separate pages for different states in your application 
+			(what does the screen look like to the user when you start the game? what does it look like when you are in the middle of the game?
+			what does it look like when the game finishes?) Fill it with either Lorem Ipsum text and images, or use known representative or sample
+			content, such as integers when you expect the content to be numeric, etc. Once you have the layout completed and code valided, ...</li>
+			<li><strong>STEP 2: </strong>Using CSS3, style all components of your layout. Set up appropriate classes. Minimize the use of ID attributes, but use them if
+			they are used for Javascript purposes. Once you have the layout completed and code valided, ...</li>
+			<li><strong>STEP 3: </strong>Using Javascript, write out in plain English or pseudocode, what functionality you need to develop. Use comments and TODO label to 
+			organize your Javascript code. Develop all functionality with the "hard-coded" HTML first.  Once everything is working, remove the elements and 
+			DOM structures that will be created with Javascript, such as game boards. When you build those structures properly with JS, you should
+			not need to change any CSS or any other Javascript code.</li>
+			<li class="w3-hover-khaki">Use tools such as <a href="http://www.dirtymarkup.com/" target="_blank">dirtymarkup.com</a> to clean your HTML, CSS, and Javascript code.</li>
+		</ul>		
+	</div>
+
+	<div class="w3-container w3-section w3-light-grey w3-leftbar w3-rightbar w3-border-indigo">
+		<h3>Variables and Data Structures</h3>
+		<ul>
+			<li>Javascript is weakly typed, will dynamically change type based on assigned values</li>
+			<li>always use the keyword var to ensure that you don't encroach on the browser environment</li>
+			<li>to name variables and functions, stay away from keywords (TODO: find a list of keywords)</li>
+		</ul>
+		<h3>Native Objects</h3>
+		<ul>
+			<li><button>Math</button> &nbsp; <a href="http://codepen.io/collection/XbGMdY/" target="_blank">examples on codepen</a> <p></p> </li>
+			<li><button>String</button> &nbsp; <a href="http://codepen.io/collection/XbGMdY/" target="_blank">examples on codepen</a> <p></p> </li>
+			<li><button class="w3-red">Array and Object</button> <a href="http://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank">on w3schools</a> &nbsp; <a href="http://codepen.io/collection/XbGMdY/" target="_blank">examples on codepen</a>
+				<p>Review Array properties and methods, including concat, fill, forEach, indexOf, isArray, join, map, pop. push, reverse, shift, slice, sort, splice, toString, unshift, valueOf </p>
+			</li>
+		</ul>		
+	</div>
+	<div class="w3-container">		
+		<h4>Exercise Questions</h4>
+		<ol>
+			<li>Which of the following identifiers are acceptable? <br><code>5apples</code>, <code>first-name</code>, <code>$message</code>, <code>var</code>, <code>Var</code>, <code>VAR</code>, <code>Message</code>, <code>8teen</code>, <code>123</code>, <code>my$number</code>, <code>&amp;msg</code>, <code>_one_more_time</code>, <code>any-old-thing-will-do</code>, <code>"hello world"</code> </li>
+			<li>Declare a variable <code>abc</code> and initialize it with the value "abc"</li>
+			<li>Declare a variable <code>point</code> and do not initialize it</li>
+			<li>Declare a variable <code>flag</code> and initialize it to value "true"</li>
+			<li>Declare a variable <code>myVar</code> and initialize it to null</li>
+			<li>Declare a variable <code>aVar</code> and initialize it to undefined</li>
+			<li>Assign a value of "" to variable <code>abc</code>. How does this assignment differ from <code>null</code> and <code>undefined</code>?</li>
+			<li>A point in 2D space has a pair of values (x,y);  a rectangular area can be described with four (4) vertices (points).  Declare and initialize an array called <code>rect</code> which stores the vertices (2,3), (15,3), (2,10), and (15,10)</li>
+			<li>Declare and initialize an array called <code>family</code> that contains the values: Charlie, John, Helen, Omar, Harry, Olivia, Anna, and Peter.</li>
+			<li>Initialize an empty array called <code>colors</code>; separately (individually), store the color red as the first member, white as the second member and blue as the third member. What happens when you assign green as the fifth member? </li>
+			<li>What is the difference between  <code>obj.key</code> and <code>obj["key"]</code> ?</li>
+			<li>What is the difference between <code>var myarr = new Array(50);<code> and </code>var myarr = new Array(50,100);</code> ?</li>	
+			<li>Why would you not use <code>var str = new String;</code> ?</li>
+		</ol>		
+	</div>
+	
+	
+	<div class="w3-container w3-section w3-light-grey w3-leftbar w3-rightbar w3-border-indigo">
+		<h3>Functions, Events and the BOM</h3>
+		<ul>
+			<li>Functions use the keyword "function" followed by the name of the function, followed by a pair of brackets that may or may not contain parameters. The statements to be executed are enclosed within a pair of braces. A function can return a value.</li>
+			<li>object.innerHTML vs. document.write vs. createElement and appendChild methods</li>
+			<li>Get information about events with window.events</li>
+			<li>Get information about window properties</li>
+			<li>window.open and window.close</li>	
+			<li>This is a event-driven environment.</li>
+			<li>Most events occur when a user causes an event, such as click, mouse over, presses a key, etc.</li>
+			<li>Some events are not caused by the user, such as when a page finished loading</li>
+			<li>there are three ways to act upon events 1. use event attributes, 2. use event methods, and use event listeners</li>
+			<li>event listeners are non-obtrusive and give most flexibility</li>	
+			<li>have a closer read:
+				<ul>
+					<li><a href="http://www.w3schools.com/jsref/met_element_addeventlistener.asp" target="_blank">addEventListener on w3schools.com</a></li>
+					<li><a href="http://www.w3schools.com/jsref/met_element_removeeventlistener.asp" target="_blank">removeEventListener on w3schools.com</a></li>
+					<li><a href="http://stackoverflow.com/questions/5660131/how-to-removeeventlistener-that-is-addeventlistener-with-anonymous-function" target="_blank">how to remove event listener with anonymouse function on stackoverflow.com</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="w3-container">			
+		<h3>Exercise Questions</h3>
+		<ol>
+			<li>Describe and explain each of the following
+				<ul>
+					<li>typeof</li>
+					<li>location.url</li>
+					<li>window.open</li>
+					<li>document.write</li>
+					<li>alert()</li>
+					<li>confirm()</li>
+					<li>prompt()</li>
+				</ul>
+			</li>
+			<li>What is the difference among the following three statements? When would you use each and why?
+				<ol type="a">
+					<li><code>&lt;button onclick="dosomething();"></code></li>
+					<li><code>button.onclick = dosomething();</code></li>
+					<li><code>button.addEventListener("click", dosomething(););</code></li>
+				</ol>
+			</li>
+			<li>Write a function that takes an array parameter and returns one item selected at random
+				<ul>
+					<li>what happens if the array is empty?</li>
+					<li>what happens if the paramter does not contain an array?</li>
+					<li>can you return a random non-entry slice?</li>
+					<li>can you return five random members?</li>
+				</ul>				
+			</li>	
+			<li>Write a function that takes a list (array) and an index as a parameter and 
+				returns a list that is a copy of the original with
+				<ol type="a">
+					<li>the number at index multiplied by 2 
+						<br>&bull; check if index is out of range
+						<br>&bull; could have a non-integer value</li>
+					<li>the number at index is multiplied by index
+						<br>&bull; what parameters could cause an error?</li>
+				</ol>				
+			</li>				
+		</ol>						
+	</div>
+	
+	
+	<div class="w3-container w3-section w3-light-grey w3-leftbar w3-rightbar w3-border-indigo">
+		<h3>DOM and objects	</h3>
+		<ul>
+			<li>object-based environment; all elements, attributes, content,... are nodes in the DOM</li>
+			<li>each object has its own properties and methods</li>
+			<li>getElement methods can be used to get a handle on any available elements</li>
+			<li>parentElement.getElementById("idName") generates a handle to one unique element</li>
+			<li>parentElement.getElementsByTagName("tagName") generates an array of handles to zero, one, or more elements that have "tagName" within the scope of the parentElement</li>
+		</ul>
+	</div>
+	<div class="w3-container">			
+		<h3>Exercise Questions</h3>
+		<ol>
+			<li>what other ways can you find elements?  by class, ....</li>
+			<li>what is the difference between getElementsbyTagName("tagName") and querySelectorAll("tagName")?</li>				
+			<li>For each of the following, it is correct? why or why not it will work? explain
+				<ol type="a">
+					<li>document.getElementById("aParent").appendChild(document.createElement("aChild"));</li>
+					<li>document.getElementById("aChild").appendChild(document.createElement("aParent"));</li>
+					<li>document.getElementById("aParent").createElement(document.appendChild("aChild"));</li>
+					<li>document.createElement(document.appendChild(document.getElementById("aParent")));</li>
+				</ul>				
+			</li>
+		</ol>	
+	</div>
+
+
+	
+	<div class="w3-container w3-section w3-light-grey w3-leftbar w3-rightbar w3-border-orange">
+		<h3>Control Structures</h3>
+		<ul>
+			<li>Loops (iteration) and decisions are similar to Java code.</li>
+			<li>Explore
+				<ul>
+					<li><code>if (conditions) {//true code block} else {//false code block}</code></li>
+					<li><code>for (initialization; condition; modifier) {//code block}</code></li>
+					<li><code>(condition) ? statementA : statementB; //describe what this statement does</code></li>
+					<li><code>do { code block to be executed } while (condition);</code></li>
+				</ul>
+			</li>				
+			<li>conditions: what conditional operators are available? difference between == and ===</li>	
+			<li><a href="http://www.w3schools.com/js/js_switch.asp" target="_blank">switch on w3schools</a></li>
+		</ul>
+	</div>
+
+</div> 
+
+</body>
+</html>

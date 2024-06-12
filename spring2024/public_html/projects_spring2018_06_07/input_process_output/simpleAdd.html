@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Simple Adder</title>
+<meta charset="utf-8" />
+<!--
+File name: simpleAdd.html
+Author: Ellen Bajcar
+Date created: Winter 2017
+Date modified: Spring 2018
+Version: 2.0
+Description:
+	Problem:
+	What is the sum of two numbers?
+	
+	Description of the problem:
+	1. identify the goal, elements and relations within the domain of the problem (system)
+		Objective: 	find the result of adding two numbers together
+					find quantity S (variable)
+		Elements: 	quantity X
+					quantity Y
+		Relations:	assignment (equals,=)
+					addition (plus,+)
+		Constraints:	what is a number?
+						where does it come from?
+						where does it go? 
+	2. model the system! potential solution
+						S = X + Y (calculation)
+						X + Y = S (presentation only)
+	3. test with valid and invalid quantities 
+	
+	4. update constraints and assumptions
+		datatypes? integer, real, hex, bin, complex, scientific notaiton, NaN
+		how large? small? negative, signed, unsigned
+	5. validate assumptions by asking questions (customer, team members)
+	6. evaluate and update model
+			1. obtain X  	(how? ask user, pass parameters, retrieve from file...)
+			2. record X		(how? write down, save as variable,...)
+			3. obtain Y		(how? ask user, pass parameters, retrieve from file...)
+			4. record Y		(how? write down, save as variable,...)
+			5. calculate S (S=X+Y) 	(how? )
+			6. provide S (S=X+Y)	(how? tell, send, display,...)
+		front-end development: how will user interact? what controls are best? 
+			what will user see and do? how we can help?
+		this solution works for manual process, back-end and front-end
+-->
+<style>
+body { 
+	width: 60%; 
+	margin: 0 auto; 
+}
+fieldset {
+	min-height: 160px;
+	padding: 20px 5px;
+}
+output {
+	float:right;
+	font-size:800%;
+	font-weight:bold 
+}
+</style>
+</head>
+<body>
+	<header><h1>Class Example</h1></header>
+  	<form id="form2">
+		<fieldset>
+			<legend>An Extremely Simple Adder (Interger Addition only): </legend>
+			The sum of <input id="aa" type="number" value="0" step="any" /> and 
+			<input id="bb" type="number" value="0" step="any" /> is
+			<output id="o"></output>
+		</fieldset>
+	</form>
+	<footer><address>SYST10199 Web Programming &copy; Sheridan College</address></footer>
+<script>
+function init() { 
+	document.getElementById("form2").addEventListener( "input", 
+		function() {
+			o.value = aa.valueAsNumber + bb.valueAsNumber;
+		}, false );
+	document.getElementById("form2").addEventListener( "submit", 
+		function() { 
+			return false;
+		}, false );
+} 
+document.addEventListener( "DOMContentLoaded", init ) ;
+</script>
+</body>
+</html>

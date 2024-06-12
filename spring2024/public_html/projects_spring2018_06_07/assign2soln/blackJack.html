@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Name:
+    Version:
+    Date created:
+    Date updated:
+    Description:
+-->
+<head>
+	<title>Cards</title>
+	<meta charset="utf-8">
+	<meta content="Your Name(s)" name="author">
+	<meta content="Short description of this page's purpose" name="description">
+	<style> 
+	           table {
+	               table-layout: auto;
+				   outline: 0px dotted red;
+				   height:176px;
+	           }
+	           td {
+				   outline: 0px dotted blue;
+	           }			   
+	           .card {
+	               border:2px solid black;
+	               border-radius:7px;
+	               box-shadow: 2px 2px 4px lightgray;
+	               height:176px;
+	               /* standard Bridge size 2.25x3.5, radio 0.64 */
+	               text-align:center;
+	               padding:0;
+	               margin:10px;
+	               float:left;
+	               overflow: hidden;
+	           }
+	           .tilt7 {
+	               -ms-transform: rotate(7deg);
+	               /* IE 9 */
+	               -webkit-transform: rotate(7deg);
+	               /* Chrome, Safari, Opera */
+	               transform: rotate(7deg);
+	               background-color:white;
+	           }
+	           .tilt-7 {
+	               -ms-transform: rotate(-5deg);
+	               /* IE 9 */
+	               -webkit-transform: rotate(-5deg);
+	               /* Chrome, Safari, Opera */
+	               transform: rotate(-5deg);
+	               background-color:white;
+	           }
+	           .lower {
+	               -ms-transform: rotate(180deg);
+	               /* IE 9 */
+	               -webkit-transform: rotate(180deg);
+	               /* Chrome, Safari, Opera */
+	               transform: rotate(180deg);
+	               vertical-align: top;
+	           }
+	           .diamonds, .hearts {
+	               color: red;
+	           }
+	           .spades, .clubs {
+	               color: black;
+	           }
+	           .first {
+	               vertical-align: top;
+	               padding-right: 1px;
+	               width: 20px;
+	           }
+	           .last {
+	               vertical-align: bottom;
+	               padding-left: 5px;
+	               width: 20px;
+	           }
+	           .face td {
+	               padding:0;
+	               margin:0;
+	               font-size:2em;
+	               line-height:65%;
+	               height: 10px;
+	               width: 22px;
+	           }
+	           .face tr:first-child td {
+	               padding-top: 9px;
+	           }
+	           .face tr:last-child td {
+	               padding-bottom: 9px;
+	           } 
+	</style>
+</head>
+<body>
+	<header>
+		<!-- usually name and logo information -->
+		<h1 title="Exercise web01">Assignment 2</h1>
+	</header>
+	<nav class="mainNav">
+		<!-- MAIN NAVIGATION can have only one on the page -->
+		<a href="#">link</a> <a href="#">link</a>
+		<nav class="subNav">
+			<!-- MAIN NAVIGATION can have only one on the page -->
+			<a href="#">link</a> <a href="#">link</a> <a href="#">link</a> <a href="#">link</a>
+		</nav><a href="#">link</a>
+	</nav>
+	<hr>
+	<main>
+		<!--
+    Game objective
+    Although many players may play in a single round of blackjack, it's fundamentally a two-player game. In blackjack, players don't play against each other; and they don't co-operate. The only competition is the dealer.
+    The aim of the game is to accumulate a higher point total than the dealer, but without going over 21. You compute your score by adding the values of your individual cards.
+    The cards 2 through 10 have their face value, J, Q, and K are worth 10 points each, and the Ace is worth either 1 or 11 points (player's choice).   
+    https://www.pagat.com/banking/blackjack.html
+-->
+		<h2>Blackjack (21)</h2>
+		<h3>Game Objective</h3>
+		<p>Although many players may play in a single round of blackjack, it's fundamentally a two-player game. In blackjack, players don't play against each other; and they don't co-operate. The only competition is the dealer. The aim of the game is to accumulate a higher point total than the dealer, but without going over 21. You compute your score by adding the values of your individual cards. The cards 2 through 10 have their face value, J, Q, and K are worth 10 points each, and the Ace is worth either 1 or 11 points (player's choice).</p>
+		<p>At the start of a blackjack game, the players and the dealer receive two cards each. The players' cards are normally dealt face up, while the dealer has one face down (called the hole card) and one face up.</p>
+		<figure>
+			<table class="card spades" style="float:left">
+				<tr>
+					<td class="first">10<br>
+					<small>&#9827;</small></td>
+					<td>
+						<table class="face">
+							<tr>
+								<td>&#9827;</td>
+								<td></td>
+								<td>&#9827;</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>&#9827;</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>&#9827;</td>
+								<td></td>
+								<td>&#9827;</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>&#9827;</td>
+								<td></td>
+								<td>&#9827;</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>&#9827;</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>&#9827;</td>
+								<td></td>
+								<td>&#9827;</td>
+							</tr>
+						</table>
+					</td>
+					<td class="last"><small>&#9827;</small><br>
+					10</td>
+				</tr>
+			</table>
+			<table class="card hearts">
+				<tr>
+					<td class="first">A<br>
+					<small>&#9829;</small></td>
+					<td>
+						<table class="face hearts">
+							<tr>
+								<td>&nbsp;</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>&#9829;</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</table>
+					</td>
+					<td class="lower">A<br>
+					<small>&#9829;</small></td>
+				</tr>
+			</table>
+			<figcaption style="clear:both">
+				<strong>Figure 1:</strong> The best possible blackjack hand is an opening deal of an ace with any ten-point card. This is called a "blackjack", or a natural 21, and the player holding this automatically wins unless the dealer also has a blackjack. If a player and the dealer each have a blackjack, the result is a push for that player. If the dealer has a blackjack, all players not holding a blackjack lose.
+			</figcaption>
+		</figure>
+	</main>
+	<footer>
+		<hr>
+		<address>
+			Name, 2017 &copy; SYST10049 Web Development, Sheridan College
+		</address>
+	</footer>
+
+
+	
+		<table class="card diamonds" style="float:left">
+			<tr>
+				<td class="first">2<br><small>&#9830;</small></td>	
+				<td>
+					<table class="face diamonds">
+						<tr> <td></td> 			<td>&#9830;</td> 			<td>&nbsp;</td> 	</tr>	
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td> 			</tr>						
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>	</tr>
+						<tr> <td></td> 			<td>&nbsp;</td> 			<td></td>			</tr>
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>	</tr>
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>			</tr>						
+						<tr> <td>&nbsp;</td> 	<td>&#9830;</td> 			<td>&nbsp;</td>	</tr>	
+					</table>
+				</td>			
+				<td class="last"><small>&#9830;</small><br>2</td>
+			</tr>						
+		</table>
+
+		<table class="card" style="float:left">
+			<tr>
+				<td class="first">3<br><small>&#9830;</small></td>	
+				<td>
+					<table class="face diamonds">
+						<tr> <td></td> 			<td>&#9830;</td> 			<td>&nbsp;</td> 	</tr>	
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td> 			</tr>						
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>	</tr>
+						<tr> <td></td> 			<td>&#9830;</td> 			<td></td>			</tr>
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>	</tr>
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>			</tr>						
+						<tr> <td>&nbsp;</td> 	<td>&#9830;</td> 			<td>&nbsp;</td>	</tr>	
+					</table>
+				</td>			
+				<td class="last"><small>&#9830;</small><br>3</td>
+			</tr>						
+		</table>	
+
+			<table class="card diamonds" style="float:left">
+			<tr>
+				<td class="first">4<br><small>&#9830;</small></td>	
+				<td>
+					<table class="face diamonds">
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td> 	</tr>	
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td> 			</tr>						
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>	</tr>
+						<tr> <td></td> 			<td>&nbsp;</td> 			<td></td>			</tr>
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>	</tr>
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>			</tr>						
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td>	</tr>	
+					</table>
+				</td>			
+				<td class="last"><small>&#9830;</small><br>4</td>
+			</tr>						
+		</table>
+
+			<table class="card" style="float:left">
+			<tr>
+				<td class="first">5<br><small>&#9830;</small></td>	
+				<td>
+					<table class="face">
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td> 	</tr>	
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td> 			</tr>						
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>	</tr>
+						<tr> <td></td> 			<td>&#9830;</td> 			<td></td>			</tr>
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>	</tr>
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>			</tr>						
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td>	</tr>	
+					</table>
+				</td>			
+				<td class="last"><small>&#9830;</small><br>5</td>
+			</tr>						
+		</table>
+
+			<table class="card" style="float:left">
+			<tr>
+				<td class="first">6<br><small>&#9830;</small></td>	
+				<td>
+					<table class="face">
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td> 	</tr>	
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td> 			</tr>						
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>	</tr>
+						<tr> <td>&#9830;</td> 			<td></td> 			<td>&#9830;</td>			</tr>
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>	</tr>
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>			</tr>						
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td>	</tr>	
+					</table>
+				</td>			
+				<td class="last"><small>&#9830;</small><br>6</td>
+			</tr>						
+		</table>	
+
+			<table class="card" style="float:left">
+			<tr>
+				<td class="first">7<br><small>&#9830;</small></td>	
+				<td>
+					<table class="face">
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td> 	</tr>	
+							<tr> <td></td> 			<td></td> 			<td></td>			</tr>				
+						<tr> <td> </td> 		<td>&#9830;</td> 			<td> </td>	</tr>
+						<tr> <td></td> 			<td></td> 			<td></td>			</tr>
+						<tr> <td>&#9830;</td> 		<td>&nbsp;</td> 			<td>&#9830;</td>	</tr>
+						<tr> <td></td> 		<td>&nbsp;</td> 			<td></td> 			</tr>	
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>			</tr>						
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td>	</tr>	
+					</table>
+				</td>			
+				<td class="last"><small>&#9830;</small><br>7</td>
+			</tr>						
+		</table>	
+
+			<table class="card" style="float:left">
+			<tr>
+				<td class="first">8<br><small>&#9830;</small></td>	
+				<td>
+					<table class="face">
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td> 	</tr>	
+						<tr> <td></td> 		<td>&nbsp;</td> 			<td></td> 			</tr>
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td> 	</tr>						
+						<tr> <td></td> 		<td></td> 			<td></td> 			</tr>
+						<tr> <td></td> 			<td></td> 			<td></td>			</tr>
+						<tr> <td>&#9830;</td> 		<td>&nbsp;</td> 			<td>&#9830;</td>	</tr>
+							
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>			</tr>						
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td>	</tr>	
+					</table>
+				</td>			
+				<td class="last"><small>&#9830;</small><br>8</td>
+			</tr>						
+		</table>	
+
+			<table class="card" style="float:left">
+			<tr>
+				<td class="first">9<br><small>&#9830;</small></td>	
+				<td>
+					<table class="face">
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td> 	</tr>	
+						<tr> <td></td> 		<td>&#9830;</td> 			<td></td> 			</tr>
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td> 	</tr>						
+						<tr> <td></td> 		<td></td> 			<td></td> 			</tr>
+						<tr> <td></td> 			<td></td> 			<td></td>			</tr>
+						<tr> <td>&#9830;</td> 		<td>&nbsp;</td> 			<td>&#9830;</td>	</tr>
+							
+						<tr> <td> </td> 		<td>&nbsp;</td> 			<td> </td>			</tr>						
+						<tr> <td>&#9830;</td> 	<td>&nbsp;</td> 			<td>&#9830;</td>	</tr>	
+					</table>
+				</td>			
+				<td class="last"><small>&#9830;</small><br>9</td>
+			</tr>						
+		</table>		
+</body>
+</html>

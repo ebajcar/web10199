@@ -1,0 +1,142 @@
+/**
+ * index.scss
+ * - Add any styles you want here!
+ */
+/* CSS files add styling rules to your content */
+@import url("https://fonts.googleapis.com/css?family=Akronim|Asap+Condensed|Luckiest+Guy");
+:root {
+  --bgwhite: #fff;
+  --sherblue: #093D6D;
+  --sherteal: #1AC6D9;
+  --sherorange: #ff5C10;
+  --fontfam: "Luckiest Guy", cursive;
+  --fontbody: "Asap Condensed", sans-serif;
+  --fonttitle: "Akronim", cursive;
+  --gap-sm: 5px;
+  --gap-md: 10px;
+  --gap-lg: 25px;
+}
+
+html,
+body,
+main,
+nav,
+header,
+footer,
+aside,
+h1,
+.flex-container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+body {
+  background-image: url("images/sher_lightb.jpg");
+  background-repeat: repeat;
+  font-family: var(--fontbody);
+  background-color: var(--sherteal);
+}
+
+/* position needs to be non-static to allow the positioning of the images relative to its parent */
+main,
+nav,
+aside {
+  background-color: var(--bgwhite);
+  padding: var(--gap-sm);
+  position: relative;
+}
+
+footer {
+  border-top: 5px solid;
+  color: var(--sherblue);
+  padding-top: var(--gap-sm);
+  text-align: center;
+}
+
+header {
+  border-bottom: 17px solid var(--sherblue);
+  padding: 10px;
+  text-align: center;
+}
+
+/* major heading for the project on all pages */
+header h1 {
+  color: var(--sherblue);
+  font-family: var(--fonttitle);
+  font-size: 7vw;
+  /* check out the vw units */
+  text-shadow: 1px 1px 2px var(--sherorange), 3px 3px 4px var(--bgwhite);
+}
+
+aside {
+  padding-right: 15px;
+  text-align: justify;
+  overflow-y: scroll;
+  max-height: 400px;
+}
+
+/* used (class, not element) for headings in the <aside> element */
+aside .h4 {
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 1em 0 0 0;
+}
+
+/* navigation */
+nav {
+  margin: 20px auto;
+  width: 450px;
+  text-align: center;
+}
+
+nav a, nav span {
+  background-color: #a4a4a4;
+  color: #fff;
+  display: inline-block;
+  font-family: Lato, sans-serif;
+  font-size: 15px;
+  padding: 7px;
+  text-decoration: none;
+}
+
+nav a.active, nav a:hover {
+  background: #c2c2c2;
+  color: #818181;
+}
+
+table {
+  margin: 20px auto;
+  background-color: transparent;
+}
+
+td {
+  height: 50px;
+  width: 50px;
+  font-size: 2.2em;
+  font-family: sans-serif;
+  border: 1px solid #00CCCC;
+  background-color: transparent;
+}
+
+td:nth-child(1) {
+  border-left-style: none;
+}
+
+td:nth-child(3) {
+  border-right-style: none;
+}
+
+tr:nth-child(1) > td {
+  border-top-style: none;
+}
+
+tr:nth-child(3) > td {
+  border-bottom-style: none;
+}
+
+.grid-item {
+  text-align: center;
+}

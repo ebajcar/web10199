@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fibbonaci Numbers While Loop</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<header>
+		<h1>Fibbonaci Numbers While Loop</h1>
+	</header>
+	<label>How many? </label>	
+	<input type="number" id="f">
+	<button>Clear</button>
+	<ol></ol>
+	
+<script>
+// Calculate and display in console the first 5 Fibbonaci numbers
+var ol = document.getElementsByTagName("ol")[0];
+var n = 10, li, pre = 0, cur = 1;
+var howMany = document.getElementById("f");
+var reset = document.getElementsByTagName("button")[0];
+	
+reset.onclick = function() {
+	location.reload();
+}
+
+howMany.oninput = function() {
+	while(ol.hasChildNodes()) 
+	   ol.removeChild(ol.lastChild);
+	pre = 0, cur = 1;
+	ol.appendChild(document.createElement("li")).innerText = pre;  
+	ol.appendChild(document.createElement("li")).innerText = cur;
+	n = howMany.value;
+	var i = 2;
+	while (i < n) {
+		var tmp = pre;
+		pre = cur;
+		cur += tmp;
+		console.log(cur);
+		ol.appendChild(document.createElement("li")).innerText = cur;
+		i++;
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Assignment 3</title>	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>  
+    <link type="text/css" rel="Stylesheet" href="../../../js/syntax/styles/tutorials.css"/>
+	<link type="text/css" rel="Stylesheet" href="../../../js/syntax/styles/shCoreDefault.css"/>
+	<link type="text/css" rel="Stylesheet" href="../../../js/syntax/styles/shThemeDefault.css"/>
+
+<style>
+body {
+    background-image: url('../../../images/sher_shorter.gif');
+    background-repeat: repeat-x;
+    background-attachment: initial;
+}
+address span {
+    margin-left:6px;
+    padding-left:6px;
+    font-size: 1em;
+    font-family:Arial;
+    border-left:1px solid gray;
+    display:inline-block;
+    height:24px;
+    vertical-align:text-bottom;
+}
+address img {
+    height:24px;
+    vertical-align:text-bottom;
+}
+#underRev { 
+    position: fixed; 
+    width: 100%; 
+    height:100%; 
+    background-color: black; 
+    z-index: 666; 
+    opacity: 0.9; 
+}
+#underRev h1 { 
+    font-size: 100px; 
+    color: red; 
+    text-shadow: 1px 1px 3px white; 
+    text-align: center; 
+    padding-top: 100px; 
+    -ms-transform: rotate(-7deg); /* IE 9 */
+    -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+    transform: rotate(-7deg);
+} 
+body .syntaxhighlighter .line {
+        white-space: pre-wrap !important; /* make code wrap */
+}  
+     
+</style>
+</head>
+
+<body>
+    <!--div id="underRev"><h1>Under Revision</h1></div-->  
+    <header> 
+        &nbsp;
+    </header> 
+    
+    <div class="container">
+        <div class="panel">
+             <div class="panel-heading"> 
+                <!-- part 1 -->
+                <h1>Assignment 3 <small>SYST10199 Web Programming</small></h1>
+                <hr>
+                <h4>Complete all of the following steps:</h4>
+                <p></p>
+                <p>&nbsp;</p>
+                    <dl class="dl-horizontal">
+                    <dt class="btn btn-lg btn-danger">Objective</dt>
+                    <dd>
+                        <blockquote>
+                            <h3>Construct solution for the Learning Style survey.</h3>
+                        </blockquote>
+                        <hr>	
+                    </dd>         
+                </dl>
+                <h4>Complete the web application:</h4>
+                <dl class="dl-horizontal">
+                    <dt class="btn btn-warning">Step 1</dt>
+                    <dd>
+                        <p>The output is expected to run as demonstrated in the video clip.</p> 
+						<p>The survey is to be presented in a table format (all at once) as in the video clip.</p> 
+						<p>You can modify and choose your own color scheme.</p>
+                        <hr> 
+                        <object width="88%" height="560px" data="a3_LS.swf">
+							<param name="scale" value="exactFit" /></object>
+                        <hr> 
+                    </dd>
+                    <dt class="btn btn-warning">Step 2</dt>
+                    <dd>                        
+                        <p>Create a standard project (with subdirectories: css, images, js) and name it "surveyLS"</p>
+						<p>Create the single HTML page in the project directory, call it <code>index.html</code> or <code>learnLS.html</code></p>	
+						<p>Copy the directory structure into the content subdirectory in the games directory.  Make sure you "freeze" Assignment 3 structure! Do not overwrite and stop modifying the previous assignments. All current changes should be done within the assign4 structure!.</p></p>
+						<p><button type="button" class="btn btn-primary" data-toggle="modal" 
+									data-target="#modalA">Organize directories and files properly and publish appropriately.</button></p>
+			<hr>
+            <h5 class="btn btn-success">Create all data objects and store in <code>data.jsonp</code> (this is just a Javascript file that has the major data object stored in its own file).</h5> 
+			<hr>
+            <p>The instructions that are presented when the user clicks on the "Info" button are stored in the object called "instruct.  Note the format, each element type is specified with the key "type" and the content for the element is specified with the key "thetext".</p> 
+            <pre class="syntaxhighlight brush: js; first-line:1; highlight: [0];" title="Object instruct">
+var instruct = [
+	{ 
+		"type": "h3", 
+		"thetext": "Instructions" 
+	},
+	{ 
+		"type": "p", 
+		"thetext": "Read the word(s) in the first column and select the description that best expresses how you usually handle each situation." 
+	},
+	{ 	
+		"type": "p", 
+		"thetext": "Many responses probably fall in one column, with several in another column, and very few in the remaining one. The column that represents your actions best is your primary processing style.  The second highest is your auxiliary style. Though this test is not very technical or complicated, most adults know how they respond to situations." 
+	},
+	{ 
+		"type": "p", 
+		"thetext": "By spending time thinking about reactions, you can identify how you prefer to process information. This assessment looks at your modality preferences. When you press the Submit button, your primary and auxiliary processing style will be displayed, together with some suggestions how to take advantage of your strengths." 
+	},
+	{ 
+		"type": "button", 
+		"thetext": "Close" 
+	}
+];</pre> 						
+                        <hr> 
+			<p>The thirteen (13) questions are stored in an object called "whenYou". The first two (2) rows are provided below. Create the remaining eleven (11) questions from the handout <a href="https://docs.google.com/document/d/1GtPdsg9Xc-gydEx0JHONhzjmAnITP6oFni-KBtfpjA0/edit?usp=sharing" target="_blank">Copy of the link here</a>. Note the format: first column uses key "name", its value is the content after the words "When you"; second column uses key "visual" with value being the content of the second column; third column uses key "auditory" with the content of the third column; fourth column uses key "tactile" with the content from the fourth column.</p> 
+            <pre class="syntaxhighlight brush: js; first-line:1; highlight: [0];" title="Object whenYou">
+var whenYou = [
+	{ 
+		"name": "spell", 
+		"visual": "Do you try to see the word?", 
+		"auditory": "Sound out the word, or use a phonetic approach?", 
+		"tactile": "Write the word down to find if it feels right?" 
+	},
+	{ 
+		"name": "talk", 
+		"visual": "Talk sparingly,but dislike listening for too long? Do you favor words such as see, picture, and imagine?", 
+		"auditory": "Enjoy listening, but are impatient to talk? Use words, such as hear, tune, and think?", 
+		"tactile": "Gesture and use expressive movements? Use words such as feel, touch, or hold?" 
+	},
+	{ 
+...</pre> 						
+            <hr> 
+			<p>There are also three (3) objects that hold the feedback, one for each learning style.</p> 
+            <pre class="syntaxhighlight brush: js; first-line:1; highlight: [0];" title="Objects visualLearner, auditoryLearner, tactileLearner">
+// To improve my learning, I can ... (consider the following)
+var visualLearner = [ 	
+	"Visualize myself successfully performing a task.", 	
+	"Take notes. Write out everything.",
+	"Keep a journal of what I've learned.",
+	"Use charts, maps, notes, and flashcards.",
+	"Make pictures of words, ideas, and concepts in my head.",
+	"Ask the teacher to write on the board."
+];
+					
+var auditoryLearner = [	
+	"Tape lectures.",
+	"Read my notes or textbooks out loud.",
+	"Summarize what I've learned and then tape myself.",
+	"Explain what I've learned to others.",
+	"Make a song out of items I need to memorize.",
+	"Listen to music as I study to match words, ideas, and concepts to musical themes."
+];
+						
+var tactileLearner = [	
+	"Take notes.",
+	"Underline or highlight important facts.",
+	"Make a scrapbook of what I've learned.",
+	"Act out a poem, story, or historical event.",
+	"Walk through a series of instructions.",
+	"Build a model or draw a picture of what I am learning.",
+	"Create physical exercises or motions to match words, ideas, and concepts."
+]; </pre> 						
+                    <hr> 
+            <h5 class="btn btn-success">Start with the standard HTML5 document</h5> 
+			<p>Use standard header, comments, and head components.  In the body, you will need  the following: navigation with the ability to submit the survey for processing, reset to clear all events and start over, and info to present the user with directions how to complete the survey. The message and overlay are the same as the tic tac toe app and you can copy all components related to the overlay.</p>
+			<hr>
+<pre class="syntaxhighlight brush: html; first-line:16; highlight: [26,27];">
+&lt;body>
+    &lt;nav>
+        &lt;button id="submit">submit&lt;/button>
+        &lt;button id="reset">reset&lt;/button>
+        &lt;button id="info">info&lt;/button>
+    &lt;/nav>
+	&lt;section id="questions">&lt;/section>
+	&lt;div id="message">&lt;/div>
+	&lt;div id="overlay">&lt;/div>
+	&lt;footer>&lt;h2>...live and learn!&lt;/h2>&lt;/footer>
+	&lt;script src="js/data.jsonp">&lt;/script> 
+	&lt;script src="js/ls.js">&lt;/script>	
+&lt;/body></pre>	
+<hr>
+            <h5 class="btn btn-success">Add behaviour with Javascript <code>surveyLS.js</code></h5> 
+			<p>What functionality is required? Look through the other applications, some are very similar, if not the same. Ask questions on Piazza Q&amp;A and follow related posts. Some suggestions to get you started (in particular order):</p>
+			<hr>
+<pre class="syntaxhighlight brush: js; first-line:1; highlight: [0];">
+// TODO: a function to create and populate the table
+// TODO: event listeners: table cells, buttons, ...
+// TODO: a function to process the form and calculate which learning style is primary and which is auxiliary
+// TODO: a function to display the results
+// TODO: a function to clear or reset everything
+</pre>	
+<hr>	
+                    </dd>					
+                    <dt class="btn btn-warning">Step 3</dt>
+                    <dd>
+                        <p>1. Use <strong>external</strong> styles and Javascript.</p>
+                        <p>2. Your solution must use unobtrusive Javascript.</p>
+                        <p>3. Cite and document all sources, including code provided in class.</p>
+                        <p>4. Make sure you document <strong>all</strong> code well (html, css, and javascript) </p>
+                        <p>5. Make sure you format <strong>all</strong> code to be easy to read.</p>
+                        <p>6. Don't forget to validate all HTML and CSS. Use the console to debug your Javascript.</p>
+                        <hr>   
+                        <h3 class="btn btn-lg btn-danger">Do not leave your assupmptions unvalidated! Ask questions on Piazza Q&A and in class!</h3>
+                        <hr>            							
+                    </dd>
+                    <dt class="btn btn-warning">Step 4</dt>
+                    <dd>  
+						<p>Prior to submission, review 
+							<button class="btn btn-default"  data-toggle="modal" data-target="#myModal">Evaluation Factors</button> &bull;
+							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalB">How to print electronic code?.</button> &bull; and
+							<a class="btn btn-default" href="https://www.evernote.com/shard/s687/sh/08e73a4c-06e0-4938-a3f4-e3e04108222d/138d63da448e70aed82a3ed545b3a95b" 
+								target="_blank">How to document code?</a>
+						</p>					
+                        <p>Attach an electronic code printout of the <strong>Javascript file only</strong> as<code>userid_a3.pdf</code> to the SLATE Dropbox.  </p>	
+                        <p>In the Dropbox Comments field, provide the URL to the <strong>published web app on dev.fast.sheridanc.on.ca</strong>. Note that the directory structure on the server must match your local machine. It is recommended that the <code>C:\public_html</code> corresponds to <code>public_html/syst10199</code> on the server.</p>
+                        <hr> 
+                    </dd>        
+                </dl>    
+            </div>
+        </div>
+
+        <!-- 
+        *********************************************
+        Footer
+        *********************************************
+        -->	
+        <hr>	
+        <p class="text-right"><a href="#">Back to top</a></p>
+		<footer>
+        <div class="panel-footer panel-primary"> 
+            <div class="small fa fa-copyright">
+                <em>This work is the intellectual property of Sheridan College. Any further copying 
+                    and distribution outside of class must be within the copyright law. Posting to 
+                    commercial sites for profit is prohibited.</em> 
+                    &mdash; <strong>Sheridan College @ SYST10199 Web Programming</strong>
+            </div>
+        </div>        
+		</footer>
+    </div>   <!-- container -->
+
+	
+<!-- Modal -->
+    <div aria-labelledby="myModalLabel" class="modal fade" id="modalB" role=
+    "dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button aria-label="Close" class="close" data-dismiss=
+                    "modal" type="button"><span aria-hidden=
+                    "true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Electronic Code Printouts</h4>
+                </div>
+                <div class="modal-body">
+					<iframe src="https://docs.google.com/presentation/d/118QvWb6xgUsspKdD2toB5IvDA4nokAntD1koaaVoN7Q/embed?start=false&loop=false&delayms=3000" frameborder="0" width="570" height="350" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>  
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" type=
+                    "button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+<!-- Modal -->
+    <div aria-labelledby="myModalLabel" class="modal fade" id="modalA" role=
+    "dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button aria-label="Close" class="close" data-dismiss=
+                    "modal" type="button"><span aria-hidden=
+                    "true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">File Organization for Web Apps</h4>
+                </div>
+                <div class="modal-body">
+					<p>&bull; Review the standard file organization and naming conventions (see Review &amp; Preparation).</p>
+					<p>&bull; On the client (your machine), all assignments should be organized under <samp  class="btn btn-primary">C:\public_html\syst10199</samp> or <samp>C:\xampp\htdocs\syst10199</samp></p>
+					<p>&bull; Thereunder, create the <samp>assign1</samp> directory (called <b>project directory</b>), with the following structure:
+<pre style="background-color:white;border: 0px solid;">
+├── syst10199/	
+│   ├── assign1/
+│   │   ├── index.html						
+│   │   ├── content/  		 
+│   │   ├── css/
+│   │   ├── images/
+│   │   └── js/		
+│   │ 
+│   ├── assign2/
+│   │   ├── index.html						
+│   │   ├── content/
+│   │   │   └── ticTacToe.html  		 
+│   │   ├── css/
+│   │   │   └── rps.css
+│   │   ├── images/
+│   │   └── js/
+│   │       └── rps.js
+│   │ 
+│   ├── assign3/
+│   │   ├── index.html
+│   │   ├── content/
+│   │   │   │   
+│   │   │   ├── ttt/
+│   │   │   │   ├── ttt.html			or index.html
+│   │   │   │   ├── css/
+│   │   │   │   │   └── ttt.css
+│   │   │   │   ├── images/
+│   │   │   │   └── js/
+│   │   │   │       └── ttt.js
+│   │   │   │ 
+│   │   │   ├── rsp/
+│   │   │   │   ├── rsp.html			or index.html
+│   │   │   │   ├── css/
+│   │   │   │   │   └── rsp.css
+│   │   │   │   ├── images/
+│   │   │   │   │   ├── paper.png
+│   │   │   │   │   ├── rock.png
+│   │   │   │   │   └── scissors.png
+│   │   │   │   └── js/
+│   │   │   │       └── rsp.js
+│   │   │   │
+│   │   │   └── surveyLS/
+│   │   │       ├── surveyLS.html		or index.html
+│   │   │       ├── css/
+│   │   │       │   └── surveyLS.css
+│   │   │       ├── images/
+│   │   │       └── js/
+│   │   │           ├── data.jsonp
+│   │   │           └── surveyLS.js
+│   │   │   
+│   │   ├── css/
+│   │   ├── images/
+│   │   └── js/
+</pre>		</p>	<p><strong>Do not overwrite your previous assignment projects!</strong></p>					
+					<p>&bull; When you are publishing on <samp>dev.fast.sheridanc.on.ca</samp>, copy the entire project structure to <samp class="btn btn-primary">/home/userid/public_html/syst10199</samp>.</p>
+					<p>Using sftp protocol, open a connection, position yourself on the server with the <b>cd</b> commmand, on the client with the <b>lcd</b> command, and upload the entire project with the <b>mput -r</b> command
+<pre class="syntaxhighlight brush: js;">
+cd public_html/syst10199
+lcd C:\public_html\syst10199
+mput -r assign1</pre></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" type=
+                    "button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>	
+
+	<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Evaluation Factors</h3>
+      </div>
+      <div class="modal-body">
+            <h4>Algorithm Design</h4>
+            <ul>
+                <li>Use appropriate programming structures [weight factor: 1/10]</li>
+                <li>Test all cases [weight factor: 1/10]</li>
+                <li>Error Handling [weight factor: 1/10]</li>
+            </ul>
+            <h4>Program Style</h4>
+            <ul>
+                <li>Comments [weight factor: 1/10]</li>
+                <li>Naming variables, files,... [weight factor: 1/10]</li>
+                <li>Readability and Indentation [weight factor: 2/10]</li>
+            </ul>                    
+            <h4>Program Correctness</h4>
+            <ul>
+                <li>Ability to Compile or Interpret without Errors [weight factor: 1/10]</li>
+                <li>Program Correctness, Correct Results [weight factor: 2/10]</li>
+            </ul> 
+            <h4>Citation</h4>
+            <p>Lack of Source [weight factor: -4/10] In comments, reference all sources used (classroom, course material, references, videos, websites,...) and describe what changes you've made.  </p>                               
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>	
+	
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>		
+
+<script type="text/javascript" src="../../../js/syntax/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushBash.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushPlain.js"></script>
+<script type="text/javascript">SyntaxHighlighter.all();</script>   
+</body>
+</html>

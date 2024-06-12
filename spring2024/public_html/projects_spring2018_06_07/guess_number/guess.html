@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess Number 1</title>
+	<meta charset="utf-8">
+<!-- 
+Author: Ellen Bajcar
+Date: Winter 2018
+Version: 1.0
+Purpose: learning Javascript programming
+Copyright: 
+	This work is the intellectual property of Sheridan College. 
+	Any further copying and distribution outside of class must be within 
+	the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+	Web app that generates a random number between 1 and 10 (inclusive)
+	and prompts the user to guess what the number is. The user's guess is
+	compared to the random number and advises the user whether the guess is too
+	low, too high, and there is a match.  The game ends when the user guesses the
+	number.
+-->	
+</head>
+<body>
+    <header><h1>Example</h1></header>
+	<main></main>
+	<footer><address>SYST10199 Web Programming @ Sheridan College</address></footer>
+<script>
+// Generate a random number to be guessed
+var y = Math.floor((Math.random() * 10) + 1);
+console.log("temporary display (for debugging purposes only) " + y);
+var x = -1;
+
+while ( x != y ) {
+    // Prompt the user to guess a number between 1 and 10
+	var guess = prompt("Guess a magic number between 0 and 10", "0");
+	x = parseInt(guess);
+
+	// Determine whether the guess is the same as the number
+	// if yes, let the user know
+	// if no, determine if 
+	//        guess is higher than number, let user know
+	//        guess is lower than number, let user know		
+	if ( x == y) 
+		console.log("Yes, the number is " + y);
+	else if ( x < y ) 
+		console.log("Your guess is too low");
+	else 
+		console.log("Your guess is too high");
+}
+</script>
+</body>
+</html>

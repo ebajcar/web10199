@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Casino Craps</title>
+	<meta charset="utf-8">
+<style>
+body {
+	background: #e0e0e0;
+    font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+main, section {
+	width: 100%;
+	margin: auto;
+	padding-top: 10px;
+	background-color: white;	
+}
+main {
+	padding-bottom: 10px;
+	min-height: 300px;
+}
+header h1 {
+	color: #6f6f6f;   
+    font-family: Lato, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+	margin: 20px 0 0;
+    text-align: center;
+    text-shadow: 0 0 0 rgba(0,0,0,.4);
+}
+footer {
+	margin: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+
+
+/* navigation */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav a {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover {
+    background: #c2c2c2;
+    color: #818181;
+}
+</style>	
+</head>
+<body>
+
+	<header>
+		<h1>Main Title</h1>
+	</header>
+	<nav>
+		<a href="#">Casino Craps</a>
+	</nav>
+	<main>
+		<section>
+			<h2>Casino Craps</h2>
+			<div class="total">
+				<small>You rolled&hellip;</small><br>total <var id="total"></var>
+			</div>
+			dice1 <div id="alpha" class="die"></div>
+			dice2 <div id="bravo" class="die"></div>		
+			<button id="roll" class="roll">Roll the dice!</button>
+		</section>
+		 <aside>
+			<button id="clear">Clear</button>
+			<p>Wins: <span id="wins">0</span> Losses: <span id="losses">0</span></p>
+			<div id="show" class="show">To start a game, roll the dice!<br></div>
+		</aside>	
+	</main>	
+ 	
+	<footer>
+		<address>2018 &copy; SYST10199 Web Programming, Sheridan College</address>
+	</footer>
+
+<script>
+/*
+	set up all variables
+	- outcome 	: handle to id=total element to display outcome
+	- show		: handle to id=show element to display instructions
+	- showWins	: handle to id=wins element to display number of wins
+	- showLosses: handle to id=losses element to display number of losses
+	- point		: variable to show value of point ( 0 or total)
+	- wins		: variable to track number of wins ( 0, increments of 1)
+	- losses	: variable to track number of losses ( 0, increments of 1)
+	- message	: Javascript object {key:value} pairs storing phrases to display
+*/
+var outcome = document.getElementById("total");
+var show = document.getElementById("show");
+var showWins = document.getElementById("wins");
+var showLosses = document.getElementById("losses");
+var point = 0;
+var wins = 0; 
+var losses = 0;
+var message = {
+	natural : "That's a natural. You win!",
+	craps 	: "That's craps. You lose!",
+	point 	: "You made your point. You win!",
+	seven 	: "That's a seven. You lose!"
+	};
+
+// function rollBoth() is called every time the user clicks the button id=roll	
+var rollHandle = document.getElementById("roll");
+rollHandle.onclick = rollBoth;
+
+// when user click the button id=clear to reset statistics, call function clear()
+document.getElementById("clear").onclick = clear;	
+
+
+// roll a single dice; function called by rollBoth()
+// single parameter, which dice to generate
+// returns the generated value ( 1 through 6 )	
+function roll(dice){
+  var random = Math.floor((Math.random() * 6) + 1);
+  document.getElementById(dice).innerText = random;
+  return random;
+}
+
+/* 	
+	At the beginning of the game, the player rolls a pair of dice 
+	and computes the total. 
+	1. calculate dice1
+	2. calculate dice2
+	3. calculate total
+	4. display in console "Rolling dice: dice1 dice2 total
+*/
+function rollBoth() {
+	var dice1 = roll("alpha"); 
+	var dice2 = roll("bravo");
+    var total = dice1 + dice2;
+	outcome.innerText = total;
+	determineOutcome(total);
+}
+
+// called by rollBoth() function, passing in calculated total of two dice
+function determineOutcome(total) {
+// ADDED: first roll is distinquished by point = 0 (flags it)
+	if ( point == 0 ) {
+//  If the total is 2, 3, or 12 (called "craps"), the player loses. 
+// 	If the total is 7 or 11 (called a "natural"), the player wins.	
+		if (total == 7 || total == 11) {
+			wins++;
+			display("natural", showWins, wins);
+		} else if (total == 2 || total == 3 || total == 12) {
+			losses++;
+			display("craps", showLosses, losses);		  
+		} else {
+//	If the total is any other number, that number becomes the "point". 
+/*
+	From here, the player keeps rolling the dice until 
+	(a) the point comes up again, in which case the player wins, or 
+	(b) a 7 appears, in which case the player loses. 
+	The numbers 2,3,11, and 12 no longer have special 
+	significance after the first rolls.
+*/		
+		  point = total;
+		  show.innerHTML = "Your point is " + point + ". Roll again!<br>";  
+		}
+	} else {
+// if total == point, announce winner and break out of loop	 	
+        if (total == point) {
+			wins++;
+			display("point", showWins, wins);
+			point = 0;
+        } else if (total == 7) {
+// else if total is 7, announce loser and break out of loop		
+			losses++;
+			display("seven", showLosses, losses);			
+			point = 0;
+        }
+// otherwise, nothing happens until rollBoth() function is called	
+	}
+}
+
+// called by determineOutcome(total) function
+// passes parameters 
+//     display( key/name in message object, 
+//				showLosses/showWins, 
+//				wins/losses)
+function display(msg, c, w) {
+	show.innerHTML = message[msg];
+	c.innerHTML = w;	
+	show.innerHTML +=  " NEW GAME. Roll the dice!";
+}
+
+// reset all variables
+function clear() { 
+	point = 0;
+	wins = 0;
+	losses = 0;
+	show.innerHTML = ""; 
+	showWins.innerHTML = 0;
+	showLosses.innerHTML = 0;
+}
+</script>
+</body>
+</html>

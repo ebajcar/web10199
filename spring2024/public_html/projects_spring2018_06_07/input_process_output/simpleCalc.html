@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="A simple calculator" />
+<meta charset=utf-8 />
+<title>Simple Calculator</title>
+<style>
+	body { width: 70%; margin: 0 auto; }
+	#o {float:right;font-size:800%;font-weight:bold }
+</style>
+</head>
+<body>
+  	<form name="form2" id="form2">
+		<fieldset>
+			<legend>An Extremely Simple Calculator (Interger Addition only): </legend>
+			<input name="aa" id="aa" type="number" value="0" step="any" /> + <br>
+			<input name="bb" id="bb" type="number" value="0" step="any" /> =
+			<output id="o"></output>
+		</fieldset>
+	</form>
+<script type="text/javascript">
+function init() { 
+	document.getElementById("form2").addEventListener( "input", function() {o.value = aa.valueAsNumber + bb.valueAsNumber;}, false ) ;
+	document.getElementById("form2").addEventListener( "submit", function() { return false;}, false ) ;
+} 
+document.addEventListener( "DOMContentLoaded", init ) ;
+</script>
+</body>
+</html>

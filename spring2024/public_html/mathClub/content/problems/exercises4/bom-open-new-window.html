@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Worksheet Four Exercises</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/missing.css@1.0.9/dist/missing.min.css">
+    <link rel="stylesheet" href="../../css/prism-coy-23.css">
+    <script src="../../scripts/prism-coy-23.js" defer></script>
+	<link href="https://fonts.bunny.net/css?family=source-sans-3:400,700|m-plus-code-latin:400,700" rel="stylesheet">
+
+	<style>
+		:root {
+			--main-font: "Source Sans 3", -apple-system, system-ui, sans-serif;
+            --line-length: 60rem; /* Maximum line length for prose. */
+		}
+		dfn > code {
+			font-style: normal;
+			text-decoration: 1px dashed var(--muted-fg) underline;
+		}
+		code a {
+			font-family: inherit;
+		}
+        .current {
+            font-weight: bold;
+        }
+        .big-value {
+          font-size: 4em;
+          font-weight: normal;
+          text-align: left;
+          text-shadow: 2px 2px 2px gray;
+          padding-bottom: 20px;
+        }
+
+        button {
+            font-size: 1em;
+            height: 50px;
+            width: 200px;
+        }
+	</style>
+</head>
+<body>
+
+	<header>
+        <h1><span class="allcaps">Web Programming</span> <sub-title>Worksheet Four</sub-title></h1>
+        <nav>
+            <p class="tool-bar"><a href="../../index.html">Home</a>
+            <a href="../problems/index.html">Problems</a>
+            <a href="index.html" class="current">Exercises</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>BOM   - <small>explore window properties and methods</small></h2>
+     <nav class="breadcrumbs" aria-label="breadcrumbs">
+        <ol>
+            <li><a href="index.html">Exercises</a></li>
+            <li><a href="#">bom-open-new-window.html</a></li>
+        </ol>
+    </nav>   
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h4>mouseover event</h4>
+        <p><a href="blah.html">Move mouse over this text</a></p>
+      	<button>Open a new window</button>
+        <div id="panel"></div>
+    </li>
+
+</ul>
+
+<ul role="list" class="f-switch dense">
+    <li class="box">
+        <h4>Code snippet</h4>
+<pre class="language-js" tabindex="0"><code class="language-js">
+document.links[5].addEventListener("mouseover", function() { 
+        alert('you rolled over me'); 
+    }, 
+    false
+);
+
+document.querySelect("button").addEventListener("click", function() {	
+        let pop = window.open( "", "MyPopup", 
+                    "top=200,left=100,width=450,height=150,resizable,scrollbars=no,status=1");
+        pop.document.write( "&lt;title>Changed value Popup Window&lt;/title>" ) ; 
+        pop.document.write( "&lt;h1>Web Programming Example&lt;/h1>" ); 
+        pop.document.write( "&lt;p>Dynamic Popup Content&lt;/p>" ); 
+        pop.document.close();
+    }, 
+    false
+);
+</code></pre>
+    </li>
+</ul> 
+
+
+		
+    </main>
+   <footer>
+        <address>Ellen Bajcar &copy; Sheridan College</address>
+        <p>The materials provided in class and in SLATE are protected by copyright. They are intended for the personal, educational uses of students in this course and should not be shared externally or on websites such as Course Hero or OneClass. Unauthorized distribution may result in copyright infringement and violation of Sheridan policies.</p>
+    </footer>
+
+<script>
+/*
+  PROBLEM: 
+  
+  SOLUTION: 
+  1. Get (pick) a number 
+  2. define a function that 
+  3. Call the function
+  4. display the result in the console.
+*/
+//function init() { 
+document.links[5].addEventListener("mouseover", function() { 
+        alert('you rolled over me'); 
+    }, 
+    false
+);
+
+document.getElementsByTagName("button")[0].addEventListener("click", function() {
+        const panel = document.getElementById("panel");		
+        panel.innerHTML = "<p>This document's title is <q>" + document.title + "</q>" +
+                "<br>The new document's title will be <q>Changed value Popup Window</q></p>";        
+        let pop = window.open( "", "MyPopup", 
+                    "top=200,left=100,width=450,height=150,resizable,scrollbars=no,status=1");
+        pop.document.write( "<title>Changed value Popup Window</title>" ) ; 
+        pop.document.write( "<h1>Web Programming Example</h1>" ); 
+        pop.document.write( "<p>Dynamic Popup Content</p>" ); 
+        pop.document.close();
+    }, 
+    false
+);
+//} 
+//document.addEventListener( "DOMContentLoaded", init, false )
+
+
+</script>
+</body>
+</html>

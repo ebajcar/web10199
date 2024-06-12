@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- 
+Author: Ellen Bajcar
+Program: ticTacToe.html
+Date: Summer 2016
+Date Updated: 8:25 AM June-09-16
+Version: 5.0 (Week 5 stage)
+Purpose: learning Javascript programming
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+   overlay
+-->
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <meta charset="utf-8">
+    <link href="css/overTTT.css" rel="stylesheet">
+	<link href="css/overlays.css" rel="stylesheet">
+<style>
+#playerMsg {
+	font-family: monospace;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Tic Tac Toe</h1>
+    </header><!-- game board and related content -->
+    <div id="game"></div>
+    <footer>
+        <address>
+            overTTT.html @ SYST10199
+        </address>
+    </footer><!-- overlay and popup messages -->
+	<div id="overlay">
+		<div id="messg">
+			<p>GAME OVER!</p>
+			<h2 id="winner"></h2><p>&mdash; click anywhere in the box to
+			dismiss this message &mdash;</p>
+		</div>
+    </div>
+    <script src="js/overTTT.js">
+    </script> 
+    <script>
+    document.addEventListener("DOMContentLoaded", playTicTac());
+    </script> 
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Assignment 1</title>	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>  
+    <link type="text/css" rel="Stylesheet" href="../../../js/syntax/styles/tutorials.css"/>
+	<link type="text/css" rel="Stylesheet" href="../../../js/syntax/styles/shCoreDefault.css"/>
+	<link type="text/css" rel="Stylesheet" href="../../../js/syntax/styles/shThemeDefault.css"/>
+
+<style>
+body {
+    background-image: url('../../../images/sher_shorter.gif');
+    background-repeat: repeat-x;
+    background-attachment: initial;
+}
+address span {
+    margin-left:6px;
+    padding-left:6px;
+    font-size: 1em;
+    font-family:Arial;
+    border-left:1px solid gray;
+    display:inline-block;
+    height:24px;
+    vertical-align:text-bottom;
+}
+address img {
+    height:24px;
+    vertical-align:text-bottom;
+}
+#underRev { 
+    position: fixed; 
+    width: 100%; 
+    height:100%; 
+    background-color: black; 
+    z-index: 666; 
+    opacity: 0.9; 
+}
+#underRev h1 { 
+    font-size: 100px; 
+    color: red; 
+    text-shadow: 1px 1px 3px white; 
+    text-align: center; 
+    padding-top: 100px; 
+    -ms-transform: rotate(-7deg); /* IE 9 */
+    -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+    transform: rotate(-7deg);
+}  
+body .syntaxhighlighter .line {
+        white-space: pre-wrap !important; /* make code wrap */
+}
+li.L0, li.L1, li.L2, li.L3,
+li.L5, li.L6, li.L7, li.L8 { 
+    list-style-type: decimal !important 
+}      
+</style>
+</head>
+
+<body>
+    <!--div id="underRev"><h1>Under Revision</h1></div-->  
+    <header> 
+        &nbsp;
+    </header> 
+    
+    <div class="container">
+        <div class="panel">
+             <div class="panel-heading"> 
+                <!-- part 1 -->
+                <h1>Assignment 1 <small>SYST10199 Web Programming</small></h1>
+                <hr>
+                <h4>Complete all of the following steps:</h4>
+                <p></p>
+                <p>&nbsp;</p>
+                    <dl class="dl-horizontal">
+                    <dt class="btn btn-lg btn-danger">Objective</dt>
+                    <dd>
+                        <blockquote>
+                            <h3>Construct solution for Tic Tac Toe game.</h3>
+                        </blockquote>
+                        <hr>	
+                    </dd>         
+                </dl>
+                <h4>Complete the game started in class:</h4>
+                <dl class="dl-horizontal">
+                    <dt class="btn btn-warning">Step 1</dt>
+                    <dd>
+                        <p>The output is expected to look and run as demonstrated in the video clip:</p>
+                        <hr> 
+                        <object width="480" height="392" data="a1_TTT.swf"></object>
+                        <hr> 
+                    </dd>
+                    <dt class="btn btn-warning">Step 2</dt>
+                    <dd>
+                        <p>1. Use <strong>embedded</strong> styles and Javascript.</p>
+                        <p>2. Your solution must use unobtrusive Javascript.</p>
+                        <p>3. Cite and document all sources, including code provided in class.</p>
+                        <p>4. Make sure you document <strong>all</strong> code well (html, css, and javascript) </p>
+                        <p>5. Make sure you format <strong>all</strong> code to be easy to read.</p>
+                        <p>6. Don't forget to validate all HTML and CSS. Use the console to debug your Javascript.</p>
+						<p>7. <button type="button" class="btn btn-success" data-toggle="modal" 
+									data-target="#modalA">Organize directories and files properly and publish appropriately.</button></p>											
+                        <hr>  
+                        <h3 class="btn btn-lg btn-danger">Do not leave your assupmptions unvalidated! Ask questions on Piazza Q&A and in class!</h3>
+                        <hr>						
+                    </dd>
+                    <dt class="btn btn-warning">Step 3</dt>
+                    <dd>  
+						<p>Prior to submission, review 
+							<button class="btn btn-default"  data-toggle="modal" data-target="#myModal">Evaluation Factors</button> &bull;
+							<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modalB">How to print electronic code?.</button> &bull; and
+							<a class="btn btn-default" href="https://www.evernote.com/shard/s687/sh/08e73a4c-06e0-4938-a3f4-e3e04108222d/138d63da448e70aed82a3ed545b3a95b" 
+								target="_blank">How to document code?</a>
+						</p>
+                        <p>Attach an electronic code printout <code>userid_a1.pdf</code> to the SLATE Dropbox.  </p>	
+                        <p>In the Dropbox Comments field, provide the full URL to the home page of the <strong>published web app on dev.fast.sheridanc.on.ca</strong></p>
+                        <hr> 
+                    </dd>        
+                </dl>    
+            </div>
+        </div>
+
+        <!-- 
+        *********************************************
+        Footer
+        *********************************************
+        -->	
+        <hr>	
+        <p class="text-right"><a href="#">Back to top</a></p>
+		<footer>
+        <div class="panel-footer panel-primary"> 
+            <div class="small fa fa-copyright">
+                <em>This work is the intellectual property of Sheridan College. Any further copying 
+                    and distribution outside of class must be within the copyright law. Posting to 
+                    commercial sites for profit is prohibited.</em> 
+                    &mdash; <strong>Sheridan College @ SYST10199 Web Programming</strong>
+            </div>
+        </div>        
+		</footer>
+    </div>   <!-- container -->
+
+
+
+<!-- Modal -->
+    <div aria-labelledby="myModalLabel" class="modal fade" id="modalB" role=
+    "dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button aria-label="Close" class="close" data-dismiss=
+                    "modal" type="button"><span aria-hidden=
+                    "true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Electronic Code Printouts</h4>
+                </div>
+                <div class="modal-body">
+					<iframe src="https://docs.google.com/presentation/d/118QvWb6xgUsspKdD2toB5IvDA4nokAntD1koaaVoN7Q/embed?start=false&loop=false&delayms=3000" frameborder="0" width="570" height="350" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>  
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" type=
+                    "button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	
+<!-- Modal -->
+    <div aria-labelledby="myModalLabel" class="modal fade" id="modalA" role=
+    "dialog" tabindex="-1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button aria-label="Close" class="close" data-dismiss=
+                    "modal" type="button"><span aria-hidden=
+                    "true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">File Organization for Web Apps</h4>
+                </div>
+                <div class="modal-body">
+					<p>&bull; Review the standard file organization and naming conventions (see Review &amp; Preparation).</p>
+					<p>&bull; On the client (your machine), all assignments should be organized under <samp  class="btn btn-primary">C:\public_html\syst10199</samp> or <samp>C:\xampp\htdocs\syst10199</samp></p>
+					<p>&bull; Thereunder, create the <samp>assign1</samp> directory (called <b>project directory</b>), with the following structure:
+<pre style="background-color:white;border: 0px solid;">~
+├── syst10199/				
+│   ├── assign1/
+│   │   ├── index.html						
+│   │   ├── content/  		 
+│   │   ├── css/
+│   │   ├── images/
+│   │   └── js/
+</pre>		</p>						
+					<p>&bull; When you are publishing on <samp>dev.fast.sheridanc.on.ca</samp>, copy the entire project structure to <samp class="btn btn-primary">/home/userid/public_html/syst10199</samp>.</p>
+					<p>Using sftp protocol, open a connection, position yourself on the server with the <b>cd</b> commmand, on the client with the <b>lcd</b> command, and upload the entire project with the <b>mput -r</b> command
+<pre class="syntaxhighlight brush: js;">
+cd public_html/syst10199
+lcd C:\public_html\syst10199
+mput -r assign1</pre></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" data-dismiss="modal" type=
+                    "button">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>	
+
+	<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">Evaluation Factors</h3>
+      </div>
+      <div class="modal-body">
+            <h4>Algorithm Design</h4>
+            <ul>
+                <li>Use appropriate programming structures [weight factor: 1/10]</li>
+                <li>Test all cases [weight factor: 1/10]</li>
+                <li>Error Handling [weight factor: 1/10]</li>
+            </ul>
+            <h4>Program Style</h4>
+            <ul>
+                <li>Comments [weight factor: 1/10]</li>
+                <li>Naming variables, files,... [weight factor: 1/10]</li>
+                <li>Readability and Indentation [weight factor: 2/10]</li>
+            </ul>                    
+            <h4>Program Correctness</h4>
+            <ul>
+                <li>Ability to Compile or Interpret without Errors [weight factor: 1/10]</li>
+                <li>Program Correctness, Correct Results [weight factor: 2/10]</li>
+            </ul> 
+            <h4>Citation</h4>
+            <p>Lack of Source [weight factor: -4/10] In comments, reference all sources used (classroom, course material, references, videos, websites,...) and describe what changes you've made.  </p>                               
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>		
+
+<script type="text/javascript" src="../../../js/syntax/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushXml.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushBash.js"></script>
+<script type="text/javascript" src="../../../js/syntax/scripts/shBrushPlain.js"></script>
+<script type="text/javascript">SyntaxHighlighter.all();</script>   
+</body>
+</html>

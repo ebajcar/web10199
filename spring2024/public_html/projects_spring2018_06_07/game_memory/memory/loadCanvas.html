@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="600" height="400"></canvas>
+	<div id="output"></div>
+	<div id="obj1"></div>
+    <script>
+	//http://www.html5canvastutorials.com/tutorials/html5-canvas-image-loader/
+	//https://github.com/jussi-kalliokoski/html5Preloader.js
+	//Object.keys(sources).length
+      function loadImages(sources, callback) {
+        var images = {};
+        var loadedImages = 0;
+        var numImages = 0;
+        // get num of sources
+        for(var src in sources) {
+          numImages++;
+        }
+        for(var src in sources) {
+          images[src] = new Image();
+          images[src].onload = function() {
+            if(++loadedImages >= numImages) {
+              callback(images);
+            }
+          };
+          images[src].src = sources[src];
+        }
+      }
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      var sources = {
+        image1: 		'images/image1.png',
+        image2: 		'images/image2.png',
+		image3: 		'images/image3.png',
+		image4: 		'images/image4.png',
+		image5: 		'images/image5.png',
+		image6: 		'images/image6.png',
+		image7: 		'images/image7.png',
+		image8: 		'images/image8.png',
+		image9: 		'images/image9.png',
+		image10: 		'images/image10.png',
+		image11: 		'images/image11.png',
+		image12: 		'images/image12.png',
+		image13: 		'images/image13.png',
+		image14: 		'images/image14.png',
+		image15: 		'images/image15.png',
+		image16: 		'images/image16.png',
+		image17: 		'images/image17.png',
+		image18: 		'images/image18.png',
+		image19: 		'images/image19.png',
+		image20: 		'images/image20.png'
+      };
+
+      loadImages(sources, function(images) { /*
+        context.drawImage(images.image1, 100, 0, 100, 100);
+        context.drawImage(images.image2, 200, 0, 100, 100);
+		context.drawImage(images.image3, 300, 0, 100, 100);
+		context.drawImage(images.image4, 400, 0, 100, 100);
+		context.drawImage(images.image5, 500, 0, 100, 100);
+		context.drawImage(images.image6, 100, 100, 100, 100);
+		context.drawImage(images.image7, 200, 100, 100, 100);
+		context.drawImage(images.image8, 300, 100, 100, 100);
+		context.drawImage(images.image9, 400, 100, 100, 100);
+		context.drawImage(images.image10, 500, 100, 100, 100);
+		context.drawImage(images.image11, 100, 200, 100, 100);
+		context.drawImage(images.image12, 200, 200, 100, 100);
+		context.drawImage(images.image13, 300, 200, 100, 100);
+		context.drawImage(images.image14, 400, 200, 100, 100);
+		context.drawImage(images.image15, 500, 200, 100, 100);
+		context.drawImage(images.image16, 100, 300, 100, 100);
+		context.drawImage(images.image17, 200, 300, 100, 100);
+		context.drawImage(images.image18, 300, 300, 100, 100);
+		context.drawImage(images.image19, 400, 300, 100, 100);
+		context.drawImage(images.image20, 500, 300, 100, 100); */
+		var count = 1;
+		for (var j=0; j < 4; j++)	  
+			for (var i=0; i < 5; i++){
+				context.drawImage(images["image"+count++], (i*100 %500+100), (j*100), 100, 100);
+		}		
+      });
+	  console.log(Object.keys(sources).length);
+//		var count = 1;
+//		for (var j=0; j < 4; j++)	  
+//			for (var i=0; i < 5; i++){
+//				context.drawImage(images.image+count++, (i*100 %500+100), (j*100), 100, 100);
+			//document.getElementById('obj1').innerHTML += sources["image"+count++]+" "+(i*100 %500+100)+" "+j*100+"<br>";
+//		}
+document.getElementById('output').innerHTML += ('starting ...');
+
+// Wait half a second before firing the writeEnding() function
+var myTimer = window.setTimeout(writeEnding, 5000);
+document.getElementById('output').innerHTML += ('continuing ...');
+
+// Define the Write Ending Function
+function writeEnding() {
+    // Write "ending!"
+    document.getElementById('output').innerHTML += ('ending!');
+}
+    </script>
+  </body>
+</html>      

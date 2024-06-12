@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<!--
+Author: Ellen Bajcar
+Version:
+Date created:
+Date updated:
+Purpose: learning to organize content with HTML5
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+-->
+<head>
+	<title>Cards</title>
+	<meta charset="utf-8">
+	<meta content="Your Name(s)" name="author">
+	<meta content="Short description of this page's purpose" name="description">
+</head>
+<body>
+<header>
+	<!-- usually name and logo information -->
+	<h1>Assignment 2</h1>
+	<h2>SYST10049 Web Development</h2> 
+</header>
+<nav>
+	<a href="#">Home</a> 	
+	<a href="#">News</a> 		
+	<nav>
+		<span>Play Games</span>
+		<a href="#">Tic Tac Toe</a>
+		<a href="#">Bingo</a>			
+		<a href="#">Hangman</a> 
+		<a href="#">Memory</a> 	
+	</nav>		
+	<nav>
+		<span>How To</span>
+		<a href="#">What's Your Learning Style?</a> 
+		<a href="#">How To Play Blackjack?</a> 
+	</nav>		
+	<nav>
+		<span>Members</span>
+		<a href="#">Login</a> 			
+		<span>Logout</span> 
+		<a href="#">Register</a> 
+	</nav>
+</nav>
+<hr>
+<main>
+	<h3>Login</h3>
+
+
+    <form class="w3-container"  id="logon" action="php/loginProcess.php">
+			<label><b>Username</b></label>
+			<input  type="text"
+				   placeholder="Enter Username" name="id" required>
+			<br>		   
+			<label><b>Password</b></label>
+			<input  type="password"
+				   placeholder="Enter Password" name="pass" required>
+			<br>		   
+			<button class="w3-btn-block w3-blue w3-section w3-padding" 
+					id="sub" type="submit">Login</button>
+			<button onclick="document.getElementById('id01').style.display='none'" 
+				type="button" class="w3-btn w3-deep-orange">Cancel</button>		
+			<br>		
+			<input class="w3-check w3-margin-top" type="checkbox" 
+					id="remember"> Remember me
+
+
+		
+		<p class="w3-right w3-padding w3-hide-small">
+				Forgot <a href="javascript:localStorage.clear();">Password?</a></p>				
+		<p class="w3-right w3-padding w3-hide-small">
+				Create <a href="register.html">Account</a></p>
+    </form>
+	
+	
+
+	
+</main>
+
+<footer>
+	<hr>
+	<address>
+		Name, 2017 &copy; SYST10049 Web Development, Sheridan College
+	</address>
+</footer>
+
+</body>
+</html>

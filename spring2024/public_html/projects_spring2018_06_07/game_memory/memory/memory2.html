@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Memory Game</title>	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/memory.css" rel="stylesheet">
+</head>
+
+<body>
+	<!-- ADDED hidden overlays -->
+	<div id="messg">
+        <p>GAME OVER!</p>
+        <h3 id="winner"></h3>
+        <p>&mdash;click anywhere in the box to dismiss this message&mdash;</p>
+    </div>
+	<div id="overlay"></div>
+	
+	<header id="title"><h3>Pick-A-Pair</h3></header>
+	<form name="mForm"> 
+		<table id="myBoard"></table>
+		<input  id="mButton" type="button" value="Click here..." name="mButton">
+	</form>
+	<footer><address>Ellen @ SYST10199 Web Programming, Sheridan College</address></footer>	
+<script src="js/memory2.js">
+</script>
+<script>
+//  document.addEventListener("DOMContentLoaded", startPlay, false);
+//	function startPlay() {
+//		document.getElementById("mButton").onclick = init;
+//	}
+</script> 
+</body>
+</html>

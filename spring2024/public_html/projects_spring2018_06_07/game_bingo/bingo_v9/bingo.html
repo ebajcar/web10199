@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Bingo Card</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+<!-- 
+Author: Ellen Bajcar
+Program: bingo.html
+Date: Summer 2016
+Date Updated: 8:25 AM June-09-16
+Version: 5.0 (Week 5 stage)
+Purpose: learning Javascript programming
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Description:
+    Interface for a bingo card
+    Functionality for a bingo card (game board) and calling numbers (caller)
+    See also: 
+        Javascript, Eighth Ed., Negrino & Smith
+        https://piazza.com/class/inrun9m79bc5q2?cid=15
+    Bingo terminology: 
+        http://blog.casinocashjourney.com/2013/01/18/bingo-terms/
+-->	
+<style>
+body {
+	background: #e0e0e0;
+    font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+    margin: 0 auto;
+    text-align: center;
+}
+main {
+	width: 100%;
+	margin: auto;
+	padding-top: 20px;
+	background-color: white;
+	min-height: 300px;
+	display: flex;
+	justify-content: center;	
+}
+main > div {
+  //background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+}
+header h1 {
+	color: #6f6f6f;   
+    font-family: Lato, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+	margin: 20px 0 0;
+    text-align: center;
+    text-shadow: 0 0 0 rgba(0,0,0,.4);
+}
+h2 {
+	padding: 2px 0 3px;
+	margin: 0;
+}
+footer {
+	margin: auto;
+	padding-top: 10px;
+	margin-top: 10px;
+	text-align: center;
+	color: gray;
+	clear: both;
+}
+button {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: #ddd;
+  -webkit-transition: background-color 200ms ease;
+  transition: background-color 200ms ease;
+}
+button:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+
+/* navigation */
+nav {
+    margin: 20px auto;
+    width: 450px;
+	text-align: center;
+}
+nav a {
+    background-color: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover {
+    background: #c2c2c2;
+    color: #818181;
+}
+
+
+/* format of the cells on the "BINGO face" (game board) */
+table {
+    margin: 0 auto;
+}
+td, th {
+    width:32px;
+    height:32px;
+    border: 1px solid black;
+    font-size:26px;
+    text-align:center;
+    font-family:arial, helvetica, sans-serif;
+}
+th {
+	background-color: lightblue;
+}
+#cell22 {
+	background-color: black;
+	color: white;
+	font-size: 0.6em;
+}
+
+
+/* caller */
+p, #message {
+    font-family: monospace;
+	color: gray;
+}
+p, #past, #called {
+    margin: 5px auto;
+    width: 100%;
+    display: block;
+    border: 1px dotted green;
+}
+#past {
+	min-height: 65px;
+}
+#usedlist {
+    word-break: break-all;
+    background: gray;
+    color: white;
+	min-height: 65px;
+}
+#called {
+    color: red;
+    font-size: 2em;
+    font-weight: 700;
+}
+#caller {
+	width: 36%;
+}
+.picked {
+	color: lightblue;
+}
+</style>
+</head>
+<body>
+    <header><h1>Bingo Card</h1></header><!-- create a bingo card -->
+	<nav>
+		<a href="">Home</a>
+		<a href="">Casino Craps</a>
+		<a href="">Tic Tac Toe</a>
+		<a class="active" href="">Bingo</a>
+		<a href="">Hangman</a>
+	</nav>		
+	<main>
+		<div>
+			<button id="reset">Generate New Card</button>
+			<table id="myBoard">
+				<tr>
+					<th>B</th>
+					<th>I</th>
+					<th>N</th>
+					<th>G</th>
+					<th>O</th>
+				</tr><!-- add 5 rows, each row containing 5 cells (td) -->
+			</table><!-- create all elements for calling numbers -->
+		</div>
+	</main>
+    <footer><address>SYST10199 Web Programming &copy; Sheridan College</address></footer>
+<script src="scripts/bingo2.js"></script>
+</body>
+</html>
+
+

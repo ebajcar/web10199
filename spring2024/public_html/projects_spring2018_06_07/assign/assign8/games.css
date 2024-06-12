@@ -1,0 +1,184 @@
+/*
+Author: 	Ellen Bajcar et al
+Program: 	games.css
+Date: 		Summer 2017
+Update: 		 
+Version: 	a7.s2017.27.07
+Purpose: 	template for Assignment 7 SYST10199 Web Development
+Source: 	various
+Copyright: 
+    This work is the intellectual property of Sheridan College. 
+    Any further copying and distribution outside of class must be within 
+    the copyright law. Posting to commercial sites for profit is prohibited.
+Dependencies:
+	bg3.jpg canvasLogo.js games.css loginForm.html template.html anyGame.html
+Description:
+    see instructions.html
+*/
+body {
+    background: #111;
+	color: white;
+}
+main, footer, header, .help, .stats {	
+	margin: auto;   
+	max-width: 500px;
+	text-align: center;
+	width: 100%;
+}
+main {
+	background-color:  #e9e9e9;
+	background-image: linear-gradient(to bottom, #bbb 0%, #eee 100%);
+	position: relative;
+	height: 420px;
+}
+header h1 {
+	color: #6f6f6f;   
+    font-family: Lato, sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+	margin: 20px 0 0;
+    text-align: center;
+    text-shadow: 0 0 0 rgba(0,0,0,.4);
+}
+footer {
+	margin: auto;
+	text-align: center;
+	font-size: 0.8em;
+	bottom: 10px;	
+}
+footer small {
+	margin: 0;
+	padding: 0;
+	font-size: 0.6em;
+}
+p {
+	
+}
+h3, h5 {
+    font-family: 'Rock Salt', cursive;
+}
+.help, .stats {
+	display: none;
+}
+
+/* 
+	GENERAL STYLES
+	all thing with navigation: 
+	nav
+	a
+	a:active
+	a:hover
+*/
+nav {
+    margin: 20px auto;
+    width: 150px;
+}
+nav a {
+    background: #a4a4a4;
+	color: #fff;
+    display: inline-block;
+	font-family: Lato, sans-serif;
+    font-size: 15px;
+    padding: 7px;
+    text-decoration: none;
+}
+nav a.active, nav a:hover {
+    background: #c2c2c2;
+    color: #818181; 
+}
+
+
+/* 
+	CONTAINERS: overlays for help and stats
+	#messg
+	#help
+*/
+#messg, #help {         
+    border: 			1px solid white; 
+    border-radius: 		3px;
+    box-shadow: 		1px 1px 5px black, -1px -1px 5px white;
+    display: 			none; 
+    height: 			50%;
+	left: 				50%;
+    margin: 			auto; 
+    padding: 			20px;
+    position: 			absolute;
+	text-align: 		center;
+	top: 				50%;
+	transform: 			translate(-50%, -50%);
+    width: 				80%;
+	min-width:  		280px;	
+    z-index: 			200;
+	background-color: 	#bbb;
+	background-image: 	linear-gradient(to bottom, #bbb 0%, #eee 100%);	
+}
+
+/* 
+	game-specific CSS rules:
+		".result" is the main game board area 
+		"button" allows the user to start and reset the game
+		"select" control contains the choices the user can choose 
+		".choose-yes" and ".choose-no" controls the cursor
+*/
+button, select {
+	border: none;
+	bottom: 0.3125em;
+	display: block;
+	margin: auto;
+	position: absolute;
+	width: 100%;
+}
+button {
+	bottom: 0;
+    background:  orange; 
+	color: #fff;	
+	cursor: pointer;
+	padding: 0.3125em;
+}
+select {
+	bottom: 1.5625em;
+	outline: none;
+	color:  maroon;
+	background-color: #f1f1f1;  
+	font-weight: bold;
+	font-size: 1.4em;
+	text-align: center;
+}
+.result { 
+	display: block;  
+	height: 100%; 
+	font: 1.4em 'Fredoka One', cursive;
+	margin: 0 auto; 	
+}
+.choose-yes {
+	cursor: pointer;	
+}
+.choose-no {
+	cursor:not-allowed;
+}
+
+
+/*
+	responsive rules
+*/
+@media screen and (orientation: landscape) and (max-width: 850px) {
+    body { 
+		display: flex;  /* main container allowing flex properties */
+		justify-content: space-around;
+		flex-flow: row wrap;
+	}
+    body > header 	{ order: 3; min-width: 12em; flex:1; width: 55%;}
+    body > nav     	{ order: 2; }
+    body > footer   { order: 4; width: 30%; }	
+	body > main   	{ order: 1; width: 65%; height: 100%; min-height: 310px; }
+}
+
+@media all and (max-width: 560px) {
+    body { 
+        display: flex;  /* main container allowing flex properties */
+		flex-flow: column wrap;
+    }
+    body > header 	{ order: 2; min-width: 12em; flex:1;font-size: 0.5em; }
+    body > nav     	{ order: 1;  }
+    body > footer   { order: 3; width: 100%; }
+}

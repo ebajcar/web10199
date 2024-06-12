@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Timers</title>	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style> 
+input {display:inline-block; height: 100px; width: 100px; float: right; margin-right: 10px; font-size: 2em;} 
+form {width: 220px;}
+</style> 
+</head>
+<body>	
+	<header>Timers</header>
+	<form name="mForm"> 
+		<img src="images/image0.png">
+		<input name="mButton" type="button" value="Click to start the timer" >
+	</form>
+	<footer>@ SYST10199 Web Programming, Sheridan College</footer>	
+
+<script>
+	var id, ticker = 0, min = 0, sec = 0;
+	clearTimeout(id);
+	document.mForm.mButton.value = ""; 
+	runclk();
+	function runclk() {
+		min = Math.floor(ticker/60);
+		sec = (ticker-(min*60))+'';
+		if(sec.length == 1) {sec = "0"+sec};
+		ticker++;
+		document.mForm.mButton.value = min+":"+sec; 
+		id = setTimeout('runclk()', 1000);
+	}
+	
+	var curImg = document.images[0];
+	setTimeout('changeImg()', 1000);	
+	function changeImg() {
+		( curImg.src.search("image0.png") < 0 ) 
+			? curImg.src = "images/image0.png" 
+			: curImg.src = "images/image1.png";
+		setTimeout('changeImg()', 1000);
+	}
+</script> 
+</body>
+</html>

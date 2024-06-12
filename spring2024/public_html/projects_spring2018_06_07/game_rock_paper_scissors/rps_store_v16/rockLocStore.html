@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- 
+	rockLocStore.html, SYST10199 Web Programming, Summer 2015, Ellen Bajcar 
+	external css and js
+	https://en.wikipedia.org/wiki/Rock-paper-scissors#Additional_weapons
+	TODO: extend to Rock-paper-scissors-lizard-Spock
+-->
+<html>
+<head>
+	<title>Rock&mdash;Paper&mdash;Scissors</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width" />
+	<link href="css/rock2.css" rel="stylesheet">
+</head>
+<body>
+	<header><h1>Rock&mdash;Paper&mdash;Scissors</h1></header>
+	<div class="games">
+		<div id="cmove"></div>
+		<div id="hmove"></div>
+		<div id="clear"></div>
+		<div id="msg"></div>
+		<div id="stats"></div>
+	</div>
+	
+	
+	<div id="move">
+		<p>Your move...click on an image to choose: </p>
+		<button id="rock"><img src="images/rock.png" alt="rock" height="40"></button> 
+		<button id="paper"><img src="images/paper.png" alt="paper" height="40"></button> 
+		<button id="scissors"><img src="images/scissors.png" alt="scissors" height="40"></button> 
+	</div>		
+	
+
+	<button id="greset">Play again!</button> 
+	<button id="reset">Reset stats</button>
+	<footer>Ellen @ Sheridan SYST10199 Web Programming</footer>	
+<script src="js/rockCatch.js"></script>		
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe Game</title>
+    <meta charset="utf-8">
+<!--
+    Author: Instructor
+    Date created: Summer 2016
+	Date updated: Summer 2018
+    Version: Week 3 stage
+    Purpose: develop a tic tac toe game
+	Copyright: 
+		This work is the intellectual property of Sheridan College. Any further copying and distribution outside of class must be within the copyright law. Posting to commercial sites for profit is prohibited.
+	Pastebin: 
+		https://pastebin.com/PZvdid0i
+	Description:
+		A two-player game. 
+		The players are presented with a board of three-by-three table and a reset button.
+		The reset button starts a game where players take turns selecting one of the nine
+		available empty cells with the goal of completing a row, a column, or a diagonal to
+		win the game.
+		A message specifying which player's turn is presented during the same.
+		When a winning state occurs, a message is presented that the game is over.	
+	TOFIX:  no one wins when a win occurs on filling the last cell (this can occur when x completes a win combo using the last available cell
+-->	
+    <style>
+body {
+    width: 680px;
+    margin: 0 auto;
+    text-align: center;
+} 
+table {
+     margin: auto;
+} 
+td {
+    border: 1px solid blue;
+    height: 50px;
+    width: 50px;
+    font-size: 1.4em;
+}   
+tr:first-child td {
+    border-top: none;
+}
+tr:nth-child(3) td {
+    border-bottom: none;
+}
+td:first-child {
+    border-left: none;
+}
+td:last-child {
+    border-right: none;
+}
+    </style>
+</head>
+<body>
+    <header><h1>Tic Tac Toe</h1></header>
+    <table>
+        <tr>
+            <td>X</td>
+            <td>O</td>
+            <td>O</td>
+        </tr>
+        <tr>
+            <td>X</td>
+            <td>X</td>
+            <td>O</td>
+        </tr>
+        <tr>
+            <td>O</td>
+            <td>O</td>
+            <td>X</td>
+        </tr>        
+    </table>
+    <p>Player <span id="player">X</span> go! 
+			  <button id="reset">Reset Game</button>
+	</p>
+    <div id="message"></div>
+	<footer>Web Programming &copy; Sheridan College</footer>
+<script>
+/*
+    Tic Tac Toe Game functionality
+	
+	set up all variable and data structures
+	- current player: X or O	
+	- array (collection) of 9 objects
+	- all winning combinations, 3 rows, 3 columns, 2 diagonals
+	- number of available (empty) cells
+	- game not in session (false if in process)
+	- handle to <span id="player">
+	- no handle to <button id="reset"> USED only once
+	- handle to <div id="message">
+*/
+
+
+
+/* 
+	function displayWin() is called when the game is over and
+	the results are displayed: "Game Over! " + player  + " wins."
+*/	
+function displayWin() {
+}
+
+/* 
+	function checkWin() is called to check all winning combinations
+	TODO: if one of them is found true, 
+*/
+function checkWin() {
+	// loop through all combos and check if one has the same values
+	// but it is not empty
+	// display the end of the game message - game over	
+	// highlight the winning combo on screen
+	// if no empty cells, display game over
+	// check if there are any remaining empty cells
+	// display the end of the game message - game over
+}
+
+/*
+		Function cellClick() is called 
+			when the event listeners for the "td" cells fire which occurs
+			when the user clicks on one of the nine cells of the board
+		1. sets the content of the clicked cell to the current player's mark
+		2. checks whether or not there is a winner
+		3. flips (changes) the current player
+		4. updates the message tot he current player
+		TODO: 1-4 should occur only when the selected cell is empty !!	
+*/
+function cellClick(cell) {
+	// conditional on game not being over and cells available
+	// place the user character
+	// one less cells is available
+	// check if there is a winning combination
+	// update player turn and display
+}
+
+/*
+	function gameReset() is called when user clicks on the "game reset" button
+	1. sets content of all 9 cells to nothing
+	2. sets the starting player (this version, X always starts the game)
+	3. updates the message to the current player
+	4. resets the number of empty cells to 9
+	5. sets the game over flag to false to indicate that the game is in progress
+	6. reset font color
+*/
+function gameReset() {    
+}
+
+/*
+	Set up event listeners
+	1. when user clicks on the reset button (id="reset")
+	2. when user clicks on the the 9 cells of the board
+*/
+
+	
+/*
+	Further enhancements
+	- TODO: change the background of the last cell played to indicate what was the last move ( in class 3 )
+	- TODO: display and style overlays with messages ( in class 3 )
+	- TODO: create the board (table) with Javascript ( in class 3 )
+	- TODO: load and initialize entire game on "DOMContentLoaded" event ( in class 3 )
+	- make the starting player random
+	- keep track of statistics (how many times X wins )
+	- TODO: display who is the winner ( in class 3 )
+*/	
+</script>    
+</body>
+</html>
+
+
+
+
+
+
+
+
