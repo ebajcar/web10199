@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Example: data conversion</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<link rel="stylesheet" href="css/codeMirror.css">
+<!--[if lt IE 8]>
+<style>
+#textareacontainer, #iframecontainer {width:48%;}
+#container {height:500px;}
+#textarea, #iframe {width:90%;height:450px;}
+#textareaCode, #iframeResult {height:450px;}
+.stack {display:none;}
+</style>
+<![endif]-->
+</head>
+<body>
+
+<div class="trytopnav">
+	<div class="w3-bar w3-light-grey" style="border-top:1px solid #f1f1f1;overflow:auto">
+	  <a href="javascript:void(0);" onclick="restack(currentStack)" title="Change Orientation" class="w3-button w3-bar-item topnav-icons  fas fa-sync" style="font-size:28px;color:#999999;margin-top:-2px"></a>
+	  <button class="w3-button w3-bar-item w3-indigo w3-hover-white w3-hover-text-indigo" onclick="submitTryit(1);">Run &raquo;</button>
+	  
+	  <span class="w3-right w3-hide-small" style="padding:8px 0;display:block;float:right;"><span id="framesize"></span></span>
+	</div>
+</div>
+<div id="shield"></div>
+<a href="javascript:void(0)" id="dragbar"></a>
+
+<div id="container">
+<div id="navbarDropMenu" class="w3-dropdown-content w3-bar-block w3-border" style="z-index:5">
+<span onclick="openMenu()" class="w3-button w3-display-topright w3-transparent w3-hover-dark-grey" title="Close Menu" style="font-weight:bold;padding-top:10px;padding-bottom:11px;">&times;</span>
+  <div class="w3-bar-block">
+    <a class="w3-bar-item w3-button" href='javascript:void(0);' title="Change Orientaton" onclick="openMenu();restack(currentStack)"><i class="fa fa-rotate" style="font-size:26px;margin-left:-4px;margin-right:8px"></i><span style="position:relative;top:-4px;left:2px;">Change Orientation</span></a>
+  </div>
+  <footer class="w3-container w3-small w3-light-gray">
+  <p>Web Programming &copy; Sheridan College</p>
+  </footer>
+</div>
+<div id="menuOverlay" class="w3-overlay w3-transparent" style="cursor:pointer;z-index:4"></div>
+  <div id="textareacontainer">
+    <div id="textarea">
+      <div id="textareawrapper">
+	  
+<!--
+	code area 
+	starts here
+	
+--> 
+<textarea autocomplete="off" id="textareaCode" wrap="logical" spellcheck="false">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Example: data conversion</title>
+  <meta charset="utf-8">
+</head>
+<body>
+<script>
+var y;
+console.log("var y; ", y);
+console.log("var y; ", typeof(y));
+// 0 false false
+var x = false;
+console.log("var x = false ", typeof(x));
+document.write("<p>Converting <strong>var x = false;</strong> to:</p>");
+document.write("Number : " + Number(x) + "<br>");
+document.write("String : " + String(x) + "<br>");
+document.write("Boolean: " + Boolean(x));
+
+// 0 0 false
+var x = 0;
+console.log("var x = 0 ", typeof(x));
+document.write("<p>Converting <strong>var x = 0;</strong> to:</p>");
+document.write("Number : " + Number(x) + "<br>");
+document.write("String : " + String(x) + "<br>");
+document.write("Boolean: " + Boolean(x));
+
+// NaN twenty true
+var x = "twenty";
+console.log('var x = "twenty"; ', typeof(x));
+document.write("<p>Converting <strong>var x = 'twenty';</strong> to:</p>");
+document.write("Number : " + Number(x) + "<br>");
+document.write("String : " + String(x) + "<br>");
+document.write("Boolean: " + Boolean(x));
+
+
+// 0 0 false
+var x = 0;
+console.log("var x = 0 ", typeof(x));
+document.write("<p>Converting <strong>var x = 0;</strong> to:</p>",
+"Number : " + Number(x) + "<br>" +
+"String : " + String(x) + "<br>" +
+"Boolean: " + Boolean(x));
+
+// NaN twenty true
+var x = "twenty";
+console.log('var x = "twenty"; ', typeof(x));
+document.write("<p>Converting <strong>var x = 'twenty';</strong> to:</p>",
+"Number : " + Number(x) + "<br>" +
+"String : " + String(x) + "<br>" +
+"Boolean: " + Boolean(x));
+
+// NaN twenty true
+var x = ["twenty"];
+console.log('var x = ["twenty"]; ', typeof(x));
+document.write("<p>Converting <strong>var x = ['twenty'];</strong> to:</p>",
+"Number : " + Number(x) + "<br>" +
+"String : " + String(x) + "<br>" +
+"Boolean: " + Boolean(x));
+
+var x = [1,2,3,4,5,6,7,8];
+console.log(x);
+console.log('x ', typeof(x), " x[0] ", typeof(x[0]));
+
+
+</script>
+</body>
+</html>
+
+
+</textarea>
+<!--
+	end of code area here
+	end of code area here
+	end of code area here
+	
+--> 
+        <form id="codeForm" autocomplete="off" style="margin:0px;display:none;">
+          <input type="hidden" name="code" id="code" />
+        </form>
+       </div>
+    </div>
+  </div>
+  <div id="iframecontainer">
+    <div id="iframe">
+      <div id="iframewrapper"></div>
+    </div>
+  </div>
+</div>
+
+<script src="my_w3editor.js"></script>
+</body>
+</html>
